@@ -1,4 +1,16 @@
-# Verificació local · v1.2 · 23 d’octubre de 2026
+# Verificació local · v1.3 · 23 d’octubre de 2026
+
+## Espai de treball
+
+- Navegador local a 1440 × 900 i 1366 × 768: capçalera de 64 px; configuració, vista prèvia i tria alineades amb la mateixa alçada; botó de preparar dins de la finestra. El full ocupa l’alçada disponible del visor i conserva la proporció 210/297.
+- A 1024 × 768 es mantenen les tres columnes sense desbordament horitzontal. En la prova de 390 × 844 la disposició s’apila, el document conserva la proporció i no hi ha desbordament horitzontal.
+- Canvi real del contingut SVG: terços, guies a 70/140 mm i escriptura al centre; quart esquerre, guies a 51/104 mm i escriptura al tram exterior; quart dret, guies a 106/159 mm. Comprovació de les dues posicions del model.
+- Gràfic explicatiu visible dins del diàleg d’ajuda i absent de l’àrea principal. El catàleg continua obrint-se des del lateral dret.
+- Fixació d’un mot i bloqueig del canvi, desfixació i canvi individual des del lateral dret; recuperació posterior de la tria original amb el mateix primer mot i format de plec.
+- Descàrrega real d’un PDF de quart des de la interfície nova. Sense errors JavaScript a la sessió de prova.
+- Scripts i fulls d’estil locals amb la mateixa revisió v1.3.0; fitxers i identificadors HTML comprovats. Les comprovacions del catàleg, els perfils i la geometria continuen passant.
+
+## Plecs i PDF (v1.2)
 
 - Catàleg i filtres: les comprovacions de 433 paraules i 96 pseudoparaules, etiquetes, perfils de nivell, mostreig, fixats i repeticions continuen passant.
 - Terços: escriptura entre 70 i 140 mm, amb el model a qualsevol costat; primer es plega la banda buida i després el model, cap al darrere.

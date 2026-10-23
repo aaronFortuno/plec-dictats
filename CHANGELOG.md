@@ -1,5 +1,13 @@
 # Historial
 
+## 1.3 · 23 d’octubre de 2026
+
+- Espai de treball de tres columnes: configuració, full central i paraules triades. Laterals amb desplaçament independent i botó de preparar sempre visible.
+- Capçalera de 64 px en escriptori amb lema i recompte del banc. Introducció gran retirada de la pantalla principal; gràfic i instruccions traslladats a «Com funciona».
+- Vista prèvia ajustada a l’alçada i l’amplada disponibles, amb proporció A4 constant. Indicació visible del format i de la posició del model.
+- Canvi de format sincronitzat amb el dibuix del full; recursos JavaScript i CSS versionats conjuntament per evitar versions antigues en memòria cau.
+- Comprovació local dels dos formats i orientacions, canvi i fixació de paraules al lateral dret, recuperació de la tria, descàrrega del PDF i adaptació a diferents amplades de pantalla.
+
 ## 1.2 · 23 d’octubre de 2026
 
 - Dos formats: terços amb escriptura central i bandes plegades cap al darrere; quart de full amb dos plecs cap endins, segons el croquis docent.

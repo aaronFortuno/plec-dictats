@@ -121,8 +121,8 @@
   }
   // Les fonts estàndard del PDF admeten tots els caràcters catalans.
   const printable = window.PlecPdf.printable;
-  function svgFor(shapes) {
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" role="img" aria-label="Full A4 amb dues guies de plec"><rect width="210" height="297" fill="white"/>${shapes.map(s => {
+  function svgFor(shapes, layout = K.foldLayout(state.foldStyle, state.modelSide)) {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" role="img" aria-label="Full A4: ${layout.name}, model a ${layout.side === 'left' ? 'l’esquerra' : 'la dreta'}" data-fold-style="${layout.foldStyle}" data-model-side="${layout.side}"><rect width="210" height="297" fill="white"/>${shapes.map(s => {
       if (s.type === 'line') return `<line x1="${s.x}" y1="${s.y}" x2="${s.x2}" y2="${s.y2}" stroke="${s.color}" stroke-width="${s.width}" ${s.dash ? 'stroke-dasharray="1.5 1.4"' : ''}/>`;
       if (s.type === 'rect') return `<rect x="${s.x}" y="${s.y}" width="${s.w}" height="${s.h}" fill="${s.color}"/>`;
       const safeShape = { ...s, value: printable(s.value) };
@@ -130,17 +130,31 @@
     }).join('')}</svg>`;
   }
   function sheetOptions() { return { entries: chosen(), title: session().title, group: state.group, code: session().code, mode: state.mode, stage: session().stage, modelSide: state.modelSide, foldStyle: state.foldStyle }; }
+  let paperFrame;
+  function fitPaper() {
+    cancelAnimationFrame(paperFrame);
+    paperFrame = requestAnimationFrame(() => {
+      const host = $('paper-viewport'), paper = $('sheet-preview');
+      if (!host.clientWidth || !host.clientHeight) return;
+      const scale = Math.min(host.clientWidth / 210, host.clientHeight / 297);
+      paper.style.setProperty('--preview-width', `${210 * scale}px`);
+      paper.style.setProperty('--preview-height', `${297 * scale}px`);
+    });
+  }
   function renderPreview() {
     const entries = chosen(), s = session(), complete = entries.length === s.count;
-    $('sheet-preview').innerHTML = entries.length ? svgFor(K.worksheet({ ...sheetOptions(), hidden: !$('show-model').checked })) : '<div class="empty-selection">Prepara un dictat per veure el full.</div>';
+    const options = sheetOptions(), layout = K.foldLayout(options.foldStyle, options.modelSide);
+    $('sheet-preview').innerHTML = entries.length ? svgFor(K.worksheet({ ...options, hidden: !$('show-model').checked }), layout) : '<div class="empty-selection">Prepara un dictat per veure el full.</div>';
     $('selection-summary').textContent = `${entries.length} / ${s.count} elements`;
-    $('sheet-meta').textContent = `A4 · ${K.foldLayout(state.foldStyle, state.modelSide).name}${s.code ? ' · ' + s.code : ''}`;
+    $('preview-layout').textContent = `${layout.name} · model a ${layout.side === 'left' ? 'l’esquerra' : 'la dreta'}`;
+    $('sheet-meta').textContent = `A4${s.code ? ' · ' + s.code : ''}`;
     $('download-pdf').disabled = !complete;
     $('teacher-pdf').disabled = !complete;
     $('save-selection').disabled = !complete;
     const outside = entries.filter(e => !K.matchesStage(e, s.stage) || !e.tags.some(t => s.tags.includes(t))).length;
     $('selected-info').textContent = (complete ? `${entries.length} elements · ${s.locks.length} fixats` : `Falten ${s.count - entries.length} elements per completar el full.`) + (outside ? ` · ${outside} fora dels filtres actuals` : '');
     $('sheet-preview').setAttribute('aria-label', `Vista prèvia: ${entries.length} elements. ${$('show-model').checked ? 'Model visible.' : 'Model ocult a la pantalla; el PDF l’inclou.'}`);
+    fitPaper();
   }
   function renderSelection() {
     const s = session();
@@ -233,8 +247,8 @@
   $('tag-options').addEventListener('change', () => { session().tags = [...$('tag-options').querySelectorAll('input:checked')].map(e => e.value); updateAvailability(); renderPreview(); persist(); });
   $('all-tags').addEventListener('click', () => { session().tags = modeTags(state.mode).map(c => c.id); updateControls(); renderPreview(); persist(); });
   $('stage-control').addEventListener('change', event => { session().stage = event.target.value; updateControls(); renderPreview(); persist(); say('Nivell aplicat a les pròximes propostes. La tria actual es conserva; prepara un dictat nou per renovar-la.'); });
-  $('model-side-control').addEventListener('click', event => { const b = event.target.closest('[data-side]'); if (!b || b.dataset.side === state.modelSide) return; state.modelSide = b.dataset.side; updateControls(); renderPreview(); persist(); });
-  $('fold-style-control').addEventListener('change', event => { state.foldStyle = event.target.value; updateControls(); renderPreview(); persist(); });
+  $('model-side-control').addEventListener('click', event => { const b = event.target.closest('[data-side]'); if (!b || b.dataset.side === state.modelSide) return; state.modelSide = b.dataset.side; renderPreview(); updateControls(); persist(); });
+  $('fold-style-control').addEventListener('change', event => { const nextStyle = event.currentTarget.value; if (!allowedFoldStyles.includes(nextStyle)) return; state.foldStyle = nextStyle; renderPreview(); updateControls(); persist(); });
   $('generate').addEventListener('click', () => generate());
   $('show-model').addEventListener('change', renderPreview);
   $('sheet-title').addEventListener('input', event => { session().title = event.target.value; renderPreview(); persist(); });
@@ -282,6 +296,8 @@
     catch (error) { say(error instanceof SyntaxError ? 'Aquest fitxer no conté un JSON vàlid.' : error.message); }
     finally { event.target.value = ''; }
   });
+  if (window.ResizeObserver) new ResizeObserver(fitPaper).observe($('paper-viewport'));
+  window.addEventListener('resize', fitPaper);
   updateControls(); renderSelection(); if (!session().ids.length && !$('generate').disabled) generate(true);
   window.addEventListener('beforeprint', () => { if (chosen().length) $('sheet-preview').innerHTML = svgFor(K.worksheet(sheetOptions())); });
   window.addEventListener('afterprint', renderPreview);

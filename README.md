@@ -2,6 +2,14 @@
 
 Un generador obert de dictats autocorrectius en català, pensat per a cinquè de primària i adaptable al cicle superior. **433 paraules** amb focus ortogràfics i **96 pseudoparaules** proposades per practicar les correspondències entre so i grafia.
 
+## Espai de treball
+
+En ordinador, el preparador ocupa l’alçada de la finestra i es distribueix en tres columnes: configuració a l’esquerra, vista prèvia al centre i paraules triades a la dreta. Els laterals es desplacen de manera independent; el botó de preparar un dictat queda sempre accessible al peu de la configuració.
+
+La capçalera compacta inclou el lema i el recompte del banc. El gràfic explicatiu i les instruccions són a **Com funciona**. El full A4 s’ajusta a l’amplada i l’alçada disponibles mantenint la proporció, i canvia immediatament quan es trien el format del plec o la posició del model.
+
+En pantalles estretes les columnes es reorganitzen. La tria de la dreta conserva les funcions de fixar, canviar, guardar, recuperar i seleccionar des del catàleg.
+
 ## Utilització
 
 Obre `index.html` amb un navegador actual, o entra al web de GitHub Pages. No cal instal·lar res, crear comptes ni disposar de connexió després de descarregar els fitxers. No hi ha analítica ni serveis externs durant l’ús.
@@ -40,7 +48,7 @@ Amb el model a l’esquerra, les guies són a **51 i 104 mm** de la vora esquerr
 
 Les amplades anteriors són físiques, inclosos els marges. La zona impresa té marges de seguretat. Les solapes buides no contenen text, ratlles ni capçalera. La columna d’escriptura inclou nom, data i grup. La correcció es fa **a la mateixa columna on s’ha escrit**.
 
-Sota la vista prèvia, **Com plego aquest full?** mostra la distribució proporcional del full obert, els passos del format actual i un esquema lateral de dictat i correcció. L’esquema lateral és orientatiu i no està a escala.
+Dins de **Com funciona**, **Com plego aquest full?** mostra la distribució proporcional del full obert, els passos del format actual i un esquema lateral de dictat i correcció. L’esquema lateral és orientatiu i no està a escala.
 
 Imprimeix a una sola cara, en **A4 al 100 %**. Els marges d’encaix estan comprovats geomètricament; queda pendent la prova amb paper real, ja que el gruix, l’opacitat i la precisió del plec depenen del paper i de la impressora.
 
@@ -85,7 +93,7 @@ La tria, l’historial de mots utilitzats i els elements propis es guarden al na
 
 ## Desenvolupament i comprovació
 
-Web estàtic sense compilació, rutes absolutes ni dependències externes durant l’ús. La biblioteca PDF està inclosa amb la seva llicència a `assets/vendor/`. `core.js` comparteix la geometria del document entre la vista prèvia SVG i `pdf.js`, que genera PDF vectorial amb Helvetica i Helvetica Bold.
+Web estàtic sense compilació, rutes absolutes ni dependències externes durant l’ús. La distribució de l’espai de treball és a `workspace.css`; `styles.css` manté els estils compartits i els diàlegs. Els scripts i estils d’`index.html` comparteixen el sufix de revisió `?v=1.3.0`: cal actualitzar-lo conjuntament en publicar canvis per evitar barrejar recursos de versions diferents. La biblioteca PDF està inclosa amb la seva llicència a `assets/vendor/`. `core.js` comparteix la geometria del document entre la vista prèvia SVG i `pdf.js`, que genera PDF vectorial amb Helvetica i Helvetica Bold.
 
 ```text
 node tools/serve.cjs
