@@ -4,7 +4,7 @@
   "edition": "ca-2026-01-draft",
   "status": "draft",
   "reviewedByTeacher": false,
-  "version": 3,
+  "version": 4,
   "categories": [
     {
       "id": "accent",
@@ -76,6 +76,12 @@
       "id": "verbs",
       "label": "Formes verbals",
       "title": "Formes verbals",
+      "mode": "words"
+    },
+    {
+      "id": "flexio",
+      "label": "Femenins i plurals",
+      "title": "Gènere i nombre",
       "mode": "words"
     },
     {
@@ -1069,10 +1075,16 @@
       "text": "feliç",
       "mode": "words",
       "tags": [
-        "essa"
+        "accent",
+        "essa",
+        "flexio"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "morphology": {
+        "gender": "common",
+        "number": "singular"
+      }
     },
     {
       "id": "p-u3k7xz",
@@ -3711,10 +3723,17 @@
       "text": "tranquil·la",
       "mode": "words",
       "tags": [
-        "signes"
+        "accent",
+        "qugu",
+        "signes",
+        "flexio"
       ],
       "orthography": "high",
-      "vocabulary": "common"
+      "vocabulary": "common",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
     },
     {
       "id": "p-a6zqu9",
@@ -4745,12 +4764,19 @@
       "text": "conduïda",
       "mode": "words",
       "tags": [
-        "verbs",
         "accent",
-        "dieresi"
+        "qugu",
+        "dieresi",
+        "verbs",
+        "flexio"
       ],
       "orthography": "high",
-      "vocabulary": "common"
+      "vocabulary": "common",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
     },
     {
       "id": "p-1nue5ih",
@@ -4817,12 +4843,19 @@
       "text": "produïda",
       "mode": "words",
       "tags": [
-        "verbs",
         "accent",
-        "dieresi"
+        "erra",
+        "dieresi",
+        "verbs",
+        "flexio"
       ],
       "orthography": "high",
-      "vocabulary": "common"
+      "vocabulary": "common",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
     },
     {
       "id": "p-1g1c2sx",
@@ -6856,10 +6889,16 @@
       "text": "amiga",
       "mode": "words",
       "tags": [
-        "accent"
+        "accent",
+        "qugu",
+        "flexio"
       ],
       "vocabulary": "common",
-      "orthography": "medium"
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
     },
     {
       "id": "p-1oot40r",
@@ -8578,10 +8617,16 @@
       "text": "capaç",
       "mode": "words",
       "tags": [
-        "essa"
+        "accent",
+        "essa",
+        "flexio"
       ],
       "vocabulary": "common",
-      "orthography": "medium"
+      "orthography": "medium",
+      "morphology": {
+        "gender": "common",
+        "number": "singular"
+      }
     },
     {
       "id": "p-d0zpob",
@@ -9713,10 +9758,17 @@
       "text": "grossa",
       "mode": "words",
       "tags": [
-        "essa"
+        "accent",
+        "essa",
+        "erra",
+        "flexio"
       ],
       "vocabulary": "common",
-      "orthography": "medium"
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
     },
     {
       "id": "p-1lz1y1e",
@@ -10548,10 +10600,19 @@
       "text": "promesa",
       "mode": "words",
       "tags": [
-        "essa"
+        "accent",
+        "essa",
+        "erra",
+        "verbs",
+        "flexio"
       ],
       "vocabulary": "common",
-      "orthography": "medium"
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
     },
     {
       "id": "p-11w6ekl",
@@ -11891,16 +11952,6 @@
       "orthography": "medium"
     },
     {
-      "id": "p-tfqc9e",
-      "text": "ahir-vespre",
-      "mode": "words",
-      "tags": [
-        "hac"
-      ],
-      "vocabulary": "common",
-      "orthography": "medium"
-    },
-    {
       "id": "p-1rtzbn3",
       "text": "alè",
       "mode": "words",
@@ -12094,16 +12145,6 @@
     {
       "id": "p-11z28p3",
       "text": "tothora",
-      "mode": "words",
-      "tags": [
-        "hac"
-      ],
-      "vocabulary": "common",
-      "orthography": "medium"
-    },
-    {
-      "id": "p-1ybepeo",
-      "text": "ahir-nit",
       "mode": "words",
       "tags": [
         "hac"
@@ -13170,10 +13211,17 @@
       "text": "lletja",
       "mode": "words",
       "tags": [
-        "gej"
+        "accent",
+        "gej",
+        "digrafs",
+        "flexio"
       ],
       "vocabulary": "common",
-      "orthography": "medium"
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
     },
     {
       "id": "p-lk747y",
@@ -13910,16 +13958,6 @@
       "orthography": "medium"
     },
     {
-      "id": "p-186cmb",
-      "text": "arbitre",
-      "mode": "words",
-      "tags": [
-        "beve"
-      ],
-      "vocabulary": "common",
-      "orthography": "medium"
-    },
-    {
       "id": "p-rpoufo",
       "text": "àrbitre",
       "mode": "words",
@@ -14415,16 +14453,6 @@
     {
       "id": "p-m8rbrf",
       "text": "blat",
-      "mode": "words",
-      "tags": [
-        "beve"
-      ],
-      "vocabulary": "common",
-      "orthography": "medium"
-    },
-    {
-      "id": "p-14nx0m3",
-      "text": "blat-de-moro",
       "mode": "words",
       "tags": [
         "beve"
@@ -16551,10 +16579,17 @@
       "text": "valenta",
       "mode": "words",
       "tags": [
-        "beve"
+        "accent",
+        "beve",
+        "vocals",
+        "flexio"
       ],
       "vocabulary": "common",
-      "orthography": "medium"
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
     },
     {
       "id": "p-1eyic9g",
@@ -16661,11 +16696,17 @@
       "text": "vella",
       "mode": "words",
       "tags": [
+        "accent",
         "beve",
-        "digrafs"
+        "digrafs",
+        "flexio"
       ],
       "vocabulary": "common",
-      "orthography": "medium"
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
     },
     {
       "id": "p-12r8zk0",
@@ -17101,16 +17142,6 @@
     {
       "id": "p-17jxkqk",
       "text": "viu",
-      "mode": "words",
-      "tags": [
-        "beve"
-      ],
-      "vocabulary": "common",
-      "orthography": "medium"
-    },
-    {
-      "id": "p-3gbt7",
-      "text": "viuda",
       "mode": "words",
       "tags": [
         "beve"
@@ -21086,10 +21117,18 @@
       "text": "graciosa",
       "mode": "words",
       "tags": [
-        "qugu"
+        "accent",
+        "essa",
+        "erra",
+        "qugu",
+        "flexio"
       ],
       "vocabulary": "common",
-      "orthography": "medium"
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
     },
     {
       "id": "p-zed37n",
@@ -22129,10 +22168,20 @@
       "text": "recollida",
       "mode": "words",
       "tags": [
-        "qugu"
+        "accent",
+        "erra",
+        "qugu",
+        "digrafs",
+        "verbs",
+        "flexio"
       ],
       "vocabulary": "common",
-      "orthography": "medium"
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
     },
     {
       "id": "p-1wttlkp",
@@ -33767,6 +33816,2578 @@
       ],
       "vocabulary": "specialized",
       "orthography": "high"
+    },
+    {
+      "id": "p-8p8k4n",
+      "text": "arbitrar",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "beve",
+        "erra",
+        "verbs"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium"
+    },
+    {
+      "id": "p-1f9rv4o",
+      "text": "despistada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-255nxx",
+      "text": "despistades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1k7zmta",
+      "text": "despistats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-13xn7ju",
+      "text": "acompanyada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "vocals",
+        "digrafs",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-9u8oh3",
+      "text": "acompanyades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "digrafs",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-yzd89g",
+      "text": "acompanyats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "digrafs",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1gv93f6",
+      "text": "organitzada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1p805tb",
+      "text": "organitzades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1kpigbw",
+      "text": "organitzats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-19dp0vb",
+      "text": "pintada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-nd6vw8",
+      "text": "pintades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-15gbpyl",
+      "text": "pintats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-snr07k",
+      "text": "preparada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "erra",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-nq948t",
+      "text": "preparades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-otffp2",
+      "text": "preparats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1uz07ad",
+      "text": "cansada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-15ybcri",
+      "text": "cansades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1ywdi73",
+      "text": "cansats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-3bxgtf",
+      "text": "espantada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-42gac4",
+      "text": "espantades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1yfm0a1",
+      "text": "espantats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1vzr9m",
+      "text": "enfadada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-xcgdbr",
+      "text": "enfadades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-5q946c",
+      "text": "enfadats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1vzcn4d",
+      "text": "convidada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "beve",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-73i6gm",
+      "text": "convidades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1r12ntz",
+      "text": "convidats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-bzeptg",
+      "text": "tancada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "qugu",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-l6smbl",
+      "text": "tancades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "qugu",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-8535ay",
+      "text": "tancats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "qugu",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-kwgoil",
+      "text": "oberta",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "beve",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1tm2pza",
+      "text": "obertes",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-osb487",
+      "text": "oberts",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-acg4ar",
+      "text": "escrita",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "qugu",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-y0yjhw",
+      "text": "escrites",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "qugu",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-6glol5",
+      "text": "escrits",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "qugu",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-6vthxg",
+      "text": "llegida",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "gej",
+        "digrafs",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-13808lt",
+      "text": "llegides",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "gej",
+        "digrafs",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-bu19m2",
+      "text": "llegits",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "gej",
+        "digrafs",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-sbk3fn",
+      "text": "decidida",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1njvql0",
+      "text": "decidides",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-oe4kx5",
+      "text": "decidits",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1b9pp96",
+      "text": "vestida",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-18sv1xj",
+      "text": "vestides",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-16bhxkk",
+      "text": "vestits",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1j4aca3",
+      "text": "protegida",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "gej",
+        "erra",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-121irpo",
+      "text": "protegides",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "gej",
+        "erra",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1o2kbkh",
+      "text": "protegits",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "gej",
+        "erra",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1ot3nxy",
+      "text": "recollides",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "qugu",
+        "digrafs",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1fu961z",
+      "text": "recollits",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "qugu",
+        "digrafs",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-u9raz1",
+      "text": "viscuda",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "qugu",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1rhm2ra",
+      "text": "viscudes",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "qugu",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-pbjjaf",
+      "text": "viscuts",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "qugu",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-vvbf2b",
+      "text": "revisada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-oqa8ok",
+      "text": "revisades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-rxy45l",
+      "text": "revisats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-nzjl4h",
+      "text": "canviada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "beve",
+        "qugu",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1v6uglm",
+      "text": "canviades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "qugu",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-rwww17",
+      "text": "canviats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "qugu",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-qcirsi",
+      "text": "corregida",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "gej",
+        "erra",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1it4o7j",
+      "text": "corregides",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "gej",
+        "erra",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-u6s4p8",
+      "text": "corregits",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "gej",
+        "erra",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-egv6tg",
+      "text": "apresa",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-nqsdld",
+      "text": "apreses",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-licn1r",
+      "text": "apresos",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1e890hk",
+      "text": "entesa",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1go0k7p",
+      "text": "enteses",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1efim2b",
+      "text": "entesos",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1acq8o2",
+      "text": "promeses",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1adbd9o",
+      "text": "promesos",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-rmg10",
+      "text": "coneguda",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "qugu",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-fxsaep",
+      "text": "conegudes",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "qugu",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-5pu7pm",
+      "text": "coneguts",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "qugu",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1tx3s5f",
+      "text": "perduda",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "erra",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-k0t8l0",
+      "text": "perdudes",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1pzqh8p",
+      "text": "perduts",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-i8ghuq",
+      "text": "estimada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-13fetbz",
+      "text": "estimades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-da6ikc",
+      "text": "estimats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-llkrf8",
+      "text": "estudiada",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-ga88wx",
+      "text": "estudiades",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-hr96wq",
+      "text": "estudiats",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-76mra0",
+      "text": "conduïdes",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "qugu",
+        "dieresi",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "high",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-vwyyx9",
+      "text": "conduïts",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "qugu",
+        "dieresi",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "high",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1ypdywz",
+      "text": "produïdes",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "dieresi",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "high",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1nw2dtc",
+      "text": "produïts",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "dieresi",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "high",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-11f4mp0",
+      "text": "reduïda",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "erra",
+        "dieresi",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "high",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-1twsnht",
+      "text": "reduïdes",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "dieresi",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "high",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-16delze",
+      "text": "reduïts",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "dieresi",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "high",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-119t26k",
+      "text": "traduïda",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "erra",
+        "dieresi",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "high",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-182r30p",
+      "text": "traduïdes",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "dieresi",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "high",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-16b6zgy",
+      "text": "traduïts",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "dieresi",
+        "verbs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "high",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural",
+        "form": "participle"
+      }
+    },
+    {
+      "id": "p-fhy7mp",
+      "text": "amigues",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "qugu",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-1b9qakn",
+      "text": "amics",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "qugu",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-38nv5u",
+      "text": "companya",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "vocals",
+        "digrafs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
+    },
+    {
+      "id": "p-pgtwgv",
+      "text": "companyes",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "digrafs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-1x9z2ng",
+      "text": "companys",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "vocals",
+        "digrafs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-2gkjye",
+      "text": "bonica",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "beve",
+        "qugu",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
+    },
+    {
+      "id": "p-1idfof4",
+      "text": "boniques",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "qugu",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-6cezo0",
+      "text": "bonics",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "qugu",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-t59y5s",
+      "text": "blava",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "beve",
+        "vocals",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
+    },
+    {
+      "id": "p-1f84dy5",
+      "text": "blaves",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "vocals",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-tozp1t",
+      "text": "blaus",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "vocals",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-1v8qhm0",
+      "text": "grosses",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-1v85d0e",
+      "text": "grossos",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-fd19ks",
+      "text": "seca",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "qugu",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
+    },
+    {
+      "id": "p-pgbdli",
+      "text": "seques",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "qugu",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-bh6tv6",
+      "text": "secs",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "qugu",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-z7gnym",
+      "text": "nova",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "beve",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
+    },
+    {
+      "id": "p-1w3yeh7",
+      "text": "noves",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-wfnsiv",
+      "text": "nous",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-bz0z5l",
+      "text": "velles",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "digrafs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-11b1tki",
+      "text": "vells",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "digrafs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-yk9892",
+      "text": "gracioses",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "qugu",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-yjbhnk",
+      "text": "graciosos",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "qugu",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-f0vpc9",
+      "text": "nerviosa",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
+    },
+    {
+      "id": "p-1cvf8ia",
+      "text": "nervioses",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-1cw0d3w",
+      "text": "nerviosos",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-hq3f75",
+      "text": "tranquil·les",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "qugu",
+        "signes",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "high",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-18eng4f",
+      "text": "tranquils",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "qugu",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-l5w9qm",
+      "text": "curiosa",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
+    },
+    {
+      "id": "p-k0jiyz",
+      "text": "curioses",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-m7gebh",
+      "text": "curiosos",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "erra",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-zskai",
+      "text": "lletges",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "gej",
+        "digrafs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-gqv6cz",
+      "text": "lletjos",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "gej",
+        "digrafs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-qu9ldz",
+      "text": "felices",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-4yd611",
+      "text": "feliços",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-1fu6kq4",
+      "text": "capaces",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-1o35t5i",
+      "text": "capaços",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-pbyhzf",
+      "text": "dolça",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
+    },
+    {
+      "id": "p-1qy5ods",
+      "text": "dolces",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-1b02boi",
+      "text": "dolços",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-1pxs7mg",
+      "text": "valentes",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "vocals",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-drjq9p",
+      "text": "valents",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "vocals",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-pzow36",
+      "text": "vermella",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "beve",
+        "erra",
+        "digrafs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "singular"
+      }
+    },
+    {
+      "id": "p-zhlyvj",
+      "text": "vermelles",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "erra",
+        "digrafs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "feminine",
+        "number": "plural"
+      }
+    },
+    {
+      "id": "p-tvjbss",
+      "text": "vermells",
+      "mode": "words",
+      "tags": [
+        "accent",
+        "essa",
+        "beve",
+        "erra",
+        "digrafs",
+        "flexio"
+      ],
+      "vocabulary": "common",
+      "orthography": "medium",
+      "morphology": {
+        "gender": "masculine",
+        "number": "plural"
+      }
     }
   ]
 }

@@ -2,6 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
+const { assertStableCatalogue } = require('./catalog-policy.cjs');
 const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root, name), 'utf8');
 const json = name => JSON.parse(read(name));
@@ -15,6 +16,27 @@ function emit(name, text) {
 }
 const bundle = (global, data) => '/* Generat amb tools/build-catalogs.cjs. Edita el JSON font. */\n(function(root){root.' + global + '=' + JSON.stringify(data) + ';if(typeof module!=="undefined")module.exports=root.' + global + ';})(typeof window==="undefined"?globalThis:window);\n';
 const manifest = json('locales/manifest.json');
+for (const item of manifest.languages) {
+  const profile = json(item.config), source = json(profile.catalogue);
+  const validationPath = path.posix.dirname(profile.catalogue) + '/validation.json';
+  assertStableCatalogue(source, read(profile.catalogue), fs.existsSync(path.join(root,validationPath)) ? json(validationPath) : null);
+}
+// Review TXT files can be edited by a teacher. Never overwrite an edited review.
+// The previous runtime bundle is the baseline, independent of incoming JSON changes.
+if (!check) for (const item of manifest.languages) {
+  const profile = json(item.config), base = path.posix.dirname(profile.catalogue);
+  const previous = path.join(root, base, 'catalog.js');
+  if (!fs.existsSync(previous)) continue;
+  const old = require(previous), collator = new Intl.Collator(profile.locale, { sensitivity: 'variant' });
+  for (const [mode, name] of [['words','paraules'],['pseudo','pseudoparaules']]) {
+    const file = base + '/' + name + '.txt';
+    if (!fs.existsSync(path.join(root,file))) continue;
+    const baseline = old.entries.filter(e=>e.mode===mode).map(e=>e.text).sort(collator.compare).join('\n')+'\n';
+    if (read(file).replace(/\r\n/g,'\n').replace(/^\uFEFF/,'') !== baseline) {
+      throw new Error('El fitxer '+file+' conté una revisió manual. Conserva-la i incorpora els canvis abans de regenerar; no se sobreescriurà.');
+    }
+  }
+}
 emit('locales/manifest.js', bundle('PlecLanguages', manifest));
 for (const item of manifest.languages) {
   const profile = json(item.config), source = json(profile.catalogue);
@@ -34,9 +56,10 @@ for (const item of manifest.languages) {
   // Every locale gets a real directory entry point; project subpaths and file:// work.
   const prefix = '../'.repeat(item.path.split('/').filter(Boolean).length);
   let html = read(profile.template);
+  const assetVersion = /src="catalog\.js(\?[^\"]*)"/.exec(html)?.[1] || '';
   html = html.replace(/((?:src|href)=")(?!https?:|lightning:|#|\.\/)([^\"]+)/g, (_, start, target) => start + prefix + target);
-  html = html.replace('catalog.js?v=1.7.0', base + '/catalog.js?v=1.7.0');
-  html = html.replace('<script defer src="' + prefix + base, '<script defer src="' + prefix + 'locales/manifest.js?v=1.7.0"></script>\n  <script defer src="' + prefix + path.posix.dirname(item.config) + '/config.js?v=1.7.0"></script>\n  <script defer src="' + prefix + 'language.js?v=1.7.0"></script>\n  <script defer src="' + prefix + base);
+  html = html.replace('catalog.js' + assetVersion, base + '/catalog.js' + assetVersion);
+  html = html.replace('<script defer src="' + prefix + base, '<script defer src="' + prefix + 'locales/manifest.js' + assetVersion + '"></script>\n  <script defer src="' + prefix + path.posix.dirname(item.config) + '/config.js' + assetVersion + '"></script>\n  <script defer src="' + prefix + 'language.js' + assetVersion + '"></script>\n  <script defer src="' + prefix + base);
   emit(item.path + 'index.html', html);
   console.log(item.id + ': ' + source.entries.filter(e=>e.mode==='words').length + ' paraules · ' + revision);
 }

@@ -1,5 +1,13 @@
 # Historial
 
+## 1.8 · 23 d’octubre de 2026
+
+- 137 variants noves de femení i plural, amb focus «Femenins i plurals», gènere, nombre i focus ortogràfics compartits. Inclou «despistats», «acompanyades», «organitzades», «pintats», «obertes», «escrites» i «conduïdes».
+- Eliminats «ahir-vespre», «ahir-nit», «blat-de-moro» i «viuda»; es conserva «vídua». Incorporat «arbitrar» segons la revisió del docent, mantenint «àrbitre».
+- Banc de 3.299 paraules i 96 pseudoparaules. Totes les incorporacions tenen coincidència exacta al lèxic flexionat de Softcatalà.
+- Eines de contrast exacte amb lema i categoria, informe de procedència i protecció del TXT davant de sobreescriptures accidentals. Control previ per marcar el banc com a estable.
+- Les configuracions antigues que tenien tots els focus seleccionats incorporen el nou focus automàticament.
+
 ## 1.7 · 23 d’octubre de 2026
 
 - Entrada catalana a `/ca/`, amb rutes relatives compatibles amb GitHub Pages i domini propi.

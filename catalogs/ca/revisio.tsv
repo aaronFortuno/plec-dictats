@@ -21,7 +21,10 @@ accident	words	common	medium	essa	p-m04bkx
 àcid	words	common	medium	accent	p-17ml9zg
 acolliment	words	common	medium	digrafs	p-3j4kao
 acollir	words	common	medium	qugu	p-1r2unka
+acompanyada	words	common	medium	accent,vocals,digrafs,verbs,flexio	p-13xn7ju
+acompanyades	words	common	medium	accent,essa,vocals,digrafs,verbs,flexio	p-9u8oh3
 acompanyar	words	common	medium	qugu	p-1k9ls95
+acompanyats	words	common	medium	accent,essa,vocals,digrafs,verbs,flexio	p-yzd89g
 acompanyéssim	words	expanded	high	accent,essa,verbs	p-3giwf9
 acord	words	common	medium	erra	p-1r1vzjv
 acordar	words	common	medium	erra	p-ckjf84
@@ -79,8 +82,6 @@ agraïu	words	common	high	verbs,accent,dieresi,gej	p-1ll44od
 aguantàvem	words	expanded	high	accent,beve,qugu,verbs	p-9fps3g
 àguila	words	common	medium	accent	p-mdzhf0
 ahir	words	basic	medium	hac	p-jhyj3i
-ahir-nit	words	common	medium	hac	p-1ybepeo
-ahir-vespre	words	common	medium	hac	p-tfqc9e
 aigua	words	basic	low	qugu	p-lc6vpt
 aiguamoll	words	common	medium	qugu	p-35pr35
 aiguardent	words	common	medium	qugu	p-1x35690
@@ -142,7 +143,9 @@ ambició	words	common	medium	beve	p-1ago5zc
 ambient	words	common	medium	beve	p-1a71br4
 àmbit	words	expanded	medium	accent	p-1rowx5u
 amfibi	words	specialized	high	accent	p-1rji2a
-amiga	words	common	medium	accent	p-1e21541
+amics	words	common	medium	accent,essa,qugu,flexio	p-1b9qakn
+amiga	words	common	medium	accent,qugu,flexio	p-1e21541
+amigues	words	common	medium	accent,essa,qugu,flexio	p-fhy7mp
 amistat	words	common	medium	accent	p-1oot40r
 amistós	words	common	medium	essa	p-1l8sj70
 amoïna	words	expanded	high	dieresi	p-1880cqp
@@ -189,6 +192,9 @@ aprendríem	words	expanded	high	accent,verbs	p-15i567h
 aprenguéssim	words	expanded	high	accent,essa,qugu,verbs	p-f7nkpp
 aprenguessin	words	expanded	high	accent,essa,qugu,verbs	p-7z0vy8
 aprenguéssiu	words	expanded	high	accent,essa,qugu,verbs	p-hfke9h
+apresa	words	common	medium	accent,essa,erra,verbs,flexio	p-egv6tg
+apreses	words	common	medium	accent,essa,erra,verbs,flexio	p-nqsdld
+apresos	words	common	medium	accent,essa,erra,verbs,flexio	p-licn1r
 aprovació	words	common	medium	beve	p-j2wh8s
 aprovar	words	common	medium	beve	p-1be6ron
 aquarel·la	words	common	high	signes,qugu	p-wkcn67
@@ -197,7 +203,7 @@ aquari	words	common	medium	qugu	p-1xilldx
 ara	words	basic	low	hac	p-fu2dmu
 àrab	words	common	medium	accent	p-trcedh
 aranya	words	basic	low	digrafs,erra	p-j0para
-arbitre	words	common	medium	beve	p-186cmb
+arbitrar	words	common	medium	accent,beve,erra,verbs	p-8p8k4n
 àrbitre	words	common	medium	beve	p-rpoufo
 arbre	words	basic	low	erra	p-10ewn9e
 arbust	words	common	medium	erra	p-uz9zqd
@@ -386,8 +392,10 @@ blanquejar	words	common	medium	accent	p-1tdqel3
 blanuf	pseudo			grups	s-1a9ujc9
 blanufeta	pseudo			llargues	s-j76w3n
 blat	words	common	medium	beve	p-m8rbrf
-blat-de-moro	words	common	medium	beve	p-14nx0m3
 blau	words	common	medium	beve	p-lyrq2g
+blaus	words	common	medium	accent,essa,beve,vocals,flexio	p-tozp1t
+blava	words	common	medium	accent,beve,vocals,flexio	p-t59y5s
+blaves	words	common	medium	accent,essa,beve,vocals,flexio	p-1f84dy5
 blenuc	pseudo			grups	s-c3biom
 blinufeta	pseudo			llargues	s-38wv6j
 blis	pseudo			grups	s-17uxlgp
@@ -408,6 +416,9 @@ bolquer	words	common	medium	beve	p-zamfg8
 bombó	words	common	medium	accent	p-1kypnvt
 bombolla	words	common	medium	beve	p-1x3c6t0
 bonic	words	common	medium	beve	p-1u5zw03
+bonica	words	common	medium	accent,beve,qugu,flexio	p-2gkjye
+bonics	words	common	medium	accent,essa,beve,qugu,flexio	p-6cezo0
+boniques	words	common	medium	accent,essa,beve,qugu,flexio	p-1idfof4
 bony	words	common	medium	beve	p-1qxkko2
 bordar	words	common	medium	beve	p-16nzlua
 borinot	words	common	medium	beve	p-1lb3hw3
@@ -510,16 +521,22 @@ cançó	words	common	medium	accent,essa	p-hozgas
 canell	words	common	medium	digrafs	p-1qiprl1
 cangur	words	common	medium	qugu	p-8c4078
 canó	words	common	medium	qugu	p-1ek6gz
+cansada	words	common	medium	accent,essa,vocals,verbs,flexio	p-1uz07ad
+cansades	words	common	medium	accent,essa,vocals,verbs,flexio	p-15ybcri
 cansament	words	common	medium	essa	p-1yg9pfq
 cansat	words	common	medium	essa	p-au3dh2
+cansats	words	common	medium	accent,essa,vocals,verbs,flexio	p-1ywdi73
 cantàvem	words	expanded	high	accent,beve,verbs	p-1q6lbeu
 cantàveu	words	expanded	high	accent,beve,verbs	p-1wubs26
 cantéssim	words	expanded	high	accent,essa,verbs	p-7nz0b1
 cantessin	words	expanded	high	accent,essa,verbs	p-1n6hnjk
 cantéssiu	words	expanded	high	accent,essa,verbs	p-108jnp
 canvi	words	common	medium	beve	p-1j9bhcf
+canviada	words	common	medium	accent,beve,qugu,verbs,flexio	p-nzjl4h
+canviades	words	common	medium	accent,essa,beve,qugu,verbs,flexio	p-1v6uglm
 canviar	words	common	high	beve	p-uh5ts8
 canviaríem	words	expanded	high	accent,beve,verbs	p-1qo9um1
+canviats	words	common	medium	accent,essa,beve,qugu,verbs,flexio	p-rwww17
 canviàvem	words	expanded	high	accent,beve,verbs	p-h3d5gj
 canviéssim	words	expanded	high	accent,essa,beve,verbs	p-1u1njiq
 canviessin	words	expanded	high	accent,essa,beve,verbs	p-19houoz
@@ -531,7 +548,9 @@ canyella	words	common	medium	digrafs	p-1nuks1r
 canyís	words	common	medium	digrafs	p-ufcy51
 canyissar	words	common	medium	digrafs	p-ytjmid
 cap	words	common	medium	qugu	p-d7cbtk
-capaç	words	common	medium	essa	p-op0das
+capaç	words	common	medium	accent,essa,flexio	p-op0das
+capaces	words	common	medium	accent,essa,flexio	p-1fu6kq4
+capaços	words	common	medium	accent,essa,flexio	p-1o35t5i
 capell	words	common	medium	digrafs	p-2dpag7
 capellà	words	common	medium	digrafs	p-k6bsjp
 càpiga	words	expanded	high	accent,verbs	p-1j2qxus
@@ -706,22 +725,30 @@ comerç	words	common	medium	essa	p-uxn5ff
 còmic	words	common	medium	accent	p-dps5vg
 còmode	words	common	medium	qugu	p-1efrrb2
 company	words	common	medium	digrafs	p-pftxhz
+companya	words	common	medium	accent,vocals,digrafs,flexio	p-38nv5u
+companyes	words	common	medium	accent,essa,vocals,digrafs,flexio	p-pgtwgv
 companyia	words	common	medium	digrafs	p-wpptpd
 companyó	words	common	medium	digrafs	p-xrdxv0
+companys	words	common	medium	accent,essa,vocals,digrafs,flexio	p-1x9z2ng
 compàs	words	specialized	high	accent	p-1hgpthe
 comprovació	words	common	medium	beve	p-bu8lky
 comprovar	words	common	medium	beve	p-1u4pc5t
 conduïa	words	common	high	dieresi,verbs,accent	p-1ht59wj
-conduïda	words	common	high	verbs,accent,dieresi	p-zuehfr
+conduïda	words	common	high	accent,qugu,dieresi,verbs,flexio	p-zuehfr
+conduïdes	words	common	high	accent,essa,qugu,dieresi,verbs,flexio	p-76mra0
 conduïen	words	common	high	verbs,accent,dieresi	p-ogxxhv
 conduïes	words	common	high	verbs,accent,dieresi	p-vyn784
 conduïm	words	common	high	verbs,accent,dieresi	p-1l50i87
 conduïssin	words	expanded	high	dieresi	p-1m4sxcx
 conduïssis	words	expanded	high	dieresi	p-1gb19si
 conduït	words	common	high	verbs,accent,dieresi	p-1e7afvw
+conduïts	words	common	high	accent,essa,qugu,dieresi,verbs,flexio	p-vwyyx9
 conduïu	words	common	high	verbs,accent,dieresi	p-1eha1kv
+coneguda	words	common	medium	accent,qugu,verbs,flexio	p-rmg10
+conegudes	words	common	medium	accent,essa,qugu,verbs,flexio	p-fxsaep
 coneguéssim	words	expanded	high	accent,essa,qugu,verbs	p-1pehyxa
 coneguessin	words	expanded	high	accent,essa,qugu,verbs	p-1vrytmv
+coneguts	words	common	medium	accent,essa,qugu,verbs,flexio	p-5pu7pm
 conèixer	words	common	medium	digrafs	p-quymvy
 coneixíem	words	expanded	high	accent,verbs	p-2mt4a7
 confiança	words	expanded	medium	essa	p-oyjvke
@@ -761,7 +788,10 @@ contribuïssin	words	expanded	high	accent,essa,beve,dieresi,verbs	p-1eef7b4
 contribuït	words	expanded	high	dieresi	p-45t6wj
 convèncer	words	expanded	medium	essa	p-kk75v2
 conversa	words	common	medium	essa	p-hivxlx
+convidada	words	common	medium	accent,beve,vocals,verbs,flexio	p-1vzcn4d
+convidades	words	common	medium	accent,essa,beve,vocals,verbs,flexio	p-73i6gm
 convidar	words	common	medium	beve	p-13qclck
+convidats	words	common	medium	accent,essa,beve,vocals,verbs,flexio	p-1r12ntz
 convit	words	common	medium	beve	p-16pyqbv
 conviure	words	expanded	medium	beve	p-rqrkox
 convivència	words	expanded	medium	beve	p-1g2ptlu
@@ -782,10 +812,13 @@ corona	words	common	medium	erra	p-dygfw8
 corral	words	common	medium	erra	p-15zt4jf
 correcte	words	common	medium	erra	p-1p5940x
 corredor	words	common	medium	erra	p-3r057y
+corregida	words	common	medium	accent,gej,erra,verbs,flexio	p-qcirsi
+corregides	words	common	medium	accent,essa,gej,erra,verbs,flexio	p-1it4o7j
 corregíem	words	expanded	high	accent,gej,erra,verbs	p-18bmrxz
 corregir	words	common	medium	gej,erra	p-ybsmoh
 corregíssim	words	expanded	high	accent,essa,gej,erra,verbs	p-1vdgzl5
 corregissin	words	expanded	high	accent,essa,gej,erra,verbs	p-31ntvg
+corregits	words	common	medium	accent,essa,gej,erra,verbs,flexio	p-u6s4p8
 correguéssim	words	expanded	high	accent,essa,erra,qugu,verbs	p-xleing
 correguessin	words	expanded	high	accent,essa,erra,qugu,verbs	p-zt7k6h
 corrent	words	common	medium	erra	p-1keh5hf
@@ -855,7 +888,10 @@ cultura	words	common	medium	qugu	p-1wukdhy
 cunyi	pseudo			pseudodigrafs	s-1rnih9t
 curar	words	common	medium	erra	p-c6a1fl
 curiós	words	common	medium	essa,erra	p-ejfkwv
+curiosa	words	common	medium	accent,essa,erra,flexio	p-l5w9qm
+curioses	words	common	medium	accent,essa,erra,flexio	p-k0jiyz
 curiositat	words	common	medium	qugu	p-1jxe603
+curiosos	words	common	medium	accent,essa,erra,flexio	p-m7gebh
 cursa	words	common	medium	essa	p-cei9bq
 curt	words	common	medium	erra	p-3blzci
 dallar	words	common	medium	digrafs	p-1psf6gw
@@ -868,8 +904,11 @@ dèbil	words	common	medium	accent	p-121t7zz
 debilitat	words	common	medium	beve	p-3ed80m
 dècada	words	common	medium	accent,qugu	p-148p1rn
 decebre	words	common	medium	beve	p-18t2uw6
+decidida	words	common	medium	accent,essa,vocals,verbs,flexio	p-sbk3fn
+decidides	words	common	medium	accent,essa,vocals,verbs,flexio	p-1njvql0
 decidíssim	words	expanded	high	accent,essa,verbs	p-1ij9g8w
 decidissin	words	expanded	high	accent,essa,verbs	p-1yiytm5
+decidits	words	common	medium	accent,essa,vocals,verbs,flexio	p-oe4kx5
 dècim	words	common	medium	accent	p-1vt80z7
 decisió	words	expanded	medium	essa	p-3y3yg8
 deessa	words	common	medium	essa	p-1csi423
@@ -904,6 +943,9 @@ desoïa	words	expanded	high	dieresi	p-1iwzam5
 despatx	words	common	high	digrafs	p-1hyxyu7
 despatxar	words	common	medium	essa,digrafs	p-d1k6w
 despertar	words	common	medium	erra	p-nibeba
+despistada	words	common	medium	accent,essa,verbs,flexio	p-1f9rv4o
+despistades	words	common	medium	accent,essa,verbs,flexio	p-255nxx
+despistats	words	common	medium	accent,essa,verbs,flexio	p-1k7zmta
 després	words	basic	medium	accent,erra	p-o4hmwi
 despullar	words	common	medium	digrafs	p-shue6o
 dessuadora	words	common	medium	essa	p-o1ixzn
@@ -960,7 +1002,10 @@ document	words	common	medium	qugu	p-sfbo1l
 dofí	words	common	medium	accent	p-vu0hgw
 dofípol	pseudo			simples	s-1vvmxe2
 dolç	words	basic	low	essa	p-ykwk7c
+dolça	words	common	medium	accent,essa,flexio	p-pbyhzf
+dolces	words	common	medium	accent,essa,flexio	p-1qy5ods
 dolçor	words	common	medium	essa	p-1ba1xdh
+dolços	words	common	medium	accent,essa,flexio	p-1b02boi
 dòmino	words	common	medium	accent	p-17gdlcz
 donyet	words	common	medium	digrafs	p-1q33j05
 dopali	pseudo			simples	s-111m8ye
@@ -1015,6 +1060,9 @@ encàrrec	words	common	medium	erra	p-1cqvv0o
 encarregar	words	common	medium	erra	p-dbw0qw
 enciam	words	basic	medium	essa	p-1q75y9l
 energia	words	common	medium	accent	p-1nd65an
+enfadada	words	common	medium	accent,vocals,verbs,flexio	p-1vzr9m
+enfadades	words	common	medium	accent,essa,vocals,verbs,flexio	p-xcgdbr
+enfadats	words	common	medium	accent,essa,vocals,verbs,flexio	p-5q946c
 enganyar	words	common	medium	digrafs	p-1qis6th
 engegar	words	common	medium	gej	p-1jdbxnr
 enginy	words	common	medium	gej	p-14s1qe6
@@ -1038,6 +1086,9 @@ entendríem	words	expanded	high	accent,verbs	p-8s3mft
 entenguéssim	words	expanded	high	accent,essa,qugu,verbs	p-48gs8x
 entenguessin	words	expanded	high	accent,essa,qugu,verbs	p-32zzgc
 enteníem	words	expanded	high	accent,verbs	p-1uhnxiv
+entesa	words	common	medium	accent,essa,vocals,verbs,flexio	p-1e890hk
+enteses	words	common	medium	accent,essa,vocals,verbs,flexio	p-1go0k7p
+entesos	words	common	medium	accent,essa,vocals,verbs,flexio	p-1efim2b
 entràvem	words	expanded	high	accent,beve,verbs	p-15t8rat
 entrepà	words	common	medium	accent	p-tt7cbk
 entréssim	words	expanded	high	accent,essa,verbs	p-p97cms
@@ -1098,6 +1149,9 @@ escombra	words	common	medium	essa	p-544tnc
 escric	words	common	medium	qugu	p-lhjqrp
 escriguéssim	words	expanded	high	accent,essa,qugu,verbs	p-63ft4j
 escriguessin	words	expanded	high	accent,essa,qugu,verbs	p-1rwujmy
+escrita	words	common	medium	accent,essa,erra,qugu,verbs,flexio	p-acg4ar
+escrites	words	common	medium	accent,essa,erra,qugu,verbs,flexio	p-y0yjhw
+escrits	words	common	medium	accent,essa,erra,qugu,verbs,flexio	p-6glol5
 escrivíem	words	common	high	verbs,beve,accent	p-1voehbn
 escrivien	words	expanded	high	accent,beve,verbs	p-g8vmma
 escrivíeu	words	common	high	verbs,beve,accent	p-3b0vzv
@@ -1125,6 +1179,9 @@ esmorteït	words	expanded	high	dieresi	p-tt302e
 esmorzar	words	basic	high	essa,hac	p-7tbf43
 espagueti	words	common	high	hac,qugu	p-1qpb0bp
 espai	words	common	medium	essa	p-12giku2
+espantada	words	common	medium	accent,essa,vocals,verbs,flexio	p-3bxgtf
+espantades	words	common	medium	accent,essa,vocals,verbs,flexio	p-42gac4
+espantats	words	common	medium	accent,essa,vocals,verbs,flexio	p-1yfm0a1
 espàrrec	words	common	high	vocals	p-eniimc
 espàrrecs	words	common	high	vocals	p-1ofvh1x
 espasa	words	common	medium	essa	p-1dbi1ef
@@ -1165,7 +1222,10 @@ estendre	words	expanded	medium	vocals	p-1nkof9s
 estiguéssim	words	expanded	high	accent,essa,qugu,verbs	p-1vk10ty
 estiguessin	words	expanded	high	accent,essa,qugu,verbs	p-1qxtg1r
 estiguéssiu	words	expanded	high	accent,essa,qugu,verbs	p-1tc47a6
+estimada	words	common	medium	accent,essa,vocals,verbs,flexio	p-i8ghuq
+estimades	words	common	medium	accent,essa,vocals,verbs,flexio	p-13fetbz
 estimar	words	common	medium	accent	p-1osu8n5
+estimats	words	common	medium	accent,essa,vocals,verbs,flexio	p-da6ikc
 estirabot	words	common	medium	accent	p-1g9dgf
 estirar	words	common	medium	erra	p-1whrlbo
 estiu	words	basic	low	hac,digrafs	p-1k054l6
@@ -1185,7 +1245,10 @@ estratègia	words	specialized	high	accent	p-174cvls
 estrella	words	common	medium	essa,digrafs	p-1ymmc0o
 estrènyer	words	common	medium	erra	p-nm56vo
 estrip	words	common	medium	accent	p-18uywvb
+estudiada	words	common	medium	accent,essa,vocals,verbs,flexio	p-llkrf8
+estudiades	words	common	medium	accent,essa,vocals,verbs,flexio	p-ga88wx
 estudiaríem	words	expanded	high	accent,verbs	p-3vnk6w
+estudiats	words	common	medium	accent,essa,vocals,verbs,flexio	p-hr96wq
 estudiàvem	words	expanded	high	accent,beve,verbs	p-1yy8ewg
 estudiéssim	words	expanded	high	accent,essa,verbs	p-1v57waf
 estudiï	words	common	high	verbs,accent,dieresi	p-19y5bdx
@@ -1251,7 +1314,9 @@ fèieu	words	common	high	verbs,accent	p-14ibiin
 feina	words	common	medium	accent	p-1sk5nv1
 feix	words	common	medium	digrafs	p-1ocfjf8
 feixum	pseudo			pseudodigrafs	s-xxhuut
-feliç	words	basic	medium	essa	p-1ts0cur
+feliç	words	basic	medium	accent,essa,flexio	p-1ts0cur
+felices	words	common	medium	accent,essa,flexio	p-qu9ldz
+feliços	words	common	medium	accent,essa,flexio	p-4yd611
 fèmur	words	common	medium	accent	p-1ri1b1u
 fenoll	words	common	medium	digrafs	p-aqdasq
 fenupali	pseudo			llargues	s-5empkf
@@ -1449,7 +1514,9 @@ governar	words	common	medium	beve	p-o6zdbw
 gràcia	words	common	medium	accent	p-1k731de
 gràcies	words	common	medium	qugu	p-187em8f
 graciós	words	common	medium	essa	p-1sq9zu2
-graciosa	words	common	medium	qugu	p-fpog0t
+graciosa	words	common	medium	accent,essa,erra,qugu,flexio	p-fpog0t
+gracioses	words	common	medium	accent,essa,erra,qugu,flexio	p-yk9892
+graciosos	words	common	medium	accent,essa,erra,qugu,flexio	p-yjbhnk
 gràfic	words	common	medium	accent	p-1975rcf
 gramàtica	words	common	medium	accent	p-jg70m6
 gran	words	common	medium	erra	p-u3edty
@@ -1467,7 +1534,9 @@ grisp	pseudo			grups	s-4qa3xa
 groc	words	common	medium	erra	p-16lhmnb
 gronxador	words	common	medium	accent	p-m4knq4
 gros	words	common	medium	essa	p-125nzjr
-grossa	words	common	medium	essa	p-1az5h5j
+grossa	words	common	medium	accent,essa,erra,flexio	p-1az5h5j
+grosses	words	common	medium	accent,essa,erra,flexio	p-1v8qhm0
+grossos	words	common	medium	accent,essa,erra,flexio	p-1v85d0e
 grua	words	common	medium	qugu	p-zed37n
 grupinola	pseudo			llargues	s-abwjxq
 gual	words	common	medium	accent	p-15o2r8t
@@ -1765,6 +1834,8 @@ lleganya	words	common	medium	digrafs	p-gal5bl
 llegat	words	common	medium	digrafs	p-1mjqkfp
 llegenda	words	common	medium	gej	p-13q7uxo
 llegí	words	expanded	high	accent,gej,verbs	p-1olzj47
+llegida	words	common	medium	accent,gej,digrafs,verbs,flexio	p-6vthxg
+llegides	words	common	medium	accent,essa,gej,digrafs,verbs,flexio	p-13808lt
 llegidor	words	common	medium	digrafs	p-10piorg
 llegíem	words	expanded	high	accent,gej,verbs	p-fmb31t
 llegíeu	words	expanded	high	accent,gej,verbs	p-hu7wll
@@ -1774,6 +1845,7 @@ llegíssim	words	expanded	high	accent,essa,gej,verbs	p-75x98j
 llegissin	words	expanded	high	accent,essa,gej,verbs	p-1lxgmj6
 llegíssiu	words	expanded	high	accent,essa,gej,verbs	p-4y0for
 llegit	words	common	medium	gej	p-1r0bn4t
+llegits	words	common	medium	accent,essa,gej,digrafs,verbs,flexio	p-bu19m2
 lleial	words	common	medium	digrafs	p-1g24stz
 lleig	words	common	medium	digrafs	p-rwmzgn
 lleixiu	words	common	medium	digrafs	p-kkqct4
@@ -1787,7 +1859,9 @@ llepafils	words	common	medium	digrafs	p-1u1osrc
 llepar	words	common	medium	digrafs	p-4aur16
 llesca	words	common	medium	digrafs	p-1njkcl0
 llet	words	common	medium	digrafs	p-1ysjlqx
-lletja	words	common	medium	gej	p-idiqgo
+lletges	words	common	medium	accent,essa,gej,digrafs,flexio	p-zskai
+lletja	words	common	medium	accent,gej,digrafs,flexio	p-idiqgo
+lletjos	words	common	medium	accent,essa,gej,digrafs,flexio	p-gqv6cz
 lletra	words	common	medium	digrafs	p-mskxyo
 lleuger	words	common	medium	digrafs	p-1twk4xc
 lleure	words	common	medium	digrafs	p-1x8dkjf
@@ -2036,13 +2110,19 @@ neguit	words	common	medium	qugu	p-18h3r9w
 neguitejar	words	common	medium	qugu	p-19xm23o
 néixer	words	expanded	high	accent,verbs	p-15ti20v
 nerviós	words	common	medium	essa	p-1lz5ckm
+nerviosa	words	common	medium	accent,essa,erra,flexio	p-f0vpc9
+nervioses	words	common	medium	accent,essa,erra,flexio	p-1cvf8ia
+nerviosos	words	common	medium	accent,essa,erra,flexio	p-1cw0d3w
 neurona	words	specialized	high	accent	p-thzyia
 nexe	words	common	medium	digrafs	p-19tcfj2
 ninot	words	common	medium	accent	p-19m07b2
 nínxol	words	common	medium	digrafs	p-1bvbakw
 notícia	words	common	medium	essa	p-ftpcm7
+nous	words	common	medium	accent,essa,flexio	p-wfnsiv
+nova	words	common	medium	accent,beve,flexio	p-z7gnym
 novel·la	words	common	high	signes	p-18dhs20
 novembre	words	common	medium	beve	p-jit874
+noves	words	common	medium	accent,essa,beve,flexio	p-1w3yeh7
 nòvio	words	common	medium	beve	p-9k9bwi
 nucli	words	specialized	high	accent	p-1cir55d
 nufà	pseudo			simples	s-10v6qsc
@@ -2062,6 +2142,9 @@ nyora	words	common	medium	digrafs	p-hrgmb
 nyu	words	common	medium	digrafs	p-1qfyrd0
 nyuparela	pseudo			llargues	s-wahwlg
 obert	words	common	medium	beve	p-1wc99ta
+oberta	words	common	medium	accent,beve,vocals,verbs,flexio	p-kwgoil
+obertes	words	common	medium	accent,essa,beve,vocals,verbs,flexio	p-1tm2pza
+oberts	words	common	medium	accent,essa,beve,vocals,verbs,flexio	p-osb487
 objecció	words	common	medium	gej	p-6cz0k2
 objecte	words	common	medium	gej	p-tdu7wm
 objectiu	words	expanded	medium	gej,beve	p-1fnparx
@@ -2125,7 +2208,10 @@ orellut	words	common	medium	digrafs	p-1qevhip
 oreneta	words	common	medium	hac	p-1pr2vdy
 orfe	words	expanded	medium	hac,erra	p-1f83xks
 òrgan	words	common	medium	accent	p-13gg0iy
+organitzada	words	common	medium	accent,essa,vocals,verbs,flexio	p-1gv93f6
+organitzades	words	common	medium	accent,essa,vocals,verbs,flexio	p-1p805tb
 organitzar	words	common	medium	erra	p-xuc2wh
+organitzats	words	common	medium	accent,essa,vocals,verbs,flexio	p-1kpigbw
 organitzàvem	words	expanded	high	accent,beve,verbs	p-13wygyu
 organitzéssim	words	expanded	high	accent,essa,verbs	p-ftnz8t
 origen	words	expanded	medium	accent,gej	p-27nyba
@@ -2252,6 +2338,9 @@ perdessin	words	expanded	high	accent,essa,verbs	p-1srwyl
 perdíem	words	expanded	high	accent,verbs	p-78g242
 perdre	words	common	medium	erra	p-zci2z0
 perdríem	words	expanded	high	accent,verbs	p-10foc2i
+perduda	words	common	medium	accent,erra,vocals,verbs,flexio	p-1tx3s5f
+perdudes	words	common	medium	accent,essa,erra,vocals,verbs,flexio	p-k0t8l0
+perduts	words	common	medium	accent,essa,erra,vocals,verbs,flexio	p-1pzqh8p
 perera	words	common	medium	erra	p-a2fis7
 peresa	words	common	medium	essa	p-k24d96
 perill	words	common	medium	erra	p-f7y2p6
@@ -2282,6 +2371,9 @@ pilar	words	common	medium	accent	p-wzyrwa
 pinça	words	common	medium	essa	p-10n8n6z
 pingüí	words	common	high	qugu,dieresi	p-71q5j7
 pingüins	words	expanded	high	dieresi	p-vd02gw
+pintada	words	common	medium	accent,vocals,verbs,flexio	p-19dp0vb
+pintades	words	common	medium	accent,essa,vocals,verbs,flexio	p-nd6vw8
+pintats	words	common	medium	accent,essa,vocals,verbs,flexio	p-15gbpyl
 pinya	words	basic	low	digrafs	p-15svqvd
 pinyó	words	common	medium	digrafs	p-1ahrlf
 pinyol	words	common	medium	digrafs	p-1mwruup
@@ -2383,6 +2475,9 @@ prendríem	words	expanded	high	accent,verbs	p-lexodc
 prenguéssim	words	expanded	high	accent,essa,qugu,verbs	p-1pg76qg
 prenguessin	words	expanded	high	accent,essa,qugu,verbs	p-1kqro8t
 prenguéssiu	words	expanded	high	accent,essa,qugu,verbs	p-1ro40a8
+preparada	words	common	medium	accent,erra,vocals,verbs,flexio	p-snr07k
+preparades	words	common	medium	accent,essa,erra,vocals,verbs,flexio	p-nq948t
+preparats	words	common	medium	accent,essa,erra,vocals,verbs,flexio	p-otffp2
 president	words	common	medium	essa	p-1o1fb68
 presó	words	common	medium	essa	p-17q624n
 pressa	words	common	medium	essa	p-gh2xxu
@@ -2397,7 +2492,8 @@ príncep	words	common	medium	accent	p-2fvw6f
 prisma	words	specialized	high	accent	p-rn5u9o
 procés	words	common	medium	essa	p-u5h6yo
 produïa	words	common	high	dieresi,verbs,accent	p-csfvho
-produïda	words	common	high	verbs,accent,dieresi	p-1sua5hy
+produïda	words	common	high	accent,erra,dieresi,verbs,flexio	p-1sua5hy
+produïdes	words	common	high	accent,essa,erra,dieresi,verbs,flexio	p-1ypdywz
 produïen	words	common	high	verbs,accent,dieresi	p-1mgg51m
 produïes	words	common	high	verbs,accent,dieresi	p-1nue5ih
 produïm	words	common	high	verbs,accent,dieresi	p-dwea9k
@@ -2405,6 +2501,7 @@ produiríem	words	expanded	high	accent,verbs	p-1e59jj4
 produís	words	expanded	high	accent,verbs	p-m7w22s
 produíssim	words	expanded	high	accent,essa,verbs	p-4f5wwr
 produït	words	common	high	verbs,accent,dieresi	p-geapib
+produïts	words	common	high	accent,essa,erra,dieresi,verbs,flexio	p-1nw2dtc
 produïu	words	common	high	verbs,accent,dieresi	p-g4b3tc
 professió	words	common	medium	essa	p-1ko7w1o
 professor	words	basic	medium	essa	p-j7j8eh
@@ -2414,12 +2511,17 @@ prohibit	words	common	medium	hac	p-4hoiln
 proïsme	words	expanded	high	dieresi	p-1vcu3jj
 projecció	words	common	medium	gej	p-9rrxwo
 projecte	words	common	medium	gej	p-mnyfu8
-promesa	words	common	medium	essa	p-kz7aah
+promesa	words	common	medium	accent,essa,erra,verbs,flexio	p-kz7aah
+promeses	words	common	medium	accent,essa,erra,verbs,flexio	p-1acq8o2
+promesos	words	common	medium	accent,essa,erra,verbs,flexio	p-1adbd9o
 pronom	words	specialized	medium	accent	p-9jbqk7
 proporció	words	specialized	high	accent	p-52rvip
 propòsit	words	expanded	medium	accent	p-17sb8kz
 protecció	words	common	medium	accent	p-j6ldju
+protegida	words	common	medium	accent,gej,erra,verbs,flexio	p-1j4aca3
+protegides	words	common	medium	accent,essa,gej,erra,verbs,flexio	p-121irpo
 protegir	words	common	medium	gej	p-zijmsq
+protegits	words	common	medium	accent,essa,gej,erra,verbs,flexio	p-1o2kbkh
 proteïna	words	expanded	high	dieresi	p-10fbpo0
 protocol·lari	words	specialized	high	signes	p-134kqo3
 prova	words	common	medium	beve	p-1bef6aq
@@ -2539,11 +2641,13 @@ recíproc	words	specialized	high	accent	p-1v4wv9p
 recol·lecció	words	expanded	high	signes	p-ya2iz
 recol·lectar	words	expanded	high	signes	p-5knd0d
 recol·lector	words	expanded	high	signes	p-1xwoe4z
-recollida	words	common	medium	qugu	p-1ksgxql
+recollida	words	common	medium	accent,erra,qugu,digrafs,verbs,flexio	p-1ksgxql
+recollides	words	common	medium	accent,essa,erra,qugu,digrafs,verbs,flexio	p-1ot3nxy
 recollíem	words	expanded	high	accent,verbs	p-1ozc5ls
 recollir	words	common	medium	accent	p-8abi6s
 recollíssim	words	expanded	high	accent,essa,verbs	p-14dxzsq
 recollissin	words	expanded	high	accent,essa,verbs	p-6o1fw3
+recollits	words	common	medium	accent,essa,erra,qugu,digrafs,verbs,flexio	p-1fu961z
 recol·locar	words	expanded	high	signes	p-1b63gnf
 reconeguéssim	words	expanded	high	accent,essa,qugu,verbs	p-14xyqvx
 reconèixer	words	common	medium	qugu	p-1bk2ior
@@ -2551,10 +2655,13 @@ record	words	common	medium	erra	p-h9ikgl
 rècord	words	common	medium	accent	p-vowkd6
 recte	words	common	medium	erra	p-fh029d
 reduïa	words	expanded	high	dieresi	p-ghyqoe
+reduïda	words	common	high	accent,erra,dieresi,verbs,flexio	p-11f4mp0
+reduïdes	words	common	high	accent,essa,erra,dieresi,verbs,flexio	p-1twsnht
 reduïm	words	expanded	high	dieresi	p-fe0bwi
 reduís	words	expanded	high	accent,verbs	p-72ik3a
 reduíssim	words	expanded	high	accent,essa,verbs	p-w38anx
 reduït	words	expanded	high	dieresi	p-dg341p
+reduïts	words	common	high	accent,essa,erra,dieresi,verbs,flexio	p-16delze
 refracció	words	specialized	high	accent	p-1krcc52
 refús	words	common	medium	essa	p-o6imnm
 regal	words	common	medium	erra	p-1pvnwmv
@@ -2626,7 +2733,10 @@ reüllós	words	expanded	high	dieresi	p-jkrpjp
 reunió	words	common	medium	erra	p-15ghfrm
 revés	words	common	medium	beve	p-16o4orh
 revetlla	words	common	medium	beve,digrafs	p-1rc6xvb
+revisada	words	common	medium	accent,essa,beve,vocals,verbs,flexio	p-vvbf2b
+revisades	words	common	medium	accent,essa,beve,vocals,verbs,flexio	p-oqa8ok
 revisar	words	common	medium	beve	p-inw25u
+revisats	words	common	medium	accent,essa,beve,vocals,verbs,flexio	p-rxy45l
 riba	words	common	medium	beve	p-1xj29tw
 ribera	words	common	medium	beve	p-5qvp1p
 rierol	words	common	medium	erra	p-1g4fi31
@@ -2718,6 +2828,8 @@ saüquer	words	expanded	high	dieresi	p-qpy1ht
 savi	words	common	medium	essa	p-1229hbd
 sàvia	words	common	medium	beve	p-1vypcox
 sclaf	pseudo			grups	s-1cwxr0w
+seca	words	common	medium	accent,essa,qugu,flexio	p-fd19ks
+secs	words	common	medium	accent,essa,qugu,flexio	p-bh6tv6
 seduïa	words	expanded	high	dieresi	p-1rnuppf
 seduïm	words	expanded	high	dieresi	p-1uzpy13
 seduït	words	expanded	high	dieresi	p-1o1zvos
@@ -2756,6 +2868,7 @@ seqüela	words	common	high	qugu,dieresi	p-1lty9u3
 seqüència	words	common	high	qugu,dieresi	p-1ixalyi
 sequer	words	common	medium	qugu	p-pqazah
 sequera	words	common	medium	qugu	p-ixo314
+seques	words	common	medium	accent,essa,qugu,flexio	p-pgbdli
 séquia	words	common	medium	accent	p-zgqezk
 serenor	words	common	medium	accent	p-vdo11k
 sergaminya	pseudo			llargues	s-whdk4z
@@ -2854,7 +2967,10 @@ tallar	words	common	medium	digrafs	p-1btefww
 taller	words	common	medium	digrafs	p-1e0wfv0
 talp	words	common	medium	accent	p-1j8hg0z
 també	words	basic	medium	accent	p-zxcq2f
+tancada	words	common	medium	accent,qugu,vocals,verbs,flexio	p-bzeptg
+tancades	words	common	medium	accent,essa,qugu,vocals,verbs,flexio	p-l6smbl
 tancat	words	common	medium	accent	p-xzt9al
+tancats	words	common	medium	accent,essa,qugu,vocals,verbs,flexio	p-8535ay
 tany	words	common	medium	digrafs	p-1ma4k1y
 tanyada	words	common	medium	digrafs	p-mta43a
 tàper	words	common	medium	accent	p-1wujvyj
@@ -2944,11 +3060,14 @@ tothora	words	common	medium	hac	p-11z28p3
 tòxic	words	common	medium	qugu	p-15j044a
 tractor	words	common	medium	erra	p-1uwskjv
 traduïa	words	expanded	high	accent,dieresi,verbs	p-1gt9cp2
+traduïda	words	common	high	accent,erra,dieresi,verbs,flexio	p-119t26k
+traduïdes	words	common	high	accent,essa,erra,dieresi,verbs,flexio	p-182r30p
 traduïm	words	expanded	high	accent,dieresi,verbs	p-1k54l0q
 traduiríem	words	expanded	high	accent,verbs	p-18z4m7y
 traduíssim	words	expanded	high	accent,essa,verbs	p-csi9yd
 traduïssin	words	expanded	high	accent,essa,dieresi,verbs	p-smpn16
 traduït	words	expanded	high	accent,dieresi,verbs	p-1mn109h
+traduïts	words	common	high	accent,essa,erra,dieresi,verbs,flexio	p-16b6zgy
 tràfic	words	common	medium	accent	p-u6tvi8
 traguéssim	words	expanded	high	accent,essa,qugu,verbs	p-11l4344
 traguessin	words	expanded	high	accent,essa,qugu,verbs	p-17yh7rl
@@ -2962,10 +3081,12 @@ trairíem	words	expanded	high	accent,verbs	p-jqn97v
 traíssim	words	expanded	high	accent,essa,verbs	p-1khbnhg
 traïssin	words	expanded	high	accent,essa,dieresi,verbs	p-y62jiv
 trajecte	words	expanded	medium	gej	p-1ney52y
-tranquil·la	words	common	high	signes	p-92097o
+tranquil·la	words	common	high	accent,qugu,signes,flexio	p-92097o
 tranquil·lament	words	expanded	high	signes	p-sf7008
+tranquil·les	words	common	high	accent,essa,qugu,signes,flexio	p-hq3f75
 tranquil·litat	words	expanded	high	signes	p-1m9jfv1
 tranquil·litzar	words	expanded	high	signes	p-1mzsso5
+tranquils	words	common	medium	accent,essa,qugu,flexio	p-18eng4f
 trànsit	words	common	medium	accent	p-g40v0c
 tràquea	words	specialized	high	accent	p-1sy6ile
 treball	words	basic	medium	beve	p-y7mlxo
@@ -3055,7 +3176,9 @@ vaixell	words	basic	high	beve,digrafs	p-l7ufcn
 vaixella	words	common	medium	digrafs	p-1ez4m02
 valdríem	words	expanded	high	accent,beve,verbs	p-1higvn6
 valent	words	common	medium	beve	p-1ygjzto
-valenta	words	common	medium	beve	p-hne5zb
+valenta	words	common	medium	accent,beve,vocals,flexio	p-hne5zb
+valentes	words	common	medium	accent,essa,beve,vocals,flexio	p-1pxs7mg
+valents	words	common	medium	accent,essa,beve,vocals,flexio	p-drjq9p
 valer	words	common	medium	beve	p-1eyic9g
 valguéssim	words	expanded	high	accent,essa,beve,qugu,verbs	p-dkl9uy
 valguessin	words	expanded	high	accent,essa,beve,qugu,verbs	p-dnslmz
@@ -3087,8 +3210,10 @@ veïnes	words	expanded	high	dieresi	p-u4v9hg
 veïns	words	expanded	high	dieresi	p-x3kquh
 vela	words	common	medium	beve	p-1h6i0mm
 vell	words	common	medium	beve	p-1gcj7jp
-vella	words	common	medium	beve,digrafs	p-156w9a4
+vella	words	common	medium	accent,beve,digrafs,flexio	p-156w9a4
+velles	words	common	medium	accent,essa,beve,digrafs,flexio	p-bz0z5l
 vellesa	words	common	medium	essa	p-116j96w
+vells	words	common	medium	accent,essa,beve,digrafs,flexio	p-11b1tki
 velocitat	words	common	medium	beve	p-zoo3fx
 vena	words	common	medium	beve	p-12r8zk0
 vèncer	words	common	medium	beve	p-jdx4eq
@@ -3116,6 +3241,9 @@ vergonyós	words	common	medium	qugu	p-xhko3k
 verí	words	common	medium	beve	p-6ileag
 veritat	words	common	medium	beve	p-4t39x
 vermell	words	common	medium	beve	p-1pkn8fb
+vermella	words	common	medium	accent,beve,erra,digrafs,flexio	p-pzow36
+vermelles	words	common	medium	accent,essa,beve,erra,digrafs,flexio	p-zhlyvj
+vermells	words	common	medium	accent,essa,beve,erra,digrafs,flexio	p-tvjbss
 vermut	words	common	medium	beve	p-19g5kyh
 vern	words	common	medium	accent	p-16v5c5t
 vernís	words	expanded	medium	vocals	p-1sppl39
@@ -3131,9 +3259,12 @@ vespre	words	common	medium	essa	p-bhrbsr
 vessament	words	common	medium	beve	p-1bil0ja
 vessant	words	common	medium	essa	p-wau1jo
 vessar	words	common	medium	essa	p-189cca4
+vestida	words	common	medium	accent,essa,beve,verbs,flexio	p-1b9pp96
+vestides	words	common	medium	accent,essa,beve,verbs,flexio	p-18sv1xj
 vestidor	words	common	medium	beve	p-11u78zq
 vestir	words	common	medium	beve	p-1ft91ih
 vestit	words	basic	medium	beve	p-1gd88wf
+vestits	words	common	medium	accent,essa,beve,verbs,flexio	p-16bhxkk
 veu	words	common	medium	beve	p-17jir4w
 veuríem	words	expanded	high	accent,beve,verbs	p-1glvlv7
 veuríeu	words	expanded	high	accent,beve,verbs	p-1n9m2ij
@@ -3177,6 +3308,9 @@ virolla	words	common	medium	digrafs	p-1ixvabd
 virtut	words	common	medium	beve	p-1de9pty
 virus	words	specialized	high	accent	p-17quycl
 visca	words	common	medium	beve	p-e7br9m
+viscuda	words	common	medium	accent,essa,beve,qugu,verbs,flexio	p-u9raz1
+viscudes	words	common	medium	accent,essa,beve,qugu,verbs,flexio	p-1rhm2ra
+viscuts	words	common	medium	accent,essa,beve,qugu,verbs,flexio	p-pbjjaf
 visible	words	common	medium	beve	p-figf76
 visió	words	common	medium	essa	p-1hmmure
 visita	words	common	medium	essa	p-18kglhq
@@ -3187,7 +3321,6 @@ vista	words	common	medium	beve	p-9pnkv9
 vitamina	words	common	medium	beve	p-1i5jf3h
 vitrina	words	common	medium	beve	p-4bo00n
 viu	words	common	medium	beve	p-17jxkqk
-viuda	words	common	medium	beve	p-3gbt7
 viure	words	basic	low	beve	p-2ad75p
 viuríem	words	expanded	high	accent,beve,verbs	p-1rbjkbb
 viuríeu	words	expanded	high	accent,beve,verbs	p-1tjgdv3

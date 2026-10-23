@@ -61,3 +61,11 @@ D’acord amb les instruccions del projecte, no es comprova el web remot despré
 - Tots els 3.262 elements són codificables amb la font Helvetica del PDF. No s'ha canviat el disseny dels fulls.
 - Sense errors JavaScript en les accions comprovades. Captura local a `output/cataleg-v1.7.jpg`.
 - No s'han fet comprovacions del web desplegat. Encara no hi ha llavors recuperables, QR de dictat ni reproductor.
+
+## Versió 1.8 · 23 d’octubre de 2026
+
+- Banc actual de 3.299 paraules i 96 pseudoparaules, amb 17 focus. Eliminades les quatre formes indicades; vídua i àrbitre es conserven. El canvi de revisió arbitre → arbitrar queda consolidat.
+- 137 variants noves, amb focus de flexió, gènere, nombre i etiquetes ortogràfiques. Les 137 variants i arbitrar tenen coincidència exacta al lèxic flexionat de Softcatalà (revisió b00fcd9503cf290d5b4ef44c873b65667873593a). El cas preexistent rebel·lar-se continua separat com a pendent; no s’ha declarat estable el conjunt del banc.
+- Comprovacions de catàleg, paquets, geometria, etiquetes, contrast estricte i protecció de revisió superades. La generació del focus nou retorna 24 elements diferents del conjunt de 150 formes disponibles.
+- Navegador local: migració de tots els focus activats, disponibilitat del focus nou, generació amb només Femenins i plurals, cerca d’organitzades, exportació del TXT complet de 3.299 mots idèntic al fitxer generat i sense errors JavaScript. La selecció anterior s’ha restaurat després de les proves.
+- Llistes TXT i TSV regenerades. Còpia de la revisió anterior a output/revisio-abans-v1.8.txt. Captura local a output/femenins-plurals-v1.8.jpg. Comprovacions del web remot a càrrec de l’usuari.

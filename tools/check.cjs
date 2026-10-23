@@ -51,6 +51,17 @@ for (const mode of ['words', 'pseudo']) {
 }
 assert(!K.validateCustom('<script>')); assert(!K.validateCustom('dues paraules')); assert(K.validateCustom('col·legi')); assert(K.validateCustom('raïm'));
 const word = text => C.entries.find(e => e.mode === 'words' && e.text === text);
+for(const removed of ['ahir-vespre','ahir-nit','blat-de-moro','viuda','arbitre'])assert(!word(removed),'Mot retirat: '+removed);
+assert(word('vídua')&&word('àrbitre')&&word('arbitrar'),'Es conserven les formes acordades');
+for(const text of ['despistats','acompanyades','organitzades','pintats','obertes','escrites','conduïdes']){
+ const e=word(text);assert(e.tags.includes('flexio')&&e.tags.includes('verbs'),'Variant disponible en tots dos focus: '+text);
+ assert.equal(e.morphology.number,'plural');
+}
+assert(word('conduïdes').tags.includes('dieresi'));
+assert(word('organitzades').tags.includes('essa'));
+assert(word('acompanyades').tags.includes('digrafs'));
+const inflectionPool=K.candidates(C.entries,'words',['flexio'],'cs');
+assert(K.generate({pool:inflectionPool,count:24,tags:['flexio']}).entries.every(e=>e.tags.includes('flexio')));
 assert(word('atapeït').tags.includes('dieresi') && word('atapeït').tags.includes('verbs'));
 for (const shapes of [K.worksheet({ entries:[word('atapeït')], code:'P-ANTIC' }),K.teacherSheet({ entries:[word('atapeït')],code:'P-ANTIC' },C.categories)]) {
   assert(!shapes.some(s=>s.type==='text'&&s.value==='P-ANTIC'), 'El codi antic no s’imprimeix');

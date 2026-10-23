@@ -1,22 +1,52 @@
 {
   "date": "2026-10-23",
-  "kind": "spelling-recognition",
-  "source": "https://github.com/Softcatala/catalan-dict-tools",
-  "dictionaryFiles": {
-    "aff": {
-      "path": "resultats/hunspell/catalan.aff",
-      "sha256": "38f3620161f6cca4748564c3c1df01f267a78d4eb572efcc9eacf7ae7d4296ba"
-    },
-    "dic": {
-      "path": "resultats/hunspell/catalan.dic",
-      "sha256": "091059675d79f811d0f09c7f575a516f7b191a9401b059580f9b0fbbc7181f5f"
-    }
-  },
-  "validator": "Spylls 0.1.7",
-  "wordCount": 3166,
-  "recognized": 3166,
-  "unrecognized": 0,
+  "kind": "exact-form-lookup",
+  "selectionOrigin": "Assistant-proposed editorial selection, not an extraction of an official normative dictionary.",
+  "wordCount": 3299,
   "pseudowordsChecked": false,
   "editorialReview": "pending",
-  "note": "Recognition is not a pedagogical, curricular or frequency validation."
+  "sufficientForApproval": false,
+  "strictLookup": {
+    "method": "Exact NFC form lookup; accents, case, hyphens and middle dots preserved.",
+    "source": {
+      "repository": "https://github.com/Softcatala/catalan-dict-tools",
+      "commit": "b00fcd9503cf290d5b4ef44c873b65667873593a",
+      "path": "resultats/lt/diccionari.txt",
+      "sha256": "2383b9c70eb84b13f172fb8438e006b85a64d7c298fb58745e254e419dae756f",
+      "rows": 1289447,
+      "license": "LGPL-2.1 OR GPL-2.0"
+    },
+    "wordCount": 3299,
+    "exactMatches": 3298,
+    "pending": [
+      "rebel·lar-se"
+    ],
+    "catalogueSHA256": "f687266db37b878cea500b881a1ef94ee76ca54dd3682d3094972f2e45eb37ed",
+    "approvalStatus": "blocked_pending_lexical_review"
+  },
+  "latestAdditions": {
+    "newInflections": 137,
+    "reviewReplacement": "arbitre -> arbitrar",
+    "exactMatches": 138,
+    "unrecognized": 0
+  },
+  "note": "All additions in v1.8 have an exact match. The existing enclitic form rebel·lar-se remains pending a documented exception. Meaning, regional choice, school levels and pedagogical tags require editorial review.",
+  "historicalHunspellCheck": {
+    "date": "2026-10-23",
+    "wordCount": 3166,
+    "recognized": 3166,
+    "unrecognized": 0,
+    "dictionaryFiles": {
+      "aff": {
+        "path": "resultats/hunspell/catalan.aff",
+        "sha256": "38f3620161f6cca4748564c3c1df01f267a78d4eb572efcc9eacf7ae7d4296ba"
+      },
+      "dic": {
+        "path": "resultats/hunspell/catalan.dic",
+        "sha256": "091059675d79f811d0f09c7f575a516f7b191a9401b059580f9b0fbbc7181f5f"
+      }
+    },
+    "validator": "Spylls 0.1.7",
+    "sufficientForApproval": false
+  }
 }

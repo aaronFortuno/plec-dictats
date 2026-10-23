@@ -18,7 +18,7 @@ assert.notEqual(C.fingerprint,digest({source:changed,profile}));
 const rules=structuredClone(profile);rules.stageRules.cm.vocabulary.push('expanded');
 assert.notEqual(C.fingerprint,digest({source,profile:rules}));
 assert.equal(C.status,'draft');assert.equal(C.reviewedByTeacher,false);
-assert.equal(C.entries.filter(e=>e.mode==='words').length,3166);
+assert.equal(C.entries.filter(e=>e.mode==='words').length,3299);
 for(const e of C.entries){
  let h=2166136261;for(const c of e.mode+':'+e.text)h=Math.imul(h^c.codePointAt(0),16777619);
  assert.equal(e.id,(e.mode==='words'?'p-':'s-')+(h>>>0).toString(36),'Stable identity '+e.text);
