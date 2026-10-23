@@ -1,0 +1,6 @@
+{
+  "defaultLanguage": "ca",
+  "languages": [
+    { "id": "ca", "name": "Català", "path": "ca/", "config": "locales/ca/config.json" }
+  ]
+}

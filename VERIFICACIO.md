@@ -49,3 +49,15 @@
 **Pendent:** prova física dels dos plegats amb paper real. La geometria i les representacions no mesuren la rigidesa, l’opacitat ni la tolerància de la impressora.
 
 D’acord amb les instruccions del projecte, no es comprova el web remot després de les comprovacions locals. La revisió de GitHub Pages la farà l’usuari manualment.
+
+## Versió 1.7 · 23 d’octubre de 2026
+
+- 3.166 paraules i 96 pseudoparaules, sense duplicats ni col·lisions d'ID. Es conserven els identificadors anteriors. Tots els focus i perfils mantenen les comprovacions de generació i geometria.
+- Grafies reconegudes pel diccionari de Softcatalà, amb empremtes dels fitxers de contrast a `catalogs/ca/validation.json`. Nivells, etiquetes i adequació didàctica pendents de revisió docent.
+- Generació reproduïble comprovada amb `tools/build-catalogs.cjs --check`. L'empremta canvia amb les etiquetes i també amb les regles de nivell. TXT sense capçalera, ordenat i amb una entrada per línia.
+- Rutes de futurs enllaços provades amb domini propi, subdirectori de GitHub Pages i fitxer local. Es rebutgen llengües no disponibles i catàlegs d'una altra llengua.
+- Navegador local: portada redirigida a `/ca/` preservant consulta i fragment; cerca «atapeït»; catàleg complet de 3.166 paraules; descàrrega TXT idèntica al fitxer generat. Vista revisada en pantalla estreta i a 1440 × 900.
+- Importació real d'un dictat de format 3 i recuperació correcta. Dictat de llengua espanyola rebutjat sense canviar la selecció. Generació de 20 pseudoparaules i 24 paraules amb el banc ampliat; tria inicial restaurada després de la prova.
+- Tots els 3.262 elements són codificables amb la font Helvetica del PDF. No s'ha canviat el disseny dels fulls.
+- Sense errors JavaScript en les accions comprovades. Captura local a `output/cataleg-v1.7.jpg`.
+- No s'han fet comprovacions del web desplegat. Encara no hi ha llavors recuperables, QR de dictat ni reproductor.

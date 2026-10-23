@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-23",
+  "kind": "spelling-recognition",
+  "source": "https://github.com/Softcatala/catalan-dict-tools",
+  "dictionaryFiles": {
+    "aff": {
+      "path": "resultats/hunspell/catalan.aff",
+      "sha256": "38f3620161f6cca4748564c3c1df01f267a78d4eb572efcc9eacf7ae7d4296ba"
+    },
+    "dic": {
+      "path": "resultats/hunspell/catalan.dic",
+      "sha256": "091059675d79f811d0f09c7f575a516f7b191a9401b059580f9b0fbbc7181f5f"
+    }
+  },
+  "validator": "Spylls 0.1.7",
+  "wordCount": 3166,
+  "recognized": 3166,
+  "unrecognized": 0,
+  "pseudowordsChecked": false,
+  "editorialReview": "pending",
+  "note": "Recognition is not a pedagogical, curricular or frequency validation."
+}

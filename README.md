@@ -1,6 +1,16 @@
 # Plec · Dictats per desplegar
 
-Un generador obert de dictats autocorrectius en català, pensat per a cinquè de primària i adaptable al cicle superior. **533 paraules** amb focus ortogràfics i **96 pseudoparaules** proposades per practicar les correspondències entre so i grafia.
+Un generador obert de dictats autocorrectius en català, pensat per a cinquè de primària i adaptable al cicle superior. **3.166 paraules** amb focus ortogràfics i **96 pseudoparaules** proposades per practicar les correspondències entre so i grafia.
+
+## Catàlegs i llengües
+
+L'entrada catalana és [Plec · Català](https://aaronfortuno.github.io/plec-dictats/ca/). La portada hi redirigeix mantenint els paràmetres de l'enllaç. La configuració de llengua, les regles de nivell i les dades estan separades; encara només s'ofereix català.
+
+El banc ampliat és una proposta pendent de revisió docent. Pots baixar les llistes alfabètiques des del catàleg: **Paraules · TXT**, **Pseudoparaules · TXT** i **Taula de revisió · TSV**. Els fitxers també són a `catalogs/ca/`. La font editable és `catalogs/ca/catalog.json`; després de modificar-la, executa `node tools/build-catalogs.cjs`. Vegeu [el funcionament dels catàlegs](catalogs/README.md).
+
+Cada revisió té una empremta que també incorpora la configuració de llengua. Les tries guardades inclouen la llengua i la revisió; es mantenen els fitxers antics de català i les dades locals. Es rebutja la importació d'un dictat d'una altra llengua abans de modificar la tria.
+
+La generació amb llavors, la cerca de mots obligatoris, els QR i el reproductor s'abordaran després de revisar i fixar la primera edició estable. Aquesta versió prepara les identitats i les rutes, sense emetre encara codis recuperables.
 
 ## Espai de treball
 
@@ -100,21 +110,24 @@ Referències normatives de consulta: [Ortografia catalana de l’IEC](https://oi
 
 La tria, l’historial de mots utilitzats i els elements propis es guarden al navegador quan l’emmagatzematge local està disponible. Les sessions de paraules i pseudoparaules es conserven per separat. No hi ha sincronització entre dispositius.
 
-- **Guarda el dictat** descarrega un JSON amb tots els elements, el seu ordre, els fixats, el nivell, el format del plec i la posició del model. El format actual del fitxer és 3; s’importen també els formats 1 i 2. Els dictats antics sense format de plec es recuperen amb la nova disposició de terços, mantenint els mots i el seu ordre. **Recupera un dictat** el restaura, inclosos els mots propis en un altre navegador. Els camps antics de Grup, codi i títol personalitzat s’ignoren.
+- **Guarda el dictat** descarrega un JSON amb tots els elements, el seu ordre, els fixats, el nivell, el format del plec, la posició del model, la llengua i la revisió del catàleg. El format actual és 4; s’importen també els formats 1, 2 i 3 de català. Els dictats antics sense format de plec es recuperen amb la disposició de terços, mantenint els mots i el seu ordre. **Recupera un dictat** el restaura, inclosos els mots propis en un altre navegador. Els camps antics de Grup, codi i títol personalitzat s’ignoren.
 - Al catàleg, **Afegeix paraules pròpies al banc** accepta una forma per línia o separada per comes (màxim 26 caràcters, sense espais, fins a 3.000 formes pròpies). S’afegeixen al tipus de dictat actiu, amb l’etiqueta «Les meves paraules». Pots indicar-ne vocabulari i dificultat; sense classificació apareixen a «Tot el banc» i es poden seleccionar manualment.
 - **Exporta tot el catàleg** descarrega una còpia del banc, inclosos els elements propis. Aquest format és per consultar i editar dades; no s’importa des de «Recupera un dictat».
-- Per ampliar el banc comunitari, edita els grups de `catalog.js`. Mantén les formes en minúscula i evita duplicats; les etiquetes compartides es fusionen automàticament.
+- Per ampliar el banc comunitari, edita `catalogs/ca/catalog.json` i regenera els paquets. Mantén les formes en minúscula, els IDs existents i una sola entrada per mot; una entrada pot tenir diversos focus.
 
 ## Desenvolupament i comprovació
 
-Web estàtic sense compilació, rutes absolutes ni dependències externes durant l’ús. La distribució de l’espai de treball és a `workspace.css`; `styles.css` manté els estils compartits i els diàlegs. Els scripts i estils d’`index.html` comparteixen el sufix de revisió `?v=1.6.0`: cal actualitzar-lo conjuntament en publicar canvis per evitar barrejar recursos de versions diferents. La biblioteca PDF està inclosa amb la seva llicència a `assets/vendor/`. `core.js` comparteix la geometria del document entre la vista prèvia SVG i `pdf.js`, que genera PDF vectorial amb Helvetica i Helvetica Bold.
+Web estàtic sense rutes absolutes ni dependències externes durant l’ús. Les fonts són els JSON de `catalogs/` i `locales/`, i la plantilla catalana `templates/composer.html`; `tools/build-catalogs.cjs` genera els paquets i les entrades HTML abans de publicar. Els fitxers generats també estan versionats, de manera que GitHub Pages no necessita compilar res. No s'han d'editar manualment. La distribució és a `workspace.css`; `styles.css` manté els estils compartits i els diàlegs. Els recursos de la plantilla comparteixen `?v=1.7.0`: cal actualitzar-lo conjuntament en una nova versió. La biblioteca PDF està inclosa amb la seva llicència a `assets/vendor/`. `core.js` comparteix la geometria entre la vista prèvia SVG i `pdf.js`, que genera PDF vectorial amb Helvetica i Helvetica Bold.
 
 ```text
 node tools/serve.cjs
 node tools/check.cjs
+node tools/check-catalogs.cjs
 ```
 
 La previsualització local s’obre a l’adreça que mostra el servidor (per defecte, `http://127.0.0.1:4176`). El segon comandament comprova integritat del catàleg, absència de duplicats, focus, perfils de nivell, mostreig, fixats, repeticions, trams buits, marges d’encaix i límits de l’A4.
+
+El tercer comprova també la generació reproduïble, les empremtes, els fitxers de revisió, les rutes i la migració de dades per llengua.
 
 `tools/check-pdf.cjs` comprova les vuitanta combinacions de tipus, llargada, document, format de plec i posició del model, valida la pàgina A4, els caràcters i les guies de plec, i crea dos exemples a `output/`. Necessita `pdf-lib` com a dependència de desenvolupament o la variable `PLEC_NODE_MODULES` apuntant a una carpeta que contingui aquest paquet. No és una dependència per fer servir el web.
 

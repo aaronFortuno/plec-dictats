@@ -1,0 +1,47 @@
+{
+  "id": "ca",
+  "name": "Català",
+  "locale": "ca",
+  "catalogue": "catalogs/ca/catalog.json",
+  "uiLanguage": "ca",
+  "wordPattern": "^[a-zàèéíïòóúüç]+(?:[·'’-][a-zàèéíïòóúüç]+)*$",
+  "stageRules": {
+    "cm": {
+      "vocabulary": [
+        "basic",
+        "common"
+      ],
+      "orthography": [
+        "low",
+        "medium"
+      ]
+    },
+    "cs": {
+      "vocabulary": [
+        "basic",
+        "common",
+        "expanded"
+      ]
+    },
+    "eso": {
+      "any": [
+        {
+          "vocabulary": [
+            "expanded",
+            "specialized"
+          ]
+        },
+        {
+          "vocabulary": [
+            "basic",
+            "common"
+          ],
+          "orthography": [
+            "high"
+          ]
+        }
+      ]
+    }
+  },
+  "template": "templates/composer.html"
+}

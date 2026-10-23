@@ -1,9 +1,9 @@
 /* Plec funciona també obrint index.html directament, sense servidor. */
 (function () {
   'use strict';
-  const C = window.PlecCatalog, K = window.PlecCore;
+  const C = window.PlecCatalog, K = window.PlecCore, L = window.PlecLanguage, LT = window.PlecLanguageTools;
   const $ = id => document.getElementById(id);
-  const STORAGE = 'plec-dictats-v1';
+  const STORAGE = 'plec-dictats-v1:' + L.id;
   const allowedCounts = [8, 12, 16, 20, 24];
   const allowedStages = Object.keys(C.stages);
   const allowedFoldStyles = ['thirds', 'quarter'];
@@ -28,15 +28,16 @@
     toastTimer = setTimeout(() => $('status').classList.remove('visible'), 6500);
   }
   function persist() {
-    try { localStorage.setItem(STORAGE, JSON.stringify({ ...state, catalogVersion: C.version })); }
+    try { localStorage.setItem(STORAGE, JSON.stringify({ ...state, language: L.id, catalogue: C.revision, catalogVersion: C.version })); }
     catch { if (storageAvailable) say('No es pot desar en aquest navegador. Guarda el dictat en un fitxer per conservar-lo.'); storageAvailable = false; }
   }
   function restore() {
     try {
-      const data = JSON.parse(localStorage.getItem(STORAGE));
+      const data = LT.savedState(localStorage, STORAGE, L.id);
       if (!data || typeof data !== 'object') return;
+      if (data.language && data.language !== L.id) return;
       state.custom = Array.isArray(data.custom) ? data.custom.filter(e => e && /^u-[\w-]+$/.test(e.id) && ['words', 'pseudo'].includes(e.mode) && K.validateCustom(e.text)).slice(0, 3000).map(e => ({ ...e, ...customMetadata(e), text: e.text.normalize('NFC'), tags: ['custom'] })) : [];
-      state.custom = state.custom.filter((e, i, a) => a.findIndex(v => v.id === e.id || (v.mode === e.mode && v.text.toLocaleLowerCase('ca') === e.text.toLocaleLowerCase('ca'))) === i);
+      state.custom = state.custom.filter((e, i, a) => a.findIndex(v => v.id === e.id || (v.mode === e.mode && v.text.toLocaleLowerCase(L.locale) === e.text.toLocaleLowerCase(L.locale))) === i);
       state.mode = ['words', 'pseudo'].includes(data.mode) ? data.mode : 'words';
       state.modelSide = data.modelSide === 'right' ? 'right' : 'left';
       state.foldStyle = allowedFoldStyles.includes(data.foldStyle) ? data.foldStyle : 'thirds';
@@ -187,16 +188,17 @@
     finally { button.innerHTML = original; renderPreview(); }
   }
   function exportSelection() {
-    const data = { format: 'plec-dictat', version: 3, mode: state.mode, count: session().count, stage: session().stage, modelSide: state.modelSide, foldStyle: state.foldStyle, title: sheetOptions().title, entries: chosen(), locks: session().locks };
+    const data = { format: 'plec-dictat', version: 4, language: L.id, catalogue: C.revision, mode: state.mode, count: session().count, stage: session().stage, modelSide: state.modelSide, foldStyle: state.foldStyle, title: sheetOptions().title, entries: chosen(), locks: session().locks };
     downloadBlob(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }), `plec-dictat-${state.mode === 'words' ? 'paraules' : 'pseudoparaules'}-${session().count}.json`);
     say('Dictat guardat. Recupera aquest fitxer per repetir la mateixa tria.');
   }
   function importSelection(data) {
-    if (data?.format !== 'plec-dictat' || ![1, 2, 3].includes(data.version) || !['words', 'pseudo'].includes(data.mode) || !allowedCounts.includes(data.count) || !Array.isArray(data.entries) || data.entries.length !== data.count) throw new Error('Aquest fitxer no és un dictat de Plec vàlid.');
+    if (data?.format !== 'plec-dictat' || ![1, 2, 3, 4].includes(data.version) || !['words', 'pseudo'].includes(data.mode) || !allowedCounts.includes(data.count) || !Array.isArray(data.entries) || data.entries.length !== data.count) throw new Error('Aquest fitxer no és un dictat de Plec vàlid.');
+    LT.assertImportLanguage(data, L.id);
     const names = new Set(), imported = [], additions = [];
     for (const e of data.entries) {
-      if (!e || !K.validateCustom(e.text) || e.mode !== data.mode || names.has(e.text.normalize('NFC').toLocaleLowerCase('ca'))) throw new Error('El fitxer conté mots invàlids o duplicats.');
-      names.add(e.text.normalize('NFC').toLocaleLowerCase('ca'));
+      if (!e || !K.validateCustom(e.text) || e.mode !== data.mode || names.has(e.text.normalize('NFC').toLocaleLowerCase(L.locale))) throw new Error('El fitxer conté mots invàlids o duplicats.');
+      names.add(e.text.normalize('NFC').toLocaleLowerCase(L.locale));
       let entry = allEntries().find(v => v.mode === data.mode && v.text === e.text.normalize('NFC'));
       if (!entry) { entry = { id: 'u-' + Date.now().toString(36) + '-' + additions.length, text: e.text.normalize('NFC'), mode: data.mode, tags: ['custom'], ...customMetadata(e) }; additions.push(entry); }
       imported.push({ entry, originalId: e.id });
@@ -258,6 +260,7 @@
     }
   });
   const releases = [
+    ['1.7', '2026-10-23', ['Entrada per llengua a /ca/, catàleg separat en JSON i 3.166 paraules per revisar. Descàrregues alfabètiques en text pla i taula de revisió. Identitat verificable del catàleg i dictats guardats amb llengua i versió.'] ],
     ['1.6', '2026-10-23', ['Vista prèvia amb zoom, arrossegament i ajust del full. Menús inicials sintetitzats per donar espai als focus. Retirats els codis aleatoris i la personalització de capçalera. Guia docent a l’ajuda, peu més llegible i animacions de 220 ms.']],
     ['1.5', '2026-10-23', ['Presentació del projecte i V4V com a Pentagrama: foto de l’autor, portfoli, QR i adreça Lightning amb còpia. Historial més compacte, amb capçalera fixa i enllaç al changelog complet.']],
     ['1.4', '2026-10-23', ['Tria automàtica amb els filtres i renovació des del lateral dret.', 'Configuració agrupada, més espai de treball i barres de desplaçament discretes.', 'Formes verbals i focus separats de dièresi i ela geminada.', 'Fulls sense camp Grup, icones Lucide i finestres d’historial i projecte.']],
@@ -266,7 +269,7 @@
     ['1.1', '2026-10-23', ['Nivells orientatius amb solapament i ampliació del vocabulari.', 'Model configurable a l’esquerra o a la dreta.']],
     ['1.0', '2026-10-23', ['Primera versió: catàleg, tries, mots propis i exportació de PDF.']]
   ];
-  const releaseDate = new Intl.DateTimeFormat('ca', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  const releaseDate = new Intl.DateTimeFormat(L.locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
   $('changelog-list').innerHTML = releases.map(([version, date, notes]) => {
     const id = 'release-' + version.replaceAll('.', '-');
     return `<section class="release" aria-labelledby="${id}"><div><h3 id="${id}">${version}</h3><time datetime="${date}">${escape(releaseDate.format(new Date(date + 'T00:00:00Z')))}</time></div><p>${escape(notes.join(' '))}</p></section>`;
@@ -285,7 +288,7 @@
   });
   $('clear-selection').addEventListener('click', () => { session().ids = []; session().locks = []; persist(); renderSelection(); renderCatalog(); say('Tria buida. Selecciona els mots que vulguis incloure.'); });
   $('add-custom').addEventListener('click', () => {
-    const terms = [...new Set($('custom-text').value.split(/[,;\n\r]+/).map(t => t.trim().toLocaleLowerCase('ca').normalize('NFC')).filter(Boolean))];
+    const terms = [...new Set($('custom-text').value.split(/[,;\n\r]+/).map(t => t.trim().toLocaleLowerCase(L.locale).normalize('NFC')).filter(Boolean))];
     if (!terms.length) return say('Escriu almenys una paraula.');
     const invalid = terms.filter(t => !K.validateCustom(t));
     if (invalid.length) return say('Revisa aquestes formes (màxim 26 lletres, sense espais): ' + invalid.slice(0, 3).join(', '));
@@ -298,7 +301,16 @@
     $('custom-text').value = ''; persist(); updateControls(); renderPreview(); renderCatalog(true); $('catalog-tag').value = 'custom'; $('catalog-stage').value = 'all'; renderCatalog();
     say(additions.length ? `${additions.length} elements afegits al banc propi.` : 'Aquests elements ja són al banc.');
   });
-  $('export-catalog').addEventListener('click', () => downloadBlob(new Blob([JSON.stringify({ format: 'plec-cataleg', version: 2, categories: C.categories, vocabularyBands: C.vocabularyBands, orthographyBands: C.orthographyBands, entries: allEntries() }, null, 2)], { type: 'application/json' }), 'plec-cataleg.json'));
+  $('export-catalog').addEventListener('click', () => downloadBlob(new Blob([JSON.stringify({ format: 'plec-cataleg', version: 3, language: L.id, catalogue: C.revision, categories: C.categories, vocabularyBands: C.vocabularyBands, orthographyBands: C.orthographyBands, entries: allEntries() }, null, 2)], { type: 'application/json' }), 'plec-cataleg.json'));
+    $('export-words-text').addEventListener('click', () => {
+      // Official catalogue only: independent of the current filters and personal additions.
+      const words = C.entries.filter(e => e.mode === 'words').map(e => e.text).sort(new Intl.Collator(L.locale, { sensitivity: 'variant' }).compare);
+      downloadBlob(new Blob([words.join('\n') + '\n'], { type: 'text/plain;charset=utf-8' }), `plec-${L.id}-paraules.txt`);
+    });
+    $('export-pseudo-text').addEventListener('click', () => {
+      const words = C.entries.filter(e => e.mode === 'pseudo').map(e => e.text).sort(new Intl.Collator(L.locale, { sensitivity: 'variant' }).compare);
+      downloadBlob(new Blob([words.join('\n') + '\n'], { type: 'text/plain;charset=utf-8' }), `plec-${L.id}-pseudoparaules.txt`);
+    });
   $('download-pdf').addEventListener('click', () => exportPdf(false)); $('teacher-pdf').addEventListener('click', () => exportPdf(true));
   $('save-selection').addEventListener('click', exportSelection); $('load-selection').addEventListener('click', () => $('selection-file').click());
   $('selection-file').addEventListener('change', async event => {

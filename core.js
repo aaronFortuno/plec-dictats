@@ -1,6 +1,7 @@
 (function (root) {
   'use strict';
-  const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('ca');
+  const profile = root.PlecLanguage || (typeof module !== 'undefined' ? require('./locales/ca/config.json') : null);
+  const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase(profile.locale);
   function shuffled(items, rng = Math.random) {
     const result = [...items];
     for (let i = result.length - 1; i > 0; i--) {
@@ -11,11 +12,9 @@
   }
   function matchesStage(entry, stage = 'all') {
     if (entry.mode === 'pseudo' || stage === 'all') return true;
-    const band = entry.vocabulary;
-    if (stage === 'cm') return ['basic', 'common'].includes(band) && ['low', 'medium'].includes(entry.orthography);
-    if (stage === 'cs') return ['basic', 'common', 'expanded'].includes(band);
-    if (stage === 'eso') return ['expanded', 'specialized'].includes(band) || (['basic', 'common'].includes(band) && entry.orthography === 'high');
-    return false;
+    const rule = profile.stageRules[stage];
+    const matches = r => (!r.vocabulary || r.vocabulary.includes(entry.vocabulary)) && (!r.orthography || r.orthography.includes(entry.orthography));
+    return !!rule && (rule.any ? rule.any.some(matches) : matches(rule));
   }
   function candidates(entries, mode, tags, stage = 'all') {
     return entries.filter(e => e.mode === mode && e.tags.some(t => tags.includes(t)) && matchesStage(e, stage));
@@ -46,7 +45,7 @@
     return { entries: shuffled(picked, rng), reused };
   }
   function validateCustom(text) {
-    return typeof text === 'string' && text.length <= 26 && /^[a-zàèéíïòóúüç·]+(?:[-’'][a-zàèéíïòóúüç·]+)*$/iu.test(text);
+    return typeof text === 'string' && text.length <= 26 && new RegExp(profile.wordPattern, 'iu').test(text.normalize('NFC'));
   }
   // Una proposta parcial mai incorpora mots aliens als filtres per omplir el full.
   function propose(options) {

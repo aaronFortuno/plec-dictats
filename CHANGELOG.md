@@ -1,5 +1,14 @@
 # Historial
 
+## 1.7 · 23 d’octubre de 2026
+
+- Entrada catalana a `/ca/`, amb rutes relatives compatibles amb GitHub Pages i domini propi.
+- Banc ampliat a 3.166 paraules i 96 pseudoparaules; contrast de grafies amb Softcatalà. Proposta pendent de revisió docent.
+- Catàleg editable en JSON, paquets de llengua, regles de nivell separades i generació reproduïble de fitxers.
+- Descàrregues alfabètiques en TXT i taula TSV amb nivells i focus.
+- Revisió del catàleg identificada amb empremta; dictats guardats amb llengua i revisió. Compatibilitat amb tries antigues i migració de dades locals.
+- Contracte de rutes per als futurs QR amb llengua, revisió i codi. Les llavors i els àudios encara no s'activen.
+
 ## 1.6 · 23 d’octubre de 2026
 
 - Vista prèvia sense subcapçalera, casella del model, instruccions redundants ni codi aleatori. El model és sempre visible. Títol fix segons el tipus i codis retirats també dels PDF i fitxers nous; les tries antigues continuen recuperant els mots i l’ordre.
