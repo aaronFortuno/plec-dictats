@@ -48,6 +48,14 @@
   function validateCustom(text) {
     return typeof text === 'string' && text.length <= 26 && /^[a-zàèéíïòóúüç·]+(?:[-’'][a-zàèéíïòóúüç·]+)*$/iu.test(text);
   }
+  // Una proposta parcial mai incorpora mots aliens als filtres per omplir el full.
+  function propose(options) {
+    const locked = (options.locked || []).slice(0, options.count);
+    const ids = new Set([...options.pool, ...locked].map(e => e.id));
+    const count = Math.min(options.count, ids.size);
+    const result = count ? generate({ ...options, locked, count }) : { entries: [], reused: 0 };
+    return { ...result, missing: options.count - result.entries.length };
+  }
   function foldLayout(foldStyle = 'thirds', modelSide = 'left') {
     const quarter = foldStyle === 'quarter';
     // El solucionari exterior de 51 mm cap dins de la solapa de 53 mm.
@@ -82,7 +90,7 @@
     return layout;
   }
   // Coordenades comunes per a l'SVG i el PDF, en mil·límetres, origen superior esquerre.
-  function worksheet({ entries, title = 'Dictat de paraules', group = '', code = '', hidden = false, mode = 'words', modelSide = 'left', foldStyle = 'thirds' }) {
+  function worksheet({ entries, title = 'Dictat de paraules', code = '', hidden = false, mode = 'words', modelSide = 'left', foldStyle = 'thirds' }) {
     const shapes = [];
     const text = (x, y, value, size = 10, weight = false, color = '#222222', extra = {}) => shapes.push({ type: 'text', x, y, value, size, weight, color, ...extra });
     const line = (x, y, x2, y2, color = '#aaaaaa', width = .2, dash = false) => shapes.push({ type: 'line', x, y, x2, y2, color, width, dash });
@@ -97,12 +105,11 @@
     text(writeX, 25, title || (mode === 'words' ? 'Dictat de paraules' : 'Dictat de pseudoparaules'), 12, true, '#222222', { maxWidth: writeWidth });
     text(writeX, 34, 'Nom:', 8); line(writeX + 8, 35, writeX + writeWidth, 35);
     text(writeX, 42, 'Data:', 8); line(writeX + 8, 43, writeX + writeWidth, 43);
-    text(writeX, 50, group ? `Grup: ${group}` : 'Grup: __________', 8, false, '#222222', { maxWidth: writeWidth });
-    rect(modelX, 55, modelWidth, 8, '#f2f2f2');
-    rect(writeX, 55, writeWidth, 8, '#f2f2f2');
-    text(modelX + 2, 60.5, 'MODEL', 9, true);
-    text(writeX + 2, 60.5, 'ESCRIC I REVISO', 9, true, '#222222', { maxWidth: writeWidth - 4 });
-    const top = 64, bottom = 268, rowH = Math.min(12, (bottom - top) / entries.length);
+    rect(modelX, 47, modelWidth, 8, '#f2f2f2');
+    rect(writeX, 47, writeWidth, 8, '#f2f2f2');
+    text(modelX + 2, 52.5, 'MODEL', 9, true);
+    text(writeX + 2, 52.5, 'ESCRIC I REVISO', 9, true, '#222222', { maxWidth: writeWidth - 4 });
+    const top = 56, bottom = 268, rowH = Math.min(12, (bottom - top) / entries.length);
     entries.forEach((entry, i) => {
       const baseline = top + (i + 1) * rowH - 2.1;
       [modelX, writeX].forEach(x => text(x + 1, baseline, `${i + 1}.`, 7, false, '#777777'));
@@ -120,13 +127,13 @@
     }
     return shapes;
   }
-  function teacherSheet({ entries, title, group = '', code = '', mode }, categories) {
+  function teacherSheet({ entries, title, code = '', mode }, categories) {
     const shapes = [];
     const text = (x, y, value, size = 10, weight = false, color = '#222222', extra = {}) => shapes.push({ type: 'text', x, y, value, size, weight, color, ...extra });
     text(12, 15, 'plec / guia de lectura docent', 9, true);
     text(198, 15, code, 8, false, '#555555', { align: 'right' });
     text(12, 28, title || 'Guia del dictat', 17, true, '#222222', { maxWidth: 186 });
-    text(12, 38, `${entries.length} ${mode === 'words' ? 'paraules' : 'pseudoparaules'}${group ? ' · Grup: ' + group : ''}`, 10);
+    text(12, 38, `${entries.length} ${mode === 'words' ? 'paraules' : 'pseudoparaules'}`, 10);
     text(12, 49, 'Llegeix cada element amb naturalitat i repeteix-lo abans de passar al següent.', 9);
     if (mode === 'words') {
       text(12, 56, 'Dona un context oral breu si cal aclarir el significat, sense mostrar la grafia.', 9);
@@ -143,6 +150,6 @@
     text(12, 282, mode === 'pseudo' ? 'Banc de pràctica creat per a l’aula; no és una prova estandarditzada.' : 'Desplega el model al final i revisa i corregeix a la mateixa columna on has escrit.', 8);
     return shapes;
   }
-  root.PlecCore = { normalize, shuffled, matchesStage, candidates, generate, validateCustom, foldLayout, worksheet, teacherSheet };
+  root.PlecCore = { normalize, shuffled, matchesStage, candidates, generate, propose, validateCustom, foldLayout, worksheet, teacherSheet };
   if (typeof module !== 'undefined') module.exports = root.PlecCore;
 })(typeof window === 'undefined' ? globalThis : window);

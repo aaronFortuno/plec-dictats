@@ -1,6 +1,15 @@
-# Verificació local · v1.3 · 23 d’octubre de 2026
+# Verificació local · v1.4 · 23 d’octubre de 2026
 
-## Espai de treball
+## Ajustos v1.4
+
+- 532 paraules i 96 pseudoparaules, sense duplicats de mots, IDs ni etiquetes. 12 focus de paraules i 4 de pseudoparaules. Verificats els exemples de verbs i els solapaments d’etiquetes.
+- Canvi immediat de tipus, quantitat, nivell i focus al navegador. Amb cap focus, es retiren els mots antics; només es conserven els fixats. Amb verbs i cicle mitjà, la proposta només inclou els tres candidats compatibles i el PDF queda desactivat. En recuperar cicle superior es completa; la quantitat 16 s’aplica immediatament.
+- Un mot fixat fora del focus sobreviu al canvi i el lateral ho indica. Les proves de lògica cobreixen també propostes parcials i prioritat dels fixats en reduir la llargada.
+- Diàlegs d’historial i projecte oberts i revisats. Crèdits Lucide i pdf-lib i V4V sense destí inventat. Icones locals i barres sense botons als extrems.
+- Fulls sense Grup: 80 combinacions de PDF continuen produint una sola pàgina A4; exemples de terços i quart renderitzats i revisats visualment. Descàrrega des de la interfície de la disposició invertida amb dièresis.
+- Tria original guardada abans de les proves i recuperada després.
+
+## Espai de treball v1.3
 
 - Navegador local a 1440 × 900 i 1366 × 768: capçalera de 64 px; configuració, vista prèvia i tria alineades amb la mateixa alçada; botó de preparar dins de la finestra. El full ocupa l’alçada disponible del visor i conserva la proporció 210/297.
 - A 1024 × 768 es mantenen les tres columnes sense desbordament horitzontal. En la prova de 390 × 844 la disposició s’apila, el document conserva la proporció i no hi ha desbordament horitzontal.

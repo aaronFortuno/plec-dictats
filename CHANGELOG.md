@@ -1,5 +1,14 @@
 # Historial
 
+## 1.4 · 23 d’octubre de 2026
+
+- Els canvis de tipus, llargada, nivell i focus renoven immediatament les paraules. Els mots fixats tenen prioritat fins al límit nou. Les propostes incompletes mostren els mots disponibles i desactiven el PDF.
+- Configuració més ampla, amb tipus, format i model agrupats. Retirats els tres subencapçalats, la nota redundant i el botó gran de preparar. Renovació amb els mateixos filtres disponible al lateral dret.
+- Barres de desplaçament discretes, sense fletxes, i icones Lucide locals amb les llicències originals.
+- 99 paraules noves: el banc arriba a 532 paraules i 96 pseudoparaules. Focus de formes verbals (90 formes conjugades o participis), dièresi (55 mots) i ela geminada (25 mots), amb etiquetes compartides.
+- Eliminat el camp Grup de la configuració, les tries desades i els PDF. Es mantenen Nom i Data; les ratlles aprofiten l’espai recuperat. Els fitxers antics es continuen important.
+- Historial resumit des de la versió del peu i finestra del projecte amb crèdits i espai V4V. Presentació de l’autor i destí de les aportacions pendents de les dades.
+
 ## 1.3 · 23 d’octubre de 2026
 
 - Espai de treball de tres columnes: configuració, full central i paraules triades. Laterals amb desplaçament independent i botó de preparar sempre visible.

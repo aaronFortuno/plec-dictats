@@ -1,10 +1,10 @@
 # Plec · Dictats per desplegar
 
-Un generador obert de dictats autocorrectius en català, pensat per a cinquè de primària i adaptable al cicle superior. **433 paraules** amb focus ortogràfics i **96 pseudoparaules** proposades per practicar les correspondències entre so i grafia.
+Un generador obert de dictats autocorrectius en català, pensat per a cinquè de primària i adaptable al cicle superior. **532 paraules** amb focus ortogràfics i **96 pseudoparaules** proposades per practicar les correspondències entre so i grafia.
 
 ## Espai de treball
 
-En ordinador, el preparador ocupa l’alçada de la finestra i es distribueix en tres columnes: configuració a l’esquerra, vista prèvia al centre i paraules triades a la dreta. Els laterals es desplacen de manera independent; el botó de preparar un dictat queda sempre accessible al peu de la configuració.
+En ordinador, el preparador ocupa l’alçada de la finestra i es distribueix en tres columnes: configuració a l’esquerra, vista prèvia al centre i paraules triades a la dreta. Els laterals es desplacen de manera independent, amb barres discretes. La configuració agrupa el tipus de pràctica i el format del plec.
 
 La capçalera compacta inclou el lema i el recompte del banc. El gràfic explicatiu i les instruccions són a **Com funciona**. El full A4 s’ajusta a l’amplada i l’alçada disponibles mantenint la proporció, i canvia immediatament quan es trien el format del plec o la posició del model.
 
@@ -15,12 +15,18 @@ En pantalles estretes les columnes es reorganitzen. La tria de la dreta conserva
 Obre `index.html` amb un navegador actual, o entra al web de GitHub Pages. No cal instal·lar res, crear comptes ni disposar de connexió després de descarregar els fitxers. No hi ha analítica ni serveis externs durant l’ús.
 
 1. Tria **Paraules** (24 per defecte) o **Pseudoparaules** (20 per defecte).
-2. Escull 8, 12, 16, 20 o 24 elements, el nivell orientatiu i els focus de pràctica. **Prepara un dictat nou** reparteix els focus i prioritza els elements que encara no s’han utilitzat. Si s’esgoten les alternatives, ho indica i reutilitza mots del banc. Mai repeteix un element dins del mateix full.
-3. Revisa la llista. La xinxeta conserva un mot en generar una altra proposta; les fletxes circulars canvien només aquell mot. Les paraules fixades es conserven encara que canviïs els focus. Si redueixes la llargada, es conserven els primers elements fins al nou límit. Si l’amplies, completa la tria o prepara un dictat nou.
+2. Escull 8, 12, 16, 20 o 24 elements, el nivell orientatiu i els focus de pràctica. La tria es renova automàticament en canviar aquests filtres: reparteix els focus i prioritza els elements que encara no s’han utilitzat. Els focus es combinen amb el criteri «qualsevol dels triats». Si s’esgoten les alternatives, ho indica i reutilitza mots del banc. Mai repeteix un element dins del mateix full.
+3. Revisa la llista. La xinxeta conserva un mot en generar una altra proposta; les fletxes circulars canvien només aquell mot. Les paraules fixades es conserven encara que canviïs els focus. En canviar la llargada es prepara una proposta completa, prioritzant els fixats fins al nou límit. La icona **Renova la tria** del lateral dret permet preparar un altre dictat amb els mateixos filtres. Si falten candidats, es mostra una proposta parcial i es desactiva el PDF fins que ampliïs els filtres o redueixis la llargada.
 4. **Tria des del catàleg** permet una selecció manual. Amb el full ple, desmarca un element per deixar lloc a un altre. El catàleg té cercador i filtre propi: aquests no canvien els focus de la proposta aleatòria.
-5. Personalitza el títol i el grup. **Descarrega el PDF** crea directament una pàgina A4 amb el model. **Guia docent** descarrega una pàgina separada, amb la mateixa numeració i ordre i les etiquetes dels mots.
+5. Personalitza el títol. El full inclou Nom i Data. **Descarrega el PDF** crea directament una pàgina A4 amb el model. **Guia docent** descarrega una pàgina separada, amb la mateixa numeració i ordre i les etiquetes dels mots.
 
 La casella **Veure el model** només amaga el text a la vista prèvia. El PDF sempre l’inclou. Els caràcters catalans estan admesos; els símbols fora de la font estàndard, com els emojis, es representen amb `?` a la capçalera impresa.
+
+## Catàleg i informació del projecte
+
+Els focus **Formes verbals**, **Dièresi** i **Ela geminada** es poden triar separadament i se solapen amb altres qüestions ortogràfiques. Per exemple: «haguessin» (verbs, h, ss), «plantejarien» (verbs, g/j), «intuïa» i «canviïn» (verbs i dièresi). El banc inclou 90 formes verbals, 55 mots amb dièresi i 25 amb ela geminada. Les etiquetes indiquen focus de pràctica, no una anàlisi exhaustiva.
+
+La versió del peu obre un historial amb data, del més nou al més antic. **Codi i propostes** obre la informació del projecte, el repositori, el quadre V4V i els crèdits. Les icones de [Lucide](https://lucide.dev/) es distribueixen localment amb la llicència original.
 
 ## Dos formats de plec
 
@@ -86,14 +92,14 @@ Referències normatives de consulta: [Ortografia catalana de l’IEC](https://oi
 
 La tria, l’historial de mots utilitzats i els elements propis es guarden al navegador quan l’emmagatzematge local està disponible. Les sessions de paraules i pseudoparaules es conserven per separat. No hi ha sincronització entre dispositius.
 
-- **Guarda el dictat** descarrega un JSON amb tots els elements, el seu ordre, el títol, el grup, els fixats, el nivell, el format del plec i la posició del model. El format actual del fitxer és 3; s’importen també els formats 1 i 2. Els dictats antics sense format de plec es recuperen amb la nova disposició de terços, mantenint els mots i el seu ordre. **Recupera un dictat** el restaura, inclosos els mots propis en un altre navegador.
+- **Guarda el dictat** descarrega un JSON amb tots els elements, el seu ordre, el títol, els fixats, el nivell, el format del plec i la posició del model. El format actual del fitxer és 3; s’importen també els formats 1 i 2. Els dictats antics sense format de plec es recuperen amb la nova disposició de terços, mantenint els mots i el seu ordre. **Recupera un dictat** el restaura, inclosos els mots propis en un altre navegador. El camp Grup dels fitxers antics s’ignora.
 - Al catàleg, **Afegeix paraules pròpies al banc** accepta una forma per línia o separada per comes (màxim 26 caràcters, sense espais, fins a 3.000 formes pròpies). S’afegeixen al tipus de dictat actiu, amb l’etiqueta «Les meves paraules». Pots indicar-ne vocabulari i dificultat; sense classificació apareixen a «Tot el banc» i es poden seleccionar manualment.
 - **Exporta tot el catàleg** descarrega una còpia del banc, inclosos els elements propis. Aquest format és per consultar i editar dades; no s’importa des de «Recupera un dictat».
 - Per ampliar el banc comunitari, edita els grups de `catalog.js`. Mantén les formes en minúscula i evita duplicats; les etiquetes compartides es fusionen automàticament.
 
 ## Desenvolupament i comprovació
 
-Web estàtic sense compilació, rutes absolutes ni dependències externes durant l’ús. La distribució de l’espai de treball és a `workspace.css`; `styles.css` manté els estils compartits i els diàlegs. Els scripts i estils d’`index.html` comparteixen el sufix de revisió `?v=1.3.0`: cal actualitzar-lo conjuntament en publicar canvis per evitar barrejar recursos de versions diferents. La biblioteca PDF està inclosa amb la seva llicència a `assets/vendor/`. `core.js` comparteix la geometria del document entre la vista prèvia SVG i `pdf.js`, que genera PDF vectorial amb Helvetica i Helvetica Bold.
+Web estàtic sense compilació, rutes absolutes ni dependències externes durant l’ús. La distribució de l’espai de treball és a `workspace.css`; `styles.css` manté els estils compartits i els diàlegs. Els scripts i estils d’`index.html` comparteixen el sufix de revisió `?v=1.4.0`: cal actualitzar-lo conjuntament en publicar canvis per evitar barrejar recursos de versions diferents. La biblioteca PDF està inclosa amb la seva llicència a `assets/vendor/`. `core.js` comparteix la geometria del document entre la vista prèvia SVG i `pdf.js`, que genera PDF vectorial amb Helvetica i Helvetica Bold.
 
 ```text
 node tools/serve.cjs
@@ -112,4 +118,4 @@ Les comprovacions es fan en local. La revisió de la publicació remota correspo
 
 ## Llicència
 
-Codi i contingut original sota llicència MIT; es poden reutilitzar, modificar i compartir conservant l’avís de llicència. `pdf-lib` manté la seva llicència MIT i els seus avisos originals a `assets/vendor/pdf-lib.LICENSE.md`.
+Codi i contingut original sota llicència MIT; es poden reutilitzar, modificar i compartir conservant l’avís de llicència. `pdf-lib` manté la seva llicència MIT i els seus avisos originals a `assets/vendor/pdf-lib.LICENSE.md`. Les icones Lucide conserven la llicència ISC i l’avís MIT de les icones derivades de Feather a `assets/lucide/LICENSE`.

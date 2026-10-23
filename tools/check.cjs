@@ -7,6 +7,7 @@ assert.equal(new Set(C.entries.map(e => e.id)).size, C.entries.length, 'IDs úni
 for (const e of C.entries) {
   assert(K.validateCustom(e.text), `Grafia admesa: ${e.text}`);
   assert(e.tags.every(tag => C.categories.some(c => c.id === tag && c.mode === e.mode)), 'Etiquetes coherents');
+  assert.equal(new Set(e.tags).size, e.tags.length, `Etiquetes úniques: ${e.text}`);
   if (e.mode === 'words') {
     assert(Object.hasOwn(C.vocabularyBands, e.vocabulary) && e.vocabulary !== 'unrated');
     assert(Object.hasOwn(C.orthographyBands, e.orthography) && e.orthography !== 'unrated');
@@ -40,6 +41,26 @@ for (const mode of ['words', 'pseudo']) {
 }
 assert(!K.validateCustom('<script>')); assert(!K.validateCustom('dues paraules')); assert(K.validateCustom('col·legi')); assert(K.validateCustom('raïm'));
 const word = text => C.entries.find(e => e.mode === 'words' && e.text === text);
+for (const [text, tags] of [
+  ['haguessin', ['verbs', 'hac', 'essa']], ['plantejarien', ['verbs', 'gej', 'accent']],
+  ['intuïa', ['verbs', 'dieresi']], ['canviïn', ['verbs', 'dieresi', 'beve']],
+  ['conduïa', ['verbs', 'dieresi']], ['col·legi', ['signes']], ['país', ['accent']]
+]) assert(tags.every(t => word(text).tags.includes(t)), `Focus compartits: ${text}`);
+assert(!word('col·legi').tags.includes('dieresi'));
+assert(!word('raïm').tags.includes('signes'));
+const verbPool = K.candidates(C.entries, 'words', ['verbs'], 'cs');
+const automatic = K.propose({ pool: verbPool, count: 24, tags: ['verbs'], locked: [word('llit')] });
+assert.equal(automatic.missing, 0);
+assert(automatic.entries.includes(word('llit')), 'Una paraula fixada sobreviu al canvi de focus');
+assert(automatic.entries.filter(e => e.text !== 'llit').every(e => e.tags.includes('verbs')), 'La resta respecta el focus nou');
+const partial = K.propose({ pool: verbPool.slice(0, 3), count: 24, tags: ['verbs'] });
+assert.equal(partial.entries.length, 3); assert.equal(partial.missing, 21);
+assert.deepEqual(K.propose({ pool: [], count: 24 }).entries, [], 'Cap mot antic quan no hi ha candidats ni fixats');
+assert.deepEqual(K.propose({ pool: [], count: 8, locked: [word('llit')] }).entries, [word('llit')]);
+const reduced = K.propose({ pool: verbPool, count: 8, locked: verbPool.slice(0, 12) });
+assert.equal(reduced.entries.length, 8);
+assert(reduced.entries.every(e => verbPool.slice(0, 8).includes(e)), 'Els fixats tenen prioritat en reduir la llargada');
+assert(!K.worksheet({ entries: verbPool.slice(0,24), group:'5è A' }).some(s => s.type === 'text' && s.value.startsWith('Grup:')), 'Compatibilitat: el Grup antic no s’imprimeix');
 for (const [text, expected] of [['llit', [true, true, false]], ['avesar', [false, true, true]], ['hipotenusa', [false, false, true]], ['col·legi', [false, true, true]]]) {
   assert.deepEqual(['cm','cs','eso'].map(stage => K.matchesStage(word(text), stage)), expected, `Solapament de nivells: ${text}`);
 }
