@@ -259,16 +259,44 @@
   });
   $('catalog-open').addEventListener('click', openCatalog); $('edit-catalog').addEventListener('click', openCatalog);
   $('help-open').addEventListener('click', () => $('help-dialog').showModal());
-  $('about-open').addEventListener('click', () => $('about-dialog').showModal());
-  $('changelog-open').addEventListener('click', () => $('changelog-dialog').showModal());
+  function openInfo(dialogId, titleId) {
+    const dialog = $(dialogId);
+    dialog.showModal();
+    dialog.querySelector('.dialog-scroll').scrollTop = 0;
+    $(titleId).focus({ preventScroll: true });
+  }
+  $('about-open').addEventListener('click', () => openInfo('about-dialog', 'about-title'));
+  $('changelog-open').addEventListener('click', () => openInfo('changelog-dialog', 'changelog-title'));
+  let copyTimer;
+  $('copy-lightning').addEventListener('click', async () => {
+    const address = $('lightning-address'), button = $('copy-lightning'), status = $('lightning-copy-status');
+    clearTimeout(copyTimer);
+    try {
+      await navigator.clipboard.writeText(address.textContent.trim());
+      status.textContent = 'Adreça Lightning copiada.';
+      button.innerHTML = window.PlecIcons('check'); button.classList.add('copied');
+      copyTimer = setTimeout(() => { button.innerHTML = window.PlecIcons('copy'); button.classList.remove('copied'); status.textContent = ''; }, 3500);
+    } catch {
+      // En fitxers locals o navegadors sense accés al porta-retalls, facilita la còpia manual.
+      const range = document.createRange(); range.selectNodeContents(address);
+      const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+      button.innerHTML = window.PlecIcons('copy'); button.classList.remove('copied');
+      status.textContent = 'Selecciona i copia l’adreça amb el menú del navegador o amb Ctrl+C (⌘C al Mac).';
+    }
+  });
   const releases = [
+    ['1.5', '2026-10-23', ['Presentació del projecte i V4V com a Pentagrama: foto de l’autor, portfoli, QR i adreça Lightning amb còpia. Historial més compacte, amb capçalera fixa i enllaç al changelog complet.']],
     ['1.4', '2026-10-23', ['Tria automàtica amb els filtres i renovació des del lateral dret.', 'Configuració agrupada, més espai de treball i barres de desplaçament discretes.', 'Formes verbals i focus separats de dièresi i ela geminada.', 'Fulls sense camp Grup, icones Lucide i finestres d’historial i projecte.']],
     ['1.3', '2026-10-23', ['Tres columnes: configuració, full i paraules triades.', 'Capçalera compacta i vista prèvia que aprofita l’alçada disponible.']],
     ['1.2', '2026-10-23', ['Dos formats de plec: terços i quart de full.', 'Esquemes i instruccions adaptats al format i a la posició del model.']],
     ['1.1', '2026-10-23', ['Nivells orientatius amb solapament i ampliació del vocabulari.', 'Model configurable a l’esquerra o a la dreta.']],
     ['1.0', '2026-10-23', ['Primera versió: catàleg, tries, mots propis i exportació de PDF.']]
   ];
-  $('changelog-list').innerHTML = releases.map(([version, date, notes]) => '<article class="release"><div><h3>v' + version + '</h3><time datetime="' + date + '">23 d’octubre de 2026</time></div><ul>' + notes.map(note => '<li>' + escape(note) + '</li>').join('') + '</ul></article>').join('');
+  const releaseDate = new Intl.DateTimeFormat('ca', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  $('changelog-list').innerHTML = releases.map(([version, date, notes]) => {
+    const id = 'release-' + version.replaceAll('.', '-');
+    return `<section class="release" aria-labelledby="${id}"><div><h3 id="${id}">${version}</h3><time datetime="${date}">${escape(releaseDate.format(new Date(date + 'T00:00:00Z')))}</time></div><p>${escape(notes.join(' '))}</p></section>`;
+  }).join('');
   document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', () => b.closest('dialog').close()));
   document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dialog.close(); } }));
   $('catalog-search').addEventListener('input', () => renderCatalog()); $('catalog-tag').addEventListener('change', () => renderCatalog());

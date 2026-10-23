@@ -26,7 +26,7 @@ La casella **Veure el model** només amaga el text a la vista prèvia. El PDF se
 
 Els focus **Formes verbals**, **Dièresi** i **Ela geminada** es poden triar separadament i se solapen amb altres qüestions ortogràfiques. Per exemple: «haguessin» (verbs, h, ss), «plantejarien» (verbs, g/j), «intuïa» i «canviïn» (verbs i dièresi). El banc inclou 90 formes verbals, 55 mots amb dièresi i 25 amb ela geminada. Les etiquetes indiquen focus de pràctica, no una anàlisi exhaustiva.
 
-La versió del peu obre un historial amb data, del més nou al més antic. **Codi i propostes** obre la informació del projecte, el repositori, el quadre V4V i els crèdits. Les icones de [Lucide](https://lucide.dev/) es distribueixen localment amb la llicència original.
+La versió del peu obre un historial amb data, del més nou al més antic, i un enllaç al changelog complet. **Sobre el projecte · V4V** obre la informació del projecte, la presentació i fotografia de l’autor, el portfoli, el repositori i els crèdits. La secció V4V comparteix el QR, l’adreça Lightning i el botó de còpia amb [Pentagrama](https://pentagrama.page/); la descripció és pròpia de Plec. La foto i el QR es distribueixen localment. Les icones de [Lucide](https://lucide.dev/) es distribueixen també localment amb la llicència original.
 
 ## Dos formats de plec
 
@@ -99,7 +99,7 @@ La tria, l’historial de mots utilitzats i els elements propis es guarden al na
 
 ## Desenvolupament i comprovació
 
-Web estàtic sense compilació, rutes absolutes ni dependències externes durant l’ús. La distribució de l’espai de treball és a `workspace.css`; `styles.css` manté els estils compartits i els diàlegs. Els scripts i estils d’`index.html` comparteixen el sufix de revisió `?v=1.4.0`: cal actualitzar-lo conjuntament en publicar canvis per evitar barrejar recursos de versions diferents. La biblioteca PDF està inclosa amb la seva llicència a `assets/vendor/`. `core.js` comparteix la geometria del document entre la vista prèvia SVG i `pdf.js`, que genera PDF vectorial amb Helvetica i Helvetica Bold.
+Web estàtic sense compilació, rutes absolutes ni dependències externes durant l’ús. La distribució de l’espai de treball és a `workspace.css`; `styles.css` manté els estils compartits i els diàlegs. Els scripts i estils d’`index.html` comparteixen el sufix de revisió `?v=1.5.0`: cal actualitzar-lo conjuntament en publicar canvis per evitar barrejar recursos de versions diferents. La biblioteca PDF està inclosa amb la seva llicència a `assets/vendor/`. `core.js` comparteix la geometria del document entre la vista prèvia SVG i `pdf.js`, que genera PDF vectorial amb Helvetica i Helvetica Bold.
 
 ```text
 node tools/serve.cjs

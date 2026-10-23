@@ -1,4 +1,12 @@
-# Verificació local · v1.4 · 23 d’octubre de 2026
+# Verificació local · v1.5 · 23 d’octubre de 2026
+
+## Popups v1.5
+
+- Referència consultada: popup V4V i historial de Pentagrama. Mateixa foto, QR, adreça Lightning, presentació de l’autor i enllaç al portfoli; repositori i crèdits adaptats a Plec.
+- QR SVG idèntic al del document d’origen, fotografia carregada correctament i enllaços revisats sense activar cap cartera ni fer cap aportació.
+- Botó de copiar provat al navegador local: confirmació «Adreça Lightning copiada». Títol enfocat en obrir, regió de contingut accessible i capçalera fora del desplaçament.
+- Vista d’escriptori amb autor i recursos en dues columnes. A 390 × 844, una columna, cap desbordament horitzontal i desplaçament intern. Historial amb data i resum per versió, més nou al principi, i enllaç al changelog complet.
+- No s’ha incorporat Umami ni s’ha modificat el portfoli; són passos posteriors. La tria del dictat s’ha conservat durant les proves.
 
 ## Ajustos v1.4
 

@@ -1,5 +1,13 @@
 # Historial
 
+## 1.5 · 23 d’octubre de 2026
+
+- Popup «Sobre el projecte · V4V» adaptat de Pentagrama: descripció pròpia de Plec, mateix QR i adreça Lightning, mateixa fotografia, presentació de l’autor i enllaç al portfoli. Foto i QR distribuïts localment.
+- Botó per copiar l’adreça Lightning amb confirmació accessible i alternativa de selecció manual si el navegador no permet accedir al porta-retalls.
+- Distribució de dues columnes per a autor i recursos en ordinador, una columna en mòbil; capçalera fixa i contingut amb desplaçament independent.
+- Historial compacte amb dates, resums per versió, capçalera fixa i accés al changelog complet del repositori.
+- Crèdits ajustats a les llibreries de Plec. Umami i l’alta del projecte al portfoli queden per a una fase posterior.
+
 ## 1.4 · 23 d’octubre de 2026
 
 - Els canvis de tipus, llargada, nivell i focus renoven immediatament les paraules. Els mots fixats tenen prioritat fins al límit nou. Les propostes incompletes mostren els mots disponibles i desactiven el PDF.
