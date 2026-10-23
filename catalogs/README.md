@@ -47,8 +47,10 @@ Genera JSON i TSV, amb empremtes del catàleg, del TXT i de la font, i un avís 
 
 El primer contrast del 23 d'octubre de 2026 va trobar 3.162 de les 3.166 formes. En la versió 1.8 s'han retirat «ahir-vespre», «ahir-nit», «blat-de-moro» i, a petició del docent, «viuda»; es conserva «vídua». S'ha incorporat la proposta de canvi «arbitre» → «arbitrar», mantenint «àrbitre». El banc actual té 3.299 mots: 3.298 tenen coincidència exacta i la forma enclítica preexistent «rebel·lar-se» queda pendent d'una excepció lingüística documentada. Cap d'aquestes comprovacions valida la freqüència, els nivells escolars o les etiquetes pedagògiques.
 
-### Femenins i plurals
+### Formes integrades als focus ortogràfics
 
-La versió 1.8 incorpora 137 variants noves i un focus «Femenins i plurals» (`flexio`), amb 150 formes en total comptant les que ja hi eren. Cada forma porta gènere i nombre a `morphology`; les formes invariables «feliç» i «capaç» indiquen gènere comú. Els participis també pertanyen a «Formes verbals», amb independència dels usos adjectivals o nominals que puguin tenir. Es comparteixen els focus ortogràfics pertinents: per exemple, «acompanyades» amb dígrafs, «organitzades» amb essa i «conduïdes» amb dièresi. Les 137 variants i «arbitrar» tenen coincidència exacta al lèxic de la revisió indicada a `validation.json`.
+Les 137 variants incorporades en la versió 1.8 es mantenen dins dels focus ortogràfics habituals, sense cap filtre ni quota diferenciada segons gènere o nombre. El focus `flexio` s'ha retirat en la versió 1.9 tant de les categories com de les etiquetes de cada entrada. Les dades gramaticals internes de `morphology` es conserven i no intervenen en la selecció. Els participis pertanyen també a «Formes verbals», amb independència dels usos adjectivals o nominals que puguin tenir. Per exemple, «acompanyades» és disponible amb dígrafs, «organitzades» amb essa i «conduïdes» amb dièresi. Les 137 variants i «arbitrar» tenen coincidència exacta al lèxic de la revisió indicada a `validation.json`.
+
+En recuperar una preferència antiga amb el focus retirat, es mantenen els altres focus vàlids. Si només s'havia seleccionat el focus retirat, es recuperen els focus habituals perquè el preparador continuï funcionant. La tria de paraules guardada es conserva; una selecció de focus buida voluntàriament continua buida.
 
 La revisió TXT anterior a la consolidació es conserva localment a `output/revisio-abans-v1.8.txt`. Les llistes TXT i TSV actuals ja inclouen els canvis integrats al generador.

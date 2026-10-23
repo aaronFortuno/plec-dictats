@@ -10,7 +10,7 @@ El banc ampliat és una proposta pendent de revisió docent. Pots baixar les lli
 
 Cada revisió té una empremta que també incorpora la configuració de llengua. Les tries guardades inclouen la llengua i la revisió; es mantenen els fitxers antics de català i les dades locals. Es rebutja la importació d'un dictat d'una altra llengua abans de modificar la tria.
 
-El focus **Femenins i plurals** permet practicar 150 formes, amb 137 variants incorporades en la versió 1.8. Els participis també apareixen a **Formes verbals** i als focus ortogràfics corresponents. Les noves grafies tenen coincidència exacta al lèxic flexionat de Softcatalà.
+El banc inclou formes de gènere i nombre diversos dins dels mateixos focus ortogràfics: per exemple, «acompanyades» als dígrafs, «organitzades» a les esses i «conduïdes» a la dièresi. Els participis també apareixen a **Formes verbals**. No hi ha cap filtre ni quota separada per a femenins o plurals. Les 137 variants incorporades en la versió 1.8 es mantenen i tenen coincidència exacta al lèxic flexionat de Softcatalà.
 
 La generació amb llavors, la cerca de mots obligatoris, els QR i el reproductor s'abordaran després de revisar i fixar la primera edició estable. Aquesta versió prepara les identitats i les rutes, sense emetre encara codis recuperables.
 
@@ -119,7 +119,7 @@ La tria, l’historial de mots utilitzats i els elements propis es guarden al na
 
 ## Desenvolupament i comprovació
 
-Web estàtic sense rutes absolutes ni dependències externes durant l’ús. Les fonts són els JSON de `catalogs/` i `locales/`, i la plantilla catalana `templates/composer.html`; `tools/build-catalogs.cjs` genera els paquets i les entrades HTML abans de publicar. Els fitxers generats també estan versionats, de manera que GitHub Pages no necessita compilar res. No s'han d'editar manualment. La distribució és a `workspace.css`; `styles.css` manté els estils compartits i els diàlegs. Els recursos de la plantilla comparteixen `?v=1.8.0`: cal actualitzar-lo conjuntament en una nova versió. La biblioteca PDF està inclosa amb la seva llicència a `assets/vendor/`. `core.js` comparteix la geometria entre la vista prèvia SVG i `pdf.js`, que genera PDF vectorial amb Helvetica i Helvetica Bold.
+Web estàtic sense rutes absolutes ni dependències externes durant l’ús. Les fonts són els JSON de `catalogs/` i `locales/`, i la plantilla catalana `templates/composer.html`; `tools/build-catalogs.cjs` genera els paquets i les entrades HTML abans de publicar. Els fitxers generats també estan versionats, de manera que GitHub Pages no necessita compilar res. No s'han d'editar manualment. La distribució és a `workspace.css`; `styles.css` manté els estils compartits i els diàlegs. Els recursos de la plantilla comparteixen `?v=1.9.0`: cal actualitzar-lo conjuntament en una nova versió. La biblioteca PDF està inclosa amb la seva llicència a `assets/vendor/`. `core.js` comparteix la geometria entre la vista prèvia SVG i `pdf.js`, que genera PDF vectorial amb Helvetica i Helvetica Bold.
 
 ```text
 node tools/serve.cjs

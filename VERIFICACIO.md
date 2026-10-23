@@ -69,3 +69,12 @@ D’acord amb les instruccions del projecte, no es comprova el web remot despré
 - Comprovacions de catàleg, paquets, geometria, etiquetes, contrast estricte i protecció de revisió superades. La generació del focus nou retorna 24 elements diferents del conjunt de 150 formes disponibles.
 - Navegador local: migració de tots els focus activats, disponibilitat del focus nou, generació amb només Femenins i plurals, cerca d’organitzades, exportació del TXT complet de 3.299 mots idèntic al fitxer generat i sense errors JavaScript. La selecció anterior s’ha restaurat després de les proves.
 - Llistes TXT i TSV regenerades. Còpia de la revisió anterior a output/revisio-abans-v1.8.txt. Captura local a output/femenins-plurals-v1.8.jpg. Comprovacions del web remot a càrrec de l’usuari.
+
+## Versió 1.9 · 23 d’octubre de 2026
+
+- Retirat el focus separat de femenins i plurals, tant de les categories com de totes les etiquetes. Es conserven exactament els 3.299 mots, els IDs, els nivells, les dades gramaticals i les altres etiquetes de la versió anterior.
+- Les formes continuen als focus habituals: acompanyades amb dígrafs, organitzades amb essa, pintats amb vocals àtones, conduïdes amb dièresi, tranquil·les amb ela geminada i amigues amb c/qu/g/gu.
+- Proves de migració de preferències: només el focus retirat recupera els focus generals; una combinació mixta manté els focus vàlids; una selecció buida voluntàriament es conserva. Les paraules seleccionades no es regeneren durant aquesta migració.
+- Comprovacions de catàleg, mostreig, geometria, paquets i contrast lèxic superades. Contrast exacte actualitzat a la nova empremta, amb el mateix cas enclític preexistent pendent.
+- Navegador local: no hi ha cap opció del filtre retirat; acompanyada, acompanyades i acompanyats es mostren al focus de dígrafs; la tria anterior es conserva. Sense errors JavaScript observats. Captura a output/focus-ortografics-v1.9.jpg.
+- Sense comprovació del web remot, d’acord amb la instrucció del projecte.

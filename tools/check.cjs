@@ -54,14 +54,22 @@ const word = text => C.entries.find(e => e.mode === 'words' && e.text === text);
 for(const removed of ['ahir-vespre','ahir-nit','blat-de-moro','viuda','arbitre'])assert(!word(removed),'Mot retirat: '+removed);
 assert(word('vídua')&&word('àrbitre')&&word('arbitrar'),'Es conserven les formes acordades');
 for(const text of ['despistats','acompanyades','organitzades','pintats','obertes','escrites','conduïdes']){
- const e=word(text);assert(e.tags.includes('flexio')&&e.tags.includes('verbs'),'Variant disponible en tots dos focus: '+text);
+ const e=word(text);assert(e.tags.includes('verbs'),'Participi disponible al focus verbal: '+text);
  assert.equal(e.morphology.number,'plural');
 }
 assert(word('conduïdes').tags.includes('dieresi'));
 assert(word('organitzades').tags.includes('essa'));
 assert(word('acompanyades').tags.includes('digrafs'));
-const inflectionPool=K.candidates(C.entries,'words',['flexio'],'cs');
-assert(K.generate({pool:inflectionPool,count:24,tags:['flexio']}).entries.every(e=>e.tags.includes('flexio')));
+assert(!C.categories.some(c=>c.id==='flexio'),'No hi ha cap focus separat segons gènere o nombre');
+assert(C.entries.every(e=>!e.tags.includes('flexio')),'Cap mot conserva el focus retirat');
+for(const [text,focus] of [['despistats','essa'],['acompanyades','digrafs'],['organitzades','essa'],['pintats','vocals'],['conduïdes','dieresi'],['tranquil·les','signes'],['amigues','qugu']]){
+ assert(K.candidates(C.entries,'words',[focus],'cs').some(e=>e.text===text),'Forma integrada al focus habitual: '+text);
+}
+const activeFocuses=C.categories.filter(c=>c.mode==='words').map(c=>c.id);
+assert.deepEqual(K.migrateFocusTags(['flexio'],activeFocuses,['flexio']),activeFocuses);
+assert.deepEqual(K.migrateFocusTags(['essa','flexio','essa'],activeFocuses,['flexio']),['essa']);
+assert.deepEqual(K.migrateFocusTags([],activeFocuses,['flexio']),[]);
+assert.deepEqual(K.migrateFocusTags(['obsolete'],activeFocuses,['flexio']),[]);
 assert(word('atapeït').tags.includes('dieresi') && word('atapeït').tags.includes('verbs'));
 for (const shapes of [K.worksheet({ entries:[word('atapeït')], code:'P-ANTIC' }),K.teacherSheet({ entries:[word('atapeït')],code:'P-ANTIC' },C.categories)]) {
   assert(!shapes.some(s=>s.type==='text'&&s.value==='P-ANTIC'), 'El codi antic no s’imprimeix');

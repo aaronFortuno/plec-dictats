@@ -4,7 +4,7 @@
   "edition": "ca-2026-01-draft",
   "status": "draft",
   "reviewedByTeacher": false,
-  "version": 4,
+  "version": 5,
   "categories": [
     {
       "id": "accent",
@@ -76,12 +76,6 @@
       "id": "verbs",
       "label": "Formes verbals",
       "title": "Formes verbals",
-      "mode": "words"
-    },
-    {
-      "id": "flexio",
-      "label": "Femenins i plurals",
-      "title": "Gènere i nombre",
       "mode": "words"
     },
     {
@@ -1076,8 +1070,7 @@
       "mode": "words",
       "tags": [
         "accent",
-        "essa",
-        "flexio"
+        "essa"
       ],
       "vocabulary": "basic",
       "orthography": "medium",
@@ -3725,8 +3718,7 @@
       "tags": [
         "accent",
         "qugu",
-        "signes",
-        "flexio"
+        "signes"
       ],
       "orthography": "high",
       "vocabulary": "common",
@@ -4767,8 +4759,7 @@
         "accent",
         "qugu",
         "dieresi",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "orthography": "high",
       "vocabulary": "common",
@@ -4846,8 +4837,7 @@
         "accent",
         "erra",
         "dieresi",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "orthography": "high",
       "vocabulary": "common",
@@ -6890,8 +6880,7 @@
       "mode": "words",
       "tags": [
         "accent",
-        "qugu",
-        "flexio"
+        "qugu"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -8618,8 +8607,7 @@
       "mode": "words",
       "tags": [
         "accent",
-        "essa",
-        "flexio"
+        "essa"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -9760,8 +9748,7 @@
       "tags": [
         "accent",
         "essa",
-        "erra",
-        "flexio"
+        "erra"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -10603,8 +10590,7 @@
         "accent",
         "essa",
         "erra",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -13213,8 +13199,7 @@
       "tags": [
         "accent",
         "gej",
-        "digrafs",
-        "flexio"
+        "digrafs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -16581,8 +16566,7 @@
       "tags": [
         "accent",
         "beve",
-        "vocals",
-        "flexio"
+        "vocals"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -16698,8 +16682,7 @@
       "tags": [
         "accent",
         "beve",
-        "digrafs",
-        "flexio"
+        "digrafs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -21120,8 +21103,7 @@
         "accent",
         "essa",
         "erra",
-        "qugu",
-        "flexio"
+        "qugu"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -22172,8 +22154,7 @@
         "erra",
         "qugu",
         "digrafs",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -33837,8 +33818,7 @@
       "tags": [
         "accent",
         "essa",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -33855,8 +33835,7 @@
       "tags": [
         "accent",
         "essa",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -33873,8 +33852,7 @@
       "tags": [
         "accent",
         "essa",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -33892,8 +33870,7 @@
         "accent",
         "vocals",
         "digrafs",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -33912,8 +33889,7 @@
         "essa",
         "vocals",
         "digrafs",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -33932,8 +33908,7 @@
         "essa",
         "vocals",
         "digrafs",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -33951,8 +33926,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -33970,8 +33944,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -33989,8 +33962,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34007,8 +33979,7 @@
       "tags": [
         "accent",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34026,8 +33997,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34045,8 +34015,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34064,8 +34033,7 @@
         "accent",
         "erra",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34084,8 +34052,7 @@
         "essa",
         "erra",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34104,8 +34071,7 @@
         "essa",
         "erra",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34123,8 +34089,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34142,8 +34107,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34161,8 +34125,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34180,8 +34143,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34199,8 +34161,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34218,8 +34179,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34236,8 +34196,7 @@
       "tags": [
         "accent",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34255,8 +34214,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34274,8 +34232,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34293,8 +34250,7 @@
         "accent",
         "beve",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34313,8 +34269,7 @@
         "essa",
         "beve",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34333,8 +34288,7 @@
         "essa",
         "beve",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34352,8 +34306,7 @@
         "accent",
         "qugu",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34372,8 +34325,7 @@
         "essa",
         "qugu",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34392,8 +34344,7 @@
         "essa",
         "qugu",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34411,8 +34362,7 @@
         "accent",
         "beve",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34431,8 +34381,7 @@
         "essa",
         "beve",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34451,8 +34400,7 @@
         "essa",
         "beve",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34471,8 +34419,7 @@
         "essa",
         "erra",
         "qugu",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34491,8 +34438,7 @@
         "essa",
         "erra",
         "qugu",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34511,8 +34457,7 @@
         "essa",
         "erra",
         "qugu",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34530,8 +34475,7 @@
         "accent",
         "gej",
         "digrafs",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34550,8 +34494,7 @@
         "essa",
         "gej",
         "digrafs",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34570,8 +34513,7 @@
         "essa",
         "gej",
         "digrafs",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34589,8 +34531,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34608,8 +34549,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34627,8 +34567,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34646,8 +34585,7 @@
         "accent",
         "essa",
         "beve",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34665,8 +34603,7 @@
         "accent",
         "essa",
         "beve",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34684,8 +34621,7 @@
         "accent",
         "essa",
         "beve",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34703,8 +34639,7 @@
         "accent",
         "gej",
         "erra",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34723,8 +34658,7 @@
         "essa",
         "gej",
         "erra",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34743,8 +34677,7 @@
         "essa",
         "gej",
         "erra",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34764,8 +34697,7 @@
         "erra",
         "qugu",
         "digrafs",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34785,8 +34717,7 @@
         "erra",
         "qugu",
         "digrafs",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34805,8 +34736,7 @@
         "essa",
         "beve",
         "qugu",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34825,8 +34755,7 @@
         "essa",
         "beve",
         "qugu",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34845,8 +34774,7 @@
         "essa",
         "beve",
         "qugu",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34865,8 +34793,7 @@
         "essa",
         "beve",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34885,8 +34812,7 @@
         "essa",
         "beve",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34905,8 +34831,7 @@
         "essa",
         "beve",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34924,8 +34849,7 @@
         "accent",
         "beve",
         "qugu",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34944,8 +34868,7 @@
         "essa",
         "beve",
         "qugu",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34964,8 +34887,7 @@
         "essa",
         "beve",
         "qugu",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -34983,8 +34905,7 @@
         "accent",
         "gej",
         "erra",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35003,8 +34924,7 @@
         "essa",
         "gej",
         "erra",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35023,8 +34943,7 @@
         "essa",
         "gej",
         "erra",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35042,8 +34961,7 @@
         "accent",
         "essa",
         "erra",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35061,8 +34979,7 @@
         "accent",
         "essa",
         "erra",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35080,8 +34997,7 @@
         "accent",
         "essa",
         "erra",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35099,8 +35015,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35118,8 +35033,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35137,8 +35051,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35156,8 +35069,7 @@
         "accent",
         "essa",
         "erra",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35175,8 +35087,7 @@
         "accent",
         "essa",
         "erra",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35193,8 +35104,7 @@
       "tags": [
         "accent",
         "qugu",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35212,8 +35122,7 @@
         "accent",
         "essa",
         "qugu",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35231,8 +35140,7 @@
         "accent",
         "essa",
         "qugu",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35250,8 +35158,7 @@
         "accent",
         "erra",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35270,8 +35177,7 @@
         "essa",
         "erra",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35290,8 +35196,7 @@
         "essa",
         "erra",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35309,8 +35214,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35328,8 +35232,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35347,8 +35250,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35366,8 +35268,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35385,8 +35286,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35404,8 +35304,7 @@
         "accent",
         "essa",
         "vocals",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35424,8 +35323,7 @@
         "essa",
         "qugu",
         "dieresi",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "high",
@@ -35444,8 +35342,7 @@
         "essa",
         "qugu",
         "dieresi",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "high",
@@ -35464,8 +35361,7 @@
         "essa",
         "erra",
         "dieresi",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "high",
@@ -35484,8 +35380,7 @@
         "essa",
         "erra",
         "dieresi",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "high",
@@ -35503,8 +35398,7 @@
         "accent",
         "erra",
         "dieresi",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "high",
@@ -35523,8 +35417,7 @@
         "essa",
         "erra",
         "dieresi",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "high",
@@ -35543,8 +35436,7 @@
         "essa",
         "erra",
         "dieresi",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "high",
@@ -35562,8 +35454,7 @@
         "accent",
         "erra",
         "dieresi",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "high",
@@ -35582,8 +35473,7 @@
         "essa",
         "erra",
         "dieresi",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "high",
@@ -35602,8 +35492,7 @@
         "essa",
         "erra",
         "dieresi",
-        "verbs",
-        "flexio"
+        "verbs"
       ],
       "vocabulary": "common",
       "orthography": "high",
@@ -35620,8 +35509,7 @@
       "tags": [
         "accent",
         "essa",
-        "qugu",
-        "flexio"
+        "qugu"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35637,8 +35525,7 @@
       "tags": [
         "accent",
         "essa",
-        "qugu",
-        "flexio"
+        "qugu"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35654,8 +35541,7 @@
       "tags": [
         "accent",
         "vocals",
-        "digrafs",
-        "flexio"
+        "digrafs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35672,8 +35558,7 @@
         "accent",
         "essa",
         "vocals",
-        "digrafs",
-        "flexio"
+        "digrafs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35690,8 +35575,7 @@
         "accent",
         "essa",
         "vocals",
-        "digrafs",
-        "flexio"
+        "digrafs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35707,8 +35591,7 @@
       "tags": [
         "accent",
         "beve",
-        "qugu",
-        "flexio"
+        "qugu"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35725,8 +35608,7 @@
         "accent",
         "essa",
         "beve",
-        "qugu",
-        "flexio"
+        "qugu"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35743,8 +35625,7 @@
         "accent",
         "essa",
         "beve",
-        "qugu",
-        "flexio"
+        "qugu"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35760,8 +35641,7 @@
       "tags": [
         "accent",
         "beve",
-        "vocals",
-        "flexio"
+        "vocals"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35778,8 +35658,7 @@
         "accent",
         "essa",
         "beve",
-        "vocals",
-        "flexio"
+        "vocals"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35796,8 +35675,7 @@
         "accent",
         "essa",
         "beve",
-        "vocals",
-        "flexio"
+        "vocals"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35813,8 +35691,7 @@
       "tags": [
         "accent",
         "essa",
-        "erra",
-        "flexio"
+        "erra"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35830,8 +35707,7 @@
       "tags": [
         "accent",
         "essa",
-        "erra",
-        "flexio"
+        "erra"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35847,8 +35723,7 @@
       "tags": [
         "accent",
         "essa",
-        "qugu",
-        "flexio"
+        "qugu"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35864,8 +35739,7 @@
       "tags": [
         "accent",
         "essa",
-        "qugu",
-        "flexio"
+        "qugu"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35881,8 +35755,7 @@
       "tags": [
         "accent",
         "essa",
-        "qugu",
-        "flexio"
+        "qugu"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35897,8 +35770,7 @@
       "mode": "words",
       "tags": [
         "accent",
-        "beve",
-        "flexio"
+        "beve"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35914,8 +35786,7 @@
       "tags": [
         "accent",
         "essa",
-        "beve",
-        "flexio"
+        "beve"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35930,8 +35801,7 @@
       "mode": "words",
       "tags": [
         "accent",
-        "essa",
-        "flexio"
+        "essa"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35948,8 +35818,7 @@
         "accent",
         "essa",
         "beve",
-        "digrafs",
-        "flexio"
+        "digrafs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35966,8 +35835,7 @@
         "accent",
         "essa",
         "beve",
-        "digrafs",
-        "flexio"
+        "digrafs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -35984,8 +35852,7 @@
         "accent",
         "essa",
         "erra",
-        "qugu",
-        "flexio"
+        "qugu"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36002,8 +35869,7 @@
         "accent",
         "essa",
         "erra",
-        "qugu",
-        "flexio"
+        "qugu"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36019,8 +35885,7 @@
       "tags": [
         "accent",
         "essa",
-        "erra",
-        "flexio"
+        "erra"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36036,8 +35901,7 @@
       "tags": [
         "accent",
         "essa",
-        "erra",
-        "flexio"
+        "erra"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36053,8 +35917,7 @@
       "tags": [
         "accent",
         "essa",
-        "erra",
-        "flexio"
+        "erra"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36071,8 +35934,7 @@
         "accent",
         "essa",
         "qugu",
-        "signes",
-        "flexio"
+        "signes"
       ],
       "vocabulary": "common",
       "orthography": "high",
@@ -36088,8 +35950,7 @@
       "tags": [
         "accent",
         "essa",
-        "qugu",
-        "flexio"
+        "qugu"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36105,8 +35966,7 @@
       "tags": [
         "accent",
         "essa",
-        "erra",
-        "flexio"
+        "erra"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36122,8 +35982,7 @@
       "tags": [
         "accent",
         "essa",
-        "erra",
-        "flexio"
+        "erra"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36139,8 +35998,7 @@
       "tags": [
         "accent",
         "essa",
-        "erra",
-        "flexio"
+        "erra"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36157,8 +36015,7 @@
         "accent",
         "essa",
         "gej",
-        "digrafs",
-        "flexio"
+        "digrafs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36175,8 +36032,7 @@
         "accent",
         "essa",
         "gej",
-        "digrafs",
-        "flexio"
+        "digrafs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36191,8 +36047,7 @@
       "mode": "words",
       "tags": [
         "accent",
-        "essa",
-        "flexio"
+        "essa"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36207,8 +36062,7 @@
       "mode": "words",
       "tags": [
         "accent",
-        "essa",
-        "flexio"
+        "essa"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36223,8 +36077,7 @@
       "mode": "words",
       "tags": [
         "accent",
-        "essa",
-        "flexio"
+        "essa"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36239,8 +36092,7 @@
       "mode": "words",
       "tags": [
         "accent",
-        "essa",
-        "flexio"
+        "essa"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36255,8 +36107,7 @@
       "mode": "words",
       "tags": [
         "accent",
-        "essa",
-        "flexio"
+        "essa"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36271,8 +36122,7 @@
       "mode": "words",
       "tags": [
         "accent",
-        "essa",
-        "flexio"
+        "essa"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36287,8 +36137,7 @@
       "mode": "words",
       "tags": [
         "accent",
-        "essa",
-        "flexio"
+        "essa"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36305,8 +36154,7 @@
         "accent",
         "essa",
         "beve",
-        "vocals",
-        "flexio"
+        "vocals"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36323,8 +36171,7 @@
         "accent",
         "essa",
         "beve",
-        "vocals",
-        "flexio"
+        "vocals"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36341,8 +36188,7 @@
         "accent",
         "beve",
         "erra",
-        "digrafs",
-        "flexio"
+        "digrafs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36360,8 +36206,7 @@
         "essa",
         "beve",
         "erra",
-        "digrafs",
-        "flexio"
+        "digrafs"
       ],
       "vocabulary": "common",
       "orthography": "medium",
@@ -36379,8 +36224,7 @@
         "essa",
         "beve",
         "erra",
-        "digrafs",
-        "flexio"
+        "digrafs"
       ],
       "vocabulary": "common",
       "orthography": "medium",

@@ -47,13 +47,12 @@
         const s = state.sessions[mode];
         if (allowedCounts.includes(saved.count)) s.count = saved.count;
         if (allowedStages.includes(saved.stage)) s.stage = saved.stage;
-        if (Array.isArray(saved.tags)) s.tags = [...new Set(saved.tags.filter(t => modeTags(mode).some(c => c.id === t)))];
+        if (Array.isArray(saved.tags)) s.tags = K.migrateFocusTags(saved.tags, modeTags(mode).map(c => c.id), mode === 'words' ? ['flexio'] : []);
         if (mode === 'words' && (!data.catalogVersion || data.catalogVersion < 3) && s.tags.includes('signes')) {
           // L'antic focus incloïa dièresi i ela geminada.
           s.tags.push('dieresi');
           if (C.categories.filter(c => c.mode === mode && !['verbs', 'dieresi'].includes(c.id)).every(c => s.tags.includes(c.id))) s.tags.push('verbs');
         }
-        if (mode === 'words' && (data.catalogVersion || 0) < 4 && C.categories.filter(c => c.mode === mode && c.id !== 'flexio').every(c => s.tags.includes(c.id))) s.tags.push('flexio');
         if (Array.isArray(saved.ids)) s.ids = [...new Set(saved.ids)].filter(id => lookup(id)?.mode === mode).slice(0, s.count);
         if (Array.isArray(saved.locks)) s.locks = saved.locks.filter(id => s.ids.includes(id));
         if (Array.isArray(saved.seen)) s.seen = [...new Set(saved.seen)].filter(id => lookup(id)?.mode === mode);
@@ -261,6 +260,7 @@
     }
   });
   const releases = [
+    ['1.9', '2026-10-23', ['Retirat el filtre Femenins i plurals. Totes les formes continuen al banc i es trien amb els mateixos focus ortogràfics. Les tries i preferències antigues es conserven en retirar el filtre.'] ],
     ['1.8', '2026-10-23', ['Femenins i plurals: 137 formes noves, focus propi i etiquetes ortogràfiques compartides. Retirats ahir-vespre, ahir-nit, blat-de-moro i viuda; es conserva vídua. Incorporat arbitrar en lloc d’arbitre. Contrast exacte de les noves grafies amb el lèxic flexionat de Softcatalà.'] ],
     ['1.7', '2026-10-23', ['Entrada per llengua a /ca/, catàleg separat en JSON i 3.166 paraules per revisar. Descàrregues alfabètiques en text pla i taula de revisió. Identitat verificable del catàleg i dictats guardats amb llengua i versió.'] ],
     ['1.6', '2026-10-23', ['Vista prèvia amb zoom, arrossegament i ajust del full. Menús inicials sintetitzats per donar espai als focus. Retirats els codis aleatoris i la personalització de capçalera. Guia docent a l’ajuda, peu més llegible i animacions de 220 ms.']],

@@ -1,5 +1,11 @@
 # Historial
 
+## 1.9 · 23 d’octubre de 2026
+
+- Retirat el filtre «Femenins i plurals». Es mantenen les 3.299 paraules i totes les variants, integrades als focus ortogràfics habituals amb els mateixos criteris de selecció.
+- Retirada l'etiqueta específica de cada entrada i de la taula de revisió. Les dades gramaticals internes es conserven sense influir en el mostreig.
+- Compatibilitat amb les preferències antigues del filtre retirat, mantenint les paraules seleccionades i els focus vàlids.
+
 ## 1.8 · 23 d’octubre de 2026
 
 - 137 variants noves de femení i plural, amb focus «Femenins i plurals», gènere, nombre i focus ortogràfics compartits. Inclou «despistats», «acompanyades», «organitzades», «pintats», «obertes», «escrites» i «conduïdes».

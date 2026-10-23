@@ -2,6 +2,12 @@
   'use strict';
   const profile = root.PlecLanguage || (typeof module !== 'undefined' ? require('./locales/ca/config.json') : null);
   const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase(profile.locale);
+  function migrateFocusTags(tags, available, retired = []) {
+    const active = [...new Set(tags.filter(tag => available.includes(tag)))];
+    // A retired-only preference falls back to the ordinary focuses; an intentional
+    // empty selection and any still-valid preferences remain unchanged.
+    return !active.length && tags.some(tag => retired.includes(tag)) ? [...available] : active;
+  }
   function shuffled(items, rng = Math.random) {
     const result = [...items];
     for (let i = result.length - 1; i > 0; i--) {
@@ -147,6 +153,6 @@
     text(12, 282, mode === 'pseudo' ? 'Banc de pràctica creat per a l’aula; no és una prova estandarditzada.' : 'Desplega el model al final i revisa i corregeix a la mateixa columna on has escrit.', 8);
     return shapes;
   }
-  root.PlecCore = { normalize, shuffled, matchesStage, candidates, generate, propose, validateCustom, foldLayout, worksheet, teacherSheet };
+  root.PlecCore = { normalize, migrateFocusTags, shuffled, matchesStage, candidates, generate, propose, validateCustom, foldLayout, worksheet, teacherSheet };
   if (typeof module !== 'undefined') module.exports = root.PlecCore;
 })(typeof window === 'undefined' ? globalThis : window);
