@@ -1,4 +1,13 @@
-# Verificació local · v1.5 · 23 d’octubre de 2026
+# Verificació local · v1.6 · 23 d’octubre de 2026
+
+## Vista prèvia i configuració v1.6
+
+- Configuració inicial de 220 px: aproximadament el 30 % del lateral a 1440 × 900 i el 36 % a 1366 × 768. Els focus i el recompte es veuen sense scroll en aquestes mides i a 1024 × 768; no s’ha reduït la mida del text.
+- Zoom comprovat amb botó, roda, arrossegament, doble clic, ajust i teclat. Proves de geometria del punt d’ancoratge, límits 50–400 % i limitació del desplaçament.
+- Durades calculades de 0,22 s en diàlegs, botons i transformació del full. Obertura i tancament dels diàlegs, desplegable de plecs i guia docent dins l’ajuda comprovats al navegador.
+- Catàleg: «atapeït» disponible a cicle superior, etiquetat com a verb i dièresi. 533 paraules i 96 pseudoparaules; controls compactes i visor revisats també a 390 × 844.
+- PDF sense codi aleatori: 80 variants continuen produint una pàgina A4; terços i quart renderitzats i revisats visualment. La guia docent es descarrega des de «Com funciona».
+- La tria es pot guardar i recuperar sense codi; els fitxers anteriors continuen admesos. La tria original es conserva al final de les comprovacions.
 
 ## Popups v1.5
 

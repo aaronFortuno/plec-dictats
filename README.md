@@ -1,10 +1,10 @@
 # Plec · Dictats per desplegar
 
-Un generador obert de dictats autocorrectius en català, pensat per a cinquè de primària i adaptable al cicle superior. **532 paraules** amb focus ortogràfics i **96 pseudoparaules** proposades per practicar les correspondències entre so i grafia.
+Un generador obert de dictats autocorrectius en català, pensat per a cinquè de primària i adaptable al cicle superior. **533 paraules** amb focus ortogràfics i **96 pseudoparaules** proposades per practicar les correspondències entre so i grafia.
 
 ## Espai de treball
 
-En ordinador, el preparador ocupa l’alçada de la finestra i es distribueix en tres columnes: configuració a l’esquerra, vista prèvia al centre i paraules triades a la dreta. Els laterals es desplacen de manera independent, amb barres discretes. La configuració agrupa el tipus de pràctica i el format del plec.
+En ordinador, el preparador ocupa l’alçada de la finestra i es distribueix en tres columnes: configuració a l’esquerra, vista prèvia al centre i paraules triades a la dreta. Els laterals es desplacen de manera independent, amb barres discretes. La configuració inicial concentra tipus, format, model, nombre de mots i nivell en quatre files, deixant els focus visibles sense scroll a les mides d’escriptori comprovades.
 
 La capçalera compacta inclou el lema i el recompte del banc. El gràfic explicatiu i les instruccions són a **Com funciona**. El full A4 s’ajusta a l’amplada i l’alçada disponibles mantenint la proporció, i canvia immediatament quan es trien el format del plec o la posició del model.
 
@@ -18,13 +18,21 @@ Obre `index.html` amb un navegador actual, o entra al web de GitHub Pages. No ca
 2. Escull 8, 12, 16, 20 o 24 elements, el nivell orientatiu i els focus de pràctica. La tria es renova automàticament en canviar aquests filtres: reparteix els focus i prioritza els elements que encara no s’han utilitzat. Els focus es combinen amb el criteri «qualsevol dels triats». Si s’esgoten les alternatives, ho indica i reutilitza mots del banc. Mai repeteix un element dins del mateix full.
 3. Revisa la llista. La xinxeta conserva un mot en generar una altra proposta; les fletxes circulars canvien només aquell mot. Les paraules fixades es conserven encara que canviïs els focus. En canviar la llargada es prepara una proposta completa, prioritzant els fixats fins al nou límit. La icona **Renova la tria** del lateral dret permet preparar un altre dictat amb els mateixos filtres. Si falten candidats, es mostra una proposta parcial i es desactiva el PDF fins que ampliïs els filtres o redueixis la llargada.
 4. **Tria des del catàleg** permet una selecció manual. Amb el full ple, desmarca un element per deixar lloc a un altre. El catàleg té cercador i filtre propi: aquests no canvien els focus de la proposta aleatòria.
-5. Personalitza el títol. El full inclou Nom i Data. **Descarrega el PDF** crea directament una pàgina A4 amb el model. **Guia docent** descarrega una pàgina separada, amb la mateixa numeració i ordre i les etiquetes dels mots.
+5. **Descarrega el PDF** crea directament una pàgina A4 amb el model i els camps Nom i Data. A **Com funciona**, **Descarrega la guia docent** ofereix una pàgina separada amb la mateixa numeració, ordre i etiquetes dels mots.
 
-La casella **Veure el model** només amaga el text a la vista prèvia. El PDF sempre l’inclou. Els caràcters catalans estan admesos; els símbols fora de la font estàndard, com els emojis, es representen amb `?` a la capçalera impresa.
+El model es mostra sempre. El títol del full és «Dictat de paraules» o «Dictat de pseudoparaules». No es generen ni es mostren codis aleatoris.
+
+## Vista prèvia i moviment
+
+La roda del ratolí amplia o redueix el full al voltant del punter; arrossega’l per desplaçar-lo. El doble clic el torna a ajustar. Els botons de la cantonada inferior dreta permeten reduir, ampliar i ajustar. Amb el visor enfocat, també funcionen +, −, 0 i les fletxes.
+
+El 100 % del visor correspon al full sencer ajustat a l’espai disponible; el zoom va del 50 al 400 %. El zoom i el desplaçament només afecten la pantalla. Els PDF i la impressió mantenen la mida A4.
+
+Diàlegs, desplegables, canvis de contingut i controls comparteixen una durada de **220 ms**. El peu és més alt i llegible. Les barres de desplaçament disposen de separació respecte del contingut.
 
 ## Catàleg i informació del projecte
 
-Els focus **Formes verbals**, **Dièresi** i **Ela geminada** es poden triar separadament i se solapen amb altres qüestions ortogràfiques. Per exemple: «haguessin» (verbs, h, ss), «plantejarien» (verbs, g/j), «intuïa» i «canviïn» (verbs i dièresi). El banc inclou 90 formes verbals, 55 mots amb dièresi i 25 amb ela geminada. Les etiquetes indiquen focus de pràctica, no una anàlisi exhaustiva.
+Els focus **Formes verbals**, **Dièresi** i **Ela geminada** es poden triar separadament i se solapen amb altres qüestions ortogràfiques. Per exemple: «haguessin» (verbs, h, ss), «plantejarien» (verbs, g/j), «intuïa» i «canviïn» (verbs i dièresi). El banc inclou 91 formes verbals, 56 mots amb dièresi i 25 amb ela geminada. Les etiquetes indiquen focus de pràctica, no una anàlisi exhaustiva.
 
 La versió del peu obre un historial amb data, del més nou al més antic, i un enllaç al changelog complet. **Sobre el projecte · V4V** obre la informació del projecte, la presentació i fotografia de l’autor, el portfoli, el repositori i els crèdits. La secció V4V comparteix el QR, l’adreça Lightning i el botó de còpia amb [Pentagrama](https://pentagrama.page/); la descripció és pròpia de Plec. La foto i el QR es distribueixen localment. Les icones de [Lucide](https://lucide.dev/) es distribueixen també localment amb la llicència original.
 
@@ -52,7 +60,7 @@ Amb el model a l’esquerra, les guies són a **51 i 104 mm** de la vora esquerr
 2. Fes el segon plec també cap endins. El paquet ocupa 53 mm del tercer tram, de 54 mm, i deixa 1 mm abans de l’escriptura. Queden aproximadament 52 mm de paper visibles per escriure.
 3. Per corregir, aixeca una mica el paquet i obre el plec exterior en sentit contrari, com un petit acordió. El model queda cap amunt al costat de l’escriptura; no cal estendre els trams buits.
 
-Les amplades anteriors són físiques, inclosos els marges. La zona impresa té marges de seguretat. Les solapes buides no contenen text, ratlles ni capçalera. La columna d’escriptura inclou nom, data i grup. La correcció es fa **a la mateixa columna on s’ha escrit**.
+Les amplades anteriors són físiques, inclosos els marges. La zona impresa té marges de seguretat. Les solapes buides no contenen text, ratlles ni capçalera. La columna d’escriptura inclou nom i data. La correcció es fa **a la mateixa columna on s’ha escrit**.
 
 Dins de **Com funciona**, **Com plego aquest full?** mostra la distribució proporcional del full obert, els passos del format actual i un esquema lateral de dictat i correcció. L’esquema lateral és orientatiu i no està a escala.
 
@@ -92,14 +100,14 @@ Referències normatives de consulta: [Ortografia catalana de l’IEC](https://oi
 
 La tria, l’historial de mots utilitzats i els elements propis es guarden al navegador quan l’emmagatzematge local està disponible. Les sessions de paraules i pseudoparaules es conserven per separat. No hi ha sincronització entre dispositius.
 
-- **Guarda el dictat** descarrega un JSON amb tots els elements, el seu ordre, el títol, els fixats, el nivell, el format del plec i la posició del model. El format actual del fitxer és 3; s’importen també els formats 1 i 2. Els dictats antics sense format de plec es recuperen amb la nova disposició de terços, mantenint els mots i el seu ordre. **Recupera un dictat** el restaura, inclosos els mots propis en un altre navegador. El camp Grup dels fitxers antics s’ignora.
+- **Guarda el dictat** descarrega un JSON amb tots els elements, el seu ordre, els fixats, el nivell, el format del plec i la posició del model. El format actual del fitxer és 3; s’importen també els formats 1 i 2. Els dictats antics sense format de plec es recuperen amb la nova disposició de terços, mantenint els mots i el seu ordre. **Recupera un dictat** el restaura, inclosos els mots propis en un altre navegador. Els camps antics de Grup, codi i títol personalitzat s’ignoren.
 - Al catàleg, **Afegeix paraules pròpies al banc** accepta una forma per línia o separada per comes (màxim 26 caràcters, sense espais, fins a 3.000 formes pròpies). S’afegeixen al tipus de dictat actiu, amb l’etiqueta «Les meves paraules». Pots indicar-ne vocabulari i dificultat; sense classificació apareixen a «Tot el banc» i es poden seleccionar manualment.
 - **Exporta tot el catàleg** descarrega una còpia del banc, inclosos els elements propis. Aquest format és per consultar i editar dades; no s’importa des de «Recupera un dictat».
 - Per ampliar el banc comunitari, edita els grups de `catalog.js`. Mantén les formes en minúscula i evita duplicats; les etiquetes compartides es fusionen automàticament.
 
 ## Desenvolupament i comprovació
 
-Web estàtic sense compilació, rutes absolutes ni dependències externes durant l’ús. La distribució de l’espai de treball és a `workspace.css`; `styles.css` manté els estils compartits i els diàlegs. Els scripts i estils d’`index.html` comparteixen el sufix de revisió `?v=1.5.0`: cal actualitzar-lo conjuntament en publicar canvis per evitar barrejar recursos de versions diferents. La biblioteca PDF està inclosa amb la seva llicència a `assets/vendor/`. `core.js` comparteix la geometria del document entre la vista prèvia SVG i `pdf.js`, que genera PDF vectorial amb Helvetica i Helvetica Bold.
+Web estàtic sense compilació, rutes absolutes ni dependències externes durant l’ús. La distribució de l’espai de treball és a `workspace.css`; `styles.css` manté els estils compartits i els diàlegs. Els scripts i estils d’`index.html` comparteixen el sufix de revisió `?v=1.6.0`: cal actualitzar-lo conjuntament en publicar canvis per evitar barrejar recursos de versions diferents. La biblioteca PDF està inclosa amb la seva llicència a `assets/vendor/`. `core.js` comparteix la geometria del document entre la vista prèvia SVG i `pdf.js`, que genera PDF vectorial amb Helvetica i Helvetica Bold.
 
 ```text
 node tools/serve.cjs

@@ -90,7 +90,7 @@
     return layout;
   }
   // Coordenades comunes per a l'SVG i el PDF, en mil·límetres, origen superior esquerre.
-  function worksheet({ entries, title = 'Dictat de paraules', code = '', hidden = false, mode = 'words', modelSide = 'left', foldStyle = 'thirds' }) {
+  function worksheet({ entries, title, mode = 'words', modelSide = 'left', foldStyle = 'thirds' }) {
     const shapes = [];
     const text = (x, y, value, size = 10, weight = false, color = '#222222', extra = {}) => shapes.push({ type: 'text', x, y, value, size, weight, color, ...extra });
     const line = (x, y, x2, y2, color = '#aaaaaa', width = .2, dash = false) => shapes.push({ type: 'line', x, y, x2, y2, color, width, dash });
@@ -99,8 +99,7 @@
     const { x: modelX, width: modelWidth } = layout.modelArea;
     const { x: writeX, width: writeWidth } = layout.writingArea;
     text(modelX, 15, 'plec / model amagat', 8, true, '#555555');
-    text(modelX, 23, code, 7, false, '#555555', { maxWidth: modelWidth });
-    text(modelX, 31, layout.name, 7, false, '#555555', { maxWidth: modelWidth });
+    text(modelX, 23, layout.name, 7, false, '#555555', { maxWidth: modelWidth });
     text(writeX, 15, 'plec / dictat', 8, true, '#555555');
     text(writeX, 25, title || (mode === 'words' ? 'Dictat de paraules' : 'Dictat de pseudoparaules'), 12, true, '#222222', { maxWidth: writeWidth });
     text(writeX, 34, 'Nom:', 8); line(writeX + 8, 35, writeX + writeWidth, 35);
@@ -113,7 +112,7 @@
     entries.forEach((entry, i) => {
       const baseline = top + (i + 1) * rowH - 2.1;
       [modelX, writeX].forEach(x => text(x + 1, baseline, `${i + 1}.`, 7, false, '#777777'));
-      if (!hidden) text(modelX + 9, baseline, entry.text, 12, false, '#222222', { maxWidth: modelWidth - 9 });
+      text(modelX + 9, baseline, entry.text, 12, false, '#222222', { maxWidth: modelWidth - 9 });
       [layout.modelArea, layout.writingArea].forEach(area => line(area.x, top + (i + 1) * rowH, area.x + area.width, top + (i + 1) * rowH, '#aaaaaa', .18));
     });
     [layout.modelArea, layout.writingArea].forEach(area => line(area.x, top, area.x + area.width, top, '#aaaaaa', .18));
@@ -127,11 +126,10 @@
     }
     return shapes;
   }
-  function teacherSheet({ entries, title, code = '', mode }, categories) {
+  function teacherSheet({ entries, title, mode }, categories) {
     const shapes = [];
     const text = (x, y, value, size = 10, weight = false, color = '#222222', extra = {}) => shapes.push({ type: 'text', x, y, value, size, weight, color, ...extra });
     text(12, 15, 'plec / guia de lectura docent', 9, true);
-    text(198, 15, code, 8, false, '#555555', { align: 'right' });
     text(12, 28, title || 'Guia del dictat', 17, true, '#222222', { maxWidth: 186 });
     text(12, 38, `${entries.length} ${mode === 'words' ? 'paraules' : 'pseudoparaules'}`, 10);
     text(12, 49, 'Llegeix cada element amb naturalitat i repeteix-lo abans de passar al següent.', 9);

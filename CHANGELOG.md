@@ -1,5 +1,14 @@
 # Historial
 
+## 1.6 · 23 d’octubre de 2026
+
+- Vista prèvia sense subcapçalera, casella del model, instruccions redundants ni codi aleatori. El model és sempre visible. Títol fix segons el tipus i codis retirats també dels PDF i fitxers nous; les tries antigues continuen recuperant els mots i l’ordre.
+- Zoom del 50 al 400 %, roda ancorada al punter, arrossegament, doble clic per ajustar, botons a la cantonada inferior dreta i controls de teclat. La impressió conserva les mides.
+- Opcions inicials en quatre files, amb icones adaptades de Lucide per al costat del model i nombre de mots al costat. «Tots» al títol dels focus, sense notes ni personalització de capçalera.
+- Laterals i diàlegs amb més separació de la barra de desplaçament. Peu més alt i text més gran. Guia docent traslladada a «Com funciona».
+- Animacions i transicions de 220 ms, inclosos entrada i sortida dels diàlegs i desplegables.
+- Afegit «atapeït»: 533 paraules i 96 pseudoparaules.
+
 ## 1.5 · 23 d’octubre de 2026
 
 - Popup «Sobre el projecte · V4V» adaptat de Pentagrama: descripció pròpia de Plec, mateix QR i adreça Lightning, mateixa fotografia, presentació de l’autor i enllaç al portfoli. Foto i QR distribuïts localment.

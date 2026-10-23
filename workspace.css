@@ -1,5 +1,5 @@
 /* Espai de treball: alçada de finestra i tres columnes independents. */
-body{height:100vh;height:100dvh;display:grid;grid-template-rows:64px minmax(0,1fr) 26px;overflow:hidden}
+body{height:100vh;height:100dvh;display:grid;grid-template-rows:64px minmax(0,1fr) 38px;overflow:hidden}
 .site-header.wrap,.site-footer.wrap{width:100%;max-width:none;margin:0;padding-inline:20px}
 .site-header{height:64px;min-height:0;gap:18px;position:relative}
 .brand{font-size:38px;letter-spacing:-2px;gap:8px;flex-shrink:0}
@@ -12,7 +12,7 @@ body{height:100vh;height:100dvh;display:grid;grid-template-rows:64px minmax(0,1f
 .workspace{width:100%;height:100%;min-height:0;grid-template-columns:316px minmax(0,1fr) 286px;gap:14px;align-items:stretch}
 .config,.selection{min-height:0;min-width:0;border-radius:9px}
 .config{padding:16px;display:grid;grid-template-rows:minmax(0,1fr);overflow:hidden}
-.config-scroll{min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;margin-top:2px;padding-right:2px}
+.config-scroll{min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;margin-top:2px;padding-right:12px}
 .config-actions{border-top:1px solid var(--line);margin-top:10px;padding-top:10px}
 .config-actions .generate{margin-top:0}
 .config-actions .generation-note{margin-bottom:0}
@@ -37,16 +37,16 @@ body{height:100vh;height:100dvh;display:grid;grid-template-rows:64px minmax(0,1f
 .personalize label{margin-top:10px;margin-bottom:5px}
 .local-note{margin-top:13px;padding-top:11px;font-size:9px}
 .pseudo-note{margin-top:14px;padding:10px 11px}
-.preview-column{min-width:0;min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto auto;gap:9px}
+.preview-column{min-width:0;min-height:0;display:grid;grid-template-rows:minmax(0,1fr) auto;gap:10px}
 .preview-toolbar{margin:0;padding:0;min-height:24px;gap:10px}
 .preview-toolbar p{font-size:10px;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .preview-toolbar>div{min-width:0}
 .toggle{font-size:10px;white-space:nowrap;flex-shrink:0}
-.paper-stage{min-height:0;min-width:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:8px;padding:10px 14px;border-radius:9px;overflow:hidden}
+.paper-stage{min-height:0;min-width:0;display:grid;grid-template-rows:auto minmax(0,1fr);gap:8px;padding:10px 14px;border-radius:9px;overflow:hidden}
 .paper-topline{margin:0;width:100%;font-size:8px;gap:10px;line-height:1.5;letter-spacing:.8px}
 .paper-topline>span:first-child{font-weight:600}
-.paper-viewport{min-width:0;min-height:0;width:100%;height:100%;display:grid;place-items:center;overflow:hidden}
-.paper{width:var(--preview-width,100%);height:var(--preview-height,auto);max-width:100%;max-height:100%;min-width:0;min-height:0;aspect-ratio:210/297}
+.paper-viewport{position:relative;min-width:0;min-height:0;width:100%;height:100%;overflow:hidden;touch-action:none;user-select:none}
+.paper{position:absolute;top:50%;left:50%;width:var(--preview-width,100%);height:var(--preview-height,auto);max-width:none;max-height:none;min-width:0;min-height:0;aspect-ratio:210/297;transform:translate(-50%,-50%) translate(var(--pan-x,0px),var(--pan-y,0px)) scale(var(--zoom,1));transform-origin:center}
 .paper svg{display:block;width:100%;height:100%}
 .paper-bottomline{margin:0;font-size:9px;line-height:1.4;gap:6px}
 .export-bar{margin:0;justify-content:flex-end;flex-wrap:nowrap;gap:8px}
@@ -57,7 +57,7 @@ body{height:100vh;height:100dvh;display:grid;grid-template-rows:64px minmax(0,1f
 .selection-heading h2{display:flex;align-items:center;gap:7px;font:700 10px var(--sans);letter-spacing:1px;margin:0 0 9px}
 .selection-heading p:not(.eyebrow){font-size:10px;line-height:1.5;margin:0 0 10px}
 .selection-heading .button{flex:1;width:auto;font-size:11px;min-height:34px;padding:7px 9px}
-.selected-words{min-height:0;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:min-content;align-content:start;gap:5px;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.selected-words{min-height:0;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:min-content;align-content:start;gap:5px;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:10px}
 .word-item{min-height:33px;gap:7px;padding:3px 5px 3px 8px}
 .word-item .number{width:16px;font-size:9px}
 .word-item .word{font-size:12px}
@@ -66,7 +66,7 @@ body{height:100vh;height:100dvh;display:grid;grid-template-rows:64px minmax(0,1f
 .selection-footer>span{display:block}
 .selection-footer>div{gap:14px;margin-top:6px;flex-wrap:wrap}
 .selection-footer .small-link{font-size:10px;min-height:26px;padding:3px 0}
-.site-footer{height:26px;min-height:0;gap:10px;font-size:9px;flex-wrap:nowrap}
+.site-footer{height:38px;min-height:38px;gap:10px;font-size:11px;flex-wrap:nowrap}
 .site-footer .footer-brand{display:none}
 .site-footer p{margin:0;line-height:1.3;max-width:none}
 .site-footer>span:last-child{width:auto;padding:0;margin-left:auto}
@@ -233,10 +233,71 @@ html:has(.info-dialog[open]),body:has(.info-dialog[open]){overflow:hidden}
   .help-dialog .art-paper small{font-size:6px}
   .help-dialog .how-strip{grid-template-columns:1fr}
 }
+/* Controls curts: els focus són la part principal del lateral. */
+.config .quick-settings{display:grid;gap:11px;padding-bottom:17px;border-bottom:1px solid var(--line)}
+.config .quick-settings fieldset{margin:0;padding:0;border:0}
+.config .mode-setting legend{margin:0}
+.quick-settings .segmented button{font-size:12px;padding:7px 3px;min-height:32px}
+.quick-settings .setting-row{display:grid;grid-template-columns:100px minmax(0,1fr);gap:8px;align-items:center}
+.setting-row>label,.config .model-setting legend,.count-setting{font-size:12px;font-weight:600}
+.config .quick-settings select{width:100%;min-width:0;min-height:34px;font-size:12px;padding:7px 8px}
+.paired-settings{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end}
+.config .model-setting legend{margin-bottom:6px}
+.model-setting .segmented{padding:2px}
+.model-setting .segmented button{height:34px;min-height:34px;padding:3px}
+.model-setting .lucide{width:23px;height:23px}
+.count-setting{display:grid;gap:6px;min-width:0}
+.config .count-setting select{height:40px;font-size:13px}
+.focus-settings{margin-top:16px}
+.focus-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.focus-heading h2{font:600 13px var(--sans);letter-spacing:0;margin:0}
+.focus-heading .small-link{font-size:12px;padding:0}
+.focus-settings .tag-options{gap:7px}
+.focus-settings .tag span{font-size:11px;padding:8px 9px}
+.focus-settings .field-hint{margin-top:12px;font-size:11px}
+.dialog-scroll{padding-right:16px}
+.catalog-list{padding-right:10px}
+.zoom-tools{position:absolute;right:10px;bottom:10px;z-index:2;display:flex;align-items:center;gap:3px;padding:4px;background:#fffffff2;border:1px solid var(--line);border-radius:7px;box-shadow:0 3px 14px #233a3314;cursor:default}
+.zoom-tools .icon-button{width:32px;height:32px;padding:6px}
+.zoom-tools .lucide{width:18px;height:18px}
+.zoom-tools output{font-size:11px;color:var(--muted);min-width:44px;text-align:center;font-variant-numeric:tabular-nums}
+.zoom-divider{height:19px;border-left:1px solid var(--line);margin-inline:3px}
+.paper-viewport.can-pan{cursor:grab}
+.paper-viewport.is-panning{cursor:grabbing}
+.paper-viewport:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:3px}
+#teacher-pdf{display:inline-flex;align-items:center;gap:5px;font-size:inherit;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:760px){
+  .site-footer{height:auto;min-height:44px;flex-wrap:wrap;gap:4px 12px;padding-block:8px}
+  .site-footer>span:last-child{margin-left:auto}
+  .config-scroll{padding-right:0}
+}
+
+/* Durada única per a totes les animacions i transicions del web. */
+:root{--motion-duration:220ms;--motion-ease:cubic-bezier(.2,.7,.2,1)}
+button,a,input,select,textarea,summary,.tag span,.word-item,.card{
+  transition-property:background-color,color,border-color,box-shadow,opacity,transform;
+  transition-duration:var(--motion-duration);transition-timing-function:var(--motion-ease);
+}
+.paper{transition:transform var(--motion-duration) var(--motion-ease),width var(--motion-duration) var(--motion-ease),height var(--motion-duration) var(--motion-ease)}
+.toast{transition:opacity var(--motion-duration) var(--motion-ease),transform var(--motion-duration) var(--motion-ease)}
+.paper>svg,.selected-words>.word-item,.catalog-entry{animation:content-in var(--motion-duration) var(--motion-ease) both}
+dialog[open]{animation:dialog-in var(--motion-duration) var(--motion-ease) both}
+dialog[open]::backdrop{animation:veil-in var(--motion-duration) var(--motion-ease) both}
+dialog.is-closing{animation:dialog-out var(--motion-duration) var(--motion-ease) both}
+dialog.is-closing::backdrop{animation:veil-out var(--motion-duration) var(--motion-ease) both}
+@keyframes content-in{from{opacity:.25;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
+@keyframes dialog-in{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes dialog-out{from{opacity:1;transform:translateY(0) scale(1)}to{opacity:0;transform:translateY(8px) scale(.98)}}
+@keyframes veil-in{from{opacity:0}to{opacity:1}}
+@keyframes veil-out{from{opacity:1}to{opacity:0}}
+
 @media print{
+  *{animation:none!important;transition:none!important}
   body{display:block;height:auto;overflow:visible;background:white}
   .app-main{display:block;padding:0;overflow:visible}
   .workspace,.preview-column,.paper-stage,.paper-viewport{display:contents;height:auto;overflow:visible}
-  .paper{width:210mm!important;height:297mm!important;max-width:none;max-height:none;box-shadow:none}
+  .paper{position:static;transform:none!important;width:210mm!important;height:297mm!important;max-width:none;max-height:none;box-shadow:none}
   .paper svg{width:210mm;height:297mm}
+  .zoom-tools{display:none!important}
+  .sr-only{display:none!important}
 }

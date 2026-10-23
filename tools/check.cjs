@@ -1,6 +1,16 @@
 const assert = require('node:assert/strict');
 const C = require('../catalog.js');
 const K = require('../core.js');
+const V = require('../preview.js');
+const view = { width:400, height:600, paperWidth:400, paperHeight:600, zoom:2, x:0, y:0 };
+const anchor = { x:40, y:60 }, zoomed = V.zoomAt(view, 3, anchor);
+assert(Math.abs((anchor.x-view.x)/view.zoom-(anchor.x-zoomed.x)/zoomed.zoom)<1e-9, 'Zoom ancorat al punt horitzontal del ratolí');
+assert(Math.abs((anchor.y-view.y)/view.zoom-(anchor.y-zoomed.y)/zoomed.zoom)<1e-9, 'Zoom ancorat al punt vertical del ratolí');
+const reset = V.limit({ ...view, zoom:1, x:900, y:-900 });
+assert.equal(Math.abs(reset.x), 0); assert.equal(Math.abs(reset.y), 0);
+assert.equal(V.zoomAt(view,99).zoom,4); assert.equal(V.zoomAt(view,.01).zoom,.5);
+const panned = V.limit({ ...view, x:900, y:-900 });
+assert.equal(panned.x,200); assert.equal(panned.y,-300);
 const keys = C.entries.map(e => e.mode + ':' + e.text);
 assert.equal(new Set(keys).size, keys.length, 'No hi ha mots duplicats');
 assert.equal(new Set(C.entries.map(e => e.id)).size, C.entries.length, 'IDs únics');
@@ -41,6 +51,10 @@ for (const mode of ['words', 'pseudo']) {
 }
 assert(!K.validateCustom('<script>')); assert(!K.validateCustom('dues paraules')); assert(K.validateCustom('col·legi')); assert(K.validateCustom('raïm'));
 const word = text => C.entries.find(e => e.mode === 'words' && e.text === text);
+assert(word('atapeït').tags.includes('dieresi') && word('atapeït').tags.includes('verbs'));
+for (const shapes of [K.worksheet({ entries:[word('atapeït')], code:'P-ANTIC' }),K.teacherSheet({ entries:[word('atapeït')],code:'P-ANTIC' },C.categories)]) {
+  assert(!shapes.some(s=>s.type==='text'&&s.value==='P-ANTIC'), 'El codi antic no s’imprimeix');
+}
 for (const [text, tags] of [
   ['haguessin', ['verbs', 'hac', 'essa']], ['plantejarien', ['verbs', 'gej', 'accent']],
   ['intuïa', ['verbs', 'dieresi']], ['canviïn', ['verbs', 'dieresi', 'beve']],
