@@ -47,6 +47,20 @@ for (const item of manifest.languages) {
   const base = path.posix.dirname(profile.catalogue);
   const collator = new Intl.Collator(profile.locale, { sensitivity: 'variant' });
   emit(base + '/catalog.js', bundle('PlecCatalog', catalog));
+  const registryPath = base + '/editions/manifest.json';
+  if (fs.existsSync(path.join(root,registryPath))) {
+    const registry=json(registryPath),slots=new Set();
+    const editions=registry.editions.map(item=>{
+      const file=base+'/editions/'+item.file,bytes=fs.readFileSync(path.join(root,file));
+      const digest=crypto.createHash('sha256').update(bytes).digest('hex');
+      if(digest!==item.sha256)throw new Error('Immutable seed snapshot changed: '+file);
+      const edition=JSON.parse(bytes.toString('utf8'));
+      if(slots.has(edition.slot)||edition.slot!==item.slot||edition.language!==profile.id||edition.catalog.revision!==item.revision)throw new Error('Invalid seed registry');
+      slots.add(edition.slot);return edition;
+    });
+    if(!slots.has(registry.current))throw new Error('Current seed edition missing');
+    emit(base+'/editions/index.js',bundle('PlecSeedRegistry',{current:registry.current,editions}));
+  }
   emit(path.posix.dirname(item.config) + '/config.js', bundle('PlecLanguage', profile));
   for (const [mode, name] of [['words', 'paraules'], ['pseudo', 'pseudoparaules']]) {
     const entries = source.entries.filter(e => e.mode === mode).sort((a, b) => collator.compare(a.text, b.text));

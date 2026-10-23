@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-23T18:46:34.090Z",
+  "runtime": "v24.19.0",
+  "cpu": "Intel(R) Core(TM) Ultra 5 225U",
+  "platform": "win32",
+  "variantsPerRecipe": 2223,
+  "casesSelection": "Independent deterministic sampling of target words; not chosen from known successful seeds.",
+  "rows": [
+    {
+      "focuses": "accent,essa,hac,gej,beve,erra,qugu,vocals,digrafs,dieresi,signes,verbs",
+      "pool": 3299,
+      "required": 1,
+      "cases": 30,
+      "found": 30,
+      "medianMs": 0.197,
+      "p95Ms": 0.926,
+      "maxAttempts": 412
+    },
+    {
+      "focuses": "accent,essa,hac,gej,beve,erra,qugu,vocals,digrafs,dieresi,signes,verbs",
+      "pool": 3299,
+      "required": 2,
+      "cases": 30,
+      "found": 5,
+      "medianMs": 3.332,
+      "p95Ms": 3.875,
+      "maxAttempts": 2223
+    },
+    {
+      "focuses": "accent,essa,hac,gej,beve,erra,qugu,vocals,digrafs,dieresi,signes,verbs",
+      "pool": 3299,
+      "required": 3,
+      "cases": 30,
+      "found": 0,
+      "medianMs": 4.316,
+      "p95Ms": 7.039,
+      "maxAttempts": 2223
+    },
+    {
+      "focuses": "accent,essa,hac,gej,beve,erra,qugu,vocals,digrafs,dieresi,signes,verbs",
+      "pool": 3299,
+      "required": 4,
+      "cases": 30,
+      "found": 0,
+      "medianMs": 3.323,
+      "p95Ms": 4.476,
+      "maxAttempts": 2223
+    },
+    {
+      "focuses": "accent,essa,hac,gej,beve,erra,qugu,vocals,digrafs,dieresi,signes,verbs",
+      "pool": 3299,
+      "required": 5,
+      "cases": 30,
+      "found": 0,
+      "medianMs": 3.206,
+      "p95Ms": 3.896,
+      "maxAttempts": 2223
+    },
+    {
+      "focuses": "dieresi",
+      "pool": 231,
+      "required": 1,
+      "cases": 30,
+      "found": 30,
+      "medianMs": 0.007,
+      "p95Ms": 0.021,
+      "maxAttempts": 21
+    },
+    {
+      "focuses": "dieresi",
+      "pool": 231,
+      "required": 2,
+      "cases": 30,
+      "found": 30,
+      "medianMs": 0.211,
+      "p95Ms": 0.57,
+      "maxAttempts": 904
+    },
+    {
+      "focuses": "dieresi",
+      "pool": 231,
+      "required": 3,
+      "cases": 30,
+      "found": 27,
+      "medianMs": 0.974,
+      "p95Ms": 3.391,
+      "maxAttempts": 2223
+    },
+    {
+      "focuses": "dieresi",
+      "pool": 231,
+      "required": 4,
+      "cases": 30,
+      "found": 6,
+      "medianMs": 3.298,
+      "p95Ms": 3.693,
+      "maxAttempts": 2223
+    },
+    {
+      "focuses": "dieresi",
+      "pool": 231,
+      "required": 5,
+      "cases": 30,
+      "found": 0,
+      "medianMs": 3.454,
+      "p95Ms": 5.598,
+      "maxAttempts": 2223
+    },
+    {
+      "focuses": "signes",
+      "pool": 160,
+      "required": 1,
+      "cases": 30,
+      "found": 30,
+      "medianMs": 0.006,
+      "p95Ms": 0.033,
+      "maxAttempts": 25
+    },
+    {
+      "focuses": "signes",
+      "pool": 160,
+      "required": 2,
+      "cases": 30,
+      "found": 30,
+      "medianMs": 0.054,
+      "p95Ms": 0.295,
+      "maxAttempts": 207
+    },
+    {
+      "focuses": "signes",
+      "pool": 160,
+      "required": 3,
+      "cases": 30,
+      "found": 30,
+      "medianMs": 0.34,
+      "p95Ms": 1.471,
+      "maxAttempts": 1018
+    },
+    {
+      "focuses": "signes",
+      "pool": 160,
+      "required": 4,
+      "cases": 30,
+      "found": 15,
+      "medianMs": 3.165,
+      "p95Ms": 3.838,
+      "maxAttempts": 2223
+    },
+    {
+      "focuses": "signes",
+      "pool": 160,
+      "required": 5,
+      "cases": 30,
+      "found": 1,
+      "medianMs": 3.253,
+      "p95Ms": 3.872,
+      "maxAttempts": 2223
+    }
+  ]
+}

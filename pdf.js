@@ -5,7 +5,7 @@
     if (!library) throw new Error('No s’ha carregat l’eina de PDF. Torna a obrir el web.');
     const { PDFDocument, StandardFonts, rgb } = library;
     const doc = await PDFDocument.create();
-    doc.setTitle(`${options.title || 'Dictat'} · ${options.code || ''}${teacher ? ' · Guia docent' : ''}`);
+    doc.setTitle(`${options.title || 'Dictat'}${options.seedCode ? ' · ' + options.seedCode : ''}${teacher ? ' · Guia docent' : ''}`);
     doc.setAuthor('Plec'); doc.setSubject('Dictat autocorrectiu en català');
     const regular = await doc.embedFont(StandardFonts.Helvetica), bold = await doc.embedFont(StandardFonts.HelveticaBold);
     const PT = 72 / 25.4, page = doc.addPage([210 * PT, 297 * PT]);

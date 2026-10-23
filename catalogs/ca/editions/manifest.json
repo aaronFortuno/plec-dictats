@@ -1,0 +1,11 @@
+{
+  "current": 0,
+  "editions": [
+    {
+      "slot": 0,
+      "file": "seed-1.json",
+      "sha256": "f6a3ca2dd0ae45584a370ebe5de5fbca173423c8fd2eb763134b8f26030274da",
+      "revision": "ca-2026-01-draft.ee94edbd3b2d4fb4"
+    }
+  ]
+}

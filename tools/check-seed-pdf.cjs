@@ -1,0 +1,19 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const S=require('../seeds.js'),R=require('../catalogs/ca/editions/index.js'),K=require('../core.js'),P=require('../pdf.js');
+const library=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLEC_NODE_MODULES,'pdf-lib'):'pdf-lib');
+async function main(){
+ const result=S.resolve(R.editions,'A7W-STC'),edition=R.editions.find(e=>e.slot===result.epoch);
+ fs.mkdirSync('output',{recursive:true});
+ for(const foldStyle of ['thirds','quarter'])for(const modelSide of ['left','right'])for(const teacher of [false,true]){
+  const options={entries:result.entries,title:'Dictat de paraules',mode:'words',seedCode:result.code,seedLanguage:'ca',foldStyle,modelSide};
+  const layout=K.foldLayout(foldStyle,modelSide),shapes=teacher?K.teacherSheet(options,edition.catalog.categories):K.worksheet(options);
+  const code=shapes.find(s=>s.type==='text'&&s.value.includes('CA / A7W-STC'));assert(code,'Printed language and recoverable code');
+  if(!teacher){assert.equal(code.x,layout.writingArea.x);assert.equal(code.maxWidth,layout.writingArea.width);}
+  const bytes=await P.build(options,teacher,edition.catalog.categories,library,K);
+  const doc=await library.PDFDocument.load(bytes);assert.equal(doc.getPageCount(),1);assert(doc.getTitle().includes(result.code));
+  assert(Math.abs(doc.getPage(0).getWidth()-595.2756)<.01);
+  if(foldStyle==='quarter'&&modelSide==='left')fs.writeFileSync('output/'+(teacher?'exemple-seed-guia':'exemple-seed-quart-24')+'.pdf',bytes);
+ }
+ console.log('Seed PDF: four fold/side combinations and teacher sheets, code, language, A4 and metadata passed. Two examples exported.');
+}
+main().catch(error=>{console.error(error);process.exitCode=1;});

@@ -1,0 +1,369 @@
+{
+  "protocol": 1,
+  "language": "ca",
+  "note": "Permanent golden vectors. Do not regenerate when changing the algorithm or catalogue.",
+  "vectors": [
+    {
+      "code": "A7W-STC",
+      "recipe": {
+        "mode": "words",
+        "count": 24,
+        "stage": "cs",
+        "tags": [
+          "accent",
+          "essa",
+          "hac",
+          "gej",
+          "beve",
+          "erra",
+          "qugu",
+          "vocals",
+          "digrafs",
+          "dieresi",
+          "signes",
+          "verbs"
+        ]
+      },
+      "nonce": 0,
+      "ids": [
+        "p-19cq0yy",
+        "p-11f4mp0",
+        "p-5qzf80",
+        "p-zskai",
+        "p-78g242",
+        "p-cr5cdh",
+        "p-1rnuppf",
+        "p-1fdtv5s",
+        "p-h5wy2m",
+        "p-1wc99ta",
+        "p-19pua1e",
+        "p-en18h5",
+        "p-pgbdli",
+        "p-xcgdbr",
+        "p-1uhnxiv",
+        "p-1ahrlf",
+        "p-1h1y00x",
+        "p-hozgas",
+        "p-4bo00n",
+        "p-yfku9w",
+        "p-1js0rre",
+        "p-1g4p1jo",
+        "p-1b60xne",
+        "p-1g46jm8"
+      ],
+      "words": [
+        "diumenge",
+        "reduïda",
+        "empollar",
+        "lletges",
+        "perdíem",
+        "misteri",
+        "seduïa",
+        "gavina",
+        "paisatge",
+        "obert",
+        "coïa",
+        "branquilló",
+        "seques",
+        "enfadades",
+        "enteníem",
+        "pinyó",
+        "desllorigador",
+        "cançó",
+        "vitrina",
+        "llaç",
+        "forat",
+        "croqueta",
+        "safata",
+        "rebéssim"
+      ]
+    },
+    {
+      "code": "MR7-K4A",
+      "recipe": {
+        "mode": "words",
+        "count": 24,
+        "stage": "cs",
+        "tags": [
+          "accent",
+          "essa",
+          "hac",
+          "gej",
+          "beve",
+          "erra",
+          "qugu",
+          "vocals",
+          "digrafs",
+          "dieresi",
+          "signes",
+          "verbs"
+        ]
+      },
+      "nonce": 2222,
+      "ids": [
+        "p-1v85d0e",
+        "p-1ctf3cl",
+        "p-1k9gt5y",
+        "p-jnpxy0",
+        "p-u7zm3v",
+        "p-1of75u9",
+        "p-b6pp1j",
+        "p-1hk1cbt",
+        "p-1hm0mgv",
+        "p-1l46swt",
+        "p-1ajkhk0",
+        "p-1oha4o5",
+        "p-q097d0",
+        "p-14u4onz",
+        "p-1me9lkn",
+        "p-1r12ntz",
+        "p-zp8ff",
+        "p-130ns93",
+        "p-11z28p3",
+        "p-1chf29z",
+        "p-zdewj2",
+        "p-1v2dnhr",
+        "p-q6yv64",
+        "p-1s02i4h"
+      ],
+      "words": [
+        "grossos",
+        "sopa",
+        "esquelet",
+        "llengüeta",
+        "ajuntar",
+        "pesat",
+        "civil",
+        "suïssos",
+        "il·lustrar",
+        "rebost",
+        "cosíem",
+        "regle",
+        "robar",
+        "eixelebrat",
+        "pesseta",
+        "convidats",
+        "teixó",
+        "horitzó",
+        "tothora",
+        "caminar",
+        "beneïda",
+        "el·lipse",
+        "crònica",
+        "ajuda"
+      ]
+    },
+    {
+      "code": "QSZ-342",
+      "recipe": {
+        "mode": "words",
+        "count": 8,
+        "stage": "cm",
+        "tags": [
+          "qugu"
+        ]
+      },
+      "nonce": 7,
+      "ids": [
+        "p-1yugrcr",
+        "p-1ry90od",
+        "p-fzrf4u",
+        "p-1til77g",
+        "p-162f8xi",
+        "p-1wttlkp",
+        "p-nsi1wc",
+        "p-qhisxy"
+      ],
+      "words": [
+        "màquina",
+        "fugir",
+        "segar",
+        "sargir",
+        "quimera",
+        "reguitzell",
+        "cucut",
+        "vacances"
+      ]
+    },
+    {
+      "code": "A6A-7CA",
+      "recipe": {
+        "mode": "words",
+        "count": 12,
+        "stage": "all",
+        "tags": [
+          "dieresi"
+        ]
+      },
+      "nonce": 101,
+      "ids": [
+        "p-19sxb2s",
+        "p-csfvho",
+        "p-2eykbv",
+        "p-1ntddk",
+        "p-1oa5eut",
+        "p-1eef7b4",
+        "p-k0z2vn",
+        "p-1nw2dtc",
+        "p-np8f8q",
+        "p-1brqe2t",
+        "p-1k54l0q",
+        "p-1jln91"
+      ],
+      "words": [
+        "intuïu",
+        "produïa",
+        "genuïna",
+        "continuïtat",
+        "aigüera",
+        "contribuïssin",
+        "distribuït",
+        "produïts",
+        "suïssa",
+        "roïna",
+        "traduïm",
+        "intuïes"
+      ]
+    },
+    {
+      "code": "9P9-AP2",
+      "recipe": {
+        "mode": "words",
+        "count": 16,
+        "stage": "eso",
+        "tags": [
+          "signes",
+          "verbs"
+        ]
+      },
+      "nonce": 511,
+      "ids": [
+        "p-16b6zgy",
+        "p-u67qt7",
+        "p-1lee64b",
+        "p-1779mnd",
+        "p-174arlc",
+        "p-1vdgzl5",
+        "p-14jb3bf",
+        "p-lytpbs",
+        "p-sf7008",
+        "p-ye5bpf",
+        "p-1nue5ih",
+        "p-78g242",
+        "p-1a0zrhg",
+        "p-17yh7rl",
+        "p-1xvy7du",
+        "p-1wxhrzl"
+      ],
+      "words": [
+        "traduïts",
+        "dúieu",
+        "creguéssim",
+        "agraïen",
+        "sentissin",
+        "corregíssim",
+        "faria",
+        "vinguéssiu",
+        "tranquil·lament",
+        "continuï",
+        "produïes",
+        "perdíem",
+        "arribàvem",
+        "traguessin",
+        "volíeu",
+        "vingués"
+      ]
+    },
+    {
+      "code": "52B-QAQ",
+      "recipe": {
+        "mode": "pseudo",
+        "count": 20,
+        "stage": "all",
+        "tags": [
+          "simples",
+          "grups",
+          "pseudodigrafs",
+          "llargues"
+        ]
+      },
+      "nonce": 7,
+      "ids": [
+        "s-qof2p",
+        "s-wynulf",
+        "s-1rnih9t",
+        "s-1bycyen",
+        "s-j76w3n",
+        "s-12mxf86",
+        "s-grd7tk",
+        "s-1yhusti",
+        "s-nq0xr9",
+        "s-hm0b48",
+        "s-dfjurx",
+        "s-1hzmc8p",
+        "s-101g1k2",
+        "s-17uxlgp",
+        "s-48kt8s",
+        "s-qgqphr",
+        "s-4wp27p",
+        "s-fsr1rc",
+        "s-5udezm",
+        "s-xxhuut"
+      ],
+      "words": [
+        "guepuf",
+        "nuparella",
+        "cunyi",
+        "prufal",
+        "blanufeta",
+        "trufec",
+        "crunel",
+        "nulapi",
+        "llunep",
+        "nyapuf",
+        "txunel",
+        "drapuneta",
+        "mixup",
+        "blis",
+        "panufi",
+        "llunif",
+        "nupi",
+        "lomí",
+        "clenap",
+        "feixum"
+      ]
+    },
+    {
+      "code": "Q3Y-K6P",
+      "recipe": {
+        "mode": "pseudo",
+        "count": 8,
+        "stage": "all",
+        "tags": [
+          "grups"
+        ]
+      },
+      "nonce": 2222,
+      "ids": [
+        "s-jvvw92",
+        "s-c3biom",
+        "s-1hduh1l",
+        "s-1p6nytd",
+        "s-zg5fcv",
+        "s-4qa3xa",
+        "s-18vhbqf",
+        "s-1236ae5"
+      ],
+      "words": [
+        "flanec",
+        "blenuc",
+        "frenup",
+        "plim",
+        "brunif",
+        "grisp",
+        "trupol",
+        "drupel"
+      ]
+    }
+  ]
+}

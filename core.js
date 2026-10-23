@@ -95,7 +95,7 @@
     return layout;
   }
   // Coordenades comunes per a l'SVG i el PDF, en mil·límetres, origen superior esquerre.
-  function worksheet({ entries, title, mode = 'words', modelSide = 'left', foldStyle = 'thirds' }) {
+  function worksheet({ entries, title, mode = 'words', modelSide = 'left', foldStyle = 'thirds', seedCode, seedLanguage = 'ca' }) {
     const shapes = [];
     const text = (x, y, value, size = 10, weight = false, color = '#222222', extra = {}) => shapes.push({ type: 'text', x, y, value, size, weight, color, ...extra });
     const line = (x, y, x2, y2, color = '#aaaaaa', width = .2, dash = false) => shapes.push({ type: 'line', x, y, x2, y2, color, width, dash });
@@ -105,7 +105,7 @@
     const { x: writeX, width: writeWidth } = layout.writingArea;
     text(modelX, 15, 'plec / model amagat', 8, true, '#555555');
     text(modelX, 23, layout.name, 7, false, '#555555', { maxWidth: modelWidth });
-    text(writeX, 15, 'plec / dictat', 8, true, '#555555');
+    text(writeX, 15, seedCode ? `${seedLanguage.toUpperCase()} / ${seedCode}` : 'plec / dictat', seedCode ? 9.5 : 8, true, '#234d43', { maxWidth: writeWidth });
     text(writeX, 25, title || (mode === 'words' ? 'Dictat de paraules' : 'Dictat de pseudoparaules'), 12, true, '#222222', { maxWidth: writeWidth });
     text(writeX, 34, 'Nom:', 8); line(writeX + 8, 35, writeX + writeWidth, 35);
     text(writeX, 42, 'Data:', 8); line(writeX + 8, 43, writeX + writeWidth, 43);
@@ -131,10 +131,10 @@
     }
     return shapes;
   }
-  function teacherSheet({ entries, title, mode }, categories) {
+  function teacherSheet({ entries, title, mode, seedCode, seedLanguage = 'ca' }, categories) {
     const shapes = [];
     const text = (x, y, value, size = 10, weight = false, color = '#222222', extra = {}) => shapes.push({ type: 'text', x, y, value, size, weight, color, ...extra });
-    text(12, 15, 'plec / guia de lectura docent', 9, true);
+    text(12, 15, 'plec / guia de lectura docent' + (seedCode ? ` · ${seedLanguage.toUpperCase()} / ${seedCode}` : ''), 9, true, '#222222', { maxWidth: 186 });
     text(12, 28, title || 'Guia del dictat', 17, true, '#222222', { maxWidth: 186 });
     text(12, 38, `${entries.length} ${mode === 'words' ? 'paraules' : 'pseudoparaules'}`, 10);
     text(12, 49, 'Llegeix cada element amb naturalitat i repeteix-lo abans de passar al següent.', 9);

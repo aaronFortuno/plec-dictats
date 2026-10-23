@@ -1,144 +1,95 @@
 # Plec · Dictats per desplegar
 
-Un generador obert de dictats autocorrectius en català, pensat per a cinquè de primària i adaptable al cicle superior. **3.299 paraules** amb focus ortogràfics i **96 pseudoparaules** proposades per practicar les correspondències entre so i grafia.
+Un generador obert de dictats autocorrectius en català: **3.299 paraules**, **96 pseudoparaules**, dos formats de plec i codis curts per recuperar cada dictat. Funciona al navegador, sense comptes ni servidor de dades.
 
-## Catàlegs i llengües
+**[Obre Plec · Català](https://aaronfortuno.github.io/plec-dictats/ca/)** · [Prova el codi A7W-STC](https://aaronfortuno.github.io/plec-dictats/ca/?seed=A7WSTC)
 
-L'entrada catalana és [Plec · Català](https://aaronfortuno.github.io/plec-dictats/ca/). La portada hi redirigeix mantenint els paràmetres de l'enllaç. La configuració de llengua, les regles de nivell i les dades estan separades; encara només s'ofereix català.
+## Preparar un dictat
 
-El banc ampliat és una proposta pendent de revisió docent. Pots baixar les llistes alfabètiques des del catàleg: **Paraules · TXT**, **Pseudoparaules · TXT** i **Taula de revisió · TSV**. Els fitxers també són a `catalogs/ca/`. La font editable és `catalogs/ca/catalog.json`; després de modificar-la, executa `node tools/build-catalogs.cjs`. Vegeu [el funcionament dels catàlegs](catalogs/README.md).
+1. Tria **Paraules** o **Pseudoparaules**, 8, 12, 16, 20 o 24 elements, el nivell orientatiu i els focus de pràctica. Els focus es combinen amb el criteri «qualsevol dels triats»; no hi ha una quota mínima de cada focus. Els filtres preparen automàticament un codi nou.
+2. Si cal, afegeix fins a **cinc mots obligatoris** del banc que passin els filtres. Es busca un codi que ja els contingui. Si no n'hi ha cap, treu algun mot o ajusta els focus. No s'insereixen paraules a mà ni es relaxen els filtres silenciosament.
+3. Conserva el codi, per exemple **A7W-STC**, o copia l'enllaç. **Recupera un dictat** reconstrueix els mateixos mots, en el mateix ordre, amb la mateixa llargada, nivell i focus. S'accepten minúscules, guions i espais.
+4. **Nou dictat** prepara una altra variant amb la mateixa configuració. El format del plec i el costat del model són independents del codi i es poden canviar sense alterar la tria.
+5. Descarrega el **PDF A4**, que inclou el codi i els camps Nom i Data. A **Com funciona** hi ha les instruccions de plegat i la **guia docent**, amb el mateix codi, numeració i ordre.
 
-Cada revisió té una empremta que també incorpora la configuració de llengua. Les tries guardades inclouen la llengua i la revisió; es mantenen els fitxers antics de català i les dades locals. Es rebutja la importació d'un dictat d'una altra llengua abans de modificar la tria.
+La versió 2.0 substitueix les tries individuals, les xinxetes, els canvis de mots i el lateral dret pel sistema de codis. El catàleg és de consulta i es pot descarregar en TXT i TSV; no permet seleccionar mots individualment. Les formes femenines i plurals comparteixen els mateixos focus ortogràfics que la resta.
 
-El banc inclou formes de gènere i nombre diversos dins dels mateixos focus ortogràfics: per exemple, «acompanyades» als dígrafs, «organitzades» a les esses i «conduïdes» a la dièresi. Els participis també apareixen a **Formes verbals**. No hi ha cap filtre ni quota separada per a femenins o plurals. Les 137 variants incorporades en la versió 1.8 es mantenen i tenen coincidència exacta al lèxic flexionat de Softcatalà.
+## Com funciona l'algoritme
 
-La generació amb llavors, la cerca de mots obligatoris, els QR i el reproductor s'abordaran després de revisar i fixar la primera edició estable. Aquesta versió prepara les identitats i les rutes, sense emetre encara codis recuperables.
+El codi empaqueta una edició del banc, la configuració dels filtres i un número de variant. Primer es construeix el conjunt de candidats. Després, una successió reproduïble d'enters tria posicions sense reposició mitjançant una barreja parcial de Fisher–Yates. L'ordre d'extracció és l'ordre del dictat: no es fa una ordenació alfabètica posterior.
 
-## Espai de treball
+La mateixa entrada sempre produeix la mateixa successió. Per això no cal guardar un fitxer per a cada dictat: es conserva una instantània del catàleg i es repeteix el càlcul. La llengua queda identificada per la ruta `/ca/` i s'imprimeix amb el codi al full.
 
-En ordinador, el preparador ocupa l’alçada de la finestra i es distribueix en tres columnes: configuració a l’esquerra, vista prèvia al centre i paraules triades a la dreta. Els laterals es desplacen de manera independent, amb barres discretes. La configuració inicial concentra tipus, format, model, nombre de mots i nivell en quatre files, deixant els focus visibles sense scroll a les mides d’escriptori comprovades.
+Els sis caràcters provenen d'un alfabet de 30 símbols, sense I, L, O, U, 0 ni 1. El protocol reserva quatre edicions i representa 81.975 configuracions amb **2.223 variants per configuració**. Les configuracions sense prou mots i les edicions encara no disponibles es rebutgen. La cerca de mots obligatoris recorre aquest conjunt finit, és cancel·lable i no bloqueja el navegador amb una cerca sense límit.
 
-La capçalera compacta inclou el lema i el recompte del banc. El gràfic explicatiu i les instruccions són a **Com funciona**. El full A4 s’ajusta a l’amplada i l’alçada disponibles mantenint la proporció, i canvia immediatament quan es trien el format del plec o la posició del model.
+El detall de la fórmula, les operacions inverses, els enters de 32 bits, el mòdul, el mostreig, els límits, les mesures i la compatibilitat futura és a **[docs/LLAVORS.md](docs/LLAVORS.md)**.
 
-En pantalles estretes les columnes es reorganitzen. La tria de la dreta conserva les funcions de fixar, canviar, guardar, recuperar i seleccionar des del catàleg.
+## Fins a quants mots obligatoris?
 
-## Utilització
+El màxim de càlcul és sempre 2.223 variants; demanar més mots fa més difícil trobar una coincidència, però no amplia la cerca indefinidament. En una prova local de 30 conjunts independents per cas, amb fulls de 24 mots:
 
-Obre `index.html` amb un navegador actual, o entra al web de GitHub Pages. No cal instal·lar res, crear comptes ni disposar de connexió després de descarregar els fitxers. No hi ha analítica ni serveis externs durant l’ús.
+| Candidats | 1 obligatori | 2 obligatoris | 3 obligatoris | 4 obligatoris | 5 obligatoris |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Tot el banc · 3.299 | 30/30 | 5/30 | 0/30 | 0/30 | 0/30 |
+| Dièresi · 231 | 30/30 | 30/30 | 27/30 | 6/30 | 0/30 |
+| Ela geminada · 160 | 30/30 | 30/30 | 30/30 | 15/30 | 1/30 |
 
-1. Tria **Paraules** (24 per defecte) o **Pseudoparaules** (20 per defecte).
-2. Escull 8, 12, 16, 20 o 24 elements, el nivell orientatiu i els focus de pràctica. La tria es renova automàticament en canviar aquests filtres: reparteix els focus i prioritza els elements que encara no s’han utilitzat. Els focus es combinen amb el criteri «qualsevol dels triats». Si s’esgoten les alternatives, ho indica i reutilitza mots del banc. Mai repeteix un element dins del mateix full.
-3. Revisa la llista. La xinxeta conserva un mot en generar una altra proposta; les fletxes circulars canvien només aquell mot. Les paraules fixades es conserven encara que canviïs els focus. En canviar la llargada es prepara una proposta completa, prioritzant els fixats fins al nou límit. La icona **Renova la tria** del lateral dret permet preparar un altre dictat amb els mateixos filtres. Si falten candidats, es mostra una proposta parcial i es desactiva el PDF fins que ampliïs els filtres o redueixis la llargada.
-4. **Tria des del catàleg** permet una selecció manual. Amb el full ple, desmarca un element per deixar lloc a un altre. El catàleg té cercador i filtre propi: aquests no canvien els focus de la proposta aleatòria.
-5. **Descarrega el PDF** crea directament una pàgina A4 amb el model i els camps Nom i Data. A **Com funciona**, **Descarrega la guia docent** ofereix una pàgina separada amb la mateixa numeració, ordre i etiquetes dels mots.
+La mediana de càlcul en aquests casos va quedar entre 0,006 i 4,316 ms en un Intel Core Ultra 5 225U amb Node 24.19.0. No són mesures de mòbil ni del temps total de la interfície. La cerca del navegador cedeix el control entre blocs de 64 intents i hi afegeix una mica de temps.
 
-El model es mostra sempre. El títol del full és «Dictat de paraules» o «Dictat de pseudoparaules». No es generen ni es mostren codis aleatoris.
+Un mot és fàcil d'incloure en aquesta mostra. Dos o tres són més útils quan els focus acoten el banc. Quatre o cinc poden funcionar amb conjunts petits; la interfície els permet provar, sense garantir que existeixi cap codi compatible. Més temps de cerca no crea variants que no caben al format del codi.
 
-## Vista prèvia i moviment
+## Nivells i banc de paraules
 
-La roda del ratolí amplia o redueix el full al voltant del punter; arrossega’l per desplaçar-lo. El doble clic el torna a ajustar. Els botons de la cantonada inferior dreta permeten reduir, ampliar i ajustar. Amb el visor enfocat, també funcionen +, −, 0 i les fletxes.
+Cada mot combina familiaritat del vocabulari i dificultat ortogràfica. Són orientacions editorials revisables, no una escala curricular validada:
 
-El 100 % del visor correspon al full sencer ajustat a l’espai disponible; el zoom va del 50 al 400 %. El zoom i el desplaçament només afecten la pantalla. Els PDF i la impressió mantenen la mida A4.
+- **Cicle mitjà:** vocabulari bàsic i habitual, amb dificultat baixa o mitjana.
+- **Cicle superior:** bàsic, habitual i ampliació; qualsevol dificultat ortogràfica.
+- **Institut:** ampliació i especialitzat, més mots coneguts amb ortografia alta.
+- **Tot el banc:** sense límit de nivell. Les pseudoparaules no tenen nivell.
 
-Diàlegs, desplegables, canvis de contingut i controls comparteixen una durada de **220 ms**. El peu és més alt i llegible. Les barres de desplaçament disposen de separació respecte del contingut.
+«Llit» pot entrar a cicle mitjà o superior; «avesar», a superior o institut; «hipotenusa», a institut. Els mots poden tenir diversos focus. Si no hi ha prou candidats, cal ampliar els filtres o reduir la llargada.
 
-## Catàleg i informació del projecte
+El catàleg editable és `catalogs/ca/catalog.json`. Les llistes alfabètiques, amb una forma per línia, són `paraules.txt` i `pseudoparaules.txt`; `revisio.tsv` incorpora nivells i etiquetes. El docent pot editar el TXT com a proposta de revisió. Les eines detecten aquests canvis i eviten sobreescriure'ls accidentalment.
 
-Els focus **Formes verbals**, **Dièresi** i **Ela geminada** es poden triar separadament i se solapen amb altres qüestions ortogràfiques. Per exemple: «haguessin» (verbs, h, ss), «plantejarien» (verbs, g/j), «intuïa» i «canviïn» (verbs i dièresi). El banc inclou 91 formes verbals, 56 mots amb dièresi i 25 amb ela geminada. Les etiquetes indiquen focus de pràctica, no una anàlisi exhaustiva.
+El banc és una selecció editorial proposada inicialment per l'assistent i contrastada amb recursos de Softcatalà. Es manté l'estat de revisió docent pendent. El contrast exacte té documentat el cas enclític preexistent `rebel·lar-se` com a pendent. Conservar una instantània per recuperar codis no implica certificar el banc lingüísticament. Vegeu [catàlegs i contrast lèxic](catalogs/README.md) i les referències normatives [DIEC](https://dlc.iec.cat/) i [Ortografia de l'IEC](https://oiec.iec.cat/).
 
-La versió del peu obre un historial amb data, del més nou al més antic, i un enllaç al changelog complet. **Sobre el projecte · V4V** obre la informació del projecte, la presentació i fotografia de l’autor, el portfoli, el repositori i els crèdits. La secció V4V comparteix el QR, l’adreça Lightning i el botó de còpia amb [Pentagrama](https://pentagrama.page/); la descripció és pròpia de Plec. La foto i el QR es distribueixen localment. Les icones de [Lucide](https://lucide.dev/) es distribueixen també localment amb la llicència original.
+## Plegar i corregir
 
-## Dos formats de plec
+- **Terços:** model, escriptura al centre i banda buida. Es plega primer la banda buida i després el model, cap al darrere. La banda intermèdia amaga el model i, per corregir, es desplega al costat de l'escriptura.
+- **Quart de full:** model exterior de 51 mm, solapa de 53 mm, tram de 54 mm i escriptura de 52 mm. Dos plecs cap endins, amb marge perquè el model càpiga sota la primera solapa. El model es pot mostrar al costat de l'escriptura obrint el plec exterior.
 
-El selector **Format del plec** ofereix terços i quart de full. En tots dos es pot posar el model a l’esquerra o a la dreta; **Model amagat** inverteix tota la distribució, incloses les guies i els esquemes.
+Tots dos formats es poden invertir. Els trams de protecció són buits. Les línies d'escriptura i correcció són a la mateixa columna. Imprimeix a mida real, A4, per una sola cara. La vista prèvia admet zoom amb roda i botons, arrossegament i doble clic per ajustar.
 
-### Terços: escriptura al centre
+**Les pseudoparaules no tenen una ortografia normativa única.** Acorda la pronunciació i l'accent oral i accepta les grafies compatibles amb el so dictat. La h muda, les grafies homòfones i les variants dialectals no es poden resoldre sempre a partir d'un mot oral aïllat. El model proposat no converteix automàticament una alternativa fonèticament compatible en un error.
 
-| Model | Escriptura i revisió | Banda buida |
-| --- | --- | --- |
-| 70 mm | 70 mm | 70 mm |
+## Compatibilitat i fase següent
 
-Les guies són a 70 i 140 mm. Primer es plega la banda buida cap al darrere de l’escriptura i després el model, també cap al darrere. Per corregir, s’obre només el model i es manté la banda buida al darrere: el model queda al costat de l’escriptura.
+La primera instantània és `catalogs/ca/editions/seed-1.json`, amb empremta immutable al registre d'edicions. Una ampliació futura del banc haurà d'afegir una edició nova; no es pot canviar el significat dels codis antics. Cada llengua tindrà la seva entrada i el seu registre.
 
-### Quart: dos plecs cap endins
+Les dades locals de la versió anterior es conserven amb la seva clau original. El sistema nou només en recupera preferències compatibles. A **Com funciona** es pot descarregar una còpia de les dades antigues encara presents al navegador. Les tries manuals i els mots propis no es converteixen automàticament en codis. Els codis fan servir exclusivament el banc compartit, perquè qualsevol dispositiu els pugui reproduir.
 
-| Model exterior | Primera solapa buida | Tram sota el paquet | Escriptura i revisió |
-| --- | --- | --- | --- |
-| 51 mm | 53 mm | 54 mm | 52 mm |
-
-Amb el model a l’esquerra, les guies són a **51 i 104 mm** de la vora esquerra; amb el model a la dreta són a **106 i 159 mm** de la vora esquerra. Només hi ha dues guies: el límit del tram d’escriptura no és un altre plec.
-
-1. Plega el model exterior cap endins per la guia més pròxima. Els seus 51 mm caben dins de la solapa de 53 mm, amb 2 mm de marge abans del següent plec.
-2. Fes el segon plec també cap endins. El paquet ocupa 53 mm del tercer tram, de 54 mm, i deixa 1 mm abans de l’escriptura. Queden aproximadament 52 mm de paper visibles per escriure.
-3. Per corregir, aixeca una mica el paquet i obre el plec exterior en sentit contrari, com un petit acordió. El model queda cap amunt al costat de l’escriptura; no cal estendre els trams buits.
-
-Les amplades anteriors són físiques, inclosos els marges. La zona impresa té marges de seguretat. Les solapes buides no contenen text, ratlles ni capçalera. La columna d’escriptura inclou nom i data. La correcció es fa **a la mateixa columna on s’ha escrit**.
-
-Dins de **Com funciona**, **Com plego aquest full?** mostra la distribució proporcional del full obert, els passos del format actual i un esquema lateral de dictat i correcció. L’esquema lateral és orientatiu i no està a escala.
-
-Imprimeix a una sola cara, en **A4 al 100 %**. Els marges d’encaix estan comprovats geomètricament; queda pendent la prova amb paper real, ja que el gruix, l’opacitat i la precisió del plec depenen del paper i de la impressora.
-
-## Nivell orientatiu: vocabulari i dificultat ortogràfica
-
-Cada paraula té dos camps independents al catàleg:
-
-- **vocabulary:** basic (bàsic), common (habitual), expanded (ampliació) o specialized (especialitzat).
-- **orthography:** low (baixa), medium (mitjana) o high (alta).
-
-És una classificació editorial explícita i revisable, no una escala validada ni una assignació curricular oficial. No es calcula a partir de la llargada del mot. El nivell aplica aquestes regles:
-
-| Perfil | Candidats |
-| --- | --- |
-| Cicle mitjà | Bàsic i habitual amb ortografia baixa o mitjana. |
-| Cicle superior | Bàsic, habitual i ampliació; qualsevol dificultat ortogràfica. |
-| Institut | Ampliació i especialitzat, més mots bàsics o habituals amb ortografia alta. |
-| Tot el banc | Totes les paraules, incloses les pròpies sense classificar. |
-
-Així, **llit** entra a mitjà i superior; **avesar**, a superior i institut; **hipotenusa**, a institut. **Col·legi** continua disponible a institut per la seva exigència ortogràfica. La familiaritat i la dificultat es mostren a cada entrada del catàleg.
-
-Els perfils s’intersequen amb els focus ortogràfics. El filtre del catàleg és independent del preparador. Canviar de nivell o de focus conserva la tria actual i avisa dels mots que en queden fora; cal preparar una nova proposta per renovar-la. Els mots fixats es conserven fins i tot quan queden fora dels filtres. No s’apliquen nivells de vocabulari a les pseudoparaules.
-
-## Criteri pedagògic
-
-El banc de paraules conté deu focus: accentuació; s/ss/c/ç/z; h; g/j/tg/tj; b/v; r/rr; c/qu/g/gu/qü/gü; vocals àtones; ll/ny/x/ix/tx/ig; i dièresi/ela geminada. Una paraula pot tenir diverses etiquetes i només apareix una vegada. Les etiquetes indiquen focus de pràctica, no una anàlisi exhaustiva del mot. Hi ha contrastos amb i sense marca gràfica, com país/països.
-
-El banc de pseudoparaules agrupa formes de síl·labes simples, grups consonàntics, dígrafs i mots llargs. Inclou els exemples inicials aportats: sclaf, platoll, blis, drall, cunyi, frisquell, sergaminya i pirotet. Les agrupacions són orientatives i poden solapar-se. Les formes són propostes d’aula, no ítems d’una prova estandarditzada ni una llista lexicalment validada en tots els parlars.
-
-**Una pseudoparaula no té una ortografia normativa única.** Cal acordar la pronunciació i l’accent oral abans de dictar i acceptar altres grafies compatibles amb el so que ha rebut l’alumnat. No es pot deduir, per exemple, una h muda o sempre una b/v només a partir del so. El model és una proposta per comparar i comentar; una diferència amb el model no equival automàticament a un error. La mateixa precaució afecta les vocals segons el parlar del docent.
-
-Referències normatives de consulta: [Ortografia catalana de l’IEC](https://oiec.iec.cat/), [DIEC](https://dlc.iec.cat/) i [grafies sibilants a la gramàtica de l’IEC](https://gbu.iec.cat/text/2.3). El catàleg és una selecció editorial pròpia; no es presenta com una extracció validada d’aquests recursos.
-
-## Guardar i ampliar
-
-La tria, l’historial de mots utilitzats i els elements propis es guarden al navegador quan l’emmagatzematge local està disponible. Les sessions de paraules i pseudoparaules es conserven per separat. No hi ha sincronització entre dispositius.
-
-- **Guarda el dictat** descarrega un JSON amb tots els elements, el seu ordre, els fixats, el nivell, el format del plec, la posició del model, la llengua i la revisió del catàleg. El format actual és 4; s’importen també els formats 1, 2 i 3 de català. Els dictats antics sense format de plec es recuperen amb la disposició de terços, mantenint els mots i el seu ordre. **Recupera un dictat** el restaura, inclosos els mots propis en un altre navegador. Els camps antics de Grup, codi i títol personalitzat s’ignoren.
-- Al catàleg, **Afegeix paraules pròpies al banc** accepta una forma per línia o separada per comes (màxim 26 caràcters, sense espais, fins a 3.000 formes pròpies). S’afegeixen al tipus de dictat actiu, amb l’etiqueta «Les meves paraules». Pots indicar-ne vocabulari i dificultat; sense classificació apareixen a «Tot el banc» i es poden seleccionar manualment.
-- **Exporta tot el catàleg** descarrega una còpia del banc, inclosos els elements propis. Aquest format és per consultar i editar dades; no s’importa des de «Recupera un dictat».
-- Per ampliar el banc comunitari, edita `catalogs/ca/catalog.json` i regenera els paquets. Mantén les formes en minúscula, els IDs existents i una sola entrada per mot; una entrada pot tenir diversos focus.
+Encara no s'han incorporat els àudios, el reproductor per a l'alumnat ni el QR. L'enllaç actual obre el preparador docent amb el codi recuperat. El motor de codis es podrà compartir amb el futur mode dictat.
 
 ## Desenvolupament i comprovació
 
-Web estàtic sense rutes absolutes ni dependències externes durant l’ús. Les fonts són els JSON de `catalogs/` i `locales/`, i la plantilla catalana `templates/composer.html`; `tools/build-catalogs.cjs` genera els paquets i les entrades HTML abans de publicar. Els fitxers generats també estan versionats, de manera que GitHub Pages no necessita compilar res. No s'han d'editar manualment. La distribució és a `workspace.css`; `styles.css` manté els estils compartits i els diàlegs. Els recursos de la plantilla comparteixen `?v=1.9.0`: cal actualitzar-lo conjuntament en una nova versió. La biblioteca PDF està inclosa amb la seva llicència a `assets/vendor/`. `core.js` comparteix la geometria entre la vista prèvia SVG i `pdf.js`, que genera PDF vectorial amb Helvetica i Helvetica Bold.
+Web estàtic, amb biblioteques i icones locals. Obre `index.html` directament o serveix el projecte. No hi ha serveis externs, comptes ni analítica durant l'ús.
 
 ```text
-node tools/serve.cjs
+node tools/build-catalogs.cjs
 node tools/check.cjs
 node tools/check-catalogs.cjs
+node tools/check-lexicon.cjs
+node tools/check-seeds.cjs
+node tools/benchmark-seeds.cjs
+node tools/serve.cjs
 ```
 
-La previsualització local s’obre a l’adreça que mostra el servidor (per defecte, `http://127.0.0.1:4176`). El segon comandament comprova integritat del catàleg, absència de duplicats, focus, perfils de nivell, mostreig, fixats, repeticions, trams buits, marges d’encaix i límits de l’A4.
+El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `build-catalogs.cjs --check` comprova que els fitxers generats siguin reproduïbles. El generador verifica també les empremtes de les instantànies i no les modifica. Per repetir el contrast complet cal el lèxic extern de Softcatalà; les instruccions són a `catalogs/README.md`.
 
-El tercer comprova també la generació reproduïble, les empremtes, els fitxers de revisió, les rutes i la migració de dades per llengua.
+`seeds.js` conté el protocol, el mostreig i la cerca. `app.js` en gestiona la interfície i les cancel·lacions. `seeds.css` adapta l'espai de treball a dues columnes. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. La plantilla catalana és `templates/composer.html`; els recursos comparteixen el sufix `?v=2.0.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
 
-`tools/check-pdf.cjs` comprova les vuitanta combinacions de tipus, llargada, document, format de plec i posició del model, valida la pàgina A4, els caràcters i les guies de plec, i crea dos exemples a `output/`. Necessita `pdf-lib` com a dependència de desenvolupament o la variable `PLEC_NODE_MODULES` apuntant a una carpeta que contingui aquest paquet. No és una dependència per fer servir el web.
+## GitHub Pages i llicències
 
-## GitHub Pages
+El repositori serveix la branca **main**, carpeta **/ (root)**, amb `.nojekyll`. La portada redirigeix a `/ca/` mantenint els paràmetres. Les comprovacions es fan en local; la revisió del web desplegat la fa l'usuari.
 
-El repositori serveix directament la branca **main**, carpeta **/ (root)**, amb **Settings → Pages → Deploy from a branch**. El fitxer `.nojekyll` permet servir els fitxers estàtics sense transformació. No hi ha cap secret, servidor, base de dades ni pas de compilació.
-
-Les comprovacions es fan en local. La revisió de la publicació remota correspon al docent.
-
-## Llicència
-
-Codi i contingut original sota llicència MIT; es poden reutilitzar, modificar i compartir conservant l’avís de llicència. `pdf-lib` manté la seva llicència MIT i els seus avisos originals a `assets/vendor/pdf-lib.LICENSE.md`. Les icones Lucide conserven la llicència ISC i l’avís MIT de les icones derivades de Feather a `assets/lucide/LICENSE`.
+Codi i contingut original sota MIT. `pdf-lib` conserva la llicència MIT i els avisos d'`assets/vendor/`; Lucide conserva ISC i l'avís MIT de les icones derivades de Feather a `assets/lucide/LICENSE`. El lèxic de Softcatalà, utilitzat externament per al contrast, manté la seva llicència LGPL 2.1 / GPL 2.0 i les seves atribucions; no es distribueix amb el web.

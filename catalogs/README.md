@@ -1,6 +1,6 @@
 # Catàlegs de Plec
 
-La font de dades de l'aplicació és `ca/catalog.json`. El banc actual és una **proposta pendent de revisió docent**, no un corpus tancat ni una escala curricular validada. Conté 3.299 paraules i 96 pseudoparaules. La selecció inicial la va proposar l'assistent d'IA; no es va extreure automàticament del DIEC ni d'un banc escolar validat. Després es va contrastar amb el corrector de Softcatalà. Aquest primer contrast era insuficient per certificar cada grafia: un corrector també pot acceptar compostos generats, i no identifica la interpretació didàctica prevista. Cal el contrast exacte i la revisió dels casos pendents descrits més avall.
+La font editable del banc és `ca/catalog.json`; el sistema de codis utilitza les instantànies arxivades a `ca/editions/`. El banc actual és una **proposta pendent de revisió docent**, no un corpus tancat ni una escala curricular validada. Conté 3.299 paraules i 96 pseudoparaules. La selecció inicial la va proposar l'assistent d'IA; no es va extreure automàticament del DIEC ni d'un banc escolar validat. Després es va contrastar amb el corrector de Softcatalà. Aquest primer contrast era insuficient per certificar cada grafia: un corrector també pot acceptar compostos generats, i no identifica la interpretació didàctica prevista. Cal el contrast exacte i la revisió dels casos pendents descrits més avall.
 
 Per revisar-lo:
 
@@ -8,7 +8,7 @@ Per revisar-lo:
 - `ca/pseudoparaules.txt`: banc separat de formes inventades, amb el mateix format.
 - `ca/revisio.tsv`: mots, tipus, familiaritat, dificultat, focus i identificador. S'obre amb un full de càlcul. Les etiquetes són identificadors; les equivalències són al JSON.
 
-Les descàrregues són del catàleg complet de Plec, sense caràcter oficial normatiu; els filtres del preparador i les paraules pròpies no les modifiquen. Els mots propis continuen disponibles en l'exportació JSON del navegador.
+Les descàrregues del web són del catàleg complet de l'edició activa, sense caràcter oficial normatiu; els filtres no les modifiquen. Des de la versió 2.0 no s'afegeixen mots propis al generador de codis. A l'ajuda es pot descarregar una còpia de les dades antigues que conservi el navegador.
 
 Els canvis del TXT **encara no modifiquen el web**. `node tools/review-diff.cjs` mostra les altes i baixes proposades sense escriure cap dada. En incorporar-los al JSON cal revisar també IDs, nivells, focus i el contrast lèxic; no s'han de conservar automàticament els de la paraula substituïda. El generador detecta un TXT editat i s'atura abans de sobreescriure'l. Cal conservar-lo o fer-ne una còpia abans de consolidar una revisió.
 
@@ -18,7 +18,7 @@ Després de modificar el JSON, executa `node tools/build-catalogs.cjs`. Genera e
 
 Cada entrada conserva un ID estable. Es mantenen els 629 identificadors del banc anterior. La identitat de la revisió combina llengua, edició i els primers 16 caràcters d'un SHA-256. El SHA-256 complet també forma part del paquet. Es calcula sobre tot el JSON font i el perfil de llengua: ordre, grafies, IDs, etiquetes, nivells, regles i estat editorial. Canviar qualsevol d'aquests elements canvia la revisió. L'ordre alfabètic és només per a la revisió humana; no defineix l'ordre del futur generador.
 
-Quan s'aprovi el banc, caldrà crear la primera edició estable i conservar-la com a instantània immutable. Els futurs codis hauran de fixar també la versió de l'algorisme. No s'han d'emetre codis persistents sobre aquesta edició provisional, ni resoldre un codi antic contra l'últim banc disponible.
+El sistema de codis conserva una instantània immutable del banc i del perfil de llengua a `ca/editions/seed-1.json`, amb empremta al registre `manifest.json`. La fixació per reproduir codis és independent de l'aprovació lingüística: es conserva també l'estat editorial de la instantània, encara en revisió. Els codis identifiquen l'edició i el protocol. Mai no es resol un codi antic contra l'últim banc disponible. Per incorporar canvis a nous dictats cal afegir una edició nova, conservar l'anterior i actualitzar el registre. Vegeu [el protocol de llavors](../docs/LLAVORS.md).
 
 El generador rebutja l'estat `stable` si no consta la revisió docent i un contrast exacte complet sense incidències que correspongui a l'empremta del JSON actual. Una validació antiga no serveix per aprovar una llista modificada. Això protegeix el pas a estable; la versió provisional continua en estat `draft`.
 
@@ -28,7 +28,7 @@ El generador rebutja l'estat `stable` si no consta la revisió docent i un contr
 
 La ruta relativa `ca/` funciona tant en un domini propi com sota `/plec-dictats/` de GitHub Pages. La portada redirigeix preservant els paràmetres i el fragment. La identitat prevista és `(llengua, revisió del catàleg, versió del generador, codi)`: el mateix codi pot correspondre a paraules diferents en llengües diferents.
 
-`language.js` prepara el contracte dels futurs enllaços: `/ca/?mode=dictat&seed=X5D8TY&catalogue=ca-…`. Encara no hi ha lector de llavors, mode de reproducció ni QR. El futur lector haurà de validar la revisió i rebutjar-ne una de desconeguda. Els fitxers de dictat actuals guarden les paraules explícites i es poden recuperar tot i que canviï el banc.
+Els enllaços actuals del preparador inclouen llengua, codi i revisió, per exemple `/ca/?seed=A7WSTC&catalogue=ca-…`. El lector valida la revisió i el codi, recupera els filtres i torna a generar el mateix ordre. `language.js` manté també el contracte de ruta per al futur mode `dictat`; el reproductor i el QR encara no estan implementats. Les dades manuals de versions anteriors es conserven separadament i no es converteixen automàticament en codis.
 
 ## Contrast de grafies
 

@@ -1,5 +1,14 @@
 # Historial
 
+## 2.0 · 23 d’octubre de 2026
+
+- Tries reproduïbles amb codis de sis caràcters, que recuperen tipus, llargada, nivell, focus, mots i ordre.
+- Cerca finita i cancel·lable de fins a cinc mots obligatoris; cap mot s’insereix a mà.
+- Retirats el lateral dret, la selecció individual, les xinxetes, els canvis per mot i els mots propis del generador. Catàleg de consulta i dades antigues conservades.
+- Codi i llengua impresos al full i a la guia docent, còpia de codi i enllaç compartible.
+- Instantània immutable i registre d’edicions per preservar el significat dels codis.
+- Algoritme, capacitat, límits i mesures documentats al README i a docs/LLAVORS.md.
+
 ## 1.9 · 23 d’octubre de 2026
 
 - Retirat el filtre «Femenins i plurals». Es mantenen les 3.299 paraules i totes les variants, integrades als focus ortogràfics habituals amb els mateixos criteris de selecció.
