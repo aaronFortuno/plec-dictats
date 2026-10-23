@@ -17,6 +17,18 @@
   if (!root.document) return;
   const host = document.getElementById('paper-viewport'), paper = document.getElementById('sheet-preview');
   const out = document.getElementById('zoom-out'), plus = document.getElementById('zoom-in');
+  const hint = document.getElementById('zoom-scroll-hint');
+  let hintTimer, hideHintTimer, hintVisible=false;
+  function hideHint() {
+    clearTimeout(hintTimer);hintVisible=false;hint?.classList.remove('is-visible');
+    clearTimeout(hideHintTimer);hideHintTimer=setTimeout(()=>{if(hint)hint.hidden=true;},220);
+  }
+  function showHint() {
+    if(!hint)return;
+    clearTimeout(hintTimer);clearTimeout(hideHintTimer);
+    hintVisible=true;hint.hidden=false;requestAnimationFrame(()=>{if(hintVisible)hint.classList.add('is-visible');});
+    hintTimer=setTimeout(hideHint,1800);
+  }
   let view = { zoom: 1, x: 0, y: 0, width: 0, height: 0, paperWidth: 0, paperHeight: 0 }, frame, drag;
   function render() {
     paper.style.setProperty('--preview-width', view.paperWidth + 'px');
@@ -47,13 +59,15 @@
   plus.addEventListener('click', () => zoom(view.zoom * 1.2));
   document.getElementById('zoom-fit').addEventListener('click', reset);
   host.addEventListener('wheel', event => {
+    if(!event.ctrlKey){showHint();return;}
     event.preventDefault();
+    hideHint();
     const delta = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? host.clientHeight : 1);
     zoom(view.zoom * Math.exp(-Math.max(-160, Math.min(160, delta)) * .002), event.clientX, event.clientY);
   }, { passive: false });
   host.addEventListener('dblclick', event => { if (!event.target.closest('.zoom-tools')) reset(); });
   host.addEventListener('pointerdown', event => {
-    if (event.button !== 0 || event.target.closest('.zoom-tools')) return;
+    if (event.pointerType === 'touch' || event.button !== 0 || event.target.closest('.zoom-tools')) return;
     host.focus({ preventScroll: true });
     drag = { id: event.pointerId, x: event.clientX, y: event.clientY, panX: view.x, panY: view.y };
     host.setPointerCapture(event.pointerId); host.classList.add('is-panning');

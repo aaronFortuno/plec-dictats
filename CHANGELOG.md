@@ -1,5 +1,12 @@
 # Historial
 
+## 2.1 · 23 d’octubre de 2026
+
+- Lateral més ample i focus reorganitzats per ocupar quatre files en escriptori, sense reduir la lletra.
+- Tipografia dels mots obligatoris coherent amb els focus i ajuda contextual amb interrogant, disponible amb ratolí, teclat i clic.
+- Entrada de mots obligatoris amb Enter o coma; també admet enganxar una llista separada per comes.
+- Zoom amb Ctrl i roda i avís flotant breu en desplaçar sense Ctrl. La roda i els gestos tàctils conserven el desplaçament natural.
+
 ## 2.0 · 23 d’octubre de 2026
 
 - Tries reproduïbles amb codis de sis caràcters, que recuperen tipus, llargada, nivell, focus, mots i ordre.

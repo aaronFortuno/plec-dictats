@@ -93,3 +93,13 @@ D’acord amb les instruccions del projecte, no es comprova el web remot despré
 - PDF i guia docent amb CA / A7W-STC i la mateixa seqüència. Comprovades les quatre combinacions de format del plec i costat del model; dos PDF d’exemple renderitzats i revisats visualment. Codi llegible a la capçalera d’escriptura, sense encavalcaments ni contingut nou a les bandes de protecció.
 - Comprovacions de catàleg, contrast lèxic, geometria, paquets reproduïbles, sintaxi i diferències superades. README, document de l’algoritme i historial actualitzats. Àudios, mode alumne i QR continuen pendents d’una fase posterior.
 - Sense comprovació del web remot, d’acord amb la instrucció del projecte. Continua pendent la prova física dels plecs amb paper real.
+
+## Versió 2.1 · 23 d’octubre de 2026
+
+- Lateral de 420 px en escriptori, 440 px en pantalles grans i 324 px en tauleta. Focus reordenats en el mateix ordre visual i de teclat, sense canviar els identificadors ni el protocol de codis. A 1280 × 720: quatre files, mateixa lletra d’11 px i els cinc mots de prova sencers, amb alçada interior/desplaçable de 564/564 px, sense scroll al lateral. En finestres més petites o amb mots més llargs es conserva el desplaçament quan cal.
+- Capçaleres Focus de pràctica i Mots obligatoris amb la mateixa família, mida i pes: Segoe UI, 13 px i 600. Retirada la instrucció permanent sota l’entrada de mots.
+- Interrogant Lucide amb ajuda contextual sobre la finalitat aleatòria, els cinc mots i les combinacions que poden no existir. Provades l’obertura des del títol, el clic i el focus amb teclat; Escape tanca l’ajuda. El quadre flota fora de l’àrea amb scroll, conserva els marges de pantalla i utilitza transicions de 220 ms.
+- Afegits reduïda amb Enter i diumenge amb coma. Enganxada una llista amb empollar, lletges i perdíem: cinc mots totals i recuperació d’A7W-STC. Sense inserció artificial ni canvi en el significat del codi.
+- Roda real sobre la vista prèvia: el zoom es manté al 100 % i apareix l’avís de Ctrl, que desapareix automàticament. Comprovació aïllada dels gestors de preview.js: roda normal sense preventDefault ni zoom, Ctrl i roda amb preventDefault i canvi d’escala, avís, gestos tàctils sense captura i arrossegament amb ratolí conservat. La combinació física de Ctrl i roda no s’ha reproduït amb l’automatització del navegador.
+- Vistes de 768 × 1024 i 390 × 844 sense desbordament horitzontal. Ajuda dins de la pantalla de mòbil i touch-action pan-y pinch-zoom. Captures locals a output/ajustos-v2.1.png i output/ajustos-v2.1-ajuda.png.
+- Comprovacions dels codis immutables, sintaxi i recursos reproduïbles superades. README i historial actualitzats. Sense comprovació del web desplegat, segons la instrucció del projecte.

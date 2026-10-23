@@ -11,6 +11,8 @@
   try{legacy=localStorage.getItem('plec-dictats-v1:'+L.id)||localStorage.getItem('plec-dictats-v1');}catch{}
   const session=()=>state.sessions[state.mode];
   const modeTags=mode=>C.categories.filter(c=>c.mode===mode);
+  // Keep the visual and keyboard order together; compact short focuses beside long ones.
+  const focusOrder=['accent','essa','hac','gej','beve','erra','verbs','qugu','vocals','dieresi','digrafs','signes'];
   const allEntries=()=>C.entries;
   const lookup=id=>C.entries.find(e=>e.id===id);
   const chosen=()=>current?.entries||[];
@@ -62,7 +64,8 @@
     const s=session();document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===state.mode)));
     $('count-control').value=s.count;$('stage-field').hidden=state.mode==='pseudo';$('stage-control').value=s.stage;
     $('fold-style-control').value=state.foldStyle;document.querySelectorAll('[data-side]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.side===state.modelSide)));
-    $('tag-options').innerHTML=modeTags(state.mode).map(c=>`<label class="tag"><input type="checkbox" value="${c.id}" ${s.tags.includes(c.id)?'checked':''}><span>${window.PlecIcons('check')}${escape(c.label)}</span></label>`).join('');
+    const focuses=modeTags(state.mode);if(state.mode==='words')focuses.sort((a,b)=>focusOrder.indexOf(a.id)-focusOrder.indexOf(b.id));
+    $('tag-options').innerHTML=focuses.map(c=>`<label class="tag"><input type="checkbox" value="${c.id}" ${s.tags.includes(c.id)?'checked':''}><span>${window.PlecIcons('check')}${escape(c.label)}</span></label>`).join('');
     $('pseudo-note').hidden=state.mode!=='pseudo';$('word-total').textContent=C.entries.filter(e=>e.mode==='words').length;$('pseudo-total').textContent=C.entries.filter(e=>e.mode==='pseudo').length;$('seed-language').textContent=L.id.toUpperCase();
     const layout=K.foldLayout(state.foldStyle,state.modelSide);
     $('fold-guide-title').textContent=`${layout.name} · model a ${state.modelSide==='left'?'l’esquerra':'la dreta'}`;
@@ -76,12 +79,17 @@
   }
   function suggest(){const query=K.normalize($('required-word').value.trim());$('required-options').innerHTML=query?pool().filter(e=>!session().required.includes(e.id)&&K.normalize(e.text).includes(query)).slice(0,12).map(e=>`<option value="${escape(e.text)}"></option>`).join(''):'';}
   function addRequired(){
-    const text=$('required-word').value.trim().normalize('NFC').toLocaleLowerCase(L.locale),entry=C.entries.find(e=>e.mode===state.mode&&e.text===text);
-    if(!entry)return say('Tria un mot del catàleg, amb la grafia i els accents corresponents.');
-    if(!pool().some(e=>e.id===entry.id))return say('Aquest mot queda fora dels filtres actuals. Ajusta els focus o el nivell.');
-    if(session().required.includes(entry.id))return;
-    if(session().required.length>=5)return say('Pots demanar fins a cinc mots obligatoris.');
-    session().required.push(entry.id);$('required-word').value='';persist();renderRequired();generate();
+    const texts=[...new Set($('required-word').value.split(',').map(t=>t.trim().normalize('NFC').toLocaleLowerCase(L.locale)).filter(Boolean))];
+    if(!texts.length)return;
+    const entries=texts.map(text=>C.entries.find(e=>e.mode===state.mode&&e.text===text));
+    if(entries.some(e=>!e))return say('Tria mots del catàleg, amb la grafia i els accents corresponents.');
+    const available=new Set(pool().map(e=>e.id));
+    if(entries.some(e=>!available.has(e.id)))return say('Un dels mots queda fora dels filtres actuals. Ajusta els focus o el nivell.');
+    const required=[...new Set([...session().required,...entries.map(e=>e.id)])];
+    if(required.length>5)return say('Pots demanar fins a cinc mots obligatoris.');
+    $('required-word').value='';
+    if(required.length===session().required.length){suggest();return;}
+    session().required=required;persist();renderRequired();generate();
   }
   function foldSketch(layout) {
     const mirror = layout.side === 'right', mx = x => mirror ? 360 - x : x;
@@ -156,9 +164,40 @@
   $('model-side-control').addEventListener('click',event=>{const b=event.target.closest('[data-side]');if(!b)return;state.modelSide=b.dataset.side;persist();updateControls();renderPreview();});
   $('new-dictation').addEventListener('click',generate);
   $('cancel-search').addEventListener('click',()=>{stopSearch();$('search-status').textContent='Cerca cancel·lada.';renderPreview();updateAvailability();});
-  $('required-word').addEventListener('input',suggest);$('add-required').addEventListener('click',addRequired);
-  $('required-word').addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();addRequired();}});
+  $('required-word').addEventListener('input',event=>{if(!event.isComposing&&$('required-word').value.includes(','))addRequired();else suggest();});$('add-required').addEventListener('click',addRequired);
+  $('required-word').addEventListener('keydown',event=>{if(!event.isComposing&&['Enter',','].includes(event.key)){event.preventDefault();addRequired();}});
   $('required-list').addEventListener('click',event=>{const b=event.target.closest('[data-remove-required]');if(!b)return;session().required=session().required.filter(id=>id!==b.dataset.removeRequired);persist();renderRequired();generate();});
+  // A fixed tooltip stays readable outside the scrollable configuration panel.
+  const helpTrigger=$('required-help-trigger'),helpButton=$('required-help-toggle'),helpTip=$('required-help');
+  let helpPinned=false,helpCloseTimer,helpHideTimer;
+  function positionHelp(){
+    const rect=helpTrigger.getBoundingClientRect(),width=helpTip.offsetWidth,height=helpTip.offsetHeight;
+    helpTip.style.left=Math.max(12,Math.min(rect.left,innerWidth-width-12))+'px';
+    const top=rect.top-height-8;
+    helpTip.style.top=Math.max(12,Math.min(top>=12?top:rect.bottom+8,innerHeight-height-12))+'px';
+  }
+  function showRequiredHelp(){
+    clearTimeout(helpCloseTimer);clearTimeout(helpHideTimer);helpTip.hidden=false;positionHelp();
+    helpButton.setAttribute('aria-expanded','true');
+    requestAnimationFrame(()=>{if(helpButton.getAttribute('aria-expanded')==='true')helpTip.classList.add('is-visible');});
+  }
+  function hideRequiredHelp(){
+    clearTimeout(helpCloseTimer);clearTimeout(helpHideTimer);helpTip.classList.remove('is-visible');
+    helpButton.setAttribute('aria-expanded','false');helpHideTimer=setTimeout(()=>{helpTip.hidden=true;},220);
+  }
+  function scheduleHelpClose(){
+    clearTimeout(helpCloseTimer);helpCloseTimer=setTimeout(()=>{
+      if(!helpPinned&&!helpTrigger.matches(':hover')&&!helpTip.matches(':hover')&&!helpTrigger.contains(document.activeElement))hideRequiredHelp();
+    },140);
+  }
+  for(const target of [helpTrigger,helpTip]){target.addEventListener('pointerenter',showRequiredHelp);target.addEventListener('pointerleave',scheduleHelpClose);}
+  helpTrigger.addEventListener('focusin',showRequiredHelp);helpTrigger.addEventListener('focusout',scheduleHelpClose);
+  helpButton.addEventListener('click',()=>{helpPinned=!helpPinned;if(helpPinned)showRequiredHelp();else hideRequiredHelp();});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'){helpPinned=false;hideRequiredHelp();}});
+  document.addEventListener('pointerdown',event=>{if(!helpTrigger.contains(event.target)&&!helpTip.contains(event.target)){helpPinned=false;hideRequiredHelp();}});
+  document.querySelector('.config-scroll').addEventListener('scroll',()=>{helpPinned=false;hideRequiredHelp();});
+  window.addEventListener('scroll',()=>{if(!helpTip.hidden){helpPinned=false;hideRequiredHelp();}},{passive:true});
+  window.addEventListener('resize',()=>{if(!helpTip.hidden)positionHelp();});
   $('recover-form').addEventListener('submit',event=>{event.preventDefault();try{const resolved=S.resolve(R.editions,$('recover-code').value);stopSearch();setCode(resolved.code);$('recover-code').value='';$('search-status').textContent='';say('Dictat recuperat amb els mateixos mots, ordre i filtres.');}catch(error){say(error.message);}});
   async function copy(value,success){try{await navigator.clipboard.writeText(value);say(success);}catch{say('No s’ha pogut copiar automàticament. El codi és '+(current?.code||'')+'.');}}
   $('copy-code').addEventListener('click',()=>current&&copy(current.code,'Codi copiat.'));
@@ -190,6 +229,7 @@
     }
   });
   const releases = [
+    ['2.1', '2026-10-23', ['Lateral més ample i focus reorganitzats per aprofitar les files. Mots obligatoris amb Enter o coma i ajuda contextual accessible. Zoom amb Ctrl i roda, amb avís breu; desplaçament natural amb la roda i en pantalles tàctils.'] ],
     ['2.0', '2026-10-23', ['Codis curts recuperables amb filtres i ordre reproduïbles. Cerca de fins a cinc mots obligatoris, sense tria individual ni lateral dret. Codi imprès al full i enllaç compartible. Instantània del banc conservada per recuperar els codis en el futur.'] ],
     ['1.9', '2026-10-23', ['Retirat el filtre Femenins i plurals. Totes les formes continuen al banc i es trien amb els mateixos focus ortogràfics. Les tries i preferències antigues es conserven en retirar el filtre.'] ],
     ['1.8', '2026-10-23', ['Femenins i plurals: 137 formes noves, focus propi i etiquetes ortogràfiques compartides. Retirats ahir-vespre, ahir-nit, blat-de-moro i viuda; es conserva vídua. Incorporat arbitrar en lloc d’arbitre. Contrast exacte de les noves grafies amb el lèxic flexionat de Softcatalà.'] ],
