@@ -6,6 +6,7 @@
   const STORAGE = 'plec-dictats-v1';
   const allowedCounts = [8, 12, 16, 20, 24];
   const allowedStages = Object.keys(C.stages);
+  const allowedFoldStyles = ['thirds', 'quarter'];
   const metadata = entry => entry.mode === 'words' ? `${C.vocabularyBands[entry.vocabulary] || 'Sense classificar'} · Ortografia: ${C.orthographyBands[entry.orthography] || 'Sense classificar'}` : '';
   const customMetadata = entry => ({ vocabulary: Object.hasOwn(C.vocabularyBands, entry?.vocabulary) ? entry.vocabulary : 'unrated', orthography: Object.hasOwn(C.orthographyBands, entry?.orthography) ? entry.orthography : 'unrated' });
   const pinIcon = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 2 6 0-1 5 3 3v2H5v-2l3-3zm3 10v6"/></svg>';
@@ -13,7 +14,7 @@
   const escape = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const modeTags = mode => [...C.categories.filter(c => c.mode === mode), ...(state.custom.some(e => e.mode === mode) ? [{ id: 'custom', label: 'Les meves paraules', mode }] : [])];
   const emptySession = mode => ({ count: mode === 'words' ? 24 : 20, stage: mode === 'words' ? 'cs' : 'all', tags: C.categories.filter(c => c.mode === mode).map(c => c.id), ids: [], locks: [], seen: [], title: mode === 'words' ? 'Dictat de paraules' : 'Dictat de pseudoparaules', code: '' });
-  let state = { mode: 'words', group: '', modelSide: 'left', custom: [], sessions: { words: emptySession('words'), pseudo: emptySession('pseudo') } };
+  let state = { mode: 'words', group: '', modelSide: 'left', foldStyle: 'thirds', custom: [], sessions: { words: emptySession('words'), pseudo: emptySession('pseudo') } };
   let storageAvailable = true, toastTimer;
   const session = () => state.sessions[state.mode];
   const allEntries = () => [...C.entries, ...state.custom];
@@ -40,6 +41,7 @@
       state.mode = ['words', 'pseudo'].includes(data.mode) ? data.mode : 'words';
       state.group = typeof data.group === 'string' ? data.group.slice(0, 14) : '';
       state.modelSide = data.modelSide === 'right' ? 'right' : 'left';
+      state.foldStyle = allowedFoldStyles.includes(data.foldStyle) ? data.foldStyle : 'thirds';
       for (const mode of ['words', 'pseudo']) {
         const saved = data.sessions?.[mode];
         if (!saved || typeof saved !== 'object') continue;
@@ -56,15 +58,33 @@
     } catch { /* Un estat antic invàlid no ha d'impedir obrir l'eina. */ }
   }
   function touch() { session().code = makeCode(); }
+  function foldSketch(layout) {
+    const mirror = layout.side === 'right', mx = x => mirror ? 360 - x : x;
+    const line = (x1,y1,x2,y2,color='#65736a') => `<line x1="${mx(x1)}" y1="${y1}" x2="${mx(x2)}" y2="${y2}" stroke="${color}" stroke-width="1.5"/>`;
+    const label = (x,y,text,color='#234d43') => `<text x="${mx(x)}" y="${y}" text-anchor="${mirror?'end':'start'}" fill="${color}">${text}</text>`;
+    const headings = '<text x="12" y="17" class="fold-phase">Durant el dictat</text><text x="12" y="118" class="fold-phase">Per corregir</text>';
+    const drawing = layout.foldStyle === 'quarter'
+      ? line(20,60,340,60)+line(20,60,177,49)+line(26,58,177,49)+label(30,39,'model amagat')+label(193,81,'escriptura')+line(20,167,340,167)+line(20,167,174,139)+line(22,139,174,139)+label(29,132,'model visible')+label(193,188,'escriptura')
+      : line(90,51,270,51)+line(90,57,268,57)+line(92,63,270,63)+label(100,41,'escriptura')+label(95,83,'buit i model al darrere')+line(20,161,340,161)+line(180,168,340,168)+label(28,150,'model visible')+label(195,150,'escriptura');
+    return `<svg viewBox="0 0 360 202" role="img" aria-label="Vista lateral orientativa del full durant el dictat i durant la correcció">${headings}${drawing}</svg>`;
+  }
   function updateControls() {
     const s = session();
     document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === state.mode)));
     document.querySelectorAll('[data-count]').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.count === s.count)));
     document.querySelectorAll('[data-side]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.side === state.modelSide)));
+    $('fold-style-control').value = state.foldStyle;
     $('stage-field').hidden = state.mode !== 'words';
     $('stage-control').value = s.stage;
     $('stage-hint').textContent = { cm: 'Bàsic i habitual, amb dificultat ortogràfica baixa o mitjana.', cs: 'Bàsic, habitual i d’ampliació. Sense vocabulari especialitzat.', eso: 'Ampliació i especialitzat, més mots coneguts amb ortografia exigent.', all: 'Sense límit de nivell; inclou els mots propis sense classificar.' }[s.stage];
-    $('layout-hint').textContent = state.modelSide === 'left' ? 'Model · centre buit · escric i reviso' : 'Escric i reviso · centre buit · model';
+    const layout = K.foldLayout(state.foldStyle, state.modelSide);
+    $('layout-hint').textContent = layout.hint;
+    $('fold-style-hint').textContent = state.foldStyle === 'quarter' ? 'Dos plecs cap endins. Uns 52 mm d’escriptura i marges d’encaix entre les solapes.' : 'Escriptura al centre, de 70 mm. Primer el tram buit cap al darrere; després el model.';
+    $('fold-guide-title').textContent = `${layout.name} · model a ${state.modelSide === 'left' ? 'l’esquerra' : 'la dreta'}`;
+    $('fold-map').innerHTML = layout.panels.map(p => `<span class="fold-panel ${p.kind}" style="flex:${p.width}"><b>${{model:'Model',writing:'Escric',blank:'Buit'}[p.kind]}</b><small>${p.width} mm</small></span>`).join('');
+    $('fold-map').setAttribute('aria-label', 'Full obert: ' + layout.hint);
+    $('fold-sketch').innerHTML = foldSketch(layout);
+    $('fold-step-list').innerHTML = layout.steps.map(step => `<li>${escape(step)}</li>`).join('');
     $('count-hint').textContent = `${s.count} ${state.mode === 'words' ? 'paraules' : 'pseudoparaules'}${s.count === (state.mode === 'words' ? 24 : 20) ? ': una sessió completa.' : ': una pràctica a la teva mida.'}`;
     $('tag-options').innerHTML = modeTags(state.mode).map(c => `<label class="tag"><input type="checkbox" value="${c.id}" ${s.tags.includes(c.id) ? 'checked' : ''}><span>${escape(c.label)}</span></label>`).join('');
     $('sheet-title').value = s.title;
@@ -102,19 +122,19 @@
   // Les fonts estàndard del PDF admeten tots els caràcters catalans.
   const printable = window.PlecPdf.printable;
   function svgFor(shapes) {
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" role="img" aria-label="Full A4 amb tres franges i dues guies de plec"><rect width="210" height="297" fill="white"/>${shapes.map(s => {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" role="img" aria-label="Full A4 amb dues guies de plec"><rect width="210" height="297" fill="white"/>${shapes.map(s => {
       if (s.type === 'line') return `<line x1="${s.x}" y1="${s.y}" x2="${s.x2}" y2="${s.y2}" stroke="${s.color}" stroke-width="${s.width}" ${s.dash ? 'stroke-dasharray="1.5 1.4"' : ''}/>`;
       if (s.type === 'rect') return `<rect x="${s.x}" y="${s.y}" width="${s.w}" height="${s.h}" fill="${s.color}"/>`;
       const safeShape = { ...s, value: printable(s.value) };
       return `<text x="${s.x}" y="${s.y}" font-family="Arial,Helvetica,sans-serif" font-size="${fitSize(safeShape) * MM}" font-weight="${s.weight ? 700 : 400}" fill="${s.color}" text-anchor="${s.align === 'right' ? 'end' : s.align === 'center' ? 'middle' : 'start'}">${escape(safeShape.value)}</text>`;
     }).join('')}</svg>`;
   }
-  function sheetOptions() { return { entries: chosen(), title: session().title, group: state.group, code: session().code, mode: state.mode, stage: session().stage, modelSide: state.modelSide }; }
+  function sheetOptions() { return { entries: chosen(), title: session().title, group: state.group, code: session().code, mode: state.mode, stage: session().stage, modelSide: state.modelSide, foldStyle: state.foldStyle }; }
   function renderPreview() {
     const entries = chosen(), s = session(), complete = entries.length === s.count;
     $('sheet-preview').innerHTML = entries.length ? svgFor(K.worksheet({ ...sheetOptions(), hidden: !$('show-model').checked })) : '<div class="empty-selection">Prepara un dictat per veure el full.</div>';
     $('selection-summary').textContent = `${entries.length} / ${s.count} elements`;
-    $('sheet-meta').textContent = `A4 vertical · dues guies de plec${s.code ? ' · ' + s.code : ''}`;
+    $('sheet-meta').textContent = `A4 · ${K.foldLayout(state.foldStyle, state.modelSide).name}${s.code ? ' · ' + s.code : ''}`;
     $('download-pdf').disabled = !complete;
     $('teacher-pdf').disabled = !complete;
     $('save-selection').disabled = !complete;
@@ -163,18 +183,18 @@
     button.disabled = true; button.textContent = 'Preparant…';
     try {
       const bytes = await buildPdf(teacher);
-      downloadBlob(new Blob([bytes], { type: 'application/pdf' }), `plec-${state.mode === 'words' ? 'paraules' : 'pseudoparaules'}-${session().count}-${session().code}${teacher ? '-guia' : ''}.pdf`);
+      downloadBlob(new Blob([bytes], { type: 'application/pdf' }), `plec-${state.mode === 'words' ? 'paraules' : 'pseudoparaules'}-${session().count}-${session().code}-${state.foldStyle === 'quarter' ? 'quart' : 'tercos'}-${state.modelSide === 'right' ? 'dreta' : 'esquerra'}${teacher ? '-guia' : ''}.pdf`);
       say(teacher ? 'Guia docent descarregada, en el mateix ordre que el full.' : 'PDF descarregat. Imprimeix-lo en A4 a escala 100 %.');
     } catch (error) { say('No s’ha pogut generar el PDF. ' + error.message); }
     finally { button.innerHTML = original; renderPreview(); }
   }
   function exportSelection() {
-    const data = { format: 'plec-dictat', version: 2, mode: state.mode, count: session().count, stage: session().stage, modelSide: state.modelSide, title: session().title, group: state.group, code: session().code, entries: chosen(), locks: session().locks };
+    const data = { format: 'plec-dictat', version: 3, mode: state.mode, count: session().count, stage: session().stage, modelSide: state.modelSide, foldStyle: state.foldStyle, title: session().title, group: state.group, code: session().code, entries: chosen(), locks: session().locks };
     downloadBlob(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }), `plec-dictat-${session().code}.json`);
     say('Dictat guardat. Recupera aquest fitxer per repetir la mateixa tria.');
   }
   function importSelection(data) {
-    if (data?.format !== 'plec-dictat' || ![1, 2].includes(data.version) || !['words', 'pseudo'].includes(data.mode) || !allowedCounts.includes(data.count) || !Array.isArray(data.entries) || data.entries.length !== data.count) throw new Error('Aquest fitxer no és un dictat de Plec vàlid.');
+    if (data?.format !== 'plec-dictat' || ![1, 2, 3].includes(data.version) || !['words', 'pseudo'].includes(data.mode) || !allowedCounts.includes(data.count) || !Array.isArray(data.entries) || data.entries.length !== data.count) throw new Error('Aquest fitxer no és un dictat de Plec vàlid.');
     const names = new Set(), imported = [], additions = [];
     for (const e of data.entries) {
       if (!e || !K.validateCustom(e.text) || e.mode !== data.mode || names.has(e.text.normalize('NFC').toLocaleLowerCase('ca'))) throw new Error('El fitxer conté mots invàlids o duplicats.');
@@ -188,6 +208,7 @@
     const s = session(); s.count = data.count; s.ids = imported.map(v => v.entry.id);
     s.stage = allowedStages.includes(data.stage) ? data.stage : 'all';
     state.modelSide = data.modelSide === 'right' ? 'right' : 'left';
+    state.foldStyle = allowedFoldStyles.includes(data.foldStyle) ? data.foldStyle : 'thirds';
     s.locks = Array.isArray(data.locks) ? imported.filter(v => data.locks.includes(v.originalId)).map(v => v.entry.id) : [];
     s.tags = modeTags(state.mode).map(c => c.id);
     s.title = typeof data.title === 'string' ? data.title.slice(0, 58) : emptySession(state.mode).title;
@@ -213,6 +234,7 @@
   $('all-tags').addEventListener('click', () => { session().tags = modeTags(state.mode).map(c => c.id); updateControls(); renderPreview(); persist(); });
   $('stage-control').addEventListener('change', event => { session().stage = event.target.value; updateControls(); renderPreview(); persist(); say('Nivell aplicat a les pròximes propostes. La tria actual es conserva; prepara un dictat nou per renovar-la.'); });
   $('model-side-control').addEventListener('click', event => { const b = event.target.closest('[data-side]'); if (!b || b.dataset.side === state.modelSide) return; state.modelSide = b.dataset.side; updateControls(); renderPreview(); persist(); });
+  $('fold-style-control').addEventListener('change', event => { state.foldStyle = event.target.value; updateControls(); renderPreview(); persist(); });
   $('generate').addEventListener('click', () => generate());
   $('show-model').addEventListener('change', renderPreview);
   $('sheet-title').addEventListener('input', event => { session().title = event.target.value; renderPreview(); persist(); });

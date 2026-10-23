@@ -48,41 +48,74 @@
   function validateCustom(text) {
     return typeof text === 'string' && text.length <= 26 && /^[a-zàèéíïòóúüç·]+(?:[-’'][a-zàèéíïòóúüç·]+)*$/iu.test(text);
   }
+  function foldLayout(foldStyle = 'thirds', modelSide = 'left') {
+    const quarter = foldStyle === 'quarter';
+    // El solucionari exterior de 51 mm cap dins de la solapa de 53 mm.
+    // El segon plec ocupa 53 mm i deixa 1 mm abans de l'escriptura.
+    const layout = quarter
+      ? { model: [0, 51], blank: [51, 158], writing: [158, 210], folds: [51, 104], name: 'Quart de full',
+          printSteps: ['1. Plega el model cap endins.', '2. Torna a plegar cap endins.'],
+          steps: ['Amb el full escrit cap amunt, plega el solucionari exterior cap endins per la guia més pròxima al model (51 mm de la vora). Queda amb les paraules contra el paper en blanc.', 'Fes el segon plec, també cap endins, per l’altra guia (104 mm de la mateixa vora). El paquet cobreix el tercer tram i deixa lliure el quart d’escriptura.', 'Per corregir, aixeca una mica el paquet i obre el plec exterior en sentit contrari, com un petit acordió. Orienta el model cap amunt, al costat de l’escriptura; no cal estendre tot el paper.'] }
+      : { model: [0, 70], writing: [70, 140], blank: [140, 210], folds: [70, 140], name: 'Terços',
+          printSteps: ['1. Plega el tram buit cap al darrere.', '2. Plega el model cap al darrere.'],
+          steps: ['Treballa a la columna central. Plega primer la banda buida cap al darrere de l’escriptura.', 'Plega després la banda del solucionari també cap al darrere. El tram buit queda interposat entre l’escriptura i el model.', 'Per corregir, obre només la banda del solucionari i deixa-la a la vista al costat de l’escriptura. Mantén la banda buida plegada al darrere.'] };
+    if (modelSide === 'right') {
+      for (const key of ['model', 'writing', 'blank']) layout[key] = [210 - layout[key][1], 210 - layout[key][0]];
+      layout.folds = layout.folds.map(x => 210 - x).sort((a, b) => a - b);
+    }
+    for (const key of ['model', 'writing']) {
+      const [start, end] = layout[key];
+      const x = Math.max(12, start + 4), right = Math.min(198, end - 4);
+      layout[key + 'Area'] = { x, width: right - x };
+    }
+    layout.foldStyle = quarter ? 'quarter' : 'thirds';
+    layout.side = modelSide === 'right' ? 'right' : 'left';
+    layout.foldOrder = quarter ? (layout.side === 'left' ? [51, 104] : [159, 106]) : (layout.side === 'left' ? [140, 70] : [70, 140]);
+    const stops = [...new Set([0, 210, ...layout.folds, ...layout.writing])].sort((a, b) => a - b);
+    layout.panels = stops.slice(0, -1).map((start, i) => {
+      const end = stops[i + 1], middle = (start + end) / 2;
+      return { width: end - start, kind: middle > layout.model[0] && middle < layout.model[1] ? 'model' : middle > layout.writing[0] && middle < layout.writing[1] ? 'writing' : 'blank' };
+    });
+    layout.hint = quarter
+      ? (layout.side === 'left' ? 'Model 51 · buit 53 + 54 · escric 52 mm' : 'Escric 52 · buit 54 + 53 · model 51 mm')
+      : (layout.side === 'left' ? 'Model · escric al centre · banda buida' : 'Banda buida · escric al centre · model');
+    return layout;
+  }
   // Coordenades comunes per a l'SVG i el PDF, en mil·límetres, origen superior esquerre.
-  function worksheet({ entries, title = 'Dictat de paraules', group = '', code = '', hidden = false, mode = 'words', modelSide = 'left' }) {
+  function worksheet({ entries, title = 'Dictat de paraules', group = '', code = '', hidden = false, mode = 'words', modelSide = 'left', foldStyle = 'thirds' }) {
     const shapes = [];
     const text = (x, y, value, size = 10, weight = false, color = '#222222', extra = {}) => shapes.push({ type: 'text', x, y, value, size, weight, color, ...extra });
     const line = (x, y, x2, y2, color = '#aaaaaa', width = .2, dash = false) => shapes.push({ type: 'line', x, y, x2, y2, color, width, dash });
     const rect = (x, y, w, h, color) => shapes.push({ type: 'rect', x, y, w, h, color });
-    // La franja 70..140 mm no conté cap marca, ni tan sols a la capçalera.
-    const modelX = modelSide === 'right' ? 144 : 12;
-    const writeX = modelSide === 'right' ? 12 : 144;
-    const width = 54;
+    const layout = foldLayout(foldStyle, modelSide);
+    const { x: modelX, width: modelWidth } = layout.modelArea;
+    const { x: writeX, width: writeWidth } = layout.writingArea;
     text(modelX, 15, 'plec / model amagat', 8, true, '#555555');
-    text(modelX, 23, code, 7, false, '#555555', { maxWidth: width });
-    text(writeX, 15, 'plec / escolta, escriu i revisa', 7, true, '#555555', { maxWidth: width });
-    text(writeX, 25, title || (mode === 'words' ? 'Dictat de paraules' : 'Dictat de pseudoparaules'), 12, true, '#222222', { maxWidth: width });
-    text(writeX, 34, 'Nom:', 8); line(writeX + 8, 35, writeX + width, 35);
-    text(writeX, 42, 'Data:', 8); line(writeX + 8, 43, writeX + 27, 43);
-    text(writeX + 31, 42, group ? `Grup: ${group}` : 'Grup: _____', 8, false, '#222222', { maxWidth: 23 });
-    [modelX, writeX].forEach(x => rect(x, 47, width, 8, '#f2f2f2'));
-    text(modelX + 2, 52.5, 'MODEL', 9, true);
-    text(writeX + 2, 52.5, 'ESCRIC I REVISO', 9, true);
-    const top = 56, bottom = 268, rowH = Math.min(12, (bottom - top) / entries.length);
+    text(modelX, 23, code, 7, false, '#555555', { maxWidth: modelWidth });
+    text(modelX, 31, layout.name, 7, false, '#555555', { maxWidth: modelWidth });
+    text(writeX, 15, 'plec / dictat', 8, true, '#555555');
+    text(writeX, 25, title || (mode === 'words' ? 'Dictat de paraules' : 'Dictat de pseudoparaules'), 12, true, '#222222', { maxWidth: writeWidth });
+    text(writeX, 34, 'Nom:', 8); line(writeX + 8, 35, writeX + writeWidth, 35);
+    text(writeX, 42, 'Data:', 8); line(writeX + 8, 43, writeX + writeWidth, 43);
+    text(writeX, 50, group ? `Grup: ${group}` : 'Grup: __________', 8, false, '#222222', { maxWidth: writeWidth });
+    rect(modelX, 55, modelWidth, 8, '#f2f2f2');
+    rect(writeX, 55, writeWidth, 8, '#f2f2f2');
+    text(modelX + 2, 60.5, 'MODEL', 9, true);
+    text(writeX + 2, 60.5, 'ESCRIC I REVISO', 9, true, '#222222', { maxWidth: writeWidth - 4 });
+    const top = 64, bottom = 268, rowH = Math.min(12, (bottom - top) / entries.length);
     entries.forEach((entry, i) => {
       const baseline = top + (i + 1) * rowH - 2.1;
       [modelX, writeX].forEach(x => text(x + 1, baseline, `${i + 1}.`, 7, false, '#777777'));
-      if (!hidden) text(modelX + 10, baseline, entry.text, 12, false, '#222222', { maxWidth: 44 });
-      [modelX, writeX].forEach(x => line(x, top + (i + 1) * rowH, x + width, top + (i + 1) * rowH, '#aaaaaa', .18));
+      if (!hidden) text(modelX + 9, baseline, entry.text, 12, false, '#222222', { maxWidth: modelWidth - 9 });
+      [layout.modelArea, layout.writingArea].forEach(area => line(area.x, top + (i + 1) * rowH, area.x + area.width, top + (i + 1) * rowH, '#aaaaaa', .18));
     });
-    [modelX, writeX].forEach(x => line(x, top, x + width, top, '#aaaaaa', .18));
-    [70, 140].forEach(x => line(x, 10, x, 287, '#777777', .25, true));
-    text(modelX, 277, 'Plega el model sobre el centre buit.', 6.5, false, '#555555', { maxWidth: width });
-    text(modelX, 282, 'Fes el segon plec en sentit contrari.', 6.5, false, '#555555', { maxWidth: width });
-    text(writeX, 277, 'Revisa i corregeix en aquesta columna.', 6.5, false, '#555555', { maxWidth: width });
-    text(writeX, 282, `${entries.length} ${mode === 'words' ? 'paraules' : 'pseudoparaules'} · A4 · 100 %`, 6, false, '#666666', { maxWidth: width });
+    [layout.modelArea, layout.writingArea].forEach(area => line(area.x, top, area.x + area.width, top, '#aaaaaa', .18));
+    layout.folds.forEach(x => line(x, 10, x, 287, '#777777', .25, true));
+    layout.printSteps.forEach((step, i) => text(modelX, 277 + i * 5, step, 6.5, false, '#555555', { maxWidth: modelWidth }));
+    text(writeX, 277, 'Revisa en aquesta mateixa columna.', 6.5, false, '#555555', { maxWidth: writeWidth });
+    text(writeX, 282, `${entries.length} ${mode === 'words' ? 'paraules' : 'pseudoparaules'} · A4 · 100 %`, 6, false, '#666666', { maxWidth: writeWidth });
     if (mode === 'pseudo') {
-      text(modelX, 289, 'Model proposat: altres grafies poden', 6, false, '#555555', { maxWidth: width });
+      text(modelX, 289, 'Model proposat: altres grafies poden', 6, false, '#555555', { maxWidth: modelWidth });
       text(modelX, 293, 'representar el mateix so.', 6, false, '#555555');
     }
     return shapes;
@@ -110,6 +143,6 @@
     text(12, 282, mode === 'pseudo' ? 'Banc de pràctica creat per a l’aula; no és una prova estandarditzada.' : 'Desplega el model al final i revisa i corregeix a la mateixa columna on has escrit.', 8);
     return shapes;
   }
-  root.PlecCore = { normalize, shuffled, matchesStage, candidates, generate, validateCustom, worksheet, teacherSheet };
+  root.PlecCore = { normalize, shuffled, matchesStage, candidates, generate, validateCustom, foldLayout, worksheet, teacherSheet };
   if (typeof module !== 'undefined') module.exports = root.PlecCore;
 })(typeof window === 'undefined' ? globalThis : window);

@@ -53,18 +53,38 @@ for (const stage of Object.keys(C.stages)) {
 assert(!K.matchesStage({ mode: 'words', vocabulary: 'unrated', orthography: 'unrated' }, 'cs'));
 assert(K.matchesStage({ mode: 'words', vocabulary: 'unrated', orthography: 'unrated' }, 'all'));
 assert(K.matchesStage(C.entries.find(e => e.mode === 'pseudo'), 'cm'));
-for (const modelSide of ['left', 'right']) {
+for (const foldStyle of ['thirds', 'quarter']) for (const modelSide of ['left', 'right']) {
   const entries = [word('llit'), word('avesar'), word('hipotenusa')];
-  const shapes = K.worksheet({ entries, modelSide });
-  for (const s of shapes) {
-    if (s.type === 'line' && s.dash) { assert([70, 140].includes(s.x)); continue; }
-    assert(s.x < 70 || s.x >= 140, 'La franja central no té marques');
-    if (s.type === 'line') assert(s.x2 <= 70 || s.x2 >= 140);
-    if (s.type === 'rect') assert(s.x + s.w <= 70 || s.x >= 140);
+  const layout = K.foldLayout(foldStyle, modelSide), shapes = K.worksheet({ entries, modelSide, foldStyle });
+  assert.equal(layout.panels.reduce((sum,p)=>sum+p.width,0),210);
+  assert.deepEqual(shapes.filter(s=>s.type==='line'&&s.dash).map(s=>s.x),layout.folds);
+  const [blankStart,blankEnd]=layout.blank;
+  for(const s of shapes){
+    if(s.type==='line'&&s.dash)continue;
+    assert(s.x<=blankStart||s.x>=blankEnd,'Cap contingut imprès als trams buits');
+    if(s.type==='line')assert((s.x<=blankStart&&s.x2<=blankStart)||(s.x>=blankEnd&&s.x2>=blankEnd),'Les ratlles no creuen els trams buits');
+    if(s.type==='rect')assert(s.x+s.w<=blankStart||s.x>=blankEnd);
+    assert(s.x>=0&&s.x<=210&&s.y>=0&&s.y<=297);
   }
-  const label = shapes.find(s => s.value === 'ESCRIC I REVISO');
-  const model = shapes.find(s => s.value === 'avesar');
-  assert(modelSide === 'left' ? model.x < 70 && label.x > 140 : model.x > 140 && label.x < 70);
-  assert(!shapes.some(s => s.value === 'REVISO'));
+  const label=shapes.find(s=>s.value==='ESCRIC I REVISO'),model=shapes.find(s=>s.value==='avesar');
+  assert(label.x>layout.writing[0]&&label.x<layout.writing[1]);
+  assert(model.x>layout.model[0]&&model.x<layout.model[1]);
+  if(foldStyle==='thirds'){
+    assert.deepEqual(layout.writing,[70,140]);
+    assert.deepEqual(layout.foldOrder,modelSide==='left'?[140,70]:[70,140]);
+  } else {
+    assert.equal(layout.model[1]-layout.model[0],51);
+    assert.equal(layout.writing[1]-layout.writing[0],52);
+    assert.deepEqual(layout.panels.map(p=>p.width),modelSide==='left'?[51,53,54,52]:[52,54,53,51]);
+    assert.deepEqual(layout.foldOrder,modelSide==='left'?[51,104]:[159,106]);
+    const firstFold=51,secondFold=104;
+    assert.equal(secondFold-2*firstFold,2,'Marge de 2 mm abans del segon plec');
+    const foldedPacketEnd=2*secondFold-firstFold;
+    assert.equal(158-foldedPacketEnd,1,'El paquet deixa 1 mm abans de la columna d’escriptura');
+    const foldedModel=[2*secondFold-2*firstFold,foldedPacketEnd];
+    const foldedCover=[secondFold,foldedPacketEnd];
+    assert(foldedModel[0]>=foldedCover[0]&&foldedModel[1]<=foldedCover[1],'El paper buit cobreix tot el model');
+  }
+  assert(!shapes.some(s=>s.value==='REVISO'));
 }
 console.log(`Comprovacions correctes: ${C.entries.filter(e => e.mode === 'words').length} paraules i ${C.entries.filter(e => e.mode === 'pseudo').length} pseudoparaules, ${C.categories.length} focus.`);

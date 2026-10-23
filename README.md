@@ -14,20 +14,35 @@ Obre `index.html` amb un navegador actual, o entra al web de GitHub Pages. No ca
 
 La casella **Veure el model** només amaga el text a la vista prèvia. El PDF sempre l’inclou. Els caràcters catalans estan admesos; els símbols fora de la font estàndard, com els emojis, es representen amb `?` a la capçalera impresa.
 
-## Com es plega el full
+## Dos formats de plec
 
-El paper A4 vertical queda dividit en tres franges físiques de **70 mm**, amb dues guies de plec a 70 i 140 mm de la vora esquerra. El selector **Model amagat** permet aquestes dues orientacions:
+El selector **Format del plec** ofereix terços i quart de full. En tots dos es pot posar el model a l’esquerra o a la dreta; **Model amagat** inverteix tota la distribució, incloses les guies i els esquemes.
 
-| Esquerra | Centre | Dreta |
+### Terços: escriptura al centre
+
+| Model | Escriptura i revisió | Banda buida |
 | --- | --- | --- |
-| MODEL | Completament buit | ESCRIC I REVISO |
-| ESCRIC I REVISO | Completament buit | MODEL |
+| 70 mm | 70 mm | 70 mm |
 
-El centre no té text, numeració, ratlles ni capçalera. Les ratlles només apareixen a les franges laterals. La capçalera amb nom, data i grup és a la columna d’escriptura.
+Les guies són a 70 i 140 mm. Primer es plega la banda buida cap al darrere de l’escriptura i després el model, també cap al darrere. Per corregir, s’obre només el model i es manté la banda buida al darrere: el model queda al costat de l’escriptura.
 
-Imprimeix a una sola cara, en A4, a escala **100 %**. Amb el full escrit cap amunt, plega MODEL damunt la franja central, amb les paraules cap endins. Per l’altra guia, plega la columna d’escriptura cap a la cara posterior, en sentit contrari al primer plec. Gira el full plegat per deixar ESCRIC I REVISO a l’exterior. La franja central queda interposada entre l’escriptura i el model. El gruix i l’opacitat reals depenen del paper.
+### Quart: dos plecs cap endins
 
-Al final del dictat, desplega el full, compara amb el model i marca els encerts, els errors i les correccions **a la mateixa columna on has escrit**.
+| Model exterior | Primera solapa buida | Tram sota el paquet | Escriptura i revisió |
+| --- | --- | --- | --- |
+| 51 mm | 53 mm | 54 mm | 52 mm |
+
+Amb el model a l’esquerra, les guies són a **51 i 104 mm** de la vora esquerra; amb el model a la dreta són a **106 i 159 mm** de la vora esquerra. Només hi ha dues guies: el límit del tram d’escriptura no és un altre plec.
+
+1. Plega el model exterior cap endins per la guia més pròxima. Els seus 51 mm caben dins de la solapa de 53 mm, amb 2 mm de marge abans del següent plec.
+2. Fes el segon plec també cap endins. El paquet ocupa 53 mm del tercer tram, de 54 mm, i deixa 1 mm abans de l’escriptura. Queden aproximadament 52 mm de paper visibles per escriure.
+3. Per corregir, aixeca una mica el paquet i obre el plec exterior en sentit contrari, com un petit acordió. El model queda cap amunt al costat de l’escriptura; no cal estendre els trams buits.
+
+Les amplades anteriors són físiques, inclosos els marges. La zona impresa té marges de seguretat. Les solapes buides no contenen text, ratlles ni capçalera. La columna d’escriptura inclou nom, data i grup. La correcció es fa **a la mateixa columna on s’ha escrit**.
+
+Sota la vista prèvia, **Com plego aquest full?** mostra la distribució proporcional del full obert, els passos del format actual i un esquema lateral de dictat i correcció. L’esquema lateral és orientatiu i no està a escala.
+
+Imprimeix a una sola cara, en **A4 al 100 %**. Els marges d’encaix estan comprovats geomètricament; queda pendent la prova amb paper real, ja que el gruix, l’opacitat i la precisió del plec depenen del paper i de la impressora.
 
 ## Nivell orientatiu: vocabulari i dificultat ortogràfica
 
@@ -63,7 +78,7 @@ Referències normatives de consulta: [Ortografia catalana de l’IEC](https://oi
 
 La tria, l’historial de mots utilitzats i els elements propis es guarden al navegador quan l’emmagatzematge local està disponible. Les sessions de paraules i pseudoparaules es conserven per separat. No hi ha sincronització entre dispositius.
 
-- **Guarda el dictat** descarrega un JSON amb tots els elements, el seu ordre, el títol, el grup, els fixats, el nivell i la posició del model. S’importen també els fitxers antics de format 1. **Recupera un dictat** el restaura, inclosos els mots propis en un altre navegador.
+- **Guarda el dictat** descarrega un JSON amb tots els elements, el seu ordre, el títol, el grup, els fixats, el nivell, el format del plec i la posició del model. El format actual del fitxer és 3; s’importen també els formats 1 i 2. Els dictats antics sense format de plec es recuperen amb la nova disposició de terços, mantenint els mots i el seu ordre. **Recupera un dictat** el restaura, inclosos els mots propis en un altre navegador.
 - Al catàleg, **Afegeix paraules pròpies al banc** accepta una forma per línia o separada per comes (màxim 26 caràcters, sense espais, fins a 3.000 formes pròpies). S’afegeixen al tipus de dictat actiu, amb l’etiqueta «Les meves paraules». Pots indicar-ne vocabulari i dificultat; sense classificació apareixen a «Tot el banc» i es poden seleccionar manualment.
 - **Exporta tot el catàleg** descarrega una còpia del banc, inclosos els elements propis. Aquest format és per consultar i editar dades; no s’importa des de «Recupera un dictat».
 - Per ampliar el banc comunitari, edita els grups de `catalog.js`. Mantén les formes en minúscula i evita duplicats; les etiquetes compartides es fusionen automàticament.
@@ -77,9 +92,9 @@ node tools/serve.cjs
 node tools/check.cjs
 ```
 
-La previsualització local s’obre a l’adreça que mostra el servidor (per defecte, `http://127.0.0.1:4176`). El segon comandament comprova integritat del catàleg, absència de duplicats, focus, perfils de nivell, mostreig, fixats, repeticions, centre buit i límits de l’A4.
+La previsualització local s’obre a l’adreça que mostra el servidor (per defecte, `http://127.0.0.1:4176`). El segon comandament comprova integritat del catàleg, absència de duplicats, focus, perfils de nivell, mostreig, fixats, repeticions, trams buits, marges d’encaix i límits de l’A4.
 
-`tools/check-pdf.cjs` comprova les quaranta combinacions de tipus, llargada, document i posició del model, valida la pàgina A4, els caràcters i les guies de plec, i crea dos exemples a `output/`. Necessita `pdf-lib` com a dependència de desenvolupament o la variable `PLEC_NODE_MODULES` apuntant a una carpeta que contingui aquest paquet. No és una dependència per fer servir el web.
+`tools/check-pdf.cjs` comprova les vuitanta combinacions de tipus, llargada, document, format de plec i posició del model, valida la pàgina A4, els caràcters i les guies de plec, i crea dos exemples a `output/`. Necessita `pdf-lib` com a dependència de desenvolupament o la variable `PLEC_NODE_MODULES` apuntant a una carpeta que contingui aquest paquet. No és una dependència per fer servir el web.
 
 ## GitHub Pages
 
