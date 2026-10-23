@@ -7,6 +7,10 @@ assert.equal(new Set(C.entries.map(e => e.id)).size, C.entries.length, 'IDs úni
 for (const e of C.entries) {
   assert(K.validateCustom(e.text), `Grafia admesa: ${e.text}`);
   assert(e.tags.every(tag => C.categories.some(c => c.id === tag && c.mode === e.mode)), 'Etiquetes coherents');
+  if (e.mode === 'words') {
+    assert(Object.hasOwn(C.vocabularyBands, e.vocabulary) && e.vocabulary !== 'unrated');
+    assert(Object.hasOwn(C.orthographyBands, e.orthography) && e.orthography !== 'unrated');
+  }
 }
 for (const mode of ['words', 'pseudo']) {
   const tags = C.categories.filter(c => c.mode === mode).map(c => c.id);
@@ -35,4 +39,32 @@ for (const mode of ['words', 'pseudo']) {
   assert.equal(exhausted.reused, 8, 'Informa quan recupera mots utilitzats');
 }
 assert(!K.validateCustom('<script>')); assert(!K.validateCustom('dues paraules')); assert(K.validateCustom('col·legi')); assert(K.validateCustom('raïm'));
+const word = text => C.entries.find(e => e.mode === 'words' && e.text === text);
+for (const [text, expected] of [['llit', [true, true, false]], ['avesar', [false, true, true]], ['hipotenusa', [false, false, true]], ['col·legi', [false, true, true]]]) {
+  assert.deepEqual(['cm','cs','eso'].map(stage => K.matchesStage(word(text), stage)), expected, `Solapament de nivells: ${text}`);
+}
+for (const stage of Object.keys(C.stages)) {
+  const tags = C.categories.filter(c => c.mode === 'words').map(c => c.id);
+  const p = K.candidates(C.entries, 'words', tags, stage);
+  assert(p.length >= 24);
+  const generated = K.generate({ pool: p, count: 24, tags });
+  assert(generated.entries.every(e => K.matchesStage(e, stage)));
+}
+assert(!K.matchesStage({ mode: 'words', vocabulary: 'unrated', orthography: 'unrated' }, 'cs'));
+assert(K.matchesStage({ mode: 'words', vocabulary: 'unrated', orthography: 'unrated' }, 'all'));
+assert(K.matchesStage(C.entries.find(e => e.mode === 'pseudo'), 'cm'));
+for (const modelSide of ['left', 'right']) {
+  const entries = [word('llit'), word('avesar'), word('hipotenusa')];
+  const shapes = K.worksheet({ entries, modelSide });
+  for (const s of shapes) {
+    if (s.type === 'line' && s.dash) { assert([70, 140].includes(s.x)); continue; }
+    assert(s.x < 70 || s.x >= 140, 'La franja central no té marques');
+    if (s.type === 'line') assert(s.x2 <= 70 || s.x2 >= 140);
+    if (s.type === 'rect') assert(s.x + s.w <= 70 || s.x >= 140);
+  }
+  const label = shapes.find(s => s.value === 'ESCRIC I REVISO');
+  const model = shapes.find(s => s.value === 'avesar');
+  assert(modelSide === 'left' ? model.x < 70 && label.x > 140 : model.x > 140 && label.x < 70);
+  assert(!shapes.some(s => s.value === 'REVISO'));
+}
 console.log(`Comprovacions correctes: ${C.entries.filter(e => e.mode === 'words').length} paraules i ${C.entries.filter(e => e.mode === 'pseudo').length} pseudoparaules, ${C.categories.length} focus.`);

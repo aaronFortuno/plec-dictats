@@ -19,6 +19,14 @@
     ['llargues', 'Més de dues síl·labes', 'Més de dues síl·labes', 'pseudo', `sergaminya|pirotet|blanufeta|grupinola|fresquinal|clopiruna|trumifeta|pladunifa|brufanell|nyuparela|quepinofa|guerunila|fenupali|drapuneta|crufanoli|tupinufa|xemurali|palunefi|flupinera|gomifuna|nuparella|trefunila|blinufeta|carunepi`]
   ];
   const categories = groups.map(([id, label, title, mode]) => ({ id, label, title, mode }));
+  const vocabularyBands = { basic: 'Bàsic', common: 'Habitual', expanded: 'Ampliació', specialized: 'Especialitzat', unrated: 'Sense classificar' };
+  const orthographyBands = { low: 'Baixa', medium: 'Mitjana', high: 'Alta', unrated: 'Sense classificar' };
+  const stages = { cm: 'Cicle mitjà', cs: 'Cicle superior', eso: 'Institut', all: 'Tot el banc' };
+  // Classificació editorial explícita, revisable; no es dedueix de la llargada.
+  const basic = new Set(`avió|camió|jardí|cafè|també|després|això|allò|arròs|matí|botó|ratolí|coixí|menú|sofà|pàgina|música|família|àvia|núvol|llapis|imatge|futbol|paper|animal|escola|cadira|finestra|sabata|motxilla|germana|dissabte|diumenge|plàtan|telèfon|cinema|cirera|ceba|cel|cistell|enciam|bicicleta|passar|tassa|classe|professor|massa|bossa|plaça|braç|dolç|feliç|peça|casa|rosa|tisores|camisa|zero|onze|dotze|esmorzar|ahir|avui|ara|hivern|herba|hora|hort|home|hospital|habitació|ou|ombra|estiu|metge|rellotge|viatge|platja|mitja|mongetes|gerra|gel|genoll|germà|gegant|girafa|girar|gent|gener|joc|joguina|jove|jugar|jaqueta|pluja|pijama|menjar|taronja|formatge|granja|vaixell|vaca|vent|volar|veí|vida|verd|viure|vuit|vestit|cavall|avi|beure|boca|bosc|barca|bufanda|banyera|banc|botiga|abella|arribar|trobar|sabó|treball|carro|carrer|terra|serra|torre|sorra|barret|roda|roba|riu|porta|arbre|cargol|cara|pera|farina|pirata|paperera|cullera|coca|cuc|conte|canya|carta|cosa|quatre|quinze|equip|paquet|gat|got|gos|goma|gallina|guix|aigua|llengua|paraigua|berenar|nedar|muntanya|conill|ploma|sortida|lluna|llibre|llavor|llit|ampolla|papallona|colla|any|pinya|aranya|castanya|senyor|xocolata|caixa|peix|cotxe|dutxa|maig|raig|raïm|veïna|país|col·legi|pel·lícula`.split('|'));
+  const expanded = new Set(`origen|marge|colònia|paciència|diferència|calçat|pessic|rossinyol|aleshores|humà|humit|humor|higiene|horitzó|harmonia|heroi|hereu|vehicle|prohibir|orfe|ermita|univers|justícia|julivert|paisatge|jutge|vinya|gavina|vapor|llavi|fava|cervell|arrel|marbre|codi|freqüent|següent|assemblea|meravella|enyorar|empènyer|estendre|monestir|assassí|vernís|avorrir|avorriment|cobrir|descobrir|sofrir|sospirar|suportar|joventut|plomall|fusteria|moixaina|xifra|assaig|agraïment|traïdor|diürn|freqüència|paral·lel|instal·lar|excel·lent`.split('|'));
+  const low = new Set(`avió|camió|botó|ratolí|coixí|cafè|sofà|matí|menú|àvia|pàgina|música|llapis|futbol|paper|animal|escola|cadira|finestra|sabata|germana|telèfon|cinema|cirera|ceba|cel|tassa|classe|bossa|plaça|braç|dolç|casa|rosa|camisa|zero|onze|dotze|avui|ara|ou|ombra|estiu|gel|genoll|germà|gegant|girafa|girar|gent|gener|joc|jove|jugar|pluja|pijama|menjar|taronja|granja|vaca|vent|volar|vida|verd|viure|vuit|avi|boca|bosc|barca|banc|botiga|carro|carrer|terra|serra|torre|sorra|barret|roda|roba|riu|porta|arbre|cargol|cara|pera|pirata|cullera|coca|cuc|conte|canya|carta|cosa|quatre|quinze|gat|got|gos|goma|gallina|guix|aigua|llengua|paraigua|nedar|conill|ploma|lluna|llibre|llavor|llit|ampolla|papallona|colla|any|pinya|aranya|castanya|senyor|caixa|peix|maig|raig`.split('|'));
+  const high = new Set(`ciència|paciència|diferència|anglès|francès|examen|préssec|pèsol|cérvol|piscina|passeig|rossinyol|llençol|eriçó|adreça|calçat|esmorzar|alzina|helicòpter|hipopòtam|higiene|harmonia|hàmster|vehicle|prohibir|espagueti|metge|fetge|rellotge|viatge|platja|gimnàs|justícia|paisatge|formatge|jutge|vaixell|beure|canviar|córrer|esquerra|esquirol|guitarra|química|qüestió|freqüent|següent|pingüí|aigüera|assemblea|espàrrec|espàrrecs|assassí|avorrir|avorriment|butxaca|despatx|assaig|raïm|veïna|veïnat|països|agraïment|traïdor|conduïa|produïa|lluïa|oïda|peüc|diürn|paraigües|llengües|freqüència|col·legi|col·lecció|pel·lícula|il·lusió|tranquil·la|goril·la|novel·la|paral·lel|mil·límetre|instal·lar|excel·lent|intel·ligent`.split('|'));
   const map = new Map();
   const stableId = (mode, text) => {
     let hash = 2166136261;
@@ -33,7 +41,36 @@
       else map.set(key, { id: stableId(mode, text), text, mode, tags: [tag] });
     }
   }
+  // Ampliació de lèxic general i vocabulari de matèries d'institut.
+  const additions = [
+    ['expanded', 'essa', `avesar|assolir|escassetat|consciència|essencial|successió|expressió|decisió|precisió|convèncer|esforç|confiança`],
+    ['expanded', 'beve', `avesar|esbrinar|esdevenir|desvetllar|advertir|observació|conviure|convivència|abast|debatre|obvietat|versemblant`],
+    ['expanded', 'hac', `herència|hipòtesi|coherència|inherent|adherir|exhaurir`],
+    ['expanded', 'gej', `suggerir|suggeriment|objectiu|subjectiu|trajecte|avantatge`],
+    ['expanded', 'accent', `sòlid|efímer|fràgil|àmbit|propòsit|síntesi|criteri|anàlisi`],
+    ['specialized', 'accent', `hipotenusa|catet|diàmetre|perímetre|polígon|isòsceles|equilàter|paràbola|equació|coeficient|múltiple|fracció|algorisme|àtom|molècula|cèl·lula|fotosíntesi|mitocondri|cromosoma|ecosistema|biodiversitat|sintaxi|morfologia|pronom|adverbi|metàfora|hipèrbole|democràcia|oligarquia|arqueologia|geologia|hemisferi`],
+    ['specialized', 'hac', `hipotenusa|hipèrbole|hemisferi`],
+    ['specialized', 'essa', `isòsceles|equació|coeficient|fracció|cromosoma|ecosistema`],
+    ['specialized', 'gej', `geologia|arqueologia`],
+    ['specialized', 'beve', `adverbi|biodiversitat`],
+    ['specialized', 'qugu', `equilàter|equació|arqueologia|oligarquia`],
+    ['specialized', 'signes', `cèl·lula`]
+  ];
+  for (const [band, tag, list] of additions) {
+    for (const text of list.split('|')) {
+      const key = 'words:' + text;
+      if (!map.has(key)) map.set(key, { id: stableId('words', text), text, mode: 'words', tags: [], vocabulary: band });
+      const entry = map.get(key);
+      entry.vocabulary = band;
+      if (!entry.tags.includes(tag)) entry.tags.push(tag);
+    }
+  }
   const entries = [...map.values()];
-  root.PlecCatalog = { version: 1, categories, entries };
+  for (const entry of entries) {
+    if (entry.mode !== 'words') continue;
+    entry.vocabulary ||= expanded.has(entry.text) ? 'expanded' : basic.has(entry.text) ? 'basic' : 'common';
+    entry.orthography = high.has(entry.text) ? 'high' : low.has(entry.text) ? 'low' : 'medium';
+  }
+  root.PlecCatalog = { version: 2, categories, entries, vocabularyBands, orthographyBands, stages };
   if (typeof module !== 'undefined') module.exports = root.PlecCatalog;
 })(typeof window === 'undefined' ? globalThis : window);
