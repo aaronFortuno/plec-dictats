@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "pack": "ca-central-alba-diaeresis-sample-v1",
+  "voice": "ca-ES-AlbaNeural",
+  "reviewer": "docent del projecte",
+  "scope": "Comparació auditiva comunicada per l’usuari; no valida les transcripcions ni activa el manifest públic.",
+  "entries": [
+    { "mot": "atapeït", "id": "p-x7m83k", "outcome": "unresolved", "note": "La prova IPA sona exactament igual que l’original. Continua pendent de corregir l’accent percebut." },
+    { "mot": "conduïdes", "id": "p-76mra0", "outcome": "improved", "note": "Millora confirmada pel docent respecte de l’original." },
+    { "mot": "agraïm", "id": "p-1exdo11", "outcome": "improved", "note": "Millora confirmada pel docent respecte de l’original." },
+    { "mot": "canviïn", "id": "p-ojnnbe", "outcome": "original-preferred", "note": "El docent prefereix clarament l’original sense IPA. La prova IPA no el substitueix." },
+    { "mot": "aigüera", "id": "p-1oa5eut", "outcome": "improved", "note": "Millora confirmada pel docent respecte de l’original." },
+    { "mot": "qüestió", "id": "p-1ygj5lf", "outcome": "improved", "note": "Millora confirmada pel docent respecte de l’original." },
+    { "mot": "raïm", "id": "p-1bwjj55", "outcome": "improved", "note": "Millora confirmada pel docent respecte de l’original." },
+    { "mot": "increïble", "id": "p-16086yf", "outcome": "improved", "note": "Millora confirmada pel docent respecte de l’original." }
+  ]
+}

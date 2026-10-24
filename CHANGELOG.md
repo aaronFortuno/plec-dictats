@@ -8,6 +8,7 @@
 - Entrada al mode dictat més visible, canvi clar/fosc amb icona al header i marca i botó de sortida del dictat coherents amb l’aplicació.
 - Numeració incremental dins de la versió 1: les antigues 2.0–2.5 passen a 1.10–1.15. Els protocols de llavors i les edicions del banc conserven els seus identificadors.
 - Nova mostra IPA local de vuit mots amb dièresi. Anotada la millora docent de brànquia, isòtop i monosíl·lab; pentàgon queda pendent. Taula i exports fonètics actualitzats, amb aprovació auditiva separada de la validació lingüística.
+- Revisió de dièresis: sis millores, atapeït pendent i original de canviïn preferit. La consulta local conserva els originals quan la prova no millora o es prefereix la versió anterior; les mostres es mantenen per comparar.
 
 ## 1.15 · 24 d’octubre de 2026
 
