@@ -18,6 +18,38 @@ Com a alternativa existeix `sub alias`, que permet pronunciar un text alternatiu
 
 Les excepcions aprovades necessitaran metadades separades per ID i paquet, amb la versió de la petició i revisió docent. Les proves es faran en fitxers separats per comparar-les amb l’original, sense sobreescriure un àudio anterior ni alterar la grafia que s’avalua.
 
+## Taula IPA preparada: 227 mots
+
+La font editable és [ca-central-diaeresis.tsv](../audio/pronunciation/ca-central-diaeresis.tsv), en UTF-8, ordenada alfabèticament i amb un mot per fila. Es pot obrir en un editor de text o importar-la en un full de càlcul amb separador de tabulació. Les columnes són `mot`, `ipa`, `estat`, `base`, `lema`, `fonts`, `notes` i `id`. Cal conservar les tabulacions i els ID. Les metadades i la mostra proposada són a [ca-central-diaeresis.json](../audio/pronunciation/ca-central-diaeresis.json).
+
+Són **propostes editorials de català central formal, pendents de prova amb Azure**. `prepared` indica que la proposta està preparada per a la prova, no que l’àudio hagi estat validat. `needs-review` afegeix un dubte lingüístic pendent. Les sis formes amb dubtes són «aïrades», «aüixar», «argüeix», «argüint», «argüir» i «reïfica»; el motiu concret consta a cada fila. Cap forma té revisió auditiva IPA aprovada encara.
+
+La columna `base` diferencia el contrast del mot exacte (`dictionary-word`), el contrast del lema amb una flexió o derivació editorial (`dictionary-lemma`), l’aplicació de regles (`normative-rule`) i una proposta que necessita més contrast (`editorial-proposal`). No es presenta una forma flexionada com si tingués una transcripció de diccionari pròpia quan només s’ha consultat el lema. El contrast s’ha fet amb les pronunciacions del diccionari català-anglès de diccionari.cat, el DCVB de l’IEC i les regles de l’OIEC; no s’ha importat cap diccionari complet. Les referències concretes són a cada fila.
+
+S’han comprovat les grafies exactes: una adreça sense dièresi pot retornar un altre mot. Les entrades «reina», «roina» i «esglai» de diccionari.cat **no** s’utilitzen com a referència per a «reïna», «roïna» i «esglaï». Per a «intuïtiu», el [DCVB](https://dcvb.iec.cat/results.asp?word=intuitiu) confirma l’accent a «tiu», davant d’una discrepància amb una altra font. La família d’«argüir» conserva un dubte explícit sobre la realització de g entre fonts.
+
+### Notació i preparació fora de línia
+
+`ˈ` precedeix la síl·laba tònica; `.` separa **totes** les síl·labes, com demana Azure per interpretar l’accent. La dièresi no implica sempre accent tònic: «atapeït» és `ə.tə.pə.ˈit`, «conduïdes» és `kun.du.ˈi.ðəs` i «canviïn» és `ˈkam.bi.in`. Tampoc no es converteix qualsevol ü en w: «aigüera» i «argüir» tenen estructures diferents. S’utilitza l’inventari IPA de Microsoft per a `ca-ES`, amb les convencions consonàntiques compatibles de la [GIEC](https://giec.iec.cat/textgramatica/codi/1.4).
+
+```text
+node tools/check-pronunciations.cjs
+node tools/prepare-ipa.cjs
+node tools/prepare-ipa.cjs --write
+```
+
+El primer comprova cobertura dels 227 mots, correspondència amb la instantània immutable, ID, grafies, inventari, separació sil·làbica, accent, fonts i regressions. No certifica la correcció lingüística ni la resposta real d’Azure. El segon calcula el pla sense desar-lo; `--write` desa els 227 SSML a `output/audio/ipa/plan.json`, amb recompte conservador de caràcters incloent el marcatge intern. **Cap d’aquestes ordres carrega credencials ni fa peticions de síntesi.**
+
+Cada petició candidata té aquesta estructura, conservant el mot original:
+
+```xml
+<prosody rate="-10%"><phoneme alphabet="ipa" ph="ə.tə.pə.ˈit">atapeït</phoneme></prosody>
+```
+
+El pla té `executable: false` i totes les revisions auditives pendents. No està connectat al generador actual: abans cal escoltar una mostra, resoldre els dubtes i integrar la generació amb les mateixes proteccions de quota i represa. El paquet candidat `ca-central-alba-ipa-v1` té una ruta diferent del paquet en curs. No s’ha modificat `audio/manifest.json`, el lot de 3.072 mots ni els MP3 de comparació.
+
+La primera mostra proposada és de vuit mots: **atapeït, conduïdes, agraïm, canviïn, aigüera, qüestió, raïm i increïble**. Cobreix accent final i intern, hiat tònic i àton, ü amb w i geminació. Cal comprovar-hi dicció natural i accent abans d’enviar la tanda completa. Després de generar-los, els MP3 continuaran pendents de revisió docent abans de publicar-los.
+
 ## Velocitat del futur reproductor
 
 Es manté la síntesi actual. El reproductor podrà reduir `playbackRate` amb preservació de to, de forma independent del codi i de l’MP3. No cal duplicar cada àudio per oferir una velocitat més lenta. Aquesta opció encara no està implementada al producte.

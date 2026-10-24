@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "revision": "2026-10-24.1",
+  "language": "ca",
+  "dialect": "central",
+  "alphabet": "ipa",
+  "status": "prepared-pending-audition",
+  "expectedWords": 227,
+  "catalogPath": "catalogs/ca/editions/seed-1.json",
+  "catalogFingerprint": "ee94edbd3b2d4fb4d44d1cd66f70b970e17520029d952593d69e5adb2139bbf5",
+  "candidatePack": {
+    "id": "ca-central-alba-ipa-v1",
+    "language": "ca",
+    "dialect": "central",
+    "label": "Català central · Alba · prova IPA",
+    "locale": "ca-ES",
+    "provider": "azure",
+    "voice": "ca-ES-AlbaNeural",
+    "rate": "-10%",
+    "format": "audio-24khz-48kbitrate-mono-mp3",
+    "basePath": "assets/audio/ca/central-alba-ipa-v1/",
+    "status": "candidate-not-active",
+    "files": {}
+  },
+  "auditionWords": ["atapeït", "conduïdes", "agraïm", "canviïn", "aigüera", "qüestió", "raïm", "increïble"],
+  "method": "Transcripcions editorials per al català central formal. Contrast del mot exacte o del lema, més regles de flexió i dièresi; les fonts per fila no equivalen sempre a una transcripció publicada d'aquella forma. Totes pendents d'escolta Azure.",
+  "notation": "Un punt entre totes les síl·labes, ˈ abans de la síl·laba tònica i ˌ per a l'accent secundari. l i g segons l'inventari Azure. Hiats explícits en les formes formals, sense generalitzar que ï sigui tònica ni que ü sempre representi w.",
+  "references": [
+    "https://giec.iec.cat/textgramatica/codi/1.4",
+    "https://criteria.espais.iec.cat/files/2017/05/9-4-7_Novetats-de-l-Ortografia-catalana-20210603-octies-1.pdf",
+    "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-ssml-phonetic-sets#ca-es",
+    "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-pronunciation#phoneme-element"
+  ]
+}

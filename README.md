@@ -82,6 +82,8 @@ Les dades locals de la versió anterior es conserven amb la seva clau original. 
 
 Encara no s'han incorporat els àudios, el reproductor per a l'alumnat ni el QR. L'enllaç actual obre el preparador docent amb el codi recuperat. El motor de codis es podrà compartir amb el futur mode dictat.
 
+La preparació d’àudios és local i encara no està activada al web. Els **227 mots amb dièresi** tenen una [taula IPA editable](audio/pronunciation/ca-central-diaeresis.tsv), amb fonts i dubtes explícits, per a una prova posterior al lot sense dièresi. Vegeu el [procediment de pronunciació i revisió](docs/PRONUNCIACIO.md). Preparar el pla SSML no envia peticions a Azure ni altera el catàleg o els codis.
+
 ## Desenvolupament i comprovació
 
 Web estàtic, amb biblioteques i icones locals. Obre `index.html` directament o serveix el projecte. No hi ha serveis externs, comptes ni analítica durant l'ús.
@@ -93,6 +95,7 @@ node tools/check-catalogs.cjs
 node tools/check-lexicon.cjs
 node tools/check-seeds.cjs
 node tools/check-seeds-v2.cjs
+node tools/check-pronunciations.cjs
 node tools/benchmark-seeds.cjs
 node tools/benchmark-seeds-v2.cjs
 node tools/serve.cjs
