@@ -1,5 +1,5 @@
-/* One configuration column and the full remaining preview. */
-.workspace.seed-workspace{grid-template-columns:420px minmax(0,1fr)}
+/* Content configuration, preview and management occupy separate columns. */
+.workspace.seed-workspace{grid-template-columns:clamp(304px,24vw,350px) minmax(0,1fr) clamp(248px,20vw,290px)}
 .seed-workspace .quick-settings{gap:8px;padding-bottom:12px}
 .seed-workspace .focus-settings{margin-top:12px}
 .seed-workspace .focus-heading{margin-bottom:8px}
@@ -7,8 +7,10 @@
 .seed-workspace .focus-settings .tag span{padding-block:7px}
 .seed-workspace .focus-settings .field-hint{margin-top:8px}
 .seed-workspace .preview-column{grid-template-rows:minmax(0,1fr)}
-.seed-toolbar{display:grid;gap:12px;min-width:0;margin-top:14px;padding:14px 0 0;border-top:1px solid var(--line)}
-.seed-toolbar h2{margin:0;font:600 13px var(--sans);letter-spacing:0}
+.management{min-width:0;min-height:0;padding:18px 16px;border-radius:9px;overflow:hidden;display:grid;grid-template-rows:minmax(0,1fr)}
+.management-scroll{min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:10px}
+.seed-toolbar{display:grid;gap:16px;min-width:0;margin:0;padding:0;border:0}
+.seed-toolbar h2{margin:0;font:20px var(--serif);color:var(--green);letter-spacing:0}
 .seed-identity{display:grid;gap:3px;min-width:0}
 .seed-identity>span{font-size:11px;color:var(--muted);font-weight:600}
 .seed-identity output{font:700 24px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:2px;color:var(--green,#234d43);white-space:nowrap;min-height:29px}
@@ -16,6 +18,15 @@
 .seed-toolbar .button{min-height:35px;padding:7px 11px;font-size:12px;white-space:nowrap}
 .seed-toolbar .small-link{font-size:12px;min-height:32px}
 .seed-toolbar #download-pdf{width:100%;min-height:40px;justify-content:center}
+.seed-toolbar .seed-buttons:has(#new-dictation){display:grid;grid-template-columns:1fr 1fr;gap:6px 8px}
+.seed-toolbar #new-dictation{grid-column:1/-1;justify-content:center}
+.seed-toolbar .seed-buttons:has(#open-student){display:grid;grid-template-columns:1fr;gap:5px}
+.seed-toolbar #open-student{justify-content:center;min-height:46px;font-size:13px;gap:8px}
+.seed-toolbar #copy-student-link{text-align:center}
+.seed-toolbar .recover-form{border-top:1px solid var(--line);padding-top:16px;gap:7px}
+.dictation-nav{display:inline-flex;align-items:center;gap:7px;font-weight:600}
+.site-header .dictation-nav .lucide{width:18px;height:18px}
+.site-header .theme-toggle{flex-shrink:0}
 .recover-form{display:grid;gap:4px;margin:0;max-width:100%;min-width:0}
 .recover-form>label{font-size:11px;font-weight:600;color:var(--muted)}
 .recover-form>div{display:flex;gap:7px;min-width:0}
@@ -53,14 +64,37 @@
 @media(min-width:1000px){
   .seed-workspace .config{padding-block:14px}
   .seed-workspace .paired-settings{gap:12px;align-items:center}
-  .seed-workspace .model-setting legend{float:left;line-height:40px;margin:0 7px 0 0}
+  .seed-workspace .model-setting legend{float:none;line-height:1.4;margin:0 0 7px}
   .seed-workspace .model-setting .segmented{height:40px}
-  .seed-workspace .count-setting{grid-template-columns:auto minmax(64px,1fr);align-items:center;gap:7px}
+  .seed-workspace .count-setting{grid-template-columns:minmax(0,1fr);align-items:center;gap:7px}
   .seed-workspace .focus-settings{margin-top:10px}
   .seed-workspace .focus-heading{margin-bottom:6px}
   .required-settings{padding-top:8px}
 }
-@media(min-width:1700px){.workspace.seed-workspace{grid-template-columns:440px minmax(0,1fr)}}
-@media(min-width:641px) and (max-width:999px){.workspace.seed-workspace{grid-template-columns:324px minmax(0,1fr)}.seed-workspace .preview-column{min-height:620px;position:relative;top:auto}.seed-toolbar{gap:10px;margin-top:12px;padding-top:12px}.seed-buttons{gap:4px 8px}}
-@media(max-width:640px){.workspace.seed-workspace{grid-template-columns:minmax(0,1fr)}.seed-workspace .preview-column{height:780px;min-height:640px;position:relative;top:auto}.recover-form{width:100%}.required-settings h2{font-size:13px}}
-@media print{.seed-toolbar,.required-help,.zoom-scroll-hint{display:none!important}}
+@media(max-width:1240px){.site-header .bank-summary{display:none}}
+@media(min-width:900px) and (max-width:1199px){
+  body{height:auto;min-height:100svh;display:block;overflow:auto}
+  .workspace.seed-workspace{grid-template-columns:310px minmax(0,1fr);height:auto;align-items:start}
+  .seed-workspace .config{grid-column:1;grid-row:1;display:block}
+  .seed-workspace .management{grid-column:1;grid-row:2}
+  .seed-workspace .preview-column{grid-column:2;grid-row:1/span 2;position:sticky;top:12px;height:calc(100svh - 100px);min-height:540px}
+  .config-scroll,.management-scroll{overflow:visible}
+}
+@media(min-width:761px) and (max-width:899px){
+  .workspace.seed-workspace{grid-template-columns:minmax(0,1fr) minmax(0,1fr);height:auto;align-items:stretch}
+  .seed-workspace .config{grid-column:1;grid-row:1}
+  .seed-workspace .management{grid-column:2;grid-row:1}
+  .seed-workspace .preview-column{grid-column:1/-1;grid-row:2;position:relative;top:auto;height:850px;min-height:540px}
+}
+@media(max-width:760px){
+  .workspace.seed-workspace{grid-template-columns:minmax(0,1fr);height:auto}
+  .seed-workspace .config{grid-column:1;grid-row:1}
+  .seed-workspace .management{grid-column:1;grid-row:2}
+  .seed-workspace .preview-column{grid-column:1;grid-row:3;height:calc(100svh - 90px);min-height:520px;max-height:850px;position:relative;top:auto}
+  .config-scroll,.management-scroll{overflow:visible;padding-right:0}
+  .recover-form{width:100%}.required-settings h2{font-size:13px}
+  .site-header{padding-right:65px!important}
+  .site-header .theme-toggle{position:absolute;right:16px;top:14px}
+  .site-header nav{flex-basis:100%;justify-content:flex-start;margin:0;gap:18px}
+}
+@media print{.management,.seed-toolbar,.required-help,.zoom-scroll-hint{display:none!important}}

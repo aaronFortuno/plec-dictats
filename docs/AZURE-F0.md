@@ -83,3 +83,11 @@ Les eines locals ja estan comprovades amb respostes simulades, sense xarxa. Falt
 No esborrem `output/audio/usage.json`: conserva les reserves mensuals i el moment de l’última petició. Un fitxer `usage.lock` indica un lot en curs; després d’un tall inesperat, comprova que no queda cap generador actiu abans de retirar manualment aquell bloqueig. Si un lot travessa el canvi de mes UTC, s’atura per tornar a validar el pressupost en una nova execució.
 
 Quan aprovem la mostra, decidirem si mantenim Alba, el ritme de −10% i aquesta varietat. Per canviar veu o velocitat es crea un paquet amb ID diferent: l’eina impedeix barrejar ajustos amb els MP3 ja generats. Repetir una ordre amb els mateixos ajustos salta els fitxers existents amb capçalera MP3 compatible; aquesta comprovació tècnica no substitueix escoltar-los.
+
+## Situació registrada el 24/10/2026
+
+Després del lot de 3.072 mots, les instruccions i les mostres IPA (nou mots, quatre incidències i vuit dièresis), el registre local reserva **119.827 caràcters** a l’octubre. Queden **280.173** fins al límit preventiu de 400.000. Equival aproximadament al **24% dels 500.000 caràcters mensuals F0**; no és una lectura de facturació Azure i pressuposa que no hi ha ús extern sense declarar. Contrasta el total al recurs abans d’ampliar la generació. [Preus oficials de Speech](https://azure.microsoft.com/en-gb/pricing/details/speech/?cdn=disable).
+
+El pla històric de 227 dièresis estima 20.173 caràcters amb SSML; cal reconstruir-lo des de les transcripcions que finalment s’aprovin. Una altra passada ordinària de totes les paraules estima 125.212 caràcters amb els ajustos documentats, però una passada IPA tindrà un pressupost diferent segons les transcripcions i el SSML. No s’ha iniciat cap altre lot complet ni una altra veu.
+
+Azure publica `ca-ES-AlbaNeural`, `ca-ES-JoanaNeural` i `ca-ES-EnricNeural`; aquesta llista no les identifica com a central, valenciana o balear. Una veu diferent no constitueix automàticament una varietat dialectal. Per preparar-ne una altra cal un perfil IPA propi, una mostra curta amb la veu candidata i revisió per parlants de la varietat abans de generar el banc. També es pot fer enregistrament manual mantenint el mateix contracte de paquets. [Veus oficials](https://learn.microsoft.com/azure/cognitive-services/speech-service/language-support?tabs=tts).

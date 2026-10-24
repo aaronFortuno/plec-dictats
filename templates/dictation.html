@@ -5,28 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Plec · Fes un dictat</title>
 <meta name="theme-color" content="#f8f6ef">
-<script src="theme.js?v=2.5.0"></script>
+<script src="theme.js?v=1.16.0"></script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="stylesheet" href="styles.css?v=2.5.0">
-<link rel="stylesheet" href="dictation.css?v=2.5.0">
-<link rel="stylesheet" href="theme.css?v=2.5.0">
-<script defer src="locales/manifest.js?v=2.5.0"></script>
+<link rel="stylesheet" href="styles.css?v=1.16.0">
+<link rel="stylesheet" href="dictation.css?v=1.16.0">
+<link rel="stylesheet" href="theme.css?v=1.16.0">
+<script defer src="locales/manifest.js?v=1.16.0"></script>
 <script defer src="__CONFIG__"></script>
-<script defer src="language.js?v=2.5.0"></script>
+<script defer src="language.js?v=1.16.0"></script>
 <script defer src="__REGISTRY__"></script>
-<script defer src="seeds.js?v=2.5.0"></script>
-<script defer src="seeds-v2.js?v=2.5.0"></script>
-<script defer src="dictation-session.js?v=2.5.0"></script>
-<script defer src="icons.js?v=2.5.0"></script>
-<script defer src="dictation.js?v=2.5.0"></script>
+<script defer src="seeds.js?v=1.16.0"></script>
+<script defer src="seeds-v2.js?v=1.16.0"></script>
+<script defer src="dictation-session.js?v=1.16.0"></script>
+<script defer src="icons.js?v=1.16.0"></script>
+<script defer src="audio-manifest.js?v=1.16.0"></script>
+<script defer src="dictation.js?v=1.16.0"></script>
 </head>
 <body>
 <main id="focus-root" class="d-focus">
 <header class="d-header">
-<a class="d-brand" id="composer-link" href="__COMPOSER__">plec.</a>
+<a class="d-brand" id="composer-link" href="__COMPOSER__" aria-label="Plec, inici"><svg viewBox="0 0 42 44" aria-hidden="true"><path d="M3 8 15 3 28 8 39 3v33l-11 5-13-5-12 5Z"/><path d="M15 3v33M28 8v33"/></svg><span>plec<span class="brand-dot">.</span></span></a>
 <div class="d-header-actions">
-<label class="theme-control" data-theme-control><span class="sr-only">Aparença</span><select data-theme-choice aria-label="Aparença"><option value="system">Sistema</option><option value="light">Clar</option><option value="dark">Fosc</option></select></label>
-<button type="button" id="exit-focus" hidden><span data-icon="x"></span> Surt</button>
+<button type="button" class="icon-button theme-toggle" data-theme-toggle data-theme-control aria-label="Activa el tema fosc" title="Activa el tema fosc" aria-pressed="false"><span data-theme-icon data-icon="moon"></span></button>
+<button type="button" id="exit-focus" hidden aria-label="Deixa el dictat" title="Deixa el dictat"><span data-icon="x"></span></button>
 </div>
 </header>
 

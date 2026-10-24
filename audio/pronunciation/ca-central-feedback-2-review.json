@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "pack": "ca-central-alba-feedback-2-v1",
+  "voice": "ca-ES-AlbaNeural",
+  "reviewer": "docent del projecte",
+  "scope": "Comparació auditiva comunicada per l’usuari; no valida les transcripcions ni activa el manifest públic.",
+  "entries": [
+    { "mot": "brànquia", "id": "p-1gyv8iu", "outcome": "improved", "note": "Millora confirmada pel docent respecte de l’original." },
+    { "mot": "isòtop", "id": "p-1tgyuw9", "outcome": "improved", "note": "Millora confirmada pel docent respecte de l’original." },
+    { "mot": "monosíl·lab", "id": "p-jifc1x", "outcome": "improved", "note": "Millora confirmada pel docent respecte de l’original." },
+    { "mot": "pentàgon", "id": "p-mrqyf5", "outcome": "unresolved", "note": "El docent confirma que continua sonant pràcticament igual. Cal una altra prova d’accent i entonació; no es dona per resolt." }
+  ]
+}

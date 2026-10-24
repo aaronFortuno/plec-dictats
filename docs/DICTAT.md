@@ -14,7 +14,7 @@ Cada mot requereix tres escoltes completades. Després apareix «Paraula següen
 
 Les instruccions i les paraules utilitzen **MP3 estàtics**, sense TTS del navegador ni peticions a Azure des del web. Les cinc locucions d’instruccions comparteixen el text exacte amb la pantalla, per a 8, 12, 16, 20 i 24 mots. Si la locució encara no està disponible, el text es manté visible i es pot començar el dictat igualment. La lectura es pot aturar i no compta com a escolta d’un mot; s’atura en començar l’activitat, sortir o ocultar la pestanya.
 
-L’aparença **Sistema / Clar / Fosc** es desa al dispositiu i es comparteix entre el preparador i el dictat. «Sistema» segueix la preferència del dispositiu. El selector desapareix durant el dictat i les pauses per mantenir la pantalla neta. El full imprimible i el PDF conserven el paper clar.
+El botó de sol/lluna del header canvia l’aparença **clar/fosc**, la desa al dispositiu i la comparteix entre preparador i dictat. A la primera visita se segueix el sistema. El botó desapareix durant el dictat i les pauses per mantenir la pantalla neta. El full imprimible i el PDF conserven el paper clar.
 
 ## Pantalla completa i pauses
 
@@ -45,3 +45,9 @@ Mostra local: `http://127.0.0.1:4176/ca/dictat/?seed=TCD7-AAAAA&preview=local`. 
 En la integració s’ha executat una prova local amb Chrome: recorregut complet de 16 × 3 escoltes amb àudio simulat, errors síncrons i promeses rebutjades, pausa, respostes antigues, canvi de codi, absència de cobertura i enllaç antic. Una passada separada, sense mocks, ha reproduït un MP3 real fins a `ended` i ha entrat a pantalla completa. Comprovat també que la vista mòbil no desborda horitzontalment. Això verifica funcionament; l’escolta docent continua sent necessària per validar la pronunciació.
 
 L’aparença s’ha comprovat en Chrome amb preferència del sistema, canvi en directe, persistència entre pantalles, mòbil i impressió. Per a les instruccions s’han simulat els MP3 i els errors: aturada, callbacks antics, pestanya oculta i inici del dictat sense consumir escoltes. `check-instructions.cjs` comprova sense xarxa l’espera del lot, les cinc llargades, les rutes, el registre compartit, la represa i la invalidació quan canvia el text. Les cinc locucions Azure reals ja s’han generat localment; l’aprovació auditiva continua pendent.
+
+## Consulta oral del catàleg
+
+El catàleg docent utilitza `catalog-audio.js`, amb la mateixa validació de manifest de `audio-manifest.js` que el reproductor d’alumnat. Només reprodueix a petició, un mot cada vegada; tornar a prémer atura el mot. Canviar filtres, lletra, tancar el diàleg o ocultar la pàgina atura l’àudio. Els mots sense cobertura mantenen l’altaveu desactivat.
+
+`node tools/prepare-catalog-preview.cjs` construeix un índex de revisió **sense síntesi ni xarxa**, combinant els MP3 locals existents i les mostres IPA. Només s’utilitza des de loopback, a `output/audio/catalog-preview-manifest.json`; no altera el manifest públic ni el manifest de prova de l’alumnat. Les mostres més recents tenen prioritat per a l’audició docent, sense considerar-les aprovades.

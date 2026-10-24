@@ -8,7 +8,17 @@
   function apply() {
     html.dataset.theme=preference==='system'?(system.matches?'dark':'light'):preference;
     html.dataset.themePreference=preference;
-    document.querySelectorAll('[data-theme-choice]').forEach(select=>{select.value=preference;});
+    const dark=html.dataset.theme==='dark';
+    document.querySelectorAll('[data-theme-toggle]').forEach(button=>{
+      const label=dark?'Activa el tema clar':'Activa el tema fosc';
+      button.setAttribute('aria-label',label);button.title=label;button.setAttribute('aria-pressed',String(dark));
+      const icon=button.querySelector('[data-theme-icon]');
+      if(icon&&window.PlecIcons){
+        const name=dark?'sun':'moon',changed=icon.dataset.icon!==name;
+        icon.innerHTML=window.PlecIcons(name);icon.dataset.icon=name;
+        if(changed&&icon.animate)icon.animate([{opacity:.2,transform:'rotate(-15deg)'},{opacity:1,transform:'rotate(0)'}],{duration:220});
+      }
+    });
     const meta=document.querySelector('meta[name="theme-color"]');
     if(meta)meta.content=html.dataset.theme==='dark'?'#101a17':'#f8f6ef';
   }
@@ -20,8 +30,8 @@
   });
   document.addEventListener('DOMContentLoaded',()=>{
     apply();
-    document.querySelectorAll('[data-theme-choice]').forEach(select=>select.addEventListener('change',()=>{
-      preference=['light','dark'].includes(select.value)?select.value:'system';
+    document.querySelectorAll('[data-theme-toggle]').forEach(button=>button.addEventListener('click',()=>{
+      preference=html.dataset.theme==='dark'?'light':'dark';
       try{localStorage.setItem(key,preference);}catch{}
       apply();
     }));

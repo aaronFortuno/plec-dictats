@@ -143,8 +143,22 @@
     $('sheet-preview').setAttribute('aria-label',`Vista prèvia: ${entries.length} elements. Model visible.`);fitPaper();
   }
   let catalogInitial=null,catalogWheel=window.PlecCatalogBrowser.createWheelState();
+  const catalogAudio=window.PlecCatalogAudio.create({base:new URL('../',location.href),language:L.id,fetch:window.fetch.bind(window),Audio:window.Audio,onChange:refreshCatalogAudio});
+  function refreshCatalogAudio(audioState){
+    audioState=audioState||catalogAudio.getState();
+    for(const button of $('catalog-list').querySelectorAll('[data-audio-id]')){
+      const entry=lookup(button.dataset.audioId),available=entry&&catalogAudio.urlFor(entry),playing=audioState.playingId===entry?.id;
+      button.disabled=!available;
+      button.setAttribute('aria-pressed',String(playing));
+      button.setAttribute('aria-label',playing?`Atura ${entry.text}`:available?`Escolta ${entry.text}`:`Àudio pendent: ${entry?.text||''}`);
+      button.title=button.getAttribute('aria-label');button.classList.toggle('is-playing',playing);
+      button.innerHTML=window.PlecIcons(playing?'square':'volume-2');
+    }
+    $('catalog-audio-status').textContent=audioState.errorId?'No s’ha pogut reproduir el mot. Torna-ho a provar.':audioState.phase==='loading'?'Carregant els àudios…':audioState.local&&audioState.phase==='ready'?'Àudios de prova · en revisió':audioState.phase==='unavailable'?'Àudios no disponibles.':audioState.phase==='pending'?'Àudios en preparació':'';
+  }
   function catalogAtBottom(){const list=$('catalog-list');return list.scrollTop+list.clientHeight>=list.scrollHeight-1;}
   function renderCatalog(reset=false,requestedInitial=null){
+    catalogAudio.stop();
     const browser=window.PlecCatalogBrowser;
     if(reset){
       $('catalog-search').value='';$('catalog-tag').innerHTML='<option value="">Tots els focus</option>'+modeTags(state.mode).map(c=>`<option value="${c.id}">${escape(c.label)}</option>`).join('');$('catalog-stage').value=session().stage;$('catalog-stage-field').hidden=state.mode==='pseudo';
@@ -156,23 +170,25 @@
     });
     catalogInitial=view.activeInitial;
     const initials=$('catalog-initials');
-    if(!initials.children.length)initials.innerHTML=browser.LETTERS.map(letter=>`<button type="button" data-initial="${letter}" aria-pressed="false">${letter}</button>`).join('');
-    for(const button of initials.children){
-      const letter=button.dataset.initial,count=view.counts[letter];
-      button.disabled=!count;button.setAttribute('aria-pressed',String(letter===view.activeInitial));
-      button.setAttribute('aria-label',`${letter}: ${count} ${count===1?'resultat':'resultats'}`);
+    if(!initials.children.length)initials.innerHTML=browser.LETTERS.map(letter=>`<a href="#catalog-${letter}" data-initial="${letter}">${letter}</a>`).join('<span aria-hidden="true">|</span>');
+    for(const link of initials.querySelectorAll('[data-initial]')){
+      const letter=link.dataset.initial,count=view.counts[letter];
+      link.setAttribute('aria-disabled',String(!count));link.tabIndex=count?0:-1;
+      if(letter===view.activeInitial)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');
+      link.setAttribute('aria-label',`${letter}: ${count} ${count===1?'resultat':'resultats'}`);
     }
     $('catalog-count').textContent=view.total?`${view.total} ${view.total===1?'resultat':'resultats'} al banc filtrat · ${view.initialCount} amb la inicial ${view.activeInitial}`:'Cap resultat amb aquesta cerca o aquests filtres.';
     const list=$('catalog-list');
     list.setAttribute('aria-label',view.activeInitial?`Resultats del catàleg amb la inicial ${view.activeInitial}`:'Resultats del catàleg, sense coincidències');
-    list.innerHTML=view.visibleEntries.map(e=>`<div class="catalog-entry" title="${escape(e.tags.map(t=>C.categories.find(c=>c.id===t)?.label||t).join(' · '))}"><span class="entry-copy"><span>${escape(e.text)}</span>${metadata(e)?`<small>${escape(metadata(e))}</small>`:''}</span></div>`).join('')||'<p class="empty">No hi ha resultats amb aquesta cerca o aquests filtres.</p>';
+    const keepNextFocus=document.activeElement?.id==='catalog-next';
+    list.innerHTML=view.visibleEntries.map(e=>`<div class="catalog-entry" title="${escape(e.tags.map(t=>C.categories.find(c=>c.id===t)?.label||t).join(' · '))}"><span class="entry-copy"><span>${escape(e.text)}</span>${metadata(e)?`<small>${escape(metadata(e))}</small>`:''}</span><button type="button" class="icon-button catalog-speaker" data-audio-id="${escape(e.id)}" aria-label="Escolta ${escape(e.text)}" disabled>${window.PlecIcons('volume-2')}</button></div>`).join('')||'<p class="empty">No hi ha resultats amb aquesta cerca o aquests filtres.</p>';
+    if(view.nextInitial)list.insertAdjacentHTML('beforeend',`<button type="button" class="small-link catalog-next" id="catalog-next" data-initial="${view.nextInitial}">Continua amb ${view.nextInitial} ${window.PlecIcons('arrow-up-right')}</button>`);
+    list.dataset.nextInitial=view.nextInitial||'';
     list.scrollTop=0;
-    const next=$('catalog-next'),keepNextFocus=document.activeElement===next;
-    next.dataset.initial=view.nextInitial||'';next.disabled=!view.nextInitial;next.textContent=view.nextInitial?`Continua amb ${view.nextInitial}`:'No hi ha més inicials';
     catalogWheel=browser.noteWheelPosition(catalogWheel,catalogAtBottom());
-    if(keepNextFocus)(view.nextInitial?next:list).focus({preventScroll:true});
+    refreshCatalogAudio();if(keepNextFocus)list.focus({preventScroll:true});
   }
-  function openCatalog(){renderCatalog(true);window.PlecMotion.open($('catalog-dialog'));$('catalog-search').focus();}
+  function openCatalog(){renderCatalog(true);window.PlecMotion.open($('catalog-dialog'));catalogAudio.load();$('catalog-search').focus();}
   function downloadBlob(blob, filename) {
     const url = URL.createObjectURL(blob), a = document.createElement('a');
     a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 30000);
@@ -271,12 +287,13 @@
     }
   });
   const releases = [
-    ['2.5', '2026-10-24', ['Aparença clara, fosca o del sistema, amb el full sempre clar. Locucions d’instruccions preparades com a MP3 estàtics; generació després del lot actual i revisió abans de publicar. Registre de pronunciacions dubtoses.']],
-    ['2.4', '2026-10-24', ['Primera pantalla de dictat al full, amb entrada per codi i enllaç d’alumnat. Tres escoltes per paraula, ritme ajustable abans de començar i pausa en sortir de pantalla completa o canviar de pestanya. Àudios públics encara pendents de revisió; prova local disponible.'] ],
-    ['2.3', '2026-10-24', ['Gestió del dictat i PDF al lateral per donar més espai al full. Catàleg per inicials amb cerca global i ajuda ampliada sobre les llavors. Preparació d’àudios amb Azure F0, encara sense reproductor ni àudios publicats.'] ],
-    ['2.2', '2026-10-23', ['Codis de 4 + 5 caràcters amb 24,3 milions de variants per configuració. Cerca optimitzada en tandes cancel·lables que es poden continuar sense repetir intents. Ajuda sobre la combinació dels focus i compatibilitat amb els codis antics.'] ],
-    ['2.1', '2026-10-23', ['Lateral més ample i focus reorganitzats per aprofitar les files. Mots obligatoris amb Enter o coma i ajuda contextual accessible. Zoom amb Ctrl i roda, amb avís breu; desplaçament natural amb la roda i en pantalles tàctils.'] ],
-    ['2.0', '2026-10-23', ['Codis curts recuperables amb filtres i ordre reproduïbles. Cerca de fins a cinc mots obligatoris, sense tria individual ni lateral dret. Codi imprès al full i enllaç compartible. Instantània del banc conservada per recuperar els codis en el futur.'] ],
+    ['1.16', '2026-10-24', ['Filtres i gestió del dictat en laterals separats, amb entrada al mode dictat més visible. Catàleg amb inicials de text, capçalera i descàrregues fixes, reproducció dels àudios disponibles i varietats previstes. Tema amb un botó al header i marca compartida amb el dictat. Numeració unificada dins de la versió 1. Mostres IPA i taula fonètica oberta per varietats.']],
+    ['1.15', '2026-10-24', ['Aparença clara, fosca o del sistema, amb el full sempre clar. Locucions d’instruccions preparades com a MP3 estàtics; generació després del lot actual i revisió abans de publicar. Registre de pronunciacions dubtoses.']],
+    ['1.14', '2026-10-24', ['Primera pantalla de dictat al full, amb entrada per codi i enllaç d’alumnat. Tres escoltes per paraula, ritme ajustable abans de començar i pausa en sortir de pantalla completa o canviar de pestanya. Àudios públics encara pendents de revisió; prova local disponible.'] ],
+    ['1.13', '2026-10-24', ['Gestió del dictat i PDF al lateral per donar més espai al full. Catàleg per inicials amb cerca global i ajuda ampliada sobre les llavors. Preparació d’àudios amb Azure F0, encara sense reproductor ni àudios publicats.'] ],
+    ['1.12', '2026-10-23', ['Codis de 4 + 5 caràcters amb 24,3 milions de variants per configuració. Cerca optimitzada en tandes cancel·lables que es poden continuar sense repetir intents. Ajuda sobre la combinació dels focus i compatibilitat amb els codis antics.'] ],
+    ['1.11', '2026-10-23', ['Lateral més ample i focus reorganitzats per aprofitar les files. Mots obligatoris amb Enter o coma i ajuda contextual accessible. Zoom amb Ctrl i roda, amb avís breu; desplaçament natural amb la roda i en pantalles tàctils.'] ],
+    ['1.10', '2026-10-23', ['Codis curts recuperables amb filtres i ordre reproduïbles. Cerca de fins a cinc mots obligatoris, sense tria individual ni lateral dret. Codi imprès al full i enllaç compartible. Instantània del banc conservada per recuperar els codis en el futur.'] ],
     ['1.9', '2026-10-23', ['Retirat el filtre Femenins i plurals. Totes les formes continuen al banc i es trien amb els mateixos focus ortogràfics. Les tries i preferències antigues es conserven en retirar el filtre.'] ],
     ['1.8', '2026-10-23', ['Femenins i plurals: 137 formes noves, focus propi i etiquetes ortogràfiques compartides. Retirats ahir-vespre, ahir-nit, blat-de-moro i viuda; es conserva vídua. Incorporat arbitrar en lloc d’arbitre. Contrast exacte de les noves grafies amb el lèxic flexionat de Softcatalà.'] ],
     ['1.7', '2026-10-23', ['Entrada per llengua a /ca/, catàleg separat en JSON i 3.166 paraules per revisar. Descàrregues alfabètiques en text pla i taula de revisió. Identitat verificable del catàleg i dictats guardats amb llengua i versió.'] ],
@@ -297,13 +314,15 @@
   document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) window.PlecMotion.close(dialog); } }));
 
   $('catalog-search').addEventListener('input',()=>renderCatalog());$('catalog-tag').addEventListener('change',()=>renderCatalog());$('catalog-stage').addEventListener('change',()=>renderCatalog());
-  $('catalog-initials').addEventListener('click',event=>{const button=event.target.closest('[data-initial]');if(button&&!button.disabled)renderCatalog(false,button.dataset.initial);});
-  $('catalog-next').addEventListener('click',event=>{if(event.currentTarget.dataset.initial)renderCatalog(false,event.currentTarget.dataset.initial);});
+  $('catalog-initials').addEventListener('click',event=>{const link=event.target.closest('[data-initial]');if(link){event.preventDefault();if(link.getAttribute('aria-disabled')!=='true')renderCatalog(false,link.dataset.initial);}});
+  $('catalog-list').addEventListener('click',event=>{const next=event.target.closest('#catalog-next'),speaker=event.target.closest('[data-audio-id]');if(next)renderCatalog(false,next.dataset.initial);else if(speaker&&!speaker.disabled){const entry=lookup(speaker.dataset.audioId);if(entry)catalogAudio.play(entry);}});
+  $('catalog-dialog').addEventListener('close',()=>catalogAudio.stop());$('catalog-dialog').addEventListener('cancel',()=>catalogAudio.stop());
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)catalogAudio.stop();});window.addEventListener('pagehide',()=>catalogAudio.stop());
   $('catalog-list').addEventListener('scroll',()=>{catalogWheel=window.PlecCatalogBrowser.noteWheelPosition(catalogWheel,catalogAtBottom());},{passive:true});
   $('catalog-list').addEventListener('wheel',event=>{
     const result=window.PlecCatalogBrowser.wheelGesture(catalogWheel,{deltaY:event.deltaY,atBottom:catalogAtBottom(),now:performance.now()});
     catalogWheel=result.state;
-    const next=$('catalog-next').dataset.initial;
+    const next=$('catalog-list').dataset.nextInitial;
     if(result.advance&&next)renderCatalog(false,next);
   },{passive:true});
   for(const [id,mode,name] of [['export-words-text','words','paraules'],['export-pseudo-text','pseudo','pseudoparaules']])$(id).addEventListener('click',()=>{

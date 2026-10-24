@@ -1,12 +1,21 @@
 # Historial
 
-## 2.5 · 24 d’octubre de 2026
+## 1.16 · 24 d’octubre de 2026
+
+- Filtres del contingut a l’esquerra i gestió del dictat a la dreta, amb adaptació específica per a tauleta i mòbil.
+- Catàleg amb inicials com a enllaços de text, filtres fixos, scroll intern i continuació de lletra al final del llistat. Descàrregues obertes al peu, sense botó redundant de tornar al full.
+- Altaveu per escoltar cada mot amb àudio disponible; un sol àudio actiu, amb aturada en canviar filtres o tancar. Selector que anticipa altres varietats, encara no disponibles.
+- Entrada al mode dictat més visible, canvi clar/fosc amb icona al header i marca i botó de sortida del dictat coherents amb l’aplicació.
+- Numeració incremental dins de la versió 1: les antigues 2.0–2.5 passen a 1.10–1.15. Els protocols de llavors i les edicions del banc conserven els seus identificadors.
+- Nova mostra IPA local de vuit mots amb dièresi. Anotada la millora docent de brànquia, isòtop i monosíl·lab; pentàgon queda pendent. Taula i exports fonètics actualitzats, amb aprovació auditiva separada de la validació lingüística.
+
+## 1.15 · 24 d’octubre de 2026
 
 - Aparença Sistema, Clar i Fosc, compartida entre el preparador i el dictat. El selector queda ocult durant l’activitat; el full i el PDF mantenen el paper clar.
 - Instruccions amb MP3 estàtics en lloc de veu del navegador, amb un text compartit i una locució per llargada. Generació local encuada després del lot principal, amb les mateixes proteccions de pressupost, represa i bloqueig; publicació pendent de revisió.
 - Registre editable per anotar pronunciacions dubtoses i procediment per comparar accent IPA i entonació de paraula aïllada abans de substituir àudios.
 
-## 2.4 · 24 d’octubre de 2026
+## 1.14 · 24 d’octubre de 2026
 
 - Entrada d’alumnat a `/ca/dictat/`, amb codi manual, enllaç per a l’alumnat i compatibilitat amb enllaços antics. La ruta inclou llengua i preserva el subdirectori del projecte.
 - Primer mode paper: instruccions amb lectura catalana segons disponibilitat del navegador, ritme normal o més lent, tres escoltes per mot i pas següent explícit. Sense mostrar mots ni solucions durant l’activitat.
@@ -14,28 +23,28 @@
 - Cobertura d’àudio comprovada abans de començar. Els MP3 encara estan en generació/revisió local; no s’han activat públicament. Prova local amb una selecció real de 16 mots.
 - Reintents breus i limitats del desament local davant bloqueigs de fitxers Windows, sense repetir peticions Azure. Es conserva el pressupost i la represa omet els MP3 existents.
 
-## 2.3 · 24 d’octubre de 2026
+## 1.13 · 24 d’octubre de 2026
 
 - Codi, còpies, recuperació, nou dictat i PDF agrupats al sidebar esquerre; més alçada disponible per al full.
 - Ajuda ampliada sobre el nombre finit de variants, la cerca de coincidències i la recuperació futura del mateix dictat.
 - Catàleg per inicials, amb cerca global dins dels filtres, recompte i accés a la lletra següent amb botó o una nova empenta de roda. Les descàrregues del banc queden dins d’un desplegable.
 - Eines locals per preparar MP3 amb Azure F0: simulació per defecte, mostra de dotze mots, pressupost mensual conservador, peticions seqüencials i represa sense regenerar fitxers existents. Guia de configuració des de zero. Encara sense àudios publicats ni reproductor.
 
-## 2.2 · 23 d’octubre de 2026
+## 1.12 · 23 d’octubre de 2026
 
 - Format de codi de quatre caràcters de configuració i cinc de variant: 24,3 milions de variants per configuració, mantenint els codis antics de sis caràcters.
 - Cerca optimitzada de mots obligatoris sense construir el dictat complet a cada intent. Tandes cancel·lables i continuació sense repetir variants; els resultats parcials no es declaren impossibles.
 - Ajuda explícita dels focus: qualsevol dels seleccionats, sense quota mínima de cada focus.
 - Comprovats perquè i orquestra amb tots els focus, recuperació antiga i nova, quatre vectors nous, PDF amb el codi llarg i mesures documentades.
 
-## 2.1 · 23 d’octubre de 2026
+## 1.11 · 23 d’octubre de 2026
 
 - Lateral més ample i focus reorganitzats per ocupar quatre files en escriptori, sense reduir la lletra.
 - Tipografia dels mots obligatoris coherent amb els focus i ajuda contextual amb interrogant, disponible amb ratolí, teclat i clic.
 - Entrada de mots obligatoris amb Enter o coma; també admet enganxar una llista separada per comes.
 - Zoom amb Ctrl i roda i avís flotant breu en desplaçar sense Ctrl. La roda i els gestos tàctils conserven el desplaçament natural.
 
-## 2.0 · 23 d’octubre de 2026
+## 1.10 · 23 d’octubre de 2026
 
 - Tries reproduïbles amb codis de sis caràcters, que recuperen tipus, llargada, nivell, focus, mots i ordre.
 - Cerca finita i cancel·lable de fins a cinc mots obligatoris; cap mot s’insereix a mà.
