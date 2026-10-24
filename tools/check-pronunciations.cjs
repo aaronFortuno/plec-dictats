@@ -52,7 +52,7 @@ assert.ok(rows.every((row, index) => !index || rows[index - 1].mot.localeCompare
 const comparison = require('./prepare-pronunciation-sample.cjs');
 const sample = comparison.loadSample();
 assert.equal(sample.executable, false);
-assert.equal(sample.jobs.length, 6);
+assert.equal(sample.jobs.length, 9);
 assert.notEqual(sample.pack.id, plan.pack.id);
 assert.notEqual(sample.pack.id, 'ca-central-alba-v1');
 const controls = new Map(sample.jobs.map(job=>[job.text,job]));
@@ -60,10 +60,18 @@ assert.match(controls.get('col·legi').ipa, /l\.ˈl/u);
 assert.match(controls.get('metàl·lic').ipa, /l\.l.*k$/u);
 assert.equal(controls.get('llit').ipa, 'ˈʎit');
 assert.equal(controls.get('poc').ipa, 'ˈpɔk');
-assert.equal(controls.get('blanc').ipa, 'ˈblaŋ');
+assert.equal(controls.get('blanc').ipa, 'ˈblaŋk');
+assert.equal(controls.get('gent').ipa, 'ˈʒent');
+assert.equal(controls.get('lil·liputenc').ipa, 'lil.li.pu.ˈtɛŋk');
+assert.equal(controls.get('paguessin').ipa, 'pə.ˈɣe.sin');
+assert.equal(controls.get('passàvem').ipa, 'pə.ˈsa.βəm');
+for (const verb of ['paguessin','passàvem']) {
+  assert.equal(analyzeIpa(controls.get(verb).ipa).stressedSyllable,2);
+  assert.equal(controls.get(verb).reportedByTeacher,true);
+}
 assert.equal(controls.get('lil·liputenc').reviewStatus, 'needs-review');
 assert.equal(controls.get('lil·liputenc').reportedByTeacher, true);
-assert(sample.jobs.filter(job=>job.text!=='lil·liputenc').every(job=>job.reportedByTeacher===false));
+assert(sample.jobs.filter(job=>!['lil·liputenc','paguessin','passàvem'].includes(job.text)).every(job=>job.reportedByTeacher===false));
 assert(sample.jobs.every(job=>job.auditoryReview==='pending' && !job.ssml.includes('<break')));
 const sampleMetadata = JSON.parse(fs.readFileSync(comparison.SOURCE,'utf8'));
 const audioManifest = JSON.parse(fs.readFileSync(path.join(ROOT,'audio/manifest.json'),'utf8'));
@@ -72,4 +80,4 @@ assert.throws(()=>comparison.buildSample(wrongSample,catalog,audioManifest));
 const samePack = structuredClone(sampleMetadata); samePack.candidatePack.id=samePack.baselinePack;
 assert.throws(()=>comparison.buildSample(samePack,catalog,audioManifest));
 console.log(`IPA: ${plan.jobs.length} mots coberts, ID i grafia intactes, inventari, síl·labes, accents i SSML comprovats. ${plan.summary.needsReview} dubtes pendents; totes les escoltes pendents.`);
-console.log('Comparació l·l i finals: sis controls preparats, geminació explícita, t/k simples conservades i simplificació -nc diferenciada. Sense xarxa.');
+console.log('Mostra didàctica: nou mots, geminació, finals nt/nc explícits i accent dels dos verbs. Sense xarxa.');

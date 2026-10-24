@@ -4,10 +4,14 @@
   "catalogPath": "catalogs/ca/editions/seed-1.json",
   "catalogFingerprint": "ee94edbd3b2d4fb4d44d1cd66f70b970e17520029d952593d69e5adb2139bbf5",
   "baselinePack": "ca-central-alba-v1",
+  "pronunciationStyle": "didactic-explicit",
+  "policy": "Model didàctic demanat pel docent: accent correcte, l·l contínua i llarga i oclusives finals nt/nc explícites. No es presenta com la pronúncia espontània habitual del català central ni com una regla de fer sonar totes les lletres: h i u muda de gu/qu continuen mudes.",
   "candidatePack": {
     "id": "ca-central-alba-gemination-finals-v1",
     "language": "ca", "dialect": "central", "locale": "ca-ES",
     "provider": "azure", "voice": "ca-ES-AlbaNeural", "rate": "-10%",
+    "label": "Català central · dicció didàctica explícita · prova",
+    "pronunciationStyle": "didactic-explicit",
     "format": "audio-24khz-48kbitrate-mono-mp3",
     "basePath": "assets/audio/ca/central-alba-gemination-finals-v1/",
     "status": "pending", "files": {}
@@ -28,11 +32,11 @@
       "note": "Control de geminació i k final fora d’un grup nasal + oclusiva. No consta un rebuig docent d’aquest mot concret."
     },
     {
-      "id": "p-13lmj3i", "mot": "lil·liputenc", "ipa": "lil.li.pu.ˈtɛŋ",
+      "id": "p-13lmj3i", "mot": "lil·liputenc", "ipa": "lil.li.pu.ˈtɛŋk",
       "status": "needs-review", "reportedByTeacher": true,
       "focus": "gemination-and-final-nc", "basis": "editorial-proposal",
       "sources": ["https://geiec.iec.cat/text/2.3", "https://sf.iec.cat/apunts_llengua/apollo-i-el-vol-del-punt/"],
-      "note": "Cas assenyalat pel docent. Proposta editorial, sense transcripció lexicogràfica exacta contrastada; cal validar especialment el timbre tònic. Geminació explícita i nasal velar final, sense forçar k per la grafia."
+      "note": "Cas assenyalat pel docent. Proposta editorial, sense transcripció lexicogràfica exacta contrastada; cal validar especialment el timbre tònic. Geminació i k final explícites pel criteri didàctic demanat, sense pausa ni vocal afegida."
     },
     {
       "id": "p-1yrdcjp", "mot": "llit", "ipa": "ˈʎit",
@@ -49,11 +53,32 @@
       "note": "Control de k final que s’ha de conservar; sense vocal final afegida ni explosió exagerada. No consta un rebuig docent d’aquest mot concret."
     },
     {
-      "id": "p-pa95ni", "mot": "blanc", "ipa": "ˈblaŋ",
+      "id": "p-pa95ni", "mot": "blanc", "ipa": "ˈblaŋk",
       "status": "prepared", "reportedByTeacher": false,
-      "focus": "regular-final-nc", "basis": "dictionary-word",
+      "focus": "explicit-final-nc", "basis": "dictionary-word-with-didactic-adjustment",
       "sources": ["https://www.diccionari.cat/catala-angles/blanc", "https://geiec.iec.cat/text/2.3"],
-      "note": "Control de simplificació pròpia del català central: nasal velar final. L’absència de k no es considera automàticament un error."
+      "note": "El diccionari documenta una nasal velar final sense k. La prova hi afegeix k explícita pel criteri didàctic demanat; no és una correcció de la pronúncia central habitual."
+    },
+    {
+      "id": "p-popzvu", "mot": "gent", "ipa": "ˈʒent",
+      "status": "prepared", "reportedByTeacher": false,
+      "focus": "explicit-final-nt", "basis": "dictionary-word-with-didactic-adjustment",
+      "sources": ["https://www.diccionari.cat/catala-angles/gent"],
+      "note": "El diccionari documenta ʒen. La prova hi afegeix t explícita pel criteri didàctic demanat; no és una correcció de la pronúncia central habitual."
+    },
+    {
+      "id": "p-ptixlj", "mot": "paguessin", "ipa": "pə.ˈɣe.sin",
+      "status": "prepared", "reportedByTeacher": true,
+      "focus": "verb-stress", "basis": "dictionary-lemma-and-inflection",
+      "sources": ["https://www.softcatala.org/conjugador-de-verbs/verb/pagar/", "https://www.diccionari.cat/catala-angles/pagar"],
+      "note": "El docent sent «pagasín». Proposta de flexió central amb tònica a GUES, e tancada i u muda; no es fa sonar la u de gu. La transcripció exacta és editorial, no una transcripció publicada del mot flexionat."
+    },
+    {
+      "id": "p-a1pyj5", "mot": "passàvem", "ipa": "pə.ˈsa.βəm",
+      "status": "prepared", "reportedByTeacher": true,
+      "focus": "verb-stress", "basis": "dictionary-lemma-and-inflection",
+      "sources": ["https://dlc.iec.cat/Verbs?IdE=0006304", "https://www.diccionari.cat/catala-angles/passar"],
+      "note": "El docent sent «passavém». Proposta central amb tònica a SSÀ i e final neutra. El catàleg ja conté passàvem amb l’accent correcte. La transcripció exacta és editorial, no una transcripció publicada del mot flexionat."
     }
   ]
 }

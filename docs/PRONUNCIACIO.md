@@ -52,11 +52,11 @@ La primera mostra proposada és de vuit mots: **atapeït, conduïdes, agraïm, c
 
 ## Revisió de mots sense dièresi i entonació
 
-L’usuari ha detectat també alguns mots sense dièresi amb accent o entonació dubtosos. No s’interpreta el lot de 3.072 com a validat. La taula [ca-central-review.tsv](../audio/pronunciation/ca-central-review.tsv) permet anotar cada mot i el problema concret a mesura que s’escolti; ja inclou «lil·liputenc». No modifica el catàleg ni substitueix cap MP3.
+L’usuari ha detectat també alguns mots sense dièresi amb accent o entonació dubtosos. No s’interpreta el lot de 3.072 com a validat. La taula [ca-central-review.tsv](../audio/pronunciation/ca-central-review.tsv) permet anotar cada mot i el problema concret a mesura que s’escolti; inclou «lil·liputenc», «paguessin» i «passàvem». No modifica el catàleg ni substitueix cap MP3.
 
 Separarem **sons i accent tònic** de **l’entonació de paraula aïllada**. Per als primers, prepararem una proposta IPA amb totes les fronteres sil·làbiques. Si el problema és una entonació que sembla quedar a mitja frase, compararem també el text com a frase autònoma, per exemple `<s>mot.</s>`, i la mateixa prova amb IPA. Azure documenta els elements de frase i l’efecte de la puntuació; això no garanteix per si sol que la veu resolgui el cas. [Estructura SSML](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-structure).
 
-Les variants es generaran en una mostra separada, conservant l’original per comparar i sense canviar la grafia del mot. Només una escolta docent que confirmi accent, sons i entonació permetrà aprovar la substitució. No es regenerarà tot el corpus preventivament. Primer es provaran els vuit casos de dièresi ja proposats i els casos concrets que s’hagin anotat.
+Les variants es generaran en una mostra separada, conservant l’original per comparar i sense canviar la grafia del mot. Només una escolta docent que confirmi accent, sons i entonació permetrà aprovar la substitució. No es regenerarà tot el corpus preventivament. La mostra didàctica de nou mots s’encua després de mots i instruccions; els vuit casos de dièresi proposats continuen com a prova posterior pendent.
 
 ## Geminació i consonants finals: incidència del 24/10/2026
 
@@ -64,9 +64,11 @@ El docent demana una **l·l més perceptible, com una ela contínua més llarga*
 
 Per al model didàctic provarem una geminació explícita `l.l`, sense pausa entre síl·labes, sense convertir-la en `ʎ` (ll) i sense afegir vocals. L’IEC explica que la geminació allarga el so entre dues síl·labes, però també que la simplificació a l simple és habitual en molts parlars fora dels registres molt formals. Buscar una geminació més marcada és aquí una elecció didàctica; no converteix qualsevol pronúncia simple en un error. [Secció Filològica de l’IEC](https://sf.iec.cat/apunts_llengua/apollo-i-el-vol-del-punt/).
 
-Les oclusives finals requereixen una distinció: en català central hi ha simplificació de grups com -nt i -nc. Per exemple, el diccionari transcriu «blanc» amb nasal velar final, sense k. Per tant, no forçarem totes les lletres escrites a sonar ni afegirem una vocal després de t o k. En «lil·liputenc», la manca de k podria respondre a aquesta regla; encara cal comprovar si l’àudio conserva la nasal velar i la resta de sons. En canvi, «llit» i «poc» són controls amb t i k que s’han de conservar. [GEIEC, fenòmens consonàntics](https://geiec.iec.cat/text/2.3), [blanc](https://www.diccionari.cat/catala-angles/blanc), [llit](https://www.diccionari.cat/catala-angles/llit), [poc](https://www.diccionari.cat/catala-angles/poc).
+Les oclusives finals requereixen una distinció: en català central hi ha simplificació de grups com -nt i -nc. Per exemple, el diccionari transcriu «blanc» amb nasal velar final, sense k. Inicialment es va proposar conservar aquesta simplificació a la mostra. **El docent ha aclarit després que vol les oclusives audibles en aquest model didàctic**, també en -nt i -nc. La mostra actual adopta aquest criteri: «blanc» i «lil·liputenc» acaben amb ŋk, i «gent» amb nt. És una dicció didàctica explícita, identificada al paquet i a la pàgina de comparació; no es presenta com una correcció de la pronúncia central espontània. No s’afegeixen vocals finals ni s’aplica una regla de fer sonar totes les lletres: la h muda i la u muda de gu/qu es mantenen mudes. [GEIEC, fenòmens consonàntics](https://geiec.iec.cat/text/2.3), [blanc](https://www.diccionari.cat/catala-angles/blanc), [gent](https://www.diccionari.cat/catala-angles/gent).
 
-La [mostra de sis mots](../audio/pronunciation/ca-central-gemination-finals.json) proposa **col·legi, metàl·lic, lil·liputenc, llit, poc i blanc**, amb IPA, fonts, ID i observacions. Només «lil·liputenc» ha estat assenyalat individualment pel docent; els altres són controls per a la comparació, no àudios declarats incorrectes. La seva transcripció és encara una proposta editorial amb dubte explícit de contrast lexicogràfic, especialment del timbre tònic. Les altres cinc propostes parteixen de les transcripcions del diccionari. S’utilitza l’inventari admès per Azure; l’efecte real de `l.l` necessita escolta i no es dona per garantit.
+La [mostra de nou mots](../audio/pronunciation/ca-central-gemination-finals.json) proposa **col·legi, metàl·lic, lil·liputenc, llit, poc, blanc, gent, paguessin i passàvem**, amb IPA, fonts, ID i observacions. «Lil·liputenc», «paguessin» i «passàvem» han estat assenyalats individualment pel docent; els altres són controls, no àudios declarats incorrectes. La transcripció de «lil·liputenc» conserva un dubte explícit de contrast lexicogràfic, especialment del timbre tònic. Les propostes dels verbs parteixen del lema i la flexió, sense presentar-les com si fossin transcripcions exactes publicades. «Blanc» i «gent» indiquen l’ajust didàctic respecte de la font. L’efecte real de `l.l`, nt i ŋk necessita escolta i no es dona per garantit.
+
+El docent sent aproximadament «pagasín» i «passavém». Les grafies del banc ja són correctes. Fixem **pa-GUES-sin**, `pə.ˈɣe.sin`, i **pa-SSÀ-vem**, `pə.ˈsa.βəm`; totes dues són planes. La u de gu continua muda i la e àtona final de «passàvem» continua neutra en aquest model central. [Conjugació de pagar](https://www.softcatala.org/conjugador-de-verbs/verb/pagar/), [conjugació de passar al DIEC](https://dlc.iec.cat/Verbs?IdE=0006304).
 
 ```text
 node tools/prepare-pronunciation-sample.cjs
@@ -74,7 +76,21 @@ node tools/prepare-pronunciation-sample.cjs --write
 node tools/check-pronunciations.cjs
 ```
 
-El pla es desa a `output/audio/pronunciation-sample/plan.json`, inclou les rutes dels originals per comparar i té `executable: false`. No carrega credencials ni envia peticions Azure; tampoc s’afegeix automàticament a la cua d’instruccions ni altera el lot actiu. El paquet candidat té un ID separat i conserva veu, ritme i format per poder valorar la diferència de pronunciació. Cap substitució al manifest públic fins a la revisió.
+El pla es desa a `output/audio/pronunciation-sample/plan.json`, inclou les rutes dels originals i té `executable: false`: el fitxer JSON no s’executa directament. El preparador no carrega credencials ni envia peticions Azure. El paquet candidat té un ID separat i conserva veu, ritme i format per poder valorar la diferència de pronunciació.
+
+### Generació protegida de la mostra
+
+```text
+node tools/run-pronunciation-sample.cjs
+node tools/check-pronunciation-sample.cjs
+node tools/run-pronunciation-sample.cjs --execute --after-current-batches
+```
+
+Només l’última ordre pot enviar peticions. El llançador reconstrueix i valida la mostra des de la font, espera que **mots i instruccions** hagin acabat i comprova que el pressupost estigui lliure. Si un lot anterior falla o desapareix el seu procés, s’atura. Comparteix `usage.json`, `usage.lock`, STOP, mínim de quatre segons entre inicis, límit mensual i absència de reintents Azure. La primera prova és de nou peticions i 776 caràcters estimats; no inicia tot el banc IPA.
+
+`output/audio/comparacio-pronunciacio.html` mostra els originals i les variants, amb seguiment de la cua i reproducció manual. Els resultats van al paquet candidat, sense sobreescriure els originals ni activar el manifest públic. L’estat és a `output/audio/pronunciation-sample-status.json`. La validació tècnica de l’MP3 no és una aprovació de la pronunciació.
+
+El generador admet ara IPA per qualsevol mot o pseudoparaula en un paquet explícit `generationPolicy.requireIpa: true`. No s’aplica accidentalment als paquets ordinaris. Comparteix exactament el constructor SSML i el validador fonètic amb els plans fora de línia. La identitat del paquet incorpora una empremta de tots els ID, grafies i IPA del banc de síntesi; una transcripció canviada exigeix un paquet nou i no reaprofita silenciosament un MP3 antic. Aquesta base permet ampliar l’IPA més enllà de les dièresis, començant pels errors anotats i les famílies amb risc, sense donar per correcte tot el lot original ni totes les propostes fonètiques.
 
 ## Velocitat del reproductor
 

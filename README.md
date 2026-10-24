@@ -84,6 +84,8 @@ Hi ha una primera pantalla d’alumnat a **`/ca/dictat/`**, accessible des de «
 
 La preparació d’àudios és local i encara no està activada al web. Els **227 mots amb dièresi** tenen una [taula IPA editable](audio/pronunciation/ca-central-diaeresis.tsv), amb fonts i dubtes explícits, per a una prova posterior al lot sense dièresi. Vegeu el [procediment de pronunciació i revisió](docs/PRONUNCIACIO.md). Preparar el pla SSML no envia peticions a Azure ni altera el catàleg o els codis.
 
+La revisió inclou també geminació, consonants finals i accents verbals. Hi ha una mostra de nou mots amb **dicció didàctica explícita**, incloent «paguessin» i «passàvem», que es pot generar amb IPA després dels lots actuals. El generador comparteix quota i represa, conserva originals i exigeix un paquet nou si canvien els fonemes. `node tools/run-pronunciation-sample.cjs` només simula; la generació real requereix `--execute --after-current-batches` i manté els resultats pendents d’escolta.
+
 L’aparença ofereix **Sistema, Clar i Fosc**, compartits entre preparador i dictat, amb el full i el PDF sempre clars. Les instruccions del dictat es preparen com a cinc MP3 Azure estàtics, un per llargada, amb text compartit amb la pantalla. `node tools/run-instructions-batch.cjs` fa només una simulació; `--execute --after-words` encua la generació després del lot principal, compartint pressupost, bloqueig i represa. Cap àudio no s’activa públicament sense revisió.
 
 ## Desenvolupament i comprovació
@@ -98,6 +100,7 @@ node tools/check-lexicon.cjs
 node tools/check-seeds.cjs
 node tools/check-seeds-v2.cjs
 node tools/check-pronunciations.cjs
+node tools/check-pronunciation-sample.cjs
 node tools/check-dictation-session.cjs
 node tools/check-dictation.cjs
 node tools/check-local-files.cjs

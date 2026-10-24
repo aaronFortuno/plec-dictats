@@ -2,6 +2,7 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
+const {analyzeIpa} = require('./ipa-inventory.cjs');
 
 const ROOT = path.resolve(__dirname, '..');
 const DEFAULT_CATALOG = path.join(ROOT, 'catalogs', 'ca', 'editions', 'seed-1.json');
@@ -76,6 +77,7 @@ function validatePack(manifest, packId) {
     fail(`El mapa files del pack «${id}» no és vàlid.`);
   }
   if(pack.generationPolicy?.excludeDiaeresis!==undefined && typeof pack.generationPolicy.excludeDiaeresis!=='boolean')fail('La política de dièresi ha de ser booleana.');
+  if(pack.generationPolicy?.requireIpa!==undefined && typeof pack.generationPolicy.requireIpa!=='boolean')fail('La política IPA ha de ser booleana.');
   if (pack.contentFingerprint !== undefined && !/^[a-f0-9]{64}$/.test(pack.contentFingerprint)) fail('Fingerprint del contingut invàlid.');
   for (const relativePath of Object.values(pack.files)) {
     validateRelativePath(relativePath, `Ruta del pack ${id}`);
@@ -93,9 +95,11 @@ function wordFileName(text) {
   return `${text.normalize('NFC').toLowerCase()}.mp3`;
 }
 
-function buildSsml(pack, text) {
+function buildSsml(pack, text, ipa) {
   const escapedText = escapeXml(text);
-  const billableBody = `<prosody rate="${pack.rate}">${escapedText}</prosody>`;
+  if (ipa !== undefined) analyzeIpa(ipa);
+  const content = ipa === undefined ? escapedText : `<phoneme alphabet="ipa" ph="${escapeXml(ipa)}">${escapedText}</phoneme>`;
+  const billableBody = `<prosody rate="${pack.rate}">${content}</prosody>`;
   return {
     ssml: `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="${pack.locale}"><voice name="${pack.voice}">${billableBody}</voice></speak>`,
     billableBody,
@@ -121,6 +125,8 @@ function buildJobs(seed, manifest, options = {}) {
     if (seenIds.has(entry.id)) fail(`ID duplicat al catàleg: ${entry.id}.`);
     seenIds.add(entry.id);
     if (entry.mode !== mode) continue;
+    if (pack.generationPolicy?.requireIpa && !entry.ipa) fail('El paquet exigeix IPA per a tots els mots.');
+    if (!pack.generationPolicy?.requireIpa && entry.ipa !== undefined) fail('La síntesi IPA necessita un paquet explícit requireIpa.');
 
     let fileName;
     if (mode === 'instructions') {
@@ -137,9 +143,10 @@ function buildJobs(seed, manifest, options = {}) {
     jobs.push({
       id: entry.id,
       text: entry.text,
+      ...(entry.ipa !== undefined ? {ipa:entry.ipa} : {}),
       mode,
       relativePath,
-      ...buildSsml(pack, entry.text)
+      ...buildSsml(pack, entry.text, entry.ipa)
     });
   }
 

@@ -3,34 +3,12 @@
 // Offline only: this module never loads credentials or calls a synthesis service.
 const fs = require('node:fs');
 const path = require('node:path');
-const { ROOT, escapeXml, countCharacters, wordFileName, validatePack } = require('./audio-plan.cjs');
+const { ROOT, buildSsml, wordFileName, validatePack } = require('./audio-plan.cjs');
+const {analyzeIpa} = require('./ipa-inventory.cjs');
 
 const SOURCE = path.join(ROOT, 'audio/pronunciation/ca-central-diaeresis.tsv');
 const METADATA = path.join(ROOT, 'audio/pronunciation/ca-central-diaeresis.json');
 const HEADER = ['mot', 'ipa', 'estat', 'base', 'lema', 'fonts', 'notes', 'id'];
-const VOWELS = 'aɔəeɛiou';
-// Microsoft ca-ES inventory; affricates must be matched before individual phones.
-const PHONES = ['t͡ʃ', 'd͡ʒ', ...'aɔəeɛioubβdðfgɣjk lʎmnŋɲpɾrsʃtθwxzʒ'.replace(/ /g, '')];
-
-function analyzeIpa(ipa) {
-  if (typeof ipa !== 'string' || (ipa.match(/ˈ/g) || []).length !== 1) throw new Error('Cal exactament un accent primari IPA.');
-  const syllables = ipa.split('.');
-  let stressedSyllable = 0;
-  syllables.forEach((syllable, index) => {
-    if (!syllable || !/^[ˈˌ]?[^ˈˌ]+$/u.test(syllable)) throw new Error('Accent o frontera de síl·laba incorrectes.');
-    if (syllable.startsWith('ˈ')) stressedSyllable = index + 1;
-    let remaining = syllable.replace(/^[ˈˌ]/u, '');
-    let nuclei = 0;
-    while (remaining) {
-      const phone = PHONES.find(candidate => remaining.startsWith(candidate));
-      if (!phone) throw new Error(`Fonema no admès per Azure ca-ES: ${remaining}.`);
-      if (VOWELS.includes(phone)) nuclei += 1;
-      remaining = remaining.slice(phone.length);
-    }
-    if (nuclei !== 1) throw new Error('Cada síl·laba ha de tenir un nucli vocàlic; usa j/w per a les semivocals.');
-  });
-  return { syllables: syllables.length, stressedSyllable, stressedIpa: syllables[stressedSyllable - 1].replace('ˈ', '') };
-}
 
 function parseTsv(text) {
   const lines = text.replace(/^\uFEFF/u, '').trimEnd().split(/\r?\n/u);
@@ -74,13 +52,8 @@ function validateRows(rows, catalog, metadata) {
 }
 
 function buildPhonemeSsml(pack, row) {
-  analyzeIpa(row.ipa);
-  const billableBody = `<prosody rate="${escapeXml(pack.rate)}"><phoneme alphabet="ipa" ph="${escapeXml(row.ipa)}">${escapeXml(row.mot)}</phoneme></prosody>`;
-  return {
-    ssml: `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="${escapeXml(pack.locale)}"><voice name="${escapeXml(pack.voice)}">${billableBody}</voice></speak>`,
-    billableBody,
-    billableCharacters: countCharacters(billableBody)
-  };
+  if (typeof row.ipa !== 'string') throw new Error('Falta la transcripció IPA.');
+  return buildSsml(pack, row.mot, row.ipa);
 }
 
 function buildPlan(rows, catalog, metadata) {
