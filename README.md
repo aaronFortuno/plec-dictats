@@ -86,6 +86,8 @@ La preparació d’àudios és local i encara no està activada al web. Els **22
 
 La revisió inclou també geminació, consonants finals i accents verbals. Hi ha una mostra de nou mots amb **dicció didàctica explícita**, incloent «paguessin» i «passàvem», que es pot generar amb IPA després dels lots actuals. El generador comparteix quota i represa, conserva originals i exigeix un paquet nou si canvien els fonemes. `node tools/run-pronunciation-sample.cjs` només simula; la generació real requereix `--execute --after-current-batches` i manté els resultats pendents d’escolta.
 
+La [taula general de pronunciacions](audio/pronunciation/ca/central-didactic.tsv) és editable i cobreix els 3.299 mots: 240 propostes IPA i 3.059 transcripcions encara buides, totes pendents de validació final. Hi ha també [text de lectura](audio/pronunciation/ca/central-didactic-ipa.txt), [JSON obert](audio/pronunciation/ca/central-didactic.json) i una [guia d’edició i reutilització](audio/pronunciation/README.md). Les varietats i els criteris de dicció tenen perfils separats. La validació d’una transcripció no equival a validar la locució d’una veu concreta.
+
 L’aparença ofereix **Sistema, Clar i Fosc**, compartits entre preparador i dictat, amb el full i el PDF sempre clars. Les instruccions del dictat es preparen com a cinc MP3 Azure estàtics, un per llargada, amb text compartit amb la pantalla. `node tools/run-instructions-batch.cjs` fa només una simulació; `--execute --after-words` encua la generació després del lot principal, compartint pressupost, bloqueig i represa. Cap àudio no s’activa públicament sense revisió.
 
 ## Desenvolupament i comprovació
@@ -101,6 +103,7 @@ node tools/check-seeds.cjs
 node tools/check-seeds-v2.cjs
 node tools/check-pronunciations.cjs
 node tools/check-pronunciation-sample.cjs
+node tools/check-pronunciation-table.cjs
 node tools/check-dictation-session.cjs
 node tools/check-dictation.cjs
 node tools/check-local-files.cjs

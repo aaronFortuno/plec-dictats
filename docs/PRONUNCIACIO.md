@@ -46,7 +46,7 @@ Cada petició candidata té aquesta estructura, conservant el mot original:
 <prosody rate="-10%"><phoneme alphabet="ipa" ph="ə.tə.pə.ˈit">atapeït</phoneme></prosody>
 ```
 
-El pla té `executable: false` i totes les revisions auditives pendents. No està connectat al generador actual: abans cal escoltar una mostra, resoldre els dubtes i integrar la generació amb les mateixes proteccions de quota i represa. El paquet candidat `ca-central-alba-ipa-v1` té una ruta diferent del paquet en curs. No s’ha modificat `audio/manifest.json`, el lot de 3.072 mots ni els MP3 de comparació.
+El pla de 227 té `executable: false` i totes les revisions auditives pendents. No s’envia automàticament al servei: abans cal escoltar una mostra i resoldre els dubtes. El generador ja admet IPA amb les mateixes proteccions de quota i represa, provades en els lots petits descrits més avall. El paquet candidat `ca-central-alba-ipa-v1` té una ruta diferent del paquet original. No s’ha modificat `audio/manifest.json` ni els MP3 de comparació originals.
 
 La primera mostra proposada és de vuit mots: **atapeït, conduïdes, agraïm, canviïn, aigüera, qüestió, raïm i increïble**. Cobreix accent final i intern, hiat tònic i àton, ü amb w i geminació. Cal comprovar-hi dicció natural i accent abans d’enviar la tanda completa. Després de generar-los, els MP3 continuaran pendents de revisió docent abans de publicar-los.
 
@@ -91,6 +91,18 @@ Només l’última ordre pot enviar peticions. El llançador reconstrueix i vali
 `output/audio/comparacio-pronunciacio.html` mostra els originals i les variants, amb seguiment de la cua i reproducció manual. Els resultats van al paquet candidat, sense sobreescriure els originals ni activar el manifest públic. L’estat és a `output/audio/pronunciation-sample-status.json`. La validació tècnica de l’MP3 no és una aprovació de la pronunciació.
 
 El generador admet ara IPA per qualsevol mot o pseudoparaula en un paquet explícit `generationPolicy.requireIpa: true`. No s’aplica accidentalment als paquets ordinaris. Comparteix exactament el constructor SSML i el validador fonètic amb els plans fora de línia. La identitat del paquet incorpora una empremta de tots els ID, grafies i IPA del banc de síntesi; una transcripció canviada exigeix un paquet nou i no reaprofita silenciosament un MP3 antic. Aquesta base permet ampliar l’IPA més enllà de les dièresis, començant pels errors anotats i les famílies amb risc, sense donar per correcte tot el lot original ni totes les propostes fonètiques.
+
+## Taula general editable i reutilitzable
+
+La font de noves revisions és ara [ca/central-didactic.tsv](../audio/pronunciation/ca/central-didactic.tsv), amb 3.299 files alfabètiques. Hi ha 240 propostes IPA i 3.059 camps encara buits. Les propostes de dièresis importades del perfil central formal tenen estat de revisió de dicció, llevat dels casos amb dubtes lingüístics, que es mantenen pendents de contrast. Cap fila no està encara validada. Les fonts i els estats es conserven als [exports JSON](../audio/pronunciation/ca/central-didactic.json) i [TXT de lectura](../audio/pronunciation/ca/central-didactic-ipa.txt).
+
+El docent ha afegit «brànquia» (nasal poc perceptible), «isòtop» (vocal final i accent), «monosíl·lab» (geminació i consonant final) i «pentàgon» (tònica desplaçada). Les propostes centrals són `ˈbɾaŋ.ki.ə`, `i.ˈzɔ.tup`, `mu.nu.ˈsil.ləp` i `pən.ˈta.ɣun`. En «monosíl·lab» es proposa p final, corresponent a l’ensordiment de la b escrita; no es força una b sonora ni s’afegeix una vocal. Les dues primeres parteixen de transcripcions lexicogràfiques; les dues últimes són editorials amb dubtes de contrast explícits. Són propostes per a prova, no solucions auditives ja aprovades.
+
+El 24/10/2026 han acabat el lot original de 3.072 mots, les cinc instruccions i la mostra IPA de nou mots. A continuació s’han sintetitzat aquests quatre casos des de la taula, amb el paquet separat `ca-central-alba-feedback-2-v1`, quatre peticions i 361 caràcters estimats, conservant quota, bloqueig i originals. La prova local és a `output/audio/comparacio-noves-incidencies.html`; l’estat és `output/audio/feedback-2-status.json`. Les dues mostres IPA continuen pendents d’escolta docent i no s’han publicat ni activat els MP3. Els 227 mots amb dièresi encara no s’han sintetitzat amb IPA.
+
+Cada fila identifica llengua, varietat i dicció. El registre permet taules independents per a varietats futures; no es trasllada automàticament la IPA central. La revisió lingüística pot marcar-se amb revisor i data, però l’aprovació auditiva continua vinculada a cada paquet, veu i versió de síntesi. Es pot aprofitar la transcripció amb altres veus sense atribuir-los una validació que encara no tenen.
+
+`pronunciation-table.cjs --export` actualitza només els derivats i no sobreescriu el TSV. `--check` els contrasta amb la font i `--plan "mot,mot"` prepara una selecció de dades sense síntesi. La mostra existent consulta aquesta taula quan es prepara una execució nova; els processos actius conserven la seva còpia en memòria i la identitat del paquet continua protegint canvis d’IPA. La [guia de la taula](../audio/pronunciation/README.md) explica camps, estats, procedència, format i contribucions.
 
 ## Velocitat del reproductor
 

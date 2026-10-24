@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "language": "ca",
+  "dialect": "central",
+  "diction": "didactic-explicit",
+  "entries": [
+    {
+      "id": "p-1gyv8iu",
+      "mot": "brànquia",
+      "ipa": "ˈbɾaŋ.ki.ə",
+      "status": "prepared",
+      "basis": "dictionary-word",
+      "sources": [
+        "https://www.diccionari.cat/cerca/diccionari-catala-angles?field_faceta_cerca_1=5058&page=588&search_api_fulltext_cust=&search_api_fulltext_cust_1="
+      ],
+      "note": "El docent sent «bràquia», amb la nasal molt poc perceptible. La font transcriu bɾáŋkiə: conservar ŋ davant k i l’accent inicial. Fronteres sil·làbiques adaptades al format Azure; pendent d’escolta."
+    },
+    {
+      "id": "p-1tgyuw9",
+      "mot": "isòtop",
+      "ipa": "i.ˈzɔ.tup",
+      "status": "prepared",
+      "basis": "dictionary-word",
+      "sources": [
+        "https://www.diccionari.cat/catala-angles/isotop"
+      ],
+      "note": "El docent sent «isòtóp». La font transcriu izɔ́tup: accent a ò, essa sonora i o àtona final reduïda a u en central. Pendent d’escolta."
+    },
+    {
+      "id": "p-jifc1x",
+      "mot": "monosíl·lab",
+      "ipa": "mu.nu.ˈsil.ləp",
+      "status": "needs-review",
+      "basis": "editorial-proposal",
+      "sources": [
+        "https://diposit.ub.edu/bitstreams/5df733d0-52b1-41e9-b6ce-ff8631140869/download",
+        "https://geiec.iec.cat/text/2.3",
+        "https://sf.iec.cat/apunts_llengua/apollo-i-el-vol-del-punt/"
+      ],
+      "note": "El docent sent «monosíla», sense geminació ni consonant final perceptible. La font de fonologia documenta la reducció de les dues o del prefix en aquest mot. Proposta editorial amb l·l explícita, accent a sí i p final per ensordiment de la b escrita. Cal contrast lingüístic complet i escolta."
+    },
+    {
+      "id": "p-mrqyf5",
+      "mot": "pentàgon",
+      "ipa": "pən.ˈta.ɣun",
+      "status": "needs-review",
+      "basis": "editorial-proposal",
+      "sources": [
+        "https://www.diccionari.cat/catala-angles/pentagonal",
+        "https://www.uoc.edu/ca/serveis/llengua-estil/criteris/ortografia/accentuacio"
+      ],
+      "note": "El docent sent aproximadament «pentagún». Proposta editorial central amb accent a tà i vocal final u àtona. La referència lèxica és del derivat pentagonal, no una transcripció exacta publicada de pentàgon. Cal contrast del mot exacte i escolta."
+    }
+  ]
+}

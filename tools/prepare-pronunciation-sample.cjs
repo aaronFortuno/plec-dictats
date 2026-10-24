@@ -37,6 +37,17 @@ function buildSample(metadata, catalog, manifest) {
 
 function loadSample() {
   const metadata = A.readJson(SOURCE);
+  const tablePath=path.join(A.ROOT,'audio/pronunciation/ca/central-didactic.tsv');
+  if(fs.existsSync(tablePath)){
+    // Current editions select IDs; the editable per-variety table supplies pronunciations.
+    // An already running batch has its own in-memory snapshot and is unaffected by edits.
+    const table=require('./pronunciation-table.cjs').load('ca-central-didactic-v1');
+    const byId=new Map(table.rows.map(row=>[row.id,row]));
+    metadata.entries=metadata.entries.map(entry=>{
+      const row=byId.get(entry.id);if(!row?.ipa)throw new Error('Falta IPA a la taula per a '+entry.mot+'.');
+      return {...entry,ipa:row.ipa,status:['proposta','validada'].includes(row.estat_ipa)?'prepared':'needs-review',basis:row.base,sources:row.fonts?row.fonts.split(' | '):[],note:row.notes};
+    });
+  }
   return buildSample(metadata, A.readJson(path.join(A.ROOT, metadata.catalogPath)).catalog, A.readJson(A.DEFAULT_MANIFEST));
 }
 

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "profiles": [{
+    "id": "ca-central-didactic-v1",
+    "language": "ca",
+    "dialect": "central",
+    "diction": "didactic-explicit",
+    "label": "Català central · dicció didàctica explícita",
+    "table": "ca/central-didactic.tsv",
+    "export": "ca/central-didactic.json",
+    "readable": "ca/central-didactic-ipa.txt",
+    "catalogPath": "catalogs/ca/editions/seed-1.json",
+    "catalogFingerprint": "ee94edbd3b2d4fb4d44d1cd66f70b970e17520029d952593d69e5adb2139bbf5",
+    "alphabet": "ipa-azure-ca-ES",
+    "status": "draft-pending-linguistic-and-auditory-review",
+    "note": "Una fila per mot del banc. IPA buida quan encara no hi ha proposta. Les propostes amb dièresi importades del perfil central formal necessiten revisió segons el criteri didàctic. La validació d’una transcripció no valida cap enregistrament ni cap veu."
+  }]
+}
