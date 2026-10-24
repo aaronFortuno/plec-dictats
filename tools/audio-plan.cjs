@@ -75,6 +75,7 @@ function validatePack(manifest, packId) {
   if (!pack.files || typeof pack.files !== 'object' || Array.isArray(pack.files)) {
     fail(`El mapa files del pack «${id}» no és vàlid.`);
   }
+  if(pack.generationPolicy?.excludeDiaeresis!==undefined && typeof pack.generationPolicy.excludeDiaeresis!=='boolean')fail('La política de dièresi ha de ser booleana.');
   for (const relativePath of Object.values(pack.files)) {
     validateRelativePath(relativePath, `Ruta del pack ${id}`);
   }
@@ -144,11 +145,16 @@ function buildJobs(seed, manifest, options = {}) {
     if (!requested.length || requested.some(word => !byWord.has(word))) fail('Algun mot de la mostra no existeix al banc i mode seleccionats.');
     selection = requested.map(word => byWord.get(word));
   }
+  const deferred=pack.generationPolicy?.excludeDiaeresis
+    ?selection.filter(job=>/[ïü]/iu.test(job.text.normalize('NFC'))).map(job=>({id:job.id,text:job.text,reason:'diaeresis-pending-review'}))
+    :[];
+  const deferredIds=new Set(deferred.map(item=>item.id));
+  selection=selection.filter(job=>!deferredIds.has(job.id));
   if (options.limit !== undefined) {
     if (!Number.isSafeInteger(options.limit) || options.limit < 0) fail('El límit ha de ser un enter no negatiu.');
-    return { pack, jobs: selection.slice(0, options.limit), totalAvailable: selection.length };
+    return { pack, jobs: selection.slice(0, options.limit), totalAvailable: selection.length, deferred };
   }
-  return { pack, jobs: selection, totalAvailable: selection.length };
+  return { pack, jobs: selection, totalAvailable: selection.length, deferred };
 }
 
 function summarize(jobs) {
@@ -191,6 +197,7 @@ function printPlan(plan) {
   const summary = summarize(plan.jobs);
   console.log(`Pack: ${plan.pack.id} · veu: ${plan.pack.voice}`);
   console.log(`Mots: ${summary.words} · caràcters estimats: ${summary.characters} · peticions: ${summary.requests}`);
+  if(plan.deferred.length)console.log(`Ajornats per dièresi: ${plan.deferred.length}. El catàleg i els codis es conserven.`);
   for (const job of plan.jobs) console.log(`${job.id}\t${job.relativePath}\t${job.billableCharacters}`);
 }
 

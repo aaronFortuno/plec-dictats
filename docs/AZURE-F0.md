@@ -2,6 +2,8 @@
 
 Preparació: 24 d’octubre de 2026. Encara no s’ha creat cap recurs ni generat cap àudio real.
 
+**Actualització:** el recurs F0 ja s’ha configurat i la mostra inicial de dotze mots s’ha generat. La revisió docent accepta el ritme i identifica problemes de pronunciació en mots amb dièresi. La política actual els ajorna en la generació; per això repetir el pla de la mostra de dotze mots ara en retorna vuit i quatre ajornats. Vegeu [PRONUNCIACIO.md](PRONUNCIACIO.md). Les estimacions de la mostra completa que segueixen documenten la primera prova, anterior al filtre.
+
 ## Compte i recurs
 
 1. Entra a [Azure](https://azure.microsoft.com/free/) amb el teu compte Microsoft i completa personalment el registre. La verificació del compte i qualsevol dada de pagament es fan al portal, mai al xat ni al repositori. Revisa les condicions que et presenti Azure per a la teva subscripció; no contractis serveis addicionals per seguir aquesta guia.
@@ -35,6 +37,8 @@ La sortida inicial queda a `output/audio/`, fora dels fitxers publicats. Escolta
 Una altra veu o varietat es publica com a paquet diferent, amb la seva pròpia carpeta i metadades. Les gravacions manuals poden utilitzar el mateix contracte. Una varietat lingüística no es dedueix només del codi `ca-ES` o `es-ES`: es revisa el contingut de cada paquet.
 
 ## Primera prova en aquest ordinador
+
+**Alternativa preparada per a aquest ordinador:** pots desar la configuració a `C:/Users/afortun8/Desktop/Projects/Escola/.private/plec/azure-speech.json`, fora del repositori i de l’arrel del web. Completa `region` (codi de regió) i `key` (Key 1 o Key 2: només una). `endpoint` és opcional, com a referència; el generador usa l’adreça regional d’Azure i no envia la clau a l’adreça que s’hagi enganxat al fitxer. Mantén `pricingTier: "F0"` només si has comprovat F0 al portal. La carpeta privada conté un `.gitignore` que n’exclou el contingut. El fitxer es llegeix només quan es demana una generació real; la simulació no necessita credencials. Si ja hi ha variables de Speech al terminal, tenen prioritat i s’han d’indicar les dues. Amb aquest fitxer pots ometre el pas 2 d’introducció de credencials al terminal; la confirmació de F0 continua essent necessària.
 
 Les eines locals ja estan comprovades amb respostes simulades, sense xarxa. Falta validar una crida real amb el recurs F0 que crearàs. Cal tenir Node.js disponible al terminal; en aquest projecte s’han comprovat amb Node 24.19.
 

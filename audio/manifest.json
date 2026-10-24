@@ -16,6 +16,7 @@
       "format": "audio-24khz-48kbitrate-mono-mp3",
       "basePath": "assets/audio/ca/central-alba-v1/",
       "status": "pending",
+      "generationPolicy": {"excludeDiaeresis": true},
       "files": {}
     }
   ]

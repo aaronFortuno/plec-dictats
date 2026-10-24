@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "pack": "ca-central-alba-v1",
+  "date": "2026-10-24",
+  "source": "Revisió auditiva docent de la mostra inicial",
+  "policy": "Ajornar provisionalment tots els mots amb ï o ü. Conservar grafies, IDs i codis del catàleg.",
+  "sample": [
+    {"word":"atapeït","status":"rejected","reason":"L’usuari detecta la síl·laba tònica incorrecta."},
+    {"word":"conduïdes","status":"rejected","reason":"L’usuari detecta una pronunciació incorrecta."},
+    {"word":"intuïa","status":"pending","reason":"Forma amb dièresi; pendent de revisió específica."},
+    {"word":"canviïn","status":"accepted-sample","reason":"L’usuari confirma la pronunciació; s’ajorna igualment per la política provisional."}
+  ],
+  "playback": {"allowSlowerPlayback": true, "preservePitch": true, "implemented": false},
+  "pronunciationStrategy": "Provar IPA amb accent tònic per excepcions en una tasca separada; no alterar el catàleg ni substituir automàticament dièresis per accents."
+}

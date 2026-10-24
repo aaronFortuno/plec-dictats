@@ -22,6 +22,8 @@ El dictat oral i la resposta digital són treball pendent. S’han preparat un m
 
 La [guia d’Azure F0](docs/AZURE-F0.md) explica el compte, el recurs gratuït, la mostra i els controls de consum. `node tools/audio-plan.cjs` i `node tools/generate-audio.cjs` només simulen per defecte; la generació real requereix indicadors explícits i credencials al terminal. Les comprovacions sense xarxa s’executen amb `node tools/check-audio-tools.cjs`.
 
+Després de l’escolta de la mostra s’ajornen els 227 mots amb dièresi i es preparen les altres 3.072 paraules. La [política de pronunciació](docs/PRONUNCIACIO.md) documenta els casos detectats i la futura prova amb fonemes. `node tools/run-audio-batch.cjs` calcula el lot complet i `--execute` l’inicia amb seguiment local i aturada entre peticions; les credencials també es poden llegir d’un fitxer privat fora del repositori i de l’arrel del web.
+
 ## Com funciona l'algoritme
 
 El codi empaqueta una edició del banc, la configuració dels filtres i un número de variant. Primer es construeix el conjunt de candidats. Després, una successió reproduïble d'enters tria posicions sense reposició mitjançant una barreja parcial de Fisher–Yates. L'ordre d'extracció és l'ordre del dictat: no es fa una ordenació alfabètica posterior.

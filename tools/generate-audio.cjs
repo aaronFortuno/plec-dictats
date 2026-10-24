@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const fsp = require('node:fs/promises');
 const path = require('node:path');
 const crypto = require('node:crypto');
+const {loadAzureEnvironment} = require('./azure-credentials.cjs');
 const {
   DEFAULT_CATALOG,
   DEFAULT_MANIFEST,
@@ -193,6 +194,7 @@ async function writeResults(outputRoot, plan, completed, now) {
     status: 'pending-review',
     generatedAt: now().toISOString(),
     note: 'Resultat local pendent de revisió humana; no actualitza el manifest públic ni copia àudios a assets/.',
+    deferred: plan.deferred,
     files
   };
   const resultPath = path.join(outputRoot, 'results', `${plan.pack.id}-${plan.jobs[0]?.mode || 'empty'}.json`);
@@ -217,6 +219,7 @@ async function runGeneration(options, dependencies = {}) {
   validateNonNegativeInteger(external, '--used-elsewhere');
 
   log(`Estimació: ${estimate.words} mots, ${estimate.characters} caràcters i ${estimate.requests} peticions (abans d’ometre MP3 vàlids).`);
+  if(plan.deferred.length)log(`Ajornats per dièresi: ${plan.deferred.length}. No s’envien a Azure, encara que tinguin un MP3 de prova anterior.`);
   log('El límit local és conservador i no consulta el consum real d’Azure; comprova F0 i el consum al portal.');
   if (!options.execute || !options.confirmF0) {
     const missing = [!options.execute && '--execute', !options.confirmF0 && '--confirm-f0'].filter(Boolean).join(' i ');
@@ -294,10 +297,13 @@ async function runGeneration(options, dependencies = {}) {
     await atomicWriteJson(identityPath,{fingerprint,...identity});
     log(`Pendents de descàrrega: ${pending.length}. Inicis separats com a mínim ${REQUEST_INTERVAL_MS / 1000} s; sense retries automàtics.`);
     processingStarted = true;
+    dependencies.onProgress?.({total:plan.jobs.length,completed:completed.length,downloaded:0,skipped:completed.length});
 
     for (let index = 0; index < pending.length; index += 1) {
       const { job, destination } = pending[index];
+      if(dependencies.shouldStop?.())throw new StopBatch('cancelled');
       await waitForRequestSlot(ledger, now, sleep);
+      if(dependencies.shouldStop?.())throw new StopBatch('cancelled');
       const startedAt = now();
       if(utcMonth(startedAt)!==month) throw new StopBatch('month-changed');
       await reserveRequest(ledger, ledgerPath, month, job.billableCharacters, startedAt);
@@ -305,6 +311,7 @@ async function runGeneration(options, dependencies = {}) {
       const audio = await requestMp3(job, plan.pack, azure, fetchImpl);
       await writeCompleteFile(destination, audio);
       completed.push(job);
+      dependencies.onProgress?.({total:plan.jobs.length,completed:completed.length,downloaded:index+1,skipped:completed.length-index-1,lastWord:job.text});
     }
 
     const resultPath = await writeResults(outputRoot, plan, completed, now);
@@ -362,7 +369,8 @@ function printHelp() {
   console.log('Ús: node tools/generate-audio.cjs [--mode words|pseudo] [--pack ID] [--limit N] [--words "mot,mot,..."] [--used-elsewhere N] [--execute --confirm-f0]');
   console.log('Per defecte només simula, sense xarxa. La generació real exigeix --execute I --confirm-f0.');
   console.log('--confirm-f0 declara que l’usuari usa F0; NO comprova l’SKU via API. Verifica’l al portal d’Azure.');
-  console.log('SPEECH_KEY i SPEECH_REGION es llegeixen només de l’entorn. Límit local: 400.000 caràcters per mes UTC.');
+  console.log('Credencials: SPEECH_KEY/SPEECH_REGION a l’entorn o fitxer privat ../.private/plec/azure-speech.json, fora del web.');
+  console.log('Límit local: 400.000 caràcters per mes UTC. El fitxer privat només es llegeix amb --execute i --confirm-f0.');
   console.log('--used-elsewhere N declara consum extern del mateix recurs; es conserva el major valor declarat.');
 }
 
@@ -378,7 +386,7 @@ if (require.main === module) {
         ...options,
         seed: readJson(DEFAULT_CATALOG),
         manifest: readJson(DEFAULT_MANIFEST)
-      }, { fetch: globalThis.fetch });
+      }, { fetch: globalThis.fetch, env: options.execute && options.confirmF0 ? loadAzureEnvironment() : process.env });
       if (!result.ok) process.exitCode = 1;
     } catch {
       console.error('No s’ha pogut preparar la generació. Revisa els arguments i les dades locals; no s’ha fet cap reintents.');

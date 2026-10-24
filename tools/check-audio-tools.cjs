@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const fsp = require('node:fs/promises');
 const os = require('node:os');
 const path = require('node:path');
+const {loadAzureEnvironment} = require('./azure-credentials.cjs');
 const {
   buildJobs,
   buildSsml,
@@ -78,6 +79,18 @@ async function main() {
   });
 
   try {
+    const privateFixture=path.join(temporaryRoot,'credentials.json');
+    await fsp.writeFile(privateFixture,JSON.stringify({pricingTier:'F0',key:'clau-ficticia',region:'westeurope',endpoint:'només una referència'}));
+    const loaded=loadAzureEnvironment({},privateFixture);
+    assert.equal(loaded.SPEECH_KEY,'clau-ficticia');assert.equal(loaded.SPEECH_REGION,'westeurope');
+    const explicit={SPEECH_KEY:'altra-clau',SPEECH_REGION:'northeurope'};
+    assert.equal(loadAzureEnvironment(explicit,'fitxer-inexistent'),explicit);
+    const partial={SPEECH_REGION:'northeurope'};
+    assert.equal(loadAzureEnvironment(partial,privateFixture),partial,'No es barregen recursos amb un entorn parcial.');
+    await fsp.writeFile(privateFixture,JSON.stringify({pricingTier:'S0',key:'clau-ficticia',region:'westeurope'}));
+    assert.throws(()=>loadAzureEnvironment({},privateFixture));
+    await fsp.writeFile(privateFixture,'JSON invàlid amb una-clau-ficticia');
+    assert.throws(()=>loadAzureEnvironment({},privateFixture),error=>!error.message.includes('una-clau-ficticia'));
     const special = "aüma's & co";
     const specialPlan = buildJobs(seedWith(special), manifest, { mode: 'words' });
     const specialJob = specialPlan.jobs[0];
@@ -89,6 +102,12 @@ async function main() {
     assert.equal(specialJob.billableCharacters, countCharacters(specialJob.billableBody));
     assert.equal(wordFileName('AVIÓ'.normalize('NFC')), 'avió.mp3');
     assert.deepEqual(buildJobs(seedWith('avió','metge'),manifest,{words:['metge','avió','metge']}).jobs.map(job=>job.text),['metge','avió']);
+    const deferredManifest=structuredClone(manifest);
+    deferredManifest.packs[0].generationPolicy={excludeDiaeresis:true};
+    const diaeresisPlan=buildJobs(seedWith('país','atapeït','conduïdes','canviïn','aigu\u0308era','AVIÓ'),deferredManifest);
+    assert.deepEqual(diaeresisPlan.jobs.map(job=>job.text),['país','AVIÓ']);
+    assert.equal(diaeresisPlan.deferred.length,4,'La dièresi es detecta per grafia, també Unicode descompost.');
+    assert.equal(buildJobs(seedWith('avió','canviïn'),deferredManifest,{words:['canviïn']}).jobs.length,0);
     assert.throws(()=>buildJobs(seedWith('avió'),manifest,{words:['inexistent']}));
 
     assert.throws(() => wordFileName('../fora'), /nom de fitxer segur/);
@@ -185,6 +204,24 @@ async function main() {
       assert.equal(result.reason,'http-429');assert.equal(requests,1);
       const ledger=JSON.parse(await fsp.readFile(path.join(outputRoot,'audio','usage.json'),'utf8'));
       assert(ledger.months['2026-10'].reservedCharacters>0,'Es conserva la reserva conservadora tot i l’error.');
+    }
+
+    {
+      const outputRoot=await nextOutput();let requests=0;const progress=[];
+      const result=await runGeneration({...generationOptions(seedWith('avió','atapeït')),manifest:deferredManifest},{
+        outputRoot,env:{SPEECH_KEY:'prova-local',SPEECH_REGION:'westeurope'},fetch:async()=>{requests++;return mp3Response();},
+        now:fixedNow,sleep:async()=>{},log:()=>{},onProgress:event=>progress.push(event)
+      });
+      assert.equal(result.ok,true);assert.equal(requests,1);assert.equal(progress.at(-1).completed,1);
+      const resultManifest=JSON.parse(await fsp.readFile(result.resultPath,'utf8'));
+      assert.equal(resultManifest.deferred[0].text,'atapeït');assert(!resultManifest.files['id-1']);
+    }
+
+    {
+      const outputRoot=await nextOutput();let requests=0;
+      const result=await runGeneration(generationOptions(seedWith('avió')),{outputRoot,env:{SPEECH_KEY:'prova-local',SPEECH_REGION:'westeurope'},
+        fetch:async()=>{requests++;return mp3Response();},now:fixedNow,sleep:async()=>{},log:()=>{},shouldStop:()=>true});
+      assert.equal(result.reason,'cancelled');assert.equal(requests,0,'Aturar el lot evita enviar el següent mot.');
     }
 
     {
