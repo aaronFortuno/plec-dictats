@@ -1,5 +1,11 @@
 # Historial
 
+## 2.5 · 24 d’octubre de 2026
+
+- Aparença Sistema, Clar i Fosc, compartida entre el preparador i el dictat. El selector queda ocult durant l’activitat; el full i el PDF mantenen el paper clar.
+- Instruccions amb MP3 estàtics en lloc de veu del navegador, amb un text compartit i una locució per llargada. Generació local encuada després del lot principal, amb les mateixes proteccions de pressupost, represa i bloqueig; publicació pendent de revisió.
+- Registre editable per anotar pronunciacions dubtoses i procediment per comparar accent IPA i entonació de paraula aïllada abans de substituir àudios.
+
 ## 2.4 · 24 d’octubre de 2026
 
 - Entrada d’alumnat a `/ca/dictat/`, amb codi manual, enllaç per a l’alumnat i compatibilitat amb enllaços antics. La ruta inclou llengua i preserva el subdirectori del projecte.

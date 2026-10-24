@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "defaultPacks": {"ca": "ca-central-alba-instructions-v1"},
+  "packs": [{
+    "id": "ca-central-alba-instructions-v1",
+    "language": "ca",
+    "dialect": "central",
+    "label": "Instruccions en català central · Alba",
+    "locale": "ca-ES",
+    "provider": "azure",
+    "voice": "ca-ES-AlbaNeural",
+    "rate": "-10%",
+    "format": "audio-24khz-48kbitrate-mono-mp3",
+    "textVersion": 1,
+    "basePath": "assets/audio/ca/central-alba-instructions-v1/",
+    "status": "pending",
+    "files": {}
+  }]
+}

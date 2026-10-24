@@ -14,6 +14,13 @@
 
   /* ---------- Eines pures ---------- */
 
+  function instructionText(count) {
+    if ([8, 12, 16, 20, 24].indexOf(count) === -1) throw new Error("Nombre de paraules no admès per a les instruccions.");
+    return "Aquest dictat consisteix en " + count + " paraules. Pots sentir cada paraula tres vegades. " +
+      "Prem el botó per escoltar-la i escriu-la al full. Després de la tercera escolta podràs passar a la següent. " +
+      "En acabat, desplega el full per corregir-les.";
+  }
+
   function resolveSelection(S, editions, code, language, catalogue) {
     var result = S.resolve(editions, code);
     if (result.language !== language) {
@@ -107,7 +114,8 @@
     var scenes = ["setup-panel", "ready-panel", "player-panel", "pause-panel", "finished-panel"];
     var state = {
       selection: null, cov: null, session: null, audio: null, epoch: 0,
-      strictFocus: true, generation: 0, manifestPromise: null
+      strictFocus: true, generation: 0, manifestPromise: null,
+      introUrl: null, introAudio: null, introEpoch: 0
     };
 
     function isLoopback(h) { return h === "127.0.0.1" || h === "localhost" || h === "[::1]"; }
@@ -143,12 +151,38 @@
       }
     }
 
-    function cancelSpeech() {
-      if (root.speechSynthesis) root.speechSynthesis.cancel();
+    function stopIntro() {
+      state.introEpoch++;
+      if (state.introAudio) {
+        state.introAudio.onended = state.introAudio.onerror = null;
+        try { state.introAudio.pause(); state.introAudio.removeAttribute("src"); } catch (e) {}
+        state.introAudio = null;
+      }
+      $("instruction-label").textContent = "Escolta les instruccions";
       $("instruction-status").textContent = "";
     }
 
+    function loadIntro(gen, count) {
+      var local = qs.get("preview") === "local" && isLoopback(root.location.hostname);
+      var url = new URL(local ? "output/audio/instructions-preview-manifest.json" : "audio/instructions/manifest.json", appBase);
+      root.fetch(url).then(function (r) {
+        if (!r.ok) throw new Error("pending");
+        return r.json();
+      }).then(function (m) {
+        if (gen !== state.generation) return;
+        var cov = coverage(m, [{ id: "instruction-paper-" + count }], lang, appBase);
+        if (!cov.ready || cov.pack.textVersion !== 1) throw new Error("pending");
+        state.introUrl = cov.urls[0];
+        $("read-instructions").disabled = false;
+        $("instruction-status").textContent = "";
+      }).catch(function () {
+        if (gen !== state.generation) return;
+        $("instruction-status").textContent = "La locució de les instruccions s’està preparant. Pots llegir-les i començar.";
+      });
+    }
+
     function show(id) {
+      doc.querySelectorAll('[data-theme-control]').forEach(function (control) { control.hidden = id === 'player-panel' || id === 'pause-panel'; });
       scenes.forEach(function (s) {
         var el = $(s);
         if (el) el.hidden = s !== id;
@@ -171,7 +205,9 @@
 
     function resetToSetup() {
       state.generation++;
-      stopAudio(); cancelSpeech();
+      stopAudio(); stopIntro();
+      state.introUrl = null;
+      $("read-instructions").disabled = true;
       state.session = null; state.selection = null; state.cov = null;
       $("start-dictation").disabled = true;
       for (var id of ["windowed-start", "fullscreen-note", "resume-windowed", "resume-note"]) $(id).hidden = true;
@@ -201,7 +237,8 @@
         state.cov = cov;
         $("session-summary").textContent =
           "Codi " + sel.code + " · " + sel.entries.length + " paraules";
-        $("instructions").textContent = instructionsText();
+        $("instructions").textContent = instructionText(sel.entries.length);
+        loadIntro(gen, sel.entries.length);
         var note = $("local-preview-note");
         if (note) note.hidden = qs.get("preview") !== "local";
         var start = $("start-dictation");
@@ -230,28 +267,28 @@
       });
     }
 
-    function instructionsText() {
-      var n = state.selection ? state.selection.entries.length : 0;
-      return "Aquest dictat consisteix en " + n + " paraules. Pots sentir cada paraula tres vegades. " +
-        "Prem el botó per escoltar-la i escriu-la al full. Després de la tercera escolta podràs passar a la següent. " +
-        "En acabat, desplega el full per corregir-les.";
-    }
     $("instructions").textContent = "";
 
     $("read-instructions").addEventListener("click", function () {
+      if (!state.introUrl || state.session) return;
+      if (state.introAudio) { stopIntro(); return; }
+      stopIntro();
+      var epoch = state.introEpoch, a = null;
       var st = $("instruction-status");
-      if (!root.speechSynthesis) { st.textContent = "No hi ha veu catalana disponible en aquest navegador."; return; }
-      var voices = root.speechSynthesis.getVoices().filter(function (v) {
-        return /^ca([-_]|$)/i.test(v.lang);
-      });
-      if (!voices.length) { st.textContent = "No hi ha veu catalana disponible en aquest dispositiu."; return; }
-      cancelSpeech();
-      var u = new root.SpeechSynthesisUtterance(instructionsText());
-      u.voice = voices[0]; u.lang = voices[0].lang;
-      u.onend = function () { st.textContent = ""; };
-      u.onerror = function () { st.textContent = "No s'han pogut llegir les instruccions. Pots tornar-ho a provar."; };
-      st.textContent = "S'estan llegint les instruccions…";
-      root.speechSynthesis.speak(u);
+      function finish(ok) {
+        if (epoch !== state.introEpoch || state.introAudio !== a) return;
+        stopIntro();
+        if (!ok) st.textContent = "No s’han pogut reproduir les instruccions. Pots tornar-ho a provar.";
+      }
+      try {
+        a = new root.Audio(state.introUrl); state.introAudio = a;
+        a.onended = function () { finish(true); };
+        a.onerror = function () { finish(false); };
+        $("instruction-label").textContent = "Atura les instruccions";
+        st.textContent = "S’estan llegint les instruccions…";
+        var p = a.play();
+        if (p && p.catch) p.catch(function () { finish(false); });
+      } catch (e) { finish(false); }
     });
 
     function enterFullscreen() {
@@ -268,7 +305,7 @@
 
     function beginSession() {
       if (!state.selection || !state.cov || !state.cov.ready || state.session) return;
-      cancelSpeech(); stopAudio();
+      stopIntro(); stopAudio();
       state.session = root.PlecDictationSession.createSession(state.selection.entries.length);
       state.session.start();
       renderPlayer();
@@ -383,9 +420,9 @@
       if (state.strictFocus && doc.fullscreenElement !== $("focus-root")) pauseIfActive();
     });
     doc.addEventListener("visibilitychange", function () {
-      if (doc.visibilityState === "hidden") pauseIfActive();
+      if (doc.visibilityState === "hidden") { pauseIfActive(); stopIntro(); }
     });
-    root.addEventListener("pagehide", function () { pauseIfActive(); stopAudio(); cancelSpeech(); });
+    root.addEventListener("pagehide", function () { pauseIfActive(); stopAudio(); stopIntro(); });
 
     $("resume-dictation").addEventListener("click", function () {
       var session = state.session;
@@ -415,7 +452,7 @@
     $("restart-code").addEventListener("click", function () {
       if (!state.selection) { resetToSetup(); return; }
       var code = state.selection.code, cat = state.selection.catalogue;
-      stopAudio(); cancelSpeech();
+      stopAudio(); stopIntro();
       state.session = null;
       load(code, cat);
     });
@@ -437,6 +474,7 @@
   }
 
   return {
+    instructionText: instructionText,
     resolveSelection: resolveSelection,
     coverage: coverage,
     initDom: initDom

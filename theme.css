@@ -1,0 +1,24 @@
+:root[data-theme="dark"]{--paper:#101a17;--white:#192722;--ink:#e2e9e1;--green:#bdd7c8;--soft:#24382f;--muted:#a9b9ae;--line:#35483e;--accent:#efa58c;color-scheme:dark}
+.theme-control{display:inline-flex;align-items:center;gap:7px;font:12px var(--sans);color:var(--muted)}
+.theme-control select{font:inherit;color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:6px;padding:6px 8px;min-height:32px;max-width:115px;cursor:pointer;transition:background-color 220ms,color 220ms,border-color 220ms}
+.d-header-actions{display:flex;gap:12px;align-items:center}
+:root[data-theme="dark"] .primary,:root[data-theme="dark"] .d-listen{background:#294f41;color:#edf4ee}
+:root[data-theme="dark"] .primary:hover:not(:disabled),:root[data-theme="dark"] .d-listen:hover:not(:disabled){background:#365f4e}
+:root[data-theme="dark"] input:not([type=checkbox]),:root[data-theme="dark"] select,:root[data-theme="dark"] textarea{background:var(--white);border-color:var(--line);color:var(--ink)}
+:root[data-theme="dark"] .segmented button[aria-pressed=true]{background:#294f41;color:#edf4ee}
+:root[data-theme="dark"] .tag input:checked+span{background:#294535;border-color:#526e59;color:#d4e5d9}
+:root[data-theme="dark"] .toast{background:#294f41;color:#edf4ee}
+:root[data-theme="dark"] .skip{background:var(--white);color:var(--ink)}
+:root[data-theme="dark"] .zoom-tools,:root[data-theme="dark"] .required-chip{background:var(--soft);color:var(--ink)}
+:root[data-theme="dark"] .notice{background:#342c20;border-color:#65523a;color:#f1d2a5}
+:root[data-theme="dark"] .fold-panel.model{background:#2c4537}
+:root[data-theme="dark"] .fold-panel.blank{background:#24312b;color:var(--muted)}
+:root[data-theme="dark"] .fold-panel.writing{background:#334139}
+:root[data-theme="dark"] .pool-status #pool-status{color:#e8bf91}
+:root[data-theme="dark"] .art-paper{background:#fffefa;color:#233a33}
+:root[data-theme="dark"] .paper-stage{background:var(--soft);border-color:var(--line)}
+:root[data-theme="dark"] *{scrollbar-color:#617b6a transparent}
+:root[data-theme="dark"] ::-webkit-scrollbar-thumb{background-color:#617b6a}
+html,body,.d-focus,.d-card,.site-header,.site-footer,.config,dialog,.paper-stage{transition:background-color 220ms,color 220ms,border-color 220ms}
+/* The worksheet represents paper in either appearance; export colours stay fixed. */
+@media print{:root[data-theme="dark"]{--paper:#fff;--white:#fff;--ink:#233a33;--green:#234d43;--muted:#65736a;color-scheme:light;color:#233a33}.theme-control{display:none!important}}

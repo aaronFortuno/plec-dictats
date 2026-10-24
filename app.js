@@ -271,6 +271,7 @@
     }
   });
   const releases = [
+    ['2.5', '2026-10-24', ['Aparença clara, fosca o del sistema, amb el full sempre clar. Locucions d’instruccions preparades com a MP3 estàtics; generació després del lot actual i revisió abans de publicar. Registre de pronunciacions dubtoses.']],
     ['2.4', '2026-10-24', ['Primera pantalla de dictat al full, amb entrada per codi i enllaç d’alumnat. Tres escoltes per paraula, ritme ajustable abans de començar i pausa en sortir de pantalla completa o canviar de pestanya. Àudios públics encara pendents de revisió; prova local disponible.'] ],
     ['2.3', '2026-10-24', ['Gestió del dictat i PDF al lateral per donar més espai al full. Catàleg per inicials amb cerca global i ajuda ampliada sobre les llavors. Preparació d’àudios amb Azure F0, encara sense reproductor ni àudios publicats.'] ],
     ['2.2', '2026-10-23', ['Codis de 4 + 5 caràcters amb 24,3 milions de variants per configuració. Cerca optimitzada en tandes cancel·lables que es poden continuar sense repetir intents. Ajuda sobre la combinació dels focus i compatibilitat amb els codis antics.'] ],

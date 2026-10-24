@@ -76,6 +76,7 @@ function validatePack(manifest, packId) {
     fail(`El mapa files del pack «${id}» no és vàlid.`);
   }
   if(pack.generationPolicy?.excludeDiaeresis!==undefined && typeof pack.generationPolicy.excludeDiaeresis!=='boolean')fail('La política de dièresi ha de ser booleana.');
+  if (pack.contentFingerprint !== undefined && !/^[a-f0-9]{64}$/.test(pack.contentFingerprint)) fail('Fingerprint del contingut invàlid.');
   for (const relativePath of Object.values(pack.files)) {
     validateRelativePath(relativePath, `Ruta del pack ${id}`);
   }
@@ -104,7 +105,7 @@ function buildSsml(pack, text) {
 
 function buildJobs(seed, manifest, options = {}) {
   const mode = options.mode || 'words';
-  if (mode !== 'words' && mode !== 'pseudo') fail('El mode ha de ser words o pseudo.');
+  if (!['words', 'pseudo', 'instructions'].includes(mode)) fail('El mode ha de ser words, pseudo o instructions.');
   const catalog = seed?.catalog || seed;
   if (!catalog || !Array.isArray(catalog.entries)) fail('El catàleg no conté entries.');
   const pack = validatePack(manifest, options.pack);
@@ -121,7 +122,11 @@ function buildJobs(seed, manifest, options = {}) {
     seenIds.add(entry.id);
     if (entry.mode !== mode) continue;
 
-    const fileName = wordFileName(entry.text);
+    let fileName;
+    if (mode === 'instructions') {
+      if (!entry.text.trim() || !/^[a-z0-9][a-z0-9-]*\.mp3$/.test(entry.fileName || '')) fail('Nom de fitxer d’instruccions invàlid.');
+      fileName = entry.fileName;
+    } else fileName = wordFileName(entry.text);
     const relativePath = `${mode}/${fileName}`;
     validateRelativePath(relativePath, 'Ruta de job');
     const collisionKey = relativePath.normalize('NFC').toLowerCase();

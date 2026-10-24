@@ -259,6 +259,7 @@ async function runGeneration(options, dependencies = {}) {
 
     // Un paquet identifica una veu i uns ajustos fixos: no reutilitzis MP3 d'una altra síntesi.
     const identity = {language:plan.pack.language,locale:plan.pack.locale,voice:plan.pack.voice,rate:plan.pack.rate,format:plan.pack.format};
+    if (plan.pack.contentFingerprint) identity.contentFingerprint = plan.pack.contentFingerprint;
     const fingerprint = crypto.createHash('sha256').update(JSON.stringify(identity)).digest('hex');
     const identityPath = path.join(audioRoot,plan.pack.id,'settings.json');
     let savedIdentity;

@@ -12,7 +12,9 @@ La primera fase és **escriure al full**. Les instruccions indiquen el nombre de
 
 Cada mot requereix tres escoltes completades. Després apareix «Paraula següent» o «Acaba el dictat». No hi ha avanç automàtic, retorn a mots anteriors ni quarta escolta. Un error de reproducció o una escolta interrompuda no compta. El final convida a desplegar el full; no mostra models ni nota. El mode digital, el retorn a Classroom i el QR imprès queden pendents.
 
-La lectura d’instruccions utilitza provisionalment la veu catalana del navegador, només si n’hi ha una. Si no, ho indica i manté el text disponible. **Les paraules utilitzen sempre MP3 estàtics**, sense TTS del navegador ni peticions a Azure. Més endavant es podrà enregistrar també el text d’instruccions.
+Les instruccions i les paraules utilitzen **MP3 estàtics**, sense TTS del navegador ni peticions a Azure des del web. Les cinc locucions d’instruccions comparteixen el text exacte amb la pantalla, per a 8, 12, 16, 20 i 24 mots. Si la locució encara no està disponible, el text es manté visible i es pot començar el dictat igualment. La lectura es pot aturar i no compta com a escolta d’un mot; s’atura en començar l’activitat, sortir o ocultar la pestanya.
+
+L’aparença **Sistema / Clar / Fosc** es desa al dispositiu i es comparteix entre el preparador i el dictat. «Sistema» segueix la preferència del dispositiu. El selector desapareix durant el dictat i les pauses per mantenir la pantalla neta. El full imprimible i el PDF conserven el paper clar.
 
 ## Pantalla completa i pauses
 
@@ -28,6 +30,12 @@ Per provar la interfície amb els MP3 ja disponibles hi ha un manifest **només 
 
 `node tools/prepare-player-preview.cjs` crea o actualitza aquest manifest sense xarxa. Comprova els ajustos del paquet i els fitxers disponibles; no carrega credencials ni activa àudios al web públic. Un MP3 amb capçalera correcta encara necessita revisió de pronunciació.
 
+Les instruccions tenen un manifest públic separat, `audio/instructions/manifest.json`, també pendent de revisió. `node tools/run-instructions-batch.cjs` calcula cinc peticions sense xarxa. Amb `--execute --after-words`, espera que el lot principal consti com a completat i que s’hagi alliberat el bloqueig de pressupost. Si el lot s’atura o deixa de tenir un procés actiu, la cua s’atura sense començar ni reintentar. Comparteix `usage.json`, el senyal STOP, la separació entre peticions i la represa dels MP3 existents. No hi ha dos generadors fent peticions simultàniament.
+
+Els resultats queden a `output/audio/ca-central-alba-instructions-v1/instructions/` i el manifest de prova a `output/audio/instructions-preview-manifest.json`. Només el mode local els carrega; el públic no s’activa automàticament. La identitat del paquet inclou una empremta del text: canviar-lo exigeix un paquet nou per evitar reaprofitar una locució antiga. Cal versionar també `textVersion` i el contracte del reproductor quan canviïn les instruccions.
+
+Quan acaba la generació, `output/audio/instruccions.html` permet escoltar les cinc locucions juntes, amb el text corresponent, abans d’aprovar-les. L’estat de la cua és a `output/audio/instruction-status.json`.
+
 Mostra local: `http://127.0.0.1:4176/ca/dictat/?seed=TCD7-AAAAA&preview=local`. Són 16 mots del focus h, cicle mitjà, recuperables amb el protocol ordinari; no s’han injectat mots ni alterat la llavor. El codi antic equivalent és `52E-4S3`.
 
 ## Comprovacions
@@ -35,3 +43,5 @@ Mostra local: `http://127.0.0.1:4176/ca/dictat/?seed=TCD7-AAAAA&preview=local`. 
 `check-dictation-session.cjs` comprova el motor pur: tres escoltes, errors, pauses, tokens antics, reset i finalització. `check-dictation.cjs` comprova recuperació antiga/nova, ordre, llengua, catàleg, cobertura, veu, rutes i recursos generats. Les instantànies i els motors no s’han modificat.
 
 En la integració s’ha executat una prova local amb Chrome: recorregut complet de 16 × 3 escoltes amb àudio simulat, errors síncrons i promeses rebutjades, pausa, respostes antigues, canvi de codi, absència de cobertura i enllaç antic. Una passada separada, sense mocks, ha reproduït un MP3 real fins a `ended` i ha entrat a pantalla completa. Comprovat també que la vista mòbil no desborda horitzontalment. Això verifica funcionament; l’escolta docent continua sent necessària per validar la pronunciació.
+
+L’aparença s’ha comprovat en Chrome amb preferència del sistema, canvi en directe, persistència entre pantalles, mòbil i impressió. Per a les instruccions s’han simulat els MP3 i els errors: aturada, callbacks antics, pestanya oculta i inici del dictat sense consumir escoltes. `check-instructions.cjs` comprova sense xarxa l’espera del lot, les cinc llargades, les rutes, el registre compartit, la represa i la invalidació quan canvia el text. La locució real queda pendent de generació i escolta.

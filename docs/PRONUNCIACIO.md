@@ -50,9 +50,17 @@ El pla té `executable: false` i totes les revisions auditives pendents. No est�
 
 La primera mostra proposada és de vuit mots: **atapeït, conduïdes, agraïm, canviïn, aigüera, qüestió, raïm i increïble**. Cobreix accent final i intern, hiat tònic i àton, ü amb w i geminació. Cal comprovar-hi dicció natural i accent abans d’enviar la tanda completa. Després de generar-los, els MP3 continuaran pendents de revisió docent abans de publicar-los.
 
-## Velocitat del futur reproductor
+## Revisió de mots sense dièresi i entonació
 
-Es manté la síntesi actual. El reproductor podrà reduir `playbackRate` amb preservació de to, de forma independent del codi i de l’MP3. No cal duplicar cada àudio per oferir una velocitat més lenta. Aquesta opció encara no està implementada al producte.
+L’usuari ha detectat també alguns mots sense dièresi amb accent o entonació dubtosos, però encara no en té anotats els noms. No s’interpreta el lot de 3.072 com a validat. La taula [ca-central-review.tsv](../audio/pronunciation/ca-central-review.tsv) és un registre buit per anotar cada mot i el problema concret a mesura que s’escolti; no modifica el catàleg ni substitueix cap MP3.
+
+Separarem **sons i accent tònic** de **l’entonació de paraula aïllada**. Per als primers, prepararem una proposta IPA amb totes les fronteres sil·làbiques. Si el problema és una entonació que sembla quedar a mitja frase, compararem també el text com a frase autònoma, per exemple `<s>mot.</s>`, i la mateixa prova amb IPA. Azure documenta els elements de frase i l’efecte de la puntuació; això no garanteix per si sol que la veu resolgui el cas. [Estructura SSML](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-structure).
+
+Les variants es generaran en una mostra separada, conservant l’original per comparar i sense canviar la grafia del mot. Només una escolta docent que confirmi accent, sons i entonació permetrà aprovar la substitució. No es regenerarà tot el corpus preventivament. Primer es provaran els vuit casos de dièresi ja proposats i els casos concrets que s’hagin anotat.
+
+## Velocitat del reproductor
+
+Es manté la síntesi actual. El reproductor permet triar el ritme habitual o `playbackRate` 0,85 amb preservació de to abans de començar, de forma independent del codi i de l’MP3. No cal duplicar cada àudio per oferir una velocitat més lenta.
 
 ## Generació llarga i represa
 

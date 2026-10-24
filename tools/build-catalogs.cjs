@@ -77,8 +77,8 @@ for (const item of manifest.languages) {
   emit(item.path + 'index.html', html);
   // Student entry point shares the immutable registry, without the composer or PDF.
   let student = read('templates/dictation.html')
-    .replace('__CONFIG__', path.posix.dirname(item.config) + '/config.js?v=2.4.0')
-    .replace('__REGISTRY__', base + '/editions/index.js?v=2.4.0')
+    .replace('__CONFIG__', path.posix.dirname(item.config) + '/config.js?v=2.5.0')
+    .replace('__REGISTRY__', base + '/editions/index.js?v=2.5.0')
     .replaceAll('__COMPOSER__', item.path)
     .replace('<html lang="ca">', '<html lang="' + profile.uiLanguage + '">');
   student = student.replace(/((?:src|href)=")(?!https?:|lightning:|#|\.\/)([^\"]+)/g, (_, start, target) => start + prefix + '../' + target);
