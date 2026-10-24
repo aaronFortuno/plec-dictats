@@ -10,6 +10,6 @@
     {"word":"intuïa","status":"pending","reason":"Forma amb dièresi; pendent de revisió específica."},
     {"word":"canviïn","status":"accepted-sample","reason":"L’usuari confirma la pronunciació; s’ajorna igualment per la política provisional."}
   ],
-  "playback": {"allowSlowerPlayback": true, "preservePitch": true, "implemented": false},
+  "playback": {"allowSlowerPlayback": true, "preservePitch": true, "implemented": true},
   "pronunciationStrategy": "Provar IPA amb accent tònic per excepcions en una tasca separada; no alterar el catàleg ni substituir automàticament dièresis per accents."
 }

@@ -52,11 +52,29 @@ La primera mostra proposada és de vuit mots: **atapeït, conduïdes, agraïm, c
 
 ## Revisió de mots sense dièresi i entonació
 
-L’usuari ha detectat també alguns mots sense dièresi amb accent o entonació dubtosos, però encara no en té anotats els noms. No s’interpreta el lot de 3.072 com a validat. La taula [ca-central-review.tsv](../audio/pronunciation/ca-central-review.tsv) és un registre buit per anotar cada mot i el problema concret a mesura que s’escolti; no modifica el catàleg ni substitueix cap MP3.
+L’usuari ha detectat també alguns mots sense dièresi amb accent o entonació dubtosos. No s’interpreta el lot de 3.072 com a validat. La taula [ca-central-review.tsv](../audio/pronunciation/ca-central-review.tsv) permet anotar cada mot i el problema concret a mesura que s’escolti; ja inclou «lil·liputenc». No modifica el catàleg ni substitueix cap MP3.
 
 Separarem **sons i accent tònic** de **l’entonació de paraula aïllada**. Per als primers, prepararem una proposta IPA amb totes les fronteres sil·làbiques. Si el problema és una entonació que sembla quedar a mitja frase, compararem també el text com a frase autònoma, per exemple `<s>mot.</s>`, i la mateixa prova amb IPA. Azure documenta els elements de frase i l’efecte de la puntuació; això no garanteix per si sol que la veu resolgui el cas. [Estructura SSML](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-structure).
 
 Les variants es generaran en una mostra separada, conservant l’original per comparar i sense canviar la grafia del mot. Només una escolta docent que confirmi accent, sons i entonació permetrà aprovar la substitució. No es regenerarà tot el corpus preventivament. Primer es provaran els vuit casos de dièresi ja proposats i els casos concrets que s’hagin anotat.
+
+## Geminació i consonants finals: incidència del 24/10/2026
+
+El docent demana una **l·l més perceptible, com una ela contínua més llarga**, i assenyala «lil·liputenc» perquè li sona aproximadament «liliputen». També detecta terminacions en t o c poc perceptibles en altres mots, encara sense llista concreta. Es registra la percepció; no s’atribueix automàticament el defecte a tots els mots d’aquests grups.
+
+Per al model didàctic provarem una geminació explícita `l.l`, sense pausa entre síl·labes, sense convertir-la en `ʎ` (ll) i sense afegir vocals. L’IEC explica que la geminació allarga el so entre dues síl·labes, però també que la simplificació a l simple és habitual en molts parlars fora dels registres molt formals. Buscar una geminació més marcada és aquí una elecció didàctica; no converteix qualsevol pronúncia simple en un error. [Secció Filològica de l’IEC](https://sf.iec.cat/apunts_llengua/apollo-i-el-vol-del-punt/).
+
+Les oclusives finals requereixen una distinció: en català central hi ha simplificació de grups com -nt i -nc. Per exemple, el diccionari transcriu «blanc» amb nasal velar final, sense k. Per tant, no forçarem totes les lletres escrites a sonar ni afegirem una vocal després de t o k. En «lil·liputenc», la manca de k podria respondre a aquesta regla; encara cal comprovar si l’àudio conserva la nasal velar i la resta de sons. En canvi, «llit» i «poc» són controls amb t i k que s’han de conservar. [GEIEC, fenòmens consonàntics](https://geiec.iec.cat/text/2.3), [blanc](https://www.diccionari.cat/catala-angles/blanc), [llit](https://www.diccionari.cat/catala-angles/llit), [poc](https://www.diccionari.cat/catala-angles/poc).
+
+La [mostra de sis mots](../audio/pronunciation/ca-central-gemination-finals.json) proposa **col·legi, metàl·lic, lil·liputenc, llit, poc i blanc**, amb IPA, fonts, ID i observacions. Només «lil·liputenc» ha estat assenyalat individualment pel docent; els altres són controls per a la comparació, no àudios declarats incorrectes. La seva transcripció és encara una proposta editorial amb dubte explícit de contrast lexicogràfic, especialment del timbre tònic. Les altres cinc propostes parteixen de les transcripcions del diccionari. S’utilitza l’inventari admès per Azure; l’efecte real de `l.l` necessita escolta i no es dona per garantit.
+
+```text
+node tools/prepare-pronunciation-sample.cjs
+node tools/prepare-pronunciation-sample.cjs --write
+node tools/check-pronunciations.cjs
+```
+
+El pla es desa a `output/audio/pronunciation-sample/plan.json`, inclou les rutes dels originals per comparar i té `executable: false`. No carrega credencials ni envia peticions Azure; tampoc s’afegeix automàticament a la cua d’instruccions ni altera el lot actiu. El paquet candidat té un ID separat i conserva veu, ritme i format per poder valorar la diferència de pronunciació. Cap substitució al manifest públic fins a la revisió.
 
 ## Velocitat del reproductor
 

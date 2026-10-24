@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "language": "ca",
+  "catalogPath": "catalogs/ca/editions/seed-1.json",
+  "catalogFingerprint": "ee94edbd3b2d4fb4d44d1cd66f70b970e17520029d952593d69e5adb2139bbf5",
+  "baselinePack": "ca-central-alba-v1",
+  "candidatePack": {
+    "id": "ca-central-alba-gemination-finals-v1",
+    "language": "ca", "dialect": "central", "locale": "ca-ES",
+    "provider": "azure", "voice": "ca-ES-AlbaNeural", "rate": "-10%",
+    "format": "audio-24khz-48kbitrate-mono-mp3",
+    "basePath": "assets/audio/ca/central-alba-gemination-finals-v1/",
+    "status": "pending", "files": {}
+  },
+  "entries": [
+    {
+      "id": "p-1879y2w", "mot": "col·legi", "ipa": "kul.ˈlɛ.ʒi",
+      "status": "prepared", "reportedByTeacher": false,
+      "focus": "gemination", "basis": "dictionary-word",
+      "sources": ["https://www.diccionari.cat/catala-angles/collegi", "https://sf.iec.cat/apunts_llengua/apollo-i-el-vol-del-punt/"],
+      "note": "Control de l·l explícita entre síl·labes; buscar una lateral contínua més llarga, sense pausa ni vocal afegida. No consta un rebuig docent d’aquest mot concret."
+    },
+    {
+      "id": "p-4q6lf5", "mot": "metàl·lic", "ipa": "mə.ˈtal.lik",
+      "status": "prepared", "reportedByTeacher": false,
+      "focus": "gemination-and-final-k", "basis": "dictionary-word",
+      "sources": ["https://www.diccionari.cat/catala-angles/metallic"],
+      "note": "Control de geminació i k final fora d’un grup nasal + oclusiva. No consta un rebuig docent d’aquest mot concret."
+    },
+    {
+      "id": "p-13lmj3i", "mot": "lil·liputenc", "ipa": "lil.li.pu.ˈtɛŋ",
+      "status": "needs-review", "reportedByTeacher": true,
+      "focus": "gemination-and-final-nc", "basis": "editorial-proposal",
+      "sources": ["https://geiec.iec.cat/text/2.3", "https://sf.iec.cat/apunts_llengua/apollo-i-el-vol-del-punt/"],
+      "note": "Cas assenyalat pel docent. Proposta editorial, sense transcripció lexicogràfica exacta contrastada; cal validar especialment el timbre tònic. Geminació explícita i nasal velar final, sense forçar k per la grafia."
+    },
+    {
+      "id": "p-1yrdcjp", "mot": "llit", "ipa": "ˈʎit",
+      "status": "prepared", "reportedByTeacher": false,
+      "focus": "final-t", "basis": "dictionary-word",
+      "sources": ["https://www.diccionari.cat/catala-angles/llit"],
+      "note": "Control de t final que s’ha de conservar; comprovar t audible sense afegir una vocal. No consta un rebuig docent d’aquest mot concret."
+    },
+    {
+      "id": "p-epef8a", "mot": "poc", "ipa": "ˈpɔk",
+      "status": "prepared", "reportedByTeacher": false,
+      "focus": "final-k", "basis": "dictionary-word",
+      "sources": ["https://www.diccionari.cat/catala-angles/poc"],
+      "note": "Control de k final que s’ha de conservar; sense vocal final afegida ni explosió exagerada. No consta un rebuig docent d’aquest mot concret."
+    },
+    {
+      "id": "p-pa95ni", "mot": "blanc", "ipa": "ˈblaŋ",
+      "status": "prepared", "reportedByTeacher": false,
+      "focus": "regular-final-nc", "basis": "dictionary-word",
+      "sources": ["https://www.diccionari.cat/catala-angles/blanc", "https://geiec.iec.cat/text/2.3"],
+      "note": "Control de simplificació pròpia del català central: nasal velar final. L’absència de k no es considera automàticament un error."
+    }
+  ]
+}
