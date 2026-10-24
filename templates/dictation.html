@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plec · Fes un dictat</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="styles.css?v=2.4.0">
+<link rel="stylesheet" href="dictation.css?v=2.4.0">
+<script defer src="locales/manifest.js?v=2.4.0"></script>
+<script defer src="__CONFIG__"></script>
+<script defer src="language.js?v=2.4.0"></script>
+<script defer src="__REGISTRY__"></script>
+<script defer src="seeds.js?v=2.4.0"></script>
+<script defer src="seeds-v2.js?v=2.4.0"></script>
+<script defer src="dictation-session.js?v=2.4.0"></script>
+<script defer src="icons.js?v=2.4.0"></script>
+<script defer src="dictation.js?v=2.4.0"></script>
+</head>
+<body>
+<main id="focus-root" class="d-focus">
+<header class="d-header">
+<a class="d-brand" id="composer-link" href="__COMPOSER__">plec.</a>
+<button type="button" id="exit-focus" hidden><span data-icon="x"></span> Surt</button>
+</header>
+
+<section id="setup-panel" class="d-scene" aria-labelledby="setup-title">
+<div class="d-card">
+<p class="d-eyebrow">El teu moment de concentració</p>
+<h1 id="setup-title">Fes un dictat.</h1>
+<p>Tingues preparats un full i un llapis. Quan estiguis a punt, escriu el codi del dictat.</p>
+<form id="load-form" class="d-form">
+<label for="student-code">Codi del dictat</label>
+<input id="student-code" name="student-code" type="text" placeholder="ABCD-23456" maxlength="16" autocomplete="off" autocapitalize="characters" spellcheck="false" required>
+<button type="submit" class="button primary">Continua</button>
+</form>
+<p id="setup-error" class="d-error" hidden role="alert"></p>
+</div>
+</section>
+
+<section id="ready-panel" class="d-scene" hidden aria-labelledby="ready-title">
+<div class="d-card">
+<h1 id="ready-title">Som-hi?</h1>
+<p id="session-summary"></p>
+<p id="instructions"></p>
+<button type="button" id="read-instructions" class="button secondary"><span data-icon="refresh-cw"></span> Escolta les instruccions</button>
+<p id="instruction-status" class="d-status" role="status"></p>
+<label for="audio-rate">Ritme</label>
+<select id="audio-rate">
+<option value="1">Ritme habitual</option>
+<option value="0.85">Una mica més a poc</option>
+</select>
+<p id="audio-status" class="d-status" role="status"></p>
+<p id="local-preview-note" hidden>Prova local · Àudios pendents de revisió.</p>
+<button type="button" id="start-dictation" class="button primary" disabled>Comença a pantalla completa</button>
+<p id="fullscreen-note" class="d-status" hidden></p>
+<button type="button" id="windowed-start" hidden>Continua en mode concentració</button>
+</div>
+</section>
+
+<section id="player-panel" class="d-scene" hidden aria-labelledby="player-title">
+<h1 id="player-title" class="sr-only">Dictat en marxa</h1>
+<p id="word-progress" class="d-progress" aria-live="polite"></p>
+<button type="button" id="listen-word" class="d-listen">
+<span data-icon="refresh-cw" aria-hidden="true"></span>
+<span id="listen-label">Escolta</span>
+</button>
+<button type="button" id="next-word" class="d-listen" hidden>Paraula següent</button>
+<p id="listen-count" class="d-status" aria-live="polite"></p>
+<p id="playback-error" class="d-error" hidden role="alert"></p>
+</section>
+
+<section id="pause-panel" class="d-scene" hidden aria-labelledby="pause-title">
+<div class="d-card">
+<h1 id="pause-title">Dictat en pausa.</h1>
+<p>Torna a concentrar-te per continuar on eres.</p>
+<button type="button" id="resume-dictation" class="button primary">Torna al dictat</button>
+<p id="resume-note" class="d-status" hidden></p>
+<button type="button" id="resume-windowed" hidden>Continua en mode concentració</button>
+</div>
+</section>
+
+<section id="finished-panel" class="d-scene" hidden aria-labelledby="finished-title">
+<div class="d-card">
+<h1 id="finished-title">Dictat acabat.</h1>
+<p>Ara desplega el full i comprova com has escrit les paraules.</p>
+<button type="button" id="restart-code" class="button primary">Torna a començar</button>
+<a href="__COMPOSER__" class="small-link">Torna al preparador</a>
+</div>
+</section>
+</main>
+</body>
+</html>

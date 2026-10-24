@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const fsp = require('node:fs/promises');
 const path = require('node:path');
 const crypto = require('node:crypto');
+const {replaceFile} = require('./local-files.cjs');
 const {loadAzureEnvironment} = require('./azure-credentials.cjs');
 const {
   DEFAULT_CATALOG,
@@ -58,7 +59,7 @@ async function atomicWriteJson(filePath, value) {
   await fsp.mkdir(path.dirname(filePath), { recursive: true });
   const temporaryPath = `${filePath}.part`;
   await fsp.writeFile(temporaryPath, `${JSON.stringify(value, null, 2)}\n`, 'utf8');
-  await fsp.rename(temporaryPath, filePath);
+  await replaceFile(temporaryPath, filePath);
 }
 
 async function loadLedger(filePath) {
@@ -181,7 +182,7 @@ async function writeCompleteFile(destination, audio) {
   await fsp.mkdir(path.dirname(destination), { recursive: true });
   const temporaryPath = `${destination}.part`;
   await fsp.writeFile(temporaryPath, audio);
-  await fsp.rename(temporaryPath, destination);
+  await replaceFile(temporaryPath, destination);
 }
 
 async function writeResults(outputRoot, plan, completed, now) {
@@ -329,8 +330,9 @@ async function runGeneration(options, dependencies = {}) {
       log(`Lot aturat per una resposta o connexió no vàlida (${error.reason}). Es conserven els MP3 ja completats; no es reintenta automàticament.`);
       return { ok: false, reason: error.reason };
     }
-    log('Lot aturat per un error local. Revisa els fitxers de sortida i el ledger; no s’ha enviat cap error remot ni secret.');
-    return { ok: false, reason: 'local-error' };
+    const localErrorCode = typeof error.code === 'string' && /^[A-Z0-9_]{1,40}$/.test(error.code) ? error.code : 'UNKNOWN';
+    log(`Lot aturat per un error local (${localErrorCode}). Es conserven els fitxers i el pressupost.`);
+    return { ok: false, reason: 'local-error', localErrorCode };
   } finally {
     if (releaseLock) releaseLock();
   }

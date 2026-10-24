@@ -1,6 +1,13 @@
 /* Composer with self-contained reproducible codes. Protocol: docs/LLAVORS.md. */
 (function(){
   'use strict';
+  // Preserve old student links before touching composer state or storage.
+  const arrival=new URL(location.href);
+  if(arrival.searchParams.get('mode')==='dictat'){
+    const student=new URL('./dictat/',location.href);
+    arrival.searchParams.delete('mode');student.search=arrival.searchParams.toString();
+    location.replace(student.href);return;
+  }
   const S=window.PlecSeeds,K=window.PlecCore,L=window.PlecLanguage,LT=window.PlecLanguageTools,R=window.PlecSeedRegistry;
   let edition=R.editions.find(e=>e.slot===R.current),C=edition.catalog;
   const $=id=>document.getElementById(id),escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -132,7 +139,7 @@
     $('sheet-preview').innerHTML=entries.length?svgFor(K.worksheet(sheetOptions()),layout):`<div class="empty-selection">${busy?'Buscant un dictat…':'Ajusta els filtres o recupera un codi per veure el full.'}</div>`;
     $('seed-code').textContent=busy?'…':current?.code||'—';$('selection-summary').textContent=`${entries.length} / ${session().count} elements`;
     $('preview-layout').textContent=`${layout.name} · model a ${state.modelSide==='left'?'l’esquerra':'la dreta'}`;
-    for(const id of ['download-pdf','teacher-pdf','copy-code','copy-link'])$(id).disabled=!ready;
+    for(const id of ['download-pdf','teacher-pdf','copy-code','copy-link','open-student','copy-student-link'])$(id).disabled=!ready;
     $('sheet-preview').setAttribute('aria-label',`Vista prèvia: ${entries.length} elements. Model visible.`);fitPaper();
   }
   let catalogInitial=null,catalogWheel=window.PlecCatalogBrowser.createWheelState();
@@ -233,6 +240,9 @@
   $('recover-form').addEventListener('submit',event=>{event.preventDefault();try{const resolved=S.resolve(R.editions,$('recover-code').value);stopSearch();setCode(resolved.code);$('recover-code').value='';$('search-status').textContent='';say('Dictat recuperat amb els mateixos mots, ordre i filtres.');}catch(error){say(error.message);}});
   async function copy(value,success){try{await navigator.clipboard.writeText(value);say(success);}catch{say('No s’ha pogut copiar automàticament. El codi és '+(current?.code||'')+'.');}}
   $('copy-code').addEventListener('click',()=>current&&copy(current.code,'Codi copiat.'));
+  const studentURL=()=>LT.dictationURL(new URL('../',location.href),{language:L.id,catalogue:current.catalogue,seed:current.code});
+  $('open-student').addEventListener('click',()=>{if(current&&!busy)location.href=studentURL();});
+  $('copy-student-link').addEventListener('click',()=>{if(current&&!busy)copy(studentURL(),'Enllaç per a l’alumnat copiat.');});
   $('copy-link').addEventListener('click',()=>{if(!current)return;const url=new URL('./',location.href);url.searchParams.set('seed',S.normalize(current.code));url.searchParams.set('catalogue',current.catalogue);copy(url.href,'Enllaç del dictat copiat.');});
   $('catalog-open').addEventListener('click',openCatalog);$('help-open').addEventListener('click',()=>window.PlecMotion.open($('help-dialog')));
   function openInfo(dialogId, titleId) {
@@ -261,6 +271,7 @@
     }
   });
   const releases = [
+    ['2.4', '2026-10-24', ['Primera pantalla de dictat al full, amb entrada per codi i enllaç d’alumnat. Tres escoltes per paraula, ritme ajustable abans de començar i pausa en sortir de pantalla completa o canviar de pestanya. Àudios públics encara pendents de revisió; prova local disponible.'] ],
     ['2.3', '2026-10-24', ['Gestió del dictat i PDF al lateral per donar més espai al full. Catàleg per inicials amb cerca global i ajuda ampliada sobre les llavors. Preparació d’àudios amb Azure F0, encara sense reproductor ni àudios publicats.'] ],
     ['2.2', '2026-10-23', ['Codis de 4 + 5 caràcters amb 24,3 milions de variants per configuració. Cerca optimitzada en tandes cancel·lables que es poden continuar sense repetir intents. Ajuda sobre la combinació dels focus i compatibilitat amb els codis antics.'] ],
     ['2.1', '2026-10-23', ['Lateral més ample i focus reorganitzats per aprofitar les files. Mots obligatoris amb Enter o coma i ajuda contextual accessible. Zoom amb Ctrl i roda, amb avís breu; desplaçament natural amb la roda i en pantalles tàctils.'] ],

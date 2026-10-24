@@ -1,6 +1,6 @@
 # Coordinació del projecte
 
-**Estat 24/10/2026: l’usuari ha autoritzat continuar amb Codex directament. Kimi continua aturat fins que l’usuari avisi.** No invoquis cap model Kimi, reprenguis sessions ni activis agents per restabliment automàtic de la quota. Conserva els lliuraments, revisa’ls i publica els canvis validats. L’auditoria i el bloqueig local són a `../protocol-codex-kimi/AUDITORIA-CONSUM.md` i `../protocol-codex-kimi/ESTAT-WORKER.json`.
+**Estat 24/10/2026: Kimi bloquejat després de la segona prova de consum.** No facis noves crides, reintents ni reactivacions per restabliment de quota. Codex acaba directament la integració i les correccions. L’informe local és a `../protocol-codex-kimi/runs/T005/INFORME-SEGONA-PROVA.md`; el bloqueig és `../protocol-codex-kimi/ESTAT-WORKER.json`. Cal una nova indicació de l’usuari per tornar a encarregar feina a Kimi. No canviïs configuració global.
 
 - L’usuari explica les necessitats i confirma visualment el resultat. Codex especifica, coordina, revisa i integra; **Kimi K3.1 implementa** mitjançant Kimi Code CLI. Mantén un únic escriptor de codi a cada moment.
 - Protocol local: `../protocol-codex-kimi/LLEGEIX-ME.md`; context: `../protocol-codex-kimi/PERFIL-PLEC.md`; connexió: `../protocol-codex-kimi/CONNEXIO.md`. Llegeix-los abans de preparar un encàrrec. Si no estan disponibles en un altre equip, conserva aquest repartiment i reconstrueix el context necessari a partir del repositori.

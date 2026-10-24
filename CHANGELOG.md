@@ -1,5 +1,13 @@
 # Historial
 
+## 2.4 · 24 d’octubre de 2026
+
+- Entrada d’alumnat a `/ca/dictat/`, amb codi manual, enllaç per a l’alumnat i compatibilitat amb enllaços antics. La ruta inclou llengua i preserva el subdirectori del projecte.
+- Primer mode paper: instruccions amb lectura catalana segons disponibilitat del navegador, ritme normal o més lent, tres escoltes per mot i pas següent explícit. Sense mostrar mots ni solucions durant l’activitat.
+- Pantalla completa a petició, pausa quan se’n surt o es canvia de pestanya, i continuació explícita. Compatibilitat en mode concentració si el navegador rebutja pantalla completa.
+- Cobertura d’àudio comprovada abans de començar. Els MP3 encara estan en generació/revisió local; no s’han activat públicament. Prova local amb una selecció real de 16 mots.
+- Reintents breus i limitats del desament local davant bloqueigs de fitxers Windows, sense repetir peticions Azure. Es conserva el pressupost i la represa omet els MP3 existents.
+
 ## 2.3 · 24 d’octubre de 2026
 
 - Codi, còpies, recuperació, nou dictat i PDF agrupats al sidebar esquerre; més alçada disponible per al full.

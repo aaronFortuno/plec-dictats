@@ -1,0 +1,201 @@
+/* dictation.css · Pantalla neta de dictat */
+
+.d-focus {
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.d-focus:fullscreen {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+.d-focus::-webkit-scrollbar { width: 8px; }
+.d-focus::-webkit-scrollbar-track { background: transparent; }
+.d-focus::-webkit-scrollbar-thumb { background: var(--line); border-radius: 8px; }
+.d-focus::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+.d-focus .lucide { width: 20px; height: 20px; vertical-align: middle; flex-shrink: 0; }
+.d-listen .lucide { width: 32px; height: 32px; }
+
+.d-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.d-brand {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  color: var(--green);
+  text-decoration: none;
+  transition: color 220ms;
+}
+
+.d-brand:hover { color: var(--ink); }
+
+#exit-focus {
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: color 220ms;
+}
+
+#exit-focus:hover { color: var(--ink); }
+
+.d-scene {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+  gap: 16px;
+  text-align: center;
+}
+
+.d-scene h1 {
+  font-family: var(--serif);
+  font-size: 2rem;
+  margin: 0 0 4px;
+  color: var(--green);
+}
+
+.d-scene p { margin: 0; font-size: 1.05rem; line-height: 1.6; }
+
+.d-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  align-items: stretch;
+  text-align: left;
+}
+
+.d-card h1 { text-align: left; }
+.d-scene h1[tabindex="-1"]:focus { outline: none; }
+
+.d-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.d-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.d-scene label { font-size: 0.95rem; color: var(--ink); }
+
+.d-scene input,
+.d-scene select {
+  font: inherit;
+  font-size: 1.05rem;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  transition: border-color 220ms;
+}
+
+.d-scene input:focus,
+.d-scene select:focus {
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+  border-color: var(--green);
+}
+
+.d-error {
+  color: var(--accent);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.d-status {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.d-progress {
+  color: var(--muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.d-listen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 160px;
+  width: 100%;
+  max-width: 320px;
+  font: inherit;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--green);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 220ms, transform 220ms;
+}
+
+.d-listen:hover { background: var(--ink); }
+
+.d-listen:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: var(--green);
+}
+
+.d-listen:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+#ready-panel .primary,
+#pause-panel .primary,
+#finished-panel .primary {
+  font-size: 1.1rem;
+  padding: 14px 20px;
+}
+
+@media (max-width: 600px) {
+  .d-scene { padding: 32px 20px 56px; }
+  .d-scene h1 { font-size: 1.6rem; }
+  .d-card { padding: 28px 22px; }
+  .d-listen { max-width: 100%; }
+}
+
+@media print {
+  .d-focus { display: none; }
+}

@@ -32,11 +32,11 @@ for(const [mode,name] of [['words','paraules'],['pseudo','pseudoparaules']]){
 }
 for(const base of ['https://pleg.at/','https://aaronfortuno.github.io/plec-dictats/','file:///C:/Plec/index.html']){
  const url=new URL(L.dictationURL(base,{language:'ca',catalogue:C.revision,seed:'x5d-8ty'}));
- assert(url.pathname.endsWith('/ca/'));
- if(base.includes('plec-dictats'))assert.equal(url.pathname,'/plec-dictats/ca/');
+ assert(url.pathname.endsWith('/ca/dictat/'));
+ if(base.includes('plec-dictats'))assert.equal(url.pathname,'/plec-dictats/ca/dictat/');
  assert.equal(url.searchParams.get('seed'),'X5D8TY');
  assert.equal(url.searchParams.get('catalogue'),C.revision);
- assert.equal(url.searchParams.get('mode'),'dictat');
+ assert.equal(url.searchParams.has('mode'),false);
 }
 assert.throws(()=>L.dictationURL('https://pleg.at/',{language:'es',catalogue:'es-v1',seed:'X5D8TY'}));
 assert.throws(()=>L.dictationURL('https://pleg.at/',{language:'ca',catalogue:'es-v1',seed:'X5D8TY'}));

@@ -80,7 +80,7 @@ La primera instantània és `catalogs/ca/editions/seed-1.json`, amb empremta imm
 
 Les dades locals de la versió anterior es conserven amb la seva clau original. El sistema nou només en recupera preferències compatibles. A **Com funciona** es pot descarregar una còpia de les dades antigues encara presents al navegador. Les tries manuals i els mots propis no es converteixen automàticament en codis. Els codis fan servir exclusivament el banc compartit, perquè qualsevol dispositiu els pugui reproduir.
 
-Encara no s'han incorporat els àudios, el reproductor per a l'alumnat ni el QR. L'enllaç actual obre el preparador docent amb el codi recuperat. El motor de codis es podrà compartir amb el futur mode dictat.
+Hi ha una primera pantalla d’alumnat a **`/ca/dictat/`**, accessible des de «Fes un dictat», «Escolta aquest dictat» i «Enllaç per a l’alumnat». Recupera els mateixos mots i ordre amb codis antics i nous. El mode paper ofereix tres escoltes per mot, pantalla completa i pausa en sortir-ne o canviar de pestanya. Els àudios encara estan en generació i revisió local: la versió pública indica que estan pendents i impedeix començar fins que hi hagi cobertura. La ruta ja admet l’enllaç que podrà incorporar un QR; el QR imprès i les respostes digitals són fases posteriors. Vegeu [mode dictat](docs/DICTAT.md).
 
 La preparació d’àudios és local i encara no està activada al web. Els **227 mots amb dièresi** tenen una [taula IPA editable](audio/pronunciation/ca-central-diaeresis.tsv), amb fonts i dubtes explícits, per a una prova posterior al lot sense dièresi. Vegeu el [procediment de pronunciació i revisió](docs/PRONUNCIACIO.md). Preparar el pla SSML no envia peticions a Azure ni altera el catàleg o els codis.
 
@@ -96,6 +96,9 @@ node tools/check-lexicon.cjs
 node tools/check-seeds.cjs
 node tools/check-seeds-v2.cjs
 node tools/check-pronunciations.cjs
+node tools/check-dictation-session.cjs
+node tools/check-dictation.cjs
+node tools/check-local-files.cjs
 node tools/benchmark-seeds.cjs
 node tools/benchmark-seeds-v2.cjs
 node tools/serve.cjs
@@ -103,7 +106,7 @@ node tools/serve.cjs
 
 El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `build-catalogs.cjs --check` comprova que els fitxers generats siguin reproduïbles. El generador verifica també les empremtes de les instantànies i no les modifica. Per repetir el contrast complet cal el lèxic extern de Softcatalà; les instruccions són a `catalogs/README.md`.
 
-`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `app.js` en gestiona la interfície, la continuació i les cancel·lacions. `seeds.css` adapta l'espai de treball a dues columnes. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. La plantilla catalana és `templates/composer.html`; els recursos comparteixen el sufix `?v=2.2.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
+`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=2.4.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
 
 ## GitHub Pages i llicències
 

@@ -75,6 +75,14 @@ for (const item of manifest.languages) {
   html = html.replace('catalog.js' + assetVersion, base + '/catalog.js' + assetVersion);
   html = html.replace('<script defer src="' + prefix + base, '<script defer src="' + prefix + 'locales/manifest.js' + assetVersion + '"></script>\n  <script defer src="' + prefix + path.posix.dirname(item.config) + '/config.js' + assetVersion + '"></script>\n  <script defer src="' + prefix + 'language.js' + assetVersion + '"></script>\n  <script defer src="' + prefix + base);
   emit(item.path + 'index.html', html);
+  // Student entry point shares the immutable registry, without the composer or PDF.
+  let student = read('templates/dictation.html')
+    .replace('__CONFIG__', path.posix.dirname(item.config) + '/config.js?v=2.4.0')
+    .replace('__REGISTRY__', base + '/editions/index.js?v=2.4.0')
+    .replaceAll('__COMPOSER__', item.path)
+    .replace('<html lang="ca">', '<html lang="' + profile.uiLanguage + '">');
+  student = student.replace(/((?:src|href)=")(?!https?:|lightning:|#|\.\/)([^\"]+)/g, (_, start, target) => start + prefix + '../' + target);
+  emit(item.path + 'dictat/index.html', student);
   console.log(item.id + ': ' + source.entries.filter(e=>e.mode==='words').length + ' paraules · ' + revision);
 }
 emit('index.html', '<!doctype html>\n<html lang="ca"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Plec</title><link rel="icon" href="assets/favicon.svg"><script>location.replace(new URL(' + JSON.stringify(manifest.defaultLanguage + '/') + '+location.search+location.hash,location.href));</script><p><a href="' + manifest.defaultLanguage + '/">Obre Plec · Català</a></p></html>\n');
