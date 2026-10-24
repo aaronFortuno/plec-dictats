@@ -6,7 +6,7 @@
   const $=id=>document.getElementById(id),escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const STORAGE='plec-seeds-v1:'+L.id;
   const defaults=mode=>({count:mode==='words'?24:20,stage:mode==='words'?'cs':'all',tags:[...(mode==='words'?S.WORD_FOCUSES:S.PSEUDO_FOCUSES)],required:[],code:null});
-  let state={mode:'words',modelSide:'left',foldStyle:'thirds',sessions:{words:defaults('words'),pseudo:defaults('pseudo')}},current=null,busy=false,job=0,controller=null,toastTimer;
+  let state={mode:'words',modelSide:'left',foldStyle:'thirds',sessions:{words:defaults('words'),pseudo:defaults('pseudo')}},current=null,busy=false,job=0,controller=null,pendingSearch=null,toastTimer;
   let legacy=null;
   try{legacy=localStorage.getItem('plec-dictats-v1:'+L.id)||localStorage.getItem('plec-dictats-v1');}catch{}
   const session=()=>state.sessions[state.mode];
@@ -42,21 +42,26 @@
     if(next.language!==L.id)throw new Error('El codi correspon a una altra llengua.');
     edition=next;C=next.catalog;state.mode=result.recipe.mode;
     const s=session();s.count=result.recipe.count;s.stage=result.recipe.stage;s.tags=[...result.recipe.tags];s.code=result.code;if(!keepRequired)s.required=[];
-    current=result;persist();updateControls();renderPreview();updateURL();
+    current=result;pendingSearch=null;persist();updateControls();renderPreview();updateURL();
   }
-  const randomNonce=()=>{const values=new Uint32Array(1);crypto.getRandomValues(values);return values[0]%S.VARIANTS;};
-  function stopSearch(){job++;controller?.abort();controller=null;busy=false;}
-  async function generate(){
+  const randomNonce=()=>{const values=new Uint32Array(1),ceiling=Math.floor(4294967296/S.VARIANTS)*S.VARIANTS;do{crypto.getRandomValues(values);}while(values[0]>=ceiling);return values[0]%S.VARIANTS;};
+  function stopSearch(){job++;controller?.abort();controller=null;busy=false;pendingSearch=null;}
+  async function generate({resume=false}={}){
+    const continuing=resume?pendingSearch:null;
     stopSearch();const id=job,previous=current;current=null;session().code=null;persist();updateURL();busy=true;controller=new AbortController();renderPreview();updateAvailability();
     $('search-status').textContent=session().required.length?'Buscant un codi compatible…':'';
     try{
-      const p=S.prepare(edition,recipe()),required=[...session().required];
-      let start=randomNonce();if(previous&&previous.index===p.index&&previous.epoch===p.epoch&&start===previous.nonce)start=(start+1)%S.VARIANTS;
-      const result=await S.search(p,required,{start,signal:controller.signal,onProgress:attempts=>{if(id===job)$('search-status').textContent=`${attempts} de ${S.VARIANTS} variants comprovades…`;}});
+      const p=continuing?.prepared||S.prepare(edition,recipe()),required=continuing?.required||[...session().required],prior=continuing?.attempts||0;
+      let start=continuing?.nextNonce??randomNonce();if(!continuing&&previous&&previous.index===p.index&&previous.epoch===p.epoch&&start===previous.nonce)start=(start+1)%S.VARIANTS;
+      const result=await S.search(p,required,{start,maxAttempts:continuing?.remaining??S.VARIANTS,signal:controller.signal,onProgress:attempts=>{if(id===job)$('search-status').textContent=`${(prior+attempts).toLocaleString(L.locale)} de ${S.VARIANTS.toLocaleString(L.locale)} variants comprovades…`;}});
       if(id!==job)return;
-      if(!result.found){$('search-status').textContent=`Cap de les ${S.VARIANTS.toLocaleString(L.locale)} variants inclou tots aquests mots. Treu algun mot o ajusta els focus.`;return;}
+      if(!result.found){
+        if(result.remaining){pendingSearch={prepared:p,required,nextNonce:result.nextNonce,remaining:result.remaining,attempts:prior+result.attempts};$('search-status').textContent=`Encara no hem trobat cap codi. ${(prior+result.attempts).toLocaleString(L.locale)} de ${S.VARIANTS.toLocaleString(L.locale)} variants comprovades. Pots continuar la cerca o ajustar els mots.`;}
+        else $('search-status').textContent=`Cap de les ${S.VARIANTS.toLocaleString(L.locale)} variants inclou tots aquests mots. Treu algun mot o ajusta els focus.`;
+        return;
+      }
       const code=S.encode({epoch:p.epoch,recipe:p.index,nonce:result.nonce});setCode(code,{keepRequired:true});
-      $('search-status').textContent=required.length?`Codi trobat després de ${result.attempts} ${result.attempts===1?'intent':'intents'}.`:'';
+      const attempts=prior+result.attempts;$('search-status').textContent=required.length?`Codi trobat després de ${attempts.toLocaleString(L.locale)} ${attempts===1?'intent':'intents'}.`:'';
     }catch(error){if(id===job&&!controller?.signal.aborted)$('search-status').textContent=error.message;}
     finally{if(id===job){busy=false;controller=null;renderPreview();updateAvailability();}}
   }
@@ -73,7 +78,7 @@
     $('fold-map').setAttribute('aria-label','Full obert: '+layout.hint);$('fold-sketch').innerHTML=foldSketch(layout);$('fold-step-list').innerHTML=layout.steps.map(step=>`<li>${escape(step)}</li>`).join('');
     renderRequired();updateAvailability();
   }
-  function updateAvailability(){const p=pool();$('pool-count').textContent=p.length;$('pool-status').textContent=!session().tags.length?' · Tria almenys un focus.':p.length<session().count?' · Amplia els filtres o redueix la llargada.':'';$('cancel-search').hidden=!busy;$('new-dictation').disabled=busy;}
+  function updateAvailability(){const p=pool();$('pool-count').textContent=p.length;$('pool-status').textContent=!session().tags.length?' · Tria almenys un focus.':p.length<session().count?' · Amplia els filtres o redueix la llargada.':'';$('cancel-search').hidden=!busy;$('resume-search').hidden=busy||!pendingSearch;$('new-dictation').disabled=busy;}
   function renderRequired(){
     $('required-list').innerHTML=session().required.map(id=>`<span class="required-chip">${escape(lookup(id)?.text||id)}<button type="button" data-remove-required="${id}" aria-label="Treu ${escape(lookup(id)?.text||id)}">${window.PlecIcons('x')}</button></span>`).join('');suggest();
   }
@@ -164,11 +169,13 @@
   $('model-side-control').addEventListener('click',event=>{const b=event.target.closest('[data-side]');if(!b)return;state.modelSide=b.dataset.side;persist();updateControls();renderPreview();});
   $('new-dictation').addEventListener('click',generate);
   $('cancel-search').addEventListener('click',()=>{stopSearch();$('search-status').textContent='Cerca cancel·lada.';renderPreview();updateAvailability();});
+  $('resume-search').addEventListener('click',()=>generate({resume:true}));
   $('required-word').addEventListener('input',event=>{if(!event.isComposing&&$('required-word').value.includes(','))addRequired();else suggest();});$('add-required').addEventListener('click',addRequired);
   $('required-word').addEventListener('keydown',event=>{if(!event.isComposing&&['Enter',','].includes(event.key)){event.preventDefault();addRequired();}});
   $('required-list').addEventListener('click',event=>{const b=event.target.closest('[data-remove-required]');if(!b)return;session().required=session().required.filter(id=>id!==b.dataset.removeRequired);persist();renderRequired();generate();});
   // A fixed tooltip stays readable outside the scrollable configuration panel.
-  const helpTrigger=$('required-help-trigger'),helpButton=$('required-help-toggle'),helpTip=$('required-help');
+  function setupHelp(triggerId,buttonId,tipId){
+  const helpTrigger=$(triggerId),helpButton=$(buttonId),helpTip=$(tipId);
   let helpPinned=false,helpCloseTimer,helpHideTimer;
   function positionHelp(){
     const rect=helpTrigger.getBoundingClientRect(),width=helpTip.offsetWidth,height=helpTip.offsetHeight;
@@ -198,6 +205,9 @@
   document.querySelector('.config-scroll').addEventListener('scroll',()=>{helpPinned=false;hideRequiredHelp();});
   window.addEventListener('scroll',()=>{if(!helpTip.hidden){helpPinned=false;hideRequiredHelp();}},{passive:true});
   window.addEventListener('resize',()=>{if(!helpTip.hidden)positionHelp();});
+  }
+  setupHelp('required-help-trigger','required-help-toggle','required-help');
+  setupHelp('focus-help-trigger','focus-help-toggle','focus-help');
   $('recover-form').addEventListener('submit',event=>{event.preventDefault();try{const resolved=S.resolve(R.editions,$('recover-code').value);stopSearch();setCode(resolved.code);$('recover-code').value='';$('search-status').textContent='';say('Dictat recuperat amb els mateixos mots, ordre i filtres.');}catch(error){say(error.message);}});
   async function copy(value,success){try{await navigator.clipboard.writeText(value);say(success);}catch{say('No s’ha pogut copiar automàticament. El codi és '+(current?.code||'')+'.');}}
   $('copy-code').addEventListener('click',()=>current&&copy(current.code,'Codi copiat.'));
@@ -229,6 +239,7 @@
     }
   });
   const releases = [
+    ['2.2', '2026-10-23', ['Codis de 4 + 5 caràcters amb 24,3 milions de variants per configuració. Cerca optimitzada en tandes cancel·lables que es poden continuar sense repetir intents. Ajuda sobre la combinació dels focus i compatibilitat amb els codis antics.'] ],
     ['2.1', '2026-10-23', ['Lateral més ample i focus reorganitzats per aprofitar les files. Mots obligatoris amb Enter o coma i ajuda contextual accessible. Zoom amb Ctrl i roda, amb avís breu; desplaçament natural amb la roda i en pantalles tàctils.'] ],
     ['2.0', '2026-10-23', ['Codis curts recuperables amb filtres i ordre reproduïbles. Cerca de fins a cinc mots obligatoris, sense tria individual ni lateral dret. Codi imprès al full i enllaç compartible. Instantània del banc conservada per recuperar els codis en el futur.'] ],
     ['1.9', '2026-10-23', ['Retirat el filtre Femenins i plurals. Totes les formes continuen al banc i es trien amb els mateixos focus ortogràfics. Les tries i preferències antigues es conserven en retirar el filtre.'] ],

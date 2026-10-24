@@ -1,5 +1,12 @@
 # Historial
 
+## 2.2 · 23 d’octubre de 2026
+
+- Format de codi de quatre caràcters de configuració i cinc de variant: 24,3 milions de variants per configuració, mantenint els codis antics de sis caràcters.
+- Cerca optimitzada de mots obligatoris sense construir el dictat complet a cada intent. Tandes cancel·lables i continuació sense repetir variants; els resultats parcials no es declaren impossibles.
+- Ajuda explícita dels focus: qualsevol dels seleccionats, sense quota mínima de cada focus.
+- Comprovats perquè i orquestra amb tots els focus, recuperació antiga i nova, quatre vectors nous, PDF amb el codi llarg i mesures documentades.
+
 ## 2.1 · 23 d’octubre de 2026
 
 - Lateral més ample i focus reorganitzats per ocupar quatre files en escriptori, sense reduir la lletra.

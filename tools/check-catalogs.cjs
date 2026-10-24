@@ -41,6 +41,7 @@ for(const base of ['https://pleg.at/','https://aaronfortuno.github.io/plec-dicta
 assert.throws(()=>L.dictationURL('https://pleg.at/',{language:'es',catalogue:'es-v1',seed:'X5D8TY'}));
 assert.throws(()=>L.dictationURL('https://pleg.at/',{language:'ca',catalogue:'es-v1',seed:'X5D8TY'}));
 assert.throws(()=>L.dictationURL('https://pleg.at/',{language:'ca',catalogue:C.revision,seed:'O0I1LU'}));
+assert.equal(new URL(L.dictationURL('https://aaronfortuno.github.io/plec-dictats/',{language:'ca',catalogue:C.revision,seed:'m6qm-aavn4'})).searchParams.get('seed'),'M6QMAAVN4');
 L.assertImportLanguage({version:3},'ca');L.assertImportLanguage({version:4,language:'ca'},'ca');
 assert.throws(()=>L.assertImportLanguage({version:3,language:'es'},'ca'));
 assert.throws(()=>L.assertImportLanguage({version:4},'ca'));

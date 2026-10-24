@@ -24,6 +24,11 @@
 .required-settings h2 span{font-size:11px;font-weight:400;color:var(--muted)}
 .required-heading .icon-button{min-width:25px;min-height:25px;padding:3px}
 .required-heading .lucide{width:17px;height:17px}
+.focus-help-trigger{display:flex;align-items:center;gap:8px}
+.focus-help-trigger .icon-button{min-width:18px;min-height:18px;padding:0}
+.focus-help-trigger .lucide{width:15px;height:15px}
+#resume-search{display:inline-flex;margin-top:7px;font-size:11px;color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.recover-form input{width:142px}
 .required-help{position:fixed;z-index:10;width:340px;max-width:calc(100vw - 24px);padding:14px 16px;background:var(--white);border:1px solid var(--line);border-radius:8px;box-shadow:0 5px 24px #233a3326;font:12px/1.65 var(--sans);color:var(--ink);opacity:0;transform:translateY(4px);transition:opacity var(--motion-duration) var(--motion-ease),transform var(--motion-duration) var(--motion-ease)}
 .required-help.is-visible{opacity:1;transform:translateY(0)}
 .required-help p{margin:0}

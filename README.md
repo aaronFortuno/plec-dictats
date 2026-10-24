@@ -2,13 +2,13 @@
 
 Un generador obert de dictats autocorrectius en català: **3.299 paraules**, **96 pseudoparaules**, dos formats de plec i codis curts per recuperar cada dictat. Funciona al navegador, sense comptes ni servidor de dades.
 
-**[Obre Plec · Català](https://aaronfortuno.github.io/plec-dictats/ca/)** · [Prova el codi A7W-STC](https://aaronfortuno.github.io/plec-dictats/ca/?seed=A7WSTC)
+**[Obre Plec · Català](https://aaronfortuno.github.io/plec-dictats/ca/)** · [Prova perquè i orquestra · M6QM-AAVN4](https://aaronfortuno.github.io/plec-dictats/ca/?seed=M6QMAAVN4)
 
 ## Preparar un dictat
 
 1. Tria **Paraules** o **Pseudoparaules**, 8, 12, 16, 20 o 24 elements, el nivell orientatiu i els focus de pràctica. Els focus es combinen amb el criteri «qualsevol dels triats»; no hi ha una quota mínima de cada focus. Els filtres preparen automàticament un codi nou.
-2. Si cal, afegeix fins a **cinc mots obligatoris** del banc que passin els filtres, amb **Enter**, **coma** o el botó Afegeix. També pots enganxar una llista separada per comes. L’interrogant al costat del títol explica els límits de la cerca. Es busca un codi que ja els contingui. Si no n'hi ha cap, treu algun mot o ajusta els focus. No s'insereixen paraules a mà ni es relaxen els filtres silenciosament.
-3. Conserva el codi, per exemple **A7W-STC**, o copia l'enllaç. **Recupera un dictat** reconstrueix els mateixos mots, en el mateix ordre, amb la mateixa llargada, nivell i focus. S'accepten minúscules, guions i espais.
+2. Si cal, afegeix fins a **cinc mots obligatoris** del banc que passin els filtres, amb **Enter**, **coma** o el botó Afegeix. També pots enganxar una llista separada per comes. Els interrogants expliquen els focus i la cerca. Es busca un codi que ja contingui els mots. Si una tanda no troba coincidència, **Continua la cerca** reprèn els intents pendents; també es pot cancel·lar o ajustar la petició. No s'insereixen paraules a mà ni es relaxen els filtres silenciosament.
+3. Conserva el codi, per exemple **M6QM-AAVN4**, o copia l'enllaç. **Recupera un dictat** reconstrueix els mateixos mots, en el mateix ordre, amb la mateixa llargada, nivell i focus. S'accepten minúscules, guions i espais. Els codis antics de sis caràcters continuen funcionant.
 4. **Nou dictat** prepara una altra variant amb la mateixa configuració. El format del plec i el costat del model són independents del codi i es poden canviar sense alterar la tria.
 5. Descarrega el **PDF A4**, que inclou el codi i els camps Nom i Data. A **Com funciona** hi ha les instruccions de plegat i la **guia docent**, amb el mateix codi, numeració i ordre.
 
@@ -20,23 +20,25 @@ El codi empaqueta una edició del banc, la configuració dels filtres i un núme
 
 La mateixa entrada sempre produeix la mateixa successió. Per això no cal guardar un fitxer per a cada dictat: es conserva una instantània del catàleg i es repeteix el càlcul. La llengua queda identificada per la ruta `/ca/` i s'imprimeix amb el codi al full.
 
-Els sis caràcters provenen d'un alfabet de 30 símbols, sense I, L, O, U, 0 ni 1. El protocol reserva quatre edicions i representa 81.975 configuracions amb **2.223 variants per configuració**. Les configuracions sense prou mots i les edicions encara no disponibles es rebutgen. La cerca de mots obligatoris recorre aquest conjunt finit, és cancel·lable i no bloqueja el navegador amb una cerca sense límit.
+El protocol actual separa el codi en **quatre caràcters de configuració + cinc de variant**. Fa servir 30 símbols, sense I, L, O, U, 0 ni 1; representa 81.975 configuracions, reserva nou edicions i disposa de **24.300.000 variants per configuració**. Això amplia unes 10.900 vegades les 2.223 variants del format inicial. Les edicions encara no disponibles i les configuracions sense prou candidats es rebutgen.
 
-El detall de la fórmula, les operacions inverses, els enters de 32 bits, el mòdul, el mostreig, els límits, les mesures i la compatibilitat futura és a **[docs/LLAVORS.md](docs/LLAVORS.md)**.
+Els focus delimiten candidats amb **qualsevol dels triats (OR)**: marcar-los tots amplia el banc i no imposa una paraula de cadascun. Cada tanda de cerca dura aproximadament fins a 1,8 segons; el motor cedeix el control periòdicament i permet continuar sense repetir intents. Una tanda sense resultat no prova que no existeixi cap codi: només l'esgotament de totes les variants permet afirmar-ho dins d'aquesta configuració.
+
+El detall de la fórmula, el mostreig, els límits i les mesures actuals és a **[docs/LLAVORS-V2.md](docs/LLAVORS-V2.md)**. Es conserva també la [documentació del protocol inicial](docs/LLAVORS.md).
 
 ## Fins a quants mots obligatoris?
 
-El màxim de càlcul és sempre 2.223 variants; demanar més mots fa més difícil trobar una coincidència, però no amplia la cerca indefinidament. En una prova local de 30 conjunts independents per cas, amb fulls de 24 mots:
+En una prova del protocol 2 amb deu conjunts independents per cas i fulls de 24 mots, s'han trobat aquests resultats. Per a 1–3 mots es permet recórrer tot el domini; per a 4–5 es proven com a màxim un milió de variants per cas:
 
 | Candidats | 1 obligatori | 2 obligatoris | 3 obligatoris | 4 obligatoris | 5 obligatoris |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Tot el banc · 3.299 | 30/30 | 5/30 | 0/30 | 0/30 | 0/30 |
-| Dièresi · 231 | 30/30 | 30/30 | 27/30 | 6/30 | 0/30 |
-| Ela geminada · 160 | 30/30 | 30/30 | 30/30 | 15/30 | 1/30 |
+| Tot el banc · 3.299 | 10/10 | 10/10 | 10/10 | 0/10 | 0/10 |
+| Dièresi · 231 | 10/10 | 10/10 | 10/10 | 10/10 | 10/10 |
+| Ela geminada · 160 | 10/10 | 10/10 | 10/10 | 10/10 | 10/10 |
 
-La mediana de càlcul en aquests casos va quedar entre 0,006 i 4,316 ms en un Intel Core Ultra 5 225U amb Node 24.19.0. No són mesures de mòbil ni del temps total de la interfície. La cerca del navegador cedeix el control entre blocs de 64 intents i hi afegeix una mica de temps.
+Amb tot el banc, les medianes han estat 6,263 ms per a dos obligatoris i 1.164,973 ms per a tres, en un Intel Core Ultra 5 225U amb Node 24.19.0. No són temps de mòbil ni de la interfície: el navegador pot necessitar diverses tandes. Els 0/10 de quatre i cinc mots només descriuen el milió de variants comprovat, no tot el domini.
 
-Un mot és fàcil d'incloure en aquesta mostra. Dos o tres són més útils quan els focus acoten el banc. Quatre o cinc poden funcionar amb conjunts petits; la interfície els permet provar, sense garantir que existeixi cap codi compatible. Més temps de cerca no crea variants que no caben al format del codi.
+«Perquè» i «orquestra», amb tots els focus i cicle superior, apareixen al codi **M6QM-AAVN4**, trobat al cap de 15.655 intents des del començament. Dos i tres obligatoris ara són pràctics amb un banc ampli en la mostra provada; quatre o cinc continuen sent molt més favorables amb focus acotats. Cap quantitat té una garantia universal de coincidència.
 
 ## Nivells i banc de paraules
 
@@ -80,13 +82,15 @@ node tools/check.cjs
 node tools/check-catalogs.cjs
 node tools/check-lexicon.cjs
 node tools/check-seeds.cjs
+node tools/check-seeds-v2.cjs
 node tools/benchmark-seeds.cjs
+node tools/benchmark-seeds-v2.cjs
 node tools/serve.cjs
 ```
 
 El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `build-catalogs.cjs --check` comprova que els fitxers generats siguin reproduïbles. El generador verifica també les empremtes de les instantànies i no les modifica. Per repetir el contrast complet cal el lèxic extern de Softcatalà; les instruccions són a `catalogs/README.md`.
 
-`seeds.js` conté el protocol, el mostreig i la cerca. `app.js` en gestiona la interfície i les cancel·lacions. `seeds.css` adapta l'espai de treball a dues columnes. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. La plantilla catalana és `templates/composer.html`; els recursos comparteixen el sufix `?v=2.1.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
+`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `app.js` en gestiona la interfície, la continuació i les cancel·lacions. `seeds.css` adapta l'espai de treball a dues columnes. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. La plantilla catalana és `templates/composer.html`; els recursos comparteixen el sufix `?v=2.2.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
 
 ## GitHub Pages i llicències
 

@@ -1,5 +1,7 @@
 # Codis i selecció reproduïble · protocol 1
 
+**Document històric.** Els codis nous fan servir el [protocol 2, de quatre i cinc caràcters](LLAVORS-V2.md), amb 24,3 milions de variants per configuració. Aquest document conserva la definició i les mesures del format inicial, que continua sent recuperable.
+
 Un codi com **A7W-STC**, introduït a l'entrada catalana, recupera 24 paraules de cicle superior amb tots els focus. Comença per «diumenge», «reduïda», «empollar» i «lletges». Aquest és un vector de regressió permanent: no s'ha de canviar per fer passar una prova.
 
 El codi representa la **tria de mots i el seu ordre**, el tipus, la llargada, el nivell, els focus i l'edició. El format del plec i el costat del model són opcions de presentació i es poden canviar sense canviar els mots ni el codi. El mateix codi pot tenir un resultat diferent en una altra llengua: la llengua forma part de la ruta, per exemple `/ca/`.

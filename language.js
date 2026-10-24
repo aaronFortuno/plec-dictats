@@ -12,7 +12,7 @@
   }
   function dictationURL(base, { language: id, catalogue, seed }) {
     const pack = language(id), code = normalizeCode(seed);
-    if (!/^[ABCDEFGHJKMNPQRSTVWXYZ2-9]{6}$/.test(code)) throw new Error('Codi no vàlid.');
+    if (!/^(?:[ABCDEFGHJKMNPQRSTVWXYZ2-9]{6}|[ABCDEFGHJKMNPQRSTVWXYZ2-9]{9})$/.test(code)) throw new Error('Codi no vàlid.');
     if (!catalogue || !catalogue.startsWith(id + '-')) throw new Error('El catàleg no correspon a la llengua.');
     const url = new URL(pack.path, new URL('./', base));
     url.search = new URLSearchParams({ mode: 'dictat', seed: code, catalogue }).toString();
