@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "profile": "ca-valencian-didactic-v1",
+  "voice": "ca-ES-EnricNeural",
+  "pack": "ca-valencian-enric-pilot-v1",
+  "status": "editorial-proposals-pending-review",
+  "source": "https://www.upv.es/entidades/spnl/wp-content/uploads/2023/11/gramatica_normativa_valenciana.pdf",
+  "basis": "Propostes editorials de prova, no transcripcions exactes extretes del DNV. GNV, capítol 1: vocals àtones, sibilants, laterals i ròtiques. Geminació explícita per criteri didàctic. La veu no es presenta com una veu valenciana validada.",
+  "entries": [
+    {"mot":"paper","ipa":"pa.ˈpeɾ","feature":"Vocal àtona a i erra final audible."},
+    {"mot":"cadira","ipa":"ka.ˈði.ɾa","feature":"Vocals àtones a, sense reducció a neutra."},
+    {"mot":"finestra","ipa":"fi.ˈnes.tɾa","feature":"Vocal final a i grup consonàntic str."},
+    {"mot":"escola","ipa":"es.ˈkɔ.la","feature":"Vocal inicial e i final a; contrastar timbre tònic."},
+    {"mot":"camisa","ipa":"ka.ˈmi.za","feature":"Vocals a i essa sonora intervocàlica."},
+    {"mot":"cosa","ipa":"ˈkɔ.za","feature":"O oberta tònica, essa sonora i a final; contrastar el timbre del mot."},
+    {"mot":"terra","ipa":"ˈtɛ.ra","feature":"E oberta i erra múltiple; a final."},
+    {"mot":"porta","ipa":"ˈpɔɾ.ta","feature":"O oberta tònica; a final."},
+    {"mot":"rosa","ipa":"ˈrɔ.za","feature":"O oberta i essa sonora; contrastar el timbre del mot."},
+    {"mot":"metge","ipa":"ˈme.d͡ʒe","feature":"Africada sonora i vocal final e; contrastar el timbre tònic."},
+    {"mot":"pluja","ipa":"ˈplu.d͡ʒa","feature":"Africada sonora intervocàlica, sense ensordiment apitxat."},
+    {"mot":"platja","ipa":"ˈpla.d͡ʒa","feature":"Africada sonora; exemple de la GNV, secció 1.3.2.4."},
+    {"mot":"guitarra","ipa":"gi.ˈta.ra","feature":"U muda i erra múltiple."},
+    {"mot":"raïm","ipa":"ra.ˈim","feature":"Hiat a-ï i accent final."},
+    {"mot":"agraïm","ipa":"a.ɣɾa.ˈim","feature":"Hiat i vocals àtones a; forma flexionada proposada."},
+    {"mot":"conduïdes","ipa":"kon.du.ˈi.ðes","feature":"Hiat u-ï, accent a ï i final es."},
+    {"mot":"atapeït","ipa":"a.ta.pe.ˈit","feature":"Accent final i vocals àtones plenes; comprovar l’error persistent amb Alba."},
+    {"mot":"llit","ipa":"ˈʎit","feature":"Control de lateral palatal i oclusiva final."},
+    {"mot":"blanc","ipa":"ˈblaŋk","feature":"Control de nasal velar i k final audible."},
+    {"mot":"col·legi","ipa":"kol.ˈlɛ.d͡ʒi","feature":"Geminació marcada per criteri didàctic i africada sonora; contrastar el timbre tònic."},
+    {"mot":"vi","ipa":"ˈvi","feature":"V labiodental: conservar en la taula; no enviar al pilot Azure ca-ES documentat."},
+    {"mot":"vaca","ipa":"ˈva.ka","feature":"V labiodental i vocals a: conservar en la taula; no substituir v per b per adaptar-se al motor."}
+  ]
+}

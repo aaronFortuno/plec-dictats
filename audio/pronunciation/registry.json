@@ -14,5 +14,19 @@
     "alphabet": "ipa-azure-ca-ES",
     "status": "draft-pending-linguistic-and-auditory-review",
     "note": "Una fila per mot del banc. IPA buida quan encara no hi ha proposta. Les propostes amb dièresi importades del perfil central formal necessiten revisió segons el criteri didàctic. La validació d’una transcripció no valida cap enregistrament ni cap veu."
+  },{
+    "id": "ca-valencian-didactic-v1",
+    "language": "ca",
+    "dialect": "valencia",
+    "diction": "didactic-explicit",
+    "label": "Valencià · proposta de dicció didàctica explícita",
+    "table": "ca/valencian-didactic.tsv",
+    "export": "ca/valencian-didactic.json",
+    "readable": "ca/valencian-didactic-ipa.txt",
+    "catalogPath": "catalogs/ca/editions/seed-1.json",
+    "catalogFingerprint": "ee94edbd3b2d4fb4d44d1cd66f70b970e17520029d952593d69e5adb2139bbf5",
+    "alphabet": "ipa-valencian-draft",
+    "status": "draft-pending-linguistic-and-auditory-review",
+    "note": "Taula independent sobre les mateixes grafies i ID; no és encara un banc lèxic adaptat al valencià. Es parteix de les orientacions generals de la GNV, sense copiar la IPA central. La v labiodental es conserva en les dades encara que no figura en l’inventari documentat d’Azure ca-ES; no se substituïx automàticament per b. Cal contrast lingüístic i una prova curta de veu abans de generar el corpus."
   }]
 }

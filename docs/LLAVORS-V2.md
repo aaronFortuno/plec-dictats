@@ -12,6 +12,8 @@ tipus triat AND nivell triat AND qualsevol dels focus triats
 
 No s'exigeix una paraula de cada focus. Amb tots els focus marcats, el conjunt de candidats és més ampli; el nombre de condicions no augmenta. Retirar focus pot facilitar una coincidència perquè redueix el conjunt de candidats, sempre que els mots obligatoris encara hi pertanyin. S'ha afegit una ajuda específica a la capçalera dels focus.
 
+Des de la interfície 1.17, l’edició actual és `seed-2.json` (slot 1): `accent` correspon exactament als mots amb à/è/é/í/ò/ó/ú i `dieresi` als que tenen ï/ü. Un mot pot tenir les dues etiquetes. Els mots amb altres focus continuen entrant si algun d’aquests altres està seleccionat. Els codis de l’edició inicial (`seed-1.json`, slot 0) es recuperen sense reclassificar ni canviar cap mot. Els dos arxius són immutables. Un canvi de focus o Nou dictat utilitza l’edició actual; canviar només el plec conserva el codi.
+
 ## Per què s'ha canviat el format
 
 El format inicial havia de repartir `30⁶` codis entre 81.975 configuracions i quatre edicions. Això deixava només **2.223 variants per configuració**, insuficients per a moltes parelles de mots en un banc de més de tres mil candidats. No era una limitació de velocitat de l'ordinador: aquella parella podia no aparèixer en cap de les variants representables.

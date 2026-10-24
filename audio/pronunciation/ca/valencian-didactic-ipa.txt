@@ -1,0 +1,24 @@
+# Valencià · proposta de dicció didàctica explícita · Propostes en revisió; no valida cap veu ni àudio.
+# mot	IPA	estat de la proposta
+agraïm	a.ɣɾa.ˈim	proposta
+atapeït	a.ta.pe.ˈit	proposta
+blanc	ˈblaŋk	proposta
+cadira	ka.ˈði.ɾa	proposta
+camisa	ka.ˈmi.za	proposta
+col·legi	kol.ˈlɛ.d͡ʒi	proposta
+conduïdes	kon.du.ˈi.ðes	proposta
+cosa	ˈkɔ.za	proposta
+escola	es.ˈkɔ.la	proposta
+finestra	fi.ˈnes.tɾa	proposta
+guitarra	gi.ˈta.ra	proposta
+llit	ˈʎit	proposta
+metge	ˈme.d͡ʒe	proposta
+paper	pa.ˈpeɾ	proposta
+platja	ˈpla.d͡ʒa	proposta
+pluja	ˈplu.d͡ʒa	proposta
+porta	ˈpɔɾ.ta	proposta
+raïm	ra.ˈim	proposta
+rosa	ˈrɔ.za	proposta
+terra	ˈtɛ.ra	proposta
+vaca	ˈva.ka	proposta
+vi	ˈvi	proposta

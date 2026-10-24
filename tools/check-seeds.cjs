@@ -3,7 +3,7 @@ const S=require('../seeds.js'),E=[require('../catalogs/ca/editions/seed-1.json')
 const recipe={mode:'words',count:24,stage:'cs',tags:S.WORD_FOCUSES};
 const manifest=require('../catalogs/ca/editions/manifest.json');
 assert.equal(crypto.createHash('sha256').update(fs.readFileSync('catalogs/ca/editions/seed-1.json')).digest('hex'),manifest.editions[0].sha256,'Archive must never change');
-assert.deepEqual(require('../catalogs/ca/editions/index.js').editions,E,'Browser bundle matches the archived source');
+assert.deepEqual(require('../catalogs/ca/editions/index.js').editions.find(e=>e.slot===0),E[0],'Browser bundle preserves the original archive');
 assert.equal(S.ALPHABET.length,30);assert.equal(S.RECIPES,81975);assert.equal(S.VARIANTS,2223);
 for(const vector of require('../docs/seeds-v1-vectors.json').vectors){
  const recovered=S.resolve(E,vector.code);

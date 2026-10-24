@@ -54,3 +54,11 @@ Les 137 variants incorporades en la versió 1.8 es mantenen dins dels focus orto
 En recuperar una preferència antiga amb el focus retirat, es mantenen els altres focus vàlids. Si només s'havia seleccionat el focus retirat, es recuperen els focus habituals perquè el preparador continuï funcionant. La tria de paraules guardada es conserva; una selecció de focus buida voluntàriament continua buida.
 
 La revisió TXT anterior a la consolidació es conserva localment a `output/revisio-abans-v1.8.txt`. Les llistes TXT i TSV actuals ja inclouen els canvis integrats al generador.
+
+### Revisió dels focus a la versió 1.17
+
+La nova edició `ca-2026-02-draft` / `seed-2.json` redefineix accentuació com a **accent gràfic present**. S'han retirat 503 assignacions sense accent i s'han afegit 315 assignacions que faltaven en mots accentuats: 867 mots amb aquest focus. Dièresi coincideix amb ï/ü: 227 mots, retirant quatre etiquetes sobrants. No s'ha alterat cap grafia ni ID.
+
+Dels mots que perdien l'únic focus, 170 s'han reassignat a grafies realment presents (essa, hac, ge/jota, be/ve, erra, qu/gu, dígrafs o vocals àtones). Són etiquetes editorials pendents de revisió, no una validació lingüística. Sis mots (talp, fil, pit, plom, tel i tiet) no tenen un dels focus actuals assignat: continuen al catàleg de consulta, amb `focusStatus: unassigned`, però no s'introdueixen artificialment en un exercici d'accentuació. Amb tots els focus, hi ha 3.293 candidats abans d'aplicar el nivell.
+
+La instantània original `seed-1.json` i la seva empremta es conserven. Les taules de pronunciació continuen ancorades a aquella identitat de mots; canviar etiquetes en la nova edició no invalida els MP3 amb els mateixos ID.

@@ -86,6 +86,8 @@ Quan aprovem la mostra, decidirem si mantenim Alba, el ritme de −10% i aquesta
 
 ## Situació registrada el 24/10/2026
 
+**Actualització posterior al pilot valencià:** 20 peticions amb Enric, 1.702 caràcters nous. El registre local queda en **121.529**, amb **278.471** fins al límit preventiu. Cap lot complet d’una altra veu s’ha iniciat. Vegeu [VALENCIA.md](VALENCIA.md). Els recomptes del paràgraf següent descriuen el punt anterior al pilot.
+
 Després del lot de 3.072 mots, les instruccions i les mostres IPA (nou mots, quatre incidències i vuit dièresis), el registre local reserva **119.827 caràcters** a l’octubre. Queden **280.173** fins al límit preventiu de 400.000. Equival aproximadament al **24% dels 500.000 caràcters mensuals F0**; no és una lectura de facturació Azure i pressuposa que no hi ha ús extern sense declarar. Contrasta el total al recurs abans d’ampliar la generació. [Preus oficials de Speech](https://azure.microsoft.com/en-gb/pricing/details/speech/?cdn=disable).
 
 El pla històric de 227 dièresis estima 20.173 caràcters amb SSML; cal reconstruir-lo des de les transcripcions que finalment s’aprovin. Una altra passada ordinària de totes les paraules estima 125.212 caràcters amb els ajustos documentats, però una passada IPA tindrà un pressupost diferent segons les transcripcions i el SSML. No s’ha iniciat cap altre lot complet ni una altra veu.

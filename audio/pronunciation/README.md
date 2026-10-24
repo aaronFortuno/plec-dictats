@@ -55,6 +55,10 @@ Les antigues taules de dièresis i el JSON de la mostra conserven la procedènci
 
 ## Altres varietats i llengües
 
-[registry.json](registry.json) identifica cada perfil per llengua, varietat, dicció, edició del banc i fitxer. Una varietat futura tindrà un perfil i una taula propis: no s’hi copiarà automàticament la transcripció central ni se’n canviarà només l’etiqueta. Caldrà revisar vocals, accent, consonants i decisions de dicció allà on variïn. Actualment només hi ha transcripcions del perfil català central; altres llengües requeriran també el seu inventari fonètic i validador.
+Ja hi ha un segon perfil, **ca-valencian-didactic-v1**, amb [TSV editable](ca/valencian-didactic.tsv), [JSON](ca/valencian-didactic.json) i [TXT de propostes](ca/valencian-didactic-ipa.txt). Cobreix els mateixos 3.299 mots amb 22 propostes independents i 3.277 IPA buides. Cap està validada. La [guia del pilot valencià](../../docs/VALENCIA.md) documenta fonts, dicció, la prova curta amb Enric i les limitacions del motor.
+
+Aquest perfil té inventari d’edició `ipa-valencian-draft`, que permet conservar /v/. El pla informa per mot si és compatible amb l’inventari Azure ca-ES; les dades lingüístiques no es modifiquen per fer-les passar pel motor. Es valida i exporta amb `--profile ca-valencian-didactic-v1` en les ordres anteriors. La síntesi continua separada de l’edició.
+
+[registry.json](registry.json) identifica cada perfil per llengua, varietat, dicció, edició del banc i fitxer. Cada varietat té un perfil i una taula propis: no s’hi copia automàticament la transcripció central ni se’n canvia només l’etiqueta. Cal revisar vocals, accent, consonants i decisions de dicció allà on variïn. Hi ha propostes inicials centrals i valencianes; altres llengües requeriran també el seu inventari fonètic i validador.
 
 Per reutilitzar o contribuir dades, conserva perfil, ID, fonts i estat. Una correcció pot arribar com un canvi de TSV a GitHub, amb el motiu i la font; la comprovació tècnica no substitueix el contrast lingüístic ni l’escolta. Vegeu el [procediment complet](../../docs/PRONUNCIACIO.md).

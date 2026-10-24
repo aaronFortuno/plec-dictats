@@ -110,6 +110,8 @@ Cada fila identifica llengua, varietat i dicció. El registre permet taules inde
 
 ## Velocitat del reproductor
 
+La preparació del segon perfil, valencià, es documenta a [VALENCIA.md](VALENCIA.md): taula independent, 22 propostes inicials, prova real de 20 mots amb Enric i limitacions de l’inventari del motor. No es traslladen les revisions d’Alba a una altra veu ni es publica el perfil com a validat automàticament.
+
 Es manté la síntesi actual. El reproductor permet triar el ritme habitual o `playbackRate` 0,85 amb preservació de to abans de començar, de forma independent del codi i de l’MP3. No cal duplicar cada àudio per oferir una velocitat més lenta.
 
 ## Generació llarga i represa

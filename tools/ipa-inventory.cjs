@@ -3,7 +3,9 @@
 const VOWELS = 'aɔəeɛiou';
 const PHONES = ['t͡ʃ', 'd͡ʒ', ...'aɔəeɛioubβdðfgɣjk lʎmnŋɲpɾrsʃtθwxzʒ'.replace(/ /g, '')];
 
-function analyzeIpa(ipa) {
+function analyzeIpa(ipa, {allowLabiodentalV=false}={}) {
+  // Authoring a Valencian transcription is separate from Azure ca-ES support.
+  const phones=allowLabiodentalV?[...PHONES,'v']:PHONES;
   if (typeof ipa !== 'string' || (ipa.match(/ˈ/g) || []).length !== 1) throw new Error('Cal exactament un accent primari IPA.');
   const syllables = ipa.split('.');
   let stressedSyllable = 0;
@@ -13,7 +15,7 @@ function analyzeIpa(ipa) {
     let remaining = syllable.replace(/^[ˈˌ]/u, '');
     let nuclei = 0;
     while (remaining) {
-      const phone = PHONES.find(candidate => remaining.startsWith(candidate));
+      const phone = phones.find(candidate => remaining.startsWith(candidate));
       if (!phone) throw new Error(`Fonema no admès per Azure ca-ES: ${remaining}.`);
       if (VOWELS.includes(phone)) nuclei += 1;
       remaining = remaining.slice(phone.length);

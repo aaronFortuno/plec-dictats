@@ -1,5 +1,13 @@
 # Historial
 
+## 1.17 · 24 d’octubre de 2026
+
+- Accentuació inclou només mots amb accent gràfic, i Dièresi només mots amb ï o ü. Seleccionar tots dos combina els candidats amb OR. Corregides etiquetes mancants i sobrants.
+- Segona instantània del banc per als dictats nous. Els codis antics conserven els seus mots, ordre i criteris; canviar focus o crear un dictat nou utilitza l’edició actual.
+- Reassignats als seus altres trets els mots que treballaven «accent sí/no». Sis mots sense focus actual identificat es mantenen a la consulta, sense forçar-los dins d’un filtre.
+- Perfil valencià independent amb 3.299 files i 22 propostes IPA. Pilot separat de 20 mots amb Enric; v labiodental conservada en les dades i exclosa de la prova Azure compatible. Sense activació pública automàtica.
+- README, criteris dels focus, compatibilitat de llavors i procediment de pronunciació actualitzats. Ampliació futura de pseudoparaules documentada sense alterar l’edició existent.
+
 ## 1.16 · 24 d’octubre de 2026
 
 - Filtres del contingut a l’esquerra i gestió del dictat a la dreta, amb adaptació específica per a tauleta i mòbil.

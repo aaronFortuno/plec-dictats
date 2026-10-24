@@ -75,7 +75,7 @@ for (const shapes of [K.worksheet({ entries:[word('atapeït')], code:'P-ANTIC' }
   assert(!shapes.some(s=>s.type==='text'&&s.value==='P-ANTIC'), 'El codi antic no s’imprimeix');
 }
 for (const [text, tags] of [
-  ['haguessin', ['verbs', 'hac', 'essa']], ['plantejarien', ['verbs', 'gej', 'accent']],
+  ['haguessin', ['verbs', 'hac', 'essa']], ['plantejarien', ['verbs', 'gej']],
   ['intuïa', ['verbs', 'dieresi']], ['canviïn', ['verbs', 'dieresi', 'beve']],
   ['conduïa', ['verbs', 'dieresi']], ['col·legi', ['signes']], ['país', ['accent']]
 ]) assert(tags.every(t => word(text).tags.includes(t)), `Focus compartits: ${text}`);

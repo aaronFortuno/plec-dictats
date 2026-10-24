@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict');
+const T=require('./pronunciation-table.cjs'),{analyzeIpa}=require('./ipa-inventory.cjs'),P=require('./prepare-valencian-pilot.cjs');
+const data=T.load('ca-valencian-didactic-v1');T.exportData(data,true);
+assert.equal(data.rows.length,3299);assert.equal(data.rows.filter(r=>r.ipa).length,22);
+assert.equal(data.rows.filter(r=>r.estat_ipa==='validada').length,0);
+assert(data.rows.every(r=>r.varietat==='valencia'));
+assert.throws(()=>analyzeIpa('ˈvi'));analyzeIpa('ˈvi',{allowLabiodentalV:true});
+assert.throws(()=>analyzeIpa('ˈva.ka'));
+const plan=P.prepare();assert.equal(plan.sample.pack.voice,'ca-ES-EnricNeural');
+assert.equal(plan.sample.jobs.length,20);assert.deepEqual(plan.excluded.map(e=>e.text),['vi','vaca']);
+assert(plan.sample.jobs.every(e=>!e.ipa.includes('ə')));
+assert.equal(plan.sample.jobs.find(e=>e.text==='conduïdes').ipa,'kon.du.ˈi.ðes');
+assert.equal(T.planWords(data,['vi']).entries[0].azureCaEsCompatible,false);
+const foreign=structuredClone(data.rows);foreign[0].varietat='central';assert.throws(()=>T.validate(foreign,data.profile,data.catalog));
+console.log('Valencian pilot: independent profile, 22 proposals, 20 compatible jobs, v retained and blocked from Azure, no automatic linguistic approval.');

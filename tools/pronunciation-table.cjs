@@ -11,7 +11,7 @@ function profile(id) {
   const registry=A.readJson(path.join(ROOT,'registry.json'));
   if(registry.schemaVersion!==1||!Array.isArray(registry.profiles))throw new Error('Registre fonètic invàlid.');
   const p=registry.profiles.find(p=>p.id===(id||registry.profiles[0]?.id));
-  if(!p||p.alphabet!=='ipa-azure-ca-ES'||p.language!=='ca')throw new Error('Perfil o inventari fonètic no disponible.');
+  if(!p||!['ipa-azure-ca-ES','ipa-valencian-draft'].includes(p.alphabet)||p.language!=='ca')throw new Error('Perfil o inventari fonètic no disponible.');
   for(const key of ['table','export','readable','catalogPath'])A.validateRelativePath(p[key],key);
   return p;
 }
@@ -38,7 +38,7 @@ function validate(rows,p,catalog) {
     if(row.llengua!==p.language||row.varietat!==p.dialect||row.diccio!==p.diction)throw new Error('La fila pertany a una altra varietat o dicció: '+row.mot+'.');
     if(!STATES.includes(row.estat_ipa))throw new Error('Estat IPA desconegut: '+row.mot+'.');
     if(row.ipa){
-      analyzeIpa(row.ipa);
+      analyzeIpa(row.ipa,{allowLabiodentalV:p.alphabet==='ipa-valencian-draft'});
       if(row.estat_ipa==='pendent'||!row.base||(!row.fonts&&!row.notes))throw new Error('Falta documentar la proposta: '+row.mot+'.');
     }else if(row.estat_ipa!=='pendent')throw new Error('Falta IPA en una fila amb estat de proposta o validació: '+row.mot+'.');
     if(row.fonts&&row.fonts.split(' | ').some(url=>!/^https:\/\/[^\s|]+$/u.test(url)))throw new Error('Fonts invàlides: '+row.mot+'.');
@@ -109,7 +109,10 @@ function planWords(data,words) {
   const rows=wanted.map(word=>{const row=byWord.get(word);if(!row||!row.ipa)throw new Error('Mot sense proposta IPA: '+word+'.');return row;});
   return {schemaVersion:1,kind:'offline-table-pronunciations',executable:false,profile:data.profile.id,catalogFingerprint:data.profile.catalogFingerprint,
     note:'Selecció de la taula editable; cal una prova de síntesi en un paquet separat i revisió de cada àudio.',
-    entries:rows.map(row=>({id:row.id,text:row.mot,ipa:row.ipa,status:row.estat_ipa,sources:row.fonts.split(' | ').filter(Boolean)}))};
+    entries:rows.map(row=>{
+      let azureCaEsCompatible=true;try{analyzeIpa(row.ipa);}catch{azureCaEsCompatible=false;}
+      return {id:row.id,text:row.mot,ipa:row.ipa,status:row.estat_ipa,sources:row.fonts.split(' | ').filter(Boolean),azureCaEsCompatible};
+    })};
 }
 if(require.main===module){
   try{
