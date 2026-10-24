@@ -135,13 +135,35 @@
     for(const id of ['download-pdf','teacher-pdf','copy-code','copy-link'])$(id).disabled=!ready;
     $('sheet-preview').setAttribute('aria-label',`Vista prèvia: ${entries.length} elements. Model visible.`);fitPaper();
   }
-  function renderCatalog(reset=false){
-    if(reset){$('catalog-search').value='';$('catalog-tag').innerHTML='<option value="">Tots els focus</option>'+modeTags(state.mode).map(c=>`<option value="${c.id}">${escape(c.label)}</option>`).join('');$('catalog-stage').value=session().stage;$('catalog-stage-field').hidden=state.mode==='pseudo';}
-    const query=K.normalize($('catalog-search').value.trim()),tag=$('catalog-tag').value;
-    const entries=C.entries.filter(e=>e.mode===state.mode&&(!tag||e.tags.includes(tag))&&S.matchesStage(e,$('catalog-stage').value,edition.profile.stageRules)&&K.normalize(e.text).includes(query)).sort((a,b)=>a.text.localeCompare(b.text,L.locale));
-    $('catalog-description').textContent='Consulta el banc i els focus de cada mot. El dictat es prepara amb els filtres i es recupera amb el codi.';
-    $('catalog-count').textContent=`${entries.length} ${entries.length===1?'resultat':'resultats'} · ${state.mode==='words'?'paraules':'pseudoparaules'}`;
-    $('catalog-list').innerHTML=entries.map(e=>`<div class="catalog-entry" title="${escape(e.tags.map(t=>C.categories.find(c=>c.id===t)?.label||t).join(' · '))}"><span class="entry-copy"><span>${escape(e.text)}</span>${metadata(e)?`<small>${escape(metadata(e))}</small>`:''}</span></div>`).join('')||'<p class="empty">No hi ha resultats amb aquesta cerca.</p>';
+  let catalogInitial=null,catalogWheel=window.PlecCatalogBrowser.createWheelState();
+  function catalogAtBottom(){const list=$('catalog-list');return list.scrollTop+list.clientHeight>=list.scrollHeight-1;}
+  function renderCatalog(reset=false,requestedInitial=null){
+    const browser=window.PlecCatalogBrowser;
+    if(reset){
+      $('catalog-search').value='';$('catalog-tag').innerHTML='<option value="">Tots els focus</option>'+modeTags(state.mode).map(c=>`<option value="${c.id}">${escape(c.label)}</option>`).join('');$('catalog-stage').value=session().stage;$('catalog-stage-field').hidden=state.mode==='pseudo';
+      catalogWheel=browser.createWheelState();
+    }
+    const tag=$('catalog-tag').value,view=browser.buildView(C.entries,{
+      query:$('catalog-search').value,requestedInitial,locale:L.locale,
+      predicate:e=>e.mode===state.mode&&(!tag||e.tags.includes(tag))&&S.matchesStage(e,$('catalog-stage').value,edition.profile.stageRules)
+    });
+    catalogInitial=view.activeInitial;
+    const initials=$('catalog-initials');
+    if(!initials.children.length)initials.innerHTML=browser.LETTERS.map(letter=>`<button type="button" data-initial="${letter}" aria-pressed="false">${letter}</button>`).join('');
+    for(const button of initials.children){
+      const letter=button.dataset.initial,count=view.counts[letter];
+      button.disabled=!count;button.setAttribute('aria-pressed',String(letter===view.activeInitial));
+      button.setAttribute('aria-label',`${letter}: ${count} ${count===1?'resultat':'resultats'}`);
+    }
+    $('catalog-count').textContent=view.total?`${view.total} ${view.total===1?'resultat':'resultats'} al banc filtrat · ${view.initialCount} amb la inicial ${view.activeInitial}`:'Cap resultat amb aquesta cerca o aquests filtres.';
+    const list=$('catalog-list');
+    list.setAttribute('aria-label',view.activeInitial?`Resultats del catàleg amb la inicial ${view.activeInitial}`:'Resultats del catàleg, sense coincidències');
+    list.innerHTML=view.visibleEntries.map(e=>`<div class="catalog-entry" title="${escape(e.tags.map(t=>C.categories.find(c=>c.id===t)?.label||t).join(' · '))}"><span class="entry-copy"><span>${escape(e.text)}</span>${metadata(e)?`<small>${escape(metadata(e))}</small>`:''}</span></div>`).join('')||'<p class="empty">No hi ha resultats amb aquesta cerca o aquests filtres.</p>';
+    list.scrollTop=0;
+    const next=$('catalog-next'),keepNextFocus=document.activeElement===next;
+    next.dataset.initial=view.nextInitial||'';next.disabled=!view.nextInitial;next.textContent=view.nextInitial?`Continua amb ${view.nextInitial}`:'No hi ha més inicials';
+    catalogWheel=browser.noteWheelPosition(catalogWheel,catalogAtBottom());
+    if(keepNextFocus)(view.nextInitial?next:list).focus({preventScroll:true});
   }
   function openCatalog(){renderCatalog(true);window.PlecMotion.open($('catalog-dialog'));$('catalog-search').focus();}
   function downloadBlob(blob, filename) {
@@ -239,6 +261,7 @@
     }
   });
   const releases = [
+    ['2.3', '2026-10-24', ['Gestió del dictat i PDF al lateral per donar més espai al full. Catàleg per inicials amb cerca global i ajuda ampliada sobre les llavors. Preparació d’àudios amb Azure F0, encara sense reproductor ni àudios publicats.'] ],
     ['2.2', '2026-10-23', ['Codis de 4 + 5 caràcters amb 24,3 milions de variants per configuració. Cerca optimitzada en tandes cancel·lables que es poden continuar sense repetir intents. Ajuda sobre la combinació dels focus i compatibilitat amb els codis antics.'] ],
     ['2.1', '2026-10-23', ['Lateral més ample i focus reorganitzats per aprofitar les files. Mots obligatoris amb Enter o coma i ajuda contextual accessible. Zoom amb Ctrl i roda, amb avís breu; desplaçament natural amb la roda i en pantalles tàctils.'] ],
     ['2.0', '2026-10-23', ['Codis curts recuperables amb filtres i ordre reproduïbles. Cerca de fins a cinc mots obligatoris, sense tria individual ni lateral dret. Codi imprès al full i enllaç compartible. Instantània del banc conservada per recuperar els codis en el futur.'] ],
@@ -262,6 +285,15 @@
   document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) window.PlecMotion.close(dialog); } }));
 
   $('catalog-search').addEventListener('input',()=>renderCatalog());$('catalog-tag').addEventListener('change',()=>renderCatalog());$('catalog-stage').addEventListener('change',()=>renderCatalog());
+  $('catalog-initials').addEventListener('click',event=>{const button=event.target.closest('[data-initial]');if(button&&!button.disabled)renderCatalog(false,button.dataset.initial);});
+  $('catalog-next').addEventListener('click',event=>{if(event.currentTarget.dataset.initial)renderCatalog(false,event.currentTarget.dataset.initial);});
+  $('catalog-list').addEventListener('scroll',()=>{catalogWheel=window.PlecCatalogBrowser.noteWheelPosition(catalogWheel,catalogAtBottom());},{passive:true});
+  $('catalog-list').addEventListener('wheel',event=>{
+    const result=window.PlecCatalogBrowser.wheelGesture(catalogWheel,{deltaY:event.deltaY,atBottom:catalogAtBottom(),now:performance.now()});
+    catalogWheel=result.state;
+    const next=$('catalog-next').dataset.initial;
+    if(result.advance&&next)renderCatalog(false,next);
+  },{passive:true});
   for(const [id,mode,name] of [['export-words-text','words','paraules'],['export-pseudo-text','pseudo','pseudoparaules']])$(id).addEventListener('click',()=>{
     const text=C.entries.filter(e=>e.mode===mode).map(e=>e.text).sort(new Intl.Collator(L.locale,{sensitivity:'variant'}).compare).join('\n')+'\n';
     downloadBlob(new Blob([text],{type:'text/plain;charset=utf-8'}),`plec-${L.id}-${name}.txt`);

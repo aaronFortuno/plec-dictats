@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "defaultPacks": {
+    "ca": "ca-central-alba-v1"
+  },
+  "packs": [
+    {
+      "id": "ca-central-alba-v1",
+      "language": "ca",
+      "dialect": "central",
+      "label": "Català central · Alba",
+      "locale": "ca-ES",
+      "provider": "azure",
+      "voice": "ca-ES-AlbaNeural",
+      "rate": "-10%",
+      "format": "audio-24khz-48kbitrate-mono-mp3",
+      "basePath": "assets/audio/ca/central-alba-v1/",
+      "status": "pending",
+      "files": {}
+    }
+  ]
+}

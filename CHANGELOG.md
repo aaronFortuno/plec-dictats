@@ -1,5 +1,12 @@
 # Historial
 
+## 2.3 · 24 d’octubre de 2026
+
+- Codi, còpies, recuperació, nou dictat i PDF agrupats al sidebar esquerre; més alçada disponible per al full.
+- Ajuda ampliada sobre el nombre finit de variants, la cerca de coincidències i la recuperació futura del mateix dictat.
+- Catàleg per inicials, amb cerca global dins dels filtres, recompte i accés a la lletra següent amb botó o una nova empenta de roda. Les descàrregues del banc queden dins d’un desplegable.
+- Eines locals per preparar MP3 amb Azure F0: simulació per defecte, mostra de dotze mots, pressupost mensual conservador, peticions seqüencials i represa sense regenerar fitxers existents. Guia de configuració des de zero. Encara sense àudios publicats ni reproductor.
+
 ## 2.2 · 23 d’octubre de 2026
 
 - Format de codi de quatre caràcters de configuració i cinc de variant: 24,3 milions de variants per configuració, mantenint els codis antics de sis caràcters.

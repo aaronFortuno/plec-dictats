@@ -14,6 +14,14 @@ Un generador obert de dictats autocorrectius en català: **3.299 paraules**, **9
 
 La versió 2.0 substitueix les tries individuals, les xinxetes, els canvis de mots i el lateral dret pel sistema de codis. El catàleg és de consulta i es pot descarregar en TXT i TSV; no permet seleccionar mots individualment. Les formes femenines i plurals comparteixen els mateixos focus ortogràfics que la resta.
 
+La versió 2.3 agrupa el codi, la recuperació, les còpies, el dictat nou i el PDF al lateral esquerre, i reserva el preview per al full. El catàleg carrega una inicial cada vegada, amb A per defecte, cerca sobre tot el banc filtrat i navegació alfabètica directa. Les descàrregues es troben dins de **Descarrega el banc**.
+
+## Preparar els àudios
+
+El dictat oral i la resposta digital són treball pendent. S’han preparat un manifest de paquets de veu, una mostra de dotze mots i eines de generació local de MP3 amb Azure F0, sense credencials al web ni síntesi en directe. **Encara no hi ha àudios publicats ni reproductor disponible.**
+
+La [guia d’Azure F0](docs/AZURE-F0.md) explica el compte, el recurs gratuït, la mostra i els controls de consum. `node tools/audio-plan.cjs` i `node tools/generate-audio.cjs` només simulen per defecte; la generació real requereix indicadors explícits i credencials al terminal. Les comprovacions sense xarxa s’executen amb `node tools/check-audio-tools.cjs`.
+
 ## Com funciona l'algoritme
 
 El codi empaqueta una edició del banc, la configuració dels filtres i un número de variant. Primer es construeix el conjunt de candidats. Després, una successió reproduïble d'enters tria posicions sense reposició mitjançant una barreja parcial de Fisher–Yates. L'ordre d'extracció és l'ordre del dictat: no es fa una ordenació alfabètica posterior.

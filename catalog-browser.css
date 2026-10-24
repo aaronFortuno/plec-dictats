@@ -1,0 +1,21 @@
+/* Navegació lleugera del catàleg: una sola inicial al DOM. */
+#catalog-dialog{scrollbar-gutter:stable}
+.catalog-review-note{margin:8px 0 0;color:var(--muted);font-size:11px;line-height:1.5}
+.catalog-initials{display:flex;gap:4px;width:100%;max-width:100%;margin:16px 0 12px;padding:3px 16px 10px 3px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;-webkit-overflow-scrolling:touch}
+.catalog-initials button{flex:0 0 34px;min-height:36px;padding:6px;border:1px solid var(--line);border-radius:5px;background:var(--white);color:var(--green);font-size:12px;font-weight:600}
+.catalog-initials button:hover:not(:disabled){border-color:var(--green);background:var(--soft)}
+.catalog-initials button[aria-pressed=true]{border-color:var(--green);background:var(--green);color:var(--white)}
+#catalog-count{line-height:1.5}
+#catalog-list{scrollbar-gutter:stable;padding-right:12px;overscroll-behavior:auto}
+#catalog-list:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.catalog-next{display:flex;width:100%;margin-top:10px}
+.catalog-downloads{margin-top:16px;padding-top:13px;border-top:1px solid var(--line);font-size:12px}
+.catalog-downloads summary{cursor:pointer;font-weight:600}
+.catalog-download-actions{display:flex;flex-wrap:wrap;gap:10px 20px;padding:13px 0 2px}
+.catalog-download-actions .small-link{display:inline-flex;align-items:center;gap:6px}
+@media(max-width:720px){
+  .catalog-initials{gap:5px;padding-right:20px}
+  .catalog-initials button{flex-basis:36px;min-height:38px}
+  #catalog-list{padding-right:10px}
+}
+@media print{.catalog-initials,.catalog-next,.catalog-downloads{display:none!important}}
