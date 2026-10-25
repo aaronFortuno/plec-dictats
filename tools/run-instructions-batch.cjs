@@ -25,7 +25,7 @@ function instructionPlan(manifest = A.readJson(path.join(A.ROOT, 'audio/instruct
 
 function wordBatchGate(status, budgetLocked, runnerAlive) {
   if (status?.phase === 'completed' && !budgetLocked) return 'ready';
-  if (['preparing', 'running'].includes(status?.phase) && runnerAlive) return 'wait';
+  if (['preparing', 'running', 'retrying'].includes(status?.phase) && runnerAlive) return 'wait';
   return 'blocked';
 }
 
@@ -84,10 +84,10 @@ async function run(options, dependencies = {}) {
       await sleep(15000);
     }
     state.phase = 'running'; await save();
-    const result = await G.runGeneration({...config, execute: true, confirmF0: true}, {
+    const result = await G.runGeneration({...config, execute: true, confirmF0: true, retryTransient:true}, {
       outputRoot, env: dependencies.env || loadAzureEnvironment({}),
       fetch: dependencies.fetch || globalThis.fetch, sleep: dependencies.requestSleep,
-      shouldStop, log
+      shouldStop, log, onProgress:async progress=>{Object.assign(state,progress);await save();}
     });
     if (!result.ok) throw new Error(result.reason);
     await writePreview(outputRoot, plan, result.resultPath);

@@ -1,0 +1,18 @@
+const assert=require('node:assert/strict'),R=require('../pronunciation-review.js');
+const map=new Map(),storage={getItem:k=>map.get(k)||null,setItem:(k,v)=>map.set(k,v)};
+let time='2026-10-25T10:00:00Z';const s=R.create(storage,()=>time);
+const audio={target:'audio',profile:'ca-central-didactic-v1',id:'p-a',word:'atapeït',pack:'original',fingerprint:'version-a',ipa:''};
+s.set(audio,{status:'good'});s.set(audio,{note:'Comprovat'});assert.equal(s.get(audio).status,'good');
+assert.equal(s.get({...audio,fingerprint:'version-b'}),null,'New recording never inherits old approval');
+const ipa={...audio,target:'ipa',pack:'',fingerprint:'',ipa:'ə.tə.pə.ˈit'};s.set(ipa,{status:'review',note:'Accent desplaçat'});assert.equal(s.get(audio).status,'good');assert.equal(s.get({...ipa,ipa:'different'}),null);
+const reloaded=R.create(storage);assert.equal(reloaded.all().length,2);
+const exported=s.exportData(),foreign=R.create({getItem:()=>null,setItem:()=>{}});assert.equal(foreign.importData(exported),2);
+time='2026-10-25T11:00:00Z';s.set(audio,{status:'review',note:'Una altra escolta'});s.importData(exported);assert.equal(s.get(audio).note,'Una altra escolta','An older import cannot erase a newer review');
+time='2026-10-25T12:00:00Z';s.set(audio,{status:'pending',note:''});s.importData(exported);assert.equal(s.get(audio).status,'pending','An older import cannot resurrect an undone approval');
+const before=s.exportData();assert.throws(()=>s.importData({...exported,entries:[exported.entries[0],{}]}));assert.deepEqual(s.exportData(),before,'Invalid import is atomic');
+assert.throws(()=>s.set(audio,{note:'x'.repeat(1001)}));
+const blocked=R.create({getItem:()=>null,setItem:()=>{throw Error();}});blocked.set(audio,{status:'good'});assert(blocked.error());assert.equal(blocked.all().length,1);
+let writes=0;const corrupt=R.create({getItem:()=>'{bad',setItem:()=>writes++});corrupt.set(audio,{status:'good'});assert.equal(writes,0);assert(corrupt.error());
+const url=new URL(R.issueURL(Array.from({length:100},(_,i)=>({...ipa,word:'mot'+i,note:'ç'.repeat(1000),status:'review'}))));assert.equal(url.hostname,'github.com');assert.equal(url.pathname,'/aaronFortuno/plec-dictats/issues/new');assert(url.href.length<6500);
+const csv=R.combinedCsv([{text:'atapeït',central:{ipa:'ə.tə.pə.ˈit',status:'proposta'},valencia:{ipa:'a.ta.pe.ˈit',status:'proposta'}}]);assert(csv.includes('IPA central')&&csv.includes('IPA valencià')&&csv.includes('a.ta.pe.ˈit'));
+console.log('Pronunciation review: persistence, recording/IPA version separation, atomic import, newest merge, storage errors, bounded issue URL and combined CSV verified.');

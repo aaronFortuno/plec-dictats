@@ -20,7 +20,7 @@ async function run({execute=false,confirmF0=false}={}){
   html=html.replace('Comparació de pronunciacions','Valencià · prova amb Enric').replace('Comparació de pronunciacions','Valencià · prova amb Enric');
   html=html.replace('Model didàctic: accent correcte, ela geminada llarga i finals nt/nc explícits. Les proves no estan aprovades ni substitueixen els originals. No s’afegeixen vocals ni pauses dins del mot.','Vint propostes IPA valencianes amb Enric, pendents de contrast lingüístic i escolta. La veu no està validada com a valenciana. L’original de comparació és el model central amb Alba. Vi i vaca queden fora d’aquesta prova per la v labiodental no documentada en ca-ES.');
   fs.writeFileSync(path.join(directory,'comparacio-valencia.html'),html);
-  const result=await G.runGeneration({...pilot.config,execute:true,confirmF0:true},{env:loadAzureEnvironment({}),fetch:globalThis.fetch,
+  const result=await G.runGeneration({...pilot.config,execute:true,confirmF0:true,retryTransient:true},{env:loadAzureEnvironment({}),fetch:globalThis.fetch,
    shouldStop:()=>fs.existsSync(path.join(directory,'STOP')),onProgress:progress=>{Object.assign(state,progress);save();}});
   state.phase=result.ok?'completed':'stopped';state.reason=result.reason||null;
   if(result.ok)state.completed=state.total;await save();return result;

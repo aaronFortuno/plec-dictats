@@ -155,6 +155,8 @@
       button.setAttribute('aria-label',playing?`Atura ${entry.text}`:available?`Escolta ${entry.text}`:`Àudio pendent: ${entry?.text||''}`);
       button.title=button.getAttribute('aria-label');button.classList.toggle('is-playing',playing);
       button.innerHTML=window.PlecIcons(playing?'square':'volume-2');
+      const link=button.parentElement.querySelector('.catalog-pronunciation');
+      if(link){const target=new URL(link.href),match=available&&new URL(available).pathname.match(/\/output\/audio\/([^/]+)\//);if(match)target.searchParams.set('audio',match[1]);else target.searchParams.delete('audio');link.href=target.href;}
     }
     $('catalog-audio-status').textContent=audioState.errorId?'No s’ha pogut reproduir el mot. Torna-ho a provar.':audioState.phase==='loading'?'Carregant els àudios…':audioState.local&&audioState.phase==='ready'?'Àudios de prova · en revisió':audioState.phase==='unavailable'?'Àudios no disponibles.':audioState.phase==='pending'?'Àudios en preparació':'';
   }
@@ -183,7 +185,7 @@
     const list=$('catalog-list');
     list.setAttribute('aria-label',view.activeInitial?`Resultats del catàleg amb la inicial ${view.activeInitial}`:'Resultats del catàleg, sense coincidències');
     const keepNextFocus=document.activeElement?.id==='catalog-next';
-    list.innerHTML=view.visibleEntries.map(e=>`<div class="catalog-entry" title="${escape(e.tags.map(t=>C.categories.find(c=>c.id===t)?.label||t).join(' · '))}"><span class="entry-copy"><span>${escape(e.text)}</span>${metadata(e)?`<small>${escape(metadata(e))}</small>`:''}</span><button type="button" class="icon-button catalog-speaker" data-audio-id="${escape(e.id)}" aria-label="Escolta ${escape(e.text)}" disabled>${window.PlecIcons('volume-2')}</button></div>`).join('')||'<p class="empty">No hi ha resultats amb aquesta cerca o aquests filtres.</p>';
+    list.innerHTML=view.visibleEntries.map(e=>`<div class="catalog-entry" title="${escape(e.tags.map(t=>C.categories.find(c=>c.id===t)?.label||t).join(' · '))}"><span class="entry-copy"><span>${escape(e.text)}</span>${metadata(e)?`<small>${escape(metadata(e))}</small>`:''}</span><button type="button" class="icon-button catalog-speaker" data-audio-id="${escape(e.id)}" aria-label="Escolta ${escape(e.text)}" disabled>${window.PlecIcons('volume-2')}</button>${e.mode==='words'?`<a class="icon-button catalog-pronunciation" href="${escape(new URL('./pronunciacions/?mot='+encodeURIComponent(e.text),location.href).href)}" title="Pronunciació i revisió" aria-label="Pronunciació i revisió de ${escape(e.text)}">${window.PlecIcons('speech')}</a>`:''}</div>`).join('')||'<p class="empty">No hi ha resultats amb aquesta cerca o aquests filtres.</p>';
     if(view.nextInitial)list.insertAdjacentHTML('beforeend',`<button type="button" class="small-link catalog-next" id="catalog-next" data-initial="${view.nextInitial}">Continua amb ${view.nextInitial} ${window.PlecIcons('arrow-up-right')}</button>`);
     list.dataset.nextInitial=view.nextInitial||'';
     list.scrollTop=0;
@@ -289,6 +291,7 @@
     }
   });
   const releases = [
+    ['1.18', '2026-10-25', ['Taula web amb català central i valencià costat per costat, escolta per enregistrament, polzes i notes locals exportables. Accés des del catàleg i informes preparats per a GitHub, sense enviament automàtic. Represa cada minut davant errors transitoris de síntesi, amb pressupost i aturada conservats.']],
     ['1.17', '2026-10-24', ['Accentuació només amb accent gràfic, dièresi només amb ï o ü, i combinació dels focus amb qualsevol dels triats. Nova edició del banc per conservar exactament els codis anteriors. Taula valenciana independent i primera prova curta amb Enric, pendent d’escolta i contrast.']],
     ['1.16', '2026-10-24', ['Filtres i gestió del dictat en laterals separats, amb entrada al mode dictat més visible. Catàleg amb inicials de text, capçalera i descàrregues fixes, reproducció dels àudios disponibles i varietats previstes. Tema amb un botó al header i marca compartida amb el dictat. Numeració unificada dins de la versió 1. Mostres IPA i taula fonètica oberta per varietats.']],
     ['1.15', '2026-10-24', ['Aparença clara, fosca o del sistema, amb el full sempre clar. Locucions d’instruccions preparades com a MP3 estàtics; generació després del lot actual i revisió abans de publicar. Registre de pronunciacions dubtoses.']],

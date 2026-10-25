@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-25",
+  "pack": "ca-valencian-enric-pilot-v1",
+  "voice": "ca-ES-EnricNeural",
+  "scope": "Aprovació auditiva comunicada pel docent per als vint MP3 del pilot. No valida automàticament la IPA de tot el banc ni activa un lot nou.",
+  "entries": [
+    {
+      "mot": "paper",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "cadira",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "finestra",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "escola",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "camisa",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "cosa",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "terra",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "porta",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "rosa",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "metge",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "pluja",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "platja",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "guitarra",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "raïm",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "agraïm",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "conduïdes",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "atapeït",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "llit",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "blanc",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    },
+    {
+      "mot": "col·legi",
+      "outcome": "approved",
+      "note": "El docent confirma que tots els àudios de la mostra estan molt bé."
+    }
+  ]
+}

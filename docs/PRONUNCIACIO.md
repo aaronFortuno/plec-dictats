@@ -86,7 +86,7 @@ node tools/check-pronunciation-sample.cjs
 node tools/run-pronunciation-sample.cjs --execute --after-current-batches
 ```
 
-Només l’última ordre pot enviar peticions. El llançador reconstrueix i valida la mostra des de la font, espera que **mots i instruccions** hagin acabat i comprova que el pressupost estigui lliure. Si un lot anterior falla o desapareix el seu procés, s’atura. Comparteix `usage.json`, `usage.lock`, STOP, mínim de quatre segons entre inicis, límit mensual i absència de reintents Azure. La primera prova és de nou peticions i 776 caràcters estimats; no inicia tot el banc IPA.
+Només l’última ordre pot enviar peticions. El llançador reconstrueix i valida la mostra des de la font, espera que **mots i instruccions** hagin acabat i comprova que el pressupost estigui lliure. Si un lot anterior falla o desapareix el seu procés, s’atura. Comparteix `usage.json`, `usage.lock`, STOP, mínim de quatre segons entre inicis, límit mensual i represa dels errors transitoris segons [REPRESA-AUDIO.md](REPRESA-AUDIO.md). La primera prova és de nou peticions i 776 caràcters estimats; no inicia tot el banc IPA.
 
 `output/audio/comparacio-pronunciacio.html` mostra els originals i les variants, amb seguiment de la cua i reproducció manual. Els resultats van al paquet candidat, sense sobreescriure els originals ni activar el manifest públic. L’estat és a `output/audio/pronunciation-sample-status.json`. La validació tècnica de l’MP3 no és una aprovació de la pronunciació.
 
@@ -116,8 +116,10 @@ Es manté la síntesi actual. El reproductor permet triar el ritme habitual o `p
 
 ## Generació llarga i represa
 
-`node tools/run-audio-batch.cjs` només calcula el lot; `--execute` inicia el treball amb les credencials locals i les proteccions F0 existents. L’estat es desa a `output/audio/batch-status.json`, amb el recompte de fitxers, el darrer mot generat i l’estat final. La represa omet fitxers ja generats. No s’afegeixen reintents automàtics.
+`node tools/run-audio-batch.cjs` només calcula el lot; `--execute` inicia el treball amb les credencials locals i les proteccions F0 existents. L’estat es desa a `output/audio/batch-status.json`, amb el recompte de fitxers, el darrer mot generat i l’estat final. La represa omet fitxers ja generats. Des de la versió 1.18 es reprenen cada minut els errors transitoris de connexió o servidor; [criteris i límits](REPRESA-AUDIO.md).
 
 Per sol·licitar una aturada entre peticions, crea `output/audio/STOP`; el lot atura les peticions, conserva els MP3 complets i allibera els bloqueigs. Abans de reprendre cal retirar aquell senyal de manera explícita. Si el procés termina inesperadament, comprova que el seu PID no continua actiu abans de retirar els fitxers de bloqueig. El pressupost `usage.json` no s’esborra.
 
 Els desaments locals reintenten només errors transitoris de bloqueig (`EPERM`, `EACCES`, `EBUSY`) amb sis pauses breus, fins a 1,575 segons acumulats. Es repeteix el canvi de nom del fitxer ja escrit, **no** la petició Azure. Si persisteix, el lot s’atura i registra el codi local sense missatges remots ni secrets. El codi original de les dues aturades anteriors no s’havia conservat: la possible col·lisió amb lectors de Windows és una hipòtesi, no un diagnòstic confirmat. La protecció temporal contra la suspensió automàtica és un supervisor local, no un canvi dels ajustos globals del sistema.
+
+La consulta i la revisió ordinària es fan ara a `/ca/pronunciacions/`: dues columnes, escolta, polzes i notes, amb exportació conjunta. Els TSV es mantenen per a l’edició del projecte. Vegeu [revisió web](REVISIO-PRONUNCIACIONS.md).

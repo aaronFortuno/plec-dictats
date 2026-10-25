@@ -9,3 +9,5 @@ La llicència original es conserva íntegra a `LICENSE` (ISC i avís MIT per a l
 `model-left.svg` i `model-right.svg` són adaptacions de `columns-3.svg` que ombregen la columna del model. La forma de Lucide i la seva llicència es conserven.
 
 El 24 d’octubre de 2026 s’hi afegeixen els originals `headphones`, `volume-2`, `square`, `sun` i `moon` del mateix repositori oficial, per al dictat, la reproducció i el canvi de tema.
+
+El 25 d’octubre de 2026 s’hi afegeixen `speech`, `thumbs-up`, `thumbs-down`, `message-square-text` i `flag`, del mateix repositori oficial, per a la consulta i revisió de pronunciacions.

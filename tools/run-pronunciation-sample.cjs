@@ -16,8 +16,8 @@ function generationConfig(sample) {
 
 function prerequisiteGate(words, instructions, locked, wordsAlive, instructionsAlive) {
   if (['failed','stopped'].includes(words?.phase) || ['failed','stopped'].includes(instructions?.phase)) return 'blocked';
-  if (words?.phase !== 'completed') return ['running','preparing'].includes(words?.phase) && wordsAlive ? 'wait' : 'blocked';
-  if (instructions?.phase !== 'completed') return ['waiting','running'].includes(instructions?.phase) && instructionsAlive ? 'wait' : 'blocked';
+  if (words?.phase !== 'completed') return ['running','preparing','retrying'].includes(words?.phase) && wordsAlive ? 'wait' : 'blocked';
+  if (instructions?.phase !== 'completed') return ['waiting','running','retrying'].includes(instructions?.phase) && instructionsAlive ? 'wait' : 'blocked';
   return locked ? 'blocked' : 'ready';
 }
 
@@ -58,7 +58,7 @@ async function run(options, dependencies={}) {
       await sleep(15000);
     }
     state.phase='running';save();
-    const result=await G.runGeneration({...config,execute:true,confirmF0:true},{
+    const result=await G.runGeneration({...config,execute:true,confirmF0:true,retryTransient:true},{
       outputRoot,env:dependencies.env||loadAzureEnvironment({}),fetch:dependencies.fetch||globalThis.fetch,
       sleep:dependencies.requestSleep,now:dependencies.now,shouldStop,log,
       onProgress:progress=>{Object.assign(state,progress);save();}

@@ -19,6 +19,8 @@ const {
 const MONTHLY_LIMIT = 400000;
 const REQUEST_INTERVAL_MS = 4000;
 const REQUEST_TIMEOUT_MS = 30000;
+const RETRY_INTERVAL_MS = 60000;
+const transientRequest = error => error instanceof StopBatch && (['network-or-timeout','response-body','http-408'].includes(error.reason)||/^http-5\d\d$/.test(error.reason));
 
 class StopBatch extends Error {
   constructor(reason) {
@@ -303,23 +305,48 @@ async function runGeneration(options, dependencies = {}) {
       return { ok: false, reason: 'budget', budget };
     }
     await atomicWriteJson(identityPath,{fingerprint,...identity});
-    log(`Pendents de descàrrega: ${pending.length}. Inicis separats com a mínim ${REQUEST_INTERVAL_MS / 1000} s; sense retries automàtics.`);
+    log(`Pendents de descàrrega: ${pending.length}. Inicis separats com a mínim ${REQUEST_INTERVAL_MS / 1000} s; ${options.retryTransient?'represa d’errors transitoris cada minut':'sense retries automàtics'}.`);
     processingStarted = true;
-    dependencies.onProgress?.({total:plan.jobs.length,completed:completed.length,downloaded:0,skipped:completed.length});
+    await dependencies.onProgress?.({total:plan.jobs.length,completed:completed.length,downloaded:0,skipped:completed.length});
 
     for (let index = 0; index < pending.length; index += 1) {
       const { job, destination } = pending[index];
+      async function retryWait(reason,attempt){
+        const retryAt=new Date(now().getTime()+RETRY_INTERVAL_MS);
+        log(`Esperant un minut per reprendre ${job.text} (${reason}); intent ${attempt+1}.`);
+        await dependencies.onProgress?.({phase:'retrying',reason,retryAttempt:attempt,retryAt:retryAt.toISOString(),pendingWord:job.text});
+        while(now().getTime()<retryAt.getTime()){
+          if(dependencies.shouldStop?.())throw new StopBatch('cancelled');
+          await sleep(Math.min(1000,retryAt.getTime()-now().getTime()));
+        }
+        if(dependencies.shouldStop?.())throw new StopBatch('cancelled');
+      }
+      let audio,attempt=0;
+      for(;;){
       if(dependencies.shouldStop?.())throw new StopBatch('cancelled');
       await waitForRequestSlot(ledger, now, sleep);
       if(dependencies.shouldStop?.())throw new StopBatch('cancelled');
       const startedAt = now();
       if(utcMonth(startedAt)!==month) throw new StopBatch('month-changed');
+      // Every retry is another potentially billable request, reserved separately.
+      const remaining=pending.slice(index).reduce((sum,item)=>sum+item.job.billableCharacters,0);
+      if(!evaluateBudget(ledger,month,remaining,external).withinBudget)throw new StopBatch('budget');
       await reserveRequest(ledger, ledgerPath, month, job.billableCharacters, startedAt);
       log(`[${index + 1}/${pending.length}] ${job.relativePath} · ${job.billableCharacters} caràcters reservats.`);
-      const audio = await requestMp3(job, plan.pack, azure, fetchImpl);
-      await writeCompleteFile(destination, audio);
+      await dependencies.onProgress?.({phase:'running',reason:null,retryAt:null,pendingWord:job.text});
+      try{audio=await requestMp3(job, plan.pack, azure, fetchImpl);break;}
+      catch(error){if(!options.retryTransient||!transientRequest(error))throw error;await retryWait(error.reason,++attempt);}
+      }
+      let saveAttempt=0;
+      for(;;){
+        try{await (dependencies.writeCompleteFile||writeCompleteFile)(destination,audio);break;}
+        catch(error){
+          if(!options.retryTransient||!['EPERM','EACCES','EBUSY','EIO'].includes(error.code))throw error;
+          await retryWait('local-'+error.code.toLowerCase(),++saveAttempt);
+        }
+      }
       completed.push(job);
-      dependencies.onProgress?.({total:plan.jobs.length,completed:completed.length,downloaded:index+1,skipped:completed.length-index-1,lastWord:job.text});
+      await dependencies.onProgress?.({phase:'running',reason:null,retryAt:null,pendingWord:null,total:plan.jobs.length,completed:completed.length,downloaded:index+1,skipped:completed.length-index-1,lastWord:job.text});
     }
 
     const resultPath = await writeResults(outputRoot, plan, completed, now);
@@ -355,6 +382,7 @@ function parseArguments(argv) {
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
     if (argument === '--execute') options.execute = true;
+    else if (argument === '--retry-transient') options.retryTransient = true;
     else if (argument === '--confirm-f0') options.confirmF0 = true;
     else if (argument === '--used-elsewhere') {
       const value = argv[index + 1];
@@ -377,6 +405,7 @@ function parseArguments(argv) {
 function printHelp() {
   console.log('Ús: node tools/generate-audio.cjs [--mode words|pseudo] [--pack ID] [--limit N] [--words "mot,mot,..."] [--used-elsewhere N] [--execute --confirm-f0]');
   console.log('Per defecte només simula, sense xarxa. La generació real exigeix --execute I --confirm-f0.');
+  console.log('--retry-transient espera un minut i reprèn errors de connexió, timeout o servidor, reservant cada petició al pressupost.');
   console.log('--confirm-f0 declara que l’usuari usa F0; NO comprova l’SKU via API. Verifica’l al portal d’Azure.');
   console.log('Credencials: SPEECH_KEY/SPEECH_REGION a l’entorn o fitxer privat ../.private/plec/azure-speech.json, fora del web.');
   console.log('Límit local: 400.000 caràcters per mes UTC. El fitxer privat només es llegeix amb --execute i --confirm-f0.');
@@ -398,7 +427,7 @@ if (require.main === module) {
       }, { fetch: globalThis.fetch, env: options.execute && options.confirmF0 ? loadAzureEnvironment() : process.env });
       if (!result.ok) process.exitCode = 1;
     } catch {
-      console.error('No s’ha pogut preparar la generació. Revisa els arguments i les dades locals; no s’ha fet cap reintents.');
+      console.error('No s’ha pogut preparar la generació. Revisa els arguments i les dades locals.');
       process.exitCode = 1;
     }
   })();
@@ -408,6 +437,7 @@ module.exports = {
   MONTHLY_LIMIT,
   REQUEST_INTERVAL_MS,
   REQUEST_TIMEOUT_MS,
+  RETRY_INTERVAL_MS,
   acquireLock,
   atomicWriteJson,
   emptyLedger,

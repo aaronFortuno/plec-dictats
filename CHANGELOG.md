@@ -1,5 +1,14 @@
 # Historial
 
+## 1.18 · 25 d’octubre de 2026
+
+- Nova taula web de pronunciacions central/valencià, amb cerca, inicials, càrrega de 50 mots, escolta per enregistrament i enllaços directes des del catàleg.
+- Revisió local amb polzes i notes d’àudio i IPA separades; exportació/importació JSON, merge per data i CSV conjunt de pronunciacions. Les versions noves no hereten aprovacions antigues.
+- Esborrany d’incidència de GitHub preparat a petició de l’usuari, sense enviament automàtic ni formulari anònim propi.
+- Represa cada minut d’errors transitoris de síntesi, amb reserves per intent, pressupost, STOP i cues posteriors. Els errors locals de desament reutilitzen el buffer rebut.
+- Aprovació auditiva docent dels 20 mots del pilot d’Enric. El lot gran queda ajornat fins a completar i revisar la IPA valenciana.
+- Guies de revisió i represa i README actualitzats. Cap lot nou iniciat ni credencial publicada.
+
 ## 1.17 · 24 d’octubre de 2026
 
 - Accentuació inclou només mots amb accent gràfic, i Dièresi només mots amb ï o ü. Seleccionar tots dos combina els candidats amb OR. Corregides etiquetes mancants i sobrants.

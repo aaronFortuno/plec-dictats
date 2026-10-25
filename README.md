@@ -98,6 +98,16 @@ La [taula valenciana editable](audio/pronunciation/ca/valencian-didactic.tsv) t�
 
 Les 96 pseudoparaules actuals es mantenen. L’ampliació prevista necessita revisar estructura sil·làbica, llargada i focus, comprovar coincidències lèxiques i definir accent i IPA per varietat. Després s’afegirà una edició nova del banc, sense canviar codis ja impresos, i es generaran mostres curtes abans de cada lot de veus. El model escrit continua sent una proposta: poden existir diverses grafies compatibles amb el mateix so.
 
+## Escoltar i revisar al web
+
+A **`/ca/pronunciacions/`** pots consultar les dues varietats costat per costat, escoltar els enregistraments disponibles, marcar-los amb polze amunt o avall i escriure notes. S’hi arriba des del catàleg i des de la icona de parla de cada mot. Les incidències de la IPA es registren separadament dels àudios. No cal descarregar ni editar un TSV per revisar.
+
+Les notes es desen al navegador i **Exporta la revisió** les reuneix en un JSON que es pot compartir o importar per reprendre el treball. **Descarrega les dues taules** genera un únic CSV. **Envia errors a GitHub** prepara un esborrany que l’usuari revisa i envia amb el seu compte; no hi ha enviament automàtic ni formulari anònim. Vegeu [guia de revisió](docs/REVISIO-PRONUNCIACIONS.md).
+
+Els lots reprenen cada minut els errors transitoris de connexió o servidor, mantenint pressupost, STOP i MP3 completats. Les peticions repetides es compten al registre; un error de desament local reutilitza el mateix àudio. La represa funciona mentre el procés continuï obert; no s’ha instal·lat cap servei d’inici després d’un reinici. Vegeu [represa dels lots](docs/REPRESA-AUDIO.md).
+
+El docent ha aprovat auditivament els 20 mots del pilot d’Enric. El **lot gran espera completar i revisar la IPA valenciana**, a petició seva: 3.277 transcripcions continuen pendents. No s’ha iniciat cap altre lot ni s’ha consumit quota per implementar aquestes eines.
+
 ## Desenvolupament i comprovació
 
 Web estàtic, amb biblioteques i icones locals. Obre `index.html` directament o serveix el projecte. No hi ha serveis externs, comptes ni analítica durant l'ús.
@@ -116,6 +126,8 @@ node tools/check-dictation-session.cjs
 node tools/check-dictation.cjs
 node tools/check-catalog-browser.cjs
 node tools/check-catalog-audio.cjs
+node tools/check-audio-retry.cjs
+node tools/check-pronunciation-review.cjs
 node tools/check-focus-edition.cjs
 node tools/check-valencian-pilot.cjs
 node tools/check-local-files.cjs
@@ -127,11 +139,11 @@ node tools/serve.cjs
 
 El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `build-catalogs.cjs --check` comprova que els fitxers generats siguin reproduïbles. El generador verifica també les empremtes de les instantànies i no les modifica. Per repetir el contrast complet cal el lèxic extern de Softcatalà; les instruccions són a `catalogs/README.md`.
 
-`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `catalog-audio.js` gestiona una única reproducció del catàleg i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.17.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
+`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `catalog-audio.js` gestiona una única reproducció del catàleg i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.18.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
 
 ## Versions
 
-La interfície actual és **1.17**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.18**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 

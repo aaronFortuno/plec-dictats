@@ -27,10 +27,10 @@ if(!process.argv.includes('--execute')){
    try{lock=fs.openSync(lockPath,'wx');}catch{throw new Error('Hi ha un lot o un bloqueig anterior.');}
    try{
      ownsStatus=true;fs.writeFileSync(lock,JSON.stringify({pid:process.pid,startedAt:state.startedAt}));save();
-     const result=await runGeneration({...options,execute:true,confirmF0:true,usedElsewhere:0},{
+     const result=await runGeneration({...options,execute:true,confirmF0:true,retryTransient:true,usedElsewhere:0},{
        env:loadAzureEnvironment({}),fetch:globalThis.fetch,
        shouldStop:()=>stopped||fs.existsSync(stopPath),
-       onProgress:progress=>{Object.assign(state,progress,{phase:'running'});save();}
+       onProgress:progress=>{Object.assign(state,progress,{phase:progress.phase||'running'});save();}
      });
      Object.assign(state,{phase:result.ok?'completed':result.reason==='cancelled'?'stopped':'failed',reason:result.reason||null,localErrorCode:result.localErrorCode||null,finishedAt:new Date().toISOString()});save();
      if(!result.ok)process.exitCode=1;

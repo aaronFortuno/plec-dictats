@@ -3,6 +3,8 @@
 #catalog-dialog[open]{display:flex;flex-direction:column;gap:0}
 #catalog-dialog .dialog-head{flex-shrink:0;align-items:center}
 #catalog-dialog .dialog-head h2{margin:0;font-size:29px}
+.catalog-review-link{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:12px;text-decoration:none}
+.catalog-review-link .lucide{width:17px;height:17px}
 .catalog-controls{flex-shrink:0;padding-bottom:10px}
 #catalog-dialog .catalog-tools{display:grid;grid-template-columns:minmax(180px,1.5fr) repeat(3,minmax(0,1fr));gap:9px;margin:16px 0 10px}
 #catalog-dialog .catalog-tools>label{min-width:0;width:auto;flex:initial}
@@ -20,6 +22,8 @@
 .catalog-entry .entry-copy{display:grid;gap:4px;min-width:0;flex:1}
 .catalog-entry small{font-size:9px;line-height:1.5;color:var(--muted)}
 #catalog-list .catalog-speaker{flex-shrink:0;min-width:30px;min-height:30px;width:30px;height:30px;padding:6px}
+#catalog-list .catalog-pronunciation{flex-shrink:0;min-width:28px;min-height:30px;width:28px;height:30px;padding:5px;color:var(--muted)}
+#catalog-list .catalog-pronunciation .lucide{width:17px;height:17px}
 .catalog-speaker .lucide{width:16px;height:16px}
 .catalog-speaker.is-playing{background:var(--soft);color:var(--accent);border-radius:50%}
 .catalog-next{grid-column:1/-1;justify-self:center;display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:10px;font-size:12px}
@@ -37,4 +41,5 @@
   .catalog-downloads{margin-top:10px;padding-top:10px}
 }
 @media(max-width:420px){#catalog-list{grid-template-columns:minmax(0,1fr)}.catalog-download-actions{gap:0 13px}.catalog-status{font-size:10px}.catalog-entry small{font-size:10px}}
+@media(max-width:560px){.catalog-review-link{font-size:0;min-width:24px;min-height:30px;justify-content:center}.catalog-review-link .lucide{width:20px;height:20px}}
 @media print{#catalog-dialog{display:none!important}}

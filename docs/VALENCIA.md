@@ -16,7 +16,7 @@ La taula conserva **/v/** en «vi» i «vaca». El [conjunt de fonemes documenta
 
 La primera mostra té **20 peticions i 1.702 caràcters estimats**, amb MP3 mono, els mateixos ajustos de ritme i un paquet separat `ca-valencian-enric-pilot-v1`. No substitueix originals ni activa el selector públic. La pàgina local de comparació és `output/audio/comparacio-valencia.html`; l’estat, `output/audio/valencian-pilot-status.json`. L’original de comparació és el perfil central amb Alba, no una referència valenciana validada. Alguns timbres i la dicció necessiten revisió explícita.
 
-El pilot s’ha generat el 24/10/2026: els 20 MP3 passen la reproducció tècnica fins al final. Encara falta escolta docent. El registre local queda en 121.529 caràcters aquest mes, amb 278.471 disponibles fins al límit preventiu de 400.000; és una estimació local, no una consulta del consum real d’Azure.
+El pilot s’ha generat el 24/10/2026: els 20 MP3 passen la reproducció tècnica fins al final. El 25/10/2026 el docent confirma que els vint àudios estan molt bé; l’aprovació auditiva consta a `audio/pronunciation/ca-valencian-pilot-review.json` i no valida automàticament tota la IPA. El lot gran esperarà completar i revisar la taula valenciana. El registre local queda en 121.529 caràcters aquest mes, amb 278.471 disponibles fins al límit preventiu de 400.000; és una estimació local, no una consulta del consum real d’Azure.
 
 ```text
 node tools/pronunciation-table.cjs --profile ca-valencian-didactic-v1 --export
@@ -25,7 +25,7 @@ node tools/prepare-valencian-pilot.cjs --write
 node tools/run-valencian-pilot.cjs
 ```
 
-Aquestes ordres no fan peticions ni llegeixen credencials. La síntesi real requereix `node tools/run-valencian-pilot.cjs --execute --confirm-f0`, després de revisar la mostra. Comparteix registre de consum, bloqueig de quota, senyal STOP, separació mínima de quatre segons, represa i absència de reintents Azure. Refusa començar mentre els lots de mots i instruccions no constin acabats o hi hagi un bloqueig. Una IPA o un ajust canviat exigeix un ID de paquet nou.
+Aquestes ordres no fan peticions ni llegeixen credencials. La síntesi real requereix `node tools/run-valencian-pilot.cjs --execute --confirm-f0`, després de revisar la mostra. Comparteix registre de consum, bloqueig de quota, senyal STOP, separació mínima de quatre segons, represa automàtica d’errors transitoris amb [les proteccions documentades](REPRESA-AUDIO.md). Refusa començar mentre els lots de mots i instruccions no constin acabats o hi hagi un bloqueig. Una IPA o un ajust canviat exigeix un ID de paquet nou.
 
 ## Abans d’un lot complet
 

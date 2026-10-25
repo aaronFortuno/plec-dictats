@@ -1,5 +1,7 @@
 # Taules obertes de pronunciació de Plec
 
+**[Consulta les dues varietats i revisa els àudios al web](../../ca/pronunciacions/)**. Pots anotar-hi incidències, marcar escoltes correctes i exportar la revisió. Els TSV següents continuen sent fonts d’edició, però no són necessaris per consultar ni revisar les pronunciacions.
+
 La font editable actual és [ca/central-didactic.tsv](ca/central-didactic.tsv): **3.299 mots alfabètics**, amb una fila per mot. Conté **240 propostes IPA** i **3.059 camps IPA pendents**. Cap transcripció no està encara marcada com a validada. No és un diccionari fonètic normatiu ni un corpus complet ja revisat.
 
 Per llegir només les propostes, obre [central-didactic-ipa.txt](ca/central-didactic-ipa.txt). Per reutilitzar les dades amb programari, descarrega [central-didactic.json](ca/central-didactic.json). Les dues són exportacions: **edita el TSV**, no els fitxers derivats. El JSON conserva els camps IPA inexistents com a `null`, les fonts i els estats de revisió. La distribució segueix la [llicència del projecte](../../LICENSE); cada referència externa manté la seva autoria i condicions. No s’ha importat ni redistribuït cap diccionari complet.

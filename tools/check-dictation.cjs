@@ -47,7 +47,7 @@ for(const invalid of [null, [], 'files']){
   assert.throws(()=>D.coverage(manifest,entries,'ca',base));
 }
 const root=path.resolve(__dirname,'..');
-for(const page of ['ca/index.html','ca/dictat/index.html']){
+for(const page of ['ca/index.html','ca/dictat/index.html','ca/pronunciacions/index.html']){
   const html=fs.readFileSync(path.join(root,page),'utf8');
   assert(!html.includes('__CONFIG__')&&!html.includes('__REGISTRY__')&&!html.includes('__COMPOSER__'));
   for(const match of html.matchAll(/(?:src|href)="([^\"]+)"/g)){
