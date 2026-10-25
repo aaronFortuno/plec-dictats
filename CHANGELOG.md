@@ -1,5 +1,14 @@
 # Historial
 
+## 1.21 · 25 d’octubre de 2026
+
+- Catàleg refet com una única vista: mot, focus, IPA i àudios de les dues varietats a la mateixa fila. Eliminades les pestanyes i la navegació al detall que omplia el cercador.
+- Cerca amb coincidències de totes les inicials, filtres i desplaçament conservats en reobrir, 50 files inicials ampliables i un únic comportament de càrrega. Alfabet centrat, equilibrat en dues files en mòbil.
+- Peu de descàrregues i incidències compacte; accés directe amb teclat o dispositius tàctils a les transcripcions, escoltes i banderes.
+- Bloc imprès de focus alineat amb «Escric i reviso», amb tipografia i fons coherents i el títol «Aquest dictat treballa els següents focus:».
+- QR vectorial a sobre dels focus, generat localment, amb enllaç directe a `https://ortogra.fi/<llengua>/dictat/?seed=<codi>`. Domini pendent de registre i connexió; contingut dels quatre QR comprovats des dels PDF sense consultar el desplegament.
+- Auditoria d’usabilitat i criteris de comprovació documentats.
+
 ## 1.20 · 25 d’octubre de 2026
 
 - Catàleg i pronunciacions comparteixen quadre, capçalera, cerca, focus, nivell i inicial, sense tancar ni reobrir en canviar de vista.

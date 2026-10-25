@@ -82,7 +82,7 @@ La primera instantània és `catalogs/ca/editions/seed-1.json`, amb empremta imm
 
 Les dades locals de la versió anterior es conserven amb la seva clau original. El sistema nou només en recupera preferències compatibles. Les tries manuals i els mots propis no es converteixen automàticament en codis. Els codis fan servir exclusivament el banc compartit, perquè qualsevol dispositiu els pugui reproduir.
 
-Hi ha una primera pantalla d’alumnat a **`/ca/dictat/`**, accessible des de **Mode dictat** al header, **Comença el dictat** al lateral dret i **Enllaç per a l’alumnat**. Recupera els mateixos mots i ordre amb codis antics i nous. El mode paper ofereix tres escoltes per mot, pantalla completa i pausa en sortir-ne o canviar de pestanya. Hi ha 3.299 mots publicats per varietat i cinc locucions d’instruccions. Abans de començar es pot triar central o valencià. Es pot començar quan totes les paraules del codi tenen àudio; si en falta alguna, la pantalla ho indica. La revisió auditiva continua oberta. La ruta ja admet l’enllaç que podrà incorporar un QR; el QR imprès i les respostes digitals són fases posteriors. Vegeu [mode dictat](docs/DICTAT.md).
+Hi ha una primera pantalla d’alumnat a **`/ca/dictat/`**, accessible des de **Mode dictat** al header, **Comença el dictat** al lateral dret i **Enllaç per a l’alumnat**. Recupera els mateixos mots i ordre amb codis antics i nous. El mode paper ofereix tres escoltes per mot, pantalla completa i pausa en sortir-ne o canviar de pestanya. Hi ha 3.299 mots publicats per varietat i cinc locucions d’instruccions. Abans de començar es pot triar central o valencià. Es pot començar quan totes les paraules del codi tenen àudio; si en falta alguna, la pantalla ho indica. La revisió auditiva continua oberta. La ruta ja admet l’enllaç que podrà incorporar un QR; el QR imprès ja incorpora la ruta de llengua i el codi per a ortogra.fi; les respostes digitals són una fase posterior. Vegeu [mode dictat](docs/DICTAT.md).
 
 La síntesi es fa localment amb Azure i els MP3 publicats es reprodueixen estàticament des del repositori. Els **227 mots amb dièresi** tenen una [taula IPA editable](audio/pronunciation/ca-central-diaeresis.tsv), amb fonts i dubtes explícits, per a una prova posterior al lot sense dièresi. Vegeu el [procediment de pronunciació i revisió](docs/PRONUNCIACIO.md). Preparar el pla SSML no envia peticions a Azure ni altera el catàleg o els codis.
 
@@ -100,7 +100,7 @@ Les 96 pseudoparaules actuals es mantenen. L’ampliació prevista necessita rev
 
 ## Escoltar i revisar al web
 
-Dins d’**El catàleg → Pronunciacions i revisió** pots consultar les dues varietats costat per costat, escoltar els enregistraments prement la IPA o l’altaveu, i obrir una incidència amb la bandera. La icona de parla de cada mot canvia de vista dins del mateix popup; es conserven la mateixa capçalera, cerca, focus, nivell i inicial; només es desplaça la taula. La ruta `/ca/pronunciacions/` obre directament aquesta vista. Les incidències de la IPA es registren separadament dels àudios. No cal descarregar ni editar un TSV per revisar.
+Dins d’**El catàleg** pots consultar les dues varietats costat per costat, escoltar els enregistraments prement la IPA o l’altaveu, i obrir una incidència amb la bandera. Hi ha una sola vista amb mot, focus i les dues varietats. La cerca és global i no canvia quan escoltes un mot; els enllaços directes el ressalten sense omplir-la. Només es desplaça el llistat, amb 50 files inicials ampliables. La ruta `/ca/pronunciacions/` obre directament aquesta vista. Les incidències de la IPA es registren separadament dels àudios. No cal descarregar ni editar un TSV per revisar.
 
 Les notes es desen al navegador i **Exporta** les reuneix en un JSON que es pot compartir o importar per reprendre el treball. **Descarrega les IPA** genera un únic CSV. La bandera permet desar la incidència d’aquell mot i varietat o obrir un esborrany a GitHub que l’usuari revisa i envia amb el seu compte; no hi ha enviament automàtic ni formulari anònim. Vegeu [guia de revisió](docs/REVISIO-PRONUNCIACIONS.md).
 
@@ -141,11 +141,11 @@ node tools/serve.cjs
 
 El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `build-catalogs.cjs --check` comprova que els fitxers generats siguin reproduïbles. El generador verifica també les empremtes de les instantànies i no les modifica. Per repetir el contrast complet cal el lèxic extern de Softcatalà; les instruccions són a `catalogs/README.md`.
 
-`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `catalog-audio.js` gestiona una única reproducció del catàleg i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.20.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
+`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `catalog-audio.js` gestiona una única reproducció del catàleg i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.21.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
 
 ## Versions
 
-La interfície actual és **1.20**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.21**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 
@@ -155,4 +155,6 @@ Codi i contingut original sota MIT. `pdf-lib` conserva la llicència MIT i els a
 
 El conversor local catalan2ipa conserva LGPL-3.0-or-later i les atribucions a `tools/vendor/catalan2ipa/`. Les pistes fonètiques indiquen separadament les excepcions factuals consultades d’eSpeak NG i les decisions editorials; no s’ha copiat un diccionari complet.
 
-Els focus seleccionats apareixen a la banda tapada del full imprimible i del PDF, tant en terços com en quart de full. No canvien ni la llavor ni l’espai d’escriptura.
+Els focus seleccionats apareixen a la banda tapada del full imprimible i del PDF, alineats amb «Escric i reviso» i amb el QR a sobre, tant en terços com en quart de full. No canvien ni la llavor ni l’espai d’escriptura.
+
+La [revisió d’usabilitat del catàleg](docs/AUDITORIA-CATALEG.md) documenta els problemes observats, les decisions i les comprovacions. El domini ortogra.fi encara està pendent de registre i connexió; els QR ja en conserven la ruta definitiva. La biblioteca local QR Code Generator de Kazuhiko Arase es distribueix amb la seva llicència MIT.

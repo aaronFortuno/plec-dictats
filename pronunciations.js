@@ -1,12 +1,12 @@
 (function(){
  'use strict';
- const $=id=>document.getElementById(id),R=window.PlecPronunciationReview;
+ const $=id=>document.getElementById(id),R=window.PlecPronunciationReview,B=window.PlecCatalogBrowser;
  const base=new URL('.',document.currentScript.src),varieties=[['central','Central · Alba','ca-central-didactic-v1'],['valencia','Valencià · Enric','ca-valencian-didactic-v1']];
  const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const icon=name=>window.PlecIcons(name);
  let storage;try{storage=window.localStorage;}catch{storage={getItem(){throw Error();},setItem(){throw Error();}};}
- const store=R.create(storage);let rows=[],byId=new Map(),manifest={packs:[]},published={packs:[]},loading=null,loaded=false;
- let entries=[],nextInitial=null,limit=50,deepWord='',requestedPack='',showVersion=0,player=null,playing=null,epoch=0,report=null;
+ const store=R.create(storage);let rows=[],byId=new Map(),manifest={packs:[]},published={packs:[]},loading=null,loaded=false,failed=false;
+ let config=null,initial=null,limit=50,deepWord='',requestedPack='',player=null,playing=null,epoch=0,report=null,openGeneration=0;
  function status(text=''){$('review-save-status').textContent=text;const warning=store.error();$('review-storage-warning').hidden=!warning;$('review-storage-warning').textContent=warning||'';}
  function packFor(row,variety){
   const profile=varieties.find(v=>v[0]===variety)[2],valid=p=>p.profile===profile&&!!p.files?.[row.id];
@@ -21,28 +21,46 @@
  }
  function urlFor(row,variety){const pack=packFor(row,variety);if(!pack)return null;try{const result=PlecAudioManifest.coverage(manifest,[row],'ca',base,pack.id);return result.ready?result.urls[0]:null;}catch{return null;}}
  function stop(){epoch++;if(player){player.onended=player.onerror=null;player.pause();player.removeAttribute('src');player=null;}playing=null;refreshPlay();}
- function refreshPlay(){for(const button of $('pronunciation-list').querySelectorAll('[data-action=play]')){const active=playing?.id===button.dataset.word&&playing?.variety===button.dataset.variety;button.setAttribute('aria-pressed',String(active));if(button.classList.contains('review-icon'))button.innerHTML=icon(active?'square':'volume-2');}
-  for(const row of $('pronunciation-list').querySelectorAll('.pronunciation-row'))row.classList.toggle('is-playing',row.dataset.word===playing?.id);
+ function refreshPlay(){for(const button of $('catalog-list').querySelectorAll('[data-action=play]')){const active=playing?.id===button.dataset.word&&playing?.variety===button.dataset.variety;button.setAttribute('aria-pressed',String(active));if(button.classList.contains('review-icon'))button.innerHTML=icon(active?'square':'volume-2');}
+  for(const row of $('catalog-list').querySelectorAll('.pronunciation-row'))row.classList.toggle('is-playing',row.dataset.word===playing?.id);
  }
  function play(row,variety){if(playing?.id===row.id&&playing.variety===variety){stop();return;}stop();const url=urlFor(row,variety);if(!url)return;
   const token=epoch;try{player=new Audio(url);playing={id:row.id,variety};refreshPlay();player.onended=()=>{if(token===epoch)stop();};player.onerror=()=>{if(token===epoch){stop();status('No s’ha pogut reproduir el mot. Torna-ho a provar.');}};player.play()?.catch(()=>{if(token===epoch){stop();status('No s’ha pogut reproduir el mot. Torna-ho a provar.');}});}catch{stop();status('No s’ha pogut reproduir el mot.');}
  }
  function flagged(row,variety){return ['audio','ipa'].some(t=>{const c=context(row,variety,t);return c&&store.get(c)?.status==='review';});}
- function cell(row,variety,label){const ipa=row[variety]?.ipa,url=urlFor(row,variety),args=`data-word="${esc(row.id)}" data-variety="${variety}"`,name=label.split(' · ')[0];
-  return `<section class="pronunciation-cell" aria-label="${name} de ${esc(row.text)}"><span class="cell-variety">${esc(label)}</span><button type="button" class="ipa-play" data-action="play" ${args} title="Proposta IPA pendent de contrast. Prem per escoltar l’enregistrament disponible." aria-label="Escolta ${esc(row.text)}: ${esc(ipa||'IPA pendent')} (${name})" aria-pressed="false" ${url?'':'disabled'}><span class="ipa-text${ipa?'':' ipa-pending'}">${esc(ipa||'IPA pendent')}</span></button><button type="button" class="review-icon" data-action="play" ${args} aria-label="Escolta ${esc(row.text)} en ${name}" aria-pressed="false" ${url?'':'disabled'}>${icon('volume-2')}</button><button type="button" class="review-icon report-flag" data-action="report" ${args} aria-label="Notifica un error de ${esc(row.text)} en ${name}" aria-pressed="${flagged(row,variety)}" ${ipa||url?'':'disabled'}>${icon('flag')}</button></section>`;
+ function renderInitials(view,active){const nav=$('catalog-initials');
+  if(!nav.children.length)nav.innerHTML=B.LETTERS.map(letter=>`<a href="#catalog-${letter}" data-initial="${letter}">${letter}</a>`).join('');
+  for(const link of nav.querySelectorAll('a')){const letter=link.dataset.initial,count=view.counts[letter];link.setAttribute('aria-disabled',String(!count));link.tabIndex=count?0:-1;link.setAttribute('aria-label',`${letter}: ${count} mots`);if(letter===active)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');}
  }
- function render(){stop();const visible=entries.slice(0,limit);$('pronunciation-list').innerHTML=visible.map(entry=>{const row=byId.get(entry.id)||entry;return `<article class="pronunciation-row${row.text===deepWord?' is-target':''}" data-word="${esc(row.id)}"><h2 class="pronunciation-word">${esc(row.text)}</h2>${varieties.map(v=>cell(row,v[0],v[1])).join('')}</article>`;}).join('')||'<p class="review-notice">Cap mot amb aquests criteris.</p>';
-  if(entries.length>limit)$('pronunciation-list').insertAdjacentHTML('beforeend','<button type="button" class="small-link pronunciation-more" data-action="more">Mostra 50 mots més</button>');
-  else if(nextInitial)$('pronunciation-list').insertAdjacentHTML('beforeend',`<button type="button" class="small-link catalog-next" data-initial="${nextInitial}">Continua amb ${nextInitial} ${icon('arrow-up-right')}</button>`);
+ function cell(row,variety,label){const ipa=row[variety]?.ipa,url=urlFor(row,variety),args=`data-word="${esc(row.id)}" data-variety="${variety}"`,name=label.split(' · ')[0],shownIpa=ipa||(failed?'—':loaded?'IPA pendent':'Carregant…');
+  return `<section class="pronunciation-cell" aria-label="${name} de ${esc(row.text)}"><span class="cell-variety">${esc(label)}</span><button type="button" class="ipa-play" data-action="play" ${args} title="Proposta IPA pendent de contrast. Prem per escoltar l’enregistrament disponible." aria-label="Escolta ${esc(row.text)}: ${esc(shownIpa)} (${name})" aria-pressed="false" ${url?'':'disabled'}><span class="ipa-text${ipa?'':' ipa-pending'}">${esc(shownIpa)}</span></button><button type="button" class="review-icon" data-action="play" ${args} aria-label="Escolta ${esc(row.text)} en ${name}" aria-pressed="false" ${url?'':'disabled'}>${icon('volume-2')}</button><button type="button" class="review-icon report-flag" data-action="report" ${args} aria-label="Notifica un error de ${esc(row.text)} en ${name}" aria-pressed="${flagged(row,variety)}" ${ipa||url?'':'disabled'}>${icon('flag')}</button></section>`;
  }
- function refreshFlags(){for(const b of $('pronunciation-list').querySelectorAll('[data-action=report]')){const row=byId.get(b.dataset.word);if(row)b.setAttribute('aria-pressed',String(flagged(row,b.dataset.variety)));}}
+ function render({resetScroll=false,target=''}={}){
+  if(!config)return;stop();const list=$('catalog-list'),previousScroll=list.scrollTop,tag=$('catalog-tag').value,query=$('catalog-search').value.trim(),stage=$('catalog-stage').value;
+  const view=B.buildView(config.entries,{query,locale:config.locale,predicate:e=>e.mode===config.mode&&(!tag||e.tags.includes(tag))&&config.matchesStage(e,stage)});
+  const active=initial&&view.counts[initial]?initial:query?null:view.activeInitial;
+  const entries=active?view.groups[active]:view.entries;
+  if(target){const index=entries.findIndex(e=>e.text===target);if(index>=0)limit=Math.max(50,Math.ceil((index+1)/50)*50);}
+  renderInitials(view,active);
+  $('catalog-clear').hidden=!query;
+  $('export-pronunciations').disabled=!loaded;
+  const visible=entries.slice(0,limit),shown=visible.length;
+  $('catalog-count').textContent=view.total?view.total+' '+(view.total===1?'mot':'mots')+(active?' · '+active+': '+entries.length:'')+(shown<entries.length?' · '+shown+' visibles':''):'Cap mot amb aquests filtres.';
+  list.innerHTML=visible.map(entry=>{const row={...entry,...byId.get(entry.id)},labels=entry.tags.map(t=>config.categories.find(c=>c.id===t)?.label||t).join(' · ');return '<article class="pronunciation-row'+(row.text===deepWord?' is-target':'')+'" data-word="'+esc(row.id)+'" tabindex="-1"><div class="catalog-word"><h3 class="pronunciation-word">'+esc(row.text)+'</h3><p class="catalog-focuses">'+esc(labels)+'</p></div>'+(config.mode==='words'?varieties.map(v=>cell(row,v[0],v[1])).join(''):'')+'</article>';}).join('')||'<div class="catalog-empty"><p>No hi ha coincidències.</p><button type="button" class="small-link" data-action="reset">Neteja els filtres</button></div>';
+  if(shown<entries.length)list.insertAdjacentHTML('beforeend','<button type="button" class="small-link catalog-next" data-action="more">Mostra 50 mots més '+icon('chevron-down')+'</button>');
+  else if(active&&B.nextInitial(view.counts,active))list.insertAdjacentHTML('beforeend','<button type="button" class="small-link catalog-next" data-initial="'+B.nextInitial(view.counts,active)+'">Continua amb '+B.nextInitial(view.counts,active)+' '+icon('arrow-right')+'</button>');
+  $('catalog-columns').hidden=config.mode!=='words';list.classList.toggle('is-pseudo',config.mode==='pseudo');
+  list.scrollTop=resetScroll?0:previousScroll;
+  if(target){const id=config.entries.find(e=>e.text===target)?.id,selected=[...list.querySelectorAll('.pronunciation-row')].find(e=>e.dataset.word===id);selected?.scrollIntoView({block:'center'});}
+ }
+ function refreshFlags(){for(const b of $('catalog-list').querySelectorAll('[data-action=report]')){const row=byId.get(b.dataset.word);if(row)b.setAttribute('aria-pressed',String(flagged(row,b.dataset.variety)));}}
  function reportTarget(){return report&&context(report.row,report.variety,$('pronunciation-report-kind').value);}
  function targetChanged(){const c=reportTarget(),saved=c&&store.get(c);$('pronunciation-report-note').value=saved?.note||'';$('pronunciation-report-clear').hidden=saved?.status!=='review';}
  function openReport(row,variety){stop();report={row,variety};const label=varieties.find(v=>v[0]===variety)[1];$('pronunciation-report-word').textContent=`${row.text} · ${label}`;
   const select=$('pronunciation-report-kind');for(const o of select.options)o.disabled=!context(row,variety,o.value);
   const prior=['audio','ipa'].find(t=>{const c=context(row,variety,t);return c&&store.get(c)?.status==='review';});select.value=prior||(context(row,variety,'audio')?'audio':'ipa');targetChanged();PlecMotion.open($('pronunciation-report'));setTimeout(()=>$('pronunciation-report-note').focus(),0);
  }
- $('pronunciation-list').addEventListener('click',event=>{const b=event.target.closest('[data-action]');if(!b||b.disabled)return;if(b.dataset.action==='more'){limit+=50;render();return;}const row=byId.get(b.dataset.word);if(!row)return;if(b.dataset.action==='play')play(row,b.dataset.variety);else if(b.dataset.action==='report')openReport(row,b.dataset.variety);});
+ $('catalog-list').addEventListener('click',event=>{const b=event.target.closest('[data-action]');if(!b||b.disabled)return;if(b.dataset.action==='more'){const oldCount=$('catalog-list').querySelectorAll('.pronunciation-row').length;openGeneration++;limit+=50;render();$('catalog-list').querySelectorAll('.pronunciation-row')[oldCount]?.focus({preventScroll:true});return;}if(b.dataset.action==='reset'){resetFilters();return;}if(b.dataset.action==='retry'){loading=null;loaded=false;ensureData();return;}const row=byId.get(b.dataset.word);if(!row)return;if(b.dataset.action==='play')play(row,b.dataset.variety);else if(b.dataset.action==='report')openReport(row,b.dataset.variety);});
  $('pronunciation-report-kind').addEventListener('change',targetChanged);
  $('pronunciation-report-form').addEventListener('submit',event=>{event.preventDefault();const c=reportTarget(),note=$('pronunciation-report-note').value.trim();if(!c||!note){$('pronunciation-report-note').focus();return;}const record=store.set(c,{status:'review',note});refreshFlags();status('Incidència desada en aquest navegador.');PlecMotion.close($('pronunciation-report'));if(event.submitter?.value==='github')window.open(R.issueURL([record]),'_blank','noopener,noreferrer');});
  $('pronunciation-report-clear').addEventListener('click',()=>{const c=reportTarget();if(!c)return;store.set(c,{status:'pending',note:''});refreshFlags();status('Incidència retirada.');PlecMotion.close($('pronunciation-report'));});
@@ -62,8 +80,24 @@
   try{published=await json('audio/manifest.json');if(!Array.isArray(published.packs))throw Error();}catch{published={packs:[]};}
   loaded=true;status();
  }
- async function show(visibleEntries,options={}){stop();const version=++showVersion;entries=visibleEntries;nextInitial=options.nextInitial||null;deepWord=options.word||'';requestedPack=options.pack||'';limit=50;$('pronunciation-list').innerHTML='<p class="review-notice">Carregant les pronunciacions…</p>';
-  try{if(!loading)loading=load();await loading;if(version!==showVersion||$('catalog-pronunciations-view').hidden)return;$('review-notice').hidden=true;render();$('pronunciation-list').parentElement.scrollTop=0;}catch{loading=null;loaded=false;if(version===showVersion){$('pronunciation-list').innerHTML='';$('review-notice').hidden=false;$('review-notice').textContent='No s’han pogut carregar les taules. Torna a obrir aquesta vista.';}}
+ function resetFilters(){openGeneration++;initial=null;limit=50;deepWord='';requestedPack='';$('catalog-search').value='';$('catalog-tag').value='';$('catalog-stage').value='all';render({resetScroll:true});}
+ function filtersChanged(){openGeneration++;initial=null;limit=50;deepWord='';requestedPack='';render({resetScroll:true});}
+ for(const id of ['catalog-search','catalog-tag','catalog-stage'])$(id).addEventListener(id==='catalog-search'?'input':'change',filtersChanged);
+ $('catalog-clear').addEventListener('click',()=>{$('catalog-search').value='';filtersChanged();$('catalog-search').focus();});
+ function selectInitial(event){const link=event.target.closest('[data-initial]');if(!link)return;event.preventDefault();if(link.getAttribute('aria-disabled')==='true')return;openGeneration++;initial=link.dataset.initial;limit=50;deepWord='';requestedPack='';render({resetScroll:true});}
+ $('catalog-initials').addEventListener('click',selectInitial);$('catalog-list').addEventListener('click',selectInitial);
+ async function ensureData(){try{failed=false;if(!loading)loading=load();await loading;$('review-notice').hidden=!!manifest.packs.length;if(!manifest.packs.length)$('review-notice').innerHTML='Els àudios no estan disponibles. <button type="button" class="small-link" data-retry>Reintenta</button>';if($('catalog-dialog').open)render();}catch{loading=null;loaded=false;$('review-notice').hidden=false;$('review-notice').innerHTML='No s’han pogut carregar les pronunciacions. <button type="button" class="small-link" data-retry>Reintenta</button>';if($('catalog-dialog').open)render();}}
+ $('review-notice').addEventListener('click',e=>{if(e.target.closest('[data-retry]')){loading=null;ensureData();}});
+ function open(next,{word='',pack=''}={}){
+  const changed=!config||next.mode!==config.mode||next.revision!==config.revision;config=next;
+  if(changed){$('catalog-tag').innerHTML='<option value="">Tots els focus</option>'+config.categories.filter(c=>c.mode===config.mode).map(c=>'<option value="'+esc(c.id)+'">'+esc(c.label)+'</option>').join('');resetFilters();}
+  $('catalog-title').textContent=config.mode==='words'?'El catàleg':'Les pseudoparaules';$('catalog-stage-field').hidden=config.mode==='pseudo';$('export-words-text').hidden=config.mode!=='words';$('export-pseudo-text').hidden=config.mode!=='pseudo';$('export-pronunciations').hidden=config.mode==='pseudo';document.querySelector('.catalog-hint').hidden=config.mode==='pseudo';
+  deepWord=word;requestedPack=pack;
+  if(word){const entry=config.entries.find(e=>e.text===word&&e.mode===config.mode);if(entry){initial=B.initialFor(word,config.locale);if(!config.matchesStage(entry,$('catalog-stage').value))$('catalog-stage').value='all';if($('catalog-tag').value&&!entry.tags.includes($('catalog-tag').value))$('catalog-tag').value='';}}
+  const generation=++openGeneration;PlecMotion.open($('catalog-dialog'));render({target:word});
+  try{const url=new URL(location.href);url.searchParams.set('panel','cataleg');if(word)url.searchParams.set('mot',word);else url.searchParams.delete('mot');if(pack)url.searchParams.set('audio',pack);else url.searchParams.delete('audio');history.replaceState(null,'',url);}catch{}
+  ensureData().then(()=>{if(word&&generation===openGeneration&&$('catalog-dialog').open)render({target:word});});
  }
- window.PlecPronunciations={show,stop,isLoaded:()=>loaded};
+ for(const type of ['close','cancel'])$('catalog-dialog').addEventListener(type,()=>{stop();if(type==='close')try{const url=new URL(location.href);for(const key of ['panel','mot','audio'])url.searchParams.delete(key);history.replaceState(null,'',url);}catch{}});
+ window.PlecCatalogView={open,stop};
 })();

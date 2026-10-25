@@ -1,8 +1,8 @@
 # Revisar les pronunciacions al web
 
-Obre **El catàleg → Pronunciacions i revisió**. Les dues vistes comparteixen la capçalera, cerca, focus, nivell i inicial. Canviar de pestanya conserva els filtres i no tanca el quadre. La ruta `/ca/pronunciacions/` obre directament aquesta vista; la icona de parla d’un mot hi porta amb aquell mot cercat.
+Obre **El catàleg**. Una única vista mostra els mots, focus, IPA i àudios de les dues varietats, amb cerca, nivell i inicial compartits. La ruta `/ca/pronunciacions/` també hi porta. Un enllaç individual ressalta el mot al llistat sense omplir la cerca.
 
-Cada fila mostra **mot | central · Alba | valencià · Enric**. Prem la IPA o l’altaveu per sentir l’enregistrament disponible; el mot es ressalta durant la reproducció. No es reprodueixen dos àudios alhora. En mòbil les dues varietats queden juntes sota cada mot. Els filtres són fixos i només es desplaça el llistat; s’afegeixen fins a 50 files per tanda per mantenir-lo àgil.
+Cada fila mostra **mot i focus | central · Alba | valencià · Enric**. Prem la IPA o l’altaveu per sentir l’enregistrament disponible; el mot es ressalta durant la reproducció. No es reprodueixen dos àudios alhora. En mòbil les dues varietats queden juntes sota cada mot. Els filtres són fixos i només es desplaça el llistat; s’afegeixen fins a 50 files per tanda per mantenir-lo àgil.
 
 ## Notificar un error
 

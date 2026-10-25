@@ -1,7 +1,16 @@
-<section id="catalog-pronunciations-view" class="catalog-view" aria-label="Pronunciacions" hidden>
-<p id="pronunciation-hint" class="pronunciation-hint">Prem la IPA o l’altaveu per escoltar. La bandera permet notificar un error.</p>
+<div class="catalog-controls">
+  <div class="catalog-tools">
+    <label class="search-label"><span class="sr-only">Cerca al catàleg</span><input id="catalog-search" type="search" placeholder="Cerca una paraula…" autocomplete="off"><button id="catalog-clear" type="button" class="icon-button" aria-label="Esborra la cerca" hidden><span data-icon="x"></span></button></label>
+    <label><span class="sr-only">Focus de pràctica</span><select id="catalog-tag"></select></label>
+    <label id="catalog-stage-field"><span class="sr-only">Nivell orientatiu</span><select id="catalog-stage"><option value="all">Tots els nivells</option><option value="cm">Cicle mitjà</option><option value="cs">Cicle superior</option><option value="eso">Institut</option></select></label>
+  </div>
+  <nav id="catalog-initials" class="catalog-initials" aria-label="Inicials del catàleg"></nav>
+  <div class="catalog-status"><span id="catalog-count" role="status" aria-live="polite"></span><span class="catalog-hint">Prem la IPA o l’altaveu per escoltar · <span data-icon="flag"></span> Notifica un error</span></div>
+</div>
 <p id="review-notice" class="review-notice" role="status" hidden></p><p id="review-storage-warning" class="review-notice" role="alert" hidden></p>
-<div class="pronunciation-columns" role="row"><span>Mot</span><span>Central · Alba</span><span>Valencià · Enric</span></div>
-<div class="pronunciation-scroll"><div id="pronunciation-list" tabindex="-1" aria-label="Pronunciacions dels mots"></div></div>
-<footer class="review-footer"><span id="review-save-status" role="status" aria-live="polite"></span><div><button id="export-pronunciations" class="small-link" type="button">Descarrega les IPA</button><button id="export-reviews" class="small-link" type="button">Exporta incidències</button><button id="import-reviews-open" class="small-link" type="button">Importa incidències</button><input id="import-reviews" type="file" accept=".json,application/json" hidden></div></footer>
-</section>
+<div id="catalog-columns" class="pronunciation-columns" aria-hidden="true"><span>Mot i focus de pràctica</span><span>Central · Alba</span><span>Valencià · Enric</span></div>
+<div id="catalog-list" class="catalog-results" role="region" tabindex="0" aria-label="Mots, focus i pronunciacions" aria-describedby="catalog-count"></div>
+<footer class="catalog-footer">
+  <span id="review-save-status" role="status" aria-live="polite"></span>
+  <div class="catalog-footer-actions"><div class="catalog-download-actions"><span>Descarrega</span><button class="small-link" id="export-words-text">Mots · TXT</button><button class="small-link" id="export-pseudo-text" hidden>Mots · TXT</button><button class="small-link" id="export-pronunciations">IPA · CSV</button><button class="small-link" id="export-review">Banc · TSV</button></div><div class="catalog-review-actions"><span>Incidències</span><button id="export-reviews" class="small-link" type="button">Exporta</button><button id="import-reviews-open" class="small-link" type="button">Importa</button><input id="import-reviews" type="file" accept=".json,application/json" hidden></div></div>
+</footer>

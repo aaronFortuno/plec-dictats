@@ -1,6 +1,7 @@
 (function (root) {
   'use strict';
   const profile = root.PlecLanguage || (typeof module !== 'undefined' ? require('./locales/ca/config.json') : null);
+  const QR = root.PlecWorksheetQR || (typeof module !== 'undefined' ? require('./worksheet-qr.js') : null);
   const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase(profile.locale);
   function migrateFocusTags(tags, available, retired = []) {
     const active = [...new Set(tags.filter(tag => available.includes(tag)))];
@@ -132,7 +133,7 @@
     const labels = Array.isArray(focusLabels)
       ? [...new Set(focusLabels.map(l => String(l ?? '').trim()).filter(Boolean))].slice(0, 16)
       : [];
-    if (labels.length) {
+    if (labels.length || seedCode) {
       // Banda buida protegida: tria el panell buit més ample entre plecs i escriptura.
       const [b0, b1] = layout.blank;
       const cuts = [b0, ...layout.folds.filter(x => x > b0 && x < b1), b1];
@@ -140,9 +141,14 @@
       for (let i = 0; i < cuts.length - 1; i++) {
         if (cuts[i + 1] - cuts[i] > pw) { pw = cuts[i + 1] - cuts[i]; px = cuts[i]; }
       }
-      const fx = px + 5, fw = pw - 10;
-      text(fx, 65, 'FOCUS DE PRÀCTICA', 8, true, '#777777', { maxWidth: fw, role: 'practice-focus' });
-      labels.forEach((label, i) => text(fx, 72 + i * 5, label, 8, false, '#777777', { maxWidth: fw, role: 'practice-focus' }));
+      const fx = Math.max(12,px+4), fw = Math.min(198,px+pw-4)-fx;
+      if(seedCode){const url=QR.urlFor(seedCode,seedLanguage);shapes.push(...QR.shapes(url,fx+(fw-28)/2,13,28));text(fx+fw/2,43,'ortogra.fi · dictat',7,false,'#555555',{align:'center',role:'worksheet-link'});}
+      if(labels.length){
+        rect(fx,47,fw,14,'#f2f2f2');shapes[shapes.length-1].role='practice-focus';
+        text(fx+2,52.5,'Aquest dictat treballa',9,true,'#222222',{maxWidth:fw-4,role:'practice-focus'});
+        text(fx+2,57.5,'els següents focus:',9,true,'#222222',{maxWidth:fw-4,role:'practice-focus'});
+        labels.forEach((label,i)=>text(fx+2,69+i*6,label,9,false,'#333333',{maxWidth:fw-4,role:'practice-focus'}));
+      }
     }
     return shapes;
   }

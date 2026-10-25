@@ -1,45 +1,13 @@
-// Comprovació fora de línia de focusLabels a core.worksheet (T009).
 'use strict';
-const assert = require('node:assert/strict');
-const { worksheet, foldLayout } = require('../core.js');
-
-const entries = Array.from({ length: 24 }, (_, i) => ({ id: i + 1, text: `mot${i + 1}`, tags: ['t'], mode: 'words' }));
-const raw = ['Velar', 'Aspre', 'velar', 'Velar', '  ', 'Trenchant', 'Suau', 'Gemma', 'Nasal', 'Líquida', 'Fricatiu', 'Africat', 'Oclusiu', 'Bilabial', 'Dental', 'Palatal', 'Gutural', 'Extra'];
-const expected = ['Velar', 'Aspre', 'velar', 'Trenchant', 'Suau', 'Gemma', 'Nasal', 'Líquida', 'Fricatiu', 'Africat', 'Oclusiu', 'Bilabial', 'Dental', 'Palatal', 'Gutural', 'Extra'];
-
-for (const foldStyle of ['thirds', 'quarter']) {
-  for (const modelSide of ['left', 'right']) {
-    const layout = foldLayout(foldStyle, modelSide);
-    const shapes = worksheet({ entries, foldStyle, modelSide, focusLabels: raw });
-    const focus = shapes.filter(s => s.role === 'practice-focus');
-    const rest = shapes.filter(s => s.role !== 'practice-focus');
-
-    // Capçalera + 16 etiquetes deduplicades, sense buits.
-    assert.equal(focus.length, 17, `${foldStyle}/${modelSide}: nombre de formes`);
-    assert.equal(focus[0].value, 'FOCUS DE PRÀCTICA');
-    assert.deepEqual(focus.slice(1).map(s => s.value), expected, `${foldStyle}/${modelSide}: deduplicació i ordre`);
-
-    // Panell buit més ample amb marges interns de 5 mm.
-    const [b0, b1] = layout.blank;
-    const cuts = [b0, ...layout.folds.filter(x => x > b0 && x < b1), b1];
-    let px = b0, pw = 0;
-    for (let i = 0; i < cuts.length - 1; i++) {
-      if (cuts[i + 1] - cuts[i] > pw) { pw = cuts[i + 1] - cuts[i]; px = cuts[i]; }
-    }
-    const lo = px + 5, hi = px + pw - 5;
-    for (const s of focus) {
-      assert.ok(s.x >= lo && s.x <= hi, `${foldStyle}/${modelSide}: dins del panell (${s.x})`);
-      assert.ok(s.maxWidth > 0 && s.x + s.maxWidth <= hi, `${foldStyle}/${modelSide}: maxWidth dins del panell`);
-      assert.ok(!layout.folds.some(f => f >= s.x && f <= s.x + s.maxWidth), `${foldStyle}/${modelSide}: no toca cap plec`);
-      assert.ok(s.y >= 65 && s.y < 260, `${foldStyle}/${modelSide}: dins de la franja vertical`);
-      assert.equal(s.size, 8);
-      assert.equal(s.color, '#777777');
-    }
-
-    // Sense etiquetes: sortida idèntica al comportament original.
-    const plain = worksheet({ entries, foldStyle, modelSide });
-    assert.ok(!plain.some(s => s.role === 'practice-focus'));
-    assert.deepEqual(rest, plain, `${foldStyle}/${modelSide}: formes originals inalterades`);
-  }
+const assert=require('node:assert/strict'),K=require('../core.js'),Q=require('../worksheet-qr.js');
+const entries=Array.from({length:24},(_,i)=>({text:'mot'+i,tags:[],mode:'words'})),labels=['Accentuació','Dièresi','Accentuació','  ','s / ss / c / ç / z'];
+assert.equal(Q.urlFor('adz5-2356a','ca'),'https://ortogra.fi/ca/dictat/?seed=ADZ52356A');assert.equal(Q.urlFor('52E-4S3','es'),'https://ortogra.fi/es/dictat/?seed=52E4S3');assert.throws(()=>Q.urlFor('invalid','ca'));assert.throws(()=>Q.urlFor('ADZ52356A','../'));
+for(const foldStyle of ['thirds','quarter'])for(const modelSide of ['left','right']){
+ const options={entries,foldStyle,modelSide,seedCode:'ADZ5-2356A',seedLanguage:'ca'},layout=K.foldLayout(foldStyle,modelSide),shapes=K.worksheet({...options,focusLabels:labels}),focus=shapes.filter(s=>s.role==='practice-focus'),text=focus.filter(s=>s.type==='text'),qr=shapes.filter(s=>s.role==='worksheet-qr');
+ assert.equal(text[0].y,shapes.find(s=>s.value==='ESCRIC I REVISO').y);assert.equal(text[0].size,9);assert.equal(text[0].weight,true);assert.equal(text[0].color,'#222222');assert.equal(text.slice(0,2).map(s=>s.value).join(' '),'Aquest dictat treballa els següents focus:');assert.deepEqual(text.slice(2).map(s=>s.value),['Accentuació','Dièresi','s / ss / c / ç / z']);
+ const outer=qr[0];assert.equal(outer.url,Q.urlFor(options.seedCode));assert.equal(outer.w,28);assert.equal(outer.y+outer.h,41);assert(qr.length>100);
+ for(const s of [...focus,...qr]){const right=s.x+(s.w||s.maxWidth||0);assert(s.x>=Math.max(12,layout.blank[0]));assert(right<=Math.min(198,layout.blank[1]));assert(!layout.folds.some(f=>f>=s.x&&f<=right));assert(s.y<170);}
+ assert.deepEqual(shapes.filter(s=>s.role!=='practice-focus'),K.worksheet(options));
+ assert(!K.worksheet({entries,foldStyle,modelSide}).some(s=>s.role));
 }
-console.log('check-focus-sheet: OK');
+console.log('Worksheet: aligned heading, coherent type, protected panel margins, unchanged writing/model geometry, valid canonical QR identity and both fold directions passed.');

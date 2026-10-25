@@ -1,8 +1,8 @@
-.pronunciation-columns,.pronunciation-row{display:grid;grid-template-columns:minmax(120px,.55fr) repeat(2,minmax(0,1fr));align-items:center;gap:0}
+.pronunciation-columns,.pronunciation-row{display:grid;grid-template-columns:minmax(190px,.85fr) repeat(2,minmax(0,1fr));align-items:center;gap:0}
 .pronunciation-columns{font-size:12px;color:var(--muted);padding:7px 10px;flex-shrink:0;margin-right:17px;border-bottom:1px solid var(--line)}
 .pronunciation-columns>span:not(:first-child){padding-left:16px}
-.pronunciation-scroll{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:10px}
-.pronunciation-row{padding:8px 10px;border-bottom:1px solid var(--line);transition:background-color 220ms,color 220ms}
+
+.pronunciation-row{padding:12px 10px;border-bottom:1px solid var(--line);transition:background-color 220ms,color 220ms}
 .pronunciation-row.is-target{background:var(--soft)}
 .pronunciation-word{font:20px var(--serif);margin:0;padding-right:12px;overflow-wrap:anywhere;transition:color 220ms}
 .pronunciation-row.is-playing .pronunciation-word{color:var(--accent)}
@@ -17,13 +17,10 @@
 .review-icon{width:30px;height:30px;min-width:30px;padding:6px;border:1px solid var(--line);background:transparent;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;color:var(--muted);transition:background-color 220ms,color 220ms,border-color 220ms}
 .review-icon .lucide{width:16px;height:16px}
 .review-icon:hover:not(:disabled),.review-icon[aria-pressed=true]{background:var(--soft);color:var(--accent);border-color:var(--accent)}
-.review-notice,#pronunciation-hint{font-size:11px;line-height:1.5;color:var(--muted);margin:0 0 6px;flex-shrink:0}
-.review-footer{flex-shrink:0;padding:9px 0 0;margin-top:5px;display:grid;gap:5px;font-size:11px;color:var(--muted)}
-.review-footer>div{display:flex;gap:6px 18px;flex-wrap:wrap;align-items:center}
-.review-footer .small-link{display:inline-flex;align-items:center;gap:5px;font-size:11px}
-.review-footer .lucide{width:15px;height:15px}
+.review-notice{font-size:11px;line-height:1.5;color:var(--muted);margin:0 0 6px;flex-shrink:0}
+
 #review-save-status:empty{display:none}
-.pronunciation-more{display:block;margin:14px auto}
+
 #pronunciation-report{width:min(500px,calc(100% - 24px));max-height:90svh;overflow:auto;padding:24px}
 #pronunciation-report h2{font:27px var(--serif);margin:0}
 #pronunciation-report-word{color:var(--green);font-weight:600}
@@ -34,5 +31,5 @@
 .report-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .report-actions .button{font-size:12px;padding:10px 12px;min-height:38px}
 .report-actions .lucide{width:16px;height:16px}
-@media(max-width:800px){.pronunciation-columns,.pronunciation-row{grid-template-columns:minmax(90px,.5fr) repeat(2,minmax(0,1fr))}.pronunciation-cell{padding-left:10px;padding-right:8px;gap:4px}.pronunciation-columns>span:not(:first-child){padding-left:10px}.pronunciation-word{font-size:18px}.ipa-text{font-size:15px}.review-icon{width:28px;height:28px;min-width:28px;padding:5px}}
-@media(max-width:560px){.pronunciation-columns{display:none}.pronunciation-row{grid-template-columns:1fr;padding:10px 3px;gap:6px}.pronunciation-word{font-size:21px;margin-bottom:2px}.pronunciation-cell{border:0;padding:0!important;gap:7px}.cell-variety{display:block;flex:0 0 78px;font-size:10px;color:var(--muted)}.ipa-text{font-size:16px}.review-footer{font-size:11px}.review-footer>div{gap:8px 12px}.review-footer .small-link{font-size:10px}.pronunciation-scroll{padding-right:8px}#pronunciation-hint{font-size:10px}}
+@media(max-width:800px){.pronunciation-columns,.pronunciation-row{grid-template-columns:minmax(150px,.8fr) repeat(2,minmax(0,1fr))}.pronunciation-cell{padding-left:10px;padding-right:8px;gap:4px}.pronunciation-columns>span:not(:first-child){padding-left:10px}.pronunciation-word{font-size:18px}.ipa-text{font-size:15px}.review-icon{width:28px;height:28px;min-width:28px;padding:5px}}
+@media(max-width:560px){.pronunciation-columns{display:none}.pronunciation-row{grid-template-columns:1fr;padding:10px 3px;gap:6px}.pronunciation-word{font-size:21px;margin-bottom:2px}.pronunciation-cell{border:0;padding:0!important;gap:7px}.cell-variety{display:block;flex:0 0 78px;font-size:10px;color:var(--muted)}.ipa-text{font-size:16px}}
