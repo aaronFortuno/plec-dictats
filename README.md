@@ -2,7 +2,7 @@
 
 Un generador obert de dictats autocorrectius en català: **3.299 paraules**, **96 pseudoparaules**, dos formats de plec i codis curts per recuperar cada dictat. Funciona al navegador, sense comptes ni servidor de dades.
 
-**[Obre Plec · Català](https://aaronfortuno.github.io/plec-dictats/ca/)** · [Prova perquè i orquestra · M6QM-AAVN4](https://aaronfortuno.github.io/plec-dictats/ca/?seed=M6QMAAVN4)
+**[Obre Plec · Català](https://plec.ortogra.fi/ca/)** · [Prova perquè i orquestra · M6QM-AAVN4](https://plec.ortogra.fi/ca/?seed=M6QMAAVN4)
 
 ## Preparar un dictat
 
@@ -141,11 +141,11 @@ node tools/serve.cjs
 
 El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `build-catalogs.cjs --check` comprova que els fitxers generats siguin reproduïbles. El generador verifica també les empremtes de les instantànies i no les modifica. Per repetir el contrast complet cal el lèxic extern de Softcatalà; les instruccions són a `catalogs/README.md`.
 
-`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `catalog-audio.js` gestiona una única reproducció del catàleg i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.21.1`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
+`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `pronunciations.js` gestiona el catàleg unificat i una única reproducció i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.21.2`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
 
 ## Versions
 
-La interfície actual és **1.21.1**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.21.2**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 
@@ -154,6 +154,8 @@ El repositori serveix la branca **main**, carpeta **/ (root)**, amb `.nojekyll`.
 Codi i contingut original sota MIT. `pdf-lib` conserva la llicència MIT i els avisos d'`assets/vendor/`; Lucide conserva ISC i l'avís MIT de les icones derivades de Feather a `assets/lucide/LICENSE`. El lèxic de Softcatalà, utilitzat externament per al contrast, manté la seva llicència LGPL 2.1 / GPL 2.0 i les seves atribucions; no es distribueix amb el web.
 
 El conversor local catalan2ipa conserva LGPL-3.0-or-later i les atribucions a `tools/vendor/catalan2ipa/`. Les pistes fonètiques indiquen separadament les excepcions factuals consultades d’eSpeak NG i les decisions editorials; no s’ha copiat un diccionari complet.
+
+`site-links.js` defineix l’origen públic únic per als enllaços de full, alumnat i QR: `https://plec.ortogra.fi/`. Els botons de còpia utilitzen aquest origen també en local; la navegació interna es resol des del lloc on s’està provant el web.
 
 Els focus seleccionats apareixen a la banda tapada del full imprimible i del PDF, alineats amb «Escric i reviso» i amb el QR a sobre, tant en terços com en quart de full. No canvien ni la llavor ni l’espai d’escriptura.
 

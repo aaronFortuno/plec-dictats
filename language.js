@@ -2,6 +2,7 @@
 (function (root) {
   'use strict';
   const manifest = root.PlecLanguages || (typeof module !== 'undefined' ? require('./locales/manifest.json') : null);
+  const site = root.PlecSiteLinks || (typeof module !== 'undefined' ? require('./site-links.js') : null);
   function language(id) {
     const found = manifest.languages.find(item => item.id === id);
     if (!found) throw new Error('Aquesta llengua encara no està disponible.');
@@ -28,6 +29,8 @@
     // Migration is read-only: keep the original backup until a successful save.
     return JSON.parse(current === null && id === 'ca' ? storage.getItem('plec-dictats-v1') : current);
   }
-  root.PlecLanguageTools = { language, normalizeCode, dictationURL, assertImportLanguage, savedState };
+  function publicDictationURL(options){language(options.language);return site.dictationURL(options);}
+  function publicComposerURL(options){language(options.language);return site.composerURL(options);}
+  root.PlecLanguageTools = { language, normalizeCode, dictationURL, publicDictationURL, publicComposerURL, assertImportLanguage, savedState };
   if (typeof module !== 'undefined') module.exports = root.PlecLanguageTools;
 })(typeof window === 'undefined' ? globalThis : window);

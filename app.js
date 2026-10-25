@@ -213,10 +213,11 @@
   $('recover-form').addEventListener('submit',event=>{event.preventDefault();try{const resolved=S.resolve(R.editions,$('recover-code').value);stopSearch();setCode(resolved.code);$('recover-code').value='';$('search-status').textContent='';say('Dictat recuperat amb els mateixos mots, ordre i filtres.');}catch(error){say(error.message);}});
   async function copy(value,success){try{await navigator.clipboard.writeText(value);say(success);}catch{say('No s’ha pogut copiar automàticament. El codi és '+(current?.code||'')+'.');}}
   $('copy-code').addEventListener('click',()=>current&&copy(current.code,'Codi copiat.'));
-  const studentURL=()=>LT.dictationURL(new URL('../',location.href),{language:L.id,catalogue:current.catalogue,seed:current.code});
-  $('open-student').addEventListener('click',()=>{if(current&&!busy)location.href=studentURL();});
+  const shareOptions=()=>({language:L.id,catalogue:current.catalogue,seed:current.code});
+  const studentURL=()=>LT.publicDictationURL(shareOptions());
+  $('open-student').addEventListener('click',()=>{if(current&&!busy)location.href=LT.dictationURL(new URL('../',location.href),shareOptions());});
   $('copy-student-link').addEventListener('click',()=>{if(current&&!busy)copy(studentURL(),'Enllaç per a l’alumnat copiat.');});
-  $('copy-link').addEventListener('click',()=>{if(!current)return;const url=new URL('./',location.href);url.searchParams.set('seed',S.normalize(current.code));url.searchParams.set('catalogue',current.catalogue);copy(url.href,'Enllaç del dictat copiat.');});
+  $('copy-link').addEventListener('click',()=>{if(current&&!busy)copy(LT.publicComposerURL(shareOptions()),'Enllaç del dictat copiat.');});
   $('catalog-open').addEventListener('click',()=>openCatalog());$('help-open').addEventListener('click',()=>window.PlecMotion.open($('help-dialog')));
   function openInfo(dialogId, titleId) {
     const dialog = $(dialogId);
@@ -244,6 +245,7 @@
     }
   });
   const releases = [
+    ['1.21.2', '2026-10-25', ['Enllaços públics del full, de l’alumnat i dels QR centralitzats a plec.ortogra.fi. Els botons de còpia utilitzen el domini definitiu també quan es treballa en local o des d’una adreça antiga.']],
     ['1.21.1', '2026-10-25', ['QR del full actualitzat a plec.ortogra.fi. L’adreça completa, amb llengua i codi, també s’imprimeix en dues línies sota el QR per poder-la introduir manualment.']],
     ['1.21', '2026-10-25', ['Catàleg únic amb mot, focus, àudios i IPA a la mateixa fila. Cerca global sense canvis automàtics, alfabet centrat i càrrega homogènia de 50 files. Bloc imprès de focus alineat amb Escric i reviso i QR vectorial del dictat amb llengua i codi per a ortogra.fi.']],
     ['1.20', '2026-10-25', ['Catàleg i pronunciacions amb capçalera i filtres compartits. Files compactes amb les dues varietats, IPA interactiva i notificació directa amb bandera. IPA central completa com a proposta. Publicats els 219 àudios centrals que faltaven: 3.299 mots amb Alba i amb Enric. Selector de pronunciació abans de començar el dictat. Focus seleccionats impresos a la banda tapada del full.']],

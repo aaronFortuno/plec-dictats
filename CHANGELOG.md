@@ -1,5 +1,11 @@
 # Historial
 
+## 1.21.2 · 25 d’octubre de 2026
+
+- Origen públic únic a `site-links.js`: `https://plec.ortogra.fi/`.
+- «Copia l’enllaç» i «Enllaç per a l’alumnat» generen URL canòniques amb llengua, codi i edició, independentment de l’adreça des d’on s’utilitzi Plec. Els QR comparteixen el mateix generador d’enllaços.
+- Accessos públics del README actualitzats. La navegació interna i les rutes dels recursos continuen sent relatives, compatibles amb el domini definitiu, les proves locals i els enllaços antics.
+
 ## 1.21.1 · 25 d’octubre de 2026
 
 - QR del full actualitzat al subdomini `plec.ortogra.fi`, mantenint la llengua i el codi recuperable.
