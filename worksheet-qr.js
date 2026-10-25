@@ -4,7 +4,7 @@
  function urlFor(code,language='ca'){
   const seed=String(code||'').toUpperCase().replace(/[\s-]/g,'');
   if(!/^(?:[ABCDEFGHJKMNPQRSTVWXYZ2-9]{6}|[ABCDEFGHJKMNPQRSTVWXYZ2-9]{9})$/.test(seed)||! /^[a-z]{2}(?:-[A-Za-z]{2})?$/.test(language))throw Error('Identitat del QR invàlida.');
-  return `https://ortogra.fi/${language}/dictat/?seed=${seed}`;
+  return `https://plec.ortogra.fi/${language}/dictat/?seed=${seed}`;
  }
  function matrix(url){if(cache.has(url))return cache.get(url);const qr=qrcode(0,'M');qr.addData(url);qr.make();const count=qr.getModuleCount(),cells=Array.from({length:count},(_,r)=>Array.from({length:count},(_,c)=>qr.isDark(r,c)));if(cache.size>20)cache.clear();cache.set(url,cells);return cells;}
  function shapes(url,x,y,size=28){const cells=matrix(url),quiet=4,unit=size/(cells.length+quiet*2),result=[{type:'rect',x,y,w:size,h:size,color:'#ffffff',role:'worksheet-qr',url}];

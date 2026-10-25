@@ -244,6 +244,7 @@
     }
   });
   const releases = [
+    ['1.21.1', '2026-10-25', ['QR del full actualitzat a plec.ortogra.fi. L’adreça completa, amb llengua i codi, també s’imprimeix en dues línies sota el QR per poder-la introduir manualment.']],
     ['1.21', '2026-10-25', ['Catàleg únic amb mot, focus, àudios i IPA a la mateixa fila. Cerca global sense canvis automàtics, alfabet centrat i càrrega homogènia de 50 files. Bloc imprès de focus alineat amb Escric i reviso i QR vectorial del dictat amb llengua i codi per a ortogra.fi.']],
     ['1.20', '2026-10-25', ['Catàleg i pronunciacions amb capçalera i filtres compartits. Files compactes amb les dues varietats, IPA interactiva i notificació directa amb bandera. IPA central completa com a proposta. Publicats els 219 àudios centrals que faltaven: 3.299 mots amb Alba i amb Enric. Selector de pronunciació abans de començar el dictat. Focus seleccionats impresos a la banda tapada del full.']],
     ['1.19.1', '2026-10-25', ['Publicats els 3.299 àudios del lot valencià amb Enric, amb IPA congelada i revisió individual oberta. Selector de varietat actiu al catàleg. Tots els MP3 descodificats i comprovats; consum local final de 410.316 caràcters.']],

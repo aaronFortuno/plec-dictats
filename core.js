@@ -142,7 +142,11 @@
         if (cuts[i + 1] - cuts[i] > pw) { pw = cuts[i + 1] - cuts[i]; px = cuts[i]; }
       }
       const fx = Math.max(12,px+4), fw = Math.min(198,px+pw-4)-fx;
-      if(seedCode){const url=QR.urlFor(seedCode,seedLanguage);shapes.push(...QR.shapes(url,fx+(fw-28)/2,13,28));text(fx+fw/2,43,'ortogra.fi · dictat',7,false,'#555555',{align:'center',role:'worksheet-link'});}
+      if(seedCode){
+        const url=QR.urlFor(seedCode,seedLanguage),split=url.indexOf('?');
+        shapes.push(...QR.shapes(url,fx+(fw-28)/2,10,28));
+        [url.slice(0,split),url.slice(split)].forEach((part,i)=>text(fx+fw/2,41+i*3,part,7,false,'#555555',{align:'center',maxWidth:fw,role:'worksheet-link'}));
+      }
       if(labels.length){
         rect(fx,47,fw,14,'#f2f2f2');shapes[shapes.length-1].role='practice-focus';
         text(fx+2,52.5,'Aquest dictat treballa',9,true,'#222222',{maxWidth:fw-4,role:'practice-focus'});

@@ -1,5 +1,11 @@
 # Historial
 
+## 1.21.1 · 25 d’octubre de 2026
+
+- QR del full actualitzat al subdomini `plec.ortogra.fi`, mantenint la llengua i el codi recuperable.
+- URL completa impresa sota el QR en dues línies llegibles, també al format de quart de full, per facilitar-ne la introducció manual.
+- Sense canvis a DNS ni a la configuració de GitHub Pages; l’activació del domini la gestiona l’autor.
+
 ## 1.21 · 25 d’octubre de 2026
 
 - Catàleg refet com una única vista: mot, focus, IPA i àudios de les dues varietats a la mateixa fila. Eliminades les pestanyes i la navegació al detall que omplia el cercador.
