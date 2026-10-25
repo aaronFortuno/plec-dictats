@@ -1,5 +1,10 @@
 # Historial
 
+## 1.22.1 · 25 d’octubre de 2026
+
+- Marca compartida d’ortogra.fi al peu, amb el símbol de la «o» accentuada i el nom del projecte paraigua.
+- Enllaç del portal activat a `https://ortogra.fi/`. El nou portal té un repositori independent, `aaronFortuno/ortogra-fi`.
+
 ## 1.22 · 25 d’octubre de 2026
 
 - Selector «Pronunciació del dictat» al lateral dret: català central o valencià, desat amb les preferències del docent.

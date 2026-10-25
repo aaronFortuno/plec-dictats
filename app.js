@@ -249,6 +249,7 @@
     }
   });
   const releases = [
+    ['1.22.1', '2026-10-25', ['Marca compartida d’ortogra.fi al peu de Plec, amb símbol tipogràfic i enllaç actiu al nou portal de recursos educatius.']],
     ['1.22', '2026-10-25', ['La pronunciació es tria al lateral del docent i queda fixada als enllaços i al QR. L’alumnat veu la varietat indicada sense selector; es conserven els enllaços antics de veu. Marca alineada verticalment al header i peu amb «un projecte d’ortogra.fi», encara inactiu.']],
     ['1.21.2', '2026-10-25', ['Enllaços públics del full, de l’alumnat i dels QR centralitzats a plec.ortogra.fi. Els botons de còpia utilitzen el domini definitiu també quan es treballa en local o des d’una adreça antiga.']],
     ['1.21.1', '2026-10-25', ['QR del full actualitzat a plec.ortogra.fi. L’adreça completa, amb llengua i codi, també s’imprimeix en dues línies sota el QR per poder-la introduir manualment.']],
