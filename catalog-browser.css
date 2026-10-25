@@ -1,12 +1,12 @@
 /* Only the word grid scrolls; tools and downloads stay in place. */
-#catalog-dialog{width:min(980px,calc(100% - 32px));height:min(88svh,840px);max-height:88svh;padding:24px;overflow:hidden}
+#catalog-dialog{width:min(1120px,calc(100% - 32px));height:min(88svh,840px);max-height:88svh;padding:24px;overflow:hidden}
 #catalog-dialog[open]{display:flex;flex-direction:column;gap:0}
 #catalog-dialog .dialog-head{flex-shrink:0;align-items:center}
 #catalog-dialog .dialog-head h2{margin:0;font-size:29px}
 .catalog-review-link{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:12px;text-decoration:none}
 .catalog-review-link .lucide{width:17px;height:17px}
 .catalog-controls{flex-shrink:0;padding-bottom:10px}
-#catalog-dialog .catalog-tools{display:grid;grid-template-columns:minmax(180px,1.5fr) repeat(3,minmax(0,1fr));gap:9px;margin:16px 0 10px}
+#catalog-dialog .catalog-tools{display:grid;grid-template-columns:minmax(180px,1.5fr) repeat(2,minmax(0,1fr));gap:9px;margin:12px 0 10px}
 #catalog-dialog .catalog-tools>label{min-width:0;width:auto;flex:initial}
 #catalog-dialog .catalog-tools input,#catalog-dialog .catalog-tools select{width:100%;font-size:12px;padding:9px}
 .catalog-initials{display:flex;align-items:center;flex-wrap:wrap;gap:3px 6px;width:100%;margin:0 0 8px;padding:0;overflow:visible}
@@ -49,30 +49,3 @@
 .catalog-view-switch button{display:inline-flex;align-items:center;gap:6px;padding:5px 0;border-bottom:2px solid transparent}
 .catalog-view-switch button[aria-pressed=true]{color:var(--green);border-color:var(--green)}
 .catalog-view-switch .lucide,#catalog-pronunciations-view .lucide{width:18px;height:18px;flex-shrink:0}
-#catalog-dialog.shows-pronunciations{width:min(1120px,calc(100% - 24px))}
-.catalog-review-help{display:flex;justify-content:flex-end;padding:9px 0;flex-shrink:0}
-.catalog-review-help button{font-size:12px;display:inline-flex;gap:6px;align-items:center}
-#pronunciation-initials{gap:2px 4px}
-#pronunciation-initials button{min-width:12px;padding:2px 0;line-height:22px}
-#catalog-pronunciations-view .review-toolbar{position:static;flex-shrink:0;padding:12px}
-#catalog-pronunciations-view .review-notice{margin:6px 0;font-size:11px;flex-shrink:0}
-#catalog-pronunciations-view .pronunciation-columns{padding:8px 12px;flex-shrink:0}
-.pronunciation-scroll{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:10px}
-#catalog-pronunciations-view .review-footer{flex-shrink:0;padding:10px 0 0;margin-top:10px;gap:5px}
-#catalog-pronunciations-view .review-footer>span:first-child{display:none}
-#catalog-pronunciations-view .review-footer>div{gap:7px 16px}
-#review-save-status:empty{display:none}
-#catalog-pronunciations-view .review-filters{gap:9px}
-@media(max-width:560px){#catalog-dialog .dialog-head h2{font-size:25px}.catalog-view-switch{gap:15px}.catalog-view-switch button{font-size:12px}#catalog-pronunciations-view .review-filters{grid-template-columns:1fr 1fr}.review-footer .button{padding:6px 9px;min-height:32px}#catalog-pronunciations-view .review-counts{font-size:10px}.catalog-review-help{padding:6px 0}.pronunciation-scroll{padding-right:7px}}
-@media(max-width:560px){
- #catalog-dialog.shows-pronunciations{padding:14px;height:94dvh;max-height:94dvh}
- #catalog-pronunciations-view .review-toolbar{padding:9px}
- #catalog-pronunciations-view .review-filters label{font-size:11px}
- #catalog-pronunciations-view #review-notice:not([data-error]){display:none}
- .catalog-review-help button{font-size:0;min-height:20px}
- .catalog-review-help .lucide{width:18px;height:18px}
- #catalog-pronunciations-view .review-footer>div{gap:5px 12px}
- #catalog-pronunciations-view .review-footer{font-size:11px;padding-top:7px;margin-top:6px}
- #catalog-pronunciations-view .review-footer .button{min-height:30px}
- #pronunciation-initials{margin-top:8px;margin-bottom:4px}
-}

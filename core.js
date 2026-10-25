@@ -95,7 +95,7 @@
     return layout;
   }
   // Coordenades comunes per a l'SVG i el PDF, en mil·límetres, origen superior esquerre.
-  function worksheet({ entries, title, mode = 'words', modelSide = 'left', foldStyle = 'thirds', seedCode, seedLanguage = 'ca' }) {
+  function worksheet({ entries, title, mode = 'words', modelSide = 'left', foldStyle = 'thirds', seedCode, seedLanguage = 'ca', focusLabels = [] }) {
     const shapes = [];
     const text = (x, y, value, size = 10, weight = false, color = '#222222', extra = {}) => shapes.push({ type: 'text', x, y, value, size, weight, color, ...extra });
     const line = (x, y, x2, y2, color = '#aaaaaa', width = .2, dash = false) => shapes.push({ type: 'line', x, y, x2, y2, color, width, dash });
@@ -128,6 +128,21 @@
     if (mode === 'pseudo') {
       text(modelX, 289, 'Model proposat: altres grafies poden', 6, false, '#555555', { maxWidth: modelWidth });
       text(modelX, 293, 'representar el mateix so.', 6, false, '#555555');
+    }
+    const labels = Array.isArray(focusLabels)
+      ? [...new Set(focusLabels.map(l => String(l ?? '').trim()).filter(Boolean))].slice(0, 16)
+      : [];
+    if (labels.length) {
+      // Banda buida protegida: tria el panell buit més ample entre plecs i escriptura.
+      const [b0, b1] = layout.blank;
+      const cuts = [b0, ...layout.folds.filter(x => x > b0 && x < b1), b1];
+      let px = b0, pw = 0;
+      for (let i = 0; i < cuts.length - 1; i++) {
+        if (cuts[i + 1] - cuts[i] > pw) { pw = cuts[i + 1] - cuts[i]; px = cuts[i]; }
+      }
+      const fx = px + 5, fw = pw - 10;
+      text(fx, 65, 'FOCUS DE PRÀCTICA', 8, true, '#777777', { maxWidth: fw, role: 'practice-focus' });
+      labels.forEach((label, i) => text(fx, 72 + i * 5, label, 8, false, '#777777', { maxWidth: fw, role: 'practice-focus' }));
     }
     return shapes;
   }

@@ -11,7 +11,7 @@ const A=require('./audio-plan.cjs'),G=require('./generate-audio.cjs');
     ['ca-central-alba-feedback-2-v1','ca-central-feedback-2-review.json'],
     ['ca-central-alba-diaeresis-sample-v1','ca-central-diaeresis-sample-review.json']
   ]);
-  for(const id of [base.id,'ca-central-alba-gemination-finals-v1','ca-central-alba-feedback-2-v1','ca-central-alba-diaeresis-sample-v1']){
+  for(const id of [base.id,'ca-central-alba-gemination-finals-v1','ca-central-alba-feedback-2-v1','ca-central-alba-diaeresis-sample-v1','ca-central-alba-completion-v1']){
     const folder=path.join(A.ROOT,'output/audio',id),resultFile=path.join(A.ROOT,'output/results',id+'-words.json');
     if(!fs.existsSync(resultFile))continue;
     const settings=A.readJson(path.join(folder,'settings.json')),result=A.readJson(resultFile);

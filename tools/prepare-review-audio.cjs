@@ -6,6 +6,7 @@ const specs=[
  ['ca-central-alba-gemination-finals-v1','ca-central-didactic-v1','Alba · prova de dicció','ipa'],
  ['ca-central-alba-feedback-2-v1','ca-central-didactic-v1','Alba · quatre incidències','ipa'],
  ['ca-central-alba-diaeresis-sample-v1','ca-central-didactic-v1','Alba · dièresis','ipa'],
+ ['ca-central-alba-completion-v1','ca-central-didactic-v1','Alba · ampliació IPA','ipa'],
  ['ca-valencian-enric-ipa-v1','ca-valencian-didactic-v1','Enric · lot valencià','ipa'],
  ['ca-valencian-enric-pilot-v1','ca-valencian-didactic-v1','Enric · pilot valencià','ipa'],
  ['ca-valencian-enric-v-probe-v1','ca-valencian-didactic-v1','Enric · prova de v','ipa']

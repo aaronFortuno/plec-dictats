@@ -1,5 +1,15 @@
 # Historial
 
+## 1.20 · 25 d’octubre de 2026
+
+- Catàleg i pronunciacions comparteixen quadre, capçalera, cerca, focus, nivell i inicial, sense tancar ni reobrir en canviar de vista.
+- Una fila per mot amb les dues varietats; la IPA i l’altaveu reprodueixen l’enregistrament i ressalten el mot. La bandera obre directament una incidència d’àudio o IPA, desable al navegador, exportable o com a esborrany a GitHub.
+- Eliminats polzes, notes desplegables, filtres de revisió i selectors d’enregistrament de la capçalera. Es conserven les anotacions antigues en les exportacions.
+- Taula central amb 3.299 propostes IPA: preserva les existents i completa les pendents amb la branca central del conversor i pistes vocàliques explícites. No implica validació lingüística ni que els àudios originals utilitzessin aquesta IPA.
+- 219 MP3 centrals addicionals en un paquet amb IPA congelada. Les dues varietats tenen cobertura de 3.299 mots, amb revisió auditiva oberta. Selector de pronunciació a la preparació del dictat.
+- Els focus seleccionats es mostren al full i al PDF dins de la banda tapada, sense modificar la geometria del plec, el solucionari ni els codis.
+- Documentada la consulta del consum real a les mètriques d’Azure.
+
 ## 1.19.1 · 25 d’octubre de 2026
 
 - Lot complet d’Enric publicat: 3.299 MP3 i IPA de síntesi congelada, amb identitat i SHA-256 per a la revisió individual. Cap validació lingüística automàtica.

@@ -134,7 +134,7 @@
     }).join('')}</svg>`;
   }
 
-  function sheetOptions(){return{entries:chosen(),title:state.mode==='words'?'Dictat de paraules':'Dictat de pseudoparaules',mode:state.mode,modelSide:state.modelSide,foldStyle:state.foldStyle,seedCode:current?.code,seedLanguage:L.id};}
+  function sheetOptions(){return{entries:chosen(),title:state.mode==='words'?'Dictat de paraules':'Dictat de pseudoparaules',mode:state.mode,modelSide:state.modelSide,foldStyle:state.foldStyle,seedCode:current?.code,seedLanguage:L.id,focusLabels:session().tags.map(id=>C.categories.find(c=>c.id===id)?.label||id)};}
   const fitPaper=()=>window.PlecPreview.fit();
   function renderPreview(){
     const entries=chosen(),layout=K.foldLayout(state.foldStyle,state.modelSide),ready=!!current&&!busy;
@@ -144,12 +144,10 @@
     for(const id of ['download-pdf','teacher-pdf','copy-code','copy-link','open-student','copy-student-link'])$(id).disabled=!ready;
     $('sheet-preview').setAttribute('aria-label',`Vista prèvia: ${entries.length} elements. Model visible.`);fitPaper();
   }
-  let catalogInitial=null,catalogWheel=window.PlecCatalogBrowser.createWheelState();
+  let catalogInitial=null,catalogMode='words',catalogViewData=null,catalogWheel=window.PlecCatalogBrowser.createWheelState();
   const catalogAudio=window.PlecCatalogAudio.create({base:new URL('../',location.href),language:L.id,fetch:window.fetch.bind(window),Audio:window.Audio,onChange:refreshCatalogAudio});
   function refreshCatalogAudio(audioState){
     audioState=audioState||catalogAudio.getState();
-    const valencian=$('catalog-dialect').querySelector('[value="valencia"]');
-    if(valencian){valencian.disabled=!(audioState.packs||[]).some(p=>p.dialect==='valencia');valencian.textContent=valencian.disabled?'Valencià · properament':'Valencià';}
     for(const button of $('catalog-list').querySelectorAll('[data-audio-id]')){
       const entry=lookup(button.dataset.audioId),available=entry&&catalogAudio.urlFor(entry),playing=audioState.playingId===entry?.id;
       button.disabled=!available;
@@ -163,7 +161,7 @@
     $('catalog-audio-status').textContent=audioState.errorId?'No s’ha pogut reproduir el mot. Torna-ho a provar.':audioState.phase==='loading'?'Carregant els àudios…':audioState.local&&audioState.phase==='ready'?'Àudios de prova · en revisió':audioState.phase==='unavailable'?'Àudios no disponibles.':audioState.phase==='pending'?'Àudios en preparació':'';
   }
   function catalogAtBottom(){const list=$('catalog-list');return list.scrollTop+list.clientHeight>=list.scrollHeight-1;}
-  function renderCatalog(reset=false,requestedInitial=null){
+  function renderCatalog(reset=false,requestedInitial=null,showPronunciations=true){
     catalogAudio.stop();
     const browser=window.PlecCatalogBrowser;
     if(reset){
@@ -175,6 +173,7 @@
       predicate:e=>e.mode===state.mode&&(!tag||e.tags.includes(tag))&&S.matchesStage(e,$('catalog-stage').value,edition.profile.stageRules)
     });
     catalogInitial=view.activeInitial;
+    catalogViewData=view;
     const initials=$('catalog-initials');
     if(!initials.children.length)initials.innerHTML=browser.LETTERS.map(letter=>`<a href="#catalog-${letter}" data-initial="${letter}">${letter}</a>`).join('<span aria-hidden="true">|</span>');
     for(const link of initials.querySelectorAll('[data-initial]')){
@@ -193,16 +192,19 @@
     list.scrollTop=0;
     catalogWheel=browser.noteWheelPosition(catalogWheel,catalogAtBottom());
     refreshCatalogAudio();if(keepNextFocus)list.focus({preventScroll:true});
+    if(showPronunciations&&catalogMode==='pronunciations')window.PlecPronunciations.show(view.visibleEntries,{nextInitial:view.nextInitial});
   }
   function catalogView(view,options={}){
     const review=view==='pronunciations';catalogAudio.stop();window.PlecPronunciations.stop();
+    catalogMode=view;
     $('catalog-words-view').hidden=review;$('catalog-pronunciations-view').hidden=!review;
     for(const b of document.querySelectorAll('[data-catalog-view]'))b.setAttribute('aria-pressed',String(b.dataset.catalogView===view));
     $('catalog-dialog').classList.toggle('shows-pronunciations',review);
     try{const u=new URL(location.href);for(const key of ['panel','mot','audio'])u.searchParams.delete(key);if(review){u.searchParams.set('panel','pronunciacions');if(options.word)u.searchParams.set('mot',options.word);if(options.pack)u.searchParams.set('audio',options.pack);}history.replaceState(null,'',u);}catch{}
-    if(review)window.PlecPronunciations.open(options);else $('catalog-search').focus();
+    if(options.word){const target=C.entries.find(e=>e.text===options.word);if(target){if(!S.matchesStage(target,$('catalog-stage').value,edition.profile.stageRules))$('catalog-stage').value='all';if($('catalog-tag').value&&!target.tags.includes($('catalog-tag').value))$('catalog-tag').value='';}$('catalog-search').value=options.word;renderCatalog(false,null,false);}
+    if(review&&catalogViewData)window.PlecPronunciations.show(catalogViewData.visibleEntries,{...options,nextInitial:catalogViewData.nextInitial});
   }
-  function openCatalog(view='words',options={}){renderCatalog(true);window.PlecMotion.open($('catalog-dialog'));catalogAudio.load();catalogView(view,options);}
+  function openCatalog(view='words',options={}){if(!$('catalog-dialog').open){renderCatalog(true);window.PlecMotion.open($('catalog-dialog'));catalogAudio.load();}catalogView(view,options);}
   function downloadBlob(blob, filename) {
     const url = URL.createObjectURL(blob), a = document.createElement('a');
     a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 30000);
@@ -301,6 +303,7 @@
     }
   });
   const releases = [
+    ['1.20', '2026-10-25', ['Catàleg i pronunciacions amb capçalera i filtres compartits. Files compactes amb les dues varietats, IPA interactiva i notificació directa amb bandera. IPA central completa com a proposta. Publicats els 219 àudios centrals que faltaven: 3.299 mots amb Alba i amb Enric. Selector de pronunciació abans de començar el dictat. Focus seleccionats impresos a la banda tapada del full.']],
     ['1.19.1', '2026-10-25', ['Publicats els 3.299 àudios del lot valencià amb Enric, amb IPA congelada i revisió individual oberta. Selector de varietat actiu al catàleg. Tots els MP3 descodificats i comprovats; consum local final de 410.316 caràcters.']],
     ['1.19', '2026-10-25', ['Laterals plegables en pantalles estretes i peu sempre visible, amb desplaçament intern. Pronunciacions i revisió integrades al mateix catàleg. Publicats 3.080 mots centrals i les instruccions. Taula IPA valenciana completa com a proposta i lot d’Enric en generació amb represa i seguiment.']],
     ['1.18', '2026-10-25', ['Taula web amb català central i valencià costat per costat, escolta per enregistrament, polzes i notes locals exportables. Accés des del catàleg i informes preparats per a GitHub, sense enviament automàtic. Represa cada minut davant errors transitoris de síntesi, amb pressupost i aturada conservats.']],
@@ -332,7 +335,7 @@
   document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) window.PlecMotion.close(dialog); } }));
 
   $('catalog-search').addEventListener('input',()=>renderCatalog());$('catalog-tag').addEventListener('change',()=>renderCatalog());$('catalog-stage').addEventListener('change',()=>renderCatalog());
-  $('catalog-dialect').addEventListener('change',()=>{const p=catalogAudio.getState().packs.find(p=>p.dialect===$('catalog-dialect').value);catalogAudio.selectPack(p?.id||'unavailable-variety');});
+  $('pronunciation-list').addEventListener('click',event=>{const next=event.target.closest('[data-initial]');if(next)renderCatalog(false,next.dataset.initial);});
   $('catalog-initials').addEventListener('click',event=>{const link=event.target.closest('[data-initial]');if(link){event.preventDefault();if(link.getAttribute('aria-disabled')!=='true')renderCatalog(false,link.dataset.initial);}});
   for(const b of document.querySelectorAll('[data-catalog-view]'))b.addEventListener('click',()=>catalogView(b.dataset.catalogView));
   $('catalog-list').addEventListener('click',event=>{const next=event.target.closest('#catalog-next'),speaker=event.target.closest('[data-audio-id]'),ipa=event.target.closest('[data-pronunciation-word]');if(ipa){event.preventDefault();catalogView('pronunciations',{word:ipa.dataset.pronunciationWord,pack:ipa.dataset.pack});}else if(next)renderCatalog(false,next.dataset.initial);else if(speaker&&!speaker.disabled){const entry=lookup(speaker.dataset.audioId);if(entry)catalogAudio.play(entry);}});

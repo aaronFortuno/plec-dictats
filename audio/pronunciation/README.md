@@ -1,8 +1,8 @@
 # Taules obertes de pronunciació de Plec
 
-**[Consulta les dues varietats i revisa els àudios al web](../../ca/pronunciacions/)**. Pots anotar-hi incidències, marcar escoltes correctes i exportar la revisió. Els TSV següents continuen sent fonts d’edició, però no són necessaris per consultar ni revisar les pronunciacions.
+**[Consulta les dues varietats i revisa els àudios al web](../../ca/pronunciacions/)**. Pots escoltar la IPA o l’altaveu, notificar errors amb la bandera i exportar la revisió. Els TSV següents continuen sent fonts d’edició, però no són necessaris per consultar ni revisar les pronunciacions.
 
-La font editable actual és [ca/central-didactic.tsv](ca/central-didactic.tsv): **3.299 mots alfabètics**, amb una fila per mot. Conté **240 propostes IPA** i **3.059 camps IPA pendents**. Cap transcripció no està encara marcada com a validada. No és un diccionari fonètic normatiu ni un corpus complet ja revisat.
+La font editable central és [ca/central-didactic.tsv](ca/central-didactic.tsv): **3.299 mots alfabètics**, amb una fila per mot. Conté **3.299 propostes IPA** i **cap camp buit**. Cap transcripció no està encara marcada com a validada. No és un diccionari fonètic normatiu ni un corpus complet ja revisat.
 
 Per llegir només les propostes, obre [central-didactic-ipa.txt](ca/central-didactic-ipa.txt). Per reutilitzar les dades amb programari, descarrega [central-didactic.json](ca/central-didactic.json). Les dues són exportacions: **edita el TSV**, no els fitxers derivats. El JSON conserva els camps IPA inexistents com a `null`, les fonts i els estats de revisió. La distribució segueix la [llicència del projecte](../../LICENSE); cada referència externa manté la seva autoria i condicions. No s’ha importat ni redistribuït cap diccionari complet.
 
@@ -57,7 +57,7 @@ Les antigues taules de dièresis i el JSON de la mostra conserven la procedènci
 
 ## Altres varietats i llengües
 
-Ja hi ha un segon perfil, **ca-valencian-didactic-v1**, amb [TSV editable](ca/valencian-didactic.tsv), [JSON](ca/valencian-didactic.json) i [TXT de propostes](ca/valencian-didactic-ipa.txt). Cobreix els mateixos 3.299 mots amb 22 propostes independents i 3.277 IPA buides. Cap està validada. La [guia del pilot valencià](../../docs/VALENCIA.md) documenta fonts, dicció, la prova curta amb Enric i les limitacions del motor.
+Ja hi ha un segon perfil, **ca-valencian-didactic-v1**, amb [TSV editable](ca/valencian-didactic.tsv), [JSON](ca/valencian-didactic.json) i [TXT de propostes](ca/valencian-didactic-ipa.txt). Cobreix els mateixos 3.299 mots amb propostes independents, conservant les 22 inicials. Cap està validada. La [guia del pilot valencià](../../docs/VALENCIA.md) documenta fonts, dicció, la prova curta amb Enric i les limitacions del motor.
 
 Aquest perfil té inventari d’edició `ipa-valencian-draft`, que permet conservar /v/. El pla informa per mot si és compatible amb l’inventari Azure ca-ES; les dades lingüístiques no es modifiquen per fer-les passar pel motor. Es valida i exporta amb `--profile ca-valencian-didactic-v1` en les ordres anteriors. La síntesi continua separada de l’edició.
 
@@ -68,3 +68,7 @@ Per reutilitzar o contribuir dades, conserva perfil, ID, fonts i estat. Una corr
 ## Valencià complet com a proposta
 
 La [taula valenciana](ca/valencian-didactic.tsv) conté 3.299 propostes i cap validació lingüística. S’han conservat les 22 inicials i completat les altres amb catalan2ipa i pistes editorials explícites; les limitacions i la síntesi d’Enric estan documentades a [VALENCIA.md](../../docs/VALENCIA.md). Les anotacions d’àudio continuen separades de l’estat de la transcripció.
+
+## Compleció central
+
+`tools/central-g2p.cjs --fill-missing` conserva les files existents i completa les pendents amb la branca `ca` de catalan2ipa, reducció vocàlica central i finals nt/nc explícits per a la dicció didàctica. `ca/central-vowel-hints.json` registra 415 pistes amb procedència: excepcions de vocal mitjana d’eSpeak NG o propostes editorials. Les vocals obertes/tancades i altres decisions continuen pendents de contrast; aquestes dades no certifiquen els àudios originals. S’han corregit explícitament els accents de continuï/continuïn/continuïs. El paquet `ca-central-alba-completion-v1` conserva una instantània de les 219 IPA utilitzades, independent de futures edicions de la taula.

@@ -26,6 +26,12 @@
  }
  function issueURL(records){
   const errors=records.filter(r=>r.status==='review');
+  if(errors.length===1){
+   const r=errors[0],url=new URL('https://github.com/aaronFortuno/plec-dictats/issues/new');
+   url.searchParams.set('title','Pronunciació: '+r.word);
+   url.searchParams.set('body',`${r.word} · ${r.target==='ipa'?'transcripció IPA':'àudio'} · ${r.profile}\n\n${r.note}\n\nIPA: ${r.ipa||'(enregistrament original sense IPA)'}\nID: ${r.id}${r.target==='audio'?`\nPaquet: ${r.pack}\nAjustos: ${r.fingerprint}`:''}\n`);
+   return url.href;
+  }
   let body='Revisió de pronunciacions de Plec\n\n';let included=0;
   for(const r of errors){
    const line=`- ${r.word} · ${r.target==='ipa'?'IPA':'àudio'} · ${r.profile} · ${r.pack||'taula'}\n  ${r.note.slice(0,140)||'Per revisar.'}\n`;

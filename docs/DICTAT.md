@@ -24,15 +24,15 @@ Si el dispositiu no admet pantalla completa o la rebutja, hi ha una continuació
 
 ## Àudios i prova local
 
-El reproductor carrega un manifest i comprova paquet, llengua, rutes MP3 segures i cobertura completa abans d’habilitar l’inici. El manifest públic continua `pending` i buit: els àudios generats encara no s’han publicat ni donat per validats lingüísticament.
+El reproductor carrega un manifest i comprova paquet, llengua, rutes MP3 segures i cobertura completa abans d’habilitar l’inici. El manifest públic publica els 3.299 mots per varietat, amb Alba i Enric, pendents de revisió auditiva individual. El selector «Pronunciació» permet canviar de paquet abans de començar; l’URL conserva `voice` i el codi continua donant els mateixos mots.
 
 Per provar la interfície amb els MP3 ja disponibles hi ha un manifest **només local**, `output/audio/player-preview-manifest.json`, amb les mateixes identitats i rutes. L’excepció `preview=local` només s’admet a localhost, 127.0.0.1 o [::1]. No es publica el manifest de prova ni es modifica el públic. La pantalla inicial avisa que és una prova amb àudios pendents de revisió.
 
 `node tools/prepare-player-preview.cjs` crea o actualitza aquest manifest sense xarxa. Comprova els ajustos del paquet i els fitxers disponibles; no carrega credencials ni activa àudios al web públic. Un MP3 amb capçalera correcta encara necessita revisió de pronunciació.
 
-Les instruccions tenen un manifest públic separat, `audio/instructions/manifest.json`, també pendent de revisió. `node tools/run-instructions-batch.cjs` calcula cinc peticions sense xarxa. Amb `--execute --after-words`, espera que el lot principal consti com a completat i que s’hagi alliberat el bloqueig de pressupost. Si el lot s’atura o deixa de tenir un procés actiu, la cua s’atura sense començar ni reintentar. Comparteix `usage.json`, el senyal STOP, la separació entre peticions i la represa dels MP3 existents. No hi ha dos generadors fent peticions simultàniament.
+Les cinc instruccions publicades tenen un manifest separat, `audio/instructions/manifest.json`, amb revisió auditiva oberta. `node tools/run-instructions-batch.cjs` calcula cinc peticions sense xarxa. Amb `--execute --after-words`, espera que el lot principal consti com a completat i que s’hagi alliberat el bloqueig de pressupost. Si el lot s’atura o deixa de tenir un procés actiu, la cua s’atura sense començar ni reintentar. Comparteix `usage.json`, el senyal STOP, la separació entre peticions i la represa dels MP3 existents. No hi ha dos generadors fent peticions simultàniament.
 
-Els resultats queden a `output/audio/ca-central-alba-instructions-v1/instructions/` i el manifest de prova a `output/audio/instructions-preview-manifest.json`. Només el mode local els carrega; el públic no s’activa automàticament. La identitat del paquet inclou una empremta del text: canviar-lo exigeix un paquet nou per evitar reaprofitar una locució antiga. Cal versionar també `textVersion` i el contracte del reproductor quan canviïn les instruccions.
+Els resultats queden a `output/audio/ca-central-alba-instructions-v1/instructions/` i el manifest de prova a `output/audio/instructions-preview-manifest.json`. La publicació explícita copia els fitxers disponibles al manifest públic; no es sintetitza des del navegador. La identitat del paquet inclou una empremta del text: canviar-lo exigeix un paquet nou per evitar reaprofitar una locució antiga. Cal versionar també `textVersion` i el contracte del reproductor quan canviïn les instruccions.
 
 Quan acaba la generació, `output/audio/instruccions.html` permet escoltar les cinc locucions juntes, amb el text corresponent, abans d’aprovar-les. L’estat de la cua és a `output/audio/instruction-status.json`.
 

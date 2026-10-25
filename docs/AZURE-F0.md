@@ -101,3 +101,9 @@ Els errors transitoris es reintenten després d’un minut, amb reserves per int
 ## Resultat final del lot d’Enric
 
 Completat el 25/10/2026 a les 11:18:00 UTC: 3.299 MP3, 288.630 caràcters nous, sense reintents. El registre local final és **410.316**. Els 3.299 fitxers s’han descodificat sense errors i s’han publicat amb revisió auditiva individual pendent. No s’ha fet cap altra petició de síntesi en la verificació o publicació. El seguiment periòdic acaba amb aquesta publicació.
+
+## Consultar el comptador de Microsoft
+
+Al [portal Azure](https://portal.azure.com/), obre el recurs Speech i ves a **Monitoring / Supervisió → Metrics / Mètriques**. Selecciona **Synthesized Characters**, agregació **Sum**, i un interval de l’1 del mes fins ara. És el consum acumulat que publica Azure; per calcular el marge F0, resta aquesta suma dels 500.000 caràcters mensuals. Les mètriques poden trigar a actualitzar-se. [Instruccions oficials](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/text-to-speech#monitor-azure-text-to-speech-metrics).
+
+El registre local de Plec reserva cada intent de manera conservadora i no consulta aquest comptador. El 25/10/2026, després d’Enric i de la compleció central de 219 mots, suma 429.782 caràcters: marge preventiu de 20.218 fins al topall local de 450.000. Aquest valor no incorpora usos externs no declarats i no substitueix la mètrica d’Azure. No s’ha activat cap servei de pagament ni canviat el nivell F0.

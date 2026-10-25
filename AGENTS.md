@@ -1,8 +1,8 @@
 # Coordinació del projecte
 
-**Estat 24/10/2026: Kimi bloquejat després de la segona prova de consum.** No facis noves crides, reintents ni reactivacions per restabliment de quota. Codex acaba directament la integració i les correccions. L’informe local és a `../protocol-codex-kimi/runs/T005/INFORME-SEGONA-PROVA.md`; el bloqueig és `../protocol-codex-kimi/ESTAT-WORKER.json`. Cal una nova indicació de l’usuari per tornar a encarregar feina a Kimi. No canviïs configuració global.
+**Estat 25/10/2026:** l’usuari ha reautoritzat encàrrecs acotats a K3 amb esforç baix, després de les proves costoses amb K3.1. T008 i T009 estan completats; no hi ha cap encàrrec actiu. Conserva pressupostos, límits de passos i temps, eines acotades i revisió de Codex abans d’integrar. El registre vigent és `../protocol-codex-kimi/ESTAT-WORKER.json`. No canviïs configuració global.
 
-- L’usuari explica les necessitats i confirma visualment el resultat. Codex especifica, coordina, revisa i integra; **Kimi K3.1 implementa** mitjançant Kimi Code CLI. Mantén un únic escriptor de codi a cada moment.
+- L’usuari explica les necessitats i confirma visualment el resultat. Codex especifica, coordina, revisa i integra; **Kimi K3 Low** pot implementar encàrrecs acotats mitjançant Kimi Code CLI. Separa els fitxers dels encàrrecs i evita escriptors simultanis sobre els mateixos fitxers.
 - Protocol local: `../protocol-codex-kimi/LLEGEIX-ME.md`; context: `../protocol-codex-kimi/PERFIL-PLEC.md`; connexió: `../protocol-codex-kimi/CONNEXIO.md`. Llegeix-los abans de preparar un encàrrec. Si no estan disponibles en un altre equip, conserva aquest repartiment i reconstrueix el context necessari a partir del repositori.
 - Pilot de lectura T000 completat amb Kimi Code 2.3.1 i l’àlies explícit `kimi-code/k3.1-pro`. No utilitzis el model per defecte sense verificar-lo ni substitueixis K3.1 silenciosament.
 - Cada implementació necessita un encàrrec acotat, base Git coneguda, perfil d’eines apropiat i termini extern. El llançador T000 és exclusivament de lectura. No reprenguis aquella sessió per implementar.

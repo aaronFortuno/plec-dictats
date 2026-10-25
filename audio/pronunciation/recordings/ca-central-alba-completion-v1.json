@@ -1,0 +1,1323 @@
+{
+  "schemaVersion": 1,
+  "profile": "ca-central-didactic-v1",
+  "pack": "ca-central-alba-completion-v1",
+  "tableRevision": "d9d8641cbfd6690578c9df53b5197927e3ea0abee08dfe7f507fbf0f3696fa0d",
+  "review": "Propostes IPA centrals pendents de contrast i escolta.",
+  "entries": [
+    {
+      "id": "p-pw760c",
+      "text": "actuï",
+      "ipa": "ək.ˈtu.i",
+      "mode": "words"
+    },
+    {
+      "id": "p-c7xlgm",
+      "text": "actuïn",
+      "ipa": "ək.ˈtu.in",
+      "mode": "words"
+    },
+    {
+      "id": "p-k9m2kt",
+      "text": "actuïs",
+      "ipa": "ək.ˈtu.is",
+      "mode": "words"
+    },
+    {
+      "id": "p-1g1c2sx",
+      "text": "agraïa",
+      "ipa": "ə.ɣɾə.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-zph7f5",
+      "text": "agraïda",
+      "ipa": "ə.ɣɾə.ˈi.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-mk214a",
+      "text": "agraïdes",
+      "ipa": "ə.ɣɾə.ˈi.ðəs",
+      "mode": "words"
+    },
+    {
+      "id": "p-1779mnd",
+      "text": "agraïen",
+      "ipa": "ə.ɣɾə.ˈi.ən",
+      "mode": "words"
+    },
+    {
+      "id": "p-15tbm6i",
+      "text": "agraïes",
+      "ipa": "ə.ɣɾə.ˈi.əs",
+      "mode": "words"
+    },
+    {
+      "id": "p-8us1m",
+      "text": "agraïment",
+      "ipa": "ə.ɣɾə.i.ˈmen",
+      "mode": "words"
+    },
+    {
+      "id": "p-yrh2d3",
+      "text": "agraïssin",
+      "ipa": "ə.ɣɾə.ˈi.sin",
+      "mode": "words"
+    },
+    {
+      "id": "p-zlfvg0",
+      "text": "agraïssis",
+      "ipa": "ə.ɣɾə.ˈi.sis",
+      "mode": "words"
+    },
+    {
+      "id": "p-1lb4ize",
+      "text": "agraït",
+      "ipa": "ə.ɣɾə.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-13mwpxn",
+      "text": "agraïts",
+      "ipa": "ə.ɣɾə.ˈits",
+      "mode": "words"
+    },
+    {
+      "id": "p-1ll44od",
+      "text": "agraïu",
+      "ipa": "ə.ɣɾə.ˈiw",
+      "mode": "words"
+    },
+    {
+      "id": "p-1skdw4o",
+      "text": "aïllada",
+      "ipa": "ə.i.ˈʎa.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1bu83kb",
+      "text": "aïllament",
+      "ipa": "ə.i.ʎə.ˈmen",
+      "mode": "words"
+    },
+    {
+      "id": "p-1g4recv",
+      "text": "aïllar",
+      "ipa": "ə.i.ˈʎa",
+      "mode": "words"
+    },
+    {
+      "id": "p-1fks6yx",
+      "text": "aïllat",
+      "ipa": "ə.i.ˈʎat",
+      "mode": "words"
+    },
+    {
+      "id": "p-p0y4r1",
+      "text": "aïna",
+      "ipa": "ə.ˈi.nə",
+      "mode": "words"
+    },
+    {
+      "id": "p-115ugi7",
+      "text": "aïrades",
+      "ipa": "ə.i.ˈɾa.ðəs",
+      "mode": "words"
+    },
+    {
+      "id": "p-1880cqp",
+      "text": "amoïna",
+      "ipa": "ə.mu.ˈi.nə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1obz6h5",
+      "text": "amoïnar",
+      "ipa": "ə.mu.i.ˈna",
+      "mode": "words"
+    },
+    {
+      "id": "p-1ovydv3",
+      "text": "amoïnat",
+      "ipa": "ə.mu.i.ˈnat",
+      "mode": "words"
+    },
+    {
+      "id": "p-id69r2",
+      "text": "argüeix",
+      "ipa": "ər.gu.ˈɛʃ",
+      "mode": "words"
+    },
+    {
+      "id": "p-psoox",
+      "text": "argüint",
+      "ipa": "ər.gu.ˈin",
+      "mode": "words"
+    },
+    {
+      "id": "p-1r6u5fv",
+      "text": "argüir",
+      "ipa": "ər.gu.ˈi",
+      "mode": "words"
+    },
+    {
+      "id": "p-8hyb4d",
+      "text": "assiduïtat",
+      "ipa": "ə.si.ðu.i.ˈtat",
+      "mode": "words"
+    },
+    {
+      "id": "p-1kcbv2l",
+      "text": "atribuïa",
+      "ipa": "ə.tɾi.βu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1h0gmqx",
+      "text": "atribuïm",
+      "ipa": "ə.tɾi.βu.ˈim",
+      "mode": "words"
+    },
+    {
+      "id": "p-1eik7i6",
+      "text": "atribuït",
+      "ipa": "ə.tɾi.βu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-tv58un",
+      "text": "aüixar",
+      "ipa": "ə.u.ˈʃa",
+      "mode": "words"
+    },
+    {
+      "id": "p-opjkij",
+      "text": "aürt",
+      "ipa": "ə.ˈurt",
+      "mode": "words"
+    },
+    {
+      "id": "p-1lurohg",
+      "text": "aürtar",
+      "ipa": "ə.ur.ˈta",
+      "mode": "words"
+    },
+    {
+      "id": "p-8p994k",
+      "text": "beneïa",
+      "ipa": "bə.nə.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-zdewj2",
+      "text": "beneïda",
+      "ipa": "bə.nə.ˈi.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1l9ux3c",
+      "text": "beneïssin",
+      "ipa": "bə.nə.ˈi.sin",
+      "mode": "words"
+    },
+    {
+      "id": "p-3fgsy3",
+      "text": "beneït",
+      "ipa": "bə.nə.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-vfd1ei",
+      "text": "bilingüe",
+      "ipa": "bi.ˈliŋ.gwə",
+      "mode": "words"
+    },
+    {
+      "id": "p-119y4rt",
+      "text": "bilingüisme",
+      "ipa": "bi.liŋ.ˈgwiz.mə",
+      "mode": "words"
+    },
+    {
+      "id": "p-hwyuqj",
+      "text": "cafeïna",
+      "ipa": "kə.fə.ˈi.nə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1ra6luo",
+      "text": "canviï",
+      "ipa": "ˈkam.bi.i",
+      "mode": "words"
+    },
+    {
+      "id": "p-pxlns9",
+      "text": "canviïs",
+      "ipa": "ˈkam.bi.is",
+      "mode": "words"
+    },
+    {
+      "id": "p-zmy7ku",
+      "text": "cloïssa",
+      "ipa": "klu.ˈi.sə",
+      "mode": "words"
+    },
+    {
+      "id": "p-19pua1e",
+      "text": "coïa",
+      "ipa": "ku.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-z13pvc",
+      "text": "coïen",
+      "ipa": "ku.ˈi.ən",
+      "mode": "words"
+    },
+    {
+      "id": "p-1gtczsc",
+      "text": "coïssor",
+      "ipa": "ku.i.ˈso",
+      "mode": "words"
+    },
+    {
+      "id": "p-1ht59wj",
+      "text": "conduïa",
+      "ipa": "kun.du.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-zuehfr",
+      "text": "conduïda",
+      "ipa": "kun.du.ˈi.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-ogxxhv",
+      "text": "conduïen",
+      "ipa": "kun.du.ˈi.ən",
+      "mode": "words"
+    },
+    {
+      "id": "p-vyn784",
+      "text": "conduïes",
+      "ipa": "kun.du.ˈi.əs",
+      "mode": "words"
+    },
+    {
+      "id": "p-1l50i87",
+      "text": "conduïm",
+      "ipa": "kun.du.ˈim",
+      "mode": "words"
+    },
+    {
+      "id": "p-1m4sxcx",
+      "text": "conduïssin",
+      "ipa": "kun.du.ˈi.sin",
+      "mode": "words"
+    },
+    {
+      "id": "p-1gb19si",
+      "text": "conduïssis",
+      "ipa": "kun.du.ˈi.sis",
+      "mode": "words"
+    },
+    {
+      "id": "p-1e7afvw",
+      "text": "conduït",
+      "ipa": "kun.du.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-vwyyx9",
+      "text": "conduïts",
+      "ipa": "kun.du.ˈits",
+      "mode": "words"
+    },
+    {
+      "id": "p-1eha1kv",
+      "text": "conduïu",
+      "ipa": "kun.du.ˈiw",
+      "mode": "words"
+    },
+    {
+      "id": "p-fc9e3i",
+      "text": "conseqüència",
+      "ipa": "kun.sə.ˈkwɛn.si.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-17l5g3m",
+      "text": "conseqüent",
+      "ipa": "kun.sə.ˈkwen",
+      "mode": "words"
+    },
+    {
+      "id": "p-bfieht",
+      "text": "constituïa",
+      "ipa": "kuns.ti.tu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-7tnkh6",
+      "text": "constituït",
+      "ipa": "kuns.ti.tu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-1265ude",
+      "text": "construïa",
+      "ipa": "kuns.tɾu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-13a495a",
+      "text": "construïm",
+      "ipa": "kuns.tɾu.ˈim",
+      "mode": "words"
+    },
+    {
+      "id": "p-il56w6",
+      "text": "construïssin",
+      "ipa": "kuns.tɾu.ˈi.sin",
+      "mode": "words"
+    },
+    {
+      "id": "p-wwde6x",
+      "text": "construït",
+      "ipa": "kuns.tɾu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-wmdshy",
+      "text": "construïu",
+      "ipa": "kuns.tɾu.ˈiw",
+      "mode": "words"
+    },
+    {
+      "id": "p-ye5bpf",
+      "text": "continuï",
+      "ipa": "kun.ti.ˈnu.i",
+      "mode": "words"
+    },
+    {
+      "id": "p-42vz13",
+      "text": "continuïn",
+      "ipa": "kun.ti.ˈnu.in",
+      "mode": "words"
+    },
+    {
+      "id": "p-4wus40",
+      "text": "continuïs",
+      "ipa": "kun.ti.ˈnu.is",
+      "mode": "words"
+    },
+    {
+      "id": "p-1ntddk",
+      "text": "continuïtat",
+      "ipa": "kun.ti.nu.i.ˈtat",
+      "mode": "words"
+    },
+    {
+      "id": "p-9fln30",
+      "text": "contribuïa",
+      "ipa": "kun.tɾi.βu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-ajk1uw",
+      "text": "contribuïm",
+      "ipa": "kun.tɾi.βu.ˈim",
+      "mode": "words"
+    },
+    {
+      "id": "p-1eef7b4",
+      "text": "contribuïssin",
+      "ipa": "kun.tɾi.βu.ˈi.sin",
+      "mode": "words"
+    },
+    {
+      "id": "p-45t6wj",
+      "text": "contribuït",
+      "ipa": "kun.tɾi.βu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-h9jkqg",
+      "text": "cruïlla",
+      "ipa": "kɾu.ˈi.ʎə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1e4svml",
+      "text": "deïtat",
+      "ipa": "də.i.ˈtat",
+      "mode": "words"
+    },
+    {
+      "id": "p-czylvk",
+      "text": "delinqüent",
+      "ipa": "də.liŋ.ˈkwen",
+      "mode": "words"
+    },
+    {
+      "id": "p-1rt6ple",
+      "text": "desagraït",
+      "ipa": "də.zə.ɣɾə.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-1vvu5gn",
+      "text": "deslluïda",
+      "ipa": "dəz.ʎu.ˈi.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1iwzam5",
+      "text": "desoïa",
+      "ipa": "də.zu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1hg4wpr",
+      "text": "destituït",
+      "ipa": "dəs.ti.tu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-17c8xe8",
+      "text": "diluïa",
+      "ipa": "di.lu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-14adarj",
+      "text": "diluït",
+      "ipa": "di.lu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-1qjzni3",
+      "text": "disminuïa",
+      "ipa": "diz.mi.nu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1my4thg",
+      "text": "disminuït",
+      "ipa": "diz.mi.nu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-parj24",
+      "text": "distribuïa",
+      "ipa": "dis.tɾi.βu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-k0z2vn",
+      "text": "distribuït",
+      "ipa": "dis.tɾi.βu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-1215vgd",
+      "text": "diürn",
+      "ipa": "di.ˈurn",
+      "mode": "words"
+    },
+    {
+      "id": "p-7o5omv",
+      "text": "enviï",
+      "ipa": "əm.ˈbi.i",
+      "mode": "words"
+    },
+    {
+      "id": "p-8ixfbv",
+      "text": "enviïn",
+      "ipa": "əm.ˈbi.in",
+      "mode": "words"
+    },
+    {
+      "id": "p-2p5rrg",
+      "text": "enviïs",
+      "ipa": "əm.ˈbi.is",
+      "mode": "words"
+    },
+    {
+      "id": "p-1ngxhfz",
+      "text": "esglaï",
+      "ipa": "əz.ˈgla.i",
+      "mode": "words"
+    },
+    {
+      "id": "p-qr7dfp",
+      "text": "esmorteïa",
+      "ipa": "əz.mur.tə.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-wg0mmd",
+      "text": "esmorteïda",
+      "ipa": "əz.mur.tə.ˈi.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-5ciwez",
+      "text": "esmorteïdor",
+      "ipa": "əz.mur.tə.i.ˈðo",
+      "mode": "words"
+    },
+    {
+      "id": "p-udlspy",
+      "text": "esmorteïment",
+      "ipa": "əz.mur.tə.i.ˈmen",
+      "mode": "words"
+    },
+    {
+      "id": "p-tt302e",
+      "text": "esmorteït",
+      "ipa": "əz.mur.tə.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-1fvpubo",
+      "text": "estatuïa",
+      "ipa": "əs.tə.tu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-19y5bdx",
+      "text": "estudiï",
+      "ipa": "əs.ˈtu.ði.i",
+      "mode": "words"
+    },
+    {
+      "id": "p-grixg1",
+      "text": "estudiïn",
+      "ipa": "əs.ˈtu.ði.in",
+      "mode": "words"
+    },
+    {
+      "id": "p-jtek2q",
+      "text": "estudiïs",
+      "ipa": "əs.ˈtu.ði.is",
+      "mode": "words"
+    },
+    {
+      "id": "p-1izrjfp",
+      "text": "fluïa",
+      "ipa": "flu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-koujqd",
+      "text": "fluïda",
+      "ipa": "flu.ˈi.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-fo6s31",
+      "text": "fluïdesa",
+      "ipa": "flu.i.ˈðɛ.zə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1f2shmf",
+      "text": "fortuït",
+      "ipa": "fur.tu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-95apnm",
+      "text": "fortuïta",
+      "ipa": "fur.tu.ˈi.tə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1gdvmgi",
+      "text": "fortuïtament",
+      "ipa": "fur.tu.ˌi.tə.ˈmen",
+      "mode": "words"
+    },
+    {
+      "id": "p-rv8d0j",
+      "text": "freqüència",
+      "ipa": "fɾə.ˈkwɛn.si.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-n5qd0v",
+      "text": "freqüent",
+      "ipa": "fɾə.ˈkwen",
+      "mode": "words"
+    },
+    {
+      "id": "p-2eykbv",
+      "text": "genuïna",
+      "ipa": "ʒə.nu.ˈi.nə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1aaknpg",
+      "text": "gratuït",
+      "ipa": "gɾə.tu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-4kilzl",
+      "text": "gratuïtat",
+      "ipa": "gɾə.tu.i.ˈtat",
+      "mode": "words"
+    },
+    {
+      "id": "p-1rbxd8i",
+      "text": "heroïcitat",
+      "ipa": "ə.ɾu.i.si.ˈtat",
+      "mode": "words"
+    },
+    {
+      "id": "p-lvqrns",
+      "text": "heroïna",
+      "ipa": "ə.ɾu.ˈi.nə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1fyx7t0",
+      "text": "heterogeneïtat",
+      "ipa": "ə.tə.ɾu.ʒə.nə.i.ˈtat",
+      "mode": "words"
+    },
+    {
+      "id": "p-1q5ylfi",
+      "text": "homogeneïtat",
+      "ipa": "u.mu.ʒə.nə.i.ˈtat",
+      "mode": "words"
+    },
+    {
+      "id": "p-1rrfwjd",
+      "text": "instruïa",
+      "ipa": "ins.tɾu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1x18cpu",
+      "text": "instruït",
+      "ipa": "ins.tɾu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-149597c",
+      "text": "intuïa",
+      "ipa": "in.tu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1u0z0oi",
+      "text": "intuïció",
+      "ipa": "in.tu.i.si.ˈo",
+      "mode": "words"
+    },
+    {
+      "id": "p-6jhn8i",
+      "text": "intuïda",
+      "ipa": "in.tu.ˈi.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1wyuv7i",
+      "text": "intuïen",
+      "ipa": "in.tu.ˈi.ən",
+      "mode": "words"
+    },
+    {
+      "id": "p-1jln91",
+      "text": "intuïes",
+      "ipa": "in.tu.ˈi.əs",
+      "mode": "words"
+    },
+    {
+      "id": "p-1356ufg",
+      "text": "intuïm",
+      "ipa": "in.tu.ˈim",
+      "mode": "words"
+    },
+    {
+      "id": "p-kmdobw",
+      "text": "intuïssin",
+      "ipa": "in.tu.ˈi.sin",
+      "mode": "words"
+    },
+    {
+      "id": "p-qg5bwb",
+      "text": "intuïssis",
+      "ipa": "in.tu.ˈi.sis",
+      "mode": "words"
+    },
+    {
+      "id": "p-1a2wwrr",
+      "text": "intuït",
+      "ipa": "in.tu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-14angj1",
+      "text": "intuïtiu",
+      "ipa": "in.tu.i.ˈtiw",
+      "mode": "words"
+    },
+    {
+      "id": "p-19sxb2s",
+      "text": "intuïu",
+      "ipa": "in.tu.ˈiw",
+      "mode": "words"
+    },
+    {
+      "id": "p-ko7kq1",
+      "text": "jesuïta",
+      "ipa": "ʒə.zu.ˈi.tə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1x7acgr",
+      "text": "laïcisme",
+      "ipa": "lə.i.ˈsiz.mə",
+      "mode": "words"
+    },
+    {
+      "id": "p-mfv9mk",
+      "text": "llengües",
+      "ipa": "ˈʎeŋ.gwəs",
+      "mode": "words"
+    },
+    {
+      "id": "p-jnpxy0",
+      "text": "llengüeta",
+      "ipa": "ʎəŋ.ˈgwɛ.tə",
+      "mode": "words"
+    },
+    {
+      "id": "p-cguusb",
+      "text": "lluïa",
+      "ipa": "ʎu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-kxhx2h",
+      "text": "lluïssin",
+      "ipa": "ʎu.ˈi.sin",
+      "mode": "words"
+    },
+    {
+      "id": "p-x7agjp",
+      "text": "maleïa",
+      "ipa": "mə.lə.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-11vygat",
+      "text": "maleïda",
+      "ipa": "mə.lə.ˈi.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-yb8vbl",
+      "text": "maleïm",
+      "ipa": "mə.lə.ˈim",
+      "mode": "words"
+    },
+    {
+      "id": "p-7l3ip7",
+      "text": "maleïssin",
+      "ipa": "mə.lə.ˈi.sin",
+      "mode": "words"
+    },
+    {
+      "id": "p-109636e",
+      "text": "maleït",
+      "ipa": "mə.lə.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-ehhn7p",
+      "text": "oïa",
+      "ipa": "u.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1nuvxc5",
+      "text": "oïda",
+      "ipa": "u.ˈi.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-170fct7",
+      "text": "oïdor",
+      "ipa": "u.i.ˈðo",
+      "mode": "words"
+    },
+    {
+      "id": "p-flg1zl",
+      "text": "oïm",
+      "ipa": "u.ˈim",
+      "mode": "words"
+    },
+    {
+      "id": "p-8btl7q",
+      "text": "oïment",
+      "ipa": "u.i.ˈmen",
+      "mode": "words"
+    },
+    {
+      "id": "p-b0wf6z",
+      "text": "oïssin",
+      "ipa": "u.ˈi.sin",
+      "mode": "words"
+    },
+    {
+      "id": "p-2fnd9p",
+      "text": "païdor",
+      "ipa": "pə.i.ˈðo",
+      "mode": "words"
+    },
+    {
+      "id": "p-17v23w8",
+      "text": "païment",
+      "ipa": "pə.i.ˈmen",
+      "mode": "words"
+    },
+    {
+      "id": "p-eh8puf",
+      "text": "països",
+      "ipa": "pə.ˈi.zus",
+      "mode": "words"
+    },
+    {
+      "id": "p-1gprrrl",
+      "text": "paraigüer",
+      "ipa": "pə.ɾəj.ˈɣwe",
+      "mode": "words"
+    },
+    {
+      "id": "p-1gfs62m",
+      "text": "paraigües",
+      "ipa": "pə.ˈɾaj.ɣwəs",
+      "mode": "words"
+    },
+    {
+      "id": "p-apzqha",
+      "text": "peüc",
+      "ipa": "pə.ˈuk",
+      "mode": "words"
+    },
+    {
+      "id": "p-14j16yv",
+      "text": "peücs",
+      "ipa": "pə.ˈuks",
+      "mode": "words"
+    },
+    {
+      "id": "p-1ohyyrs",
+      "text": "peülla",
+      "ipa": "pə.ˈu.ʎə",
+      "mode": "words"
+    },
+    {
+      "id": "p-dzb8px",
+      "text": "peülles",
+      "ipa": "pə.ˈu.ʎəs",
+      "mode": "words"
+    },
+    {
+      "id": "p-71q5j7",
+      "text": "pingüí",
+      "ipa": "piŋ.ˈgwi",
+      "mode": "words"
+    },
+    {
+      "id": "p-vd02gw",
+      "text": "pingüins",
+      "ipa": "piŋ.ˈgwins",
+      "mode": "words"
+    },
+    {
+      "id": "p-csfvho",
+      "text": "produïa",
+      "ipa": "pɾu.ðu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1sua5hy",
+      "text": "produïda",
+      "ipa": "pɾu.ðu.ˈi.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1ypdywz",
+      "text": "produïdes",
+      "ipa": "pɾu.ðu.ˈi.ðəs",
+      "mode": "words"
+    },
+    {
+      "id": "p-1mgg51m",
+      "text": "produïen",
+      "ipa": "pɾu.ðu.ˈi.ən",
+      "mode": "words"
+    },
+    {
+      "id": "p-1nue5ih",
+      "text": "produïes",
+      "ipa": "pɾu.ðu.ˈi.əs",
+      "mode": "words"
+    },
+    {
+      "id": "p-dwea9k",
+      "text": "produïm",
+      "ipa": "pɾu.ðu.ˈim",
+      "mode": "words"
+    },
+    {
+      "id": "p-geapib",
+      "text": "produït",
+      "ipa": "pɾu.ðu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-1nw2dtc",
+      "text": "produïts",
+      "ipa": "pɾu.ðu.ˈits",
+      "mode": "words"
+    },
+    {
+      "id": "p-g4b3tc",
+      "text": "produïu",
+      "ipa": "pɾu.ðu.ˈiw",
+      "mode": "words"
+    },
+    {
+      "id": "p-1vcu3jj",
+      "text": "proïsme",
+      "ipa": "pɾu.ˈiz.mə",
+      "mode": "words"
+    },
+    {
+      "id": "p-10fbpo0",
+      "text": "proteïna",
+      "ipa": "pɾu.tə.ˈi.nə",
+      "mode": "words"
+    },
+    {
+      "id": "p-ghyqoe",
+      "text": "reduïa",
+      "ipa": "rə.ðu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-11f4mp0",
+      "text": "reduïda",
+      "ipa": "rə.ðu.ˈi.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1twsnht",
+      "text": "reduïdes",
+      "ipa": "rə.ðu.ˈi.ðəs",
+      "mode": "words"
+    },
+    {
+      "id": "p-fe0bwi",
+      "text": "reduïm",
+      "ipa": "rə.ðu.ˈim",
+      "mode": "words"
+    },
+    {
+      "id": "p-dg341p",
+      "text": "reduït",
+      "ipa": "rə.ðu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-16delze",
+      "text": "reduïts",
+      "ipa": "rə.ðu.ˈits",
+      "mode": "words"
+    },
+    {
+      "id": "p-1b5kmhb",
+      "text": "reïfica",
+      "ipa": "rə.i.ˈfi.kə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1rvvha7",
+      "text": "reïna",
+      "ipa": "rə.ˈi.nə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1rrnln2",
+      "text": "reïx",
+      "ipa": "rə.ˈiʃ",
+      "mode": "words"
+    },
+    {
+      "id": "p-1ckye73",
+      "text": "reüll",
+      "ipa": "rə.ˈuʎ",
+      "mode": "words"
+    },
+    {
+      "id": "p-l82qt4",
+      "text": "reüllar",
+      "ipa": "rə.u.ˈʎa",
+      "mode": "words"
+    },
+    {
+      "id": "p-jkrpjp",
+      "text": "reüllós",
+      "ipa": "rə.u.ˈʎos",
+      "mode": "words"
+    },
+    {
+      "id": "p-1brqe2t",
+      "text": "roïna",
+      "ipa": "ru.ˈi.nə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1iscp1a",
+      "text": "roïnes",
+      "ipa": "ru.ˈi.nəs",
+      "mode": "words"
+    },
+    {
+      "id": "p-ew03rj",
+      "text": "ruïna",
+      "ipa": "ru.ˈi.nə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1pe6uc0",
+      "text": "ruïnes",
+      "ipa": "ru.ˈi.nəs",
+      "mode": "words"
+    },
+    {
+      "id": "p-15ksm19",
+      "text": "saüc",
+      "ipa": "sə.ˈuk",
+      "mode": "words"
+    },
+    {
+      "id": "p-qpy1ht",
+      "text": "saüquer",
+      "ipa": "sə.u.ˈke",
+      "mode": "words"
+    },
+    {
+      "id": "p-1rnuppf",
+      "text": "seduïa",
+      "ipa": "sə.ðu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1uzpy13",
+      "text": "seduïm",
+      "ipa": "sə.ðu.ˈim",
+      "mode": "words"
+    },
+    {
+      "id": "p-1o1zvos",
+      "text": "seduït",
+      "ipa": "sə.ðu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-1wxgsmk",
+      "text": "següent",
+      "ipa": "sə.ˈɣwen",
+      "mode": "words"
+    },
+    {
+      "id": "p-1lty9u3",
+      "text": "seqüela",
+      "ipa": "sə.ˈkwɛ.lə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1ixalyi",
+      "text": "seqüència",
+      "ipa": "sə.ˈkwɛn.si.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1k3d7j2",
+      "text": "sobreïx",
+      "ipa": "su.βɾə.ˈiʃ",
+      "mode": "words"
+    },
+    {
+      "id": "p-np8f8q",
+      "text": "suïssa",
+      "ipa": "su.ˈi.sə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1hk1cbt",
+      "text": "suïssos",
+      "ipa": "su.ˈi.sus",
+      "mode": "words"
+    },
+    {
+      "id": "p-1gt9cp2",
+      "text": "traduïa",
+      "ipa": "tɾə.ðu.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-119t26k",
+      "text": "traduïda",
+      "ipa": "tɾə.ðu.ˈi.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-182r30p",
+      "text": "traduïdes",
+      "ipa": "tɾə.ðu.ˈi.ðəs",
+      "mode": "words"
+    },
+    {
+      "id": "p-1k54l0q",
+      "text": "traduïm",
+      "ipa": "tɾə.ðu.ˈim",
+      "mode": "words"
+    },
+    {
+      "id": "p-smpn16",
+      "text": "traduïssin",
+      "ipa": "tɾə.ðu.ˈi.sin",
+      "mode": "words"
+    },
+    {
+      "id": "p-1mn109h",
+      "text": "traduït",
+      "ipa": "tɾə.ðu.ˈit",
+      "mode": "words"
+    },
+    {
+      "id": "p-16b6zgy",
+      "text": "traduïts",
+      "ipa": "tɾə.ðu.ˈits",
+      "mode": "words"
+    },
+    {
+      "id": "p-1ygtd5d",
+      "text": "traïa",
+      "ipa": "tɾə.ˈi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1ba2dr",
+      "text": "traïció",
+      "ipa": "tɾə.i.si.ˈo",
+      "mode": "words"
+    },
+    {
+      "id": "p-ve4xrl",
+      "text": "traïda",
+      "ipa": "tɾə.ˈi.ðə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1eqvf5j",
+      "text": "traïdor",
+      "ipa": "tɾə.i.ˈðo",
+      "mode": "words"
+    },
+    {
+      "id": "p-7xtkxt",
+      "text": "traïdoria",
+      "ipa": "tɾə.i.ðu.ˈɾi.ə",
+      "mode": "words"
+    },
+    {
+      "id": "p-1xcuydh",
+      "text": "traïm",
+      "ipa": "tɾə.ˈim",
+      "mode": "words"
+    },
+    {
+      "id": "p-y62jiv",
+      "text": "traïssin",
+      "ipa": "tɾə.ˈi.sin",
+      "mode": "words"
+    },
+    {
+      "id": "p-znr6lu",
+      "text": "triï",
+      "ipa": "ˈtɾi.i",
+      "mode": "words"
+    },
+    {
+      "id": "p-1c7ivo4",
+      "text": "triïn",
+      "ipa": "ˈtɾi.in",
+      "mode": "words"
+    },
+    {
+      "id": "p-14ptlxv",
+      "text": "triïs",
+      "ipa": "ˈtɾi.is",
+      "mode": "words"
+    },
+    {
+      "id": "p-e2t0hx",
+      "text": "ungüent",
+      "ipa": "uŋ.ˈgwen",
+      "mode": "words"
+    },
+    {
+      "id": "p-s3rwcz",
+      "text": "veïna",
+      "ipa": "bə.ˈi.nə",
+      "mode": "words"
+    },
+    {
+      "id": "p-w2fvcd",
+      "text": "veïnal",
+      "ipa": "bə.i.ˈnal",
+      "mode": "words"
+    },
+    {
+      "id": "p-pepep1",
+      "text": "veïnat",
+      "ipa": "bə.i.ˈnat",
+      "mode": "words"
+    },
+    {
+      "id": "p-1ksm8c9",
+      "text": "veïnatge",
+      "ipa": "bə.i.ˈna.d͡ʒə",
+      "mode": "words"
+    },
+    {
+      "id": "p-u4v9hg",
+      "text": "veïnes",
+      "ipa": "bə.ˈi.nəs",
+      "mode": "words"
+    },
+    {
+      "id": "p-x3kquh",
+      "text": "veïns",
+      "ipa": "bə.ˈins",
+      "mode": "words"
+    },
+    {
+      "id": "p-rgaf88",
+      "text": "viduïtat",
+      "ipa": "bi.ðu.i.ˈtat",
+      "mode": "words"
+    }
+  ]
+}

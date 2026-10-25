@@ -1,32 +1,29 @@
 # Revisar les pronunciacions al web
 
-La vista **Pronunciacions i revisió**, dins del mateix popup d’**El catàleg**, mostra cada mot amb **català central i valencià costat per costat**. La icona de parla canvia de vista sense sortir del catàleg. Els filtres i les exportacions queden fixos; només es desplaça el llistat. La ruta `/ca/pronunciacions/` redirigeix a aquesta vista. L’enllaç individual selecciona també l’enregistrament que s’acabava d’escoltar, quan està disponible. No s’inicia cap reproducció automàtica.
+Obre **El catàleg → Pronunciacions i revisió**. Les dues vistes comparteixen la capçalera, cerca, focus, nivell i inicial. Canviar de pestanya conserva els filtres i no tanca el quadre. La ruta `/ca/pronunciacions/` obre directament aquesta vista; la icona de parla d’un mot hi porta amb aquell mot cercat.
 
-La cerca treballa sobre els 3.299 mots i les inicials permeten navegar sense carregar totes les files al DOM. Es mostren fins a 50 mots d’una inicial cada vegada, amb un botó per ampliar. Els filtres permeten trobar àudios pendents, àudios correctes, incidències o mots amb IPA. En mòbil, cada mot manté les dues varietats juntes.
+Cada fila mostra **mot | central · Alba | valencià · Enric**. Prem la IPA o l’altaveu per sentir l’enregistrament disponible; el mot es ressalta durant la reproducció. No es reprodueixen dos àudios alhora. En mòbil les dues varietats queden juntes sota cada mot. Els filtres són fixos i només es desplaça el llistat; s’afegeixen fins a 50 files per tanda per mantenir-lo àgil.
 
-## Què es revisa
+## Notificar un error
 
-- **Àudio:** altaveu, polze amunt, polze avall i anotació. El selector distingeix originals i proves IPA; l’original d’Alba no s’ha sintetitzat necessàriament amb la transcripció que mostra la taula.
-- **IPA:** el botó de bandera anota una incidència de transcripció, independent de la locució. Una casella buida continua sent pendent.
+1. Prem la **bandera** al costat de la varietat corresponent.
+2. Indica si és un error de **l’àudio** o de **la transcripció IPA**, i què cal revisar.
+3. **Desa** conserva la incidència en aquest navegador. **Obre a GitHub** també obre un esborrany amb mot, varietat, observació i versió; l’usuari inicia sessió i decideix enviar-lo. No hi ha enviament automàtic ni formulari anònim.
 
-Cada anotació d’àudio conserva mot, ID, perfil, paquet i empremta dels ajustos exactes. Una substitució amb un altre paquet o empremta no hereta una aprovació anterior. Les anotacions IPA corresponen al perfil i a la transcripció literal. Es pot marcar un àudio correcte sense validar lingüísticament la IPA.
+Torna a prémer la bandera per editar o retirar la incidència. No cal marcar abans cap polze ni nota. Les aprovacions i anotacions d’iteracions anteriors es conserven a l’exportació, tot i que ja no tenen controls propis a la interfície.
 
-Els comptadors i el filtre d’incidències corresponen als enregistraments seleccionats i a la IPA actual. Les notes d’altres versions es conserven a l’exportació. Tornar a prémer un polze en desfà la selecció. Les anotacions es desen en escriure; no cal un botó de guardar.
+Cada incidència d’àudio identifica el mot, perfil, paquet i empremta dels ajustos exactes. Les incidències IPA identifiquen el perfil i la transcripció literal. Un enregistrament nou no hereta una revisió d’un altre. La IPA mostrada és la proposta actual: els originals d’Alba no s’han sintetitzat necessàriament amb aquesta transcripció. Les dues taules estan completes com a propostes, pendents de contrast lingüístic; l’existència d’un MP3 no implica validació auditiva.
 
-## Desar i compartir
+## Exportar i reprendre
 
-Les dades es desen **en aquest navegador**, amb la clau `plec-pronunciation-reviews-v1`. No hi ha comptes, sincronització ni enviament a un servidor. Si el navegador bloqueja el desament o s’esgota l’espai, apareix un avís i les notes de la sessió continuen exportables.
+**Exporta incidències** desa un JSON amb totes les versions i anotacions. Es pot passar al mantenidor pel xat, adjuntar a GitHub o importar en un altre dispositiu. **Importa incidències** comprova el fitxer complet abans d’aplicar-lo i conserva la dada més recent de cada versió, incloses les incidències retirades. Una importació invàlida no esborra res.
 
-**Exporta la revisió** desa un JSON que es pot passar al mantenidor pel xat o adjuntar a una incidència. Inclou tant anotacions com aprovacions i les identitats de versió. **Importa una revisió** permet reprendre-la en un altre navegador: comprova el fitxer complet abans d’aplicar-lo i conserva la revisió més recent de cada versió, incloses les seleccions desfetes. Una importació invàlida no esborra dades.
+Les dades es desen localment amb la clau `plec-pronunciation-reviews-v1`. No hi ha comptes ni sincronització. Si el navegador impedeix desar-les, apareix un avís; exporta-les abans de sortir.
 
-**Descarrega les dues taules** genera un únic CSV amb mot, IPA central, IPA valenciana i estats de proposta. Aquest fitxer és una alternativa a la consulta web; no és necessari per utilitzar la pantalla. Els TSV originals continuen sent fonts d’edició per al projecte.
+**Descarrega les IPA** reuneix central i valencià en un únic CSV amb els estats de proposta. Els TSV originals continuen sent fonts d’edició del projecte, però no cal obrir-los per consultar ni notificar errors.
 
-## Notificacions de la comunitat
+## Identitat dels enregistraments
 
-**Envia errors a GitHub** obre un esborrany amb un resum acotat de les incidències actuals. L’usuari inicia sessió i confirma l’enviament a GitHub; pot adjuntar-hi el JSON exportat per conservar totes les versions i notes. No es publica ni s’envia res des de Plec automàticament. No hi ha formulari anònim ni infraestructura pròpia de recepció. El fitxer exportat serveix també per als usuaris que prefereixen comunicar-se per un altre canal. [Funcionament de les incidències a GitHub](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue).
+`node tools/prepare-review-audio.cjs` indexa els MP3 locals i els ajustos exactes, sense síntesi ni publicació. Associa la IPA usada a la síntesi només si coincideix amb l’empremta de les transcripcions congelades.
 
-## Àudios locals i públics
-
-`node tools/prepare-review-audio.cjs` prepara un índex local dels MP3 existents, inclosos els originals d’Alba i les diferents proves IPA. No sintetitza ni publica res. L’índex conserva les empremtes i només associa una IPA actual a una prova si coincideix l’empremta de les transcripcions de síntesi.
-
-Des de loopback es llegeix `output/audio/review-manifest.json`; el web públic utilitza `audio/review-manifest.json`, encara buit. La taula i les incidències IPA funcionen sense àudios publicats. Els altaveus i els controls de revisió d’àudio s’activen quan hi ha un enregistrament identificat disponible. Cap anotació canvia els MP3 originals ni les transcripcions del banc.
+La vista local utilitza `output/audio/review-manifest.json`; el web publicat utilitza `audio/review-manifest.json`. Les preferències de publicació trien els originals o les substitucions millorades segons el feedback docent. Un enllaç individual pot identificar una prova concreta. Cap incidència modifica directament el banc, les IPA ni els MP3.

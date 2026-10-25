@@ -1,0 +1,1670 @@
+{
+  "schemaVersion": 1,
+  "note": "Pistes explícites del perfil central, amb excepcions centrals d’eSpeak i propostes editorials pendents de contrast. No modifiquen cap grafia del catàleg ni són transcripcions normatives importades.",
+  "references": [
+    "https://github.com/Connum/catalan2ipa",
+    "https://github.com/espeak-ng/espeak-ng/blob/master/dictsource/ca_list"
+  ],
+  "entries": {
+    "abella": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "acord": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "adob": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "adreça": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "agenda": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "agost": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "aiguamoll": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "albercoc": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "alberg": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "alcohol": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "alegre": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "ampolla": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "aquarel·la": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "argüeix": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "assemblea": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "asseure": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "barbacoa": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "barreja": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "batec": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "be": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "bessons": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "bestiola": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "beure": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "bloc": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "boca": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "boix": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "bola": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "boll": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "bombolla": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "bony": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "borinot": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "borrissol": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "bosc": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "bossa": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "bot": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "botja": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "bou": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "broc": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "brot": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "calçot": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "canyella": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "caravel·la": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "cargol": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "carrossa": {
+      "hint": "ò",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "cassola": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "ceba": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "cella": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "cel·la": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "cel·lulosa": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "cendra": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "centre": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "cercle": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "cigonya": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "cistella": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "clivella": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "clotxa": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "coca": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "coça": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "coix": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "coll": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "colla": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "col·lega": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "colom": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "conquesta": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "conte": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "corb": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "corba": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "corda": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "corol·la": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "corona": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "corretja": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "correu": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "corrompre": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "cosa": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "cossiol": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "costella": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "cotxe": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "cova": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "cove": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "crec": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "cresta": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "creure": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "cuixot": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "curiosa": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "curioses": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "curiosos": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "decebre": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "deessa": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "defensa": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "deix": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "desembre": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "deshonest": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "deure": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "diftong": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "dijous": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "disfressa": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "diumenge": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "divendres": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "doble": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "dolç": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "dolça": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "dolces": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "dolços": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "dotze": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "dringueig": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "eix": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "enlloc": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "enveja": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "escarola": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "escletxa": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "escola": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "escombra": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "esforç": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "esponja": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "esquella": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "esquerp": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "esquirol": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "estella": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "estendre": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "estirabot": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "estiueig": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "estiuenc": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "estoc": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "estona": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "estrella": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "exemple": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "fageda": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "febre": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "feina": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "feix": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "fenoll": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "festa": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "fetge": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "finestra": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "fivella": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "flabiol": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "foc": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "força": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "forma": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "forn": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "fosc": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "fred": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "fressa": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "futbol": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "galleda": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "ganyota": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "gargamella": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "garrotxa": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "gasosa": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "gendre": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "genoll": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "germen": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "gest": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "ginebre": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "gira-sol": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "giravolt": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "glop": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "gol": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "gola": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "gorra": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "got": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "graciosa": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "gracioses": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "graciosos": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "gresca": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "greu": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "groc": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "grossa": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "grosses": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "grossos": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "guineu": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "guinyol": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "hagueren": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "he": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "hebreu": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "hem": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "herba": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "hereu": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "heu": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "hidrogen": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "higiene": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "hola": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "home": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "honest": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "hormona": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "hoste": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "hostessa": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "idea": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "il·lusions": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "interrompre": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "jersei": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "jeure": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "joc": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "jove": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "juliol": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "lil·liputenc": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "llagosta": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "llebre": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "llegenda": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "lleig": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "llença": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "llençol": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "llengua": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "llengües": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "llesca": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "lletges": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "lletja": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "lletjos": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "lletra": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "lleure": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "llevaneu": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "llimona": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "lloba": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "lloc": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "llom": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "llonga": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "llop": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "lloro": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "llosa": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "llot": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "llotja": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "magatzem": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "marea": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "marrec": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "mateix": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "mengem": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "mengen": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "mengeu": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "meravella": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "mes": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "mescla": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "metge": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "metres": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "microones": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "moble": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "moc": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "moca": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "moix": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "moll": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "molla": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "monyo": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "mosca": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "motlle": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "museu": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "neboda": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "nebot": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "negre": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "nerviosa": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "nervioses": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "nerviosos": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "neurona": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "nexe": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "ninot": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "nous": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "nova": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "novel·la": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "novembre": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "noves": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "olla": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "ombra": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "ona": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "onomatopeia": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "onze": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "ordre": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "orella": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "orfe": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "orquestra": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "ossos": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "ou": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "ovella": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "papallona": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "parcel·la": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "passeig": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "patxoca": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "pebre": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "peça": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "peix": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "percebre": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "pes": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "pessigolles": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "picarol": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "pinyol": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "plom": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "poble": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "pobra": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "pobre": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "poc": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "poca": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "poliglot": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "poliglota": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "poll": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "pol·len": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "pols": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "poncella": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "porta": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "pressa": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "preu": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "pronom": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "prova": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "qualsevol": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "que": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "queda": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "queixa": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "querella": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "quiosc": {
+      "hint": "ò",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "quota": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "rajola": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "rebost": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "rebre": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "rec": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "recepta": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "record": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "regle": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "rei": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "reia": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "reien": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "reixa": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "relleu": {
+      "hint": "é",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "rellotge": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "rem": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "remei": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "reny": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "repte": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "res": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "resposta": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "revetlla": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "rierol": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "roba": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "robot": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "roca": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "roda": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "rogenc": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "rompre": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "ronc": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "ronda": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "roques": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "rosa": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "rosella": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "rossa": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "rossinyol": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "rotlle": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "rotllo": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "safareig": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "sanefa": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "seca": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "secs": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "segon": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "segrest": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "selva": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "seny": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "seques": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "servei": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "setze": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "sivella": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "sobre": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "sogra": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "sogre": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "sol": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "son": {
+      "hint": "ò",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "sopa": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "sorra": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "sorrenc": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "sostre": {
+      "hint": "ò",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "sot": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "taronja": {
+      "hint": "ò",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "teix": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "tella": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "titella": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "toc": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "toll": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "tomb": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "torre": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "tothom": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "trebol": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "tren": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "trencaclosques": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "tretze": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "treure": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "tromba": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "tronc": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "trossos": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "txec": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "txeca": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "vaixella": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "valenta": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "valentes": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "varicel·la": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "vedella": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "vella": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "velles": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "venda": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "vendre": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "ventre": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "vermella": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "vermelles": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "vespa": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "vespre": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "veu": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "virolla": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "vol": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "voleibol": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "volta": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "vot": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "xarop": {
+      "hint": "ò",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "xemeneia": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "xerrameca": {
+      "hint": "é",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "xicot": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "xicota": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "xistorra": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "xop": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "xou": {
+      "hint": "ó",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "zebra": {
+      "hint": "è",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "zero": {
+      "hint": "è",
+      "basis": "espeak-central-vowel-exception"
+    },
+    "zigot": {
+      "hint": "ò",
+      "basis": "editorial-central-mid-vowel-proposal"
+    },
+    "zona": {
+      "hint": "ó",
+      "basis": "espeak-central-vowel-exception"
+    }
+  }
+}

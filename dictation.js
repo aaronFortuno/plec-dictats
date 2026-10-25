@@ -162,6 +162,12 @@
         var cov;
         try {
           cov = coverage(m, sel.entries, lang, appBase, qs.get("voice") || null);
+          $("dictation-voice").replaceChildren();
+          m.packs.filter(function (p) { return p.language === lang && p.status === "ready"; }).forEach(function (p) {
+            var option = doc.createElement("option"); option.value = p.id; option.textContent = p.label;
+            $("dictation-voice").append(option);
+          });
+          $("dictation-voice").value = cov.pack.id;
         } catch (e) {
           state.selection = null; setError(e.message); show("setup-panel"); return;
         }
@@ -233,6 +239,13 @@
     function leaveFullscreen() {
       try { if (doc.fullscreenElement && doc.exitFullscreen) Promise.resolve(doc.exitFullscreen()).catch(function () {}); } catch (e) {}
     }
+
+    $("dictation-voice").addEventListener("change", function () {
+      if (!state.selection || state.session) return;
+      var sel = state.selection, voice = $("dictation-voice").value;
+      qs.set("voice", voice); var url = new URL(root.location.href); url.searchParams.set("voice", voice);
+      root.history.replaceState(null, "", url); load(sel.code, sel.catalogue);
+    });
 
     function beginSession() {
       if (!state.selection || !state.cov || !state.cov.ready || state.session) return;
