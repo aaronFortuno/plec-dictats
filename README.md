@@ -16,7 +16,7 @@ El sistema de codis substitueix les tries individuals, les xinxetes i els canvis
 
 El lateral esquerre conté els filtres i la configuració del full; el dret agrupa codi, recuperació, còpies, dictat nou, **Comença el dictat** i PDF. El preview ocupa el centre. En amplades inferiors a 1.200 px els laterals es despleguen des dels costats; obrir-ne un tanca l’altre. El peu queda visible i el desplaçament és intern.
 
-El catàleg carrega una inicial cada vegada, amb A per defecte, cerca sobre tot el banc filtrat i navegació per enllaços **A | B | C…**. Només es desplaça el llistat: filtres i descàrregues es mantenen fixos, i la continuació de lletra és al final del llistat. Cada mot té un altaveu si existeix un MP3 disponible. El selector de varietat mostra català central; les altres opcions encara no estan disponibles.
+El selector de varietat del catàleg permet escoltar català central amb Alba o valencià amb Enric. Canviar de varietat atura la locució actual i no recorre a una altra veu si falta un àudio. El catàleg carrega una inicial cada vegada, amb A per defecte, cerca sobre tot el banc filtrat i navegació per enllaços **A | B | C…**. Només es desplaça el llistat: filtres i descàrregues es mantenen fixos, i la continuació de lletra és al final del llistat. Cada mot té un altaveu si existeix un MP3 disponible. El selector de varietat mostra català central; les altres opcions encara no estan disponibles.
 
 ## Preparar els àudios
 
@@ -80,7 +80,7 @@ Tots dos formats es poden invertir. Els trams de protecció són buits. Les lín
 
 La primera instantània és `catalogs/ca/editions/seed-1.json`, amb empremta immutable al registre d'edicions. Els dictats nous utilitzen `seed-2.json`, que corregeix les etiquetes d’accent i dièresi; els codis antics continuen amb `seed-1.json`. Recuperar un codi antic no n’altera cap mot. Canviar filtres o prémer **Nou dictat** fa servir l’edició actual. Una ampliació futura del banc haurà d'afegir una edició nova; no es pot canviar el significat dels codis antics. Cada llengua tindrà la seva entrada i el seu registre.
 
-Les dades locals de la versió anterior es conserven amb la seva clau original. El sistema nou només en recupera preferències compatibles. A **Com funciona** es pot descarregar una còpia de les dades antigues encara presents al navegador. Les tries manuals i els mots propis no es converteixen automàticament en codis. Els codis fan servir exclusivament el banc compartit, perquè qualsevol dispositiu els pugui reproduir.
+Les dades locals de la versió anterior es conserven amb la seva clau original. El sistema nou només en recupera preferències compatibles. Les tries manuals i els mots propis no es converteixen automàticament en codis. Els codis fan servir exclusivament el banc compartit, perquè qualsevol dispositiu els pugui reproduir.
 
 Hi ha una primera pantalla d’alumnat a **`/ca/dictat/`**, accessible des de **Mode dictat** al header, **Comença el dictat** al lateral dret i **Enllaç per a l’alumnat**. Recupera els mateixos mots i ordre amb codis antics i nous. El mode paper ofereix tres escoltes per mot, pantalla completa i pausa en sortir-ne o canviar de pestanya. Hi ha 3.080 mots centrals publicats i cinc locucions d’instruccions. Es pot començar quan totes les paraules del codi tenen àudio; si en falta alguna, la pantalla ho indica. La revisió auditiva continua oberta. La ruta ja admet l’enllaç que podrà incorporar un QR; el QR imprès i les respostes digitals són fases posteriors. Vegeu [mode dictat](docs/DICTAT.md).
 
@@ -94,7 +94,7 @@ El botó de sol/lluna al header canvia entre **clar i fosc** i desa la preferèn
 
 ## Valencià i ampliació de pseudoparaules
 
-La [taula valenciana editable](audio/pronunciation/ca/valencian-didactic.tsv) té IPA per als 3.299 mots: es conserven les 22 propostes inicials i s’hi afegeixen propostes del conversor obert catalan2ipa, pistes vocàliques explícites i correccions d’accent. Tot continua pendent de contrast lingüístic. El pilot de 20 mots amb Enric està aprovat auditivament; una prova posterior ha confirmat que Azure accepta /v/. El lot complet s’ha iniciat el 25/10/2026 en un paquet separat, amb IPA congelada i represa. Vegeu [perfil valencià](docs/VALENCIA.md).
+La [taula valenciana editable](audio/pronunciation/ca/valencian-didactic.tsv) té IPA per als 3.299 mots: es conserven les 22 propostes inicials i s’hi afegeixen propostes del conversor obert catalan2ipa, pistes vocàliques explícites i correccions d’accent. Tot continua pendent de contrast lingüístic. El pilot de 20 mots amb Enric està aprovat auditivament; una prova posterior ha confirmat que Azure accepta /v/. El lot complet ha acabat el 25/10/2026 i s’ha publicat: 3.299 MP3 en un paquet separat, amb IPA congelada i revisió auditiva individual oberta. Vegeu [perfil valencià](docs/VALENCIA.md).
 
 Les 96 pseudoparaules actuals es mantenen. L’ampliació prevista necessita revisar estructura sil·làbica, llargada i focus, comprovar coincidències lèxiques i definir accent i IPA per varietat. Després s’afegirà una edició nova del banc, sense canviar codis ja impresos, i es generaran mostres curtes abans de cada lot de veus. El model escrit continua sent una proposta: poden existir diverses grafies compatibles amb el mateix so.
 
@@ -102,11 +102,11 @@ Les 96 pseudoparaules actuals es mantenen. L’ampliació prevista necessita rev
 
 Dins d’**El catàleg → Pronunciacions i revisió** pots consultar les dues varietats costat per costat, escoltar els enregistraments disponibles, marcar-los amb polze amunt o avall i escriure notes. La icona de parla de cada mot canvia de vista dins del mateix popup; els filtres queden fixos i només es desplaça la taula. La ruta `/ca/pronunciacions/` obre directament aquesta vista. Les incidències de la IPA es registren separadament dels àudios. No cal descarregar ni editar un TSV per revisar.
 
-Les notes es desen al navegador i **Exporta la revisió** les reuneix en un JSON que es pot compartir o importar per reprendre el treball. **Descarrega les dues taules** genera un únic CSV. **Envia errors a GitHub** prepara un esborrany que l’usuari revisa i envia amb el seu compte; no hi ha enviament automàtic ni formulari anònim. Vegeu [guia de revisió](docs/REVISIO-PRONUNCIACIONS.md).
+Les notes es desen al navegador i **Exporta** les reuneix en un JSON que es pot compartir o importar per reprendre el treball. **Descarrega les IPA** genera un únic CSV. **Notifica errors** prepara un esborrany que l’usuari revisa i envia amb el seu compte; no hi ha enviament automàtic ni formulari anònim. Vegeu [guia de revisió](docs/REVISIO-PRONUNCIACIONS.md).
 
 Els lots reprenen cada minut els errors transitoris de connexió o servidor, mantenint pressupost, STOP i MP3 completats. Les peticions repetides es compten al registre; un error de desament local reutilitza el mateix àudio. La represa funciona mentre el procés continuï obert; no s’ha instal·lat cap servei d’inici després d’un reinici. Vegeu [represa dels lots](docs/REPRESA-AUDIO.md).
 
-El lot d’Enric té 3.299 peticions i 288.630 caràcters estimats, incloent el SSML. Amb els 121.686 ja reservats, l’estimació total és 410.316 aquest mes, abans de possibles reintents. El topall preventiu local s’ha ajustat a 450.000, sota els 500.000 mensuals F0. Cada intent es reserva abans d’enviar-lo. El llançador manté el sistema despert mentre el procés és actiu, sense mantenir la pantalla encesa.
+El lot d’Enric ha completat les 3.299 peticions i ha reservat 288.630 caràcters, incloent el SSML, sense reintents. El registre local final suma 410.316 aquest mes. Tots els MP3 s’han descodificat correctament, en mono a 24 kHz, i cada fitxer publicat té SHA-256. La verificació tècnica no substitueix l’escolta lingüística. El topall preventiu local s’ha ajustat a 450.000, sota els 500.000 mensuals F0. Cada intent es reserva abans d’enviar-lo. L’ajudant que mantenia el sistema despert i el procés de síntesi han acabat. El seguiment periòdic es desactiva després de publicar. Per accedir directament al dictat amb Enric es pot afegir `&voice=ca-valencian-enric-ipa-v1` a l’enllaç de l’alumnat; el paquet central continua sent el predeterminat.
 
 ## Desenvolupament i comprovació
 
@@ -141,11 +141,11 @@ node tools/serve.cjs
 
 El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `build-catalogs.cjs --check` comprova que els fitxers generats siguin reproduïbles. El generador verifica també les empremtes de les instantànies i no les modifica. Per repetir el contrast complet cal el lèxic extern de Softcatalà; les instruccions són a `catalogs/README.md`.
 
-`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `catalog-audio.js` gestiona una única reproducció del catàleg i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.19.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
+`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `catalog-audio.js` gestiona una única reproducció del catàleg i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.19.1`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
 
 ## Versions
 
-La interfície actual és **1.19**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.19.1**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 

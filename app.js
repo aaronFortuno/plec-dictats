@@ -148,6 +148,8 @@
   const catalogAudio=window.PlecCatalogAudio.create({base:new URL('../',location.href),language:L.id,fetch:window.fetch.bind(window),Audio:window.Audio,onChange:refreshCatalogAudio});
   function refreshCatalogAudio(audioState){
     audioState=audioState||catalogAudio.getState();
+    const valencian=$('catalog-dialect').querySelector('[value="valencia"]');
+    if(valencian){valencian.disabled=!(audioState.packs||[]).some(p=>p.dialect==='valencia');valencian.textContent=valencian.disabled?'Valencià · properament':'Valencià';}
     for(const button of $('catalog-list').querySelectorAll('[data-audio-id]')){
       const entry=lookup(button.dataset.audioId),available=entry&&catalogAudio.urlFor(entry),playing=audioState.playingId===entry?.id;
       button.disabled=!available;
@@ -299,6 +301,7 @@
     }
   });
   const releases = [
+    ['1.19.1', '2026-10-25', ['Publicats els 3.299 àudios del lot valencià amb Enric, amb IPA congelada i revisió individual oberta. Selector de varietat actiu al catàleg. Tots els MP3 descodificats i comprovats; consum local final de 410.316 caràcters.']],
     ['1.19', '2026-10-25', ['Laterals plegables en pantalles estretes i peu sempre visible, amb desplaçament intern. Pronunciacions i revisió integrades al mateix catàleg. Publicats 3.080 mots centrals i les instruccions. Taula IPA valenciana completa com a proposta i lot d’Enric en generació amb represa i seguiment.']],
     ['1.18', '2026-10-25', ['Taula web amb català central i valencià costat per costat, escolta per enregistrament, polzes i notes locals exportables. Accés des del catàleg i informes preparats per a GitHub, sense enviament automàtic. Represa cada minut davant errors transitoris de síntesi, amb pressupost i aturada conservats.']],
     ['1.17', '2026-10-24', ['Accentuació només amb accent gràfic, dièresi només amb ï o ü, i combinació dels focus amb qualsevol dels triats. Nova edició del banc per conservar exactament els codis anteriors. Taula valenciana independent i primera prova curta amb Enric, pendent d’escolta i contrast.']],
@@ -329,6 +332,7 @@
   document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) window.PlecMotion.close(dialog); } }));
 
   $('catalog-search').addEventListener('input',()=>renderCatalog());$('catalog-tag').addEventListener('change',()=>renderCatalog());$('catalog-stage').addEventListener('change',()=>renderCatalog());
+  $('catalog-dialect').addEventListener('change',()=>{const p=catalogAudio.getState().packs.find(p=>p.dialect===$('catalog-dialect').value);catalogAudio.selectPack(p?.id||'unavailable-variety');});
   $('catalog-initials').addEventListener('click',event=>{const link=event.target.closest('[data-initial]');if(link){event.preventDefault();if(link.getAttribute('aria-disabled')!=='true')renderCatalog(false,link.dataset.initial);}});
   for(const b of document.querySelectorAll('[data-catalog-view]'))b.addEventListener('click',()=>catalogView(b.dataset.catalogView));
   $('catalog-list').addEventListener('click',event=>{const next=event.target.closest('#catalog-next'),speaker=event.target.closest('[data-audio-id]'),ipa=event.target.closest('[data-pronunciation-word]');if(ipa){event.preventDefault();catalogView('pronunciations',{word:ipa.dataset.pronunciationWord,pack:ipa.dataset.pack});}else if(next)renderCatalog(false,next.dataset.initial);else if(speaker&&!speaker.disabled){const entry=lookup(speaker.dataset.audioId);if(entry)catalogAudio.play(entry);}});

@@ -16,7 +16,9 @@ function publish(){
  manifest.packs=manifest.packs.filter(p=>p.id!==publicPack.id);manifest.packs.push(publicPack);
  const instructions=read('output/audio/instructions-preview-manifest.json');for(const p of instructions.packs){for(const rel of Object.values(p.files))copy(p.basePath+rel,p.id+'/'+rel);p.basePath='assets/audio/ca/'+p.id+'/';}
  const write=(p,v)=>fs.writeFileSync(path.join(root,p),JSON.stringify(v,null,2)+'\n');
- write('audio/manifest.json',manifest);write('audio/review-manifest.json',{schemaVersion:1,defaultPacks:{},packs});write('audio/instructions/manifest.json',instructions);
+ const publicReview=read('audio/review-manifest.json');
+ publicReview.packs=[...publicReview.packs.filter(p=>p.profile!=='ca-central-didactic-v1'),...packs];
+ write('audio/manifest.json',manifest);write('audio/review-manifest.json',publicReview);write('audio/instructions/manifest.json',instructions);
  write('audio/central-publication.json',{schemaVersion:1,date:'2026-10-25',language:'ca',dialect:'central',coverage:Object.keys(publicPack.files).length,catalogueWords:3299,recordings:count,bytes,review:'Publicació autoritzada per l’autor; revisió auditiva mot a mot en curs.',sha256:hashes});
  console.log(JSON.stringify({recordings:count,coverage:Object.keys(publicPack.files).length,bytes}));
 }

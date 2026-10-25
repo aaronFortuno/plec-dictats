@@ -31,3 +31,11 @@ L’inventari ca-ES publicat no enumera /v/. Una prova real de vi i vaca el 25/1
 Abans del lot hi havia 121.686 caràcters reservats. El total previst és **410.316** abans de reintents. El topall preventiu s’ha ajustat a **450.000**, sota els **500.000 F0** de Microsoft, deixant marge per a reintents. El registre és local i no consulta facturació ni ús extern.
 
 `node tools/run-valencian-batch.cjs` simula sense xarxa. `node tools/start-valencian-batch.cjs` inicia o reprèn el lot en segon pla. No s’ha de duplicar mentre algun generador conservi el lock actiu. Vegeu [represa i proteccions](REPRESA-AUDIO.md).
+
+## Lot complet i publicat · 25/10/2026
+
+Ha acabat a les 11:18:00 UTC, després de 3 h 40 min 18 s: **3.299 descarregats, zero reintents i zero aturades**. El registre local reserva 410.316 caràcters en total, dels quals 288.630 corresponen al lot complet. Queden 39.684 fins al topall preventiu de 450.000 i 89.684 respecte dels 500.000 F0, assumint que no hi ha ús extern sense declarar. No és una consulta de facturació Azure.
+
+S’han descodificat els 3.299 MP3 amb Chromium Web Audio, amb zero errors: mono, 24 kHz, durades d’1,872 a 2,640 segons. Els fitxers sumen 39.316.320 bytes. La publicació `audio/valencian-publication.json` conserva els SHA-256, l’empremta dels ajustos i la referència a la IPA congelada. Això acredita integritat tècnica, no correcció fonètica de cada mot.
+
+El catàleg permet triar Valencià i la vista de pronunciacions inclou Enric al costat d’Alba. Les anotacions conserven la identitat exacta del paquet. El mode dictat també admet `voice=ca-valencian-enric-ipa-v1` a l’URL; la veu central continua sent la predeterminada. No s’han regenerat ni canviat les paraules dels codis. Els processos de síntesi i de prevenció de suspensió ja s’han tancat.

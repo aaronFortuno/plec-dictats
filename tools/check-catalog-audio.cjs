@@ -27,6 +27,9 @@ async function make(m,extra={}){
  c.play(entry);const repeat=FakeAudio.instances.at(-1);c.play(entry);assert(repeat.paused);assert.equal(c.getState().playingId,null);
  c.play(entry);FakeAudio.instances.at(-1).onerror();assert.equal(c.getState().errorId,'a');
  c.stop();assert.equal(c.getState().errorId,null);
+ const varieties=manifest();varieties.packs[0].dialect='central';varieties.packs.push({id:'valencian',language:'ca',dialect:'valencia',status:'ready',basePath:'audio/valencian/',files:{a:'words/àudio.mp3'}});
+ const {controller:vc}=await make(varieties);vc.play(entry);const oldVoice=FakeAudio.instances.at(-1);vc.selectPack('valencian');assert(oldVoice.paused&&oldVoice.removed);assert.equal(vc.getState().playingId,null);assert.equal(vc.urlFor(entry),'https://example.test/plec/audio/valencian/words/%C3%A0udio.mp3');assert.equal(vc.urlFor({id:'b'}),null,'No fallback across varieties');
+ vc.selectPack('unknown');assert.equal(vc.getState().phase,'pending');assert.equal(vc.urlFor(entry),null);vc.selectPack(null);assert.equal(vc.getState().phase,'ready');assert(vc.urlFor(entry).includes('/central/'));
  for(const m of [manifest('pending'),manifest('ready','../bad.mp3'),manifest('ready','https://other.test/file.mp3'),manifest('ready','words/%2e.mp3')]){
   const {controller}=await make(m);assert.equal(controller.urlFor(entry),null);const before=FakeAudio.instances.length;controller.play(entry);assert.equal(FakeAudio.instances.length,before);
  }

@@ -126,3 +126,10 @@ D’acord amb les instruccions del projecte, no es comprova el web remot despré
 - IPA valenciana completa com a proposta: 22 files inicials conservades, proves d’accent dels subjuntius, inventari experimental de v explícit i instantània de lot congelada. Prova real d’Azure de vi/vaca: dues respostes MP3 vàlides.
 - Passats els vectors i round trips dels dos protocols, catàlegs, focus, dictat, sessió, banc, àudio del catàleg, IPA, pilot, taules, revisió i instruccions. Catàleg i instantànies de les llavors intactes.
 - Lot llarg d’Enric iniciat i en progrés; la finalització, integritat completa i publicació valenciana es comprovaran quan acabi. No s’ha comprovat el web remot, segons la instrucció vigent de l’usuari.
+
+## v1.19.1 · Finalització del lot d’Enric
+
+- 3.299 MP3 descodificats amb Chromium Web Audio, sense errors; mono a 24 kHz i durades d’1,872–2,640 s. Empremtes SHA-256 verificades abans de copiar i en el paquet públic.
+- Cobertura completa del banc amb Enric, ID de paquet i empremta IPA congelada preservats en el manifest de dictat i en el de revisió. Registre final 410.316 caràcters; cap petició de síntesi per fer les comprovacions.
+- Selector de varietat del catàleg comprovat amb aturada del reproductor i sense fallback a una altra veu. La publicació central conserva les altres varietats en tornar a executar-la.
+- Processos de síntesi i prevenció de suspensió acabats. Revisió remota reservada a l’usuari.

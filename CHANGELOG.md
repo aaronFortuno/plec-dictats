@@ -1,5 +1,13 @@
 # Historial
 
+## 1.19.1 · 25 d’octubre de 2026
+
+- Lot complet d’Enric publicat: 3.299 MP3 i IPA de síntesi congelada, amb identitat i SHA-256 per a la revisió individual. Cap validació lingüística automàtica.
+- Selector de varietat del catàleg actiu per a central i valencià; la locució s’atura en canviar i no es barregen varietats quan falta un àudio.
+- Verificada la descodificació dels 3.299 fitxers: mono, 24 kHz, zero errors. Registre final de 410.316 caràcters, sense reintents al lot.
+- Comprovacions i documentació actualitzades. Síntesi i ajudant de suspensió finalitzats; seguiment desactivat després de publicar.
+
+
 ## 1.19 · 25 d’octubre de 2026
 
 - Peu sempre visible, scroll intern i laterals plegables exclusius per sota de 1.200 px, amb transicions de 220 ms. Implementació inicial de Kimi K3 Low revisada i corregida localment.

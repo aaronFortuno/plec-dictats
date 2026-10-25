@@ -97,3 +97,7 @@ Azure publica Alba, Joana i Enric com a veus ca-ES; el nom d’una veu no certif
 ## Represa i seguiment
 
 Els errors transitoris es reintenten després d’un minut, amb reserves per intent. No es reintenten automàticament credencials incorrectes, 429 ni pressupost esgotat. Un bloqueig local del fitxer reutilitza el buffer rebut. El lot d’Enric té procés desat, prevenció temporal de suspensió automàtica i seguiment periòdic autoritzat. Consulteu [REPRESA-AUDIO.md](REPRESA-AUDIO.md).
+
+## Resultat final del lot d’Enric
+
+Completat el 25/10/2026 a les 11:18:00 UTC: 3.299 MP3, 288.630 caràcters nous, sense reintents. El registre local final és **410.316**. Els 3.299 fitxers s’han descodificat sense errors i s’han publicat amb revisió auditiva individual pendent. No s’ha fet cap altra petició de síntesi en la verificació o publicació. El seguiment periòdic acaba amb aquesta publicació.

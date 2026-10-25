@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path');
 const A=require('./audio-plan.cjs'),G=require('./generate-audio.cjs');
 (async()=>{
-  const catalog=A.readJson(A.DEFAULT_CATALOG).catalog,base=A.validatePack(A.readJson(A.DEFAULT_MANIFEST));
+  const publicManifest=A.readJson(A.DEFAULT_MANIFEST),catalog=A.readJson(A.DEFAULT_CATALOG).catalog,base=A.validatePack(publicManifest);
   const compatible=settings=>settings.fingerprint&&['language','locale','voice','rate','format'].every(key=>settings[key]===base[key]);
   const byId=new Map(catalog.entries.filter(e=>e.mode==='words').map(e=>[e.id,e]));
   const files={};
@@ -43,7 +43,7 @@ const A=require('./audio-plan.cjs'),G=require('./generate-audio.cjs');
   }
   await G.atomicWriteJson(path.join(A.ROOT,'output/audio/catalog-preview-manifest.json'),{
     schemaVersion:1,defaultPacks:{[base.language]:'ca-central-catalog-preview'},
-    packs:[{...base,id:'ca-central-catalog-preview',label:'Català central · prova local en revisió',status:'ready',basePath:'output/audio/',files}]
+    packs:[{...base,id:'ca-central-catalog-preview',label:'Català central · prova local en revisió',status:'ready',basePath:'output/audio/',files},...publicManifest.packs.filter(p=>p.dialect!=='central'&&p.status==='ready')]
   });
   console.log('Catàleg local: '+Object.keys(files).length+' àudios disponibles per a revisió. Cap síntesi ni publicació.');
 })().catch(error=>{console.error(error.message);process.exitCode=1;});
