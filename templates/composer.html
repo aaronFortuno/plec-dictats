@@ -6,34 +6,35 @@
   <meta name="theme-color" content="#234d43">
   <meta name="description" content="Prepara dictats de paraules i pseudoparaules en català. Tria, imprimeix i desplega un full autocorrectiu per a cinquè.">
   <title>Plec · Dictats per desplegar</title>
-  <script src="theme.js?v=1.21.2"></script>
+  <script src="theme.js?v=1.22.0"></script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=1.21.2">
-  <link rel="stylesheet" href="workspace.css?v=1.21.2">
-  <link rel="stylesheet" href="seeds.css?v=1.21.2">
-  <link rel="stylesheet" href="catalog-browser.css?v=1.21.2">
-  <link rel="stylesheet" href="pronunciations.css?v=1.21.2">
-  <link rel="stylesheet" href="theme.css?v=1.21.2">
-  <link rel="stylesheet" href="responsive-workspace.css?v=1.21.2">
-  <script defer src="site-links.js?v=1.21.2"></script>
-  <script defer src="catalog.js?v=1.21.2"></script>
-  <script defer src="catalogs/ca/editions/index.js?v=1.21.2"></script>
-  <script defer src="seeds.js?v=1.21.2"></script>
-  <script defer src="seeds-v2.js?v=1.21.2"></script>
-  <script defer src="assets/vendor/qrcode.js?v=1.21.2"></script>
-  <script defer src="worksheet-qr.js?v=1.21.2"></script>
-  <script defer src="core.js?v=1.21.2"></script>
-  <script defer src="assets/vendor/pdf-lib.min.js?v=1.21.2"></script>
-  <script defer src="pdf.js?v=1.21.2"></script>
-  <script defer src="icons.js?v=1.21.2"></script>
-  <script defer src="motion.js?v=1.21.2"></script>
-  <script defer src="preview.js?v=1.21.2"></script>
-  <script defer src="catalog-browser.js?v=1.21.2"></script>
-  <script defer src="audio-manifest.js?v=1.21.2"></script>
-  <script defer src="pronunciation-review.js?v=1.21.2"></script>
-  <script defer src="pronunciations.js?v=1.21.2"></script>
-  <script defer src="app.js?v=1.21.2"></script>
-  <script defer src="workspace-panels.js?v=1.21.2"></script>
+  <link rel="stylesheet" href="styles.css?v=1.22.0">
+  <link rel="stylesheet" href="workspace.css?v=1.22.0">
+  <link rel="stylesheet" href="seeds.css?v=1.22.0">
+  <link rel="stylesheet" href="catalog-browser.css?v=1.22.0">
+  <link rel="stylesheet" href="pronunciations.css?v=1.22.0">
+  <link rel="stylesheet" href="theme.css?v=1.22.0">
+  <link rel="stylesheet" href="responsive-workspace.css?v=1.22.0">
+  <script defer src="site-links.js?v=1.22.0"></script>
+  <script defer src="audio-varieties.js?v=1.22.0"></script>
+  <script defer src="catalog.js?v=1.22.0"></script>
+  <script defer src="catalogs/ca/editions/index.js?v=1.22.0"></script>
+  <script defer src="seeds.js?v=1.22.0"></script>
+  <script defer src="seeds-v2.js?v=1.22.0"></script>
+  <script defer src="assets/vendor/qrcode.js?v=1.22.0"></script>
+  <script defer src="worksheet-qr.js?v=1.22.0"></script>
+  <script defer src="core.js?v=1.22.0"></script>
+  <script defer src="assets/vendor/pdf-lib.min.js?v=1.22.0"></script>
+  <script defer src="pdf.js?v=1.22.0"></script>
+  <script defer src="icons.js?v=1.22.0"></script>
+  <script defer src="motion.js?v=1.22.0"></script>
+  <script defer src="preview.js?v=1.22.0"></script>
+  <script defer src="catalog-browser.js?v=1.22.0"></script>
+  <script defer src="audio-manifest.js?v=1.22.0"></script>
+  <script defer src="pronunciation-review.js?v=1.22.0"></script>
+  <script defer src="pronunciations.js?v=1.22.0"></script>
+  <script defer src="app.js?v=1.22.0"></script>
+  <script defer src="workspace-panels.js?v=1.22.0"></script>
 </head>
 <body>
   <a class="skip" href="#composer">Ves al preparador</a>
@@ -62,12 +63,12 @@
       <section class="preview-column" aria-label="Vista prèvia del dictat">
         <div class="paper-stage"><div class="paper-topline"><span id="preview-layout">VISTA PRÈVIA</span><span id="selection-summary"></span></div><div class="paper-viewport" id="paper-viewport" role="group" tabindex="0" aria-label="Full de mostra: Ctrl i roda per ampliar o reduir, arrossega per moure i fes doble clic per ajustar" aria-describedby="zoom-help"><div class="paper" id="sheet-preview" aria-label="Vista prèvia del full imprimible"></div><div id="zoom-scroll-hint" class="zoom-scroll-hint" role="status" aria-live="polite" hidden>Prem <kbd>Ctrl</kbd> i mou la roda per ampliar o reduir el full.</div><div class="zoom-tools" role="group" aria-label="Zoom de la vista prèvia"><button class="icon-button" id="zoom-out" aria-label="Redueix el zoom" title="Redueix el zoom"><span data-icon="zoom-out"></span></button><output id="zoom-value" aria-label="Zoom respecte al full ajustat">100 %</output><button class="icon-button" id="zoom-in" aria-label="Amplia el zoom" title="Amplia el zoom"><span data-icon="zoom-in"></span></button><span class="zoom-divider" aria-hidden="true"></span><button class="icon-button" id="zoom-fit" aria-label="Ajusta el full" title="Ajusta el full · doble clic"><span data-icon="scan"></span></button></div></div></div><p class="sr-only" id="zoom-help">Ctrl i roda del ratolí per ampliar o reduir; arrossega per moure el full. Doble clic o tecla 0 per ajustar. També pots fer servir +, − i les fletxes del teclat.</p>
       </section>
-      <aside class="management card" aria-label="Gestió del dictat"><div class="management-scroll"><section class="seed-toolbar" aria-labelledby="seed-management-heading"><h2 id="seed-management-heading">El teu dictat</h2><div class="seed-identity"><span>Codi del dictat · <span id="seed-language">CA</span></span><output id="seed-code" aria-live="polite">—</output></div><div class="seed-buttons"><button class="button secondary" id="new-dictation"><span data-icon="refresh-cw"></span> Nou dictat</button><button class="small-link" id="copy-code">Copia el codi</button><button class="small-link" id="copy-link">Enllaç del full</button></div><div class="seed-buttons"><button class="button primary dictation-entry" id="open-student"><span data-icon="headphones"></span> Comença el dictat</button><button class="small-link" id="copy-student-link">Enllaç per a l’alumnat</button></div><button class="button secondary" id="download-pdf">Descarrega el PDF <span data-icon="download"></span></button><form id="recover-form" class="recover-form"><label for="recover-code">Recupera un dictat</label><div><input id="recover-code" type="text" inputmode="text" placeholder="ABCD-23456" maxlength="16" autocomplete="off" autocapitalize="characters" spellcheck="false"><button class="button secondary" type="submit">Recupera</button></div></form></section></div></aside>
+      <aside class="management card" aria-label="Gestió del dictat"><div class="management-scroll"><section class="seed-toolbar" aria-labelledby="seed-management-heading"><h2 id="seed-management-heading">El teu dictat</h2><div class="seed-identity"><span>Codi del dictat · <span id="seed-language">CA</span></span><output id="seed-code" aria-live="polite">—</output></div><div class="seed-buttons"><button class="button secondary" id="new-dictation"><span data-icon="refresh-cw"></span> Nou dictat</button><button class="small-link" id="copy-code">Copia el codi</button><button class="small-link" id="copy-link">Enllaç del full</button></div><div class="pronunciation-setting"><label for="pronunciation-variety">Pronunciació del dictat</label><select id="pronunciation-variety"><option value="central">Català central</option><option value="valencia">Valencià</option></select></div><div class="seed-buttons"><button class="button primary dictation-entry" id="open-student"><span data-icon="headphones"></span> Comença el dictat</button><button class="small-link" id="copy-student-link">Enllaç per a l’alumnat</button></div><button class="button secondary" id="download-pdf">Descarrega el PDF <span data-icon="download"></span></button><form id="recover-form" class="recover-form"><label for="recover-code">Recupera un dictat</label><div><input id="recover-code" type="text" inputmode="text" placeholder="ABCD-23456" maxlength="16" autocomplete="off" autocapitalize="characters" spellcheck="false"><button class="button secondary" type="submit">Recupera</button></div></form></section></div></aside>
     </section>
 
 
   </main>
-  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p>Un recurs obert per escoltar, escriure i aprendre.</p><span><button class="footer-link" id="about-open">Sobre el projecte · V4V <span data-icon="heart-handshake"></span></button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.21.2: obre l’historial de canvis">v1.21.2</button></span></footer>
+  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurs obert per escoltar, escriure i aprendre.</p><p class="umbrella-project">un projecte d’<a role="link" aria-disabled="true" data-href="https://ortogra.fi/" title="Properament">ortogra.fi</a></p><span><button class="footer-link" id="about-open">Sobre el projecte · V4V <span data-icon="heart-handshake"></span></button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.22: obre l’historial de canvis">v1.22</button></span></footer>
   <div id="status" class="toast" role="status" aria-live="polite"></div>
   <dialog id="catalog-dialog" aria-labelledby="catalog-title">
     <div class="dialog-head"><h2 id="catalog-title">El catàleg</h2><button class="icon-button" data-close aria-label="Tanca el catàleg"><span data-icon="x"></span></button></div>

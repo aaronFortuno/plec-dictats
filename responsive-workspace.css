@@ -188,6 +188,15 @@ body {
   .site-footer>p{display:none}
 }
 
+/* Project identity centred independently of the side actions. */
+.site-footer{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:8px 16px;align-items:center;height:auto;min-height:40px}
+.site-footer .footer-tagline{grid-column:1;justify-self:start}
+.site-footer .umbrella-project{display:block;grid-column:2;justify-self:center;margin:0;white-space:nowrap;font-size:11px}
+.umbrella-project a[aria-disabled=true]{color:var(--green);font-weight:600;text-decoration:none;cursor:default}
+.site-footer>span:last-child{grid-column:3;justify-self:end;margin:0}
+@media(max-width:1000px){.site-footer .footer-tagline{display:none}.site-footer{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}}
+@media(max-width:600px){.site-footer{grid-template-columns:1fr;gap:2px;padding-block:6px;min-height:50px}.site-footer .umbrella-project{grid-column:1;grid-row:1}.site-footer>span:last-child{grid-column:1;grid-row:2;justify-self:center;font-size:10px}}
+
 /* Impressió: amaga la UI introduïda */
 @media print {
   body{height:auto;display:block;overflow:visible}

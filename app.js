@@ -13,7 +13,7 @@
   const $=id=>document.getElementById(id),escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const STORAGE='plec-seeds-v1:'+L.id;
   const defaults=mode=>({count:mode==='words'?24:20,stage:mode==='words'?'cs':'all',tags:[...(mode==='words'?S.WORD_FOCUSES:S.PSEUDO_FOCUSES)],required:[],code:null});
-  let state={mode:'words',modelSide:'left',foldStyle:'thirds',sessions:{words:defaults('words'),pseudo:defaults('pseudo')}},current=null,busy=false,job=0,controller=null,pendingSearch=null,toastTimer;
+  let state={mode:'words',modelSide:'left',foldStyle:'thirds',variety:'central',sessions:{words:defaults('words'),pseudo:defaults('pseudo')}},current=null,busy=false,job=0,controller=null,pendingSearch=null,toastTimer;
   let legacy=null;
   try{legacy=localStorage.getItem('plec-dictats-v1:'+L.id)||localStorage.getItem('plec-dictats-v1');}catch{}
   const session=()=>state.sessions[state.mode];
@@ -32,6 +32,7 @@
       const saved=JSON.parse(localStorage.getItem(STORAGE)||'null'),data=saved||JSON.parse(legacy||'null');
       if(!data||data.language&&data.language!==L.id)return;
       state.mode=['words','pseudo'].includes(data.mode)?data.mode:'words';state.modelSide=data.modelSide==='right'?'right':'left';state.foldStyle=data.foldStyle==='quarter'?'quarter':'thirds';
+      if(window.PlecAudioVarieties.varieties.some(v=>v.id===data.variety))state.variety=data.variety;
       if(saved&&R.editions.some(e=>e.slot===data.edition)){edition=R.editions.find(e=>e.slot===data.edition);C=edition.catalog;}
       for(const mode of ['words','pseudo']){
         const src=data.sessions?.[mode];if(!src)continue;const dest=state.sessions[mode];
@@ -42,7 +43,7 @@
       }
     }catch{}
   }
-  function updateURL(){try{const url=new URL(location.href),panel=new URLSearchParams(url.search);url.search='';url.hash='';if(current){url.searchParams.set('seed',S.normalize(current.code));url.searchParams.set('catalogue',current.catalogue);}for(const name of ['panel','mot','audio'])if(panel.has(name))url.searchParams.set(name,panel.get(name));history.replaceState(null,'',url);}catch{}}
+  function updateURL(){try{const url=new URL(location.href),panel=new URLSearchParams(url.search);url.search='';url.hash='';if(current){url.searchParams.set('seed',S.normalize(current.code));url.searchParams.set('catalogue',current.catalogue);url.searchParams.set('variety',state.variety);}for(const name of ['panel','mot','audio'])if(panel.has(name))url.searchParams.set(name,panel.get(name));history.replaceState(null,'',url);}catch{}}
   function setCode(code,{keepRequired=false}={}){
     const result=S.resolve(R.editions,code),next=R.editions.find(e=>e.slot===result.epoch);
     if(next.language!==L.id)throw new Error('El codi correspon a una altra llengua.');
@@ -74,6 +75,7 @@
     finally{if(id===job){busy=false;controller=null;renderPreview();updateAvailability();}}
   }
   function updateControls(){
+    $('pronunciation-variety').value=state.variety;
     const s=session();document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===state.mode)));
     $('count-control').value=s.count;$('stage-field').hidden=state.mode==='pseudo';$('stage-control').value=s.stage;
     $('fold-style-control').value=state.foldStyle;document.querySelectorAll('[data-side]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.side===state.modelSide)));
@@ -133,13 +135,14 @@
     }).join('')}</svg>`;
   }
 
-  function sheetOptions(){return{entries:chosen(),title:state.mode==='words'?'Dictat de paraules':'Dictat de pseudoparaules',mode:state.mode,modelSide:state.modelSide,foldStyle:state.foldStyle,seedCode:current?.code,seedLanguage:L.id,focusLabels:session().tags.map(id=>C.categories.find(c=>c.id===id)?.label||id)};}
+  function sheetOptions(){return{entries:chosen(),title:state.mode==='words'?'Dictat de paraules':'Dictat de pseudoparaules',mode:state.mode,modelSide:state.modelSide,foldStyle:state.foldStyle,seedCode:current?.code,seedLanguage:L.id,variety:state.variety,focusLabels:session().tags.map(id=>C.categories.find(c=>c.id===id)?.label||id)};}
   const fitPaper=()=>window.PlecPreview.fit();
   function renderPreview(){
     const entries=chosen(),layout=K.foldLayout(state.foldStyle,state.modelSide),ready=!!current&&!busy;
     $('sheet-preview').innerHTML=entries.length?svgFor(K.worksheet(sheetOptions()),layout):`<div class="empty-selection">${busy?'Buscant un dictat…':'Ajusta els filtres o recupera un codi per veure el full.'}</div>`;
     $('seed-code').textContent=busy?'…':current?.code||'—';$('selection-summary').textContent=`${entries.length} / ${session().count} elements`;
     $('preview-layout').textContent=`${layout.name} · model a ${state.modelSide==='left'?'l’esquerra':'la dreta'}`;
+    document.querySelector('.dictation-nav').href=new URL('./dictat/?variety='+state.variety,location.href).href;
     for(const id of ['download-pdf','teacher-pdf','copy-code','copy-link','open-student','copy-student-link'])$(id).disabled=!ready;
     $('sheet-preview').setAttribute('aria-label',`Vista prèvia: ${entries.length} elements. Model visible.`);fitPaper();
   }
@@ -213,7 +216,8 @@
   $('recover-form').addEventListener('submit',event=>{event.preventDefault();try{const resolved=S.resolve(R.editions,$('recover-code').value);stopSearch();setCode(resolved.code);$('recover-code').value='';$('search-status').textContent='';say('Dictat recuperat amb els mateixos mots, ordre i filtres.');}catch(error){say(error.message);}});
   async function copy(value,success){try{await navigator.clipboard.writeText(value);say(success);}catch{say('No s’ha pogut copiar automàticament. El codi és '+(current?.code||'')+'.');}}
   $('copy-code').addEventListener('click',()=>current&&copy(current.code,'Codi copiat.'));
-  const shareOptions=()=>({language:L.id,catalogue:current.catalogue,seed:current.code});
+  const shareOptions=()=>({language:L.id,catalogue:current.catalogue,seed:current.code,variety:state.variety});
+  $('pronunciation-variety').addEventListener('change',()=>{state.variety=window.PlecAudioVarieties.definition($('pronunciation-variety').value).id;persist();renderPreview();updateURL();});
   const studentURL=()=>LT.publicDictationURL(shareOptions());
   $('open-student').addEventListener('click',()=>{if(current&&!busy)location.href=LT.dictationURL(new URL('../',location.href),shareOptions());});
   $('copy-student-link').addEventListener('click',()=>{if(current&&!busy)copy(studentURL(),'Enllaç per a l’alumnat copiat.');});
@@ -245,6 +249,7 @@
     }
   });
   const releases = [
+    ['1.22', '2026-10-25', ['La pronunciació es tria al lateral del docent i queda fixada als enllaços i al QR. L’alumnat veu la varietat indicada sense selector; es conserven els enllaços antics de veu. Marca alineada verticalment al header i peu amb «un projecte d’ortogra.fi», encara inactiu.']],
     ['1.21.2', '2026-10-25', ['Enllaços públics del full, de l’alumnat i dels QR centralitzats a plec.ortogra.fi. Els botons de còpia utilitzen el domini definitiu també quan es treballa en local o des d’una adreça antiga.']],
     ['1.21.1', '2026-10-25', ['QR del full actualitzat a plec.ortogra.fi. L’adreça completa, amb llengua i codi, també s’imprimeix en dues línies sota el QR per poder-la introduir manualment.']],
     ['1.21', '2026-10-25', ['Catàleg únic amb mot, focus, àudios i IPA a la mateixa fila. Cerca global sense canvis automàtics, alfabet centrat i càrrega homogènia de 50 files. Bloc imprès de focus alineat amb Escric i reviso i QR vectorial del dictat amb llengua i codi per a ortogra.fi.']],
@@ -289,7 +294,9 @@
     downloadBlob(new Blob([text],{type:'text/tab-separated-values;charset=utf-8'}),`plec-${L.id}-revisio.tsv`);
   });
   $('download-pdf').addEventListener('click',()=>exportPdf(false));$('teacher-pdf').addEventListener('click',()=>exportPdf(true));
-  restore();updateControls();renderPreview();
+  restore();
+  if(arrival.searchParams.has('variety')){try{state.variety=window.PlecAudioVarieties.definition(arrival.searchParams.get('variety')).id;}catch(error){say(error.message);}}
+  updateControls();renderPreview();
   const incoming=new URL(location.href).searchParams;
   try{
     if(incoming.has('seed')){

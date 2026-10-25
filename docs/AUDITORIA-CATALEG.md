@@ -24,6 +24,6 @@ La revisió parteix del feedback docent i de la inspecció de la interfície; no
 
 ## Full imprimible
 
-El bloc informatiu és al panell protegit, amb el títol alineat a la mateixa línia base que «Escric i reviso», tipografia Helvetica de 9 punts i la mateixa franja de fons. El QR, centrat a sobre, incorpora `https://plec.ortogra.fi/<llengua>/dictat/?seed=<codi>`. El codi ja identifica l’edició i la configuració: no cal duplicar-les a l’URL.
+El bloc informatiu és al panell protegit, amb el títol alineat a la mateixa línia base que «Escric i reviso», tipografia Helvetica de 9 punts i la mateixa franja de fons. El QR, centrat a sobre, incorpora `https://plec.ortogra.fi/<llengua>/dictat/?seed=<codi>&variety=<varietat>`. El codi identifica l’edició i els filtres dels mots; la varietat de pronunciació s’indica separadament a l’URL.
 
 La generació del QR és local i vectorial, amb correcció M i marge de quatre mòduls. Les línies, l’escriptura i el model no canvien. S’han renderitzat i llegit els quatre QR dels PDF, per als dos plecs i costats. La URL completa s’imprimeix en dues línies sota el QR. L’autor gestiona l’activació i connexió del subdomini; aquesta revisió comprova el contingut del QR sense consultar-ne el desplegament.

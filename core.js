@@ -96,7 +96,7 @@
     return layout;
   }
   // Coordenades comunes per a l'SVG i el PDF, en mil·límetres, origen superior esquerre.
-  function worksheet({ entries, title, mode = 'words', modelSide = 'left', foldStyle = 'thirds', seedCode, seedLanguage = 'ca', focusLabels = [] }) {
+  function worksheet({ entries, title, mode = 'words', modelSide = 'left', foldStyle = 'thirds', seedCode, seedLanguage = 'ca', focusLabels = [], variety }) {
     const shapes = [];
     const text = (x, y, value, size = 10, weight = false, color = '#222222', extra = {}) => shapes.push({ type: 'text', x, y, value, size, weight, color, ...extra });
     const line = (x, y, x2, y2, color = '#aaaaaa', width = .2, dash = false) => shapes.push({ type: 'line', x, y, x2, y2, color, width, dash });
@@ -143,7 +143,7 @@
       }
       const fx = Math.max(12,px+4), fw = Math.min(198,px+pw-4)-fx;
       if(seedCode){
-        const url=QR.urlFor(seedCode,seedLanguage),split=url.indexOf('?');
+        const url=QR.urlFor(seedCode,seedLanguage,variety),split=url.indexOf('?');
         shapes.push(...QR.shapes(url,fx+(fw-28)/2,10,28));
         [url.slice(0,split),url.slice(split)].forEach((part,i)=>text(fx+fw/2,41+i*3,part,7,false,'#555555',{align:'center',maxWidth:fw,role:'worksheet-link'}));
       }

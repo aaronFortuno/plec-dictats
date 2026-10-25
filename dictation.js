@@ -1,6 +1,6 @@
 /* T007: connexió de la pantalla de dictat. Eines pures + DOM, sense framework. */
 (function (root, factory) {
-  var api = factory(typeof module === "object" && module.exports ? require('./audio-manifest.js') : root.PlecAudioManifest);
+  var api = factory(typeof module === "object" && module.exports ? require('./audio-manifest.js') : root.PlecAudioManifest, typeof module === "object" && module.exports ? require('./audio-varieties.js') : root.PlecAudioVarieties);
   if (typeof module === "object" && module.exports) {
     module.exports = api;
   } else {
@@ -9,7 +9,7 @@
   if (typeof document !== "undefined" && document.currentScript) {
     api.initDom(root);
   }
-}(typeof self !== "undefined" ? self : globalThis, function (manifestTools) {
+}(typeof self !== "undefined" ? self : globalThis, function (manifestTools, varieties) {
   "use strict";
 
   /* ---------- Eines pures ---------- */
@@ -161,13 +161,9 @@
         if (gen !== state.generation) return;
         var cov;
         try {
-          cov = coverage(m, sel.entries, lang, appBase, qs.get("voice") || null);
-          $("dictation-voice").replaceChildren();
-          m.packs.filter(function (p) { return p.language === lang && p.status === "ready"; }).forEach(function (p) {
-            var option = doc.createElement("option"); option.value = p.id; option.textContent = p.label;
-            $("dictation-voice").append(option);
-          });
-          $("dictation-voice").value = cov.pack.id;
+          var pronunciation = varieties.select(m, lang, {variety:qs.get("variety"),voice:qs.get("voice")});
+          cov = coverage(m, sel.entries, lang, appBase, pronunciation.pack.id);
+          $("dictation-variety").textContent = pronunciation.variety.label;
         } catch (e) {
           state.selection = null; setError(e.message); show("setup-panel"); return;
         }
@@ -193,6 +189,8 @@
         var url = new URL(root.location.href);
         url.searchParams.set("seed", root.PlecSeeds.normalize ? root.PlecSeeds.normalize(sel.code) : sel.code);
         if (sel.catalogue) url.searchParams.set("catalogue", sel.catalogue);
+        url.searchParams.set("variety", pronunciation.variety.id);
+        qs.set("variety", pronunciation.variety.id);
         root.history.replaceState(null, "", url);
         show("ready-panel");
       }).catch(function (e) {
@@ -239,13 +237,6 @@
     function leaveFullscreen() {
       try { if (doc.fullscreenElement && doc.exitFullscreen) Promise.resolve(doc.exitFullscreen()).catch(function () {}); } catch (e) {}
     }
-
-    $("dictation-voice").addEventListener("change", function () {
-      if (!state.selection || state.session) return;
-      var sel = state.selection, voice = $("dictation-voice").value;
-      qs.set("voice", voice); var url = new URL(root.location.href); url.searchParams.set("voice", voice);
-      root.history.replaceState(null, "", url); load(sel.code, sel.catalogue);
-    });
 
     function beginSession() {
       if (!state.selection || !state.cov || !state.cov.ready || state.session) return;

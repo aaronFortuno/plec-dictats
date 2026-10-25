@@ -2,7 +2,7 @@
 
 ## Entrada i identitat
 
-Ruta estàtica per llengua: `/ca/dictat/?seed=TCD7AAAAA&catalogue=ca-2026-01-draft.ee94edbd3b2d4fb4`. Es preserva el subdirectori de GitHub Pages, sense fixar domini. El preparador ofereix entrada general, obertura del dictat vigent i còpia de l’enllaç d’alumnat. El codi es pot introduir manualment; un enllaç o futur QR el precarrega, sense iniciar cap reproducció. Els enllaços antics `/ca/?mode=dictat&...` es redirigeixen abans de modificar el preparador.
+Ruta estàtica per llengua: `/ca/dictat/?seed=TCD7AAAAA&catalogue=ca-2026-01-draft.ee94edbd3b2d4fb4`. Es preserva el subdirectori de GitHub Pages, amb enllaços públics a `https://plec.ortogra.fi/`. El preparador ofereix entrada general, obertura del dictat vigent i còpia de l’enllaç d’alumnat. El codi es pot introduir manualment; un enllaç o QR el precarrega, sense iniciar cap reproducció. Els enllaços antics `/ca/?mode=dictat&...` es redirigeixen abans de modificar el preparador.
 
 La recuperació utilitza els motors i les instantànies publicades, sense canviar mots ni ordre. Es comproven llengua i catàleg. Un codi erroni mostra un error visible; no es genera un substitut aleatori.
 
@@ -10,7 +10,7 @@ La recuperació utilitza els motors i les instantànies publicades, sense canvia
 
 La primera fase és **escriure al full**. Les instruccions indiquen el nombre de mots i com acabar autocorregint amb el paper. Es pot ajustar el ritme a 1 o 0,85 abans de començar, preservant el to. Durant l’activitat només es mostren el botó d’escolta, el número de mot i el comptador d’escoltes, amb una sortida discreta.
 
-Cada mot requereix tres escoltes completades. Després apareix «Paraula següent» o «Acaba el dictat». No hi ha avanç automàtic, retorn a mots anteriors ni quarta escolta. Un error de reproducció o una escolta interrompuda no compta. El final convida a desplegar el full; no mostra models ni nota. El mode digital, el retorn a Classroom i el QR imprès queden pendents.
+Cada mot requereix tres escoltes completades. Després apareix «Paraula següent» o «Acaba el dictat». No hi ha avanç automàtic, retorn a mots anteriors ni quarta escolta. Un error de reproducció o una escolta interrompuda no compta. El final convida a desplegar el full; no mostra models ni nota. El mode digital i el retorn a Classroom queden pendents.
 
 Les instruccions i les paraules utilitzen **MP3 estàtics**, sense TTS del navegador ni peticions a Azure des del web. Les cinc locucions d’instruccions comparteixen el text exacte amb la pantalla, per a 8, 12, 16, 20 i 24 mots. Si la locució encara no està disponible, el text es manté visible i es pot començar el dictat igualment. La lectura es pot aturar i no compta com a escolta d’un mot; s’atura en començar l’activitat, sortir o ocultar la pestanya.
 
@@ -24,7 +24,7 @@ Si el dispositiu no admet pantalla completa o la rebutja, hi ha una continuació
 
 ## Àudios i prova local
 
-El reproductor carrega un manifest i comprova paquet, llengua, rutes MP3 segures i cobertura completa abans d’habilitar l’inici. El manifest públic publica els 3.299 mots per varietat, amb Alba i Enric, pendents de revisió auditiva individual. El selector «Pronunciació» permet canviar de paquet abans de començar; l’URL conserva `voice` i el codi continua donant els mateixos mots.
+El reproductor carrega un manifest i comprova paquet, llengua, rutes MP3 segures i cobertura completa abans d’habilitar l’inici. El manifest públic publica els 3.299 mots per varietat, amb Alba i Enric, pendents de revisió auditiva individual. El docent tria la pronunciació al lateral dret. L’URL i el QR conserven `variety=central` o `variety=valencia`; l’alumnat no té selector. El codi continua donant els mateixos mots.
 
 Per provar la interfície amb els MP3 ja disponibles hi ha un manifest **només local**, `output/audio/player-preview-manifest.json`, amb les mateixes identitats i rutes. L’excepció `preview=local` només s’admet a localhost, 127.0.0.1 o [::1]. No es publica el manifest de prova ni es modifica el públic. La pantalla inicial avisa que és una prova amb àudios pendents de revisió.
 
@@ -53,3 +53,9 @@ El catàleg docent utilitza `catalog-audio.js`, amb la mateixa validació de man
 `node tools/prepare-catalog-preview.cjs` construeix un índex de revisió **sense síntesi ni xarxa**, combinant els MP3 locals existents i les mostres IPA. Només s’utilitza des de loopback, a `output/audio/catalog-preview-manifest.json`; no altera el manifest públic ni el manifest de prova de l’alumnat. Les mostres més recents tenen prioritat per a l’audició docent, sense considerar-les aprovades.
 
 Si hi ha revisió auditiva del paquet, els resultats `unresolved` i `original-preferred` no substitueixen l’original del catàleg local. Això conserva, entre d’altres, l’original de «canviïn», preferit pel docent. Els sis mots amb dièresi millorats mantenen la prova IPA per a la consulta local; aquesta preferència no publica cap MP3 ni valida lingüísticament les transcripcions.
+
+## Pronunciació fixada pel docent
+
+El lateral dret desa la preferència central/valencià i l’aplica a l’enllaç del full, al d’alumnat i al QR del PDF. Obrir un enllaç del full amb una varietat explícita preval sobre la preferència desada. Canviar-la no genera cap llavor nova ni modifica els mots.
+
+`audio-varieties.js` resol la varietat al paquet del manifest amb el mateix dialecte i llengua. La pantalla d’alumnat la mostra com a informació fixa abans de començar. Es mantenen els enllaços antics amb `voice`; si aquest paràmetre contradiu `variety`, es mostra un error. Si la varietat sol·licitada no està disponible o falta cobertura, no es canvia a una altra. Els accessos antics sense varietat, inclosa l’entrada només amb codi, utilitzen català central. Per assignar una altra varietat cal compartir l’enllaç o el QR configurat pel docent. La varietat no forma part de la llavor immutable.

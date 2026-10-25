@@ -43,6 +43,9 @@
 .d-brand:hover { color: var(--ink); }
 .d-brand{display:flex;align-items:center;gap:8px;font-weight:bold;letter-spacing:-1.5px}
 .d-brand>svg{width:25px;height:29px;fill:none;stroke:var(--green);stroke-width:1.7;stroke-linejoin:round}
+.d-brand>span{display:block;line-height:1;transform:translateY(-1px)}
+.d-variety{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 10px;font-size:13px;color:var(--muted);margin:4px 0}
+.d-variety strong{font-weight:600;color:var(--ink)}
 
 #exit-focus {
   font: inherit;

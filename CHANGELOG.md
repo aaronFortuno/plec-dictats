@@ -1,5 +1,12 @@
 # Historial
 
+## 1.22 · 25 d’octubre de 2026
+
+- Selector «Pronunciació del dictat» al lateral dret: català central o valencià, desat amb les preferències del docent.
+- La varietat es conserva al paràmetre `variety` dels enllaços del full i d’alumnat, de l’entrada al dictat i del QR imprès. No canvia la llavor ni la llista de mots.
+- L’alumnat veu la pronunciació com a informació fixa, sense selector. Els enllaços antics amb `voice` continuen funcionant; una veu incompatible amb la varietat o un àudio absent mostra un error, sense substituir la varietat.
+- Ajust de l’alineació òptica de la marca al header. Missatge «un projecte d’ortogra.fi» centrat al peu, amb enllaç desactivat fins que s’activi el portal.
+
 ## 1.21.2 · 25 d’octubre de 2026
 
 - Origen públic únic a `site-links.js`: `https://plec.ortogra.fi/`.

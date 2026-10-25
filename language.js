@@ -11,12 +11,13 @@
   function normalizeCode(value) {
     return String(value).toUpperCase().replace(/[\s-]/g, '');
   }
-  function dictationURL(base, { language: id, catalogue, seed }) {
+  function dictationURL(base, { language: id, catalogue, seed, variety }) {
     const pack = language(id), code = normalizeCode(seed);
     if (!/^(?:[ABCDEFGHJKMNPQRSTVWXYZ2-9]{6}|[ABCDEFGHJKMNPQRSTVWXYZ2-9]{9})$/.test(code)) throw new Error('Codi no vàlid.');
     if (!catalogue || !catalogue.startsWith(id + '-')) throw new Error('El catàleg no correspon a la llengua.');
     const url = new URL(pack.path + 'dictat/', new URL('./', base));
     url.search = new URLSearchParams({ seed: code, catalogue }).toString();
+    if(variety!==undefined){if(!['central','valencia'].includes(variety))throw Error('La varietat de pronunciació no està disponible.');url.searchParams.set('variety',variety);}
     return url.href;
   }
   function assertImportLanguage(data, id) {
