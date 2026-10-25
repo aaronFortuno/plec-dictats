@@ -16,7 +16,8 @@ const {
   summarize
 } = require('./audio-plan.cjs');
 
-const MONTHLY_LIMIT = 400000;
+// 450k stays below the documented 500k F0 allowance, including SSML and retries.
+const MONTHLY_LIMIT = 450000;
 const REQUEST_INTERVAL_MS = 4000;
 const REQUEST_TIMEOUT_MS = 30000;
 const RETRY_INTERVAL_MS = 60000;
@@ -408,7 +409,7 @@ function printHelp() {
   console.log('--retry-transient espera un minut i reprèn errors de connexió, timeout o servidor, reservant cada petició al pressupost.');
   console.log('--confirm-f0 declara que l’usuari usa F0; NO comprova l’SKU via API. Verifica’l al portal d’Azure.');
   console.log('Credencials: SPEECH_KEY/SPEECH_REGION a l’entorn o fitxer privat ../.private/plec/azure-speech.json, fora del web.');
-  console.log('Límit local: 400.000 caràcters per mes UTC. El fitxer privat només es llegeix amb --execute i --confirm-f0.');
+  console.log('Límit local: 450.000 caràcters per mes UTC. El fitxer privat només es llegeix amb --execute i --confirm-f0.');
   console.log('--used-elsewhere N declara consum extern del mateix recurs; es conserva el major valor declarat.');
 }
 

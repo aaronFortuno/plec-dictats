@@ -1,6 +1,6 @@
 # Revisar les pronunciacions al web
 
-La ruta `/ca/pronunciacions/` mostra cada mot amb **català central i valencià costat per costat**. S’hi accedeix des del catàleg o des de la icona de parla al costat d’un mot. L’enllaç individual selecciona també l’enregistrament que s’acabava d’escoltar, quan està disponible. No s’inicia cap reproducció automàtica.
+La vista **Pronunciacions i revisió**, dins del mateix popup d’**El catàleg**, mostra cada mot amb **català central i valencià costat per costat**. La icona de parla canvia de vista sense sortir del catàleg. Els filtres i les exportacions queden fixos; només es desplaça el llistat. La ruta `/ca/pronunciacions/` redirigeix a aquesta vista. L’enllaç individual selecciona també l’enregistrament que s’acabava d’escoltar, quan està disponible. No s’inicia cap reproducció automàtica.
 
 La cerca treballa sobre els 3.299 mots i les inicials permeten navegar sense carregar totes les files al DOM. Es mostren fins a 50 mots d’una inicial cada vegada, amb un botó per ampliar. Els filtres permeten trobar àudios pendents, àudios correctes, incidències o mots amb IPA. En mòbil, cada mot manté les dues varietats juntes.
 

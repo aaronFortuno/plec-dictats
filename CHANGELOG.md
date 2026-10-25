@@ -1,5 +1,14 @@
 # Historial
 
+## 1.19 · 25 d’octubre de 2026
+
+- Peu sempre visible, scroll intern i laterals plegables exclusius per sota de 1.200 px, amb transicions de 220 ms. Implementació inicial de Kimi K3 Low revisada i corregida localment.
+- Catàleg i pronunciacions com a dues vistes del mateix popup, amb cerca, notes i exportacions conservades. Ruta directa compatible. Retirats els avisos de codis antics de la interfície.
+- Publicats 3.080 mots centrals disponibles i cinc locucions d’instruccions, amb manifests i empremtes de cada MP3. Revisió auditiva encara oberta.
+- IPA valenciana proposada per als 3.299 mots, amb procedència i pistes explícites. Conservades les 22 propostes inicials; correccions de subjuntius amb dièresi i -essin. Acceptació tècnica de /v/ comprovada amb dos mots.
+- Lot complet d’Enric iniciat: 3.299 MP3, 288.630 caràcters previstos. Topall preventiu de 450.000 sota F0; reintents comptabilitzats, IPA congelada, procés desat i seguiment periòdic.
+
+
 ## 1.18 · 25 d’octubre de 2026
 
 - Nova taula web de pronunciacions central/valencià, amb cerca, inicials, càrrega de 50 mots, escolta per enregistrament i enllaços directes des del catàleg.

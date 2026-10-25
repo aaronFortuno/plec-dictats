@@ -116,3 +116,13 @@ D’acord amb les instruccions del projecte, no es comprova el web remot despré
 - Vistes locals a 1280 × 720, 768 × 1024 i 390 × 844 sense desbordament horitzontal amb el codi llarg. Quatre files de focus a la vista d’escriptori. Sense errors JavaScript observats. Captura a output/llavors-v2.2.png.
 - Dos PDF nous renderitzats i revisats visualment: full de quart i guia amb CA / M6QM-AAVN4, llegible i sense encavalcaments. Comprovades les quatre combinacions de format/costat i les guies en memòria; cada PDF té una pàgina A4. Els exemples anteriors es conserven.
 - README, algoritme de protocol 2, historial i ajuda actualitzats; documentació del protocol 1 conservada com a històrica. Comprovacions locals superades. Sense comprovació del web desplegat, segons la instrucció del projecte.
+
+## v1.19 · 25/10/2026
+
+- Layout local a 320, 390, 820, 1.024 i 1.440 px: peu dins del viewport, cap scroll de pàgina, preview dins de la zona central; un únic lateral desplegat amb canvi de focus i Escape.
+- Catàleg/pronunciacions dins del mateix diàleg; accés directe compatible, inicials i cerca, càrrega de 50 files, notes separades per IPA/àudio, persistència, exportació/importació, CSV, tema fosc i absència de desbordament horitzontal.
+- Comprovats tots els MP3 i SHA-256 dels 3.102 enregistraments centrals publicats (3.080 mots únics, variants de prova i cinc instruccions). Cobertura i rutes segures també sota el prefix de projecte. Reproducció real local d’originals, correccions i instruccions.
+- Proves del generador, reintents, pressupost i locks amb xarxa simulada; síntesi local sense canviar els manifests públics. Les dues proves que pressuposaven manifests públics buits ara comproven que el contingut públic no es modifica.
+- IPA valenciana completa com a proposta: 22 files inicials conservades, proves d’accent dels subjuntius, inventari experimental de v explícit i instantània de lot congelada. Prova real d’Azure de vi/vaca: dues respostes MP3 vàlides.
+- Passats els vectors i round trips dels dos protocols, catàlegs, focus, dictat, sessió, banc, àudio del catàleg, IPA, pilot, taules, revisió i instruccions. Catàleg i instantànies de les llavors intactes.
+- Lot llarg d’Enric iniciat i en progrés; la finalització, integritat completa i publicació valenciana es comprovaran quan acabi. No s’ha comprovat el web remot, segons la instrucció vigent de l’usuari.

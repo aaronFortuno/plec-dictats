@@ -1,32 +1,33 @@
-# Primer perfil de pronunciació valenciana
+# Perfil de pronunciació valenciana
 
-La font editable és `audio/pronunciation/ca/valencian-didactic.tsv`: 3.299 files sobre les mateixes grafies i ID del banc, amb **22 propostes** i 3.277 transcripcions pendents. No s’ha copiat ni convertit automàticament la IPA central. Cap fila està lingüísticament validada. Els exports JSON i TXT són dades obertes derivades del TSV, no fonts per editar.
+La font editable és `audio/pronunciation/ca/valencian-didactic.tsv`: **3.299 files amb IPA proposada**, sobre les mateixes grafies i ID del banc. Les 22 propostes inicials es conserven; les altres 3.277 provenen del conversor obert [catalan2ipa](https://github.com/Connum/catalan2ipa), amb adaptacions editorials. Cap fila no està marcada com a validada lingüísticament.
 
-Les propostes són editorials, orientades per la [Gramàtica normativa valenciana de l’AVL, capítol 1](https://www.upv.es/entidades/spnl/wp-content/uploads/2023/11/gramatica_normativa_valenciana.pdf): vocals àtones generalment plenes, consonants palatals i erra final. La geminació explícita és una elecció didàctica; no es presenta com l’única pronunciació valenciana acceptable. Les fonts són de regles generals, no transcripcions exactes del DNV de cadascuna de les formes. Cal contrastar els timbres i les variants locals abans de validar.
+## Procedència i límits
 
-## La taula no és encara una adaptació lèxica del banc
+El conversor té una branca valenciana pròpia; no s’ha copiat la IPA central ni s’han substituït les seves vocals àtones. Les propostes inicials s’orienten per la [GNV de l’AVL, capítol 1](https://www.upv.es/entidades/spnl/wp-content/uploads/2023/11/gramatica_normativa_valenciana.pdf). La resta són resultats de regles, no transcripcions extretes del DNV. Es conserven fonts, mètode i estat de cada fila.
 
-Pronunciar el banc compartit amb un altre perfil no substitueix revisar quines grafies, formes verbals i variants són adequades per a l’alumnat valencià. Aquesta adaptació pot requerir una edició pròpia. No es canvia, per exemple, la grafia d’un mot d’un codi existent per ajustar-la a una altra varietat.
+El conversor ha demanat pista per a 415 vocals mitjanes. `valencian-vowel-hints.json` n’explicita la decisió: 95 pistes es basen en excepcions lèxiques obertes d’[eSpeak NG](https://github.com/espeak-ng/espeak-ng/blob/master/dictsource/ca_list), i 320 són propostes editorials pendents de contrast. No es presenten com a comprovacions de diccionari. Cal revisar especialment els timbres, les polisèmies i les variants locals.
 
-## Mostra amb una altra veu
+El conversor original confon l’accent d’alguns subjuntius amb dièresi. L’adaptació local tracta explícitament actuï, canviïn, continuïn, enviïn, esglaï, estudiïn i triïn i les seves formes incloses al banc; també tanca /e/ en -essin. Es conserven les consonants finals i la geminació l·l del model didàctic. Les equivalències tècniques ɡ→g i d͡z/t͡s→dz/ts no eliminen consonants.
 
-`audio/pronunciation/ca-valencian-pilot.json` identifica la primera selecció. S’utilitza **Enric** com a veu candidata, diferent d’Alba. Microsoft la registra com a veu catalana ca-ES, sense certificar-la com a valenciana. [Veus disponibles](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=tts).
+La taula encara no és una adaptació lèxica del banc al valencià: grafies i formes verbals compartides poden necessitar una edició específica més endavant. No es canvien les paraules dels codis existents.
 
-La taula conserva **/v/** en «vi» i «vaca». El [conjunt de fonemes documentat d’Azure ca-ES](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-ssml-phonetic-sets#ca-es) no inclou aquest fonema. L’edició de la taula l’admet, però la preparació del pilot l’exclou de les peticions. No es transforma v en b per fer-la compatible amb el motor. Aquesta és una limitació de la prova actual, no una regla lingüística. Cal estudiar una veu o motor que el resolgui, o enregistrament manual, abans d’oferir el perfil complet amb aquesta distinció.
+## Enric i la prova de /v/
 
-La primera mostra té **20 peticions i 1.702 caràcters estimats**, amb MP3 mono, els mateixos ajustos de ritme i un paquet separat `ca-valencian-enric-pilot-v1`. No substitueix originals ni activa el selector públic. La pàgina local de comparació és `output/audio/comparacio-valencia.html`; l’estat, `output/audio/valencian-pilot-status.json`. L’original de comparació és el perfil central amb Alba, no una referència valenciana validada. Alguns timbres i la dicció necessiten revisió explícita.
+Microsoft registra [Enric com a veu ca-ES](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=tts), sense certificar una varietat valenciana. El docent ha aprovat auditivament els 20 mots del pilot; això no valida els altres àudios ni tota la taula.
 
-El pilot s’ha generat el 24/10/2026: els 20 MP3 passen la reproducció tècnica fins al final. El 25/10/2026 el docent confirma que els vint àudios estan molt bé; l’aprovació auditiva consta a `audio/pronunciation/ca-valencian-pilot-review.json` i no valida automàticament tota la IPA. El lot gran esperarà completar i revisar la taula valenciana. El registre local queda en 121.529 caràcters aquest mes, amb 278.471 disponibles fins al límit preventiu de 400.000; és una estimació local, no una consulta del consum real d’Azure.
+L’inventari ca-ES publicat no enumera /v/. Una prova real de vi i vaca el 25/10/2026 ha retornat dos MP3 vàlids acceptant aquest fonema, sense transformar-lo en /b/. L’excepció necessita el perfil explícit `ca-valencian-v-experimental`, només en paquets IPA valencians; la resta de paquets continua amb l’inventari estricte. Acceptació tècnica no equival a validació auditiva del so.
 
-```text
-node tools/pronunciation-table.cjs --profile ca-valencian-didactic-v1 --export
-node tools/pronunciation-table.cjs --profile ca-valencian-didactic-v1 --check
-node tools/prepare-valencian-pilot.cjs --write
-node tools/run-valencian-pilot.cjs
-```
+## Lot complet iniciat el 25/10/2026
 
-Aquestes ordres no fan peticions ni llegeixen credencials. La síntesi real requereix `node tools/run-valencian-pilot.cjs --execute --confirm-f0`, després de revisar la mostra. Comparteix registre de consum, bloqueig de quota, senyal STOP, separació mínima de quatre segons, represa automàtica d’errors transitoris amb [les proteccions documentades](REPRESA-AUDIO.md). Refusa començar mentre els lots de mots i instruccions no constin acabats o hi hagi un bloqueig. Una IPA o un ajust canviat exigeix un ID de paquet nou.
+- Paquet: `ca-valencian-enric-ipa-v1`, Enric, velocitat −10%, MP3 mono.
+- 3.299 peticions; **288.630 caràcters estimats** incloent el SSML.
+- IPA congelada a `audio/pronunciation/recordings/ca-valencian-enric-ipa-v1.json`. Editar després la taula no altera un lot en curs ni la identitat dels MP3 ja generats.
+- Estat: `output/audio/valencian-batch-status.json`; registre: `valencian-batch.log`; procés inicial desat a `valencian-launch.json`.
+- Reintents transitoris cada minut, mínim quatre segons entre peticions i senyal STOP compartit. Els MP3 complets es reutilitzen en reprendre.
+- El llançador manté el sistema despert mentre el seu procés és actiu. No modifica el pla d’energia ni manté la pantalla encesa. No impedeix una suspensió manual ni substitueix un servei d’inici després d’un reinici.
+- Seguiment autoritzat cada vint minuts: silenci mentre progressa, revisió de PID i bloqueigs abans de reprendre un procés mort, avís si cal actuar o quan acaba.
 
-## Abans d’un lot complet
+Abans del lot hi havia 121.686 caràcters reservats. El total previst és **410.316** abans de reintents. El topall preventiu s’ha ajustat a **450.000**, sota els **500.000 F0** de Microsoft, deixant marge per a reintents. El registre és local i no consulta facturació ni ús extern.
 
-Cal revisar les 22 propostes inicials, escoltar el pilot, resoldre la limitació /v/, completar i contrastar les transcripcions necessàries, decidir les formes lèxiques i calcular el pressupost de la passada real. La validació lingüística i l’aprovació de cada enregistrament continuen separades.
+`node tools/run-valencian-batch.cjs` simula sense xarxa. `node tools/start-valencian-batch.cjs` inicia o reprèn el lot en segon pla. No s’ha de duplicar mentre algun generador conservi el lock actiu. Vegeu [represa i proteccions](REPRESA-AUDIO.md).

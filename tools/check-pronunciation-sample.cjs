@@ -26,6 +26,7 @@ const R=require('./run-pronunciation-sample.cjs'),P=require('./prepare-pronuncia
     now:()=>new Date(time),requestSleep:async ms=>{time=new Date(+time+ms);},
     fetch:async(url,request)=>{requests++;sent.push(request.body);return new Response(Buffer.from([0x49,0x44,0x33,1]),{headers:{'content-type':'audio/mpeg'}});}
   };
+  const publicBefore=fs.readFileSync(A.DEFAULT_MANIFEST,'utf8');
   try{
     let result=await R.run({execute:true,afterCurrentBatches:true},{...deps,gate:()=> 'blocked'});
     assert.equal(result.ok,false);assert.equal(requests,0);
@@ -45,7 +46,7 @@ const R=require('./run-pronunciation-sample.cjs'),P=require('./prepare-pronuncia
     const html=fs.readFileSync(path.join(temp,'audio/comparacio-pronunciacio.html'),'utf8');
     assert(html.includes('data-candidate=')&&html.includes('Original'));
     assert(!fs.existsSync(path.join(temp,'audio/usage.lock')));
-    assert.equal(A.readJson(A.DEFAULT_MANIFEST).packs[0].status,'pending');
+    assert.equal(fs.readFileSync(A.DEFAULT_MANIFEST,'utf8'),publicBefore,'Generating a local sample must not change public audio');
     console.log('Mostra IPA: espera de dos lots, SSML real, opt-in obligatori, quota compartida, represa, canvi de fonemes i comparació sense substituir originals. Xarxa simulada.');
   }finally{if(temp.startsWith(path.join(os.tmpdir(),'plec-pronunciation-')))fs.rmSync(temp,{recursive:true,force:true});}
 })().catch(error=>{console.error(error);process.exitCode=1;});

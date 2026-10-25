@@ -1,19 +1,30 @@
 {
   "schemaVersion": 1,
-  "defaultPacks": {"ca": "ca-central-alba-instructions-v1"},
-  "packs": [{
-    "id": "ca-central-alba-instructions-v1",
-    "language": "ca",
-    "dialect": "central",
-    "label": "Instruccions en català central · Alba",
-    "locale": "ca-ES",
-    "provider": "azure",
-    "voice": "ca-ES-AlbaNeural",
-    "rate": "-10%",
-    "format": "audio-24khz-48kbitrate-mono-mp3",
-    "textVersion": 1,
-    "basePath": "assets/audio/ca/central-alba-instructions-v1/",
-    "status": "pending",
-    "files": {}
-  }]
+  "defaultPacks": {
+    "ca": "ca-central-alba-instructions-v1"
+  },
+  "packs": [
+    {
+      "id": "ca-central-alba-instructions-v1",
+      "language": "ca",
+      "dialect": "central",
+      "label": "Instruccions en català central · Alba",
+      "locale": "ca-ES",
+      "provider": "azure",
+      "voice": "ca-ES-AlbaNeural",
+      "rate": "-10%",
+      "format": "audio-24khz-48kbitrate-mono-mp3",
+      "textVersion": 1,
+      "basePath": "assets/audio/ca/ca-central-alba-instructions-v1/",
+      "status": "ready",
+      "files": {
+        "instruction-paper-8": "instructions/paper-8.mp3",
+        "instruction-paper-12": "instructions/paper-12.mp3",
+        "instruction-paper-16": "instructions/paper-16.mp3",
+        "instruction-paper-20": "instructions/paper-20.mp3",
+        "instruction-paper-24": "instructions/paper-24.mp3"
+      },
+      "contentFingerprint": "1cdbc0fe46c7f44e36ed3ff08cdf44173b971a460931004fc4d324aa90422fdb"
+    }
+  ]
 }

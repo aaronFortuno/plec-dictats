@@ -18,7 +18,7 @@
   }
   function decode(code){
     const c=normalize(code);if(c.length===6)return{...V1.decode(c),protocol:1};
-    if(c.length!==9||[...c].some(ch=>!ALPHABET.includes(ch)))throw new Error('Escriu el codi de 4 + 5 caràcters, sense I, L, O, U, 0 ni 1. També s’accepten els codis antics de sis caràcters.');
+    if(c.length!==9||[...c].some(ch=>!ALPHABET.includes(ch)))throw new Error('Escriu el codi de 4 + 5 caràcters, sense I, L, O, U, 0 ni 1.');
     const block=((((integer(c.slice(0,4))-B)*AI)%PREFIX_SPACE)+PREFIX_SPACE)%PREFIX_SPACE;
     if(block>=EPOCHS*V1.RECIPES)throw new Error('Aquest prefix de codi no està assignat.');
     const epoch=Math.floor(block/V1.RECIPES),index=block%V1.RECIPES;

@@ -14,7 +14,7 @@ Un generador obert de dictats autocorrectius en català: **3.299 paraules**, **9
 
 El sistema de codis substitueix les tries individuals, les xinxetes i els canvis de mots. El catàleg és de consulta i es pot descarregar en TXT i TSV; no permet seleccionar mots individualment. Les formes femenines i plurals comparteixen els mateixos focus ortogràfics que la resta.
 
-El lateral esquerre conté els filtres i la configuració del full; el dret agrupa codi, recuperació, còpies, dictat nou, **Comença el dictat** i PDF. El preview ocupa el centre. En tauleta i mòbil els blocs es reorganitzen sense comprimir el full.
+El lateral esquerre conté els filtres i la configuració del full; el dret agrupa codi, recuperació, còpies, dictat nou, **Comença el dictat** i PDF. El preview ocupa el centre. En amplades inferiors a 1.200 px els laterals es despleguen des dels costats; obrir-ne un tanca l’altre. El peu queda visible i el desplaçament és intern.
 
 El catàleg carrega una inicial cada vegada, amb A per defecte, cerca sobre tot el banc filtrat i navegació per enllaços **A | B | C…**. Només es desplaça el llistat: filtres i descàrregues es mantenen fixos, i la continuació de lletra és al final del llistat. Cada mot té un altaveu si existeix un MP3 disponible. El selector de varietat mostra català central; les altres opcions encara no estan disponibles.
 
@@ -82,31 +82,31 @@ La primera instantània és `catalogs/ca/editions/seed-1.json`, amb empremta imm
 
 Les dades locals de la versió anterior es conserven amb la seva clau original. El sistema nou només en recupera preferències compatibles. A **Com funciona** es pot descarregar una còpia de les dades antigues encara presents al navegador. Les tries manuals i els mots propis no es converteixen automàticament en codis. Els codis fan servir exclusivament el banc compartit, perquè qualsevol dispositiu els pugui reproduir.
 
-Hi ha una primera pantalla d’alumnat a **`/ca/dictat/`**, accessible des de **Mode dictat** al header, **Comença el dictat** al lateral dret i **Enllaç per a l’alumnat**. Recupera els mateixos mots i ordre amb codis antics i nous. El mode paper ofereix tres escoltes per mot, pantalla completa i pausa en sortir-ne o canviar de pestanya. Els àudios encara estan en generació i revisió local: la versió pública indica que estan pendents i impedeix començar fins que hi hagi cobertura. La ruta ja admet l’enllaç que podrà incorporar un QR; el QR imprès i les respostes digitals són fases posteriors. Vegeu [mode dictat](docs/DICTAT.md).
+Hi ha una primera pantalla d’alumnat a **`/ca/dictat/`**, accessible des de **Mode dictat** al header, **Comença el dictat** al lateral dret i **Enllaç per a l’alumnat**. Recupera els mateixos mots i ordre amb codis antics i nous. El mode paper ofereix tres escoltes per mot, pantalla completa i pausa en sortir-ne o canviar de pestanya. Hi ha 3.080 mots centrals publicats i cinc locucions d’instruccions. Es pot començar quan totes les paraules del codi tenen àudio; si en falta alguna, la pantalla ho indica. La revisió auditiva continua oberta. La ruta ja admet l’enllaç que podrà incorporar un QR; el QR imprès i les respostes digitals són fases posteriors. Vegeu [mode dictat](docs/DICTAT.md).
 
-La preparació d’àudios és local i encara no està activada al web. Els **227 mots amb dièresi** tenen una [taula IPA editable](audio/pronunciation/ca-central-diaeresis.tsv), amb fonts i dubtes explícits, per a una prova posterior al lot sense dièresi. Vegeu el [procediment de pronunciació i revisió](docs/PRONUNCIACIO.md). Preparar el pla SSML no envia peticions a Azure ni altera el catàleg o els codis.
+La síntesi es fa localment amb Azure i els MP3 publicats es reprodueixen estàticament des del repositori. Els **227 mots amb dièresi** tenen una [taula IPA editable](audio/pronunciation/ca-central-diaeresis.tsv), amb fonts i dubtes explícits, per a una prova posterior al lot sense dièresi. Vegeu el [procediment de pronunciació i revisió](docs/PRONUNCIACIO.md). Preparar el pla SSML no envia peticions a Azure ni altera el catàleg o els codis.
 
 La revisió inclou també geminació, consonants finals i accents verbals. Hi ha una mostra de nou mots amb **dicció didàctica explícita**, incloent «paguessin» i «passàvem», ja generada amb IPA en un paquet separat. El generador comparteix quota i represa, conserva originals i exigeix un paquet nou si canvien els fonemes. `node tools/run-pronunciation-sample.cjs` només simula; la generació real requereix `--execute --after-current-batches` i manté els resultats pendents d’escolta.
 
 La [taula general de pronunciacions](audio/pronunciation/ca/central-didactic.tsv) és editable i cobreix els 3.299 mots: 240 propostes IPA i 3.059 transcripcions encara buides, totes pendents de validació final. Hi ha també [text de lectura](audio/pronunciation/ca/central-didactic-ipa.txt), [JSON obert](audio/pronunciation/ca/central-didactic.json) i una [guia d’edició i reutilització](audio/pronunciation/README.md). Les varietats i els criteris de dicció tenen perfils separats. La validació d’una transcripció no equival a validar la locució d’una veu concreta.
 
-El botó de sol/lluna al header canvia entre **clar i fosc** i desa la preferència entre preparador i dictat. A la primera visita segueix el sistema; el full i el PDF sempre són clars. Les instruccions del dictat es preparen com a cinc MP3 Azure estàtics, un per llargada, amb text compartit amb la pantalla. `node tools/run-instructions-batch.cjs` fa només una simulació; `--execute --after-words` encua la generació després del lot principal, compartint pressupost, bloqueig i represa. Cap àudio no s’activa públicament sense revisió.
+El botó de sol/lluna al header canvia entre **clar i fosc** i desa la preferència entre preparador i dictat. A la primera visita segueix el sistema; el full i el PDF sempre són clars. Les instruccions del dictat es preparen com a cinc MP3 Azure estàtics, un per llargada, amb text compartit amb la pantalla. `node tools/run-instructions-batch.cjs` fa només una simulació; `--execute --after-words` encua la generació després del lot principal, compartint pressupost, bloqueig i represa. L’autor ha autoritzat publicar els àudios centrals disponibles mentre continua la revisió individual.
 
 ## Valencià i ampliació de pseudoparaules
 
-La [taula valenciana editable](audio/pronunciation/ca/valencian-didactic.tsv) té 3.299 files independents del perfil central: 22 propostes inicials i 3.277 IPA encara buides. Els [exports JSON i TXT](audio/pronunciation/README.md) indiquen estats i fonts. La primera prova preparada té 20 mots amb Enric; «vi» i «vaca» conserven /v/ a la taula però queden fora del pilot perquè aquest fonema no figura en l’inventari admès d’Azure ca-ES. Una altra veu no s’etiqueta automàticament com a varietat validada. Vegeu [pilot valencià](docs/VALENCIA.md).
+La [taula valenciana editable](audio/pronunciation/ca/valencian-didactic.tsv) té IPA per als 3.299 mots: es conserven les 22 propostes inicials i s’hi afegeixen propostes del conversor obert catalan2ipa, pistes vocàliques explícites i correccions d’accent. Tot continua pendent de contrast lingüístic. El pilot de 20 mots amb Enric està aprovat auditivament; una prova posterior ha confirmat que Azure accepta /v/. El lot complet s’ha iniciat el 25/10/2026 en un paquet separat, amb IPA congelada i represa. Vegeu [perfil valencià](docs/VALENCIA.md).
 
 Les 96 pseudoparaules actuals es mantenen. L’ampliació prevista necessita revisar estructura sil·làbica, llargada i focus, comprovar coincidències lèxiques i definir accent i IPA per varietat. Després s’afegirà una edició nova del banc, sense canviar codis ja impresos, i es generaran mostres curtes abans de cada lot de veus. El model escrit continua sent una proposta: poden existir diverses grafies compatibles amb el mateix so.
 
 ## Escoltar i revisar al web
 
-A **`/ca/pronunciacions/`** pots consultar les dues varietats costat per costat, escoltar els enregistraments disponibles, marcar-los amb polze amunt o avall i escriure notes. S’hi arriba des del catàleg i des de la icona de parla de cada mot. Les incidències de la IPA es registren separadament dels àudios. No cal descarregar ni editar un TSV per revisar.
+Dins d’**El catàleg → Pronunciacions i revisió** pots consultar les dues varietats costat per costat, escoltar els enregistraments disponibles, marcar-los amb polze amunt o avall i escriure notes. La icona de parla de cada mot canvia de vista dins del mateix popup; els filtres queden fixos i només es desplaça la taula. La ruta `/ca/pronunciacions/` obre directament aquesta vista. Les incidències de la IPA es registren separadament dels àudios. No cal descarregar ni editar un TSV per revisar.
 
 Les notes es desen al navegador i **Exporta la revisió** les reuneix en un JSON que es pot compartir o importar per reprendre el treball. **Descarrega les dues taules** genera un únic CSV. **Envia errors a GitHub** prepara un esborrany que l’usuari revisa i envia amb el seu compte; no hi ha enviament automàtic ni formulari anònim. Vegeu [guia de revisió](docs/REVISIO-PRONUNCIACIONS.md).
 
 Els lots reprenen cada minut els errors transitoris de connexió o servidor, mantenint pressupost, STOP i MP3 completats. Les peticions repetides es compten al registre; un error de desament local reutilitza el mateix àudio. La represa funciona mentre el procés continuï obert; no s’ha instal·lat cap servei d’inici després d’un reinici. Vegeu [represa dels lots](docs/REPRESA-AUDIO.md).
 
-El docent ha aprovat auditivament els 20 mots del pilot d’Enric. El **lot gran espera completar i revisar la IPA valenciana**, a petició seva: 3.277 transcripcions continuen pendents. No s’ha iniciat cap altre lot ni s’ha consumit quota per implementar aquestes eines.
+El lot d’Enric té 3.299 peticions i 288.630 caràcters estimats, incloent el SSML. Amb els 121.686 ja reservats, l’estimació total és 410.316 aquest mes, abans de possibles reintents. El topall preventiu local s’ha ajustat a 450.000, sota els 500.000 mensuals F0. Cada intent es reserva abans d’enviar-lo. El llançador manté el sistema despert mentre el procés és actiu, sense mantenir la pantalla encesa.
 
 ## Desenvolupament i comprovació
 
@@ -130,6 +130,8 @@ node tools/check-audio-retry.cjs
 node tools/check-pronunciation-review.cjs
 node tools/check-focus-edition.cjs
 node tools/check-valencian-pilot.cjs
+node tools/check-valencian-batch.cjs
+node tools/check-published-audio.cjs
 node tools/check-local-files.cjs
 node tools/check-instructions.cjs
 node tools/benchmark-seeds.cjs
@@ -139,14 +141,16 @@ node tools/serve.cjs
 
 El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `build-catalogs.cjs --check` comprova que els fitxers generats siguin reproduïbles. El generador verifica també les empremtes de les instantànies i no les modifica. Per repetir el contrast complet cal el lèxic extern de Softcatalà; les instruccions són a `catalogs/README.md`.
 
-`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `catalog-audio.js` gestiona una única reproducció del catàleg i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.18.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
+`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `catalog-audio.js` gestiona una única reproducció del catàleg i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.19.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
 
 ## Versions
 
-La interfície actual és **1.18**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.19**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 
 El repositori serveix la branca **main**, carpeta **/ (root)**, amb `.nojekyll`. La portada redirigeix a `/ca/` mantenint els paràmetres. Les comprovacions es fan en local; la revisió del web desplegat la fa l'usuari.
 
 Codi i contingut original sota MIT. `pdf-lib` conserva la llicència MIT i els avisos d'`assets/vendor/`; Lucide conserva ISC i l'avís MIT de les icones derivades de Feather a `assets/lucide/LICENSE`. El lèxic de Softcatalà, utilitzat externament per al contrast, manté la seva llicència LGPL 2.1 / GPL 2.0 i les seves atribucions; no es distribueix amb el web.
+
+El conversor local catalan2ipa conserva LGPL-3.0-or-later i les atribucions a `tools/vendor/catalan2ipa/`. Les pistes fonètiques indiquen separadament les excepcions factuals consultades d’eSpeak NG i les decisions editorials; no s’ha copiat un diccionari complet.

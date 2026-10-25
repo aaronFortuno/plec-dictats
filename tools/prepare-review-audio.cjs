@@ -6,7 +6,9 @@ const specs=[
  ['ca-central-alba-gemination-finals-v1','ca-central-didactic-v1','Alba · prova de dicció','ipa'],
  ['ca-central-alba-feedback-2-v1','ca-central-didactic-v1','Alba · quatre incidències','ipa'],
  ['ca-central-alba-diaeresis-sample-v1','ca-central-didactic-v1','Alba · dièresis','ipa'],
- ['ca-valencian-enric-pilot-v1','ca-valencian-didactic-v1','Enric · pilot valencià','ipa']
+ ['ca-valencian-enric-ipa-v1','ca-valencian-didactic-v1','Enric · lot valencià','ipa'],
+ ['ca-valencian-enric-pilot-v1','ca-valencian-didactic-v1','Enric · pilot valencià','ipa'],
+ ['ca-valencian-enric-v-probe-v1','ca-valencian-didactic-v1','Enric · prova de v','ipa']
 ];
 (async()=>{
  const words=A.readJson(A.DEFAULT_CATALOG).catalog.entries.filter(e=>e.mode==='words'),packs=[];
@@ -18,9 +20,10 @@ const specs=[
   }
   const ipas={};
   if(kind==='ipa'){
-   const table=T.load(profile),current=table.rows.filter(r=>files[r.id]).map(r=>({id:r.id,text:r.mot,ipa:r.ipa})).sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0);
+   const table=T.load(profile),snapshotPath=path.join(T.ROOT,'recordings/'+id+'.json');
+   const current=(fs.existsSync(snapshotPath)?A.readJson(snapshotPath).entries:table.rows.filter(r=>files[r.id]).map(r=>({id:r.id,text:r.mot,ipa:r.ipa}))).map(r=>({id:r.id,text:r.text,ipa:r.ipa})).sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0);
    const digest=crypto.createHash('sha256').update(JSON.stringify(current)).digest('hex');
-   if(digest===settings.ipaFingerprint)for(const row of current)ipas[row.id]=row.ipa;
+   if(digest===settings.ipaFingerprint)for(const row of current)if(files[row.id])ipas[row.id]=row.ipa;
   }
   packs.push({id,profile,label,kind,voice:settings.voice,fingerprint:settings.fingerprint,language:'ca',status:'ready',basePath:'output/audio/'+id+'/',files,ipas});
  }

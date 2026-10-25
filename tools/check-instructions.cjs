@@ -34,6 +34,7 @@ const {instructionText} = require('../dictation.js');
     requestSleep: async () => {},
     fetch: async () => {requests++; return new Response(Buffer.from([0x49,0x44,0x33,1]), {headers:{'content-type':'audio/mpeg'}});}
   };
+  const publicBefore=fs.readFileSync(path.join(A.ROOT,'audio/instructions/manifest.json'),'utf8');
   try {
     let result = await I.run({execute:true, afterWords:true}, {...dependencies, gate:()=> 'blocked'});
     assert.equal(result.ok, false); assert.equal(requests, 0);
@@ -53,7 +54,7 @@ const {instructionText} = require('../dictation.js');
     const changed = structuredClone(config); changed.manifest.packs[0].contentFingerprint = 'a'.repeat(64);
     result = await G.runGeneration({...changed, execute:true, confirmF0:true}, dependencies);
     assert.equal(result.reason,'pack-settings'); assert.equal(requests,5);
-    assert.equal(A.readJson(path.join(A.ROOT,'audio/instructions/manifest.json')).packs[0].status,'pending');
+    assert.equal(fs.readFileSync(path.join(A.ROOT,'audio/instructions/manifest.json'),'utf8'),publicBefore,'Generating a local sample must not change public audio');
     assert(!fs.existsSync(path.join(temp,'audio/usage.lock')));
     console.log('Instruccions: text compartit, cinc llargades, rutes, espera del lot, pressupost compartit, represa i canvi de contingut correctes. Cap petició real.');
   } finally {

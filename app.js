@@ -43,7 +43,7 @@
       }
     }catch{}
   }
-  function updateURL(){try{const url=new URL(location.href);url.search='';url.hash='';if(current){url.searchParams.set('seed',S.normalize(current.code));url.searchParams.set('catalogue',current.catalogue);}history.replaceState(null,'',url);}catch{}}
+  function updateURL(){try{const url=new URL(location.href),panel=new URLSearchParams(url.search);url.search='';url.hash='';if(current){url.searchParams.set('seed',S.normalize(current.code));url.searchParams.set('catalogue',current.catalogue);}for(const name of ['panel','mot','audio'])if(panel.has(name))url.searchParams.set(name,panel.get(name));history.replaceState(null,'',url);}catch{}}
   function setCode(code,{keepRequired=false}={}){
     const result=S.resolve(R.editions,code),next=R.editions.find(e=>e.slot===result.epoch);
     if(next.language!==L.id)throw new Error('El codi correspon a una altra llengua.');
@@ -87,7 +87,7 @@
     $('fold-map').setAttribute('aria-label','Full obert: '+layout.hint);$('fold-sketch').innerHTML=foldSketch(layout);$('fold-step-list').innerHTML=layout.steps.map(step=>`<li>${escape(step)}</li>`).join('');
     renderRequired();updateAvailability();
   }
-  function updateAvailability(){const p=pool();$('pool-count').textContent=p.length;$('pool-status').textContent=!session().tags.length?' · Tria almenys un focus.':p.length<session().count?' · Amplia els filtres o redueix la llargada.':edition.slot!==R.current?'Codi d’una edició anterior: conserva els seus mots i criteris. Canvia un focus o prem Nou dictat per fer servir els criteris actuals.':'';$('cancel-search').hidden=!busy;$('resume-search').hidden=busy||!pendingSearch;$('new-dictation').disabled=busy;}
+  function updateAvailability(){const p=pool();$('pool-count').textContent=p.length;$('pool-status').textContent=!session().tags.length?' · Tria almenys un focus.':p.length<session().count?' · Amplia els filtres o redueix la llargada.':'';$('cancel-search').hidden=!busy;$('resume-search').hidden=busy||!pendingSearch;$('new-dictation').disabled=busy;}
   function renderRequired(){
     $('required-list').innerHTML=session().required.map(id=>`<span class="required-chip">${escape(lookup(id)?.text||id)}<button type="button" data-remove-required="${id}" aria-label="Treu ${escape(lookup(id)?.text||id)}">${window.PlecIcons('x')}</button></span>`).join('');suggest();
   }
@@ -156,7 +156,7 @@
       button.title=button.getAttribute('aria-label');button.classList.toggle('is-playing',playing);
       button.innerHTML=window.PlecIcons(playing?'square':'volume-2');
       const link=button.parentElement.querySelector('.catalog-pronunciation');
-      if(link){const target=new URL(link.href),match=available&&new URL(available).pathname.match(/\/output\/audio\/([^/]+)\//);if(match)target.searchParams.set('audio',match[1]);else target.searchParams.delete('audio');link.href=target.href;}
+      if(link){const match=available&&decodeURI(new URL(available).pathname).match(/\/(?:output\/audio|assets\/audio\/ca)\/([^/]+)\//);link.dataset.pack=match?match[1]:'';}
     }
     $('catalog-audio-status').textContent=audioState.errorId?'No s’ha pogut reproduir el mot. Torna-ho a provar.':audioState.phase==='loading'?'Carregant els àudios…':audioState.local&&audioState.phase==='ready'?'Àudios de prova · en revisió':audioState.phase==='unavailable'?'Àudios no disponibles.':audioState.phase==='pending'?'Àudios en preparació':'';
   }
@@ -185,14 +185,22 @@
     const list=$('catalog-list');
     list.setAttribute('aria-label',view.activeInitial?`Resultats del catàleg amb la inicial ${view.activeInitial}`:'Resultats del catàleg, sense coincidències');
     const keepNextFocus=document.activeElement?.id==='catalog-next';
-    list.innerHTML=view.visibleEntries.map(e=>`<div class="catalog-entry" title="${escape(e.tags.map(t=>C.categories.find(c=>c.id===t)?.label||t).join(' · '))}"><span class="entry-copy"><span>${escape(e.text)}</span>${metadata(e)?`<small>${escape(metadata(e))}</small>`:''}</span><button type="button" class="icon-button catalog-speaker" data-audio-id="${escape(e.id)}" aria-label="Escolta ${escape(e.text)}" disabled>${window.PlecIcons('volume-2')}</button>${e.mode==='words'?`<a class="icon-button catalog-pronunciation" href="${escape(new URL('./pronunciacions/?mot='+encodeURIComponent(e.text),location.href).href)}" title="Pronunciació i revisió" aria-label="Pronunciació i revisió de ${escape(e.text)}">${window.PlecIcons('speech')}</a>`:''}</div>`).join('')||'<p class="empty">No hi ha resultats amb aquesta cerca o aquests filtres.</p>';
+    list.innerHTML=view.visibleEntries.map(e=>`<div class="catalog-entry" title="${escape(e.tags.map(t=>C.categories.find(c=>c.id===t)?.label||t).join(' · '))}"><span class="entry-copy"><span>${escape(e.text)}</span>${metadata(e)?`<small>${escape(metadata(e))}</small>`:''}</span><button type="button" class="icon-button catalog-speaker" data-audio-id="${escape(e.id)}" aria-label="Escolta ${escape(e.text)}" disabled>${window.PlecIcons('volume-2')}</button>${e.mode==='words'?`<button type="button" class="icon-button catalog-pronunciation" data-pronunciation-word="${escape(e.text)}" title="Pronunciació i revisió" aria-label="Pronunciació i revisió de ${escape(e.text)}">${window.PlecIcons('speech')}</button>`:''}</div>`).join('')||'<p class="empty">No hi ha resultats amb aquesta cerca o aquests filtres.</p>';
     if(view.nextInitial)list.insertAdjacentHTML('beforeend',`<button type="button" class="small-link catalog-next" id="catalog-next" data-initial="${view.nextInitial}">Continua amb ${view.nextInitial} ${window.PlecIcons('arrow-up-right')}</button>`);
     list.dataset.nextInitial=view.nextInitial||'';
     list.scrollTop=0;
     catalogWheel=browser.noteWheelPosition(catalogWheel,catalogAtBottom());
     refreshCatalogAudio();if(keepNextFocus)list.focus({preventScroll:true});
   }
-  function openCatalog(){renderCatalog(true);window.PlecMotion.open($('catalog-dialog'));catalogAudio.load();$('catalog-search').focus();}
+  function catalogView(view,options={}){
+    const review=view==='pronunciations';catalogAudio.stop();window.PlecPronunciations.stop();
+    $('catalog-words-view').hidden=review;$('catalog-pronunciations-view').hidden=!review;
+    for(const b of document.querySelectorAll('[data-catalog-view]'))b.setAttribute('aria-pressed',String(b.dataset.catalogView===view));
+    $('catalog-dialog').classList.toggle('shows-pronunciations',review);
+    try{const u=new URL(location.href);for(const key of ['panel','mot','audio'])u.searchParams.delete(key);if(review){u.searchParams.set('panel','pronunciacions');if(options.word)u.searchParams.set('mot',options.word);if(options.pack)u.searchParams.set('audio',options.pack);}history.replaceState(null,'',u);}catch{}
+    if(review)window.PlecPronunciations.open(options);else $('catalog-search').focus();
+  }
+  function openCatalog(view='words',options={}){renderCatalog(true);window.PlecMotion.open($('catalog-dialog'));catalogAudio.load();catalogView(view,options);}
   function downloadBlob(blob, filename) {
     const url = URL.createObjectURL(blob), a = document.createElement('a');
     a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 30000);
@@ -264,7 +272,7 @@
   $('open-student').addEventListener('click',()=>{if(current&&!busy)location.href=studentURL();});
   $('copy-student-link').addEventListener('click',()=>{if(current&&!busy)copy(studentURL(),'Enllaç per a l’alumnat copiat.');});
   $('copy-link').addEventListener('click',()=>{if(!current)return;const url=new URL('./',location.href);url.searchParams.set('seed',S.normalize(current.code));url.searchParams.set('catalogue',current.catalogue);copy(url.href,'Enllaç del dictat copiat.');});
-  $('catalog-open').addEventListener('click',openCatalog);$('help-open').addEventListener('click',()=>window.PlecMotion.open($('help-dialog')));
+  $('catalog-open').addEventListener('click',()=>openCatalog());$('help-open').addEventListener('click',()=>window.PlecMotion.open($('help-dialog')));
   function openInfo(dialogId, titleId) {
     const dialog = $(dialogId);
     window.PlecMotion.open(dialog);
@@ -291,6 +299,7 @@
     }
   });
   const releases = [
+    ['1.19', '2026-10-25', ['Laterals plegables en pantalles estretes i peu sempre visible, amb desplaçament intern. Pronunciacions i revisió integrades al mateix catàleg. Publicats 3.080 mots centrals i les instruccions. Taula IPA valenciana completa com a proposta i lot d’Enric en generació amb represa i seguiment.']],
     ['1.18', '2026-10-25', ['Taula web amb català central i valencià costat per costat, escolta per enregistrament, polzes i notes locals exportables. Accés des del catàleg i informes preparats per a GitHub, sense enviament automàtic. Represa cada minut davant errors transitoris de síntesi, amb pressupost i aturada conservats.']],
     ['1.17', '2026-10-24', ['Accentuació només amb accent gràfic, dièresi només amb ï o ü, i combinació dels focus amb qualsevol dels triats. Nova edició del banc per conservar exactament els codis anteriors. Taula valenciana independent i primera prova curta amb Enric, pendent d’escolta i contrast.']],
     ['1.16', '2026-10-24', ['Filtres i gestió del dictat en laterals separats, amb entrada al mode dictat més visible. Catàleg amb inicials de text, capçalera i descàrregues fixes, reproducció dels àudios disponibles i varietats previstes. Tema amb un botó al header i marca compartida amb el dictat. Numeració unificada dins de la versió 1. Mostres IPA i taula fonètica oberta per varietats.']],
@@ -321,8 +330,9 @@
 
   $('catalog-search').addEventListener('input',()=>renderCatalog());$('catalog-tag').addEventListener('change',()=>renderCatalog());$('catalog-stage').addEventListener('change',()=>renderCatalog());
   $('catalog-initials').addEventListener('click',event=>{const link=event.target.closest('[data-initial]');if(link){event.preventDefault();if(link.getAttribute('aria-disabled')!=='true')renderCatalog(false,link.dataset.initial);}});
-  $('catalog-list').addEventListener('click',event=>{const next=event.target.closest('#catalog-next'),speaker=event.target.closest('[data-audio-id]');if(next)renderCatalog(false,next.dataset.initial);else if(speaker&&!speaker.disabled){const entry=lookup(speaker.dataset.audioId);if(entry)catalogAudio.play(entry);}});
-  $('catalog-dialog').addEventListener('close',()=>catalogAudio.stop());$('catalog-dialog').addEventListener('cancel',()=>catalogAudio.stop());
+  for(const b of document.querySelectorAll('[data-catalog-view]'))b.addEventListener('click',()=>catalogView(b.dataset.catalogView));
+  $('catalog-list').addEventListener('click',event=>{const next=event.target.closest('#catalog-next'),speaker=event.target.closest('[data-audio-id]'),ipa=event.target.closest('[data-pronunciation-word]');if(ipa){event.preventDefault();catalogView('pronunciations',{word:ipa.dataset.pronunciationWord,pack:ipa.dataset.pack});}else if(next)renderCatalog(false,next.dataset.initial);else if(speaker&&!speaker.disabled){const entry=lookup(speaker.dataset.audioId);if(entry)catalogAudio.play(entry);}});
+  for(const type of ['close','cancel'])$('catalog-dialog').addEventListener(type,()=>{catalogAudio.stop();window.PlecPronunciations.stop();if(type==='close')try{const u=new URL(location.href);for(const key of ['panel','mot','audio'])u.searchParams.delete(key);history.replaceState(null,'',u);}catch{}});
   document.addEventListener('visibilitychange',()=>{if(document.hidden)catalogAudio.stop();});window.addEventListener('pagehide',()=>catalogAudio.stop());
   $('catalog-list').addEventListener('scroll',()=>{catalogWheel=window.PlecCatalogBrowser.noteWheelPosition(catalogWheel,catalogAtBottom());},{passive:true});
   $('catalog-list').addEventListener('wheel',event=>{
@@ -341,7 +351,6 @@
     downloadBlob(new Blob([text],{type:'text/tab-separated-values;charset=utf-8'}),`plec-${L.id}-revisio.tsv`);
   });
   $('download-pdf').addEventListener('click',()=>exportPdf(false));$('teacher-pdf').addEventListener('click',()=>exportPdf(true));
-  $('legacy-export').hidden=!legacy;$('legacy-export').addEventListener('click',()=>legacy&&downloadBlob(new Blob([legacy],{type:'application/json'}),`plec-dades-anteriors-${L.id}.json`));
   restore();updateControls();renderPreview();
   const incoming=new URL(location.href).searchParams;
   try{
@@ -354,5 +363,6 @@
       if(S.recipeIndex(recipe())!==result.index||!session().required.every(id=>result.entries.some(e=>e.id===id)))generate();else setCode(result.code,{keepRequired:true});
     }else generate();
   }catch(error){current=null;renderPreview();$('search-status').textContent=error.message;}
+  if(incoming.get('panel')==='pronunciacions')openCatalog('pronunciations',{word:incoming.get('mot')||'',pack:incoming.get('audio')||''});
   window.PlecApp={buildPdf,svgFor};
 })();

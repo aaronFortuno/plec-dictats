@@ -28,7 +28,7 @@ El catàleg actual conté **3.299 paraules, 22.943 caràcters de text**, i **96 
 
 F0 permet **20 peticions cada 60 segons** i no inclou l’API de síntesi massiva. Els nostres lots faran peticions ordinàries seqüencials, amb quatre segons com a mínim entre inicis. A aquest ritme, 3.395 fitxers poden requerir prop de quatre hores, a més de latència i possibles aturades. El nombre de caràcters és modest, però el nombre de fitxers determina el temps. Es pot reprendre la feina saltant els MP3 ja generats. [Límits oficials](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits#text-to-speech-quotas-and-limits-per-resource).
 
-El generador s’ha de limitar a **400.000 caràcters estimats al mes**, comptant reserves abans de cada petició i ús extern declarat. Aquest registre és local: no consulta la quota d’Azure ni sap què has fet amb Speech Studio o altres eines. Si treballes en un altre ordinador o esborres el registre, no pots interpretar-ne el valor com el consum total. Conserva’l i contrasta’l amb les mètriques del recurs. Un error 429 atura el lot; no augmenta quota ni canvia automàticament de servei.
+El generador s’ha de limitar a **450.000 caràcters estimats al mes**, comptant reserves abans de cada petició i ús extern declarat. Aquest registre és local: no consulta la quota d’Azure ni sap què has fet amb Speech Studio o altres eines. Si treballes en un altre ordinador o esborres el registre, no pots interpretar-ne el valor com el consum total. Conserva’l i contrasta’l amb les mètriques del recurs. Un error 429 atura el lot; no augmenta quota ni canvia automàticament de servei.
 
 ## Publicació i varietats futures
 
@@ -84,16 +84,16 @@ No esborrem `output/audio/usage.json`: conserva les reserves mensuals i el momen
 
 Quan aprovem la mostra, decidirem si mantenim Alba, el ritme de −10% i aquesta varietat. Per canviar veu o velocitat es crea un paquet amb ID diferent: l’eina impedeix barrejar ajustos amb els MP3 ja generats. Repetir una ordre amb els mateixos ajustos salta els fitxers existents amb capçalera MP3 compatible; aquesta comprovació tècnica no substitueix escoltar-los.
 
-## Situació registrada el 24/10/2026
+## Situació registrada el 25/10/2026
 
-**Actualització posterior al pilot valencià:** 20 peticions amb Enric, 1.702 caràcters nous. El registre local queda en **121.529**, amb **278.471** fins al límit preventiu. Cap lot complet d’una altra veu s’ha iniciat. Vegeu [VALENCIA.md](VALENCIA.md). Els recomptes del paràgraf següent descriuen el punt anterior al pilot.
+Abans del lot complet d’Enric, el registre local reserva **121.686** caràcters, incloent el pilot de vint mots i la prova de dos mots amb /v/. La passada IPA valenciana estima **288.630** addicionals: **410.316** totals abans de reintents. El límit preventiu local passa de 400.000 a **450.000** per fer cabre la passada completa, conservant un marge respecte dels **500.000 gratuïts F0**. Cada reintent es reserva abans de fer-lo; no s’augmenta el topall automàticament.
 
-Després del lot de 3.072 mots, les instruccions i les mostres IPA (nou mots, quatre incidències i vuit dièresis), el registre local reserva **119.827 caràcters** a l’octubre. Queden **280.173** fins al límit preventiu de 400.000. Equival aproximadament al **24% dels 500.000 caràcters mensuals F0**; no és una lectura de facturació Azure i pressuposa que no hi ha ús extern sense declarar. Contrasta el total al recurs abans d’ampliar la generació. [Preus oficials de Speech](https://azure.microsoft.com/en-gb/pricing/details/speech/?cdn=disable).
+L’estimació és local, no una lectura de facturació Azure. El total previst deixa 89.684 caràcters respecte de F0 i 39.684 fins al límit preventiu. No inclou ús extern que no s’hagi declarat. [Preus oficials](https://azure.microsoft.com/en-us/pricing/details/speech/).
 
-El pla històric de 227 dièresis estima 20.173 caràcters amb SSML; cal reconstruir-lo des de les transcripcions que finalment s’aprovin. Una altra passada ordinària de totes les paraules estima 125.212 caràcters amb els ajustos documentats, però una passada IPA tindrà un pressupost diferent segons les transcripcions i el SSML. No s’ha iniciat cap altre lot complet ni una altra veu.
+El pla històric central de 227 dièresis estima uns 20.173 caràcters. Continua separat del lot valencià; no s’ha encuat una altra passada completa d’Alba. S’han publicat els 3.080 mots centrals disponibles i les cinc instruccions, amb les millores IPA seleccionades i els originals conservats als paquets de revisió.
 
-Azure publica `ca-ES-AlbaNeural`, `ca-ES-JoanaNeural` i `ca-ES-EnricNeural`; aquesta llista no les identifica com a central, valenciana o balear. Una veu diferent no constitueix automàticament una varietat dialectal. Per preparar-ne una altra cal un perfil IPA propi, una mostra curta amb la veu candidata i revisió per parlants de la varietat abans de generar el banc. També es pot fer enregistrament manual mantenint el mateix contracte de paquets. [Veus oficials](https://learn.microsoft.com/azure/cognitive-services/speech-service/language-support?tabs=tts).
+Azure publica Alba, Joana i Enric com a veus ca-ES; el nom d’una veu no certifica una varietat. El perfil valencià usa IPA pròpia i el pilot d’Enric ha estat aprovat auditivament pel docent. El lot nou continua pendent de revisió individual. Vegeu [VALENCIA.md](VALENCIA.md).
 
-## Represa automàtica des de la versió 1.18
+## Represa i seguiment
 
-Els lots de mots, instruccions i proves reprenen després d’un minut els errors de connexió, timeout, cos de resposta o servidor. Es reserva cada nova petició al mateix registre de consum. No es reintenten credencials incorrectes, 429 ni pressupost esgotat. Un bloqueig local del fitxer es resol reutilitzant l’àudio ja rebut. Això substitueix la política inicial de no reintentar. Consulteu [REPRESA-AUDIO.md](REPRESA-AUDIO.md) abans de deixar una execució sense supervisió. No s’ha iniciat cap lot nou en aquesta iteració; el registre continua en 121.529 caràcters.
+Els errors transitoris es reintenten després d’un minut, amb reserves per intent. No es reintenten automàticament credencials incorrectes, 429 ni pressupost esgotat. Un bloqueig local del fitxer reutilitza el buffer rebut. El lot d’Enric té procés desat, prevenció temporal de suspensió automàtica i seguiment periòdic autoritzat. Consulteu [REPRESA-AUDIO.md](REPRESA-AUDIO.md).

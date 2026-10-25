@@ -1,13 +1,13 @@
 (function(){
  'use strict';
  const $=id=>document.getElementById(id),B=window.PlecCatalogBrowser,R=window.PlecPronunciationReview;
- const base=new URL('../../',location.href),profiles={central:'ca-central-didactic-v1',valencia:'ca-valencian-didactic-v1'};
+ const base=new URL('.',document.currentScript.src),profiles={central:'ca-central-didactic-v1',valencia:'ca-valencian-didactic-v1'};
  const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const icon=name=>window.PlecIcons(name);
  let storage;try{storage=window.localStorage;}catch{storage={getItem(){throw Error();},setItem(){throw Error();}};}
  const store=R.create(storage),contexts=new Map();
  let rows=[],rowIndex=new Map(),manifest={packs:[]},initial='A',limit=50,player=null,playKey=null,epoch=0;
- const arrival=new URL(location.href).searchParams,deepWord=arrival.get('mot')||'';
+ let deepWord='',requestedAudio='',loading=null,openVersion=0;
  function saveStatus(text='Desat en aquest navegador.'){$('review-save-status').textContent=text;const warning=store.error();$('review-storage-warning').hidden=!warning;$('review-storage-warning').textContent=warning||'';progress();}
  function currentReviews(){return store.all().filter(r=>{const variety=Object.keys(profiles).find(v=>profiles[v]===r.profile);if(!variety)return false;
   if(r.target==='ipa')return rowIndex.get(r.id)?.[variety]?.ipa===r.ipa;
@@ -70,11 +70,10 @@
  $('import-reviews-open').addEventListener('click',()=>$('import-reviews').click());
  $('import-reviews').addEventListener('change',async event=>{try{const file=event.target.files[0];if(!file)return;if(file.size>20*1024*1024)throw Error();const count=store.importData(JSON.parse(await file.text()));render();saveStatus(`${count} anotacions importades; es conserva la més recent de cada versió.`);}catch{saveStatus('No s’ha pogut importar el fitxer. Les notes actuals es conserven.');}finally{event.target.value='';}});
  $('report-errors').addEventListener('click',()=>{const entries=currentReviews();if(!entries.some(r=>r.status==='review'))return saveStatus('Marca almenys una incidència abans de preparar-ne l’informe.');stop();window.open(R.issueURL(entries),'_blank','noopener,noreferrer');});
- $('review-help-open').addEventListener('click',()=>{stop();PlecMotion.open($('review-help'));});$('review-help').querySelector('[data-close]').addEventListener('click',()=>PlecMotion.close($('review-help')));
- $('review-help').addEventListener('click',e=>{if(e.target!==e.currentTarget)return;const r=e.currentTarget.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)PlecMotion.close(e.currentTarget);});
+ $('review-help-open').addEventListener('click',()=>{stop();PlecMotion.open($('review-help'));});
  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});window.addEventListener('pagehide',stop);
  async function json(relative){const r=await fetch(new URL(relative,base));if(!r.ok)throw Error();return r.json();}
- (async()=>{
+ async function load(){
   try{
    const data=await Promise.all(['central','valencian'].map(v=>json('audio/pronunciation/ca/'+v+'-didactic.json')));
    const byId=new Map();for(let i=0;i<data.length;i++){const variety=i?'valencia':'central';if(data[i].profile!==profiles[variety]||!Array.isArray(data[i].entries))throw Error();for(const e of data[i].entries){let row=byId.get(e.id);if(!row){row={id:e.id,text:e.text};byId.set(e.id,row);}if(row.text!==e.text)throw Error();row[variety]=e;}}
@@ -82,9 +81,15 @@
    const local=['127.0.0.1','localhost','[::1]'].includes(location.hostname);
    try{manifest=await json(local?'output/audio/review-manifest.json':'audio/review-manifest.json');if(manifest.schemaVersion!==1||!Array.isArray(manifest.packs))throw Error();manifest.packs=manifest.packs.filter(p=>Object.values(profiles).includes(p.profile)&&typeof p.fingerprint==='string'&&typeof p.id==='string');}catch{manifest={schemaVersion:1,defaultPacks:{},packs:[]};}
    for(const variety of ['central','valencia']){const packs=manifest.packs.filter(p=>p.profile===profiles[variety]);$(variety+'-recording').innerHTML=packs.length?packs.map(p=>`<option value="${esc(p.id)}">${esc(p.label)}</option>`).join(''):'<option value="">Sense àudios publicats</option>';}
-   const requestedPack=manifest.packs.find(p=>p.id===arrival.get('audio'));if(requestedPack){const variety=Object.keys(profiles).find(v=>profiles[v]===requestedPack.profile);if(variety)$(variety+'-recording').value=requestedPack.id;}
-   $('review-notice').textContent=local?'Àudios locals de revisió. Les taules contenen propostes i camps pendents; les notes no modifiquen els originals.':'Les taules contenen propostes i camps pendents. Els altaveus s’activaran a mesura que es publiquin els àudios.';
-   if(deepWord){$('pronunciation-search').value=deepWord;initial=B.initialFor(deepWord);}render();saveStatus('');
-  }catch{$('review-notice').textContent='No s’han pogut carregar les taules. Torna a carregar la pàgina; les notes desades es conserven.';}
- })();
+   $('review-notice').textContent='Les transcripcions són propostes en revisió. Les anotacions no modifiquen els originals.';
+   saveStatus('');
+  }catch{loading=null;$('review-notice').dataset.error='true';$('review-notice').textContent='No s’han pogut carregar les taules. Torna a obrir aquesta vista; les notes desades es conserven.';}
+ }
+ async function open({word='',pack=''}={}){
+  const version=++openVersion;deepWord=word;requestedAudio=pack;if(!loading)loading=load();await loading;if(version!==openVersion)return;
+  if(requestedAudio){const p=manifest.packs.find(p=>p.id===requestedAudio),v=p&&Object.keys(profiles).find(v=>profiles[v]===p.profile);if(v)$(v+'-recording').value=p.id;}
+  if(word){$('pronunciation-search').value=word;initial=B.initialFor(word);limit=50;}
+  if(!$('catalog-pronunciations-view').hidden){render();$('pronunciation-search').focus();}
+ }
+ window.PlecPronunciations={open,stop};
 })();

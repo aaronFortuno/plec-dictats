@@ -64,3 +64,7 @@ Aquest perfil té inventari d’edició `ipa-valencian-draft`, que permet conser
 [registry.json](registry.json) identifica cada perfil per llengua, varietat, dicció, edició del banc i fitxer. Cada varietat té un perfil i una taula propis: no s’hi copia automàticament la transcripció central ni se’n canvia només l’etiqueta. Cal revisar vocals, accent, consonants i decisions de dicció allà on variïn. Hi ha propostes inicials centrals i valencianes; altres llengües requeriran també el seu inventari fonètic i validador.
 
 Per reutilitzar o contribuir dades, conserva perfil, ID, fonts i estat. Una correcció pot arribar com un canvi de TSV a GitHub, amb el motiu i la font; la comprovació tècnica no substitueix el contrast lingüístic ni l’escolta. Vegeu el [procediment complet](../../docs/PRONUNCIACIO.md).
+
+## Valencià complet com a proposta
+
+La [taula valenciana](ca/valencian-didactic.tsv) conté 3.299 propostes i cap validació lingüística. S’han conservat les 22 inicials i completat les altres amb catalan2ipa i pistes editorials explícites; les limitacions i la síntesi d’Enric estan documentades a [VALENCIA.md](../../docs/VALENCIA.md). Les anotacions d’àudio continuen separades de l’estat de la transcripció.
