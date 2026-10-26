@@ -112,7 +112,7 @@
   const MM = 25.4 / 72;
   function fitSize(shape) {
     if (!shape.maxWidth || !measureContext) return shape.size;
-    measureContext.font = `${shape.weight ? 'bold ' : ''}${shape.size * MM}px ${shape.font==='brand'?'Times New Roman':'Arial'}`;
+    measureContext.font = `${shape.weight ? 'bold ' : ''}${shape.size * MM}px Arial`;
     return Math.min(shape.size, shape.size * shape.maxWidth / Math.max(1, measureContext.measureText(shape.value).width));
   }
   // Les fonts estàndard del PDF admeten tots els caràcters catalans.
@@ -121,9 +121,10 @@
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" role="img" aria-label="Full A4: ${layout.name}, model a ${layout.side === 'left' ? 'l’esquerra' : 'la dreta'}" data-fold-style="${layout.foldStyle}" data-model-side="${layout.side}"><rect width="210" height="297" fill="white"/>${shapes.map(s => {
       if (s.type === 'line') return `<line x1="${s.x}" y1="${s.y}" x2="${s.x2}" y2="${s.y2}" stroke="${s.color}" stroke-width="${s.width}" ${s.dash ? 'stroke-dasharray="1.5 1.4"' : ''}/>`;
       if (s.type === 'rect') return `<rect x="${s.x}" y="${s.y}" width="${s.w}" height="${s.h}" fill="${s.color}"/>`;
+      if (s.type === 'path') return `<path d="${s.d}" transform="translate(${s.x} ${s.y}) scale(${s.scale})" fill="${s.fill?s.color:'none'}" stroke="${s.fill?'none':s.color}" stroke-width="${s.width}" stroke-linecap="round" stroke-linejoin="round" data-brand-part="${s.part}"/>`;
       if (s.type === 'polyline') return `<path d="M ${s.points.map(p=>p.join(' ')).join(' L ')}${s.fill?' Z':''}" fill="${s.fill||'none'}" stroke="${s.color}" stroke-width="${s.width}" stroke-linecap="round" stroke-linejoin="round" ${s.dash?'stroke-dasharray=".8 .7"':''}/>`;
       const safeShape = { ...s, value: printable(s.value) };
-      return `<text x="${s.x}" y="${s.y}" font-family="${s.font==='brand'?'Times New Roman,Times,serif':'Arial,Helvetica,sans-serif'}" font-size="${fitSize(safeShape) * MM}" font-weight="${s.weight ? 700 : 400}" fill="${s.color}" text-anchor="${s.align === 'right' ? 'end' : s.align === 'center' ? 'middle' : 'start'}">${escape(safeShape.value)}</text>`;
+      return `<text x="${s.x}" y="${s.y}" font-family="Arial,Helvetica,sans-serif" font-size="${fitSize(safeShape) * MM}" font-weight="${s.weight ? 700 : 400}" fill="${s.color}" text-anchor="${s.align === 'right' ? 'end' : s.align === 'center' ? 'middle' : 'start'}">${escape(safeShape.value)}</text>`;
     }).join('')}</svg>`;
   }
 
@@ -135,7 +136,7 @@
     $('seed-code').textContent=busy?'…':current?.code||'—';$('selection-summary').textContent=`${entries.length} / ${session().count} elements`;
     $('preview-layout').textContent=`${layout.name} · model a ${state.modelSide==='left'?'l’esquerra':'la dreta'}`;
     document.querySelector('.dictation-nav').href=new URL('./dictat/?variety='+state.variety,location.href).href;
-    for(const id of ['download-pdf','teacher-pdf','copy-code','copy-link','open-student','copy-student-link'])$(id).disabled=!ready;
+    for(const id of ['download-pdf','copy-code','copy-link','open-student','copy-student-link'])$(id).disabled=!ready;
     $('sheet-preview').setAttribute('aria-label',`Vista prèvia: ${entries.length} elements. Model visible.`);fitPaper();
   }
   function openCatalog(options={}){
@@ -145,16 +146,16 @@
     const url = URL.createObjectURL(blob), a = document.createElement('a');
     a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 30000);
   }
-  async function buildPdf(teacher = false) { return window.PlecPdf.build(sheetOptions(), teacher, C.categories); }
-  async function exportPdf(teacher) {
-    const button = $(teacher ? 'teacher-pdf' : 'download-pdf'), original = button.innerHTML;
+  async function buildPdf() { return window.PlecPdf.build(sheetOptions()); }
+  async function exportPdf() {
+    const button = $('download-pdf'), original = button.innerHTML;
     const metrics={mode:state.mode,count:session().count,fold:state.foldStyle,stage:state.mode==='pseudo'?'none':session().stage};
     button.disabled = true; button.textContent = 'Preparant…';
     try {
-      const bytes = await buildPdf(teacher);
-      downloadBlob(new Blob([bytes], { type: 'application/pdf' }), `plec-${state.mode === 'words' ? 'paraules' : 'pseudoparaules'}-${session().count}-${state.foldStyle === 'quarter' ? 'quart' : 'tercos'}-${state.modelSide === 'right' ? 'dreta' : 'esquerra'}${teacher ? '-guia' : ''}.pdf`);
-      track(teacher?'guide-exported':'worksheet-exported',teacher?{mode:metrics.mode,count:metrics.count}:metrics);
-      say(teacher ? 'Guia docent descarregada, en el mateix ordre que el full.' : 'PDF descarregat. Imprimeix-lo en A4 a escala 100 %.');
+      const bytes = await buildPdf();
+      downloadBlob(new Blob([bytes], { type: 'application/pdf' }), `plec-${state.mode === 'words' ? 'paraules' : 'pseudoparaules'}-${session().count}-${state.foldStyle === 'quarter' ? 'quart' : 'tercos'}-${state.modelSide === 'right' ? 'dreta' : 'esquerra'}.pdf`);
+      track('worksheet-exported',metrics);
+      say('PDF descarregat. Imprimeix-lo en A4 a escala 100 %.');
     } catch (error) { track('technical-error',{kind:'pdf'});say('No s’ha pogut generar el PDF. ' + error.message); }
     finally { button.innerHTML = original; renderPreview(); }
   }
@@ -174,7 +175,7 @@
   $('required-word').addEventListener('keydown',event=>{if(!event.isComposing&&['Enter',','].includes(event.key)){event.preventDefault();addRequired();}});
   $('required-list').addEventListener('click',event=>{const b=event.target.closest('[data-remove-required]');if(!b)return;session().required=session().required.filter(id=>id!==b.dataset.removeRequired);persist();renderRequired();generate();});
   // A fixed tooltip stays readable outside the scrollable configuration panel.
-  function setupHelp(triggerId,buttonId,tipId){
+  function setupHelp(triggerId,buttonId,tipId,{hoverTip=true}={}){
   const helpTrigger=$(triggerId),helpButton=$(buttonId),helpTip=$(tipId);
   let helpPinned=false,helpCloseTimer,helpHideTimer;
   function positionHelp(){
@@ -194,10 +195,10 @@
   }
   function scheduleHelpClose(){
     clearTimeout(helpCloseTimer);helpCloseTimer=setTimeout(()=>{
-      if(!helpPinned&&!helpTrigger.matches(':hover')&&!helpTip.matches(':hover')&&!helpTrigger.contains(document.activeElement))hideRequiredHelp();
+      if(!helpPinned&&!helpTrigger.matches(':hover')&&!(hoverTip&&helpTip.matches(':hover'))&&!helpTrigger.contains(document.activeElement))hideRequiredHelp();
     },140);
   }
-  for(const target of [helpTrigger,helpTip]){target.addEventListener('pointerenter',showRequiredHelp);target.addEventListener('pointerleave',scheduleHelpClose);}
+  for(const target of hoverTip?[helpTrigger,helpTip]:[helpTrigger]){target.addEventListener('pointerenter',showRequiredHelp);target.addEventListener('pointerleave',scheduleHelpClose);}
   helpTrigger.addEventListener('focusin',showRequiredHelp);helpTrigger.addEventListener('focusout',scheduleHelpClose);
   helpButton.addEventListener('click',()=>{helpPinned=!helpPinned;if(helpPinned)showRequiredHelp();else hideRequiredHelp();});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'){helpPinned=false;hideRequiredHelp();}});
@@ -207,7 +208,7 @@
   window.addEventListener('resize',()=>{if(!helpTip.hidden)positionHelp();});
   }
   setupHelp('required-help-trigger','required-help-toggle','required-help');
-  setupHelp('focus-help-trigger','focus-help-toggle','focus-help');
+  setupHelp('focus-help-toggle','focus-help-toggle','focus-help',{hoverTip:false});
   $('recover-form').addEventListener('submit',event=>{event.preventDefault();try{const resolved=S.resolve(R.editions,$('recover-code').value);stopSearch();setCode(resolved.code);$('recover-code').value='';$('search-status').textContent='';track('code-recovered',{result:'ok'});say('Dictat recuperat amb els mateixos mots, ordre i filtres.');}catch(error){track('code-recovered',{result:'invalid'});say(error.message);}});
   async function copy(value,success,target){try{await navigator.clipboard.writeText(value);if(target)track('share-copied',{target});say(success);}catch{say('No s’ha pogut copiar automàticament. El codi és '+(current?.code||'')+'.');}}
   $('copy-code').addEventListener('click',()=>current&&copy(current.code,'Codi copiat.','code'));
@@ -215,8 +216,8 @@
   $('pronunciation-variety').addEventListener('change',()=>{state.variety=window.PlecAudioVarieties.definition($('pronunciation-variety').value).id;persist();renderPreview();updateURL();});
   const studentURL=()=>LT.publicDictationURL(shareOptions());
   $('open-student').addEventListener('click',()=>{if(current&&!busy)location.href=LT.dictationURL(new URL('../',location.href),shareOptions());});
-  $('copy-student-link').addEventListener('click',()=>{if(current&&!busy)copy(studentURL(),'Enllaç per a l’alumnat copiat.','student');});
-  $('copy-link').addEventListener('click',()=>{if(current&&!busy)copy(LT.publicComposerURL(shareOptions()),'Enllaç del dictat copiat.','worksheet');});
+  $('copy-student-link').addEventListener('click',()=>{if(current&&!busy)copy(studentURL(),'Enllaç del dictat oral copiat.','student');});
+  $('copy-link').addEventListener('click',()=>{if(current&&!busy)copy(LT.publicComposerURL(shareOptions()),'Enllaç del full i del configurador copiat.','worksheet');});
   $('catalog-open').addEventListener('click',()=>openCatalog());$('help-open').addEventListener('click',()=>window.PlecMotion.open($('help-dialog')));
   function openInfo(dialogId, titleId) {
     const dialog = $(dialogId);
@@ -244,6 +245,7 @@
     }
   });
   const releases = [
+    ['1.26', '2026-10-26', ['Marca vectorial compartida entre web i PDF, amb el lema imprès a la mateixa amplada. Lateral reorganitzat: PDF prioritari i dictat oral separat, còpia i compartició amb icones. Ajuda dels focus només a l’interrogant. Retirada la guia docent i recuperat el format de les notes de l’ajuda, amb una explicació breu del vocabulari bàsic.']],
     ['1.25', '2026-10-26', ['Vocabulari bàsic: selecció editorial de 350 mots, combinable amb nivell i focus, consultable i descarregable al catàleg. Codis antics conservats. Marca plec al full, capçalera i gràfic de l’ajuda alineats, ajuda de plegat simplificada i scroll intern compartit als diàlegs.']],
     ['1.24', '2026-10-26', ['Vista prèvia tàctil: arrossega el full amb un dit i fes zoom amb dos. Instruccions de plec amb esquemes vectorials al peu de la columna del QR, adaptats a terços o quarts i al costat del model. Ajudes dels avisos més clares, separades de la bandera, i passos de privacitat segons el navegador. Número de paraula destacat dins el botó del dictat.']],
     ['1.23', '2026-10-26', ['Analítica agregada amb Umami i controls de privacitat. Avís d’àudio amb un clic, confirmació de recepció i bloqueig de duplicats per mot, varietat i enregistrament durant la pestanya. Els avisos queden inactius quan el tracking no està disponible.']],
@@ -293,7 +295,7 @@
     const text=['paraula\ttipus\tvocabulari\tortografia\tfocus\tid',...rows.map(e=>[e.text,e.mode,e.vocabulary||'',e.orthography||'',e.tags.join(','),e.id].join('\t'))].join('\n')+'\n';
     downloadBlob(new Blob([text],{type:'text/tab-separated-values;charset=utf-8'}),`plec-${L.id}-revisio.tsv`);
   });
-  $('download-pdf').addEventListener('click',()=>exportPdf(false));$('teacher-pdf').addEventListener('click',()=>exportPdf(true));
+  $('download-pdf').addEventListener('click',exportPdf);
   restore();
   if(arrival.searchParams.has('variety')){try{state.variety=window.PlecAudioVarieties.definition(arrival.searchParams.get('variety')).id;}catch(error){say(error.message);}}
   updateControls();renderPreview();

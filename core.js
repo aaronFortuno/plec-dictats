@@ -2,6 +2,7 @@
   'use strict';
   const profile = root.PlecLanguage || (typeof module !== 'undefined' ? require('./locales/ca/config.json') : null);
   const QR = root.PlecWorksheetQR || (typeof module !== 'undefined' ? require('./worksheet-qr.js') : null);
+  const Brand = root.PlecBrand || (typeof module !== 'undefined' ? require('./brand.js') : null);
   const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase(profile.locale);
   function migrateFocusTags(tags, available, retired = []) {
     const active = [...new Set(tags.filter(tag => available.includes(tag)))];
@@ -153,12 +154,8 @@
     const layout = foldLayout(foldStyle, modelSide);
     const { x: modelX, width: modelWidth } = layout.modelArea;
     const { x: writeX, width: writeWidth } = layout.writingArea;
-    const brandPoint=([x,y])=>[modelX+x*7/42,10.5+y*7/44];
-    for(const points of [[[3,8],[15,3],[28,8],[39,3],[39,36],[28,41],[15,36],[3,41],[3,8]],[[15,3],[15,36]],[[28,8],[28,41]]]){
-      shapes.push({type:'polyline',points:points.map(brandPoint),color:'#234d43',width:.3,fill:null,role:'worksheet-brand'});
-    }
-    text(modelX+8.5,15.5,'plec',20,true,'#234d43',{font:'brand',role:'worksheet-brand'});
-    text(modelX+20.65,15.5,'.',20,true,'#b84f34',{font:'brand',role:'worksheet-brand'});
+    const brandWidth=Math.min(modelWidth-4,36);
+    shapes.push(...Brand.shapes(modelX+(modelWidth-brandWidth)/2,10,brandWidth));
     text(writeX, 15, seedCode ? `${seedLanguage.toUpperCase()} / ${seedCode}` : 'plec / dictat', seedCode ? 9.5 : 8, true, '#234d43', { maxWidth: writeWidth });
     text(writeX, 25, title || (mode === 'words' ? 'Dictat de paraules' : 'Dictat de pseudoparaules'), 12, true, '#222222', { maxWidth: writeWidth });
     text(writeX, 34, 'Nom:', 8); line(writeX + 8, 35, writeX + writeWidth, 35);
@@ -207,28 +204,6 @@
     }
     return shapes;
   }
-  function teacherSheet({ entries, title, mode, seedCode, seedLanguage = 'ca' }, categories) {
-    const shapes = [];
-    const text = (x, y, value, size = 10, weight = false, color = '#222222', extra = {}) => shapes.push({ type: 'text', x, y, value, size, weight, color, ...extra });
-    text(12, 15, 'plec / guia de lectura docent' + (seedCode ? ` · ${seedLanguage.toUpperCase()} / ${seedCode}` : ''), 9, true, '#222222', { maxWidth: 186 });
-    text(12, 28, title || 'Guia del dictat', 17, true, '#222222', { maxWidth: 186 });
-    text(12, 38, `${entries.length} ${mode === 'words' ? 'paraules' : 'pseudoparaules'}`, 10);
-    text(12, 49, 'Llegeix cada element amb naturalitat i repeteix-lo abans de passar al següent.', 9);
-    if (mode === 'words') {
-      text(12, 56, 'Dona un context oral breu si cal aclarir el significat, sense mostrar la grafia.', 9);
-    } else {
-      text(12, 56, 'Acorda la pronunciació i la síl·laba tònica abans de la sessió.', 9);
-      text(12, 63, 'Valora la correspondència so-grafia: el model escrit no és l’única resposta possible.', 9);
-    }
-    entries.forEach((entry, i) => {
-      const y = 78 + i * 7.7;
-      text(12, y, `${i + 1}.`, 10, false, '#666666');
-      text(24, y, entry.text, 12, true, '#222222', { maxWidth: 72 });
-      text(102, y, entry.tags.map(t => categories.find(c => c.id === t)?.label || 'Personalitzada').join(' · '), 8, false, '#555555', { maxWidth: 96 });
-    });
-    text(12, 282, mode === 'pseudo' ? 'Banc de pràctica creat per a l’aula; no és una prova estandarditzada.' : 'Desplega el model al final i revisa i corregeix a la mateixa columna on has escrit.', 8);
-    return shapes;
-  }
-  root.PlecCore = { normalize, migrateFocusTags, shuffled, matchesStage, candidates, generate, propose, validateCustom, foldLayout, worksheet, teacherSheet };
+  root.PlecCore = { normalize, migrateFocusTags, shuffled, matchesStage, candidates, generate, propose, validateCustom, foldLayout, worksheet };
   if (typeof module !== 'undefined') module.exports = root.PlecCore;
 })(typeof window === 'undefined' ? globalThis : window);

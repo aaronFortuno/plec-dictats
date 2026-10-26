@@ -27,7 +27,6 @@ Els noms d'esdeveniment són estables i independents de la llengua de la interf�
 | --- | --- | --- |
 | Visita de pàgina | Una entrada a cada pantalla real, amb la ruta neta | Les pròpies del tracker; sense dades personalitzades |
 | `worksheet-exported` | PDF generat i lliurat a l'acció de descàrrega | `mode`, `count`, `fold`, `stage` |
-| `guide-exported` | Guia docent generada i lliurada a l'acció de descàrrega | `mode`, `count` |
 | `dictation-started` | Sessió oral creada, després de superar la preparació | `mode`, `count`, `variety` |
 | `dictation-completed` | S'arriba a la pantalla final | `mode`, `count`, `variety`, `duration_bucket` |
 | `code-recovered` | Intent manual de recuperar un dictat resolt | `result`: `ok` o `invalid` |
@@ -123,3 +122,5 @@ En Brave, abaixar els escuts només afecta el bloqueig del lloc: el GPC general 
 - [Configuració del tracker](https://docs.umami.is/docs/tracker-configuration).
 - [Funcions del tracker](https://docs.umami.is/docs/tracker-functions).
 - [Preguntes freqüents i privacitat](https://docs.umami.is/docs/faq).
+
+La versió 1.26 retira la guia docent separada i deixa d’emetre `guide-exported`. Els esdeveniments històrics no es modifiquen. El PDF del full continua emetent `worksheet-exported`.

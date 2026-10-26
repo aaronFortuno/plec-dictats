@@ -1,0 +1,14 @@
+/* Generated fixed text artwork. Source: tools/build-brand.cjs and assets/brand/. */
+(function(root){
+ 'use strict';
+ const geometry=__GEOMETRY__,palette={ink:'#233a33',green:'#234d43',accent:'#b84f34'};
+ function svg(part){const b=geometry[part];return '<svg xmlns="http://www.w3.org/2000/svg" class="'+(part==='mark'?'brand-mark':'brand-tagline')+'" viewBox="0 0 '+b.frame.width+' '+b.frame.height+'" overflow="visible" aria-hidden="true">'+b.paths.map(s=>'<path d="'+s.d+'" fill="'+(s.fill?'var(--'+s.color+','+palette[s.color]+')':'none')+'" stroke="'+(s.fill?'none':'var(--'+s.color+','+palette[s.color]+')')+'" stroke-width="'+(s.width||0)+'" stroke-linecap="round" stroke-linejoin="round"/>').join('')+'</svg>';}
+ function shapes(x,y,width){
+  const result=[];let top=y;
+  for(const part of ['mark','tagline']){const b=geometry[part],scale=width/b.bounds.width;
+   for(const s of b.paths)result.push({type:'path',d:s.d,x:x-b.bounds.x*scale,y:top-b.bounds.y*scale,scale,fill:s.fill,color:palette[s.color],width:s.width||0,value:s.value,role:'worksheet-brand',part,component:s.component});
+   top+=b.bounds.height*scale+2;
+  }return result;
+ }
+ const api={geometry,svg,shapes};root.PlecBrand=api;if(typeof module!=='undefined')module.exports=api;
+})(typeof window==='undefined'?globalThis:window);

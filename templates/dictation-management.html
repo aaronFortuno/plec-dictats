@@ -1,0 +1,20 @@
+<aside class="management card" aria-label="Gestió del full i del dictat oral">
+  <div class="management-scroll">
+    <section class="seed-toolbar" aria-labelledby="seed-management-heading">
+      <h2 id="seed-management-heading">El teu full</h2>
+      <div class="seed-identity">
+        <div class="seed-label-row"><span>Codi del dictat · <span id="seed-language">CA</span></span><button class="icon-button code-action" id="copy-link" aria-label="Copia l’enllaç del full i del configurador" title="Comparteix el full: obre aquest dictat al configurador"><span data-icon="share-2"></span></button></div>
+        <div class="seed-code-row"><output id="seed-code" aria-live="polite">—</output><button class="icon-button code-action" id="copy-code" aria-label="Copia el codi del dictat" title="Copia el codi"><span data-icon="copy"></span></button></div>
+      </div>
+      <button class="button primary" id="download-pdf"><span data-icon="download"></span> Descarrega el PDF</button>
+      <button class="button secondary" id="new-dictation"><span data-icon="refresh-cw"></span> Nou dictat</button>
+      <form id="recover-form" class="recover-form"><label for="recover-code">Recupera un dictat</label><div><input id="recover-code" type="text" inputmode="text" placeholder="ABCD-23456" maxlength="16" autocomplete="off" autocapitalize="characters" spellcheck="false"><button class="button secondary" type="submit">Recupera</button></div></form>
+    </section>
+    <section class="oral-management" aria-labelledby="oral-management-heading">
+      <h2 id="oral-management-heading">Dictat oral</h2>
+      <div class="pronunciation-setting"><label for="pronunciation-variety">Pronunciació</label><select id="pronunciation-variety"><option value="central">Català central</option><option value="valencia">Valencià</option></select></div>
+      <button class="button secondary" id="open-student"><span data-icon="headphones"></span> Comença el dictat</button>
+      <button class="small-link" id="copy-student-link" title="Copia l’enllaç que obre aquest dictat per escoltar-lo"><span data-icon="share-2"></span> Comparteix el dictat oral</button>
+    </section>
+  </div>
+</aside>

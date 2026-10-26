@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 const { assertStableCatalogue } = require('./catalog-policy.cjs');
+const Brand = require('../brand.js');
 const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root, name), 'utf8');
 const json = name => JSON.parse(read(name));
@@ -88,7 +89,7 @@ for (const item of manifest.languages) {
   }
   // Every locale gets a real directory entry point; project subpaths and file:// work.
   const prefix = '../'.repeat(item.path.split('/').filter(Boolean).length);
-  let html = read(profile.template).replace('__PRONUNCIATION_PANEL__',read('templates/pronunciation-panel.html')).replace('__PRONUNCIATION_HELP__',read('templates/pronunciation-help.html')).replace('__ANALYTICS_PANEL__',read('templates/analytics-panel.html'));
+  let html = read(profile.template).replace('__MANAGEMENT_PANEL__',read('templates/dictation-management.html')).replaceAll('__PLEC_MARK__',Brand.svg('mark')).replaceAll('__PLEC_TAGLINE__',Brand.svg('tagline')).replace('__PRONUNCIATION_PANEL__',read('templates/pronunciation-panel.html')).replace('__PRONUNCIATION_HELP__',read('templates/pronunciation-help.html')).replace('__ANALYTICS_PANEL__',read('templates/analytics-panel.html'));
   const assetVersion = /src="catalog\.js(\?[^\"]*)"/.exec(html)?.[1] || '';
   html = html.replace(/((?:src|href)=")(?!https?:|lightning:|#|\.\/)([^\"]+)/g, (_, start, target) => start + prefix + target);
   html = html.replace('catalog.js' + assetVersion, base + '/catalog.js' + assetVersion);
@@ -96,9 +97,10 @@ for (const item of manifest.languages) {
   emit(item.path + 'index.html', html);
   // Student entry point shares the immutable registry, without the composer or PDF.
   let student = read('templates/dictation.html')
+    .replaceAll('__PLEC_MARK__',Brand.svg('mark'))
     .replace('__ANALYTICS_PANEL__', read('templates/analytics-panel.html'))
-    .replace('__CONFIG__', path.posix.dirname(item.config) + '/config.js?v=1.25.0')
-    .replace('__REGISTRY__', base + '/editions/index.js?v=1.25.0')
+    .replace('__CONFIG__', path.posix.dirname(item.config) + '/config.js?v=1.26.0')
+    .replace('__REGISTRY__', base + '/editions/index.js?v=1.26.0')
     .replaceAll('__COMPOSER__', item.path)
     .replace('<html lang="ca">', '<html lang="' + profile.uiLanguage + '">');
   student = student.replace(/((?:src|href)=")(?!https?:|lightning:|#|\.\/)([^\"]+)/g, (_, start, target) => start + prefix + '../' + target);

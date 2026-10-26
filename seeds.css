@@ -8,25 +8,24 @@
 .seed-workspace .focus-settings .field-hint{margin-top:8px}
 .seed-workspace .preview-column{grid-template-rows:minmax(0,1fr)}
 .management{min-width:0;min-height:0;padding:18px 16px;border-radius:9px;overflow:hidden;display:grid;grid-template-rows:minmax(0,1fr)}
-.management-scroll{min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:10px}
-.seed-toolbar{display:grid;gap:16px;min-width:0;margin:0;padding:0;border:0}
-.seed-toolbar h2{margin:0;font:20px var(--serif);color:var(--green);letter-spacing:0}
+.management-scroll{min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:10px;display:flex;flex-direction:column;gap:24px}
+.seed-toolbar,.oral-management{display:grid;gap:14px;min-width:0;margin:0;padding:0;border:0}
+.seed-toolbar h2,.oral-management h2{margin:0;font:20px var(--serif);color:var(--green);letter-spacing:0}
 .seed-identity{display:grid;gap:3px;min-width:0}
-.seed-identity>span{font-size:11px;color:var(--muted);font-weight:600}
-.seed-identity output{font:700 24px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:2px;color:var(--green,#234d43);white-space:nowrap;min-height:29px}
-.seed-buttons{display:flex;align-items:center;gap:4px 12px;flex-wrap:wrap;min-width:0}
-.seed-toolbar .button{min-height:35px;padding:7px 11px;font-size:12px;white-space:nowrap}
-.seed-toolbar .small-link{font-size:12px;min-height:32px}
-.seed-toolbar #download-pdf{width:100%;min-height:40px;justify-content:center}
-.seed-toolbar .seed-buttons:has(#new-dictation){display:grid;grid-template-columns:1fr 1fr;gap:6px 8px}
-.seed-toolbar #new-dictation{grid-column:1/-1;justify-content:center}
-.seed-toolbar .seed-buttons:has(#open-student){display:grid;grid-template-columns:1fr;gap:5px}
-.seed-toolbar #open-student{justify-content:center;min-height:46px;font-size:13px;gap:8px}
-.seed-toolbar #copy-student-link{text-align:center}
-.seed-toolbar .recover-form{border-top:1px solid var(--line);padding-top:16px;gap:7px}
-.dictation-nav{display:inline-flex;align-items:center;gap:7px;font-weight:600}
-.site-header .dictation-nav .lucide{width:18px;height:18px}
-.site-header .theme-toggle{flex-shrink:0}
+.seed-label-row,.seed-code-row{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0}
+.seed-label-row>span{font-size:11px;color:var(--muted);font-weight:600}
+.seed-identity output{font:700 24px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1px;color:var(--green);white-space:nowrap;min-height:29px}
+.code-action{width:28px;height:30px;flex-shrink:0;padding:5px;color:var(--green)}
+.code-action .lucide{width:17px;height:17px}
+.management .button{min-height:36px;padding:8px 11px;font-size:12px;white-space:nowrap;gap:8px;justify-content:center}
+.seed-toolbar #download-pdf{width:100%;min-height:46px;font-size:13px}
+.recover-form{display:grid;gap:7px}
+.recover-form label{font-size:12px;font-weight:600;color:var(--muted)}
+.recover-form>div{display:flex;gap:6px;min-width:0}
+.recover-form input{flex:1;min-width:0;width:100%;font:13px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1px;text-transform:uppercase;padding:8px 9px}
+.oral-management{border-top:1px solid var(--line);padding-top:20px;margin-top:8px;gap:12px}
+.oral-management h2{font-size:19px}
+.oral-management .small-link{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:32px;font-size:12px}
 .pronunciation-setting{display:grid;gap:7px;min-width:0}
 .pronunciation-setting label{font-size:12px;font-weight:600;color:var(--muted)}
 .pronunciation-setting select{width:100%;font-size:13px;min-height:37px;padding:8px 10px}

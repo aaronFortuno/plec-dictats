@@ -10,7 +10,7 @@ Un generador obert de dictats autocorrectius en català: **3.299 paraules**, **9
 2. Si cal, afegeix fins a **cinc mots obligatoris** del banc que passin els filtres, amb **Enter**, **coma** o el botó Afegeix. També pots enganxar una llista separada per comes. Els interrogants expliquen els focus i la cerca. Es busca un codi que ja contingui els mots. Si una tanda no troba coincidència, **Continua la cerca** reprèn els intents pendents; també es pot cancel·lar o ajustar la petició. No s'insereixen paraules a mà ni es relaxen els filtres silenciosament.
 3. Conserva el codi, per exemple **M6QM-AAVN4**, o copia l'enllaç. **Recupera un dictat** reconstrueix els mateixos mots, en el mateix ordre, amb la mateixa llargada, nivell i focus. S'accepten minúscules, guions i espais. Els codis antics de sis caràcters continuen funcionant.
 4. **Nou dictat** prepara una altra variant amb la mateixa configuració. El format del plec i el costat del model són independents del codi i es poden canviar sense alterar la tria.
-5. Descarrega el **PDF A4**, que inclou el codi i els camps Nom i Data. A **Com funciona** hi ha les instruccions de plegat i la **guia docent**, amb el mateix codi, numeració i ordre.
+5. Descarrega el **PDF A4**, que inclou el codi i els camps Nom i Data. El docent pot llegir els mots des d’una còpia del mateix full. Les instruccions de plegat són al full.
 
 El sistema de codis substitueix les tries individuals, les xinxetes i els canvis de mots. El catàleg és de consulta i es pot descarregar en TXT i TSV; no permet seleccionar mots individualment. Les formes femenines i plurals comparteixen els mateixos focus ortogràfics que la resta.
 
@@ -135,6 +135,7 @@ node tools/check-pronunciation-review.cjs
 node tools/check-focus-edition.cjs
 node tools/check-basic-vocabulary.cjs
 node tools/check-basic-ui.cjs
+node tools/check-layout-actions.cjs
 node tools/check-valencian-pilot.cjs
 node tools/check-valencian-batch.cjs
 node tools/check-published-audio.cjs
@@ -147,11 +148,11 @@ node tools/serve.cjs
 
 El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `build-catalogs.cjs --check` comprova que els fitxers generats siguin reproduïbles. El generador verifica també les empremtes de les instantànies i no les modifica. Per repetir el contrast complet cal el lèxic extern de Softcatalà; les instruccions són a `catalogs/README.md`.
 
-`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `pronunciations.js` gestiona el catàleg unificat i una única reproducció i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.25.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
+`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `pronunciations.js` gestiona el catàleg unificat i una única reproducció i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.26.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
 
 ## Versions
 
-La interfície actual és **1.25**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.26**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 
@@ -172,3 +173,5 @@ Per verificar les interaccions amb Chrome i Playwright, inicia el servidor local
 La [revisió d’usabilitat del catàleg](docs/AUDITORIA-CATALEG.md) documenta els problemes observats, les decisions i les comprovacions. El subdomini del projecte és plec.ortogra.fi, sota el paraigua ortogra.fi; l’autor en gestiona l’activació i connexió. El QR i l’adreça completa impresa ja incorporen el subdomini, la llengua, el codi i la varietat de pronunciació. La biblioteca local QR Code Generator de Kazuhiko Arase es distribueix amb la seva llicència MIT.
 
 El peu comparteix la marca del portal [ortogra.fi](https://ortogra.fi/), mantingut al [repositori independent ortogra-fi](https://github.com/aaronFortuno/ortogra-fi). La guia de la marca es troba a assets/ortografi/README.md.
+
+La marca i el lema comparteixen [geometria vectorial](assets/brand/README.md) al web i al PDF. Al lateral dret, la gestió del full prioritza la descàrrega; la secció de dictat oral agrupa la pronunciació i els enllaços d’escolta. Compartir el full obre el configurador, mentre que compartir el dictat oral obre la pantalla de l’alumnat. Des de la versió 1.26 no hi ha una guia docent separada.

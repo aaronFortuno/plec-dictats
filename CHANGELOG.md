@@ -1,5 +1,12 @@
 # Historial
 
+## 1.26 · 26 d’octubre de 2026
+
+- Marca i lema vectorials compartits entre web, previsualitzador i PDF. La marca impresa conserva les proporcions originals de Georgia; el lema apareix a sota amb la mateixa amplada, també al format de quart de full.
+- Gestió del full a la part superior del lateral: còpia del codi al costat del codi, compartició del configurador amb una icona, PDF com a acció principal, nou dictat i recuperació. Secció inferior de dictat oral amb pronunciació, entrada i enllaç d’escolta clarament diferenciat.
+- Icones davant del text en les accions amb etiqueta. L’entrada general al mode dictat del header conserva la seva funció d’introduir un codi.
+- L’ajuda dels focus s’activa des de l’interrogant i no intercepta el clic sobre el vocabulari bàsic. Guia docent retirada. Notes finals de l’ajuda amb tipografia restablerta i anotació breu sobre els 350 mots bàsics.
+
 ## 1.25 · 26 d’octubre de 2026
 
 - Filtre complementari «Vocabulari bàsic»: primera selecció editorial revisable de 350 mots, combinable amb el nivell i els focus, consultable i descarregable en text des del catàleg.

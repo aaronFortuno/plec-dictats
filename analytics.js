@@ -14,7 +14,7 @@
     target: ['worksheet', 'student', 'code'], kind: ['pdf', 'audio', 'catalog', 'code-load']
   };
   const events = {
-    'worksheet-exported': ['mode', 'count', 'fold', 'stage'], 'guide-exported': ['mode', 'count'],
+    'worksheet-exported': ['mode', 'count', 'fold', 'stage'],
     'dictation-started': ['mode', 'count', 'variety'],
     'dictation-completed': ['mode', 'count', 'variety', 'duration_bucket'],
     'code-recovered': ['result'], 'share-copied': ['target'], 'catalog-opened': [], 'technical-error': ['kind']

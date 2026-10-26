@@ -9,12 +9,12 @@ async function main() {
     for (const count of [8, 12, 16, 20, 24]) {
       const entries = C.entries.filter(e => e.mode === mode).slice(0, count);
       const options = { entries, mode, title: mode === 'words' ? 'Dictat de paraules' : 'Dictat de pseudoparaules', group: '5è A', code: 'P-PROVA24' };
-      for (const foldStyle of ['thirds', 'quarter']) for (const modelSide of ['left', 'right']) for (const teacher of [false, true]) {
-        const bytes = await P.build({ ...options, modelSide, foldStyle }, teacher, C.categories, lib, K);
+      for (const foldStyle of ['thirds', 'quarter']) for (const modelSide of ['left', 'right']) {
+        const bytes = await P.build({ ...options, modelSide, foldStyle }, lib, K);
         const pdf = await lib.PDFDocument.load(bytes);
         assert.equal(pdf.getPageCount(), 1);
         const page = pdf.getPage(0); assert(Math.abs(page.getWidth() - 595.2756) < .01); assert(Math.abs(page.getHeight() - 841.8898) < .01);
-        fs.writeFileSync(path.join(root, 'tmp', `${mode}-${count}-${foldStyle}-${modelSide}${teacher ? '-guia' : ''}.pdf`), bytes);
+        fs.writeFileSync(path.join(root, 'tmp', `${mode}-${count}-${foldStyle}-${modelSide}.pdf`), bytes);
       }
       const folds = K.worksheet(options).filter(s => s.type === 'line' && s.dash);
       assert.deepEqual(folds.map(s => s.x), [70, 140]);
@@ -24,11 +24,11 @@ async function main() {
   const entries = words.map(t => C.entries.find(e => e.text === t && e.mode === 'words')); assert(entries.every(Boolean));
   for(const foldStyle of ['thirds','quarter']) {
     const name=foldStyle==='thirds'?'tercos':'quart';
-    fs.writeFileSync(path.join(root,'output','exemple-'+name+'-24.pdf'),await P.build({entries,mode:'words',foldStyle,modelSide:'left',title:'Dictat de paraules',code:'P-EXEMPLE'},false,C.categories,lib,K));
+    fs.writeFileSync(path.join(root,'output','exemple-'+name+'-24.pdf'),await P.build({entries,mode:'words',foldStyle,modelSide:'left',title:'Dictat de paraules',code:'P-EXEMPLE'},lib,K));
   }
   // Tots els caràcters del banc són codificables amb la font del PDF.
   const fontDoc = await lib.PDFDocument.create(), font = await fontDoc.embedFont(lib.StandardFonts.Helvetica);
   C.entries.forEach(e => font.encodeText(e.text));
-  console.log('PDF: 80 variants d’una pàgina A4, dos formats i dues orientacions i tots els caràcters del banc comprovats. Dos exemples generats.');
+  console.log('PDF: 40 variants d’una pàgina A4, dos formats i dues orientacions i tots els caràcters del banc comprovats. Dos exemples generats.');
 }
 main().catch(e => { console.error(e); process.exitCode = 1; });

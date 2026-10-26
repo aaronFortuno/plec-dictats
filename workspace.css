@@ -3,7 +3,11 @@ body{height:100vh;height:100dvh;display:grid;grid-template-rows:64px minmax(0,1f
 .site-header.wrap,.site-footer.wrap{width:100%;max-width:none;margin:0;padding-inline:20px}
 .site-header{height:64px;min-height:0;gap:18px;position:relative}
 .brand{font-size:38px;letter-spacing:-2px;gap:8px;flex-shrink:0;line-height:1}
-.site-header .brand>span{display:block;line-height:1;transform:translateY(-2px)}
+.brand .brand-mark{width:3.091283em;height:1em;display:block;overflow:visible;stroke:none}
+.header-caption .brand-tagline{width:11.270221em;height:1.2em;display:block;overflow:visible}
+.brand-mark path,.brand-tagline path{transition:fill 220ms,stroke 220ms}
+.site-header nav .text-button{display:inline-flex;align-items:center;gap:6px}
+.site-header nav .text-button>span{margin-left:0}
 .brand svg{width:27px;height:32px}
 .header-caption{display:block;font:italic 17px var(--serif);letter-spacing:-.2px;line-height:1.2;max-width:none;margin:0;white-space:nowrap;transform:translateY(3px)}
 .site-header .bank-summary{position:absolute;left:50%;transform:translateX(-50%);gap:12px;white-space:nowrap;font-size:11px}
@@ -74,6 +78,11 @@ body{height:100vh;height:100dvh;display:grid;grid-template-rows:64px minmax(0,1f
 .help-dialog .fold-art{display:flex;max-width:450px;margin:25px auto 10px;padding:35px 5px 65px}
 .help-dialog .art-paper{width:112px;height:174px}
 .help-dialog .art-paper b,.help-dialog .art-paper>span{margin-top:9px;line-height:1.5;font-size:15px}
+.help-reference-notes{border-top:1px solid var(--line);padding-top:14px;margin-top:20px;display:grid;gap:9px;color:var(--muted);font:12px/1.7 var(--sans)}
+.help-reference-notes p{margin:0}
+.help-reference-notes a{text-underline-offset:3px}
+.basic-level-note{background:var(--soft);padding:11px 13px;border-radius:6px}
+#focus-help{pointer-events:none}
 .help-intro{font-family:var(--serif);font-size:16px!important;color:var(--green)!important}
 .help-dialog .how-strip{gap:18px;padding-block:23px}
 .help-dialog .how-strip>div{padding-left:25px}
@@ -259,7 +268,6 @@ html:has(.info-dialog[open]),body:has(.info-dialog[open]){overflow:hidden}
 .paper-viewport.can-pan{cursor:grab}
 .paper-viewport.is-panning{cursor:grabbing}
 .paper-viewport:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:3px}
-#teacher-pdf{display:inline-flex;align-items:center;gap:5px;font-size:inherit;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:760px){
   .site-footer{height:auto;min-height:44px;flex-wrap:wrap;gap:4px 12px;padding-block:8px}
   .site-footer>span:last-child{margin-left:auto}

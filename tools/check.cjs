@@ -32,7 +32,7 @@ for (const mode of ['words', 'pseudo']) {
     assert.equal(first.length, count); assert.equal(new Set(first.map(e => e.id)).size, count);
     assert(second.some(e => e.id === first[0].id), 'Respecta els fixats');
     assert.equal(second.filter(e => first.some(f => f.id === e.id)).length, 1, 'No repeteix mots nous');
-    for (const shapes of [K.worksheet({ entries: first, mode }), K.teacherSheet({ entries: first, mode }, C.categories)]) {
+    for (const shapes of [K.worksheet({ entries: first, mode })]) {
       for (const s of shapes) {
         assert((s.points||[[s.x,s.y]]).every(([x,y])=>x>=0&&x<=210&&y>=0&&y<=297), 'Contingut dins de l’A4');
         if (s.type === 'line') assert(s.x2 <= 210 && s.y2 <= 297);
@@ -71,7 +71,7 @@ assert.deepEqual(K.migrateFocusTags(['essa','flexio','essa'],activeFocuses,['fle
 assert.deepEqual(K.migrateFocusTags([],activeFocuses,['flexio']),[]);
 assert.deepEqual(K.migrateFocusTags(['obsolete'],activeFocuses,['flexio']),[]);
 assert(word('atapeït').tags.includes('dieresi') && word('atapeït').tags.includes('verbs'));
-for (const shapes of [K.worksheet({ entries:[word('atapeït')], code:'P-ANTIC' }),K.teacherSheet({ entries:[word('atapeït')],code:'P-ANTIC' },C.categories)]) {
+for (const shapes of [K.worksheet({ entries:[word('atapeït')], code:'P-ANTIC' })]) {
   assert(!shapes.some(s=>s.type==='text'&&s.value==='P-ANTIC'), 'El codi antic no s’imprimeix');
 }
 for (const [text, tags] of [
