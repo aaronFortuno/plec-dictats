@@ -153,3 +153,9 @@ D’acord amb les instruccions del projecte, no es comprova el web remot despré
 - Mostra real autoritzada: **18 mots × 3 veus = 54 MP3**, Joana/Alba/Enric, mateixa IPA congelada i velocitat −10 %. Cap reintent. Integritat SHA-256 i descodificació locals correctes; mono, 24 kHz, 1,536–2,232 s. Pàgina `output/audio/comparacio-mallorqui.html` amb 54 controls disponibles. Revisió auditiva i elecció de veu pendents; MP3 no publicats ni activats al mode d’alumnat.
 - Reserves de la mostra: 4.608 caràcters; registre local d’octubre **434.390**, marge de 15.610 fins al topall de 450.000. No s’ha llegit/mostrat cap secret per revisar-lo: el generador usa el fitxer privat internament. Cap canvi de tarifa, crèdit o topall, ni prova per forçar 500.000.
 - Instantànies de llavors, grafies/ID/ordre i àudios públics central/valencià preservats. Versió de recursos coordinada a 1.27.0, peu/changelog 1.27. Desplegament reservat a comprovació manual de l’usuari.
+
+## v1.27.1 · Mallorquí en guaret
+
+- Feedback docent: neutra tònica percebuda com i a abella/ceba/pera; b.bl d’amable massa marcada i poc sostinguda. Mostra rebutjada per publicar; IPA encara pendent de validació lingüística. Feedback separat de les empremtes i la integritat tècnica.
+- Perfil d’àudio en pausa, missatges del catàleg i guia actualitzats. El generador específic rebutja execucions abans de preparar la mostra, carregar credencials o reservar quota. La regressió usa perfil/credencials/transport simulats; no pot fer síntesi.
+- Passades les comprovacions de la mostra, G2P mallorquí, taules, índexs lleugers, generació reproduïble i resiliència del catàleg. Es conserven les mostres locals, fonts, IPA, llavors i àudios públics existents. Cap petició Azure, investigació d’alternatives ni consum addicional.

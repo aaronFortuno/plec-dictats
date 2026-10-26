@@ -14,7 +14,9 @@ const {prepare}=require('./prepare-mallorcan-pilot.cjs'),A=require('./audio-plan
   assert.equal(decoded.sampleRate,24000);assert.equal(decoded.channels,1);assert(decoded.duration>0&&decoded.duration<15);
   files.push({id:entry.id,text:entry.text,voice:plan.name,pack:plan.pack.id,localPath:relative,bytes:buffer.length,sha256:crypto.createHash('sha256').update(buffer).digest('hex'),...decoded});
  }
- const result={schemaVersion:1,kind:'local-mallorcan-pilot-integrity',date:'2026-10-26',profile:pilot.snapshot.profile,reference:'Palma · editorial model pending native review',fingerprint:pilot.fingerprint,words:18,voices:pilot.plans.map(p=>p.name),filesVerified:files.length,characters:pilot.characters,linguisticReview:'pending',listeningReview:'pending',publicAudio:false,files};
+ const feedbackFile=path.join(A.ROOT,'audio/pronunciation/ca/mallorcan-pilot-feedback.json');
+ const feedback=fs.existsSync(feedbackFile)?A.readJson(feedbackFile):null;
+ const result={schemaVersion:1,kind:'local-mallorcan-pilot-integrity',date:'2026-10-26',profile:pilot.snapshot.profile,reference:'Palma · editorial model pending native review',fingerprint:pilot.fingerprint,words:18,voices:pilot.plans.map(p=>p.name),filesVerified:files.length,characters:pilot.characters,linguisticReview:'pending',listeningReview:feedback?.decision||'pending',publicAudio:false,files,...(feedback?{feedback:'../ca/mallorcan-pilot-feedback.json'}:{})};
  if(write)fs.writeFileSync(path.join(A.ROOT,'audio/pronunciation/recordings/ca-mallorcan-palma-pilot-v1-result.json'),JSON.stringify(result,null,2)+'\n');
  console.log(JSON.stringify({words:18,voices:result.voices,mp3Decoded:files.length,minSeconds:Math.min(...files.map(f=>f.duration)),maxSeconds:Math.max(...files.map(f=>f.duration)),review:'pending',synthesis:false}));
  }finally{await browser.close();}

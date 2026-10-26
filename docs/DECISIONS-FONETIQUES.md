@@ -2,6 +2,8 @@
 
 Registre editorial · 26/10/2026. La [guia pública](https://plec.ortogra.fi/ca/pronunciacio/) presenta aquests criteris als usuaris; la font de la pàgina és `templates/pronunciation-guide.html`.
 
+**Decisió posterior a l’escolta:** síntesi mallorquina en pausa. La mostra de tres veus no és apta per publicar: neutra tònica percebuda com i i b.bl artificial a `amable`. Les propostes IPA continuen en revisió; no es canvien per dissimular aquests errors del resultat sonor. El [feedback](../audio/pronunciation/ca/mallorcan-pilot-feedback.json) queda separat de la integritat tècnica dels MP3. No s’inicien alternatives o nous lots automàticament.
+
 ## Compromís i estat de revisió
 
 Es distingeixen **grafia del banc**, **proposta IPA**, **dicció didàctica** i **realització d’una veu**. Cap comprovació de format, descodificació d’MP3 o escolta d’una mostra valida totes quatre capes. Les taules actuals són propostes, amb fonts i decisions editorials per fila; no són transcripcions certificades extretes de diccionaris. El docent ha aprovat la selecció dels 350 mots bàsics, no les seves IPA.

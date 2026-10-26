@@ -14,7 +14,7 @@
   "filesVerified": 54,
   "characters": 4608,
   "linguisticReview": "pending",
-  "listeningReview": "pending",
+  "listeningReview": "rejected-for-publication",
   "publicAudio": false,
   "files": [
     {
@@ -665,5 +665,6 @@
       "sampleRate": 24000,
       "channels": 1
     }
-  ]
+  ],
+  "feedback": "../ca/mallorcan-pilot-feedback.json"
 }

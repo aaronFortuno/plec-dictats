@@ -1,5 +1,10 @@
 # Historial
 
+## 1.27.1 · 26 d’octubre de 2026
+
+- Proposta d’àudio mallorquí en pausa després de l’escolta: neutra tònica realitzada com i i geminació b.bl artificial. La mostra es descarta per publicar; les IPA i fonts es conserven com a propostes pendents de contrast.
+- Estat explícit al catàleg i la guia pública. El generador específic rebutja execucions mentre el perfil és en pausa, abans de carregar credencials o reservar quota.
+
 ## 1.27 · 26 d’octubre de 2026
 
 - Càrrega independent d’IPA i manifests del catàleg, timeout i reintent selectiu. Una taula fallida no impedeix escoltar els àudios disponibles. Índexs lleugers separats de les fonts editorials completes.

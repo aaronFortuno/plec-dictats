@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "profile": "ca-mallorcan-didactic-v1",
+  "pilot": "ca-mallorcan-palma-pilot-v1",
+  "decision": "rejected-for-publication",
+  "projectStatus": "on-hold",
+  "reportedBy": "project-teacher",
+  "scope": "Listening feedback on the local three-voice pilot; not a linguistic validation of the IPA.",
+  "findings": [
+    {
+      "feature": "stressed-schwa",
+      "examples": ["abella", "ceba", "pera"],
+      "heardAs": ["abilla", "ciba", "pira"],
+      "note": "El docent sent i en lloc de vocal neutra tònica als exemples de la mostra. No s'atribueix el problema a una IPA incorrecta ni es valida la resta de transcripcions."
+    },
+    {
+      "feature": "intervocalic-bl-gemination",
+      "examples": ["amable"],
+      "note": "La realització de b.bl sona massa marcada i poc sostinguda, no natural. Aquesta observació avalua el resultat d'àudio; no elimina la geminació del perfil lingüístic."
+    }
+  ],
+  "nextAction": "Conservar les propostes, fonts i mostres per a consulta. Suspendre nous lots i publicació d'àudio mallorquí fins a una decisió expressa de reprendre. No iniciar recerca d'alternatives ni proves noves automàticament."
+}

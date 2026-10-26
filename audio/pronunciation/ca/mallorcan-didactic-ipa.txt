@@ -1,4 +1,4 @@
-# Mallorquí (Palma) · propostes de dicció didàctica en preparació · Propostes en revisió; no valida cap veu ni àudio.
+# Mallorquí (Palma) · propostes IPA, àudio en pausa · Propostes en revisió; no valida cap veu ni àudio.
 # mot	IPA	estat de la proposta
 abans	ə.ˈbans	pendent-contrast
 abast	ə.ˈbast	pendent-contrast

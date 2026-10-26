@@ -1,6 +1,8 @@
 # Preparació de la pronunciació mallorquina
 
-Estat del 26/10/2026: **propostes incompletes i pendents de contrast lingüístic**, amb **Palma com a referència editorial formal/didàctica**. Després de la preparació inicial fora de línia s’ha autoritzat i generat una mostra de 18 mots amb Joana, Alba i Enric. No s’ha seleccionat encara cap veu definitiva ni activat àudio mallorquí públic. El catàleg publica les propostes IPA disponibles, deixa els buits en blanc i indica «En procés» a la reproducció. Vegeu la [guia pública de criteris](https://plec.ortogra.fi/ca/pronunciacio/) i el [registre de decisions dels tres perfils](DECISIONS-FONETIQUES.md).
+**En guaret des del 26/10/2026.** Després de l’escolta, la mostra d’Azure es descarta per publicar: la neutra tònica sona com una i (`abella` → «abilla», `ceba` → «ciba», `pera` → «pira») i la geminació b.bl d’`amable` resulta massa marcada i poc sostinguda. Aquest feedback avalua l’àudio, no demostra que les IPA siguin incorrectes ni les valida. Es conserven dades i mostres; no es fan nous lots ni recerca d’alternatives fins a reprendre expressament aquesta línia. [Registre de feedback](../audio/pronunciation/ca/mallorcan-pilot-feedback.json).
+
+Estat del 26/10/2026: **propostes incompletes i pendents de contrast lingüístic**, amb **Palma com a referència editorial formal/didàctica**. Després de la preparació inicial fora de línia s’ha autoritzat i generat una mostra de 18 mots amb Joana, Alba i Enric. No s’ha seleccionat encara cap veu definitiva ni activat àudio mallorquí públic. El catàleg publica les propostes IPA disponibles, deixa els buits en blanc i indica «Àudio en pausa» a la reproducció. Vegeu la [guia pública de criteris](https://plec.ortogra.fi/ca/pronunciacio/) i el [registre de decisions dels tres perfils](DECISIONS-FONETIQUES.md).
 
 ## Dades preparades i consulta
 

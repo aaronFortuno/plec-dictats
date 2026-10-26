@@ -88,6 +88,8 @@ La [guia de desenvolupament](docs/DESENVOLUPAMENT.md) fixa Node i dependències 
 
 La fase següent serà un pilot petit de respostes digitals en català, reutilitzant codi, ordre i àudios. Abans de programar-lo cal concretar la correcció d’accents, majúscules, espais, repeticions i resultats locals. Les pseudoparaules necessiten un criteri propi perquè poden admetre diverses grafies. L’extensió al castellà arribarà després de validar aquesta estructura.
 
+**Mallorquí en pausa (1.27.1):** l’escolta ha descartat la mostra d’Azure per publicar-la: neutres tòniques com i i geminació b.bl artificial. La columna conserva les IPA com a propostes, amb l’àudio en pausa. El generador específic bloqueja noves execucions abans de llegir credencials o consumir quota. Les mostres i fonts es conserven per a una possible represa, sense iniciar altres proves automàticament.
+
 ## Compatibilitat i fase següent
 
 La primera instantània és `catalogs/ca/editions/seed-1.json`, amb empremta immutable al registre d'edicions. Els dictats nous utilitzen `seed-3.json`, amb les etiquetes d’accent i dièresi i les orientacions de vocabulari revisades; amb «Vocabulari bàsic» utilitzen `seed-4-basic.json`. Els codis anteriors continuen amb les seves instantànies `seed-1.json` o `seed-2.json`. Recuperar un codi antic no n’altera cap mot. Canviar filtres o prémer **Nou dictat** fa servir l’edició actual. Una ampliació futura del banc haurà d'afegir una edició nova; no es pot canviar el significat dels codis antics. Cada llengua tindrà la seva entrada i el seu registre.
