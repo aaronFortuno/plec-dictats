@@ -1,5 +1,13 @@
 # Historial
 
+## 1.27 · 26 d’octubre de 2026
+
+- Càrrega independent d’IPA i manifests del catàleg, timeout i reintent selectiu. Una taula fallida no impedeix escoltar els àudios disponibles. Índexs lleugers separats de les fonts editorials completes.
+- Columna mallorquina amb Palma com a referència editorial, propostes IPA disponibles, buits explícits i ajuda «En procés» per a l’àudio. Guia pública de pronunciació amb fonts, criteris de dicció, estats de revisió i limitacions. Alternativa de correcció/PR visible; funcionament de banderes i privacitat conservat.
+- Focus de teclat després de cada escolta, sense robar-lo si l’usuari l’ha mogut. Calaixos operatius en poca alçada/ampliació. Moviment reduït respectat, també en canviar la preferència durant l’ús; 220 ms per defecte.
+- Generació de recursos amb validació/renderització completes abans d’escriure i substitució segura per fitxer. Entorn i dependències fixats, lock i porta de qualitat amb grups explícits, sense síntesi ni comprovació del desplegament.
+- Mostra local de 18 mots mallorquins amb Joana, Alba i Enric, pendent d’escolta. Cap paquet mallorquí públic ni nova edició de llavors.
+
 ## 1.26 · 26 d’octubre de 2026
 
 - Marca i lema vectorials compartits entre web, previsualitzador i PDF. La marca impresa conserva les proporcions originals de Georgia; el lema apareix a sota amb la mateixa amplada, també al format de quart de full.

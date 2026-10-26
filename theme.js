@@ -2,7 +2,8 @@
 (function () {
   'use strict';
   const key='plec-appearance-v1', html=document.documentElement;
-  const system=window.matchMedia('(prefers-color-scheme: dark)');
+  const system=window.matchMedia('(prefers-color-scheme: dark)'), reduced=window.matchMedia('(prefers-reduced-motion: reduce)'), animations=new Set();
+  reduced.addEventListener('change',event=>{if(event.matches)for(const animation of [...animations]){try{animation.finish();}catch{animation.cancel();}}});
   let preference='system';
   try { const saved=localStorage.getItem(key); if(['system','light','dark'].includes(saved))preference=saved; } catch {}
   function apply() {
@@ -16,7 +17,12 @@
       if(icon&&window.PlecIcons){
         const name=dark?'sun':'moon',changed=icon.dataset.icon!==name;
         icon.innerHTML=window.PlecIcons(name);icon.dataset.icon=name;
-        if(changed&&icon.animate)icon.animate([{opacity:.2,transform:'rotate(-15deg)'},{opacity:1,transform:'rotate(0)'}],{duration:220});
+        const timing=parseFloat(getComputedStyle(html).getPropertyValue('--motion-duration'));
+        if(changed&&icon.animate&&timing!==0){
+          const frames=[{opacity:.2,transform:'rotate(-15deg)'},{opacity:1,transform:'rotate(0)'}];
+          if(window.PlecMotion?.animate)window.PlecMotion.animate(icon,frames);
+          else {const animation=icon.animate(frames,{duration:220});animations.add(animation);const forget=()=>animations.delete(animation);animation.addEventListener('finish',forget,{once:true});animation.addEventListener('cancel',forget,{once:true});}
+        }
       }
     });
     const meta=document.querySelector('meta[name="theme-color"]');

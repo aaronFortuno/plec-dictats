@@ -36,3 +36,9 @@ Primer, resoldre i contrastar els mots bàsics pendents i preparar una **mostra 
 Ja hi ha una [mostra candidata de 18 mots](../audio/pronunciation/ca/mallorcan-pilot-candidates.json), amb 10 bàsics i **1.536 caràcters estimats per veu/versió**, sense triar veu ni paquet. Cobreix neutra tònica, o àtona/harmonització, b/v, bl/gl, dièresi i finals. Comparar tres veus implicaria almenys 4.608 caràcters, abans de reintents o canvis. El fitxer és explícitament no executable.
 
 Una mostra petita pot ser compatible amb el marge local actual, però cal calcular el pla exacte i confirmar la quota abans d’executar-la. Si després es vol aprofitar el crèdit per un lot més gran, s’ha de concretar saldo/caducitat, tarifa efectiva, límit de caràcters, paquet i política d’aturada. Els reintents, la identitat del paquet i l’STOP es conserven. La preparació actual no ha activat cap recurs de pagament ni ha posat cap lot en marxa.
+
+## Actualització després de la mostra autoritzada
+
+El 26/10/2026 s’han generat les 54 locucions de prova (18 mots × 3 veus) amb **4.608 caràcters reservats**, sense reintents. El registre local d’octubre passa de 429.782 a **434.390**; queden **15.610** abans del topall preventiu de 450.000. No és una consulta del consum facturat del compte.
+
+La mostra no s’ha convertit en un lot complet ni en una veu pública. No s’ha augmentat el topall, canviat F0 per S0 ni forçat la quota per comprovar si es descompta crèdit. Primer cal l’escolta del pilot. Arribar a 500.000 caràcters no és una prova necessària per esbrinar com factura la tarifa: es comproven recurs i subscripció al portal. Si F0 esgota la quota, no s’ha de donar per fet que continuï contra el saldo promocional. L’ús d’S0, si es decideix després, tindrà un pla i pressupost explícits.

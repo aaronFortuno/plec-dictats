@@ -1,6 +1,6 @@
 # Preparació de la pronunciació mallorquina
 
-Estat del 26/10/2026: **preparació fora de línia, incompleta i pendent de contrast lingüístic**. S’ha pres el mallorquí com a primera referència balear per indicació del docent. No s’ha generat cap àudio, seleccionat una veu ni consumit quota d’Azure. Aquest perfil no apareix com una varietat reproduïble a la interfície.
+Estat del 26/10/2026: **propostes incompletes i pendents de contrast lingüístic**, amb **Palma com a referència editorial formal/didàctica**. Després de la preparació inicial fora de línia s’ha autoritzat i generat una mostra de 18 mots amb Joana, Alba i Enric. No s’ha seleccionat encara cap veu definitiva ni activat àudio mallorquí públic. El catàleg publica les propostes IPA disponibles, deixa els buits en blanc i indica «En procés» a la reproducció. Vegeu la [guia pública de criteris](https://plec.ortogra.fi/ca/pronunciacio/) i el [registre de decisions dels tres perfils](DECISIONS-FONETIQUES.md).
 
 ## Dades preparades i consulta
 
@@ -18,6 +18,8 @@ La [cua de revisió](../audio/pronunciation/ca/mallorcan-review-queue.json) reun
 ## Referència lingüística i decisions
 
 El model de partida conserva la **vocal neutra tònica** en els casos que la requereixen. Aquesta opció no engloba totes les localitats mallorquines: Alaró, Binissalem i Lloseta tenen altres realitzacions. Les pistes de [mallorcan-vowel-hints.json](../audio/pronunciation/ca/mallorcan-vowel-hints.json) es limiten a exemples explícits i dues flexions assenyalades com a propostes editorials. [UIB · vocal neutra tònica](https://galmic.uib.cat/fitxa/vocal-neutra-en-posicio-tonica/), [EBAP · fonètica B2, pàgines 2–3](https://ebapenobert.caib.es/pluginfile.php/4111/mod_resource/content/6/2%20Fon%C3%A8tica%20%282025%29.pdf).
+
+La referència de Palma exclou el sistema vocàlic general de Sóller i fixa un compromís coherent; no descriu tots els parlants, generacions o registres de Palma. Les 410 decisions lèxiques no es resolen només escollint ciutat: cal una pista justificable per mot. L’autor no és parlant nadiu balear; la seva escolta és una primera comprovació, no una validació dialectal completa. L’IPA permet més detall que el que representem: la nostra transcripció ampla i el subconjunt del motor són limitacions diferents.
 
 La branca mallorquina conserva generalment la **o àtona** i aplica harmonització davant una i o u tònica. Sóller segueix una altra distribució. La documentació UIB descriu variació i excepcions lèxiques: no es pot convertir tota o en u ni aplicar el procés invers. L’adaptació explicita `cobert` i `obert` amb u inicial; la resta d’excepcions i l’harmonització de mots llargs encara necessiten revisió. [UIB · neutralització o/u](https://blocs.uib.cat/galmic/fitxa/neutralitzacio-o-u-atones/).
 
@@ -74,6 +76,16 @@ La [selecció de 18 mots](../audio/pronunciation/ca/mallorcan-pilot-candidates.j
 El contingut SSML estimat d’aquesta mostra és de **1.536 caràcters per una única veu i una sola versió de cada mot** amb els mateixos criteris anteriors. Comparar dues veus duplicaria les peticions previstes, i els reintents s’hi afegirien. Que una mostra càpiga en el marge local no la converteix en una síntesi autoritzada ni resol /v/, neutra tònica o validació auditiva: cal preparar després la prova concreta amb la seva veu i pressupost.
 
 ## Comprovacions i edició
+
+### Mostra generada · 26/10/2026
+
+S’han generat **54 MP3: 18 mots × Joana, Alba i Enric**, amb les mateixes IPA i ritme −10 %. S’han reservat 4.608 caràcters; la generació ha acabat sense reintents. Els fitxers es conserven localment a `output/audio/ca-mallorcan-palma-<veu>-pilot-v1/` i es poden comparar a [la pàgina local](http://127.0.0.1:4176/output/audio/comparacio-mallorqui.html).
+
+La [instantània de propostes](../audio/pronunciation/recordings/ca-mallorcan-palma-pilot-v1.json) i el [resultat tècnic](../audio/pronunciation/recordings/ca-mallorcan-palma-pilot-v1-result.json) conserven identitat i SHA-256. Els 54 MP3 s’han descodificat sense errors: mono, 24 kHz i durades d’1,536–2,232 s. **Cap està aprovat auditivament ni seleccionat com a veu mallorquina definitiva.** L’acceptació de /v/ i de neutra tònica en una petició no n’acredita la realització sonora.
+
+`node tools/run-mallorcan-pilot.cjs` simula; la generació requereix `--execute --confirm-f0`, pressupost compartit, cap STOP ni lot anterior actiu, i no canvia el topall de 450.000. No forma part de la porta de qualitat. `tools/verify-mallorcan-pilot.cjs` verifica només els fitxers locals de la mostra, sense síntesi; no és una comprovació exigible en un clon sense aquests MP3.
+
+### Dades i regressions
 
 ```text
 node tools/pronunciation-table.cjs --profile ca-mallorcan-didactic-v1

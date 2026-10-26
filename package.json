@@ -1,0 +1,21 @@
+{
+  "name": "plec-dictats",
+  "private": true,
+  "description": "Comprovacions locals del web estàtic Plec; cap síntesi en els scripts de qualitat.",
+  "engines": {
+    "node": "24.22.1"
+  },
+  "packageManager": "npm@11.6.2",
+  "scripts": {
+    "check": "node tools/check-all.cjs",
+    "check:browser": "node tools/check-all.cjs --browser --start-server",
+    "check:compatibility": "node tools/check-all.cjs --compatibility",
+    "serve": "node tools/serve.cjs",
+    "build": "node tools/build-catalogs.cjs",
+    "build:pronunciations": "node tools/build-pronunciation-index.cjs"
+  },
+  "devDependencies": {
+    "pdf-lib": "1.17.1",
+    "playwright": "1.62.1"
+  }
+}

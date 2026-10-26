@@ -78,8 +78,9 @@ function validatePack(manifest, packId) {
   }
   if(pack.generationPolicy?.excludeDiaeresis!==undefined && typeof pack.generationPolicy.excludeDiaeresis!=='boolean')fail('La política de dièresi ha de ser booleana.');
   if(pack.generationPolicy?.requireIpa!==undefined && typeof pack.generationPolicy.requireIpa!=='boolean')fail('La política IPA ha de ser booleana.');
-  if(pack.generationPolicy?.ipaInventory!==undefined&&pack.generationPolicy.ipaInventory!=='ca-valencian-v-experimental')fail('Inventari experimental desconegut.');
-  if(pack.generationPolicy?.ipaInventory&&(pack.dialect!=='valencia'||!pack.generationPolicy.requireIpa))fail('L’inventari valencià necessita un paquet IPA valencià explícit.');
+  const experimentalDialects={'ca-valencian-v-experimental':'valencia','ca-mallorcan-v-experimental':'mallorqui'};
+  if(pack.generationPolicy?.ipaInventory!==undefined&&!Object.hasOwn(experimentalDialects,pack.generationPolicy.ipaInventory))fail('Inventari experimental desconegut.');
+  if(pack.generationPolicy?.ipaInventory&&(pack.dialect!==experimentalDialects[pack.generationPolicy.ipaInventory]||!pack.generationPolicy.requireIpa))fail('L’inventari experimental necessita un paquet IPA de la varietat explícita.');
   if (pack.contentFingerprint !== undefined && !/^[a-f0-9]{64}$/.test(pack.contentFingerprint)) fail('Fingerprint del contingut invàlid.');
   for (const relativePath of Object.values(pack.files)) {
     validateRelativePath(relativePath, `Ruta del pack ${id}`);
@@ -99,7 +100,7 @@ function wordFileName(text) {
 
 function buildSsml(pack, text, ipa) {
   const escapedText = escapeXml(text);
-  if (ipa !== undefined) analyzeIpa(ipa,{allowLabiodentalV:pack.generationPolicy?.ipaInventory==='ca-valencian-v-experimental'});
+  if (ipa !== undefined) analyzeIpa(ipa,{allowLabiodentalV:['ca-valencian-v-experimental','ca-mallorcan-v-experimental'].includes(pack.generationPolicy?.ipaInventory)});
   const content = ipa === undefined ? escapedText : `<phoneme alphabet="ipa" ph="${escapeXml(ipa)}">${escapedText}</phoneme>`;
   const billableBody = `<prosody rate="${pack.rate}">${content}</prosody>`;
   return {

@@ -1,8 +1,10 @@
 {
   "schemaVersion": 1,
   "profile": "ca-mallorcan-didactic-v1",
-  "reference": "Mallorquí amb vocal neutra tònica i harmonització vocàlica; proposta incompleta.",
-  "audioGenerated": false,
+  "reference": "Palma · referència editorial mallorquina formal/didàctica amb neutra tònica; proposta incompleta pendent de contrast nadiu.",
+  "audioGenerated": true,
+  "audioScope": "18-word-local-three-voice-pilot-only",
+  "publicAudioAvailable": false,
   "summary": {
     "words": 3299,
     "withIpa": 2889,

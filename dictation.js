@@ -47,7 +47,7 @@
       selection: null, cov: null, session: null, audio: null, epoch: 0,
       strictFocus: true, generation: 0, manifestPromise: null,
       introUrl: null, introAudio: null, introEpoch: 0,
-      variety: null, activeSince: null, activeElapsed: 0
+      variety: null, activeSince: null, activeElapsed: 0, audioFocusCleanup: null
     };
     function track(name, data) { root.PlecAnalytics?.track(name, data); }
     function now() { return root.performance?.now() ?? Date.now(); }
@@ -79,6 +79,7 @@
 
     function stopAudio() {
       state.epoch++;
+      if (state.audioFocusCleanup) state.audioFocusCleanup();
       var a = state.audio;
       if (a) {
         a.onended = a.onerror = null;
@@ -127,10 +128,8 @@
       var exit = $("exit-focus");
       if (exit) exit.hidden = id === "setup-panel";
       var el = $(id);
-      if (el && el.animate) {
-        el.animate([{ opacity: 0, transform: "translateY(8px)" },
-                    { opacity: 1, transform: "translateY(0)" }], { duration: 220 });
-      }
+      if (el) root.PlecMotion?.animate?.(el, [{ opacity: 0, transform: "translateY(8px)" },
+                                         { opacity: 1, transform: "translateY(0)" }]);
       var target = el && (el.querySelector("h1") || el.querySelector("button:not([hidden])"));
       if (target) {
         if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
@@ -309,10 +308,27 @@
       var epoch = state.epoch;
       var idx = session.snapshot().index;
       var url = state.cov.urls[idx];
-      var a = null, settled = false, hadFocus = doc.activeElement === $("listen-word");
+      var a = null, settled = false, listen = $("listen-word"), hadFocus = doc.activeElement === listen, focusMoved = false;
+      // Disabling the focused button moves Chrome's focus to BODY. Restore the
+      // listening control after playback unless the learner chose another target.
+      function movedFocus(event) {
+        if (event.target !== doc.body && event.target !== doc.documentElement && !listen.contains(event.target)) focusMoved = true;
+      }
+      function movedPointer(event) { if (!listen.contains(event.target)) focusMoved = true; }
+      function releaseFocusTracking() {
+        doc.removeEventListener('focusin', movedFocus, true);
+        doc.removeEventListener('pointerdown', movedPointer, true);
+        if (state.audioFocusCleanup === releaseFocusTracking) state.audioFocusCleanup = null;
+      }
+      if (hadFocus) {
+        doc.addEventListener('focusin', movedFocus, true);
+        doc.addEventListener('pointerdown', movedPointer, true);
+        state.audioFocusCleanup = releaseFocusTracking;
+      }
       function finish(success) {
         if (settled) return;
         settled = true;
+        releaseFocusTracking();
         if (state.session !== session || state.epoch !== epoch) return;
         if (a) {
           a.onended = a.onerror = null;
@@ -326,7 +342,11 @@
           $("playback-error").textContent = "No s'ha pogut reproduir la paraula. Torna-ho a provar; aquesta escolta no compta.";
           $("playback-error").hidden = false;
         }
-        if (hadFocus && session.snapshot().canNext) $("next-word").focus();
+        var active = doc.activeElement;
+        if (hadFocus && !focusMoved && !$("player-panel").hidden &&
+            (active === listen || active === doc.body || active === doc.documentElement)) {
+          (session.snapshot().canNext ? $("next-word") : listen).focus({preventScroll: true});
+        }
       }
       try {
         a = new root.Audio(url); state.audio = a;

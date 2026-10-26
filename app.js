@@ -245,6 +245,7 @@
     }
   });
   const releases = [
+    ['1.27', '2026-10-26', ['Catàleg amb recursos independents, reintents selectius i índexs lleugers. Propostes IPA mallorquines amb referència editorial de Palma i àudios en procés. Guia pública de criteris i fonts de pronunciació, i alternativa del repositori per a correccions. Millor continuïtat del teclat al dictat, configurador accessible amb ampliació i respecte pel moviment reduït. Generació segura i comprovacions de desenvolupament reproduïbles.']],
     ['1.26', '2026-10-26', ['Marca vectorial compartida entre web i PDF, amb el lema imprès a la mateixa amplada. Lateral reorganitzat: PDF prioritari i dictat oral separat, còpia i compartició amb icones. Ajuda dels focus només a l’interrogant. Retirada la guia docent i recuperat el format de les notes de l’ajuda, amb una explicació breu del vocabulari bàsic.']],
     ['1.25', '2026-10-26', ['Vocabulari bàsic: selecció editorial de 350 mots, combinable amb nivell i focus, consultable i descarregable al catàleg. Codis antics conservats. Marca plec al full, capçalera i gràfic de l’ajuda alineats, ajuda de plegat simplificada i scroll intern compartit als diàlegs.']],
     ['1.24', '2026-10-26', ['Vista prèvia tàctil: arrossega el full amb un dit i fes zoom amb dos. Instruccions de plec amb esquemes vectorials al peu de la columna del QR, adaptats a terços o quarts i al costat del model. Ajudes dels avisos més clares, separades de la bandera, i passos de privacitat segons el navegador. Número de paraula destacat dins el botó del dictat.']],

@@ -6,9 +6,10 @@ const manifest=require('../audio/manifest.json'),edition=require('../catalogs/ca
 async function run(withAnalytics){
  let clock=0,audio;const elements=new Map(),docEvents={},rootEvents={},events=[];
  const doc={currentScript:{src:'https://plec.ortogra.fi/dictation.js'},visibilityState:'visible',fullscreenEnabled:false,
-  querySelectorAll:()=>[],addEventListener:(name,fn)=>{docEvents[name]=fn;},getElementById:element};
+  querySelectorAll:()=>[],addEventListener:(name,fn)=>{docEvents[name]=fn;},
+  removeEventListener:(name,fn)=>{if(docEvents[name]===fn)delete docEvents[name];},getElementById:element};
  function element(id){if(!elements.has(id))elements.set(id,{hidden:false,disabled:false,value:'',textContent:'',handlers:{},
-  addEventListener(name,fn){this.handlers[name]=fn;},querySelector(){return null;},hasAttribute(){return false;},setAttribute(){},focus(){doc.activeElement=this;}});return elements.get(id);}
+  addEventListener(name,fn){this.handlers[name]=fn;},querySelector(){return null;},contains(other){return this===other;},hasAttribute(){return false;},setAttribute(){},focus(){doc.activeElement=this;}});return elements.get(id);}
  const root={document:doc,location:new URL('https://plec.ortogra.fi/ca/dictat/'),history:{replaceState(){}},
   PlecSeeds:S,PlecSeedRegistry:{editions:[edition]},PlecLanguage:{id:'ca'},PlecDictationSession:sessions,
   performance:{now:()=>clock},addEventListener:(name,fn)=>{rootEvents[name]=fn;},

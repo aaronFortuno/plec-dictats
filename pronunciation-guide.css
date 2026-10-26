@@ -1,0 +1,17 @@
+.phonetics-page{display:block!important;height:auto!important;min-height:100dvh;overflow:auto!important;background:var(--paper);color:var(--ink)}
+.phonetics-header,.phonetics-page main,.phonetics-footer{width:min(960px,calc(100% - 40px));margin-inline:auto}
+.phonetics-header{display:flex;align-items:center;gap:24px;padding-block:24px;border-bottom:1px solid var(--line)}
+.phonetics-header .brand{margin-right:auto}.phonetics-header .brand-mark{width:117.46875px;height:38px;display:block}
+.phonetics-header>a:not(.brand){font:600 14px var(--sans)}
+.phonetics-page main{padding-block:36px 20px;font:16px/1.8 var(--sans)}
+.phonetics-page h1{font:clamp(32px,6vw,46px)/1.15 var(--serif);margin:10px 0 20px}
+.phonetics-intro{font:21px/1.6 var(--serif);max-width:720px}
+.phonetics-page section{padding-block:20px;border-bottom:1px solid var(--line)}
+.phonetics-page h2{font:28px/1.3 var(--serif);margin:4px 0 18px}.phonetics-page h3{font:600 16px/1.5 var(--sans);margin:26px 0 12px}
+.phonetics-page p{margin:12px 0}.phonetics-page a{color:var(--green);text-underline-offset:3px}.phonetics-page a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.phonetics-note{background:var(--soft);border-left:3px solid var(--accent);padding:20px;margin-block:28px;font-size:15px}
+.phonetics-table{overflow:auto}.phonetics-page table{width:100%;border-collapse:collapse;font-size:14px}.phonetics-page td,.phonetics-page th{padding:14px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.phonetics-page th{font-weight:600}.phonetics-page thead{background:var(--soft)}
+.phonetics-symbols{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px}.phonetics-symbols p{padding:10px 14px;margin:0;background:var(--white);border:1px solid var(--line);border-radius:8px}.phonetics-symbols b{display:inline-block;min-width:34px;font-size:20px}
+.phonetics-sources{padding-left:22px}.phonetics-sources li{margin-block:12px}
+.phonetics-footer{padding-block:24px 32px;display:flex;flex-wrap:wrap;gap:14px 24px;font:13px/1.7 var(--sans)}.phonetics-footer span{flex-basis:100%;color:var(--muted)}
+@media(max-width:600px){.phonetics-header,.phonetics-page main,.phonetics-footer{width:calc(100% - 28px)}.phonetics-header{gap:14px;padding-block:18px}.phonetics-page main{padding-top:24px}.phonetics-symbols{grid-template-columns:1fr}.phonetics-page td,.phonetics-page th{padding:10px 6px}.phonetics-page table{font-size:13px}}

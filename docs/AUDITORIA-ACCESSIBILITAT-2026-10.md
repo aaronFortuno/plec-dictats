@@ -2,6 +2,8 @@
 
 26/10/2026 · base `6bc8092` (1.26). Complement de l’[auditoria tècnica](AUDITORIA-TECNICA-2026-10.md).
 
+**Seguiment 1.27:** A01, A02 i A03 implementats. `tools/check-accessibility-fixes.cjs` comprova retorn de focus sense segrest, error/pausa/resultats obsolets, calaixos operatius a 320 × 256 i moviment reduït també quan canvia durant l’ús. El comportament habitual conserva 220 ms. Les reproduccions de la base anterior es mantenen a sota per explicar el problema original; això continua essent una revisió parcial, no una certificació completa.
+
 S’ha revisat el preparador, el catàleg, un diàleg d’ajuda, els calaixos laterals i la progressió del dictat en Chrome local. El referent és [WCAG 2.2, nivell AA](https://www.w3.org/TR/WCAG22/). Aquesta revisió parcial **no és una certificació de conformitat**: no inclou lector de pantalla real, tots els navegadors, totes les combinacions de focus/tema ni PDF etiquetat.
 
 ## Evidència reproduïble

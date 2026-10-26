@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dialect": "mallorqui",
-  "reference": "Mallorquí amb vocal neutra tònica; no representa totes les localitats ni tot el balear.",
+  "reference": "Palma com a referència editorial formal/didàctica, amb vocal neutra tònica; pendent de contrast nadiu, no representa tots els parlants ni tot el balear.",
   "note": "Pistes lèxiques limitades als exemples explícits de les fonts i a dues flexions transparents. No s'importen les 415 pistes centrals o valencianes. Les formes no resoltes es conserven sense IPA.",
   "entries": {
     "abella": {"hint": "ê", "basis": "uib-explicit-stressed-schwa-example", "source": "https://galmic.uib.cat/fitxa/vocal-neutra-en-posicio-tonica/"},

@@ -21,7 +21,7 @@
   let hintTimer, hideHintTimer, hintVisible=false;
   function hideHint() {
     clearTimeout(hintTimer);hintVisible=false;hint?.classList.remove('is-visible');
-    clearTimeout(hideHintTimer);hideHintTimer=setTimeout(()=>{if(hint)hint.hidden=true;},220);
+    clearTimeout(hideHintTimer);hideHintTimer=setTimeout(()=>{if(hint)hint.hidden=true;},root.PlecMotion?.duration ?? 220);
   }
   function showHint() {
     if(!hint)return;

@@ -4,6 +4,8 @@ Data: 26/10/2026. Base inspeccionada: `6bc8092`, interfície 1.26.
 
 ## Resum
 
+**Seguiment 1.27:** T01, T02, T03, la primera part de T04 i T05 implementats i comprovats localment. T08 resolt com a decisió de producte: es conserva el canal de banderes/Umami i es fa visible l’alternativa de correcció/PR. Les barreres A01–A03 de la revisió complementària també es corregeixen. Les troballes següents descriuen la base original `6bc8092`; no s’ha fet una reescriptura general.
+
 La base actual és aprofitable per continuar: el mostreig reproduïble, les edicions congelades, la geometria del full, la sessió del dictat i la validació dels àudios ja tenen separació i proves útils. No hi ha motiu per reescriure l’aplicació ni per introduir un framework abans del pilot digital. La [revisió d’accessibilitat complementària](AUDITORIA-ACCESSIBILITAT-2026-10.md) cobreix la navegació per teclat, el reflow i les comprovacions del navegador que no s’avaluen aquí.
 
 Hi ha dos punts que convé corregir abans d’ampliar funcionalitats: una fallada d’una taula IPA deixa sense reproducció les dues veus del catàleg; el generador de catàlegs pot haver sobreescrit recursos quan descobreix una entrada invàlida. S’han reproduït de manera controlada, sense alterar dades ni fer peticions externes. No s’ha identificat cap defecte P0/P1 en l’abast revisat.
@@ -125,6 +127,8 @@ El preparador també carrega sempre el catàleg actual (414.136 bytes) i el regi
 
 ### T08 · P3 · Decisió pendent: avisos vinculats a analítica
 
+**Decisió de l’usuari, 26/10/2026:** mantenir el funcionament de banderes i les instruccions existents de privacitat. No es crea cap transport alternatiu ni formulari anònim. Es potencia l’enllaç al repositori per proposar una correcció/PR, ara visible al peu del catàleg i a la guia pública. GPC/DNT i la confirmació de recepció es mantenen. La proposta original que segueix queda tancada amb aquesta decisió.
+
 **Evidència:** `pronunciations.js:31–44` desactiva les banderes si l’estat d’analítica no és `ready`; `analytics.js:47–52` respecta GPC/DNT encara que hi hagi permís temporal. Aquesta política està documentada i les proves la confirmen.
 
 **Impacte:** en navegadors privats, bloquejadors o quan Umami falla no hi ha una via operativa per enviar una incidència d’àudio. És una decisió de producte actual, no un error nou ni una proposta de desactivar proteccions.
@@ -171,3 +175,13 @@ T08 és una decisió de producte separada; T09 només requereix conservar i vigi
 ## Criteri de tancament de la consolidació
 
 Es pot iniciar el pilot digital quan T01–T03 estan resolts, s’han atès les barreres de teclat/reflow de l’auditoria complementària, existeix una porta clara de verificació i s’han mantingut els vectors antics, el PDF d’una pàgina, les dues varietats sense substitució i les interaccions actuals. Les optimitzacions de càrrega i neteja CSS poden continuar en lots independents; no han de convertir-se en una reescriptura general que ajorni indefinidament el pilot.
+
+## Lliurament 1.27 i treball diferit
+
+- **T01/T03:** `catalog-resources.js` extreu càrrega/estats/reintents del controlador. Identitat del mot des del banc, manifests i IPA independents, timeout i reintent selectiu. Una fallada no bloqueja els recursos sans ni mostra «Carregant…» indefinidament.
+- **T02:** preparació i validació de totes les llengües, renderització íntegra en memòria i publicació final amb temporal/substitució per fitxer. Entrades invàlides no produeixen cap escriptura. No s’afirma atomicitat del conjunt davant un error físic durant la publicació.
+- **T04, primera part:** índexs del navegador de 279.760 / 278.680 / 272.377 bytes (central/valencià/mallorquí), separats de les fonts editorials completes. La càrrega diferida de snapshots antics queda pendent; cap edició es modifica.
+- **T05:** Node i dependències fixats, lock npm real, porta de comprovació amb grups explícits i CI sense síntesi ni comprovació del desplegament. L’execució històrica del controlador retirat no es confon amb les proves del catàleg vigent.
+- **T06:** primera frontera extreta (recursos del catàleg). Model del preparador i correcció digital diferits; no s’hi afegeix ara cap mecanisme de puntuació.
+- **T07:** peces de compatibilitat identificades a la porta/guia de desenvolupament; es conserven dades i formularis antics. No es retira CSS global ni es fa una migració d’anotacions durant aquest lot. La consolidació més àmplia de capes queda pendent.
+- **T09:** contracte i quatre snapshots preservats; no es consumeix una edició per IPA, àudio o UI. **T10:** resum funcional actualitzat.

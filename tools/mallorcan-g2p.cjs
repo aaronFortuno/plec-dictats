@@ -65,7 +65,7 @@ function reviewQueue(data){
     if(basicSet.has(row.mot))stats[row.ipa?'basicWithIpa':'basicWithoutIpa']++;
     return {id:row.id,text:row.mot,ipa:row.ipa||null,status:row.estat_ipa,basicVocabulary:basicSet.has(row.mot),azureCaEsCompatible};
   });
-  return {schemaVersion:1,profile:data.profile.id,reference:'Mallorquí amb vocal neutra tònica i harmonització vocàlica; proposta incompleta.',audioGenerated:false,summary:stats,
+  return {schemaVersion:1,profile:data.profile.id,reference:'Palma · referència editorial mallorquina formal/didàctica amb neutra tònica; proposta incompleta pendent de contrast nadiu.',audioGenerated:true,audioScope:'18-word-local-three-voice-pilot-only',publicAudioAvailable:false,summary:stats,
     characterEstimates:{basis:'Unicode codepoints of XML-escaped prosody/phoneme body, excluding speak/voice; no synthesis pack or quota reservation.',rate:'-10%',available:estimateCharacters(data.rows),basic:estimateCharacters(data.rows.filter(row=>basicSet.has(row.mot))),pilotCandidates:pilotCandidates(data,basicSet).estimate},
     priorities:[{order:1,task:'Resoldre els mots bàsics sense IPA amb fonts lèxiques mallorquines.'},{order:2,task:'Contrastar les propostes dels 350 bàsics, vocals mitjanes, excepcions o/u i accent verbal.'},{order:3,task:'Resoldre els altres buits i revisar el corpus; després preparar una mostra auditiva curta.'}],
     basic:entries.filter(e=>e.basicVocabulary),pending:entries.filter(e=>!e.ipa)};

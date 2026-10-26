@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "id": "ca-mallorcan-palma-pilot-v1",
+  "profile": "ca-mallorcan-didactic-v1",
+  "reference": "Palma · model editorial formal/didàctic en revisió, no una descripció de tots els parlants.",
+  "catalogFingerprint": "ee94edbd3b2d4fb4d44d1cd66f70b970e17520029d952593d69e5adb2139bbf5",
+  "linguisticStatus": "pending",
+  "audioStatus": "pending-listening",
+  "voices": [
+    "Joana",
+    "Alba",
+    "Enric"
+  ],
+  "entries": [
+    {
+      "id": "p-1isw4fd",
+      "text": "abella",
+      "ipa": "ə.ˈbə.ʎə"
+    },
+    {
+      "id": "p-kwgyh5",
+      "text": "ceba",
+      "ipa": "ˈsə.bə"
+    },
+    {
+      "id": "p-9ffmwy",
+      "text": "pera",
+      "ipa": "ˈpə.ɾə"
+    },
+    {
+      "id": "p-18k8jdz",
+      "text": "xocolata",
+      "ipa": "ʃo.ko.ˈla.tə"
+    },
+    {
+      "id": "p-8e645j",
+      "text": "conill",
+      "ipa": "ku.ˈniʎ"
+    },
+    {
+      "id": "p-i0ont9",
+      "text": "formiga",
+      "ipa": "fuɾ.ˈmi.gə"
+    },
+    {
+      "id": "p-m066h5",
+      "text": "barca",
+      "ipa": "ˈbaɾ.kə"
+    },
+    {
+      "id": "p-5wgld9",
+      "text": "vaca",
+      "ipa": "ˈva.kə"
+    },
+    {
+      "id": "p-1j7if9q",
+      "text": "amable",
+      "ipa": "ə.ˈmab.blə"
+    },
+    {
+      "id": "p-1uqrs32",
+      "text": "arreglar",
+      "ipa": "ə.rəg.ˈgla"
+    },
+    {
+      "id": "p-x7m83k",
+      "text": "atapeït",
+      "ipa": "ə.tə.pə.ˈit"
+    },
+    {
+      "id": "p-ojnnbe",
+      "text": "canviïn",
+      "ipa": "kəm.ˈvi.in"
+    },
+    {
+      "id": "p-18erfhp",
+      "text": "camp",
+      "ipa": "ˈkamp"
+    },
+    {
+      "id": "p-1sav2x2",
+      "text": "banc",
+      "ipa": "ˈbaŋk"
+    },
+    {
+      "id": "p-wtxmix",
+      "text": "guant",
+      "ipa": "ˈgwant"
+    },
+    {
+      "id": "p-1879y2w",
+      "text": "col·legi",
+      "ipa": "kol.ˈlɛ.ʒi"
+    },
+    {
+      "id": "p-a1pyj5",
+      "text": "passàvem",
+      "ipa": "pə.ˈsa.vəm"
+    },
+    {
+      "id": "p-1gyv8iu",
+      "text": "brànquia",
+      "ipa": "ˈbɾaŋ.ki.ə"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # Perfil de pronunciació valenciana
 
+Els criteris comuns de dicció, representació IPA, fonts i límits de la síntesi s’expliquen a la [guia pública](https://plec.ortogra.fi/ca/pronunciacio/) i al [registre editorial dels tres perfils](DECISIONS-FONETIQUES.md). La revisió d’una mostra no valida tota la taula ni el banc d’àudios.
+
 La font editable és `audio/pronunciation/ca/valencian-didactic.tsv`: **3.299 files amb IPA proposada**, sobre les mateixes grafies i ID del banc. Les 22 propostes inicials es conserven; les altres 3.277 provenen del conversor obert [catalan2ipa](https://github.com/Connum/catalan2ipa), amb adaptacions editorials. Cap fila no està marcada com a validada lingüísticament.
 
 ## Procedència i límits
