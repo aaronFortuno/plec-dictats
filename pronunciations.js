@@ -27,13 +27,28 @@
  function play(row,variety){if(playing?.id===row.id&&playing.variety===variety){stop();return;}stop();const url=urlFor(row,variety);if(!url)return;
   const token=epoch;try{player=new Audio(url);playing={id:row.id,variety};refreshPlay();player.onended=()=>{if(token===epoch)stop();};player.onerror=()=>{if(token===epoch){stop();status('No s’ha pogut reproduir el mot. Torna-ho a provar.');}};player.play()?.catch(()=>{if(token===epoch){stop();status('No s’ha pogut reproduir el mot. Torna-ho a provar.');}});}catch{stop();status('No s’ha pogut reproduir el mot.');}
  }
- function flagged(row,variety){return ['audio','ipa'].some(t=>{const c=context(row,variety,t);return c&&store.get(c)?.status==='review';});}
+ function reportContext(row,variety){const c=context(row,variety,'audio');return c?{word:c.word,variety,audioVersion:c.pack+':'+c.fingerprint}:null;}
+ function reportInfo(row,variety){
+  const c=reportContext(row,variety),analytics=window.PlecAnalytics,state=analytics?.getState()||{status:'unavailable'},phase=c?analytics?.reportState(c)||'idle':'idle';
+  let message='Notifica un problema d’aquest àudio. S’enviarà el mot, la varietat i la versió perquè els puguem revisar.';
+  if(phase==='sent')message='Avís enviat. Ja has notificat aquest enregistrament en aquesta pestanya.';
+  else if(phase==='sending')message='Enviant l’avís a Umami…';
+  else if(!c)message='Encara no hi ha cap enregistrament disponible per notificar.';
+  else if(state.status==='disabled')message='Fem servir Umami per rebre els errors que ens notifiqueu. Per enviar un avís cal permetre aquest tracking, encara que sigui temporalment. Revisa «Privacitat» i els ajustos del navegador.';
+  else if(state.status==='unavailable')message='No podem connectar amb Umami per rebre avisos. Si el bloqueges, permet-lo temporalment en aquest web i reintenta-ho des de «Privacitat».';
+  else if(state.status==='loading')message='Umami s’està preparant. Els avisos s’activaran quan puguem confirmar la connexió.';
+  else if(state.status==='development')message='En local no carreguem Umami. Els avisos estan disponibles a plec.ortogra.fi quan el tracking està permès.';
+  return {context:c,phase,message,disabled:!c||state.status!=='ready'||phase!=='idle'};
+ }
+ function reportButton(row,variety,args,name){const info=reportInfo(row,variety);
+  return `<span class="report-control" tabindex="${info.disabled?'0':'-1'}" data-report-tooltip="${esc(info.message)}" aria-label="${esc(info.message)}" data-report-state="${info.phase}"><button type="button" class="review-icon report-flag" data-action="report" ${args} aria-label="Notifica un problema de l’àudio de ${esc(row.text)} en ${name}" aria-pressed="${info.phase==='sent'}" ${info.disabled?'disabled':''}>${icon(info.phase==='sent'?'check':'flag')}</button></span>`;
+ }
  function renderInitials(view,active){const nav=$('catalog-initials');
   if(!nav.children.length)nav.innerHTML=B.LETTERS.map(letter=>`<a href="#catalog-${letter}" data-initial="${letter}">${letter}</a>`).join('');
   for(const link of nav.querySelectorAll('a')){const letter=link.dataset.initial,count=view.counts[letter];link.setAttribute('aria-disabled',String(!count));link.tabIndex=count?0:-1;link.setAttribute('aria-label',`${letter}: ${count} mots`);if(letter===active)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');}
  }
  function cell(row,variety,label){const ipa=row[variety]?.ipa,url=urlFor(row,variety),args=`data-word="${esc(row.id)}" data-variety="${variety}"`,name=label.split(' · ')[0],shownIpa=ipa||(failed?'—':loaded?'IPA pendent':'Carregant…');
-  return `<section class="pronunciation-cell" aria-label="${name} de ${esc(row.text)}"><span class="cell-variety">${esc(label)}</span><button type="button" class="ipa-play" data-action="play" ${args} title="Proposta IPA pendent de contrast. Prem per escoltar l’enregistrament disponible." aria-label="Escolta ${esc(row.text)}: ${esc(shownIpa)} (${name})" aria-pressed="false" ${url?'':'disabled'}><span class="ipa-text${ipa?'':' ipa-pending'}">${esc(shownIpa)}</span></button><button type="button" class="review-icon" data-action="play" ${args} aria-label="Escolta ${esc(row.text)} en ${name}" aria-pressed="false" ${url?'':'disabled'}>${icon('volume-2')}</button><button type="button" class="review-icon report-flag" data-action="report" ${args} aria-label="Notifica un error de ${esc(row.text)} en ${name}" aria-pressed="${flagged(row,variety)}" ${ipa||url?'':'disabled'}>${icon('flag')}</button></section>`;
+  return `<section class="pronunciation-cell" aria-label="${name} de ${esc(row.text)}"><span class="cell-variety">${esc(label)}</span><button type="button" class="ipa-play" data-action="play" ${args} title="Proposta IPA pendent de contrast. Prem per escoltar l’enregistrament disponible." aria-label="Escolta ${esc(row.text)}: ${esc(shownIpa)} (${name})" aria-pressed="false" ${url?'':'disabled'}><span class="ipa-text${ipa?'':' ipa-pending'}">${esc(shownIpa)}</span></button><button type="button" class="review-icon" data-action="play" ${args} aria-label="Escolta ${esc(row.text)} en ${name}" aria-pressed="false" ${url?'':'disabled'}>${icon('volume-2')}</button>${reportButton(row,variety,args,name)}</section>`;
  }
  function render({resetScroll=false,target=''}={}){
   if(!config)return;stop();const list=$('catalog-list'),previousScroll=list.scrollTop,tag=$('catalog-tag').value,query=$('catalog-search').value.trim(),stage=$('catalog-stage').value;
@@ -53,12 +68,12 @@
   list.scrollTop=resetScroll?0:previousScroll;
   if(target){const id=config.entries.find(e=>e.text===target)?.id,selected=[...list.querySelectorAll('.pronunciation-row')].find(e=>e.dataset.word===id);selected?.scrollIntoView({block:'center'});}
  }
- function refreshFlags(){for(const b of $('catalog-list').querySelectorAll('[data-action=report]')){const row=byId.get(b.dataset.word);if(row)b.setAttribute('aria-pressed',String(flagged(row,b.dataset.variety)));}}
+ function refreshFlags(){for(const b of $('catalog-list').querySelectorAll('[data-action=report]')){const row=byId.get(b.dataset.word);if(!row)continue;const info=reportInfo(row,b.dataset.variety),wrapper=b.closest('.report-control');b.disabled=info.disabled;b.setAttribute('aria-pressed',String(info.phase==='sent'));b.setAttribute('aria-busy',String(info.phase==='sending'));b.innerHTML=icon(info.phase==='sent'?'check':'flag');if(wrapper){wrapper.tabIndex=info.disabled?0:-1;wrapper.dataset.reportTooltip=info.message;wrapper.dataset.reportState=info.phase;wrapper.setAttribute('aria-label',info.message);}}}
+ window.PlecAnalytics?.subscribe(refreshFlags);
  function reportTarget(){return report&&context(report.row,report.variety,$('pronunciation-report-kind').value);}
  function targetChanged(){const c=reportTarget(),saved=c&&store.get(c);$('pronunciation-report-note').value=saved?.note||'';$('pronunciation-report-clear').hidden=saved?.status!=='review';}
- function openReport(row,variety){stop();report={row,variety};const label=varieties.find(v=>v[0]===variety)[1];$('pronunciation-report-word').textContent=`${row.text} · ${label}`;
-  const select=$('pronunciation-report-kind');for(const o of select.options)o.disabled=!context(row,variety,o.value);
-  const prior=['audio','ipa'].find(t=>{const c=context(row,variety,t);return c&&store.get(c)?.status==='review';});select.value=prior||(context(row,variety,'audio')?'audio':'ipa');targetChanged();PlecMotion.open($('pronunciation-report'));setTimeout(()=>$('pronunciation-report-note').focus(),0);
+ async function openReport(row,variety){const info=reportInfo(row,variety);if(info.disabled)return;stop();status('Enviant l’avís…');
+  try{const accepted=await window.PlecAnalytics.reportAudio(info.context);status(accepted?`Avís enviat. Gràcies: revisarem «${row.text}» (${variety==='central'?'català central':'valencià'}).`:'L’avís no s’ha pogut enviar. Comprova la connexió amb Umami des de «Privacitat».');}catch{status('L’avís no s’ha pogut enviar. Torna-ho a provar des de «Privacitat».');}refreshFlags();
  }
  $('catalog-list').addEventListener('click',event=>{const b=event.target.closest('[data-action]');if(!b||b.disabled)return;if(b.dataset.action==='more'){const oldCount=$('catalog-list').querySelectorAll('.pronunciation-row').length;openGeneration++;limit+=50;render();$('catalog-list').querySelectorAll('.pronunciation-row')[oldCount]?.focus({preventScroll:true});return;}if(b.dataset.action==='reset'){resetFilters();return;}if(b.dataset.action==='retry'){loading=null;loaded=false;ensureData();return;}const row=byId.get(b.dataset.word);if(!row)return;if(b.dataset.action==='play')play(row,b.dataset.variety);else if(b.dataset.action==='report')openReport(row,b.dataset.variety);});
  $('pronunciation-report-kind').addEventListener('change',targetChanged);
@@ -94,7 +109,7 @@
   $('catalog-title').textContent=config.mode==='words'?'El catàleg':'Les pseudoparaules';$('catalog-stage-field').hidden=config.mode==='pseudo';$('export-words-text').hidden=config.mode!=='words';$('export-pseudo-text').hidden=config.mode!=='pseudo';$('export-pronunciations').hidden=config.mode==='pseudo';document.querySelector('.catalog-hint').hidden=config.mode==='pseudo';
   deepWord=word;requestedPack=pack;
   if(word){const entry=config.entries.find(e=>e.text===word&&e.mode===config.mode);if(entry){initial=B.initialFor(word,config.locale);if(!config.matchesStage(entry,$('catalog-stage').value))$('catalog-stage').value='all';if($('catalog-tag').value&&!entry.tags.includes($('catalog-tag').value))$('catalog-tag').value='';}}
-  const generation=++openGeneration;PlecMotion.open($('catalog-dialog'));render({target:word});
+  const generation=++openGeneration;PlecMotion.open($('catalog-dialog'));render({target:word});if(!open.tracked){window.PlecAnalytics?.track('catalog-opened');open.tracked=true;}
   try{const url=new URL(location.href);url.searchParams.set('panel','cataleg');if(word)url.searchParams.set('mot',word);else url.searchParams.delete('mot');if(pack)url.searchParams.set('audio',pack);else url.searchParams.delete('audio');history.replaceState(null,'',url);}catch{}
   ensureData().then(()=>{if(word&&generation===openGeneration&&$('catalog-dialog').open)render({target:word});});
  }

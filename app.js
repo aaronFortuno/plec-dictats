@@ -12,6 +12,7 @@
   let edition=R.editions.find(e=>e.slot===R.current),C=edition.catalog;
   const $=id=>document.getElementById(id),escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const STORAGE='plec-seeds-v1:'+L.id;
+  const track=(name,data)=>window.PlecAnalytics?.track(name,data);
   const defaults=mode=>({count:mode==='words'?24:20,stage:mode==='words'?'cs':'all',tags:[...(mode==='words'?S.WORD_FOCUSES:S.PSEUDO_FOCUSES)],required:[],code:null});
   let state={mode:'words',modelSide:'left',foldStyle:'thirds',variety:'central',sessions:{words:defaults('words'),pseudo:defaults('pseudo')}},current=null,busy=false,job=0,controller=null,pendingSearch=null,toastTimer;
   let legacy=null;
@@ -156,12 +157,14 @@
   async function buildPdf(teacher = false) { return window.PlecPdf.build(sheetOptions(), teacher, C.categories); }
   async function exportPdf(teacher) {
     const button = $(teacher ? 'teacher-pdf' : 'download-pdf'), original = button.innerHTML;
+    const metrics={mode:state.mode,count:session().count,fold:state.foldStyle,stage:state.mode==='pseudo'?'none':session().stage};
     button.disabled = true; button.textContent = 'Preparant…';
     try {
       const bytes = await buildPdf(teacher);
       downloadBlob(new Blob([bytes], { type: 'application/pdf' }), `plec-${state.mode === 'words' ? 'paraules' : 'pseudoparaules'}-${session().count}-${state.foldStyle === 'quarter' ? 'quart' : 'tercos'}-${state.modelSide === 'right' ? 'dreta' : 'esquerra'}${teacher ? '-guia' : ''}.pdf`);
+      track(teacher?'guide-exported':'worksheet-exported',teacher?{mode:metrics.mode,count:metrics.count}:metrics);
       say(teacher ? 'Guia docent descarregada, en el mateix ordre que el full.' : 'PDF descarregat. Imprimeix-lo en A4 a escala 100 %.');
-    } catch (error) { say('No s’ha pogut generar el PDF. ' + error.message); }
+    } catch (error) { track('technical-error',{kind:'pdf'});say('No s’ha pogut generar el PDF. ' + error.message); }
     finally { button.innerHTML = original; renderPreview(); }
   }
 
@@ -213,15 +216,15 @@
   }
   setupHelp('required-help-trigger','required-help-toggle','required-help');
   setupHelp('focus-help-trigger','focus-help-toggle','focus-help');
-  $('recover-form').addEventListener('submit',event=>{event.preventDefault();try{const resolved=S.resolve(R.editions,$('recover-code').value);stopSearch();setCode(resolved.code);$('recover-code').value='';$('search-status').textContent='';say('Dictat recuperat amb els mateixos mots, ordre i filtres.');}catch(error){say(error.message);}});
-  async function copy(value,success){try{await navigator.clipboard.writeText(value);say(success);}catch{say('No s’ha pogut copiar automàticament. El codi és '+(current?.code||'')+'.');}}
-  $('copy-code').addEventListener('click',()=>current&&copy(current.code,'Codi copiat.'));
+  $('recover-form').addEventListener('submit',event=>{event.preventDefault();try{const resolved=S.resolve(R.editions,$('recover-code').value);stopSearch();setCode(resolved.code);$('recover-code').value='';$('search-status').textContent='';track('code-recovered',{result:'ok'});say('Dictat recuperat amb els mateixos mots, ordre i filtres.');}catch(error){track('code-recovered',{result:'invalid'});say(error.message);}});
+  async function copy(value,success,target){try{await navigator.clipboard.writeText(value);if(target)track('share-copied',{target});say(success);}catch{say('No s’ha pogut copiar automàticament. El codi és '+(current?.code||'')+'.');}}
+  $('copy-code').addEventListener('click',()=>current&&copy(current.code,'Codi copiat.','code'));
   const shareOptions=()=>({language:L.id,catalogue:current.catalogue,seed:current.code,variety:state.variety});
   $('pronunciation-variety').addEventListener('change',()=>{state.variety=window.PlecAudioVarieties.definition($('pronunciation-variety').value).id;persist();renderPreview();updateURL();});
   const studentURL=()=>LT.publicDictationURL(shareOptions());
   $('open-student').addEventListener('click',()=>{if(current&&!busy)location.href=LT.dictationURL(new URL('../',location.href),shareOptions());});
-  $('copy-student-link').addEventListener('click',()=>{if(current&&!busy)copy(studentURL(),'Enllaç per a l’alumnat copiat.');});
-  $('copy-link').addEventListener('click',()=>{if(current&&!busy)copy(LT.publicComposerURL(shareOptions()),'Enllaç del dictat copiat.');});
+  $('copy-student-link').addEventListener('click',()=>{if(current&&!busy)copy(studentURL(),'Enllaç per a l’alumnat copiat.','student');});
+  $('copy-link').addEventListener('click',()=>{if(current&&!busy)copy(LT.publicComposerURL(shareOptions()),'Enllaç del dictat copiat.','worksheet');});
   $('catalog-open').addEventListener('click',()=>openCatalog());$('help-open').addEventListener('click',()=>window.PlecMotion.open($('help-dialog')));
   function openInfo(dialogId, titleId) {
     const dialog = $(dialogId);
@@ -249,6 +252,7 @@
     }
   });
   const releases = [
+    ['1.23', '2026-10-26', ['Analítica agregada amb Umami i controls de privacitat. Avís d’àudio amb un clic, confirmació de recepció i bloqueig de duplicats per mot, varietat i enregistrament durant la pestanya. Els avisos queden inactius quan el tracking no està disponible.']],
     ['1.22.1', '2026-10-25', ['Marca compartida d’ortogra.fi al peu de Plec, amb símbol tipogràfic i enllaç actiu al nou portal de recursos educatius.']],
     ['1.22', '2026-10-25', ['La pronunciació es tria al lateral del docent i queda fixada als enllaços i al QR. L’alumnat veu la varietat indicada sense selector; es conserven els enllaços antics de veu. Marca alineada verticalment al header i peu amb «un projecte d’ortogra.fi», encara inactiu.']],
     ['1.21.2', '2026-10-25', ['Enllaços públics del full, de l’alumnat i dels QR centralitzats a plec.ortogra.fi. Els botons de còpia utilitzen el domini definitiu també quan es treballa en local o des d’una adreça antiga.']],

@@ -46,8 +46,14 @@
     var state = {
       selection: null, cov: null, session: null, audio: null, epoch: 0,
       strictFocus: true, generation: 0, manifestPromise: null,
-      introUrl: null, introAudio: null, introEpoch: 0
+      introUrl: null, introAudio: null, introEpoch: 0,
+      variety: null, activeSince: null, activeElapsed: 0
     };
+    function track(name, data) { root.PlecAnalytics?.track(name, data); }
+    function now() { return root.performance?.now() ?? Date.now(); }
+    function startClock() { if (state.activeSince === null) state.activeSince = now(); }
+    function pauseClock() { if (state.activeSince !== null) { state.activeElapsed += Math.max(0, now() - state.activeSince); state.activeSince = null; } }
+    function metrics() { return { mode: state.selection.recipe.mode, count: state.selection.entries.length, variety: state.variety }; }
 
     function isLoopback(h) { return h === "127.0.0.1" || h === "localhost" || h === "[::1]"; }
 
@@ -140,6 +146,7 @@
       state.introUrl = null;
       $("read-instructions").disabled = true;
       state.session = null; state.selection = null; state.cov = null;
+      state.activeSince = null; state.activeElapsed = 0; state.variety = null;
       $("start-dictation").disabled = true;
       for (var id of ["windowed-start", "fullscreen-note", "resume-windowed", "resume-note"]) $(id).hidden = true;
       setError("");
@@ -164,6 +171,7 @@
           var pronunciation = varieties.select(m, lang, {variety:qs.get("variety"),voice:qs.get("voice")});
           cov = coverage(m, sel.entries, lang, appBase, pronunciation.pack.id);
           $("dictation-variety").textContent = pronunciation.variety.label;
+          state.variety = pronunciation.variety.id;
         } catch (e) {
           state.selection = null; setError(e.message); show("setup-panel"); return;
         }
@@ -196,6 +204,7 @@
       }).catch(function (e) {
         if (gen !== state.generation) return;
         state.manifestPromise = null;
+        track('technical-error', {kind: 'audio'});
         state.selection = null;
         setError("No s'han pogut carregar els àudios. Torna-ho a provar.");
         show("setup-panel");
@@ -243,6 +252,8 @@
       stopIntro(); stopAudio();
       state.session = root.PlecDictationSession.createSession(state.selection.entries.length);
       state.session.start();
+      startClock();
+      track('dictation-started', metrics());
       renderPlayer();
       show("player-panel");
       if (doc.visibilityState === "hidden") pauseIfActive();
@@ -309,6 +320,7 @@
         session.finishPlay(token, success);
         renderPlayer();
         if (!success) {
+          track('technical-error', {kind: 'audio'});
           $("playback-error").textContent = "No s'ha pogut reproduir la paraula. Torna-ho a provar; aquesta escolta no compta.";
           $("playback-error").hidden = false;
         }
@@ -331,6 +343,9 @@
       stopAudio();
       var s = state.session.next();
       if (s.finished) {
+        pauseClock();
+        var minutes = state.activeElapsed / 60000;
+        track('dictation-completed', { ...metrics(), duration_bucket: minutes < 5 ? 'lt5' : minutes < 10 ? '5to10' : minutes < 20 ? '10to20' : 'gt20' });
         leaveFullscreen();
         show("finished-panel");
       } else {
@@ -346,6 +361,7 @@
       if (!s.started || s.finished || s.paused) return;
       stopAudio();
       session.pause();
+      pauseClock();
       $("resume-note").hidden = true;
       $("resume-windowed").hidden = true;
       show("pause-panel");
@@ -363,10 +379,10 @@
       var session = state.session;
       if (!session || !session.snapshot().paused || doc.visibilityState === "hidden") return;
       var generation = state.generation;
-      if (!state.strictFocus) { session.resume(); renderPlayer(); show("player-panel"); return; }
+      if (!state.strictFocus) { session.resume(); startClock(); renderPlayer(); show("player-panel"); return; }
       enterFullscreen().then(function (ok) {
         if (state.session !== session || generation !== state.generation || !session.snapshot().paused || doc.visibilityState === "hidden") return;
-        if (ok) { session.resume(); renderPlayer(); show("player-panel"); }
+        if (ok) { session.resume(); startClock(); renderPlayer(); show("player-panel"); }
         else { $("resume-note").textContent = "La pantalla completa no està disponible. Pots continuar en mode concentració."; $("resume-note").hidden = false; $("resume-windowed").hidden = false; }
       });
     });
@@ -375,6 +391,7 @@
       if (!state.session || !state.session.snapshot().paused || doc.visibilityState === "hidden") return;
       state.strictFocus = false;
       state.session.resume();
+      startClock();
       renderPlayer();
       show("player-panel");
     });

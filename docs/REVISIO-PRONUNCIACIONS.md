@@ -4,21 +4,21 @@ Obre **El catàleg**. Una única vista mostra els mots, focus, IPA i àudios de 
 
 Cada fila mostra **mot i focus | central · Alba | valencià · Enric**. Prem la IPA o l’altaveu per sentir l’enregistrament disponible; el mot es ressalta durant la reproducció. No es reprodueixen dos àudios alhora. En mòbil les dues varietats queden juntes sota cada mot. Els filtres són fixos i només es desplaça el llistat; s’afegeixen fins a 50 files per tanda per mantenir-lo àgil.
 
-## Notificar un error
+## Notificar un àudio
 
-1. Prem la **bandera** al costat de la varietat corresponent.
-2. Indica si és un error de **l’àudio** o de **la transcripció IPA**, i què cal revisar.
-3. **Desa** conserva la incidència en aquest navegador. **Obre a GitHub** també obre un esborrany amb mot, varietat, observació i versió; l’usuari inicia sessió i decideix enviar-lo. No hi ha enviament automàtic ni formulari anònim.
+Prem la **bandera** al costat de la varietat corresponent. S’envia a Umami `audio-reported` amb el mot públic, la varietat i la versió exacta de l’enregistrament. No cal formulari, comentari, compte ni exportació.
 
-Torna a prémer la bandera per editar o retirar la incidència. No cal marcar abans cap polze ni nota. Les aprovacions i anotacions d’iteracions anteriors es conserven a l’exportació, tot i que ja no tenen controls propis a la interfície.
+Durant l’enviament el botó queda inactiu. Només després d’una resposta vàlida del receptor mostra una marca i «Avís enviat». El mateix mot, varietat i versió no es poden tornar a notificar durant aquella pestanya, també si es recarrega. Una nova versió de l’àudio té una identitat diferent.
 
-Cada incidència d’àudio identifica el mot, perfil, paquet i empremta dels ajustos exactes. Les incidències IPA identifiquen el perfil i la transcripció literal. Un enregistrament nou no hereta una revisió d’un altre. La IPA mostrada és la proposta actual: els originals d’Alba no s’han sintetitzat necessàriament amb aquesta transcripció. Les dues taules estan completes com a propostes, pendents de contrast lingüístic; l’existència d’un MP3 no implica validació auditiva.
+Si Umami no es pot carregar o no accepta dades, o si el tracking està desactivat, totes les banderes queden inactives. Passa-hi el ratolí o enfoca-les amb el teclat per llegir-ne el motiu. **Privacitat i avisos** permet desactivar l’analítica o permetre-la temporalment durant la pestanya. El permís temporal no anul·la DNT/GPC: aquests senyals s’han de revisar al navegador. No s’esquiven bloquejadors. En local no es carrega Umami ni s’envien avisos.
 
-## Exportar i reprendre
+A Umami, filtra `audio-reported` i consulta `word`, `variety` i `audio_version`. Els recomptes ajuden a prioritzar una revisió manual; no acrediten que la pronunciació sigui incorrecta ni representen persones úniques. La retenció del pla Free és de sis mesos. Umami no manté un estat editorial de pendent/resolt. Aquest canal no garanteix la recepció de totes les incidències.
 
-**Exporta incidències** desa un JSON amb totes les versions i anotacions. Es pot passar al mantenidor pel xat, adjuntar a GitHub o importar en un altre dispositiu. **Importa incidències** comprova el fitxer complet abans d’aplicar-lo i conserva la dada més recent de cada versió, incloses les incidències retirades. Una importació invàlida no esborra res.
+Cada avís d’àudio identifica el mot, varietat, paquet immutable i empremta dels ajustos exactes. La bandera pública notifica l’enregistrament. Per proposar una correcció editorial detallada o d’IPA es pot utilitzar el repositori. La IPA mostrada és la proposta actual: els originals d’Alba no s’han sintetitzat necessàriament amb aquesta transcripció. Les dues taules estan completes com a propostes, pendents de contrast lingüístic; l’existència d’un MP3 no implica validació auditiva.
 
-Les dades es desen localment amb la clau `plec-pronunciation-reviews-v1`. No hi ha comptes ni sincronització. Si el navegador impedeix desar-les, apareix un avís; exporta-les abans de sortir.
+## Anotacions anteriors i descàrregues
+
+Les notes de revisió anteriors, amb la clau local `plec-pronunciation-reviews-v1`, es conserven sense enviar-les a Umami. Els mòduls d’importació/exportació continuen al codi per compatibilitat, però els controls antics no formen part del canal públic actual.
 
 **Descarrega les IPA** reuneix central i valencià en un únic CSV amb els estats de proposta. Els TSV originals continuen sent fonts d’edició del projecte, però no cal obrir-los per consultar ni notificar errors.
 

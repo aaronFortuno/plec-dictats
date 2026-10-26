@@ -1,5 +1,12 @@
 # Historial
 
+## 1.23 · 26 d’octubre de 2026
+
+- Analítica agregada d’ús amb Umami, limitada a `plec.ortogra.fi`. Exportacions, còpies, recuperacions de codis i dictats començats/acabats, sense enviar codis, cerques ni respostes.
+- La bandera del catàleg envia un avís d’àudio amb un clic: mot públic, varietat i versió de l’enregistrament. Confirmació després de la recepció i bloqueig de duplicats durant la pestanya.
+- Controls de privacitat compartits, desactivació local i permís temporal. Les banderes queden inactives amb una explicació si el tracking està desactivat, bloquejat o no disponible. Es respecten DNT i GPC.
+- Comprovacions locals amb receptor simulat, sense contaminar les estadístiques reals.
+
 ## 1.22.1 · 25 d’octubre de 2026
 
 - Marca compartida d’ortogra.fi al peu, amb el símbol de la «o» accentuada i el nom del projecte paraigua.

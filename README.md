@@ -100,9 +100,9 @@ Les 96 pseudoparaules actuals es mantenen. L’ampliació prevista necessita rev
 
 ## Escoltar i revisar al web
 
-Dins d’**El catàleg** pots consultar les dues varietats costat per costat, escoltar els enregistraments prement la IPA o l’altaveu, i obrir una incidència amb la bandera. Hi ha una sola vista amb mot, focus i les dues varietats. La cerca és global i no canvia quan escoltes un mot; els enllaços directes el ressalten sense omplir-la. Només es desplaça el llistat, amb 50 files inicials ampliables. La ruta `/ca/pronunciacions/` obre directament aquesta vista. Les incidències de la IPA es registren separadament dels àudios. No cal descarregar ni editar un TSV per revisar.
+Dins d’**El catàleg** pots consultar les dues varietats costat per costat, escoltar els enregistraments prement la IPA o l’altaveu, i obrir una incidència amb la bandera. Hi ha una sola vista amb mot, focus i les dues varietats. La cerca és global i no canvia quan escoltes un mot; els enllaços directes el ressalten sense omplir-la. Només es desplaça el llistat, amb 50 files inicials ampliables. La ruta `/ca/pronunciacions/` obre directament aquesta vista. La bandera notifica un problema de l’enregistrament amb un clic. No cal descarregar ni editar un TSV per revisar.
 
-Les notes es desen al navegador i **Exporta** les reuneix en un JSON que es pot compartir o importar per reprendre el treball. **Descarrega les IPA** genera un únic CSV. La bandera permet desar la incidència d’aquell mot i varietat o obrir un esborrany a GitHub que l’usuari revisa i envia amb el seu compte; no hi ha enviament automàtic ni formulari anònim. Vegeu [guia de revisió](docs/REVISIO-PRONUNCIACIONS.md).
+L’avís envia a Umami el mot públic, la varietat i la versió de l’àudio. Només queda confirmat quan el receptor l’accepta, i el botó es desactiva durant la pestanya per evitar duplicats. Si el tracking està desactivat o bloquejat, les banderes queden inactives amb un missatge explicatiu. Les anotacions locals anteriors es conserven, però ja no són el canal públic d’avisos. **Descarrega les IPA** genera un únic CSV. Vegeu la [guia de revisió](docs/REVISIO-PRONUNCIACIONS.md) i la [configuració d’analítica](docs/ANALITICA-UMAMI.md).
 
 Els lots reprenen cada minut els errors transitoris de connexió o servidor, mantenint pressupost, STOP i MP3 completats. Les peticions repetides es compten al registre; un error de desament local reutilitza el mateix àudio. La represa funciona mentre el procés continuï obert; no s’ha instal·lat cap servei d’inici després d’un reinici. Vegeu [represa dels lots](docs/REPRESA-AUDIO.md).
 
@@ -110,10 +110,12 @@ El lot d’Enric ha completat les 3.299 peticions i ha reservat 288.630 caràcte
 
 ## Desenvolupament i comprovació
 
-Web estàtic, amb biblioteques i icones locals. Obre `index.html` directament o serveix el projecte. No hi ha serveis externs, comptes ni analítica durant l'ús.
+Web estàtic, amb biblioteques i icones locals. Obre `index.html` directament o serveix el projecte. No cal cap compte per utilitzar Plec. Al domini públic, Umami recull estadístiques agregades i els avisos d’àudio voluntaris; la còpia local no carrega el tracker ni envia dades. La informació i els controls són a «Privacitat».
 
 ```text
 node tools/build-catalogs.cjs
+node tools/check-analytics.cjs
+node tools/check-dictation-analytics.cjs
 node tools/check.cjs
 node tools/check-catalogs.cjs
 node tools/check-lexicon.cjs
@@ -141,11 +143,11 @@ node tools/serve.cjs
 
 El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `build-catalogs.cjs --check` comprova que els fitxers generats siguin reproduïbles. El generador verifica també les empremtes de les instantànies i no les modifica. Per repetir el contrast complet cal el lèxic extern de Softcatalà; les instruccions són a `catalogs/README.md`.
 
-`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `pronunciations.js` gestiona el catàleg unificat i una única reproducció i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.22.1`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
+`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `pronunciations.js` gestiona el catàleg unificat i una única reproducció i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.23.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
 
 ## Versions
 
-La interfície actual és **1.22.1**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.23**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 
