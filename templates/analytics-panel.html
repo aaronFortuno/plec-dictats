@@ -4,6 +4,13 @@
   <p>Quan notifiques un àudio, enviem el mot públic del catàleg, la varietat i la versió de l’enregistrament perquè el puguem revisar.</p>
   <p id="analytics-state" role="status" aria-live="polite"></p>
   <div class="analytics-actions"><button type="button" class="button secondary" id="analytics-disable">Desactiva l’analítica</button><button type="button" class="button primary" id="analytics-temporary">Permet temporalment</button></div>
+  <details id="analytics-browser-help" class="analytics-browser-help" hidden open>
+    <summary>Com habilitar els avisos al meu navegador</summary>
+    <label for="analytics-browser">Navegador <select id="analytics-browser"><option value="brave">Brave</option><option value="chrome">Chrome</option><option value="firefox">Firefox</option><option value="edge">Edge</option><option value="safari">Safari</option><option value="other">Un altre</option></select></label>
+    <p id="analytics-help-intro"></p><ol id="analytics-help-steps"></ol>
+    <p id="analytics-help-scope" class="field-hint"></p>
+    <a id="analytics-help-source" target="_blank" rel="noopener noreferrer">Ajuda oficial del navegador</a>
+  </details>
   <p class="field-hint">El permís temporal dura mentre aquesta pestanya estigui oberta. Si el navegador o un bloquejador impedeix el tracking, cal permetre Umami en aquest web per poder enviar avisos. Plec funciona igualment amb l’analítica desactivada.</p>
   <p class="field-hint">Les estadístiques i els avisos es conserven fins a sis mesos. <a href="https://umami.is/privacy" target="_blank" rel="noopener noreferrer">Privacitat d’Umami</a>.</p>
 </dialog>

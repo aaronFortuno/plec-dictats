@@ -16,6 +16,9 @@
         page.drawLine({ start: { x: s.x * PT, y: (297 - s.y) * PT }, end: { x: s.x2 * PT, y: (297 - s.y2) * PT }, color: color(s.color), thickness: s.width * PT, ...(s.dash ? { dashArray: [1.5 * PT, 1.4 * PT] } : {}) });
       } else if (s.type === 'rect') {
         page.drawRectangle({ x: s.x * PT, y: (297 - s.y - s.h) * PT, width: s.w * PT, height: s.h * PT, color: color(s.color) });
+      } else if (s.type === 'polyline') {
+        const path = 'M '+s.points.map(p=>p.join(' ')).join(' L ')+(s.fill?' Z':'');
+        page.drawSvgPath(path, {x:0,y:297*PT,scale:PT,borderWidth:s.width,borderColor:color(s.color),...(s.fill?{color:color(s.fill)}:{}),...(s.dash?{borderDashArray:[.8,.7]}:{})});
       } else {
         const value = printable(s.value), font = s.weight ? bold : regular;
         const width = font.widthOfTextAtSize(value, s.size);

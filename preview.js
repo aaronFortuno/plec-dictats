@@ -29,7 +29,20 @@
     hintVisible=true;hint.hidden=false;requestAnimationFrame(()=>{if(hintVisible)hint.classList.add('is-visible');});
     hintTimer=setTimeout(hideHint,1800);
   }
-  let view = { zoom: 1, x: 0, y: 0, width: 0, height: 0, paperWidth: 0, paperHeight: 0 }, frame, drag;
+  let view = { zoom: 1, x: 0, y: 0, width: 0, height: 0, paperWidth: 0, paperHeight: 0 }, frame, gesture;
+  const pointers = new Map();
+  function pointerPosition() {
+    const points = [...pointers.values()].slice(0, 2), rect = host.getBoundingClientRect();
+    return {
+      x: points.reduce((sum, p) => sum + p.x, 0) / points.length - rect.left - rect.width / 2,
+      y: points.reduce((sum, p) => sum + p.y, 0) / points.length - rect.top - rect.height / 2,
+      distance: points.length === 2 ? Math.hypot(points[1].x - points[0].x, points[1].y - points[0].y) : 0
+    };
+  }
+  function rebaseGesture() {
+    gesture = pointers.size ? { ...pointerPosition(), view: { ...view } } : null;
+    host.classList.toggle('is-panning', !!gesture);
+  }
   function render() {
     paper.style.setProperty('--preview-width', view.paperWidth + 'px');
     paper.style.setProperty('--preview-height', view.paperHeight + 'px');
@@ -67,19 +80,25 @@
   }, { passive: false });
   host.addEventListener('dblclick', event => { if (!event.target.closest('.zoom-tools')) reset(); });
   host.addEventListener('pointerdown', event => {
-    if (event.pointerType === 'touch' || event.button !== 0 || event.target.closest('.zoom-tools')) return;
+    if (event.button !== 0 || event.target.closest('.zoom-tools')) return;
     host.focus({ preventScroll: true });
-    drag = { id: event.pointerId, x: event.clientX, y: event.clientY, panX: view.x, panY: view.y };
-    host.setPointerCapture(event.pointerId); host.classList.add('is-panning');
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    rebaseGesture();
+    host.setPointerCapture(event.pointerId);
     event.preventDefault();
   });
   host.addEventListener('pointermove', event => {
-    if (!drag || drag.id !== event.pointerId) return;
-    view = limit({ ...view, x: drag.panX + event.clientX - drag.x, y: drag.panY + event.clientY - drag.y }); render();
+    if (!gesture || !pointers.has(event.pointerId)) return;
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    const current = pointerPosition(), original = gesture.view;
+    const nextZoom = gesture.distance > 0 ? Math.max(MIN, Math.min(MAX, original.zoom * current.distance / gesture.distance)) : original.zoom;
+    const ratio = nextZoom / original.zoom;
+    view = limit({ ...original, zoom: nextZoom, x: current.x - (gesture.x - original.x) * ratio, y: current.y - (gesture.y - original.y) * ratio });
+    render();
   });
   function finishDrag(event) {
-    if (!drag || event.pointerId !== drag.id) return;
-    drag = null; host.classList.remove('is-panning');
+    if (!pointers.delete(event.pointerId)) return;
+    rebaseGesture();
   }
   host.addEventListener('pointerup', finishDrag);
   host.addEventListener('pointercancel', finishDrag);

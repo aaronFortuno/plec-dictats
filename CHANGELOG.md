@@ -1,5 +1,13 @@
 # Historial
 
+## 1.24 · 26 d’octubre de 2026
+
+- Arrossegament tàctil del full amb un dit i zoom amb dos, conservant el punt de contacte i els límits del paper; es mantenen els botons i el ratolí.
+- Eliminats els dos textos redundants del peu de la columna d’escriptura. Les instruccions passen al peu de la columna del QR amb esquemes vectorials en perspectiva, segons el plec i el costat del model, compartits per la vista prèvia i el PDF.
+- Ajuda del text «Notifica un error» que indica quina bandera cal prémer. Ajudes separades físicament de la bandera i accessibles també amb teclat i toc.
+- Instruccions de privacitat segons el navegador, diferenciant el bloqueig de connexió d’Umami dels senyals GPC i Do Not Track. Enllaços a l’ajuda oficial i indicació de l’abast general d’aquests senyals.
+- Número de paraula gran dins els botons d’escoltar i continuar, mantenint les tres escoltes i l’anunci accessible de progrés.
+
 ## 1.23 · 26 d’octubre de 2026
 
 - Analítica agregada d’ús amb Umami, limitada a `plec.ortogra.fi`. Exportacions, còpies, recuperacions de codis i dictats començats/acabats, sense enviar codis, cerques ni respostes.

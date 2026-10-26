@@ -5,27 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Plec · Fes un dictat</title>
 <meta name="theme-color" content="#f8f6ef">
-<script src="theme.js?v=1.23.0"></script>
+<script src="theme.js?v=1.24.0"></script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="stylesheet" href="styles.css?v=1.23.0">
-<link rel="stylesheet" href="dictation.css?v=1.23.0">
-<link rel="stylesheet" href="analytics.css?v=1.23.0">
-<link rel="stylesheet" href="theme.css?v=1.23.0">
-<script defer src="locales/manifest.js?v=1.23.0"></script>
+<link rel="stylesheet" href="styles.css?v=1.24.0">
+<link rel="stylesheet" href="dictation.css?v=1.24.0">
+<link rel="stylesheet" href="analytics.css?v=1.24.0">
+<link rel="stylesheet" href="theme.css?v=1.24.0">
+<script defer src="locales/manifest.js?v=1.24.0"></script>
 <script defer src="__CONFIG__"></script>
-<script defer src="site-links.js?v=1.23.0"></script>
-<script defer src="analytics.js?v=1.23.0"></script>
-<script defer src="language.js?v=1.23.0"></script>
+<script defer src="site-links.js?v=1.24.0"></script>
+<script defer src="analytics.js?v=1.24.0"></script>
+<script defer src="language.js?v=1.24.0"></script>
 <script defer src="__REGISTRY__"></script>
-<script defer src="seeds.js?v=1.23.0"></script>
-<script defer src="seeds-v2.js?v=1.23.0"></script>
-<script defer src="dictation-session.js?v=1.23.0"></script>
-<script defer src="icons.js?v=1.23.0"></script>
-<script defer src="motion.js?v=1.23.0"></script>
-<script defer src="analytics-ui.js?v=1.23.0"></script>
-<script defer src="audio-manifest.js?v=1.23.0"></script>
-<script defer src="audio-varieties.js?v=1.23.0"></script>
-<script defer src="dictation.js?v=1.23.0"></script>
+<script defer src="seeds.js?v=1.24.0"></script>
+<script defer src="seeds-v2.js?v=1.24.0"></script>
+<script defer src="dictation-session.js?v=1.24.0"></script>
+<script defer src="icons.js?v=1.24.0"></script>
+<script defer src="motion.js?v=1.24.0"></script>
+<script defer src="privacy-help.js?v=1.24.0"></script>
+<script defer src="analytics-ui.js?v=1.24.0"></script>
+<script defer src="audio-manifest.js?v=1.24.0"></script>
+<script defer src="audio-varieties.js?v=1.24.0"></script>
+<script defer src="dictation.js?v=1.24.0"></script>
 </head>
 <body>
 <main id="focus-root" class="d-focus">
@@ -75,12 +76,13 @@
 
 <section id="player-panel" class="d-scene" hidden aria-labelledby="player-title">
 <h1 id="player-title" class="sr-only">Dictat en marxa</h1>
-<p id="word-progress" class="d-progress" aria-live="polite"></p>
-<button type="button" id="listen-word" class="d-listen">
-<span data-icon="refresh-cw" aria-hidden="true"></span>
+<p id="word-progress" class="sr-only" aria-live="polite"></p>
+<button type="button" id="listen-word" class="d-listen" aria-describedby="listen-count">
+<span class="d-word-position"><span>Paraula</span> <strong data-word-number></strong> <span data-word-total></span></span>
+<span data-icon="volume-2" aria-hidden="true"></span>
 <span id="listen-label">Escolta</span>
 </button>
-<button type="button" id="next-word" class="d-listen" hidden>Paraula següent</button>
+<button type="button" id="next-word" class="d-listen" hidden><span class="d-word-position"><span>Paraula</span> <strong data-word-number></strong> <span data-word-total></span></span><span data-icon="arrow-right" aria-hidden="true"></span><span id="next-label">Paraula següent</span></button>
 <p id="listen-count" class="d-status" aria-live="polite"></p>
 <p id="playback-error" class="d-error" hidden role="alert"></p>
 </section>

@@ -34,7 +34,7 @@
   if(phase==='sent')message='Avís enviat. Ja has notificat aquest enregistrament en aquesta pestanya.';
   else if(phase==='sending')message='Enviant l’avís a Umami…';
   else if(!c)message='Encara no hi ha cap enregistrament disponible per notificar.';
-  else if(state.status==='disabled')message='Fem servir Umami per rebre els errors que ens notifiqueu. Per enviar un avís cal permetre aquest tracking, encara que sigui temporalment. Revisa «Privacitat» i els ajustos del navegador.';
+  else if(state.status==='disabled')message=['gpc','dnt'].includes(state.reason)?'El navegador envia '+(state.reason==='gpc'?'Global Privacy Control (GPC)':'Do Not Track')+'. Obre «Privacitat»: hi trobaràs els passos per al teu navegador.':'Els avisos estan desactivats. Obre «Privacitat» i prem «Permet temporalment» si vols enviar-ne un.';
   else if(state.status==='unavailable')message='No podem connectar amb Umami per rebre avisos. Si el bloqueges, permet-lo temporalment en aquest web i reintenta-ho des de «Privacitat».';
   else if(state.status==='loading')message='Umami s’està preparant. Els avisos s’activaran quan puguem confirmar la connexió.';
   else if(state.status==='development')message='En local no carreguem Umami. Els avisos estan disponibles a plec.ortogra.fi quan el tracking està permès.';

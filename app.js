@@ -131,6 +131,7 @@
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" role="img" aria-label="Full A4: ${layout.name}, model a ${layout.side === 'left' ? 'l’esquerra' : 'la dreta'}" data-fold-style="${layout.foldStyle}" data-model-side="${layout.side}"><rect width="210" height="297" fill="white"/>${shapes.map(s => {
       if (s.type === 'line') return `<line x1="${s.x}" y1="${s.y}" x2="${s.x2}" y2="${s.y2}" stroke="${s.color}" stroke-width="${s.width}" ${s.dash ? 'stroke-dasharray="1.5 1.4"' : ''}/>`;
       if (s.type === 'rect') return `<rect x="${s.x}" y="${s.y}" width="${s.w}" height="${s.h}" fill="${s.color}"/>`;
+      if (s.type === 'polyline') return `<path d="M ${s.points.map(p=>p.join(' ')).join(' L ')}${s.fill?' Z':''}" fill="${s.fill||'none'}" stroke="${s.color}" stroke-width="${s.width}" stroke-linecap="round" stroke-linejoin="round" ${s.dash?'stroke-dasharray=".8 .7"':''}/>`;
       const safeShape = { ...s, value: printable(s.value) };
       return `<text x="${s.x}" y="${s.y}" font-family="Arial,Helvetica,sans-serif" font-size="${fitSize(safeShape) * MM}" font-weight="${s.weight ? 700 : 400}" fill="${s.color}" text-anchor="${s.align === 'right' ? 'end' : s.align === 'center' ? 'middle' : 'start'}">${escape(safeShape.value)}</text>`;
     }).join('')}</svg>`;
@@ -252,6 +253,7 @@
     }
   });
   const releases = [
+    ['1.24', '2026-10-26', ['Vista prèvia tàctil: arrossega el full amb un dit i fes zoom amb dos. Instruccions de plec amb esquemes vectorials al peu de la columna del QR, adaptats a terços o quarts i al costat del model. Ajudes dels avisos més clares, separades de la bandera, i passos de privacitat segons el navegador. Número de paraula destacat dins el botó del dictat.']],
     ['1.23', '2026-10-26', ['Analítica agregada amb Umami i controls de privacitat. Avís d’àudio amb un clic, confirmació de recepció i bloqueig de duplicats per mot, varietat i enregistrament durant la pestanya. Els avisos queden inactius quan el tracking no està disponible.']],
     ['1.22.1', '2026-10-25', ['Marca compartida d’ortogra.fi al peu de Plec, amb símbol tipogràfic i enllaç actiu al nou portal de recursos educatius.']],
     ['1.22', '2026-10-25', ['La pronunciació es tria al lateral del docent i queda fixada als enllaços i al QR. L’alumnat veu la varietat indicada sense selector; es conserven els enllaços antics de veu. Marca alineada verticalment al header i peu amb «un projecte d’ortogra.fi», encara inactiu.']],

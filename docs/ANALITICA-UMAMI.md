@@ -99,7 +99,24 @@ Les plantilles del preparador i del dictat inclouen el mateix mòdul i diàleg. 
 
 `node tools/check-dictation-analytics.cjs` comprova el controlador i la sessió reals amb àudio i rellotge simulats: un únic inici/final, temps sense pauses, cap mot ni codi i funcionament sense tracker. La primera fase només afegeix analítica de producte i avisos voluntaris. No incorpora resposta digital ni seguiment individual.
 
+## Ajuda de privacitat al web · 1.24
+
+«Privacitat» diferencia un bloqueig de connexió dels senyals GPC i DNT. `privacy-help.js` prepara instruccions segons el navegador detectat, que l’usuari pot corregir amb un selector. Les banderes expliquen la causa i remeten a aquest panell; el text «Notifica un error» només és una llegenda amb ajuda que indica quina bandera cal prémer.
+
+En Brave, abaixar els escuts només afecta el bloqueig del lloc: el GPC general pot continuar actiu. La ruta oficial de Brave per a escriptori i Android és `brave://flags/#brave-global-privacy-control-enabled`, amb reinici després del canvi; a iOS és a Brave Shields i privacitat. El panell explicita que canviar el senyal afecta el navegador en general i que es pot restablir després. Cap botó de Plec modifica aquests ajustos ni anul·la DNT/GPC. Les extensions de tercers es descriuen sense inventar una ruta comuna a totes.
+
 ## Fonts
+
+### Navegadors
+
+- [Privacitat i GPC a Brave](https://support.brave.app/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings).
+- [Escuts de Brave per lloc](https://support.brave.app/hc/en-us/articles/360023646212-How-do-I-configure-global-and-site-specific-Shields-settings).
+- [DNT a Brave](https://support.brave.app/hc/en-us/articles/360017905612-How-do-I-turn-Do-Not-Track-on-or-off).
+- [DNT a Chrome](https://support.google.com/chrome/answer/2790761).
+- [GPC a Firefox](https://support.mozilla.org/en-US/kb/global-privacy-control).
+- [Protecció contra seguiment a Edge](https://learn.microsoft.com/en-us/microsoft-edge/web-platform/tracking-prevention).
+
+### Umami
 
 - [Tarifes i còmput d'ús](https://umami.is/pricing).
 - [Ús del compte Cloud](https://docs.umami.is/docs/cloud/usage).

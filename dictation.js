@@ -286,12 +286,14 @@
     function renderPlayer() {
       var s = state.session.snapshot();
       $("word-progress").textContent = "Paraula " + (s.index + 1) + " de " + s.total;
+      doc.querySelectorAll('[data-word-number]').forEach(function (el) { el.textContent = s.index + 1; });
+      doc.querySelectorAll('[data-word-total]').forEach(function (el) { el.textContent = 'de ' + s.total; });
       $("listen-count").textContent = s.plays + " de 3 escoltes";
       var btn = $("listen-word"), label = $("listen-label"), next = $("next-word");
       $("playback-error").hidden = true;
       if (s.plays >= 3) {
         btn.hidden = true; next.hidden = false;
-        next.textContent = s.index === s.total - 1 ? "Acaba el dictat" : "Paraula següent";
+        $("next-label").textContent = s.index === s.total - 1 ? "Acaba el dictat" : "Paraula següent";
       } else {
         btn.hidden = false; next.hidden = true;
         btn.disabled = s.playing;

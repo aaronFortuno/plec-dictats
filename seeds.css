@@ -51,7 +51,7 @@
 .zoom-scroll-hint{position:absolute;bottom:60px;left:50%;transform:translate(-50%,4px);z-index:3;width:max-content;max-width:calc(100% - 20px);padding:9px 13px;background:var(--green);color:var(--white);border-radius:7px;box-shadow:0 3px 14px #233a3326;font-size:12px;line-height:1.5;text-align:center;pointer-events:none;opacity:0;transition:opacity var(--motion-duration) var(--motion-ease),transform var(--motion-duration) var(--motion-ease)}
 .zoom-scroll-hint.is-visible{opacity:1;transform:translate(-50%,0)}
 .zoom-scroll-hint kbd{font:600 11px var(--sans);border:1px solid #ffffff70;border-radius:3px;padding:1px 4px;margin-inline:2px}
-.seed-workspace .paper-viewport{touch-action:pan-y pinch-zoom}
+.seed-workspace .paper-viewport{touch-action:none}
 .required-input{display:flex;gap:7px;min-width:0}
 .required-input input{min-width:0;flex:1;width:100%}
 .required-input .button{min-height:34px;padding:6px 9px;font-size:11px}

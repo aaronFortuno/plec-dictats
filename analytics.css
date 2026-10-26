@@ -8,7 +8,15 @@
 .report-control:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .report-control .report-flag:disabled{pointer-events:none;opacity:.45}
 .report-control[data-report-state=sent] .report-flag{opacity:.85;color:var(--accent);background:var(--soft);border-color:var(--accent)}
-.audio-report-tooltip{position:fixed;z-index:1000;width:max-content;max-width:min(290px,calc(100vw - 24px));padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--white);color:var(--ink);box-shadow:0 5px 22px #0002;font:12px/1.5 var(--sans);opacity:0;pointer-events:none;transform:translateY(3px);transition:opacity 220ms,transform 220ms}
+.audio-report-tooltip{position:absolute;z-index:1000;width:max-content;max-width:min(290px,calc(100vw - 24px));padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--white);color:var(--ink);box-shadow:0 5px 22px #0002;font:12px/1.5 var(--sans);opacity:0;pointer-events:none;transform:translateY(3px);transition:opacity 220ms,transform 220ms}
 .audio-report-tooltip.is-visible{opacity:1;transform:none}
 .d-privacy{font-size:12px!important;padding:6px!important}
 .catalog-review-actions[hidden]{display:none}
+.analytics-browser-help{margin-block:18px;border-block:1px solid var(--line);padding-block:12px}
+.analytics-browser-help summary{font-size:13px;font-weight:600;cursor:pointer}
+.analytics-browser-help label{display:flex;align-items:center;gap:12px;margin-top:12px;font-size:12px}
+.analytics-browser-help select{padding:6px 10px;font-size:12px}
+#analytics-dialog .analytics-browser-help p,.analytics-browser-help li{font-size:12px;line-height:1.65}
+.analytics-browser-help ol{padding-left:22px;margin:10px 0}
+.analytics-browser-help li{margin-block:9px}
+.analytics-browser-help a{font-size:12px}

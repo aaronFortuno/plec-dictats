@@ -95,6 +95,55 @@
       : (layout.side === 'left' ? 'Model · escric al centre · banda buida' : 'Banda buida · escric al centre · model');
     return layout;
   }
+  // Figures vectorials compartides amb el PDF. Cada cara és un full en perspectiva;
+  // la cara grisa és el revers. Només es reflecteix el dibuix, mai les llegendes.
+  function foldGuide(layout, x, width) {
+    const shapes = [], right = layout.side === 'right', quarter = layout.foldStyle === 'quarter';
+    const steps = quarter
+      ? [['1. Plega el model', 'cap endins.'], ['2. Torna a plegar', 'cap endins.'], ['3. Inverteix el plec', 'per veure el model.']]
+      : [['1. Plega el terç buit', 'cap enrere.'], ['2. Plega el model', 'cap enrere.'], ['3. Obre el model', 'per corregir.']];
+    const text = (y, value, size, weight, extra = {}) => shapes.push({ type:'text', x:x+2, y, value, size, weight, color:'#444444', maxWidth:width-4, role:'fold-guide', ...extra });
+    text(185, 'Com plegar el full', 9, true);
+    steps.forEach((caption, index) => {
+      const top = 194 + index * 32, step = index + 1;
+      caption.forEach((value, i) => text(top+i*4, value, 8, i===0, { foldStep:step }));
+      const unit = (width-8)/(quarter?4:3), origin = top+9;
+      const project = ([u,z], v=0) => {
+        const px = 4 + u*unit + z*unit*.24;
+        return [x+(right?width-px:px), origin+v+z*3];
+      };
+      const path = (points, fill, part='paper', dash=false) => shapes.push({type:'polyline', points, fill, color:'#666666', width:.25, dash, role:'fold-guide', foldStep:step, part});
+      const face = (a,b,kind='blank',back=false) => {
+        const height = 14, corners=[project(a),project(b),project(b,height),project(a,height)];
+        path(corners,back?'#e5e5e5':'#ffffff');
+        if(!back&&kind!=='blank')for(let i=0;i<4;i++){
+          const t=2.8+i*2.7, l=project([a[0]+(b[0]-a[0])*.16,a[1]+(b[1]-a[1])*.16],t),r=project([a[0]+(b[0]-a[0])*(kind==='model'?.65:.86),a[1]+(b[1]-a[1])*(kind==='model'?.65:.86)],t);
+          path([l,r],null,kind==='model'?'model-ink':'writing-lines');
+        }
+      };
+      const arrow = (from,to,behind) => {
+        // L’arc discontinu passa per sota del paper: plec cap al darrere.
+        const start=project(from,16),end=project(to,16),points=[];
+        for(let i=0;i<=20;i++){const t=i/20;points.push([start[0]+(end[0]-start[0])*t,start[1]+(end[1]-start[1])*t+Math.sin(Math.PI*t)*(behind?3:-3)]);}
+        path(points,null,'arrow',behind);
+        const last=points.at(-1),prev=points.at(-2),angle=Math.atan2(last[1]-prev[1],last[0]-prev[0]),size=1.8;
+        path([[last[0]-size*Math.cos(angle-.5),last[1]-size*Math.sin(angle-.5)],last,[last[0]-size*Math.cos(angle+.5),last[1]-size*Math.sin(angle+.5)]],null,'arrow');
+      };
+      if(!quarter){
+        if(index===0){face([2,0],[1.65,-.9],'blank',true);face([0,0],[1,0],'model');face([1,0],[2,0],'writing');arrow([2.7,0],[1.8,-.5],true);}
+        else if(index===1){face([1,-.12],[2,-.12],'blank',true);face([1.55,-.9],[1,0],'model',true);face([1,0],[2,0],'writing');arrow([.15,0],[1.4,-.5],true);}
+        else{face([1,-.12],[2,-.12],'blank',true);face([0,0],[1,0],'model');face([1,0],[2,0],'writing');}
+      }else{
+        if(index===0){face([1,0],[2,0]);face([2,0],[3,0]);face([3,0],[4,0],'writing');face([1,0],[1.7,.7],'model',true);arrow([.1,0],[1.6,.4],false);}
+        else if(index===1){face([2,0],[3,0]);face([3,0],[4,0],'writing');face([2,0],[2.7,.7],'blank',true);arrow([1.1,0],[2.6,.4],false);}
+        else{face([2,-.12],[3,-.12],'blank',true);face([2,0],[3,0],'model');face([3,0],[4,0],'writing');}
+      }
+      if(index===2)for(const [u,value] of [[quarter?2.5:.5,'Model'],[quarter?3.5:1.5,'Escric']]){
+        const [tx]=project([u,0]);shapes.push({type:'text',x:tx,y:origin+18,value,size:6,weight:false,color:'#555555',align:'center',maxWidth:unit-1,role:'fold-guide',foldStep:step});
+      }
+    });
+    return shapes;
+  }
   // Coordenades comunes per a l'SVG i el PDF, en mil·límetres, origen superior esquerre.
   function worksheet({ entries, title, mode = 'words', modelSide = 'left', foldStyle = 'thirds', seedCode, seedLanguage = 'ca', focusLabels = [], variety }) {
     const shapes = [];
@@ -123,9 +172,6 @@
     });
     [layout.modelArea, layout.writingArea].forEach(area => line(area.x, top, area.x + area.width, top, '#aaaaaa', .18));
     layout.folds.forEach(x => line(x, 10, x, 287, '#777777', .25, true));
-    layout.printSteps.forEach((step, i) => text(modelX, 277 + i * 5, step, 6.5, false, '#555555', { maxWidth: modelWidth }));
-    text(writeX, 277, 'Revisa en aquesta mateixa columna.', 6.5, false, '#555555', { maxWidth: writeWidth });
-    text(writeX, 282, `${entries.length} ${mode === 'words' ? 'paraules' : 'pseudoparaules'} · A4 · 100 %`, 6, false, '#666666', { maxWidth: writeWidth });
     if (mode === 'pseudo') {
       text(modelX, 289, 'Model proposat: altres grafies poden', 6, false, '#555555', { maxWidth: modelWidth });
       text(modelX, 293, 'representar el mateix so.', 6, false, '#555555');
@@ -133,7 +179,7 @@
     const labels = Array.isArray(focusLabels)
       ? [...new Set(focusLabels.map(l => String(l ?? '').trim()).filter(Boolean))].slice(0, 16)
       : [];
-    if (labels.length || seedCode) {
+    {
       // Banda buida protegida: tria el panell buit més ample entre plecs i escriptura.
       const [b0, b1] = layout.blank;
       const cuts = [b0, ...layout.folds.filter(x => x > b0 && x < b1), b1];
@@ -142,6 +188,7 @@
         if (cuts[i + 1] - cuts[i] > pw) { pw = cuts[i + 1] - cuts[i]; px = cuts[i]; }
       }
       const fx = Math.max(12,px+4), fw = Math.min(198,px+pw-4)-fx;
+      shapes.push(...foldGuide(layout,fx,fw));
       if(seedCode){
         const url=QR.urlFor(seedCode,seedLanguage,variety),split=url.indexOf('?');
         shapes.push(...QR.shapes(url,fx+(fw-28)/2,10,28));

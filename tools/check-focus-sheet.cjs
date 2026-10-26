@@ -9,6 +9,11 @@ for(const foldStyle of ['thirds','quarter'])for(const modelSide of ['left','righ
  const links=shapes.filter(s=>s.role==='worksheet-link');assert.equal(links.map(s=>s.value).join(''),outer.url);assert(links.every(s=>s.maxWidth>0&&s.align==='center'&&s.size===7));assert(links[1].y<47);
  for(const s of [...focus,...qr]){const right=s.x+(s.w||s.maxWidth||0);assert(s.x>=Math.max(12,layout.blank[0]));assert(right<=Math.min(198,layout.blank[1]));assert(!layout.folds.some(f=>f>=s.x&&f<=right));assert(s.y<170);}
  assert.deepEqual(shapes.filter(s=>s.role!=='practice-focus'),K.worksheet(options));
- assert(!K.worksheet({entries,foldStyle,modelSide}).some(s=>s.role));
+ assert(!K.worksheet({entries,foldStyle,modelSide}).some(s=>s.role&&s.role!=='fold-guide'));
+ const guide=shapes.filter(s=>s.role==='fold-guide');
+ assert.deepEqual([...new Set(guide.filter(s=>s.foldStep).map(s=>s.foldStep))],[1,2,3]);
+ assert(guide.filter(s=>s.type==='polyline').length>20);
+ assert(!shapes.some(s=>s.type==='text'&&(/Revisa en aquesta mateixa columna|A4.*100/.test(s.value))));
+ for(const s of guide){const points=s.points||[[s.x,s.y]];assert(points.every(([x,y])=>x>layout.blank[0]&&x<layout.blank[1]&&y>=180&&y<=287));}
 }
 console.log('Worksheet: aligned heading, coherent type, protected panel margins, unchanged writing/model geometry, valid canonical QR identity and both fold directions passed.');

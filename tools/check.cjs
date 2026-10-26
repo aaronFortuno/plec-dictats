@@ -34,7 +34,7 @@ for (const mode of ['words', 'pseudo']) {
     assert.equal(second.filter(e => first.some(f => f.id === e.id)).length, 1, 'No repeteix mots nous');
     for (const shapes of [K.worksheet({ entries: first, mode }), K.teacherSheet({ entries: first, mode }, C.categories)]) {
       for (const s of shapes) {
-        assert(s.x >= 0 && s.x <= 210 && s.y >= 0 && s.y <= 297, 'Contingut dins de l’A4');
+        assert((s.points||[[s.x,s.y]]).every(([x,y])=>x>=0&&x<=210&&y>=0&&y<=297), 'Contingut dins de l’A4');
         if (s.type === 'line') assert(s.x2 <= 210 && s.y2 <= 297);
       }
     }
@@ -114,6 +114,11 @@ for (const foldStyle of ['thirds', 'quarter']) for (const modelSide of ['left', 
   assert.deepEqual(shapes.filter(s=>s.type==='line'&&s.dash).map(s=>s.x),layout.folds);
   const [blankStart,blankEnd]=layout.blank;
   for(const s of shapes){
+    if(s.role==='fold-guide'){
+      const points=s.points||[[s.x,s.y]];
+      assert(points.every(([x,y])=>x>blankStart&&x<blankEnd&&y>=180&&y<=287),'La guia de plecs queda dins la banda protegida i al peu');
+      continue;
+    }
     if(s.type==='line'&&s.dash)continue;
     assert(s.x<=blankStart||s.x>=blankEnd,'Cap contingut imprès als trams buits');
     if(s.type==='line')assert((s.x<=blankStart&&s.x2<=blankStart)||(s.x>=blankEnd&&s.x2>=blankEnd),'Les ratlles no creuen els trams buits');
