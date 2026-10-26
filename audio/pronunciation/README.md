@@ -72,3 +72,9 @@ La [taula valenciana](ca/valencian-didactic.tsv) conté 3.299 propostes i cap va
 ## Compleció central
 
 `tools/central-g2p.cjs --fill-missing` conserva les files existents i completa les pendents amb la branca `ca` de catalan2ipa, reducció vocàlica central i finals nt/nc explícits per a la dicció didàctica. `ca/central-vowel-hints.json` registra 415 pistes amb procedència: excepcions de vocal mitjana d’eSpeak NG o propostes editorials. Les vocals obertes/tancades i altres decisions continuen pendents de contrast; aquestes dades no certifiquen els àudios originals. S’han corregit explícitament els accents de continuï/continuïn/continuïs. El paquet `ca-central-alba-completion-v1` conserva una instantània de les 219 IPA utilitzades, independent de futures edicions de la taula.
+
+## Preparació mallorquina
+
+El perfil addicional **ca-mallorcan-didactic-v1** pren el mallorquí amb neutra tònica com a primera referència balear. Cobreix els 3.299 ID en una taula pròpia: **2.889 propostes i 410 IPA buides** per decisions lèxiques pendents; cap validació. Dels 350 mots bàsics, 291 tenen proposta i 59 queden pendents. No és un perfil comú de totes les illes ni de totes les localitats mallorquines.
+
+La [guia mallorquina](../../docs/IPA-MALLORQUI.md) explica fonts UIB/EBAP, regles, límits i cua de revisió. L’inventari d’edició `ipa-mallorcan-draft` conserva /v/; la compatibilitat amb l’inventari Azure es comprova separadament. Les ordres generals accepten `--profile ca-mallorcan-didactic-v1`; `node tools/check-mallorcan-g2p.cjs` comprova cobertura i exportacions. Aquesta preparació no afegeix cap àudio ni cap varietat reproduïble al web.

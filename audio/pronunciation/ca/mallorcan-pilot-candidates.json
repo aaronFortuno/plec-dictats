@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "kind": "offline-mallorcan-pilot-candidates",
+  "profile": "ca-mallorcan-didactic-v1",
+  "executable": false,
+  "voice": null,
+  "pack": null,
+  "note": "Llistat per revisar abans d’una futura prova de veu. No autoritza síntesi, no reserva quota ni substitueix cap fonema absent de l’inventari documentat.",
+  "estimate": {
+    "words": 18,
+    "characters": 1536,
+    "rate": "-10%",
+    "excludes": "speak/voice, retries and repeated voice comparisons"
+  },
+  "basicWords": 10,
+  "entries": [
+    {
+      "id": "p-1isw4fd",
+      "text": "abella",
+      "ipa": "ə.ˈbə.ʎə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "traits": [
+        "neutra-tonica",
+        "ll-formal"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-kwgyh5",
+      "text": "ceba",
+      "ipa": "ˈsə.bə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "traits": [
+        "neutra-tonica"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-9ffmwy",
+      "text": "pera",
+      "ipa": "ˈpə.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "traits": [
+        "neutra-tonica"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-18k8jdz",
+      "text": "xocolata",
+      "ipa": "ʃo.ko.ˈla.tə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "traits": [
+        "o-atona-conservada"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-8e645j",
+      "text": "conill",
+      "ipa": "ku.ˈniʎ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "traits": [
+        "harmonitzacio-o-u"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-i0ont9",
+      "text": "formiga",
+      "ipa": "fuɾ.ˈmi.gə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "traits": [
+        "harmonitzacio-o-u"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-m066h5",
+      "text": "barca",
+      "ipa": "ˈbaɾ.kə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "traits": [
+        "b-bilabial"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-5wgld9",
+      "text": "vaca",
+      "ipa": "ˈva.kə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "traits": [
+        "v-labiodental"
+      ],
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-1j7if9q",
+      "text": "amable",
+      "ipa": "ə.ˈmab.blə",
+      "status": "pendent-contrast",
+      "basicVocabulary": false,
+      "traits": [
+        "geminacio-bl"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1uqrs32",
+      "text": "arreglar",
+      "ipa": "ə.rəg.ˈgla",
+      "status": "pendent-contrast",
+      "basicVocabulary": false,
+      "traits": [
+        "geminacio-gl"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-x7m83k",
+      "text": "atapeït",
+      "ipa": "ə.tə.pə.ˈit",
+      "status": "pendent-contrast",
+      "basicVocabulary": false,
+      "traits": [
+        "dieresi-hiat-tonic"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-ojnnbe",
+      "text": "canviïn",
+      "ipa": "kəm.ˈvi.in",
+      "status": "pendent-contrast",
+      "basicVocabulary": false,
+      "traits": [
+        "dieresi-hiat-atonic",
+        "accent-verbal",
+        "v-labiodental"
+      ],
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-18erfhp",
+      "text": "camp",
+      "ipa": "ˈkamp",
+      "status": "pendent-contrast",
+      "basicVocabulary": false,
+      "traits": [
+        "final-mp"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1sav2x2",
+      "text": "banc",
+      "ipa": "ˈbaŋk",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "traits": [
+        "final-nc"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-wtxmix",
+      "text": "guant",
+      "ipa": "ˈgwant",
+      "status": "pendent-contrast",
+      "basicVocabulary": false,
+      "traits": [
+        "final-nt"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1879y2w",
+      "text": "col·legi",
+      "ipa": "kol.ˈlɛ.ʒi",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "traits": [
+        "ela-geminada"
+      ],
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-a1pyj5",
+      "text": "passàvem",
+      "ipa": "pə.ˈsa.vəm",
+      "status": "pendent-contrast",
+      "basicVocabulary": false,
+      "traits": [
+        "accent-verbal",
+        "v-labiodental"
+      ],
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-1gyv8iu",
+      "text": "brànquia",
+      "ipa": "ˈbɾaŋ.ki.ə",
+      "status": "pendent-contrast",
+      "basicVocabulary": false,
+      "traits": [
+        "nasal-velar",
+        "hiat-formal"
+      ],
+      "azureCaEsCompatible": true
+    }
+  ]
+}

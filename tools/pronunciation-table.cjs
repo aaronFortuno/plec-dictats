@@ -11,7 +11,7 @@ function profile(id) {
   const registry=A.readJson(path.join(ROOT,'registry.json'));
   if(registry.schemaVersion!==1||!Array.isArray(registry.profiles))throw new Error('Registre fonètic invàlid.');
   const p=registry.profiles.find(p=>p.id===(id||registry.profiles[0]?.id));
-  if(!p||!['ipa-azure-ca-ES','ipa-valencian-draft'].includes(p.alphabet)||p.language!=='ca')throw new Error('Perfil o inventari fonètic no disponible.');
+  if(!p||!['ipa-azure-ca-ES','ipa-valencian-draft','ipa-mallorcan-draft'].includes(p.alphabet)||p.language!=='ca')throw new Error('Perfil o inventari fonètic no disponible.');
   for(const key of ['table','export','readable','catalogPath'])A.validateRelativePath(p[key],key);
   return p;
 }
@@ -38,7 +38,7 @@ function validate(rows,p,catalog) {
     if(row.llengua!==p.language||row.varietat!==p.dialect||row.diccio!==p.diction)throw new Error('La fila pertany a una altra varietat o dicció: '+row.mot+'.');
     if(!STATES.includes(row.estat_ipa))throw new Error('Estat IPA desconegut: '+row.mot+'.');
     if(row.ipa){
-      analyzeIpa(row.ipa,{allowLabiodentalV:p.alphabet==='ipa-valencian-draft'});
+      analyzeIpa(row.ipa,{allowLabiodentalV:['ipa-valencian-draft','ipa-mallorcan-draft'].includes(p.alphabet)});
       if(row.estat_ipa==='pendent'||!row.base||(!row.fonts&&!row.notes))throw new Error('Falta documentar la proposta: '+row.mot+'.');
     }else if(row.estat_ipa!=='pendent')throw new Error('Falta IPA en una fila amb estat de proposta o validació: '+row.mot+'.');
     if(row.fonts&&row.fonts.split(' | ').some(url=>!/^https:\/\/[^\s|]+$/u.test(url)))throw new Error('Fonts invàlides: '+row.mot+'.');

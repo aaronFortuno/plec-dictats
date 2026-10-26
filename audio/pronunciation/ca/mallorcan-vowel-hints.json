@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dialect": "mallorqui",
+  "reference": "Mallorquí amb vocal neutra tònica; no representa totes les localitats ni tot el balear.",
+  "note": "Pistes lèxiques limitades als exemples explícits de les fonts i a dues flexions transparents. No s'importen les 415 pistes centrals o valencianes. Les formes no resoltes es conserven sense IPA.",
+  "entries": {
+    "abella": {"hint": "ê", "basis": "uib-explicit-stressed-schwa-example", "source": "https://galmic.uib.cat/fitxa/vocal-neutra-en-posicio-tonica/"},
+    "ceba": {"hint": "ê", "basis": "ebap-explicit-stressed-schwa-example", "source": "https://ebapenobert.caib.es/pluginfile.php/4111/mod_resource/content/6/2%20Fon%C3%A8tica%20%282025%29.pdf"},
+    "cera": {"hint": "ê", "basis": "uib-explicit-stressed-schwa-example", "source": "https://galmic.uib.cat/fitxa/vocal-neutra-en-posicio-tonica/"},
+    "fred": {"hint": "ê", "basis": "uib-explicit-stressed-schwa-example", "source": "https://galmic.uib.cat/fitxa/vocal-neutra-en-posicio-tonica/"},
+    "pera": {"hint": "ê", "basis": "ebap-explicit-stressed-schwa-example", "source": "https://ebapenobert.caib.es/pluginfile.php/4111/mod_resource/content/6/2%20Fon%C3%A8tica%20%282025%29.pdf"},
+    "ple": {"hint": "ê", "basis": "uib-explicit-stressed-schwa-example", "source": "https://galmic.uib.cat/fitxa/vocal-neutra-en-posicio-tonica/"},
+    "sec": {"hint": "ê", "basis": "uib-explicit-stressed-schwa-example", "source": "https://galmic.uib.cat/fitxa/vocal-neutra-en-posicio-tonica/"},
+    "vermell": {"hint": "ê", "basis": "ebap-explicit-stressed-schwa-example", "source": "https://ebapenobert.caib.es/pluginfile.php/4111/mod_resource/content/6/2%20Fon%C3%A8tica%20%282025%29.pdf"},
+    "vermella": {"hint": "ê", "basis": "editorial-feminine-flexion-of-ebap-vermell", "source": "https://ebapenobert.caib.es/pluginfile.php/4111/mod_resource/content/6/2%20Fon%C3%A8tica%20%282025%29.pdf"},
+    "vermelles": {"hint": "ê", "basis": "editorial-feminine-plural-of-ebap-vermell", "source": "https://ebapenobert.caib.es/pluginfile.php/4111/mod_resource/content/6/2%20Fon%C3%A8tica%20%282025%29.pdf"}
+  }
+}

@@ -28,5 +28,19 @@
     "alphabet": "ipa-valencian-draft",
     "status": "draft-pending-linguistic-and-auditory-review",
     "note": "Taula independent sobre les mateixes grafies i ID; no és encara un banc lèxic adaptat al valencià. Es parteix de les orientacions generals de la GNV, sense copiar la IPA central. La v labiodental es conserva en les dades encara que no figura en l’inventari documentat d’Azure ca-ES; no se substituïx automàticament per b. Cal contrast lingüístic i una prova curta de veu abans de generar el corpus."
+  },{
+    "id": "ca-mallorcan-didactic-v1",
+    "language": "ca",
+    "dialect": "mallorqui",
+    "diction": "didactic-explicit",
+    "label": "Mallorquí · propostes de dicció didàctica en preparació",
+    "table": "ca/mallorcan-didactic.tsv",
+    "export": "ca/mallorcan-didactic.json",
+    "readable": "ca/mallorcan-didactic-ipa.txt",
+    "catalogPath": "catalogs/ca/editions/seed-1.json",
+    "catalogFingerprint": "ee94edbd3b2d4fb4d44d1cd66f70b970e17520029d952593d69e5adb2139bbf5",
+    "alphabet": "ipa-mallorcan-draft",
+    "status": "incomplete-draft-pending-lexical-linguistic-and-auditory-review",
+    "note": "Perfil mallorquí amb vocal neutra tònica i harmonització vocàlica, no representatiu de totes les localitats ni de tot el balear. Regles ca-XB i exemples UIB/EBAP; buits on falta decidir una vocal mitjana. Manté /v/ malgrat no figurar a l’inventari Azure ca-ES documentat. Cap veu ni àudio publicat. Els mateixos ID/grafies no constitueixen una adaptació lèxica o morfològica al mallorquí."
   }]
 }

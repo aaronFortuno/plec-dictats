@@ -16,7 +16,7 @@ El sistema de codis substitueix les tries individuals, les xinxetes i els canvis
 
 El lateral esquerre conté els filtres i la configuració del full; el dret agrupa codi, recuperació, còpies, dictat nou, **Comença el dictat** i PDF. El preview ocupa el centre. En amplades inferiors a 1.200 px els laterals es despleguen des dels costats; obrir-ne un tanca l’altre. El peu queda visible i el desplaçament és intern.
 
-El selector de varietat del catàleg permet escoltar català central amb Alba o valencià amb Enric. Canviar de varietat atura la locució actual i no recorre a una altra veu si falta un àudio. El catàleg carrega una inicial cada vegada, amb A per defecte, cerca sobre tot el banc filtrat i navegació per enllaços **A | B | C…**. Només es desplaça el llistat: filtres i descàrregues es mantenen fixos, i la continuació de lletra és al final del llistat. Cada mot té un altaveu si existeix un MP3 disponible. El selector de varietat mostra català central; les altres opcions encara no estan disponibles.
+El catàleg mostra en una mateixa fila el mot, els focus i les dues pronunciacions: català central amb Alba i valencià amb Enric. Prem la IPA o l’altaveu de la columna corresponent per escoltar; la bandera permet notificar un problema concret. Es carrega una inicial cada vegada, amb A per defecte, cerca sobre tot el banc filtrat i navegació per enllaços **A | B | C…**. Només es desplaça el llistat: filtres i descàrregues es mantenen fixos, i la continuació de lletra és al final del llistat.
 
 ## Preparar els àudios
 
@@ -24,7 +24,7 @@ El mode oral ja disposa de reproductor local; la resposta digital és treball pe
 
 La [guia d’Azure F0](docs/AZURE-F0.md) explica el compte, el recurs gratuït, la mostra i els controls de consum. `node tools/audio-plan.cjs` i `node tools/generate-audio.cjs` només simulen per defecte; la generació real requereix indicadors explícits i credencials al terminal. Les comprovacions sense xarxa s’executen amb `node tools/check-audio-tools.cjs`.
 
-Després de l’escolta de la mostra es van ajornar els 227 mots amb dièresi i es van generar les altres 3.072 paraules. Ara hi ha una primera mostra IPA de vuit dièresis pendent d’escolta, abans d’ampliar-la. La [política de pronunciació](docs/PRONUNCIACIO.md) documenta els casos detectats i la futura prova amb fonemes. `node tools/run-audio-batch.cjs` calcula el lot complet i `--execute` l’inicia amb seguiment local i aturada entre peticions; les credencials també es poden llegir d’un fitxer privat fora del repositori i de l’arrel del web.
+El lot central ja cobreix també les dièresis, combinant originals i correccions IPA segons el manifest publicat. La [política de pronunciació](docs/PRONUNCIACIO.md) conserva l’historial de proves i decisions; «atapeït» i «pentàgon» continuen pendents de millora, i per a «canviïn» es prefereix l’original. Els executors de lots no formen part de les comprovacions habituals: qualsevol generació nova requereix un pla, pressupost i paquet identificats. Les credencials es conserven fora del repositori i de l’arrel del web.
 
 ## Com funciona l'algoritme
 
@@ -76,7 +76,15 @@ Tots dos formats es poden invertir. Els trams de protecció són buits. Les lín
 
 **Les pseudoparaules no tenen una ortografia normativa única.** Acorda la pronunciació i l'accent oral i accepta les grafies compatibles amb el so dictat. La h muda, les grafies homòfones i les variants dialectals no es poden resoldre sempre a partir d'un mot oral aïllat. El model proposat no converteix automàticament una alternativa fonèticament compatible en un error.
 
-El filtre **Vocabulari bàsic**, al costat del nivell, limita el banc a una primera selecció editorial de **350 mots** quotidians i escolars. Es combina amb el nivell i els focus i queda inclòs al codi. Es pot consultar al catàleg i descarregar amb **Bàsic · TXT**. És revisable i no es presenta com un rànquing estadístic de freqüència. Vegeu [criteris i conservació dels codis](docs/VOCABULARI-BASIC.md).
+El filtre **Vocabulari bàsic**, al costat del nivell, limita el banc a una selecció editorial de **350 mots**, aprovada pel docent responsable el 26/10/2026 com a vocabulari habitual que cal saber escriure en acabar primària. L’aprovació de la selecció no valida etiquetes, IPA ni àudios. Es combina amb el nivell i els focus i queda inclòs al codi. Es pot consultar al catàleg i descarregar amb **Bàsic · TXT**. És revisable i no es presenta com un rànquing estadístic de freqüència. Vegeu [criteris i conservació dels codis](docs/VOCABULARI-BASIC.md).
+
+## Consolidació abans del mode digital
+
+L’[auditoria tècnica d’octubre](docs/AUDITORIA-TECNICA-2026-10.md) i la [revisió inicial d’accessibilitat](docs/AUDITORIA-ACCESSIBILITAT-2026-10.md) separen errors confirmats, riscos i millores. La base es conserva: primer càrregues recuperables, generació sense sortides parcials, continuïtat de focus i funcionament amb ampliació; després comprovacions reproduïbles i extraccions petites dels controladors. No s’ha fet una reescriptura ni s’han modificat les llavors. Les troballes continuen obertes llevat de la correcció d’aquest resum documental.
+
+En paral·lel es prepara un [perfil mallorquí](docs/IPA-MALLORQUI.md), amb dades incompletes i pendents de contrast, separat dels enregistraments publicats. La [nota de quota i crèdit d’Azure](docs/AZURE-CREDIT-MALLORQUI.md) distingeix el marge local F0 del saldo promocional real; preparar IPA no consumeix síntesi.
+
+La fase següent serà un pilot petit de respostes digitals en català, reutilitzant codi, ordre i àudios. Abans de programar-lo cal concretar la correcció d’accents, majúscules, espais, repeticions i resultats locals. Les pseudoparaules necessiten un criteri propi perquè poden admetre diverses grafies. L’extensió al castellà arribarà després de validar aquesta estructura.
 
 ## Compatibilitat i fase següent
 
@@ -84,9 +92,9 @@ La primera instantània és `catalogs/ca/editions/seed-1.json`, amb empremta imm
 
 Les dades locals de la versió anterior es conserven amb la seva clau original. El sistema nou només en recupera preferències compatibles. Les tries manuals i els mots propis no es converteixen automàticament en codis. Els codis fan servir exclusivament el banc compartit, perquè qualsevol dispositiu els pugui reproduir.
 
-Hi ha una primera pantalla d’alumnat a **`/ca/dictat/`**, accessible des de **Mode dictat** al header, **Comença el dictat** al lateral dret i **Enllaç per a l’alumnat**. Recupera els mateixos mots i ordre amb codis antics i nous. El mode paper ofereix tres escoltes per mot, pantalla completa i pausa en sortir-ne o canviar de pestanya. Hi ha 3.299 mots publicats per varietat i cinc locucions d’instruccions. El docent tria central o valencià al lateral dret; la varietat es conserva als enllaços i al QR. L’alumnat la veu indicada i no disposa de selector. Es pot començar quan totes les paraules del codi tenen àudio; si en falta alguna, la pantalla ho indica. La revisió auditiva continua oberta. La ruta ja admet l’enllaç que podrà incorporar un QR; el QR imprès ja incorpora la ruta de llengua i el codi per a plec.ortogra.fi; les respostes digitals són una fase posterior. Vegeu [mode dictat](docs/DICTAT.md).
+Hi ha una pantalla d’alumnat a **`/ca/dictat/`**, accessible des de **Mode dictat** al header, **Comença el dictat** al lateral dret i **Comparteix el dictat oral**. Recupera els mateixos mots i ordre amb codis antics i nous. El mode paper ofereix tres escoltes per mot, pantalla completa i pausa en sortir-ne o canviar de pestanya. El docent tria central o valencià al lateral dret; la varietat es conserva als enllaços i al QR imprès, amb llengua i codi. L’alumnat la veu indicada i no disposa de selector. Es pot començar quan totes les paraules del codi tenen àudio; si en falta alguna, la pantalla ho indica. La revisió auditiva continua oberta; les respostes digitals són una fase posterior. Vegeu [mode dictat](docs/DICTAT.md).
 
-La síntesi es fa localment amb Azure i els MP3 publicats es reprodueixen estàticament des del repositori. Els **227 mots amb dièresi** tenen una [taula IPA editable](audio/pronunciation/ca-central-diaeresis.tsv), amb fonts i dubtes explícits, per a una prova posterior al lot sense dièresi. Vegeu el [procediment de pronunciació i revisió](docs/PRONUNCIACIO.md). Preparar el pla SSML no envia peticions a Azure ni altera el catàleg o els codis.
+La síntesi es fa localment amb Azure i els MP3 publicats es reprodueixen estàticament des del repositori. Les revisions es fan a les taules generals de cada perfil, que inclouen les dièresis; la [taula inicial de 227 mots](audio/pronunciation/ca-central-diaeresis.tsv) conserva la procedència històrica de les proves. Vegeu el [procediment de pronunciació i revisió](docs/PRONUNCIACIO.md). Preparar el pla SSML no envia peticions a Azure ni altera el catàleg o els codis.
 
 La revisió inclou també geminació, consonants finals i accents verbals. Hi ha una mostra de nou mots amb **dicció didàctica explícita**, incloent «paguessin» i «passàvem», ja generada amb IPA en un paquet separat. El generador comparteix quota i represa, conserva originals i exigeix un paquet nou si canvien els fonemes. `node tools/run-pronunciation-sample.cjs` només simula; la generació real requereix `--execute --after-current-batches` i manté els resultats pendents d’escolta.
 

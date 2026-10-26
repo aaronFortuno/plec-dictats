@@ -2,7 +2,9 @@
 
 «Vocabulari bàsic» és un filtre complementari al nivell orientatiu i als focus. S’activa al configurador i al catàleg. La primera selecció té **350 mots** quotidians i escolars del banc actual, incloent formes femenines, masculines, singulars i plurals. La marca no substitueix les etiquetes ortogràfiques.
 
-És una **proposta editorial pendent de revisió docent**, no una llista estadística de les 350 formes més freqüents, una escala validada o una prescripció curricular. Una freqüència alta en subtítols, per exemple, tampoc equival a familiaritat infantil. En aquesta primera iteració s’han revisat també «créixens», «cossiol» i «verro»: passen d’habitual a ampliació i s’exclouen dels dictats nous de cicle mitjà.
+La **selecció dels 350 mots està aprovada pel docent responsable el 26/10/2026**: els considera mots habituals l’escriptura dels quals hauria de conèixer qualsevol alumne en acabar primària. L’aprovació abasta la selecció i la familiaritat del vocabulari; **no inclou la revisió de les etiquetes i els focus, els nivells individuals, les IPA ni els àudios**. El registre de revisió és al JSON de la selecció.
+
+Continua sent una selecció editorial, no una llista estadística de les 350 formes més freqüents, una escala validada o una prescripció curricular. Una freqüència alta en subtítols, per exemple, tampoc equival a familiaritat infantil. En aquesta primera iteració s’han revisat també «créixens», «cossiol» i «verro»: passen d’habitual a ampliació i s’exclouen dels dictats nous de cicle mitjà.
 
 ## Ús i consulta
 
@@ -20,5 +22,7 @@ El protocol matemàtic i el format dels codis es mantenen. S’afegeixen dues in
 L’edició queda dins del prefix del codi. Per tant, el codi tot sol recupera el mateix subconjunt, el nivell, els focus i l’ordre; no cal cap paràmetre addicional ni una llista desada al servidor. En recuperar-lo, el checkbox torna a l’estat correcte. Els noms i IDs dels mots no canvien: els àudios de les dues varietats continuen disponibles. La varietat dialectal es conserva al paràmetre independent `variety`.
 
 `seed-1.json` i `seed-2.json` es conserven amb les seves empremtes originals. Una revisió futura de la selecció o de les classificacions necessita una edició nova; mai s’edita una instantània ja publicada. Els dictats impresos continuen recuperant els mots originals.
+
+L’aprovació docent només actualitza les metadades del fitxer de selecció. La llista, els ID, les grafies, l’ordre i les quatre instantànies publicades no canvien; no es reinterpreta cap codi existent.
 
 Comprovació local: `node tools/check-basic-vocabulary.cjs`.

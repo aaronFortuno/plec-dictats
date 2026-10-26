@@ -2,8 +2,14 @@
   "schemaVersion": 1,
   "language": "ca",
   "id": "ca-basic-1",
-  "status": "draft",
-  "reviewedByTeacher": false,
+  "status": "teacher-approved-selection",
+  "reviewedByTeacher": true,
+  "teacherReview": {
+    "date": "2026-10-26",
+    "scope": "selection-and-primary-school-familiarity",
+    "result": "approved",
+    "note": "El docent responsable ha revisat i aprovat la selecció dels 350 mots com a vocabulari habitual que cal saber escriure en acabar primària. Aquesta aprovació no valida les etiquetes, els nivells de cada mot, les transcripcions IPA ni els àudios."
+  },
   "title": "Vocabulari bàsic",
   "criteria": "Selecció editorial de mots quotidians i escolars del banc, amb formes femenines, masculines, singulars i plurals. No és un rànquing estadístic de freqüència.",
   "words": [

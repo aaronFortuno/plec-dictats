@@ -1,0 +1,6133 @@
+{
+  "schemaVersion": 1,
+  "profile": "ca-mallorcan-didactic-v1",
+  "reference": "Mallorquí amb vocal neutra tònica i harmonització vocàlica; proposta incompleta.",
+  "audioGenerated": false,
+  "summary": {
+    "words": 3299,
+    "withIpa": 2889,
+    "withoutIpa": 410,
+    "validated": 0,
+    "basicWords": 350,
+    "basicWithIpa": 291,
+    "basicWithoutIpa": 59,
+    "outsideDocumentedAzureInventory": 386,
+    "stressedSchwa": 138
+  },
+  "characterEstimates": {
+    "basis": "Unicode codepoints of XML-escaped prosody/phoneme body, excluding speak/voice; no synthesis pack or quota reservation.",
+    "rate": "-10%",
+    "available": {
+      "words": 2889,
+      "characters": 252743
+    },
+    "basic": {
+      "words": 291,
+      "characters": 24697
+    },
+    "pilotCandidates": {
+      "words": 18,
+      "characters": 1536,
+      "rate": "-10%",
+      "excludes": "speak/voice, retries and repeated voice comparisons"
+    }
+  },
+  "priorities": [
+    {
+      "order": 1,
+      "task": "Resoldre els mots bàsics sense IPA amb fonts lèxiques mallorquines."
+    },
+    {
+      "order": 2,
+      "task": "Contrastar les propostes dels 350 bàsics, vocals mitjanes, excepcions o/u i accent verbal."
+    },
+    {
+      "order": 3,
+      "task": "Resoldre els altres buits i revisar el corpus; després preparar una mostra auditiva curta."
+    }
+  ],
+  "basic": [
+    {
+      "id": "p-1fv1ppd",
+      "text": "abans",
+      "ipa": "ə.ˈbans",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1isw4fd",
+      "text": "abella",
+      "ipa": "ə.ˈbə.ʎə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-5zflem",
+      "text": "agost",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-jhyj3i",
+      "text": "ahir",
+      "ipa": "ə.ˈi",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-lc6vpt",
+      "text": "aigua",
+      "ipa": "ˈaj.gwə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-kg4im8",
+      "text": "això",
+      "ipa": "ə.ˈʃɔ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1s02i4h",
+      "text": "ajuda",
+      "ipa": "ə.ˈʒu.də",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-k40fgo",
+      "text": "àlbum",
+      "ipa": "ˈal.bum",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1cuf4yv",
+      "text": "alegria",
+      "ipa": "ə.lə.ˈgɾi.ə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-u824sj",
+      "text": "allò",
+      "ipa": "ə.ˈʎɔ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-d3e2oy",
+      "text": "alumne",
+      "ipa": "ə.ˈlum.nə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1ma0c3f",
+      "text": "amanida",
+      "ipa": "ə.mə.ˈni.də",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1b9qakn",
+      "text": "amics",
+      "ipa": "ə.ˈmiks",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1e21541",
+      "text": "amiga",
+      "ipa": "ə.ˈmi.gə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-fhy7mp",
+      "text": "amigues",
+      "ipa": "ə.ˈmi.gəs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1oot40r",
+      "text": "amistat",
+      "ipa": "ə.mis.ˈtat",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-5esefq",
+      "text": "ampolla",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-rm46tm",
+      "text": "ànec",
+      "ipa": "ˈa.nək",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-jyeiu",
+      "text": "anell",
+      "ipa": "ə.ˈnɛʎ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-19ilz5c",
+      "text": "animal",
+      "ipa": "ə.ni.ˈmal",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-xn5u8e",
+      "text": "aniversari",
+      "ipa": "ə.ni.vəɾ.ˈsa.ɾi",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-opau8a",
+      "text": "any",
+      "ipa": "ˈaɲ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-fu2dmu",
+      "text": "ara",
+      "ipa": "ˈa.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-j0para",
+      "text": "aranya",
+      "ipa": "ə.ˈɾa.ɲə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-10ewn9e",
+      "text": "arbre",
+      "ipa": "ˈaɾ.bɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1sf1d8w",
+      "text": "armari",
+      "ipa": "əɾ.ˈma.ɾi",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-xlsllz",
+      "text": "arribar",
+      "ipa": "ə.ri.ˈba",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-hbr2vk",
+      "text": "arròs",
+      "ipa": "ə.ˈrɔs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-7r3vj",
+      "text": "atenció",
+      "ipa": "ə.tən.si.ˈo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-18s3ec4",
+      "text": "autobús",
+      "ipa": "əw.tu.ˈbus",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-kaauc2",
+      "text": "avi",
+      "ipa": "ˈa.vi",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-56qq2o",
+      "text": "àvia",
+      "ipa": "ˈa.vi.ə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-1x6xp9v",
+      "text": "avió",
+      "ipa": "ə.vi.ˈo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-1xx3xt8",
+      "text": "avisar",
+      "ipa": "ə.vi.ˈza",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-ya9go5",
+      "text": "avui",
+      "ipa": "ə.ˈvuj",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-wxweip",
+      "text": "balcó",
+      "ipa": "bəl.ˈko",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1sav2x2",
+      "text": "banc",
+      "ipa": "ˈbaŋk",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-n3favu",
+      "text": "banyera",
+      "ipa": "bə.ˈɲe.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-m066h5",
+      "text": "barca",
+      "ipa": "ˈbaɾ.kə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-hrxkmk",
+      "text": "barret",
+      "ipa": "bə.ˈrət",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1il23ts",
+      "text": "bàsquet",
+      "ipa": "ˈbas.kət",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1whhycu",
+      "text": "bassal",
+      "ipa": "bə.ˈsal",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-jhipfx",
+      "text": "bé",
+      "ipa": "ˈbe",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-vxfzf9",
+      "text": "berenar",
+      "ipa": "bə.ɾə.ˈna",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-z7udlv",
+      "text": "bessons",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-kzgb9",
+      "text": "beure",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1fi2x2a",
+      "text": "bicicleta",
+      "ipa": "bi.si.ˈklə.tə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-tozp1t",
+      "text": "blaus",
+      "ipa": "ˈblaws",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-t59y5s",
+      "text": "blava",
+      "ipa": "ˈbla.və",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-1f84dy5",
+      "text": "blaves",
+      "ipa": "ˈbla.vəs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-1le46wb",
+      "text": "boca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1fxl2cs",
+      "text": "bolet",
+      "ipa": "bo.ˈlət",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1kypnvt",
+      "text": "bombó",
+      "ipa": "bom.ˈbo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1x3c6t0",
+      "text": "bombolla",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-2gkjye",
+      "text": "bonica",
+      "ipa": "bu.ˈni.kə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-6cezo0",
+      "text": "bonics",
+      "ipa": "bu.ˈniks",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1idfof4",
+      "text": "boniques",
+      "ipa": "bu.ˈni.kəs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1us5loh",
+      "text": "bosc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ry0xzk",
+      "text": "bossa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1akfsbk",
+      "text": "botiga",
+      "ipa": "bu.ˈti.gə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-t2bxfu",
+      "text": "botó",
+      "ipa": "bo.ˈto",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-wq7mhc",
+      "text": "braç",
+      "ipa": "ˈbɾas",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-gt5s3h",
+      "text": "bufanda",
+      "ipa": "bu.ˈfan.də",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-e1nul",
+      "text": "bústia",
+      "ipa": "ˈbus.ti.ə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-f6sibu",
+      "text": "cadira",
+      "ipa": "kə.ˈdi.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-8d3w0m",
+      "text": "cafè",
+      "ipa": "kə.ˈfə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-xgcg8w",
+      "text": "caixa",
+      "ipa": "ˈka.ʃə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-6i5mkx",
+      "text": "calces",
+      "ipa": "ˈkal.səs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1lv2bnw",
+      "text": "càmera",
+      "ipa": "ˈka.mə.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1gbzn5f",
+      "text": "camió",
+      "ipa": "kə.mi.ˈo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-yw9b2u",
+      "text": "camisa",
+      "ipa": "kə.ˈmi.zə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-hozgas",
+      "text": "cançó",
+      "ipa": "kən.ˈso",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1uz07ad",
+      "text": "cansada",
+      "ipa": "kən.ˈsa.də",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-15ybcri",
+      "text": "cansades",
+      "ipa": "kən.ˈsa.dəs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1ywdi73",
+      "text": "cansats",
+      "ipa": "kən.ˈsats",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-15yl1r4",
+      "text": "canya",
+      "ipa": "ˈka.ɲə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1cjid71",
+      "text": "cara",
+      "ipa": "ˈka.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-3wlt8s",
+      "text": "carbassa",
+      "ipa": "kəɾ.ˈba.sə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1yq2emo",
+      "text": "cargol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-q8xyk3",
+      "text": "carrer",
+      "ipa": "kə.ˈre",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-12adwsx",
+      "text": "carro",
+      "ipa": "ˈka.ro",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1f1pbpp",
+      "text": "carta",
+      "ipa": "ˈkaɾ.tə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-14ryuvk",
+      "text": "casa",
+      "ipa": "ˈka.zə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-17mcr8a",
+      "text": "castanya",
+      "ipa": "kəs.ˈta.ɲə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1otep1n",
+      "text": "català",
+      "ipa": "kə.tə.ˈla",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-15h0hxt",
+      "text": "cavall",
+      "ipa": "kə.ˈvaʎ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-kwgyh5",
+      "text": "ceba",
+      "ipa": "ˈsə.bə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-7nz3js",
+      "text": "cel",
+      "ipa": "ˈsɛl",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-lqsdjy",
+      "text": "cent",
+      "ipa": "ˈsent",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1qndtsn",
+      "text": "cèntim",
+      "ipa": "ˈsɛn.tim",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-p26ecz",
+      "text": "centre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1qowlt5",
+      "text": "cereals",
+      "ipa": "sə.ɾe.ˈals",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-8bry8b",
+      "text": "cinc",
+      "ipa": "ˈsiŋk",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-19xayyr",
+      "text": "cinema",
+      "ipa": "si.ˈnə.mə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1752d38",
+      "text": "cinquanta",
+      "ipa": "siŋ.ˈkwan.tə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-11dc67e",
+      "text": "cinturó",
+      "ipa": "sin.tu.ˈɾo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-yjobb4",
+      "text": "cirera",
+      "ipa": "si.ˈɾe.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-cx71zq",
+      "text": "cistell",
+      "ipa": "sis.ˈtɛʎ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1b7m4rg",
+      "text": "ciutat",
+      "ipa": "siw.ˈtat",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-dd4z13",
+      "text": "classe",
+      "ipa": "ˈkla.sə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-17t4rom",
+      "text": "coca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1g2x4qq",
+      "text": "coixí",
+      "ipa": "ku.ˈʃi",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-nq682h",
+      "text": "colla",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1879y2w",
+      "text": "col·legi",
+      "ipa": "kol.ˈlɛ.ʒi",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-4epfh4",
+      "text": "començar",
+      "ipa": "ko.mən.ˈsa",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-dps5vg",
+      "text": "còmic",
+      "ipa": "ˈkɔ.mik",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-38nv5u",
+      "text": "companya",
+      "ipa": "kom.ˈpa.ɲə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-pgtwgv",
+      "text": "companyes",
+      "ipa": "kom.ˈpa.ɲəs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1x9z2ng",
+      "text": "companys",
+      "ipa": "kom.ˈpaɲʃ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-quymvy",
+      "text": "conèixer",
+      "ipa": "ko.ˈnɛ.ʃə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-8e645j",
+      "text": "conill",
+      "ipa": "ku.ˈniʎ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-ygbvwf",
+      "text": "conte",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-hivxlx",
+      "text": "conversa",
+      "ipa": "kom.ˈvɛɾ.sə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-rw92jx",
+      "text": "còpia",
+      "ipa": "ˈkɔ.pi.ə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-13hk3as",
+      "text": "correu",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-9lb6sz",
+      "text": "cos",
+      "ipa": "ˈkɔs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1gn96om",
+      "text": "cosa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-kglhtm",
+      "text": "cosí",
+      "ipa": "ku.ˈzi",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-wp4yyb",
+      "text": "cosina",
+      "ipa": "ku.ˈzi.nə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-10eufew",
+      "text": "costat",
+      "ipa": "kos.ˈtat",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-nlv90h",
+      "text": "cotxe",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-e8ayka",
+      "text": "créixer",
+      "ipa": "ˈkɾe.ʃə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-gb5n91",
+      "text": "cuc",
+      "ipa": "ˈkuk",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1ul79u6",
+      "text": "cullera",
+      "ipa": "ku.ˈʎe.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1lkl6y1",
+      "text": "davantal",
+      "ipa": "də.vən.ˈtal",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-1n5bq06",
+      "text": "demà",
+      "ipa": "də.ˈma",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-kuow39",
+      "text": "desembre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-o4hmwi",
+      "text": "després",
+      "ipa": "dəs.ˈpɾes",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-o1ixzn",
+      "text": "dessuadora",
+      "ipa": "də.su.ə.ˈdo.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1tzuhdr",
+      "text": "dibuix",
+      "ipa": "di.ˈbuʃ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-lmifli",
+      "text": "difícil",
+      "ipa": "di.ˈfi.sil",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-c4wo0d",
+      "text": "dissabte",
+      "ipa": "di.ˈsap.tə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1w7ohwc",
+      "text": "disset",
+      "ipa": "di.ˈsət",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-19cq0yy",
+      "text": "diumenge",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-vu0hgw",
+      "text": "dofí",
+      "ipa": "du.ˈfi",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-ykwk7c",
+      "text": "dolç",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-7q3gm3",
+      "text": "dormitori",
+      "ipa": "doɾ.mi.ˈtɔ.ɾi",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-188caz2",
+      "text": "dos",
+      "ipa": "ˈdɔs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-11wdbuu",
+      "text": "dotze",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1jdb1fa",
+      "text": "drac",
+      "ipa": "ˈdɾak",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1r9d3ze",
+      "text": "dutxa",
+      "ipa": "ˈdu.t͡ʃə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-7l0gof",
+      "text": "elefant",
+      "ipa": "ə.lə.ˈfant",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1q75y9l",
+      "text": "enciam",
+      "ipa": "ən.si.ˈam",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1vzr9m",
+      "text": "enfadada",
+      "ipa": "əm.fə.ˈda.də",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-xcgdbr",
+      "text": "enfadades",
+      "ipa": "əm.fə.ˈda.dəs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-5q946c",
+      "text": "enfadats",
+      "ipa": "əm.fə.ˈdats",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1oamop0",
+      "text": "equip",
+      "ipa": "ə.ˈkip",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1td99r7",
+      "text": "escala",
+      "ipa": "əs.ˈka.lə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-s0ugdh",
+      "text": "escola",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-544tnc",
+      "text": "escombra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-acg4ar",
+      "text": "escrita",
+      "ipa": "əs.ˈkɾi.tə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-y0yjhw",
+      "text": "escrites",
+      "ipa": "əs.ˈkɾi.təs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-6glol5",
+      "text": "escrits",
+      "ipa": "əs.ˈkɾits",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1sq96ct",
+      "text": "església",
+      "ipa": "əz.ˈgle.zi.ə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-7tbf43",
+      "text": "esmorzar",
+      "ipa": "əz.moɾ.ˈza",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-12giku2",
+      "text": "espai",
+      "ipa": "əs.ˈpaj",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-erdvno",
+      "text": "esponja",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-n6e53o",
+      "text": "esquena",
+      "ipa": "əs.ˈkə.nə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1771izc",
+      "text": "estació",
+      "ipa": "əs.tə.si.ˈo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1k054l6",
+      "text": "estiu",
+      "ipa": "əs.ˈtiw",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-ilkc6w",
+      "text": "estona",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ymmc0o",
+      "text": "estrella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1tqoa1y",
+      "text": "excursió",
+      "ipa": "əks.kuɾ.si.ˈo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1d0meum",
+      "text": "exercici",
+      "ipa": "əg.zəɾ.ˈsi.si",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-k2suh6",
+      "text": "fàcil",
+      "ipa": "ˈfa.sil",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-z5v2dj",
+      "text": "família",
+      "ipa": "fə.ˈmi.li.ə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1we5akp",
+      "text": "farina",
+      "ipa": "fə.ˈɾi.nə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1mfm43q",
+      "text": "febrer",
+      "ipa": "fə.ˈbɾe",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1ts0cur",
+      "text": "feliç",
+      "ipa": "fə.ˈlis",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1vfvf7d",
+      "text": "festa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1dloi02",
+      "text": "finestra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-zk86os",
+      "text": "foc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1dq4k7f",
+      "text": "força",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-uvb4d7",
+      "text": "formatge",
+      "ipa": "foɾ.ˈma.d͡ʒə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-i0ont9",
+      "text": "formiga",
+      "ipa": "fuɾ.ˈmi.gə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-8fnou2",
+      "text": "fotografia",
+      "ipa": "fo.to.gɾə.ˈfi.ə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1yi9fi0",
+      "text": "futbol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-bwqflq",
+      "text": "gallina",
+      "ipa": "gə.ˈʎi.nə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1rsxbaw",
+      "text": "gat",
+      "ipa": "ˈgat",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-179ibty",
+      "text": "gegant",
+      "ipa": "ʒə.ˈgant",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1u0hius",
+      "text": "gel",
+      "ipa": "ˈʒɛl",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-q8eivh",
+      "text": "gener",
+      "ipa": "ʒə.ˈne",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-5sp5fz",
+      "text": "genoll",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-popzvu",
+      "text": "gent",
+      "ipa": "ˈʒent",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1taihoj",
+      "text": "germà",
+      "ipa": "ʒəɾ.ˈma",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-3sofk1",
+      "text": "germana",
+      "ipa": "ʒəɾ.ˈma.nə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-106isxz",
+      "text": "gerra",
+      "ipa": "ˈʒɛ.rə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-cno27o",
+      "text": "girafa",
+      "ipa": "ʒi.ˈɾa.fə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-xrn5dt",
+      "text": "girar",
+      "ipa": "ʒi.ˈɾa",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-19t8s14",
+      "text": "goma",
+      "ipa": "ˈgo.mə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1trfnrb",
+      "text": "gos",
+      "ipa": "ˈgɔs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1sxguoe",
+      "text": "got",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1yerxq7",
+      "text": "granja",
+      "ipa": "ˈgɾaɲ.ʒə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-m4knq4",
+      "text": "gronxador",
+      "ipa": "gɾoɲ.ʃə.ˈdo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-125nzjr",
+      "text": "gros",
+      "ipa": "ˈgɾɔs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1az5h5j",
+      "text": "grossa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-10524yx",
+      "text": "guix",
+      "ipa": "ˈgiks",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-107zyxy",
+      "text": "habitació",
+      "ipa": "ə.bi.tə.si.ˈo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1n2z442",
+      "text": "herba",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-100y49a",
+      "text": "hivern",
+      "ipa": "i.ˈvɛɾn",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-17pyulj",
+      "text": "home",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-14fjbz0",
+      "text": "hora",
+      "ipa": "ˈo.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-z5qvsj",
+      "text": "hort",
+      "ipa": "ˈɔɾt",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-5k399i",
+      "text": "hospital",
+      "ipa": "os.pi.ˈtal",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-vw1emz",
+      "text": "idea",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-4k62a6",
+      "text": "illa",
+      "ipa": "ˈi.ʎə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1759ikv",
+      "text": "imatge",
+      "ipa": "i.ˈma.d͡ʒə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-z8pdwb",
+      "text": "insecte",
+      "ipa": "in.ˈsɛk.tə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-t75vgp",
+      "text": "jaqueta",
+      "ipa": "ʒə.ˈkə.tə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-18uxc6a",
+      "text": "jardí",
+      "ipa": "ʒəɾ.ˈdi",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1t343w8",
+      "text": "jersei",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-cfapv4",
+      "text": "joc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-106wt6j",
+      "text": "joguina",
+      "ipa": "ʒu.ˈgi.nə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1afljim",
+      "text": "jove",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1resf9d",
+      "text": "jugar",
+      "ipa": "ʒu.ˈga",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-yfku9w",
+      "text": "llaç",
+      "ipa": "ˈʎas",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-covqkb",
+      "text": "llançar",
+      "ipa": "ʎən.ˈsa",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-k0jv1t",
+      "text": "llapis",
+      "ipa": "ˈʎa.pis",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-9mziwu",
+      "text": "llavor",
+      "ipa": "ʎə.ˈvo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-6vthxg",
+      "text": "llegida",
+      "ipa": "ʎə.ˈʒi.də",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-13808lt",
+      "text": "llegides",
+      "ipa": "ʎə.ˈʒi.dəs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-bu19m2",
+      "text": "llegits",
+      "ipa": "ʎə.ˈʒits",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-rwmzgn",
+      "text": "lleig",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-4el192",
+      "text": "llengua",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1umlab6",
+      "text": "llibre",
+      "ipa": "ˈʎi.bɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1yrdcjp",
+      "text": "llit",
+      "ipa": "ˈʎit",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-4cxs2m",
+      "text": "lluna",
+      "ipa": "ˈʎu.nə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1tmj1pw",
+      "text": "màgia",
+      "ipa": "ˈma.ʒi.ə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-ksga2a",
+      "text": "maig",
+      "ipa": "ˈmat͡ʃ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1wxb0g",
+      "text": "mànega",
+      "ipa": "ˈma.nə.gə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1yugrcr",
+      "text": "màquina",
+      "ipa": "ˈma.ki.nə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1k8ffyd",
+      "text": "març",
+      "ipa": "ˈmars",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-k5v3rz",
+      "text": "mare",
+      "ipa": "ˈma.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-nb9ooj",
+      "text": "massa",
+      "ipa": "ˈma.sə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1vwho31",
+      "text": "matí",
+      "ipa": "mə.ˈti",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1pheqqt",
+      "text": "menjar",
+      "ipa": "məɲ.ˈʒa",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-c2gsme",
+      "text": "menú",
+      "ipa": "mə.ˈnu",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-gws6ky",
+      "text": "metge",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1k5nrgj",
+      "text": "mitja",
+      "ipa": "ˈmi.d͡ʒə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-yuf3oi",
+      "text": "mòbil",
+      "ipa": "ˈmɔ.bil",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-yh5kja",
+      "text": "món",
+      "ipa": "ˈmon",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-onwism",
+      "text": "mongetes",
+      "ipa": "moɲ.ˈʒə.təs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1e7yqr6",
+      "text": "motxilla",
+      "ipa": "mu.ˈt͡ʃi.ʎə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1bkn7x",
+      "text": "muntanya",
+      "ipa": "mun.ˈta.ɲə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-91r733",
+      "text": "música",
+      "ipa": "ˈmu.zi.kə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1hcktyc",
+      "text": "nedar",
+      "ipa": "nə.ˈda",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1ui7c6x",
+      "text": "número",
+      "ipa": "ˈnu.mə.ɾo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1uq1qgx",
+      "text": "núvol",
+      "ipa": "ˈnu.vol",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-kwgoil",
+      "text": "oberta",
+      "ipa": "o.ˈbɛɾ.tə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1tm2pza",
+      "text": "obertes",
+      "ipa": "o.ˈbɛɾ.təs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-osb487",
+      "text": "oberts",
+      "ipa": "o.ˈbɛɾts",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-svs75p",
+      "text": "ocell",
+      "ipa": "o.ˈsɛʎ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-73q2o7",
+      "text": "ombra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1q3kf84",
+      "text": "onze",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1e65tz0",
+      "text": "ordinador",
+      "ipa": "oɾ.di.nə.ˈdo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1elhe88",
+      "text": "ou",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-tnkhal",
+      "text": "pàgina",
+      "ipa": "ˈpa.ʒi.nə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-rxfsqz",
+      "text": "país",
+      "ipa": "pə.ˈis",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-14gygmw",
+      "text": "papallona",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1e2graq",
+      "text": "paper",
+      "ipa": "pə.ˈpe",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-b62418",
+      "text": "paperera",
+      "ipa": "pə.pə.ˈɾe.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1orlck0",
+      "text": "paquet",
+      "ipa": "pə.ˈkət",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-33gids",
+      "text": "paraigua",
+      "ipa": "pə.ˈɾaj.gwə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-t65d0i",
+      "text": "pare",
+      "ipa": "ˈpa.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1ofiszc",
+      "text": "passadís",
+      "ipa": "pə.sə.ˈdis",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-n2i8ke",
+      "text": "passar",
+      "ipa": "pə.ˈsa",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1dfuf0w",
+      "text": "pastís",
+      "ipa": "pəs.ˈtis",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1kxmqzc",
+      "text": "patí",
+      "ipa": "pə.ˈti",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1g0x1m7",
+      "text": "patinet",
+      "ipa": "pə.ti.ˈnət",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1ce36z",
+      "text": "peça",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-4qgz7y",
+      "text": "peix",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ovzj6u",
+      "text": "pel·lícula",
+      "ipa": "pəl.ˈli.ku.lə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-9ffmwy",
+      "text": "pera",
+      "ipa": "ˈpə.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-10qgfnb",
+      "text": "perquè",
+      "ipa": "pəɾ.ˈkə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-10bs8f4",
+      "text": "pijama",
+      "ipa": "pi.ˈʒa.mə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-19dp0vb",
+      "text": "pintada",
+      "ipa": "pin.ˈta.də",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-nd6vw8",
+      "text": "pintades",
+      "ipa": "pin.ˈta.dəs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-15gbpyl",
+      "text": "pintats",
+      "ipa": "pin.ˈtats",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-15svqvd",
+      "text": "pinya",
+      "ipa": "ˈpi.ɲə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-18i9unx",
+      "text": "pirata",
+      "ipa": "pi.ˈɾa.tə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-9ahbmz",
+      "text": "plaça",
+      "ipa": "ˈpla.sə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-pl1brj",
+      "text": "plàstic",
+      "ipa": "ˈplas.tik",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1kykx7j",
+      "text": "plàtan",
+      "ipa": "ˈpla.tən",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1v3n3c0",
+      "text": "platja",
+      "ipa": "ˈpla.d͡ʒə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1iw2w5r",
+      "text": "ploma",
+      "ipa": "ˈplo.mə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-hj63oe",
+      "text": "pluja",
+      "ipa": "ˈplu.ʒə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-ly9msx",
+      "text": "policia",
+      "ipa": "po.li.ˈsi.ə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1edv3em",
+      "text": "porta",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-snr07k",
+      "text": "preparada",
+      "ipa": "pɾə.pə.ˈɾa.də",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-nq948t",
+      "text": "preparades",
+      "ipa": "pɾə.pə.ˈɾa.dəs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-otffp2",
+      "text": "preparats",
+      "ipa": "pɾə.pə.ˈɾats",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-j7j8eh",
+      "text": "professor",
+      "ipa": "pɾo.fə.ˈso",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-dl376u",
+      "text": "quadern",
+      "ipa": "kwə.ˈdɛɾn",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1ekf00u",
+      "text": "quatre",
+      "ipa": "ˈkwa.tɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1bs1tsw",
+      "text": "quinze",
+      "ipa": "ˈkin.zə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-s83mt6",
+      "text": "ràdio",
+      "ipa": "ˈra.di.o",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-zwsym1",
+      "text": "raig",
+      "ipa": "ˈrat͡ʃ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1bwjj55",
+      "text": "raïm",
+      "ipa": "rə.ˈim",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1t4e5gb",
+      "text": "ràpid",
+      "ipa": "ˈra.pit",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-16wh9xr",
+      "text": "ratolí",
+      "ipa": "rə.tu.ˈli",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-gf78em",
+      "text": "rellotge",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1wufcpk",
+      "text": "riu",
+      "ipa": "ˈriw",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-tot7dq",
+      "text": "roba",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-obqglk",
+      "text": "robot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-13p00yc",
+      "text": "roda",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-smaiaz",
+      "text": "rosa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-zayfce",
+      "text": "sabata",
+      "ipa": "sə.ˈba.tə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1xrgc7",
+      "text": "sabó",
+      "ipa": "sə.ˈbo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-14cbk1w",
+      "text": "semàfor",
+      "ipa": "sə.ˈma.fo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-i339lg",
+      "text": "senyor",
+      "ipa": "sə.ˈɲo",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-145zfw3",
+      "text": "serra",
+      "ipa": "ˈsɛ.rə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1wzslju",
+      "text": "síndria",
+      "ipa": "ˈsin.dɾi.ə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-7fpqsk",
+      "text": "sofà",
+      "ipa": "so.ˈfa",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-1njzmzp",
+      "text": "sorra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1d77npc",
+      "text": "sortida",
+      "ipa": "suɾ.ˈti.də",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-zxcq2f",
+      "text": "també",
+      "ipa": "təm.ˈbe",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-h6ihcz",
+      "text": "taronja",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1cetajo",
+      "text": "tassa",
+      "ipa": "ˈta.sə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-nri1dq",
+      "text": "telèfon",
+      "ipa": "tə.ˈlɛ.fon",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-hotxy6",
+      "text": "terra",
+      "ipa": "ˈtɛ.rə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-siuvxh",
+      "text": "tisores",
+      "ipa": "ti.ˈzo.ɾəs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-72ya9g",
+      "text": "torre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-y7mlxo",
+      "text": "treball",
+      "ipa": "tɾə.ˈbaʎ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-vuze9r",
+      "text": "treballar",
+      "ipa": "tɾə.bə.ˈʎa",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-gve6hc",
+      "text": "trobar",
+      "ipa": "tɾo.ˈba",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-41pln4",
+      "text": "últim",
+      "ipa": "ˈul.tim",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-195hlff",
+      "text": "útil",
+      "ipa": "ˈu.til",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-5wgld9",
+      "text": "vaca",
+      "ipa": "ˈva.kə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-l7ufcn",
+      "text": "vaixell",
+      "ipa": "və.ˈʃɛʎ",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-eoo2zs",
+      "text": "veí",
+      "ipa": "və.ˈi",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-s3rwcz",
+      "text": "veïna",
+      "ipa": "və.ˈi.nə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-18l0n4f",
+      "text": "vent",
+      "ipa": "ˈvent",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-1439b83",
+      "text": "verd",
+      "ipa": "ˈvɛɾt",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-pzow36",
+      "text": "vermella",
+      "ipa": "vəɾ.ˈmə.ʎə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-zhlyvj",
+      "text": "vermelles",
+      "ipa": "vəɾ.ˈmə.ʎəs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-tvjbss",
+      "text": "vermells",
+      "ipa": "vəɾ.ˈmɛʎs",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-1gd88wf",
+      "text": "vestit",
+      "ipa": "vəs.ˈtit",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-1581arw",
+      "text": "viatge",
+      "ipa": "vi.ˈa.d͡ʒə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-yditay",
+      "text": "vida",
+      "ipa": "ˈvi.də",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-15bc08v",
+      "text": "vídeo",
+      "ipa": "ˈvi.də.o",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-1ev1w8m",
+      "text": "vidre",
+      "ipa": "ˈvi.dɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-s0poy3",
+      "text": "vint",
+      "ipa": "ˈvint",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-2ad75p",
+      "text": "viure",
+      "ipa": "ˈviw.ɾə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-1omrh9i",
+      "text": "volar",
+      "ipa": "vo.ˈla",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-1lylv5c",
+      "text": "vuit",
+      "ipa": "ˈvujt",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": false
+    },
+    {
+      "id": "p-100s3ac",
+      "text": "xampú",
+      "ipa": "ʃəm.ˈpu",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-t55f20",
+      "text": "xarxa",
+      "ipa": "ˈʃaɾ.ʃə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-18k8jdz",
+      "text": "xocolata",
+      "ipa": "ʃo.ko.ˈla.tə",
+      "status": "pendent-contrast",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": true
+    },
+    {
+      "id": "p-9zjowg",
+      "text": "zebra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1af7z76",
+      "text": "zero",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    }
+  ],
+  "pending": [
+    {
+      "id": "p-1r1vzjv",
+      "text": "acord",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1boxyes",
+      "text": "adob",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-nu51ss",
+      "text": "adreça",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-spagps",
+      "text": "agenda",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-5zflem",
+      "text": "agost",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-35pr35",
+      "text": "aiguamoll",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-z8u2bl",
+      "text": "albercoc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1bimfqz",
+      "text": "alberg",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-eq8lkm",
+      "text": "alcohol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1bynuvc",
+      "text": "alegre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-5esefq",
+      "text": "ampolla",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-wkcn67",
+      "text": "aquarel·la",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-id69r2",
+      "text": "argüeix",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ffr09v",
+      "text": "assemblea",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1gqabcy",
+      "text": "asseure",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1fvh6dx",
+      "text": "barbacoa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1bm7ta5",
+      "text": "barreja",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-18dez03",
+      "text": "batec",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1fo6eax",
+      "text": "be",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-z7udlv",
+      "text": "bessons",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-4kqeet",
+      "text": "bestiola",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-kzgb9",
+      "text": "beure",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ldfyhc",
+      "text": "bloc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1le46wb",
+      "text": "boca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1qnbih6",
+      "text": "boix",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1s1ri1o",
+      "text": "bola",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1tfpiij",
+      "text": "boll",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1x3c6t0",
+      "text": "bombolla",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1qxkko2",
+      "text": "bony",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1lb3hw3",
+      "text": "borinot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-12zv7pj",
+      "text": "borrissol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1us5loh",
+      "text": "bosc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ry0xzk",
+      "text": "bossa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1kad69p",
+      "text": "bot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-slrvss",
+      "text": "botja",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1k0dkkq",
+      "text": "bou",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-im70u",
+      "text": "broc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1vxvezb",
+      "text": "brot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1vtfzga",
+      "text": "calçot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1nuks1r",
+      "text": "canyella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-snfufi",
+      "text": "caravel·la",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1yq2emo",
+      "text": "cargol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-vni3wq",
+      "text": "carrossa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1pjemto",
+      "text": "cassola",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-zi5f53",
+      "text": "cella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-91j8rq",
+      "text": "cel·la",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-19hsmxr",
+      "text": "cel·lulosa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-l16vf3",
+      "text": "cendra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-p26ecz",
+      "text": "centre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-fitcvs",
+      "text": "cercle",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1hcj8bi",
+      "text": "cigonya",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-23ko45",
+      "text": "cistella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-n3k2lq",
+      "text": "clivella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-jzv16v",
+      "text": "clotxa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-17t4rom",
+      "text": "coca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1e4whje",
+      "text": "coça",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1dnwdgb",
+      "text": "coix",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1jrx37m",
+      "text": "coll",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-nq682h",
+      "text": "colla",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-15zd4j4",
+      "text": "col·lega",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-r1w3ae",
+      "text": "colom",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1a890h1",
+      "text": "conquesta",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ygbvwf",
+      "text": "conte",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-16xjxwm",
+      "text": "corb",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-171rk79",
+      "text": "corba",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1advb4n",
+      "text": "corda",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-179c6tf",
+      "text": "corol·la",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-dygfw8",
+      "text": "corona",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1rquuma",
+      "text": "corretja",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-13hk3as",
+      "text": "correu",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-amxhkb",
+      "text": "corrompre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1gn96om",
+      "text": "cosa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-19rm0w0",
+      "text": "cossiol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-wi26m3",
+      "text": "costella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-nlv90h",
+      "text": "cotxe",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1dbneuv",
+      "text": "cova",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1c7p02z",
+      "text": "cove",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-190kh19",
+      "text": "crec",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1yvryvi",
+      "text": "cresta",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-nsqdl6",
+      "text": "creure",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1nxxnqu",
+      "text": "cuixot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-l5w9qm",
+      "text": "curiosa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-k0jiyz",
+      "text": "curioses",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-m7gebh",
+      "text": "curiosos",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-18t2uw6",
+      "text": "decebre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1csi423",
+      "text": "deessa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-drl0z4",
+      "text": "defensa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-whz1t6",
+      "text": "deix",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-kuow39",
+      "text": "desembre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-vhfvcz",
+      "text": "deshonest",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-gnjbsn",
+      "text": "deure",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-skqiod",
+      "text": "diftong",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1tr3gkk",
+      "text": "dijous",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-plbobk",
+      "text": "disfressa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-19cq0yy",
+      "text": "diumenge",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-fzayme",
+      "text": "divendres",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1q1zxt2",
+      "text": "doble",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ykwk7c",
+      "text": "dolç",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-pbyhzf",
+      "text": "dolça",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1qy5ods",
+      "text": "dolces",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1b02boi",
+      "text": "dolços",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-11wdbuu",
+      "text": "dotze",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-32whfk",
+      "text": "dringueig",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1avqta",
+      "text": "eix",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1fuoilx",
+      "text": "enlloc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1fx82s7",
+      "text": "enveja",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-k8iw8o",
+      "text": "escarola",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1p7iigl",
+      "text": "escletxa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-s0ugdh",
+      "text": "escola",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-544tnc",
+      "text": "escombra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-fpdozo",
+      "text": "esforç",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-erdvno",
+      "text": "esponja",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1dwmqww",
+      "text": "esquella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-gt23qz",
+      "text": "esquerp",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1csfcs6",
+      "text": "esquirol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1nlgi62",
+      "text": "estella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1nkof9s",
+      "text": "estendre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1g9dgf",
+      "text": "estirabot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1pz92xd",
+      "text": "estiueig",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1xqusum",
+      "text": "estiuenc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1p0j3oa",
+      "text": "estoc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ilkc6w",
+      "text": "estona",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ymmc0o",
+      "text": "estrella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-6c9pzu",
+      "text": "exemple",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-6q7f7i",
+      "text": "fageda",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1dfg0eo",
+      "text": "febre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1sk5nv1",
+      "text": "feina",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ocfjf8",
+      "text": "feix",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-aqdasq",
+      "text": "fenoll",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1vfvf7d",
+      "text": "festa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1qn05t7",
+      "text": "fetge",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1dloi02",
+      "text": "finestra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-x4im7v",
+      "text": "fivella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-xkpqeb",
+      "text": "flabiol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-zk86os",
+      "text": "foc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1dq4k7f",
+      "text": "força",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1l4uqmt",
+      "text": "forma",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-x3en43",
+      "text": "forn",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-r9ju1p",
+      "text": "fosc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-11zns24",
+      "text": "fressa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1yi9fi0",
+      "text": "futbol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1nsfpo",
+      "text": "galleda",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-nn46x1",
+      "text": "ganyota",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1308n6b",
+      "text": "gargamella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1i8yry8",
+      "text": "garrotxa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-fbfx16",
+      "text": "gasosa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1v3bizr",
+      "text": "gendre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-5sp5fz",
+      "text": "genoll",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1xho9au",
+      "text": "germen",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-p24tlj",
+      "text": "gest",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-y086z0",
+      "text": "ginebre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-dkaovy",
+      "text": "gira-sol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-c8kbha",
+      "text": "giravolt",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-da4944",
+      "text": "glop",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1m9qe12",
+      "text": "gol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ztjxk5",
+      "text": "gola",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-bepv55",
+      "text": "gorra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1sxguoe",
+      "text": "got",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-fpog0t",
+      "text": "graciosa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-yk9892",
+      "text": "gracioses",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-yjbhnk",
+      "text": "graciosos",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-54ucvh",
+      "text": "gresca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-w0yzov",
+      "text": "greu",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-16lhmnb",
+      "text": "groc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1az5h5j",
+      "text": "grossa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1v8qhm0",
+      "text": "grosses",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1v85d0e",
+      "text": "grossos",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-m80hsx",
+      "text": "guineu",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1r8koxd",
+      "text": "guinyol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1rt8xgj",
+      "text": "hagueren",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1a4zh13",
+      "text": "he",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1js09",
+      "text": "hebreu",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-qftxm6",
+      "text": "hem",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1n2z442",
+      "text": "herba",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1uucbfl",
+      "text": "hereu",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-js3gyu",
+      "text": "heu",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1raxye4",
+      "text": "hidrogen",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-12spb9r",
+      "text": "higiene",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-yuepwe",
+      "text": "hola",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-17pyulj",
+      "text": "home",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-k0ugcr",
+      "text": "honest",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-18nxdgw",
+      "text": "hormona",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1aqy3p",
+      "text": "hoste",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-a9m39i",
+      "text": "hostessa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-vw1emz",
+      "text": "idea",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-2dz9fl",
+      "text": "il·lusions",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-u55f4h",
+      "text": "interrompre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1t343w8",
+      "text": "jersei",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-gassx9",
+      "text": "jeure",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-cfapv4",
+      "text": "joc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1afljim",
+      "text": "jove",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-16atiop",
+      "text": "juliol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-13lmj3i",
+      "text": "lil·liputenc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-18cxzp",
+      "text": "llagosta",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1r213ja",
+      "text": "llebre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-13q7uxo",
+      "text": "llegenda",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-rwmzgn",
+      "text": "lleig",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1epd9rj",
+      "text": "llença",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-u3k7xz",
+      "text": "llençol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-4el192",
+      "text": "llengua",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-mfv9mk",
+      "text": "llengües",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1njkcl0",
+      "text": "llesca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-zskai",
+      "text": "lletges",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-idiqgo",
+      "text": "lletja",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-gqv6cz",
+      "text": "lletjos",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-mskxyo",
+      "text": "lletra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1x8dkjf",
+      "text": "lleure",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-9zdie",
+      "text": "llevaneu",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1kdeuc6",
+      "text": "llimona",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ar4dkc",
+      "text": "lloba",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1um4fqq",
+      "text": "lloc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1v63n4o",
+      "text": "llom",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1cwx34p",
+      "text": "llonga",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1yryh5b",
+      "text": "llop",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1lc854e",
+      "text": "lloro",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-19olohl",
+      "text": "llosa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1xo02df",
+      "text": "llot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-lk747y",
+      "text": "llotja",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-zjfiuu",
+      "text": "magatzem",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-9t3jfe",
+      "text": "marea",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-11cqfby",
+      "text": "marrec",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-19hqs2s",
+      "text": "mateix",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-wt5xlb",
+      "text": "mengem",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-x35jaa",
+      "text": "mengen",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ul941j",
+      "text": "mengeu",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-e8fddl",
+      "text": "meravella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ti1ijz",
+      "text": "mes",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1bzk6rf",
+      "text": "mescla",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-gws6ky",
+      "text": "metge",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-16z28o8",
+      "text": "metres",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1q0okax",
+      "text": "microones",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1bov94p",
+      "text": "moble",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-106aw75",
+      "text": "moc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-8c909s",
+      "text": "moca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-gcxj6p",
+      "text": "moix",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-k91fe8",
+      "text": "moll",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-f44fb7",
+      "text": "molla",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1yzu222",
+      "text": "monyo",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-uttyt1",
+      "text": "mosca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1luvsor",
+      "text": "motlle",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-vkdan5",
+      "text": "museu",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1twuzth",
+      "text": "neboda",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-gpd5ra",
+      "text": "nebot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-27zuoj",
+      "text": "negre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-f0vpc9",
+      "text": "nerviosa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1cvf8ia",
+      "text": "nervioses",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1cw0d3w",
+      "text": "nerviosos",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-thzyia",
+      "text": "neurona",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-19tcfj2",
+      "text": "nexe",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-19m07b2",
+      "text": "ninot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-wfnsiv",
+      "text": "nous",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-z7gnym",
+      "text": "nova",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-18dhs20",
+      "text": "novel·la",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-jit874",
+      "text": "novembre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1w3yeh7",
+      "text": "noves",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1t6wjfo",
+      "text": "olla",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-73q2o7",
+      "text": "ombra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-otk22w",
+      "text": "ona",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1gsji1w",
+      "text": "onomatopeia",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1q3kf84",
+      "text": "onze",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-19wj3cq",
+      "text": "ordre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-azmtqb",
+      "text": "orella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1f83xks",
+      "text": "orfe",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-t42qr0",
+      "text": "orquestra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1362o8d",
+      "text": "ossos",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1elhe88",
+      "text": "ou",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1yuyakf",
+      "text": "ovella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-14gygmw",
+      "text": "papallona",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1s3pdux",
+      "text": "parcel·la",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-h91mb4",
+      "text": "passeig",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ns988w",
+      "text": "patxoca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-tox4u",
+      "text": "pebre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ce36z",
+      "text": "peça",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-4qgz7y",
+      "text": "peix",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1hsfrje",
+      "text": "percebre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-a8n1j8",
+      "text": "pes",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1lo7av6",
+      "text": "pessigolles",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-14polk0",
+      "text": "picarol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1mwruup",
+      "text": "pinyol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-7qt8z8",
+      "text": "plom",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-16jircy",
+      "text": "poble",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-126mr9g",
+      "text": "pobra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-112ochk",
+      "text": "pobre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-epef8a",
+      "text": "poc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-te6syp",
+      "text": "poca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-14zslfy",
+      "text": "poliglot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-10t71vh",
+      "text": "poliglota",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-jnbazh",
+      "text": "poll",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-u8i5f7",
+      "text": "pol·len",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-jxawog",
+      "text": "pols",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-v9ez8g",
+      "text": "poncella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1edv3em",
+      "text": "porta",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-gh2xxu",
+      "text": "pressa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-18wlnp0",
+      "text": "preu",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-9jbqk7",
+      "text": "pronom",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1bef6aq",
+      "text": "prova",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1yzfies",
+      "text": "qualsevol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-13up20l",
+      "text": "que",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1g9fnd2",
+      "text": "queda",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-15hi3un",
+      "text": "queixa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-11j7wor",
+      "text": "querella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ufanjc",
+      "text": "quiosc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-nu6zdk",
+      "text": "quota",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-11gabh9",
+      "text": "rajola",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1l46swt",
+      "text": "rebost",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-18f7hr8",
+      "text": "rebre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1o1oum",
+      "text": "rec",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1vvks5o",
+      "text": "recepta",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-h9ikgl",
+      "text": "record",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1oha4o5",
+      "text": "regle",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1xx9pw0",
+      "text": "rei",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ssmx43",
+      "text": "reia",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1tlq9ar",
+      "text": "reien",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-3ozoij",
+      "text": "reixa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1f7f7ar",
+      "text": "relleu",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-gf78em",
+      "text": "rellotge",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-42os",
+      "text": "rem",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1grwyc6",
+      "text": "remei",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1stb77o",
+      "text": "reny",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1wm0cwo",
+      "text": "repte",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1w9c3q6",
+      "text": "res",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-3hvqzn",
+      "text": "resposta",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1rc6xvb",
+      "text": "revetlla",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1g4fi31",
+      "text": "rierol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-tot7dq",
+      "text": "roba",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-obqglk",
+      "text": "robot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-11gexaz",
+      "text": "roca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-13p00yc",
+      "text": "roda",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-grjwwc",
+      "text": "rogenc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ztgo57",
+      "text": "rompre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-147za50",
+      "text": "ronc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-znc2ao",
+      "text": "ronda",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-oqzjl9",
+      "text": "roques",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-smaiaz",
+      "text": "rosa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-k8mls2",
+      "text": "rosella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-15kjkps",
+      "text": "rossa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-15delde",
+      "text": "rossinyol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-15yecgo",
+      "text": "rotlle",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-14agqau",
+      "text": "rotllo",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-7k4huo",
+      "text": "safareig",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-16dq0bc",
+      "text": "sanefa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-fd19ks",
+      "text": "seca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-bh6tv6",
+      "text": "secs",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-jbe4us",
+      "text": "segon",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1f4eabf",
+      "text": "segrest",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-uinlep",
+      "text": "selva",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-e9cbat",
+      "text": "seny",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-pgbdli",
+      "text": "seques",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1liouva",
+      "text": "servei",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-882229",
+      "text": "setze",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-12dg0e4",
+      "text": "sivella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ab3gqx",
+      "text": "sobre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-jzu8bm",
+      "text": "sogra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ivvtjq",
+      "text": "sogre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-m6878q",
+      "text": "sol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-lm8zus",
+      "text": "son",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ctf3cl",
+      "text": "sopa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1njzmzp",
+      "text": "sorra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-n1fow2",
+      "text": "sorrenc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-7ezobk",
+      "text": "sostre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-oe50si",
+      "text": "sot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-h6ihcz",
+      "text": "taronja",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-apc3i2",
+      "text": "teix",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-15reti6",
+      "text": "tella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1kps0bz",
+      "text": "titella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1pwtvla",
+      "text": "toc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-11inzmh",
+      "text": "toll",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1cm4xve",
+      "text": "tomb",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-72ya9g",
+      "text": "torre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1i1m3ld",
+      "text": "tothom",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1jhvq4u",
+      "text": "trebol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ge4bd",
+      "text": "tren",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-9mense",
+      "text": "trencaclosques",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-6ejsy",
+      "text": "tretze",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-10o4clt",
+      "text": "treure",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-15xhoc7",
+      "text": "tromba",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-yp6z3k",
+      "text": "tronc",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-11wqnyv",
+      "text": "trossos",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1qsjodk",
+      "text": "txec",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-12tczqj",
+      "text": "txeca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ez4m02",
+      "text": "vaixella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-hne5zb",
+      "text": "valenta",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1pxs7mg",
+      "text": "valentes",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ga99se",
+      "text": "varicel·la",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1x89o1l",
+      "text": "vedella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-156w9a4",
+      "text": "vella",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-bz0z5l",
+      "text": "velles",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ztjbq2",
+      "text": "venda",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1b4kjau",
+      "text": "vendre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-ox5dl2",
+      "text": "ventre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-rcxaqt",
+      "text": "vespa",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-bhrbsr",
+      "text": "vespre",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-17jir4w",
+      "text": "veu",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ixvabd",
+      "text": "virolla",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-16q52nl",
+      "text": "vol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ggtabw",
+      "text": "voleibol",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1i5g0q",
+      "text": "volta",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-18y1w7d",
+      "text": "vot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-zhgkb8",
+      "text": "xarop",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1msco9i",
+      "text": "xemeneia",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1uhy7ls",
+      "text": "xerrameca",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-44dv2j",
+      "text": "xicot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-l9vazi",
+      "text": "xicota",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1bz8mlk",
+      "text": "xistorra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-y54wdb",
+      "text": "xop",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-wr6vwg",
+      "text": "xou",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-9zjowg",
+      "text": "zebra",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1af7z76",
+      "text": "zero",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": true,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1ln40zh",
+      "text": "zigot",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    },
+    {
+      "id": "p-1114t7m",
+      "text": "zona",
+      "ipa": null,
+      "status": "pendent",
+      "basicVocabulary": false,
+      "azureCaEsCompatible": null
+    }
+  ]
+}
