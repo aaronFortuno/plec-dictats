@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto');
 const S=require('../seeds-v2.js'),R=require('../catalogs/ca/editions/index.js'),C=require('../catalogs/ca/catalog.js');
 const current=R.editions.find(e=>e.slot===R.current);
-assert.equal(current.slot,1);assert.deepEqual(current.catalog,C);
+assert.equal(current.slot,2);assert.deepEqual(current.catalog,C);
 for(const item of require('../catalogs/ca/editions/manifest.json').editions){
  const bytes=fs.readFileSync('catalogs/ca/editions/'+item.file);
  assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),item.sha256);

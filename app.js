@@ -10,10 +10,11 @@
   }
   const S=window.PlecSeeds,K=window.PlecCore,L=window.PlecLanguage,LT=window.PlecLanguageTools,R=window.PlecSeedRegistry;
   let edition=R.editions.find(e=>e.slot===R.current),C=edition.catalog;
+  const BANK=R.editions.find(e=>e.slot===R.current).catalog;
   const $=id=>document.getElementById(id),escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const STORAGE='plec-seeds-v1:'+L.id;
   const track=(name,data)=>window.PlecAnalytics?.track(name,data);
-  const defaults=mode=>({count:mode==='words'?24:20,stage:mode==='words'?'cs':'all',tags:[...(mode==='words'?S.WORD_FOCUSES:S.PSEUDO_FOCUSES)],required:[],code:null});
+  const defaults=mode=>({count:mode==='words'?24:20,stage:mode==='words'?'cs':'all',basic:false,tags:[...(mode==='words'?S.WORD_FOCUSES:S.PSEUDO_FOCUSES)],required:[],code:null});
   let state={mode:'words',modelSide:'left',foldStyle:'thirds',variety:'central',sessions:{words:defaults('words'),pseudo:defaults('pseudo')}},current=null,busy=false,job=0,controller=null,pendingSearch=null,toastTimer;
   let legacy=null;
   try{legacy=localStorage.getItem('plec-dictats-v1:'+L.id)||localStorage.getItem('plec-dictats-v1');}catch{}
@@ -21,8 +22,7 @@
   const modeTags=mode=>C.categories.filter(c=>c.mode===mode);
   // Keep the visual and keyboard order together; compact short focuses beside long ones.
   const focusOrder=['accent','essa','hac','gej','beve','erra','verbs','qugu','vocals','dieresi','digrafs','signes'];
-  const allEntries=()=>C.entries;
-  const lookup=id=>C.entries.find(e=>e.id===id);
+  const lookup=id=>C.entries.find(e=>e.id===id)||BANK.entries.find(e=>e.id===id);
   const chosen=()=>current?.entries||[];
   const recipe=()=>({mode:state.mode,count:session().count,stage:session().stage,tags:session().tags});
   const pool=()=>C.entries.filter(e=>e.mode===state.mode&&e.tags.some(t=>session().tags.includes(t))&&S.matchesStage(e,session().stage,edition.profile.stageRules));
@@ -39,6 +39,7 @@
         const src=data.sessions?.[mode];if(!src)continue;const dest=state.sessions[mode];
         if(S.COUNTS.includes(src.count))dest.count=src.count;
         if(S.STAGES.includes(src.stage))dest.stage=mode==='pseudo'?'all':src.stage;
+        dest.basic=mode==='words'&&(typeof src.basic==='boolean'?src.basic:data.edition===R.basic);
         if(Array.isArray(src.tags))dest.tags=K.migrateFocusTags(src.tags,modeTags(mode).map(c=>c.id),['flexio','custom']);
         if(saved){dest.required=Array.isArray(src.required)?[...new Set(src.required.filter(id=>lookup(id)?.mode===mode))].slice(0,5):[];dest.code=typeof src.code==='string'?src.code:null;}
       }
@@ -49,7 +50,7 @@
     const result=S.resolve(R.editions,code),next=R.editions.find(e=>e.slot===result.epoch);
     if(next.language!==L.id)throw new Error('El codi correspon a una altra llengua.');
     edition=next;C=next.catalog;state.mode=result.recipe.mode;
-    const s=session();s.count=result.recipe.count;s.stage=result.recipe.stage;s.tags=[...result.recipe.tags];s.code=result.code;if(!keepRequired)s.required=[];
+    const s=session();s.count=result.recipe.count;s.stage=result.recipe.stage;s.basic=next.selection?.vocabulary==='basic';s.tags=[...result.recipe.tags];s.code=result.code;if(!keepRequired)s.required=[];
     current=result;pendingSearch=null;persist();updateControls();renderPreview();updateURL();
   }
   const randomNonce=()=>{const values=new Uint32Array(1),ceiling=Math.floor(4294967296/S.VARIANTS)*S.VARIANTS;do{crypto.getRandomValues(values);}while(values[0]>=ceiling);return values[0]%S.VARIANTS;};
@@ -57,7 +58,8 @@
   async function generate({resume=false}={}){
     const continuing=resume?pendingSearch:null;
     // New exercises use current focus definitions; recovered codes keep their archive.
-    if(!continuing&&edition.slot!==R.current){edition=R.editions.find(e=>e.slot===R.current);C=edition.catalog;updateControls();}
+    const targetSlot=state.mode==='words'&&session().basic&&R.basic!==undefined?R.basic:R.current;
+    if(!continuing&&edition.slot!==targetSlot){edition=R.editions.find(e=>e.slot===targetSlot);C=edition.catalog;updateControls();}
     stopSearch();const id=job,previous=current;current=null;session().code=null;persist();updateURL();busy=true;controller=new AbortController();renderPreview();updateAvailability();
     $('search-status').textContent=session().required.length?'Buscant un codi compatible…':'';
     try{
@@ -79,14 +81,12 @@
     $('pronunciation-variety').value=state.variety;
     const s=session();document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===state.mode)));
     $('count-control').value=s.count;$('stage-field').hidden=state.mode==='pseudo';$('stage-control').value=s.stage;
+    $('basic-vocabulary-field').hidden=state.mode==='pseudo'||R.basic===undefined;$('basic-vocabulary').checked=!!s.basic;
+    $('basic-vocabulary-count').textContent=(R.basicWordCount||0)+' mots';
     $('fold-style-control').value=state.foldStyle;document.querySelectorAll('[data-side]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.side===state.modelSide)));
     const focuses=modeTags(state.mode);if(state.mode==='words')focuses.sort((a,b)=>focusOrder.indexOf(a.id)-focusOrder.indexOf(b.id));
     $('tag-options').innerHTML=focuses.map(c=>`<label class="tag" title="${escape(c.title)}"><input type="checkbox" value="${c.id}" ${s.tags.includes(c.id)?'checked':''}><span>${window.PlecIcons('check')}${escape(c.label)}</span></label>`).join('');
-    $('pseudo-note').hidden=state.mode!=='pseudo';$('word-total').textContent=C.entries.filter(e=>e.mode==='words').length;$('pseudo-total').textContent=C.entries.filter(e=>e.mode==='pseudo').length;$('seed-language').textContent=L.id.toUpperCase();
-    const layout=K.foldLayout(state.foldStyle,state.modelSide);
-    $('fold-guide-title').textContent=`${layout.name} · model a ${state.modelSide==='left'?'l’esquerra':'la dreta'}`;
-    $('fold-map').innerHTML=layout.panels.map(p=>`<span class="fold-panel ${p.kind}" style="flex:${p.width}"><b>${{model:'Model',writing:'Escric',blank:'Buit'}[p.kind]}</b><small>${p.width} mm</small></span>`).join('');
-    $('fold-map').setAttribute('aria-label','Full obert: '+layout.hint);$('fold-sketch').innerHTML=foldSketch(layout);$('fold-step-list').innerHTML=layout.steps.map(step=>`<li>${escape(step)}</li>`).join('');
+    $('pseudo-note').hidden=state.mode!=='pseudo';$('word-total').textContent=BANK.entries.filter(e=>e.mode==='words').length;$('pseudo-total').textContent=BANK.entries.filter(e=>e.mode==='pseudo').length;$('seed-language').textContent=L.id.toUpperCase();
     renderRequired();updateAvailability();
   }
   function updateAvailability(){const p=pool();$('pool-count').textContent=p.length;$('pool-status').textContent=!session().tags.length?' · Tria almenys un focus.':p.length<session().count?' · Amplia els filtres o redueix la llargada.':'';$('cancel-search').hidden=!busy;$('resume-search').hidden=busy||!pendingSearch;$('new-dictation').disabled=busy;}
@@ -97,7 +97,7 @@
   function addRequired(){
     const texts=[...new Set($('required-word').value.split(',').map(t=>t.trim().normalize('NFC').toLocaleLowerCase(L.locale)).filter(Boolean))];
     if(!texts.length)return;
-    const entries=texts.map(text=>C.entries.find(e=>e.mode===state.mode&&e.text===text));
+    const entries=texts.map(text=>BANK.entries.find(e=>e.mode===state.mode&&e.text===text));
     if(entries.some(e=>!e))return say('Tria mots del catàleg, amb la grafia i els accents corresponents.');
     const available=new Set(pool().map(e=>e.id));
     if(entries.some(e=>!available.has(e.id)))return say('Un dels mots queda fora dels filtres actuals. Ajusta els focus o el nivell.');
@@ -107,22 +107,12 @@
     if(required.length===session().required.length){suggest();return;}
     session().required=required;persist();renderRequired();generate();
   }
-  function foldSketch(layout) {
-    const mirror = layout.side === 'right', mx = x => mirror ? 360 - x : x;
-    const line = (x1,y1,x2,y2,color='#65736a') => `<line x1="${mx(x1)}" y1="${y1}" x2="${mx(x2)}" y2="${y2}" stroke="${color}" stroke-width="1.5"/>`;
-    const label = (x,y,text,color='#234d43') => `<text x="${mx(x)}" y="${y}" text-anchor="${mirror?'end':'start'}" fill="${color}">${text}</text>`;
-    const headings = '<text x="12" y="17" class="fold-phase">Durant el dictat</text><text x="12" y="118" class="fold-phase">Per corregir</text>';
-    const drawing = layout.foldStyle === 'quarter'
-      ? line(20,60,340,60)+line(20,60,177,49)+line(26,58,177,49)+label(30,39,'model amagat')+label(193,81,'escriptura')+line(20,167,340,167)+line(20,167,174,139)+line(22,139,174,139)+label(29,132,'model visible')+label(193,188,'escriptura')
-      : line(90,51,270,51)+line(90,57,268,57)+line(92,63,270,63)+label(100,41,'escriptura')+label(95,83,'buit i model al darrere')+line(20,161,340,161)+line(180,168,340,168)+label(28,150,'model visible')+label(195,150,'escriptura');
-    return `<svg viewBox="0 0 360 202" role="img" aria-label="Vista lateral orientativa del full durant el dictat i durant la correcció">${headings}${drawing}</svg>`;
-  }
   const measureCanvas = document.createElement('canvas');
   const measureContext = measureCanvas.getContext('2d');
   const MM = 25.4 / 72;
   function fitSize(shape) {
     if (!shape.maxWidth || !measureContext) return shape.size;
-    measureContext.font = `${shape.weight ? 'bold ' : ''}${shape.size * MM}px Arial`;
+    measureContext.font = `${shape.weight ? 'bold ' : ''}${shape.size * MM}px ${shape.font==='brand'?'Times New Roman':'Arial'}`;
     return Math.min(shape.size, shape.size * shape.maxWidth / Math.max(1, measureContext.measureText(shape.value).width));
   }
   // Les fonts estàndard del PDF admeten tots els caràcters catalans.
@@ -133,11 +123,11 @@
       if (s.type === 'rect') return `<rect x="${s.x}" y="${s.y}" width="${s.w}" height="${s.h}" fill="${s.color}"/>`;
       if (s.type === 'polyline') return `<path d="M ${s.points.map(p=>p.join(' ')).join(' L ')}${s.fill?' Z':''}" fill="${s.fill||'none'}" stroke="${s.color}" stroke-width="${s.width}" stroke-linecap="round" stroke-linejoin="round" ${s.dash?'stroke-dasharray=".8 .7"':''}/>`;
       const safeShape = { ...s, value: printable(s.value) };
-      return `<text x="${s.x}" y="${s.y}" font-family="Arial,Helvetica,sans-serif" font-size="${fitSize(safeShape) * MM}" font-weight="${s.weight ? 700 : 400}" fill="${s.color}" text-anchor="${s.align === 'right' ? 'end' : s.align === 'center' ? 'middle' : 'start'}">${escape(safeShape.value)}</text>`;
+      return `<text x="${s.x}" y="${s.y}" font-family="${s.font==='brand'?'Times New Roman,Times,serif':'Arial,Helvetica,sans-serif'}" font-size="${fitSize(safeShape) * MM}" font-weight="${s.weight ? 700 : 400}" fill="${s.color}" text-anchor="${s.align === 'right' ? 'end' : s.align === 'center' ? 'middle' : 'start'}">${escape(safeShape.value)}</text>`;
     }).join('')}</svg>`;
   }
 
-  function sheetOptions(){return{entries:chosen(),title:state.mode==='words'?'Dictat de paraules':'Dictat de pseudoparaules',mode:state.mode,modelSide:state.modelSide,foldStyle:state.foldStyle,seedCode:current?.code,seedLanguage:L.id,variety:state.variety,focusLabels:session().tags.map(id=>C.categories.find(c=>c.id===id)?.label||id)};}
+  function sheetOptions(){return{entries:chosen(),title:state.mode==='words'?'Dictat de paraules':'Dictat de pseudoparaules',mode:state.mode,modelSide:state.modelSide,foldStyle:state.foldStyle,seedCode:current?.code,seedLanguage:L.id,variety:state.variety,focusLabels:[...(session().basic?['Vocabulari bàsic']:[]),...session().tags.map(id=>C.categories.find(c=>c.id===id)?.label||id)]};}
   const fitPaper=()=>window.PlecPreview.fit();
   function renderPreview(){
     const entries=chosen(),layout=K.foldLayout(state.foldStyle,state.modelSide),ready=!!current&&!busy;
@@ -149,7 +139,7 @@
     $('sheet-preview').setAttribute('aria-label',`Vista prèvia: ${entries.length} elements. Model visible.`);fitPaper();
   }
   function openCatalog(options={}){
-    window.PlecCatalogView.open({entries:C.entries,categories:C.categories,mode:state.mode,revision:C.revision,locale:L.locale,matchesStage:(entry,stage)=>S.matchesStage(entry,stage,edition.profile.stageRules)},options);
+    window.PlecCatalogView.open({entries:BANK.entries,categories:BANK.categories,basic:session().basic,mode:state.mode,revision:BANK.revision,locale:L.locale,matchesStage:(entry,stage)=>S.matchesStage(entry,stage,R.editions.find(e=>e.slot===R.current).profile.stageRules)},options);
   }
   function downloadBlob(blob, filename) {
     const url = URL.createObjectURL(blob), a = document.createElement('a');
@@ -172,6 +162,7 @@
   $('mode-control').addEventListener('click',event=>{const b=event.target.closest('[data-mode]');if(!b||b.dataset.mode===state.mode)return;state.mode=b.dataset.mode;edition=R.editions.find(e=>e.slot===R.current);C=edition.catalog;updateControls();generate();});
   $('count-control').addEventListener('change',event=>{session().count=+event.target.value;persist();generate();});
   $('stage-control').addEventListener('change',event=>{session().stage=event.target.value;persist();generate();});
+  $('basic-vocabulary').addEventListener('change',event=>{session().basic=event.target.checked;persist();generate();});
   $('tag-options').addEventListener('change',()=>{session().tags=[...$('tag-options').querySelectorAll('input:checked')].map(e=>e.value);persist();generate();});
   $('all-tags').addEventListener('click',()=>{session().tags=modeTags(state.mode).map(c=>c.id);updateControls();generate();});
   $('fold-style-control').addEventListener('change',event=>{state.foldStyle=event.target.value;persist();updateControls();renderPreview();});
@@ -253,6 +244,7 @@
     }
   });
   const releases = [
+    ['1.25', '2026-10-26', ['Vocabulari bàsic: selecció editorial de 350 mots, combinable amb nivell i focus, consultable i descarregable al catàleg. Codis antics conservats. Marca plec al full, capçalera i gràfic de l’ajuda alineats, ajuda de plegat simplificada i scroll intern compartit als diàlegs.']],
     ['1.24', '2026-10-26', ['Vista prèvia tàctil: arrossega el full amb un dit i fes zoom amb dos. Instruccions de plec amb esquemes vectorials al peu de la columna del QR, adaptats a terços o quarts i al costat del model. Ajudes dels avisos més clares, separades de la bandera, i passos de privacitat segons el navegador. Número de paraula destacat dins el botó del dictat.']],
     ['1.23', '2026-10-26', ['Analítica agregada amb Umami i controls de privacitat. Avís d’àudio amb un clic, confirmació de recepció i bloqueig de duplicats per mot, varietat i enregistrament durant la pestanya. Els avisos queden inactius quan el tracking no està disponible.']],
     ['1.22.1', '2026-10-25', ['Marca compartida d’ortogra.fi al peu de Plec, amb símbol tipogràfic i enllaç actiu al nou portal de recursos educatius.']],
@@ -292,11 +284,12 @@
   document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) window.PlecMotion.close(dialog); } }));
 
   for(const [id,mode,name] of [['export-words-text','words','paraules'],['export-pseudo-text','pseudo','pseudoparaules']])$(id).addEventListener('click',()=>{
-    const text=C.entries.filter(e=>e.mode===mode).map(e=>e.text).sort(new Intl.Collator(L.locale,{sensitivity:'variant'}).compare).join('\n')+'\n';
+    const text=BANK.entries.filter(e=>e.mode===mode).map(e=>e.text).sort(new Intl.Collator(L.locale,{sensitivity:'variant'}).compare).join('\n')+'\n';
     downloadBlob(new Blob([text],{type:'text/plain;charset=utf-8'}),`plec-${L.id}-${name}.txt`);
   });
+  $('export-basic-text').addEventListener('click',()=>{const text=BANK.entries.filter(e=>e.mode==='words'&&e.basicVocabulary).map(e=>e.text).sort(new Intl.Collator(L.locale,{sensitivity:'variant'}).compare).join('\n')+'\n';downloadBlob(new Blob([text],{type:'text/plain;charset=utf-8'}),'plec-ca-vocabulari-basic.txt');});
   $('export-review').addEventListener('click',()=>{
-    const rows=[...C.entries].sort((a,b)=>a.text.localeCompare(b.text,L.locale));
+    const rows=[...BANK.entries].sort((a,b)=>a.text.localeCompare(b.text,L.locale));
     const text=['paraula\ttipus\tvocabulari\tortografia\tfocus\tid',...rows.map(e=>[e.text,e.mode,e.vocabulary||'',e.orthography||'',e.tags.join(','),e.id].join('\t'))].join('\n')+'\n';
     downloadBlob(new Blob([text],{type:'text/tab-separated-values;charset=utf-8'}),`plec-${L.id}-revisio.tsv`);
   });

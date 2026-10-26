@@ -1,5 +1,5 @@
 {
-  "current": 1,
+  "current": 2,
   "editions": [
     {
       "slot": 0,
@@ -12,6 +12,20 @@
       "file": "seed-2.json",
       "sha256": "be2e9bf2c671404fdcf5b07ba8757112eb7031bdfc80c737291ebd50873fcd06",
       "revision": "ca-2026-02-draft.996c7223ff0afd2a"
+    },
+    {
+      "slot": 2,
+      "file": "seed-3.json",
+      "sha256": "d6efc556a72dc70aa45ff37958bca5cc84e90d069eb1c952e35decd5f5a7d30d",
+      "revision": "ca-2026-03-draft.cd0369ff1405f15e"
+    },
+    {
+      "slot": 3,
+      "file": "seed-4-basic.json",
+      "sha256": "499d0282b6dde507b3e6b7a58cb6e1134159bf52556ae75447642eeec69933c0",
+      "revision": "ca-2026-03-basic.52eec840ae93775b"
     }
-  ]
+  ],
+  "basic": 3,
+  "basicWordCount": 350
 }

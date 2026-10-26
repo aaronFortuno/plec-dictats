@@ -5,28 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Plec · Fes un dictat</title>
 <meta name="theme-color" content="#f8f6ef">
-<script src="../../theme.js?v=1.24.0"></script>
+<script src="../../theme.js?v=1.25.0"></script>
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
-<link rel="stylesheet" href="../../styles.css?v=1.24.0">
-<link rel="stylesheet" href="../../dictation.css?v=1.24.0">
-<link rel="stylesheet" href="../../analytics.css?v=1.24.0">
-<link rel="stylesheet" href="../../theme.css?v=1.24.0">
-<script defer src="../../locales/manifest.js?v=1.24.0"></script>
-<script defer src="../../locales/ca/config.js?v=1.24.0"></script>
-<script defer src="../../site-links.js?v=1.24.0"></script>
-<script defer src="../../analytics.js?v=1.24.0"></script>
-<script defer src="../../language.js?v=1.24.0"></script>
-<script defer src="../../catalogs/ca/editions/index.js?v=1.24.0"></script>
-<script defer src="../../seeds.js?v=1.24.0"></script>
-<script defer src="../../seeds-v2.js?v=1.24.0"></script>
-<script defer src="../../dictation-session.js?v=1.24.0"></script>
-<script defer src="../../icons.js?v=1.24.0"></script>
-<script defer src="../../motion.js?v=1.24.0"></script>
-<script defer src="../../privacy-help.js?v=1.24.0"></script>
-<script defer src="../../analytics-ui.js?v=1.24.0"></script>
-<script defer src="../../audio-manifest.js?v=1.24.0"></script>
-<script defer src="../../audio-varieties.js?v=1.24.0"></script>
-<script defer src="../../dictation.js?v=1.24.0"></script>
+<link rel="stylesheet" href="../../styles.css?v=1.25.0">
+<link rel="stylesheet" href="../../dictation.css?v=1.25.0">
+<link rel="stylesheet" href="../../analytics.css?v=1.25.0">
+<link rel="stylesheet" href="../../theme.css?v=1.25.0">
+<script defer src="../../locales/manifest.js?v=1.25.0"></script>
+<script defer src="../../locales/ca/config.js?v=1.25.0"></script>
+<script defer src="../../site-links.js?v=1.25.0"></script>
+<script defer src="../../analytics.js?v=1.25.0"></script>
+<script defer src="../../language.js?v=1.25.0"></script>
+<script defer src="../../catalogs/ca/editions/index.js?v=1.25.0"></script>
+<script defer src="../../seeds.js?v=1.25.0"></script>
+<script defer src="../../seeds-v2.js?v=1.25.0"></script>
+<script defer src="../../dictation-session.js?v=1.25.0"></script>
+<script defer src="../../icons.js?v=1.25.0"></script>
+<script defer src="../../motion.js?v=1.25.0"></script>
+<script defer src="../../privacy-help.js?v=1.25.0"></script>
+<script defer src="../../analytics-ui.js?v=1.25.0"></script>
+<script defer src="../../audio-manifest.js?v=1.25.0"></script>
+<script defer src="../../audio-varieties.js?v=1.25.0"></script>
+<script defer src="../../dictation.js?v=1.25.0"></script>
 </head>
 <body>
 <main id="focus-root" class="d-focus">
@@ -106,8 +106,9 @@
 </div>
 </section>
 </main>
-<dialog id="analytics-dialog" aria-labelledby="analytics-title">
+<dialog class="scroll-dialog" id="analytics-dialog" aria-labelledby="analytics-title">
   <div class="dialog-head"><h2 id="analytics-title">Privacitat i avisos</h2><button type="button" class="icon-button" data-analytics-close aria-label="Tanca la privacitat"><span data-icon="x"></span></button></div>
+  <div class="dialog-scroll" tabindex="0" role="region" aria-label="Privacitat i avisos">
   <p>Fem servir Umami per conèixer l’ús de Plec i rebre els problemes que ens notifiqueu. El tracker no utilitza cookies. No enviem noms, respostes, codis de dictat ni el text de les cerques.</p>
   <p>Quan notifiques un àudio, enviem el mot públic del catàleg, la varietat i la versió de l’enregistrament perquè el puguem revisar.</p>
   <p id="analytics-state" role="status" aria-live="polite"></p>
@@ -121,6 +122,7 @@
   </details>
   <p class="field-hint">El permís temporal dura mentre aquesta pestanya estigui oberta. Si el navegador o un bloquejador impedeix el tracking, cal permetre Umami en aquest web per poder enviar avisos. Plec funciona igualment amb l’analítica desactivada.</p>
   <p class="field-hint">Les estadístiques i els avisos es conserven fins a sis mesos. <a href="https://umami.is/privacy" target="_blank" rel="noopener noreferrer">Privacitat d’Umami</a>.</p>
+  </div>
 </dialog>
 
 </body>

@@ -119,6 +119,10 @@ for (const foldStyle of ['thirds', 'quarter']) for (const modelSide of ['left', 
       assert(points.every(([x,y])=>x>blankStart&&x<blankEnd&&y>=180&&y<=287),'La guia de plecs queda dins la banda protegida i al peu');
       continue;
     }
+    if(s.type==='polyline'){
+      assert(s.points.every(([x,y])=>x>=0&&x<=210&&y>=0&&y<=297&&(x<=blankStart||x>=blankEnd)),'La marca queda dins de la columna del model');
+      continue;
+    }
     if(s.type==='line'&&s.dash)continue;
     assert(s.x<=blankStart||s.x>=blankEnd,'Cap contingut imprès als trams buits');
     if(s.type==='line')assert((s.x<=blankStart&&s.x2<=blankStart)||(s.x>=blankEnd&&s.x2>=blankEnd),'Les ratlles no creuen els trams buits');

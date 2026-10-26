@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "language": "ca",
-  "edition": "ca-2026-02-draft",
+  "edition": "ca-2026-03-draft",
   "status": "draft",
   "reviewedByTeacher": false,
-  "version": 6,
+  "version": 7,
   "categories": [
     {
       "id": "accent",
@@ -131,7 +131,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1x6xp9v",
@@ -142,7 +143,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1ofiszc",
@@ -152,8 +154,9 @@
         "essa",
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1gbzn5f",
@@ -163,7 +166,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-hozgas",
@@ -173,8 +177,9 @@
         "essa",
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-18uxc6a",
@@ -185,7 +190,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-8d3w0m",
@@ -195,7 +201,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-zxcq2f",
@@ -205,7 +212,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-o4hmwi",
@@ -216,7 +224,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-10qgfnb",
@@ -225,8 +234,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-kg4im8",
@@ -236,7 +246,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-u824sj",
@@ -247,7 +258,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-hbr2vk",
@@ -258,7 +270,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1vwho31",
@@ -268,7 +281,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-vu0hgw",
@@ -277,8 +291,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-t2bxfu",
@@ -289,7 +304,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-wxweip",
@@ -298,8 +314,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-16wh9xr",
@@ -310,7 +327,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1g2x4qq",
@@ -320,7 +338,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-pnj74f",
@@ -340,7 +359,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-7fpqsk",
@@ -350,7 +370,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1otep1n",
@@ -359,8 +380,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1jin1c5",
@@ -391,7 +413,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-91r733",
@@ -401,7 +424,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1yugrcr",
@@ -411,8 +435,9 @@
         "qugu",
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-3jlk25",
@@ -432,7 +457,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-x28m2e",
@@ -514,7 +540,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1uq1qgx",
@@ -525,7 +552,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-k2suh6",
@@ -534,8 +562,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-lmifli",
@@ -544,8 +573,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-k0jv1t",
@@ -555,7 +585,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1ppwbn8",
@@ -587,7 +618,8 @@
         "vocals"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1tb2d5s",
@@ -619,7 +651,8 @@
         "vocals"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1e2graq",
@@ -630,7 +663,8 @@
         "vocals"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-19ilz5c",
@@ -640,7 +674,8 @@
         "vocals"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-s0ugdh",
@@ -650,7 +685,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-f6sibu",
@@ -660,7 +696,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1dloi02",
@@ -672,7 +709,8 @@
         "vocals"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-zayfce",
@@ -682,7 +720,8 @@
         "vocals"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1e7yqr6",
@@ -692,7 +731,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1e65tz0",
@@ -702,8 +742,9 @@
         "erra",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-3sofk1",
@@ -715,7 +756,8 @@
         "vocals"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-c4wo0d",
@@ -725,7 +767,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-19cq0yy",
@@ -736,7 +779,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1kykx7j",
@@ -746,7 +790,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-cbdl1n",
@@ -766,7 +811,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-14cbk1w",
@@ -775,8 +821,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-yuf3oi",
@@ -785,8 +832,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-h6wtnm",
@@ -806,7 +854,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-yjobb4",
@@ -817,7 +866,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-kwgyh5",
@@ -827,7 +877,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-7nz3js",
@@ -837,7 +888,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-11dc67e",
@@ -847,8 +899,9 @@
         "essa",
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-cx71zq",
@@ -859,7 +912,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1s757s3",
@@ -892,7 +946,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-toduo9",
@@ -913,7 +968,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-ly9msx",
@@ -922,8 +978,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-n2i8ke",
@@ -933,7 +990,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-h91mb4",
@@ -954,7 +1012,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1pjemto",
@@ -974,7 +1033,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-j7j8eh",
@@ -984,7 +1044,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-nb9ooj",
@@ -994,7 +1055,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-ry0xzk",
@@ -1004,7 +1066,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1djz9v9",
@@ -1034,7 +1097,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-wq7mhc",
@@ -1045,7 +1109,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1dq4k7f",
@@ -1054,8 +1119,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-ykwk7c",
@@ -1065,7 +1131,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1ts0cur",
@@ -1079,7 +1146,8 @@
       "morphology": {
         "gender": "common",
         "number": "singular"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-u3k7xz",
@@ -1130,7 +1198,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-129m5qc",
@@ -1151,7 +1220,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-smaiaz",
@@ -1162,7 +1232,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-siuvxh",
@@ -1172,7 +1243,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-yw9b2u",
@@ -1182,7 +1254,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1af7z76",
@@ -1192,7 +1265,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-9zjowg",
@@ -1201,8 +1275,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1q3kf84",
@@ -1212,7 +1287,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-11wdbuu",
@@ -1222,7 +1298,8 @@
         "essa"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-7tbf43",
@@ -1233,7 +1310,8 @@
         "hac"
       ],
       "vocabulary": "basic",
-      "orthography": "high"
+      "orthography": "high",
+      "basicVocabulary": true
     },
     {
       "id": "p-1ka5lcd",
@@ -1253,7 +1331,8 @@
         "hac"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-ya9go5",
@@ -1263,7 +1342,8 @@
         "hac"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-fu2dmu",
@@ -1273,7 +1353,8 @@
         "hac"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-n3vuai",
@@ -1294,7 +1375,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1n2z442",
@@ -1304,7 +1386,8 @@
         "hac"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-14fjbz0",
@@ -1314,7 +1397,8 @@
         "hac"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-z5qvsj",
@@ -1324,7 +1408,8 @@
         "hac"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-17pyulj",
@@ -1334,7 +1419,8 @@
         "hac"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-5k399i",
@@ -1344,7 +1430,8 @@
         "hac"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-107zyxy",
@@ -1355,7 +1442,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1oq9gdq",
@@ -1531,7 +1619,8 @@
         "hac"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-73q2o7",
@@ -1541,7 +1630,8 @@
         "hac"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-t42qr0",
@@ -1594,7 +1684,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-gws6ky",
@@ -1604,7 +1695,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "high"
+      "orthography": "high",
+      "basicVocabulary": true
     },
     {
       "id": "p-1qn05t7",
@@ -1626,7 +1718,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "high"
+      "orthography": "high",
+      "basicVocabulary": true
     },
     {
       "id": "p-1581arw",
@@ -1636,7 +1729,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "high"
+      "orthography": "high",
+      "basicVocabulary": true
     },
     {
       "id": "p-1v3n3c0",
@@ -1646,7 +1740,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "high"
+      "orthography": "high",
+      "basicVocabulary": true
     },
     {
       "id": "p-1k5nrgj",
@@ -1656,7 +1751,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-onwism",
@@ -1666,7 +1762,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-106isxz",
@@ -1677,7 +1774,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1u0hius",
@@ -1687,7 +1785,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-5sp5fz",
@@ -1697,7 +1796,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1taihoj",
@@ -1708,7 +1808,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-179ibty",
@@ -1719,7 +1820,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-cno27o",
@@ -1729,7 +1831,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-xrn5dt",
@@ -1739,7 +1842,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-popzvu",
@@ -1749,7 +1853,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-q8eivh",
@@ -1759,7 +1864,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-dpxtt6",
@@ -1780,7 +1886,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-106wt6j",
@@ -1790,7 +1897,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1afljim",
@@ -1800,7 +1908,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1resf9d",
@@ -1810,7 +1919,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-truvd1",
@@ -1841,7 +1951,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-11gabh9",
@@ -1862,7 +1973,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-10bs8f4",
@@ -1872,7 +1984,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1pheqqt",
@@ -1882,7 +1995,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-h6ihcz",
@@ -1893,7 +2007,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-erdvno",
@@ -1902,8 +2017,9 @@
       "tags": [
         "gej"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-h5wy2m",
@@ -1924,7 +2040,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "high"
+      "orthography": "high",
+      "basicVocabulary": true
     },
     {
       "id": "p-1yerxq7",
@@ -1934,7 +2051,8 @@
         "gej"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-nykcvb",
@@ -1955,7 +2073,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "high"
+      "orthography": "high",
+      "basicVocabulary": true
     },
     {
       "id": "p-5wgld9",
@@ -1965,7 +2084,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-18l0n4f",
@@ -1975,7 +2095,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1omrh9i",
@@ -1985,7 +2106,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-eoo2zs",
@@ -1996,7 +2118,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-yditay",
@@ -2006,7 +2129,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1439b83",
@@ -2016,7 +2140,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-2ad75p",
@@ -2026,7 +2151,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1lylv5c",
@@ -2036,7 +2162,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1ev1w8m",
@@ -2045,8 +2172,9 @@
       "tags": [
         "beve"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-fzyqh6",
@@ -2066,7 +2194,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1s3js8n",
@@ -2096,7 +2225,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1fdtv5s",
@@ -2116,7 +2246,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-kzgb9",
@@ -2126,7 +2257,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "high"
+      "orthography": "high",
+      "basicVocabulary": true
     },
     {
       "id": "p-1le46wb",
@@ -2137,7 +2269,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1us5loh",
@@ -2147,7 +2280,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-m066h5",
@@ -2157,7 +2291,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-gt5s3h",
@@ -2167,7 +2302,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-n3favu",
@@ -2178,7 +2314,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1sav2x2",
@@ -2188,7 +2325,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1akfsbk",
@@ -2198,7 +2336,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1x3c6t0",
@@ -2207,8 +2346,9 @@
       "tags": [
         "beve"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1isw4fd",
@@ -2218,7 +2358,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-xlsllz",
@@ -2229,7 +2370,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-gve6hc",
@@ -2239,7 +2381,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-uh5ts8",
@@ -2270,7 +2413,8 @@
         "accent"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-hx2or8",
@@ -2290,7 +2434,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1m7910b",
@@ -2312,7 +2457,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-q8xyk3",
@@ -2322,7 +2468,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-hotxy6",
@@ -2332,7 +2479,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-145zfw3",
@@ -2342,7 +2490,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-72ya9g",
@@ -2353,7 +2502,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1njzmzp",
@@ -2364,7 +2514,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-q4nbph",
@@ -2384,8 +2535,9 @@
       "tags": [
         "erra"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-i2ay5f",
@@ -2416,7 +2568,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-i5cjls",
@@ -2468,7 +2621,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-tot7dq",
@@ -2478,7 +2632,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1wufcpk",
@@ -2488,7 +2643,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1edv3em",
@@ -2498,7 +2654,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-10ewn9e",
@@ -2508,7 +2665,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1org7iz",
@@ -2528,7 +2686,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1cjid71",
@@ -2538,7 +2697,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-9ffmwy",
@@ -2548,7 +2708,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1we5akp",
@@ -2558,7 +2719,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-18i9unx",
@@ -2568,7 +2730,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-b62418",
@@ -2578,7 +2741,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1ul79u6",
@@ -2588,7 +2752,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-17t4rom",
@@ -2598,7 +2763,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-gb5n91",
@@ -2608,7 +2774,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-ygbvwf",
@@ -2618,7 +2785,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-15yl1r4",
@@ -2629,7 +2797,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1f1pbpp",
@@ -2639,7 +2808,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1a1jkc1",
@@ -2659,7 +2829,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1ekf00u",
@@ -2670,7 +2841,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1bs1tsw",
@@ -2680,7 +2852,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1o9ij97",
@@ -2701,7 +2874,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1orlck0",
@@ -2711,7 +2885,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1nflxci",
@@ -2730,8 +2905,9 @@
       "tags": [
         "qugu"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-dl376u",
@@ -2740,8 +2916,9 @@
       "tags": [
         "qugu"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1rsxbaw",
@@ -2751,7 +2928,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1sxguoe",
@@ -2761,7 +2939,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1trfnrb",
@@ -2771,7 +2950,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-19t8s14",
@@ -2781,7 +2961,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-bwqflq",
@@ -2792,7 +2973,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-m80hsx",
@@ -2811,8 +2993,9 @@
       "tags": [
         "qugu"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1wxb0g",
@@ -2822,8 +3005,9 @@
         "qugu",
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-10524yx",
@@ -2834,7 +3018,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-lc6vpt",
@@ -2844,7 +3029,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-4el192",
@@ -2855,7 +3041,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-33gids",
@@ -2865,7 +3052,8 @@
         "qugu"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-71q5j7",
@@ -2933,7 +3121,8 @@
         "vocals"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1lkl6y1",
@@ -2942,8 +3131,9 @@
       "tags": [
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-vuze9r",
@@ -2953,8 +3143,9 @@
         "vocals",
         "digrafs"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1hcktyc",
@@ -2964,7 +3155,8 @@
         "vocals"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-ysejt6",
@@ -3121,7 +3313,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-8e645j",
@@ -3131,7 +3324,8 @@
         "vocals"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-r3q6sd",
@@ -3215,7 +3409,8 @@
         "vocals"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1aglmb3",
@@ -3256,7 +3451,8 @@
         "vocals"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1w3xwjr",
@@ -3276,7 +3472,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1umlab6",
@@ -3286,7 +3483,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-9mziwu",
@@ -3297,7 +3495,8 @@
         "beve"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1yrdcjp",
@@ -3307,7 +3506,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-5esefq",
@@ -3317,7 +3517,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-14gygmw",
@@ -3327,7 +3528,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-nq682h",
@@ -3337,7 +3539,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-opau8a",
@@ -3347,7 +3550,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-15svqvd",
@@ -3357,7 +3561,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-j0para",
@@ -3368,7 +3573,8 @@
         "erra"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-17mcr8a",
@@ -3378,7 +3584,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-i339lg",
@@ -3388,7 +3595,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-18k8jdz",
@@ -3398,7 +3606,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-t55f20",
@@ -3407,8 +3616,9 @@
       "tags": [
         "digrafs"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1msco9i",
@@ -3438,7 +3648,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-4qgz7y",
@@ -3448,7 +3659,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1sj8hxg",
@@ -3478,7 +3690,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1r9d3ze",
@@ -3488,7 +3701,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "medium"
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1hyxyu7",
@@ -3518,7 +3732,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-zwsym1",
@@ -3528,7 +3743,8 @@
         "digrafs"
       ],
       "vocabulary": "basic",
-      "orthography": "low"
+      "orthography": "low",
+      "basicVocabulary": true
     },
     {
       "id": "p-1ynzth8",
@@ -3548,7 +3764,8 @@
         "dieresi"
       ],
       "vocabulary": "basic",
-      "orthography": "high"
+      "orthography": "high",
+      "basicVocabulary": true
     },
     {
       "id": "p-s3rwcz",
@@ -3558,7 +3775,8 @@
         "dieresi"
       ],
       "vocabulary": "basic",
-      "orthography": "high"
+      "orthography": "high",
+      "basicVocabulary": true
     },
     {
       "id": "p-pepep1",
@@ -3702,7 +3920,8 @@
         "signes"
       ],
       "orthography": "high",
-      "vocabulary": "basic"
+      "vocabulary": "basic",
+      "basicVocabulary": true
     },
     {
       "id": "p-1yaet4e",
@@ -3724,7 +3943,8 @@
         "accent"
       ],
       "orthography": "high",
-      "vocabulary": "basic"
+      "vocabulary": "basic",
+      "basicVocabulary": true
     },
     {
       "id": "p-1gbzqh6",
@@ -6592,8 +6812,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1fass0u",
@@ -6642,8 +6863,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-mdzhf0",
@@ -6773,8 +6995,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-195hlff",
@@ -6784,8 +7007,9 @@
         "hac",
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-mfdyhc",
@@ -6805,8 +7029,9 @@
         "digrafs",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-vw1emz",
@@ -6815,8 +7040,9 @@
       "tags": [
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-abqahh",
@@ -6835,8 +7061,9 @@
       "tags": [
         "erra"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1s02i4h",
@@ -6846,8 +7073,9 @@
         "gej",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-5qyivv",
@@ -6867,8 +7095,9 @@
       "tags": [
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1e21541",
@@ -6877,12 +7106,13 @@
       "tags": [
         "qugu"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "singular"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-1oot40r",
@@ -6892,8 +7122,9 @@
         "essa",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-qfh81v",
@@ -6913,8 +7144,9 @@
         "digrafs",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-xn5u8e",
@@ -6926,8 +7158,9 @@
         "erra",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-8wgpy9",
@@ -6947,8 +7180,9 @@
       "tags": [
         "erra"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-ysm0h2",
@@ -6969,8 +7203,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1hen4ri",
@@ -7001,8 +7236,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-jhipfx",
@@ -7011,8 +7247,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1fxl2cs",
@@ -7022,8 +7259,9 @@
         "beve",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1il23ts",
@@ -7032,8 +7270,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1kypnvt",
@@ -7042,8 +7281,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-11nedar",
@@ -7073,8 +7313,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1f4xx6y",
@@ -7135,8 +7376,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-rw92jx",
@@ -7145,8 +7387,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-dps5vg",
@@ -7155,8 +7398,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-s9dgw9",
@@ -7196,8 +7440,9 @@
         "verbs",
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-q6yv64",
@@ -7247,8 +7492,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1poudl4",
@@ -7269,8 +7515,9 @@
         "digrafs",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-17gdlcz",
@@ -7290,8 +7537,9 @@
         "erra",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-9fnter",
@@ -7323,8 +7571,9 @@
         "erra",
         "qugu"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-7l0gof",
@@ -7333,8 +7582,9 @@
       "tags": [
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1nd65an",
@@ -7355,8 +7605,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1771izc",
@@ -7365,8 +7616,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1yq7q6",
@@ -7408,8 +7660,9 @@
         "erra",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1ri1b1u",
@@ -7480,8 +7733,9 @@
         "qugu",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1at00zz",
@@ -7574,8 +7828,9 @@
         "erra",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-r3qehv",
@@ -7635,8 +7890,9 @@
         "gej",
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1htc819",
@@ -7656,8 +7912,9 @@
         "essa",
         "erra"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-hzl6cl",
@@ -7728,8 +7985,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-rm2dkc",
@@ -7758,8 +8016,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-svs75p",
@@ -7770,8 +8029,9 @@
         "digrafs",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-5fvap3",
@@ -7832,8 +8092,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1kxmqzc",
@@ -7842,8 +8103,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1g0x1m7",
@@ -7852,8 +8114,9 @@
       "tags": [
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1brcp49",
@@ -7872,8 +8135,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1h35ndr",
@@ -7943,8 +8207,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1t4e5gb",
@@ -7953,8 +8218,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-vowkd6",
@@ -7995,8 +8261,9 @@
         "erra",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-k8mls2",
@@ -8129,8 +8396,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1wujvyj",
@@ -8260,8 +8528,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-s0poy3",
@@ -8270,8 +8539,9 @@
       "tags": [
         "beve"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-100s3ac",
@@ -8280,8 +8550,9 @@
       "tags": [
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1hf73zj",
@@ -8301,8 +8572,9 @@
         "essa",
         "beve"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1xvjos5",
@@ -8372,8 +8644,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1olkoqq",
@@ -8392,8 +8665,9 @@
       "tags": [
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1l8sj70",
@@ -8505,8 +8779,9 @@
         "essa",
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1xx3xt8",
@@ -8516,8 +8791,9 @@
         "essa",
         "beve"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1qxy4za",
@@ -8537,8 +8813,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-16dftj0",
@@ -8558,8 +8835,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-16mzxo7",
@@ -8599,8 +8877,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1acjkpr",
@@ -8664,8 +8943,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1wd4ykc",
@@ -8746,8 +9026,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1w80eb8",
@@ -8766,8 +9047,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-gvhyng",
@@ -8796,8 +9078,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1mzs4e3",
@@ -8847,8 +9130,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1752d38",
@@ -8857,8 +9141,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1jq3iqp",
@@ -8887,8 +9172,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-b6pp1j",
@@ -8938,8 +9224,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-uxn5ff",
@@ -8959,8 +9246,9 @@
         "digrafs",
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1sqqcd4",
@@ -9010,8 +9298,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-9lb6sz",
@@ -9020,8 +9309,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-aamk44",
@@ -9041,8 +9331,9 @@
         "essa",
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-wp4yyb",
@@ -9051,8 +9342,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-10eufew",
@@ -9061,8 +9353,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-wi26m3",
@@ -9092,7 +9385,7 @@
         "essa",
         "accent"
       ],
-      "vocabulary": "common",
+      "vocabulary": "expanded",
       "orthography": "medium"
     },
     {
@@ -9184,8 +9477,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-18iatak",
@@ -9215,8 +9509,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-byeien",
@@ -9246,8 +9541,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1lhlv8j",
@@ -9277,8 +9573,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-nvj0ez",
@@ -9383,8 +9680,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-gupwqn",
@@ -9434,8 +9732,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1onlt18",
@@ -9454,8 +9753,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1dbi1ef",
@@ -9515,8 +9815,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-topmc4",
@@ -9546,8 +9847,9 @@
         "essa",
         "digrafs"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1no6nrg",
@@ -9568,8 +9870,9 @@
         "essa",
         "accent"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1d0meum",
@@ -9578,8 +9881,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-9m4s04",
@@ -9639,8 +9943,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1lhtz2p",
@@ -9669,8 +9974,9 @@
       "tags": [
         "qugu"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-bs2yj4",
@@ -9783,8 +10089,9 @@
         "digrafs",
         "vocals"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-125nzjr",
@@ -9793,8 +10100,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1az5h5j",
@@ -9804,12 +10112,13 @@
         "essa",
         "erra"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "singular"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-1lz1y1e",
@@ -9859,8 +10168,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-3xdp6r",
@@ -9910,8 +10220,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-covqkb",
@@ -9920,8 +10231,9 @@
       "tags": [
         "essa"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-rwmzgn",
@@ -9930,8 +10242,9 @@
       "tags": [
         "digrafs"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1epd9rj",
@@ -19017,8 +19330,9 @@
       "tags": [
         "erra"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-9t3jfe",
@@ -19168,8 +19482,9 @@
       "tags": [
         "erra"
       ],
-      "vocabulary": "common",
-      "orthography": "medium"
+      "vocabulary": "basic",
+      "orthography": "medium",
+      "basicVocabulary": true
     },
     {
       "id": "p-1esb3hs",
@@ -20251,7 +20566,7 @@
       "tags": [
         "erra"
       ],
-      "vocabulary": "common",
+      "vocabulary": "expanded",
       "orthography": "medium"
     },
     {
@@ -23527,7 +23842,7 @@
         "qugu",
         "vocals"
       ],
-      "vocabulary": "common",
+      "vocabulary": "expanded",
       "orthography": "medium"
     },
     {
@@ -34325,13 +34640,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "singular",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-nd6vw8",
@@ -34342,13 +34658,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-15gbpyl",
@@ -34359,13 +34676,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "masculine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-snr07k",
@@ -34376,13 +34694,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "singular",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-nq948t",
@@ -34394,13 +34713,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-otffp2",
@@ -34412,13 +34732,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "masculine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-1uz07ad",
@@ -34429,13 +34750,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "singular",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-15ybcri",
@@ -34446,13 +34768,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-1ywdi73",
@@ -34463,13 +34786,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "masculine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-3bxgtf",
@@ -34530,13 +34854,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "singular",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-xcgdbr",
@@ -34547,13 +34872,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-5q946c",
@@ -34564,13 +34890,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "masculine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-1vzcn4d",
@@ -34687,13 +35014,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "singular",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-1tm2pza",
@@ -34705,13 +35033,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-osb487",
@@ -34723,13 +35052,14 @@
         "vocals",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "masculine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-acg4ar",
@@ -34741,13 +35071,14 @@
         "qugu",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "singular",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-y0yjhw",
@@ -34759,13 +35090,14 @@
         "qugu",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-6glol5",
@@ -34777,13 +35109,14 @@
         "qugu",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "masculine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-6vthxg",
@@ -34794,13 +35127,14 @@
         "digrafs",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "singular",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-13808lt",
@@ -34812,13 +35146,14 @@
         "digrafs",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-bu19m2",
@@ -34830,13 +35165,14 @@
         "digrafs",
         "verbs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "masculine",
         "number": "plural",
         "form": "participle"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-sbk3fn",
@@ -35772,12 +36108,13 @@
         "essa",
         "qugu"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "plural"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-1b9qakn",
@@ -35787,12 +36124,13 @@
         "essa",
         "qugu"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "masculine",
         "number": "plural"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-38nv5u",
@@ -35802,12 +36140,13 @@
         "vocals",
         "digrafs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "singular"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-pgtwgv",
@@ -35818,12 +36157,13 @@
         "vocals",
         "digrafs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "plural"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-1x9z2ng",
@@ -35834,12 +36174,13 @@
         "vocals",
         "digrafs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "masculine",
         "number": "plural"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-2gkjye",
@@ -35849,12 +36190,13 @@
         "beve",
         "qugu"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "singular"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-1idfof4",
@@ -35865,12 +36207,13 @@
         "beve",
         "qugu"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "plural"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-6cezo0",
@@ -35881,12 +36224,13 @@
         "beve",
         "qugu"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "masculine",
         "number": "plural"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-t59y5s",
@@ -35896,12 +36240,13 @@
         "beve",
         "vocals"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "singular"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-1f84dy5",
@@ -35912,12 +36257,13 @@
         "beve",
         "vocals"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "plural"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-tozp1t",
@@ -35928,12 +36274,13 @@
         "beve",
         "vocals"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "masculine",
         "number": "plural"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-1v8qhm0",
@@ -36409,12 +36756,13 @@
         "erra",
         "digrafs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "singular"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-zhlyvj",
@@ -36426,12 +36774,13 @@
         "erra",
         "digrafs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "feminine",
         "number": "plural"
-      }
+      },
+      "basicVocabulary": true
     },
     {
       "id": "p-tvjbss",
@@ -36443,12 +36792,18 @@
         "erra",
         "digrafs"
       ],
-      "vocabulary": "common",
+      "vocabulary": "basic",
       "orthography": "medium",
       "morphology": {
         "gender": "masculine",
         "number": "plural"
-      }
+      },
+      "basicVocabulary": true
     }
-  ]
+  ],
+  "basicVocabulary": {
+    "id": "ca-basic-1",
+    "count": 350,
+    "source": "vocabulari-basic.json"
+  }
 }

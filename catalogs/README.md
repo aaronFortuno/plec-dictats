@@ -62,3 +62,9 @@ La nova edició `ca-2026-02-draft` / `seed-2.json` redefineix accentuació com a
 Dels mots que perdien l'únic focus, 170 s'han reassignat a grafies realment presents (essa, hac, ge/jota, be/ve, erra, qu/gu, dígrafs o vocals àtones). Són etiquetes editorials pendents de revisió, no una validació lingüística. Sis mots (talp, fil, pit, plom, tel i tiet) no tenen un dels focus actuals assignat: continuen al catàleg de consulta, amb `focusStatus: unassigned`, però no s'introdueixen artificialment en un exercici d'accentuació. Amb tots els focus, hi ha 3.293 candidats abans d'aplicar el nivell.
 
 La instantània original `seed-1.json` i la seva empremta es conserven. Les taules de pronunciació continuen ancorades a aquella identitat de mots; canviar etiquetes en la nova edició no invalida els MP3 amb els mateixos ID.
+
+### Vocabulari bàsic a la versió 1.25
+
+La selecció editorial de 350 mots és a `ca/vocabulari-basic.json` i es publica en text pla a `ca/vocabulari-basic.txt`. Els mateixos mots tenen `basicVocabulary: true` al JSON principal. El generador comprova la concordança de les fonts i protegeix les revisions manuals del TXT abans de regenerar-lo.
+
+Els mots «créixens», «cossiol» i «verro» passen a ampliació. Les altres grafies i identitats es conserven. `seed-3.json` (slot 2) congela el banc complet revisat i `seed-4-basic.json` (slot 3) el subconjunt bàsic. Els slots 0 i 1 es mantenen intactes. El filtre bàsic es combina amb el nivell i els focus; no es presenta com un rànquing estadístic ni com una escala validada. Vegeu [criteris i ús](../docs/VOCABULARI-BASIC.md).

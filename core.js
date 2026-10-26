@@ -153,8 +153,12 @@
     const layout = foldLayout(foldStyle, modelSide);
     const { x: modelX, width: modelWidth } = layout.modelArea;
     const { x: writeX, width: writeWidth } = layout.writingArea;
-    text(modelX, 15, 'plec / model amagat', 8, true, '#555555');
-    text(modelX, 23, layout.name, 7, false, '#555555', { maxWidth: modelWidth });
+    const brandPoint=([x,y])=>[modelX+x*7/42,10.5+y*7/44];
+    for(const points of [[[3,8],[15,3],[28,8],[39,3],[39,36],[28,41],[15,36],[3,41],[3,8]],[[15,3],[15,36]],[[28,8],[28,41]]]){
+      shapes.push({type:'polyline',points:points.map(brandPoint),color:'#234d43',width:.3,fill:null,role:'worksheet-brand'});
+    }
+    text(modelX+8.5,15.5,'plec',20,true,'#234d43',{font:'brand',role:'worksheet-brand'});
+    text(modelX+20.65,15.5,'.',20,true,'#b84f34',{font:'brand',role:'worksheet-brand'});
     text(writeX, 15, seedCode ? `${seedLanguage.toUpperCase()} / ${seedCode}` : 'plec / dictat', seedCode ? 9.5 : 8, true, '#234d43', { maxWidth: writeWidth });
     text(writeX, 25, title || (mode === 'words' ? 'Dictat de paraules' : 'Dictat de pseudoparaules'), 12, true, '#222222', { maxWidth: writeWidth });
     text(writeX, 34, 'Nom:', 8); line(writeX + 8, 35, writeX + writeWidth, 35);

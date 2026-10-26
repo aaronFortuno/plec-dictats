@@ -76,9 +76,11 @@ Tots dos formats es poden invertir. Els trams de protecció són buits. Les lín
 
 **Les pseudoparaules no tenen una ortografia normativa única.** Acorda la pronunciació i l'accent oral i accepta les grafies compatibles amb el so dictat. La h muda, les grafies homòfones i les variants dialectals no es poden resoldre sempre a partir d'un mot oral aïllat. El model proposat no converteix automàticament una alternativa fonèticament compatible en un error.
 
+El filtre **Vocabulari bàsic**, al costat del nivell, limita el banc a una primera selecció editorial de **350 mots** quotidians i escolars. Es combina amb el nivell i els focus i queda inclòs al codi. Es pot consultar al catàleg i descarregar amb **Bàsic · TXT**. És revisable i no es presenta com un rànquing estadístic de freqüència. Vegeu [criteris i conservació dels codis](docs/VOCABULARI-BASIC.md).
+
 ## Compatibilitat i fase següent
 
-La primera instantània és `catalogs/ca/editions/seed-1.json`, amb empremta immutable al registre d'edicions. Els dictats nous utilitzen `seed-2.json`, que corregeix les etiquetes d’accent i dièresi; els codis antics continuen amb `seed-1.json`. Recuperar un codi antic no n’altera cap mot. Canviar filtres o prémer **Nou dictat** fa servir l’edició actual. Una ampliació futura del banc haurà d'afegir una edició nova; no es pot canviar el significat dels codis antics. Cada llengua tindrà la seva entrada i el seu registre.
+La primera instantània és `catalogs/ca/editions/seed-1.json`, amb empremta immutable al registre d'edicions. Els dictats nous utilitzen `seed-3.json`, amb les etiquetes d’accent i dièresi i les orientacions de vocabulari revisades; amb «Vocabulari bàsic» utilitzen `seed-4-basic.json`. Els codis anteriors continuen amb les seves instantànies `seed-1.json` o `seed-2.json`. Recuperar un codi antic no n’altera cap mot. Canviar filtres o prémer **Nou dictat** fa servir l’edició actual. Una ampliació futura del banc haurà d'afegir una edició nova; no es pot canviar el significat dels codis antics. Cada llengua tindrà la seva entrada i el seu registre.
 
 Les dades locals de la versió anterior es conserven amb la seva clau original. El sistema nou només en recupera preferències compatibles. Les tries manuals i els mots propis no es converteixen automàticament en codis. Els codis fan servir exclusivament el banc compartit, perquè qualsevol dispositiu els pugui reproduir.
 
@@ -131,6 +133,8 @@ node tools/check-catalog-audio.cjs
 node tools/check-audio-retry.cjs
 node tools/check-pronunciation-review.cjs
 node tools/check-focus-edition.cjs
+node tools/check-basic-vocabulary.cjs
+node tools/check-basic-ui.cjs
 node tools/check-valencian-pilot.cjs
 node tools/check-valencian-batch.cjs
 node tools/check-published-audio.cjs
@@ -143,11 +147,11 @@ node tools/serve.cjs
 
 El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `build-catalogs.cjs --check` comprova que els fitxers generats siguin reproduïbles. El generador verifica també les empremtes de les instantànies i no les modifica. Per repetir el contrast complet cal el lèxic extern de Softcatalà; les instruccions són a `catalogs/README.md`.
 
-`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `pronunciations.js` gestiona el catàleg unificat i una única reproducció i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.24.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
+`seeds.js` conserva el protocol 1 i el mostreig immutable. `seeds-v2.js` afegeix el format actual i la cerca optimitzada. `pronunciations.js` gestiona el catàleg unificat i una única reproducció i `audio-manifest.js` comparteix la validació de rutes i cobertura amb el reproductor d’alumnat. `app.js` gestiona el preparador i `dictation.js` connecta l’entrada d’alumnat amb els MP3; `dictation-session.js` controla els comptadors i les pauses sense dependre del navegador. `core.js` comparteix la geometria SVG/PDF amb `pdf.js`. Les plantilles són `templates/composer.html` i `templates/dictation.html`; els recursos comparteixen el sufix `?v=1.25.0`. Els paquets i HTML generats estan versionats per servir-los directament amb GitHub Pages.
 
 ## Versions
 
-La interfície actual és **1.24**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.25**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 

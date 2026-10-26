@@ -1,0 +1,20 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),S=require('../seeds-v2.js'),R=require('../catalogs/ca/editions/index.js');
+const full=R.editions.find(e=>e.slot===R.current),basic=R.editions.find(e=>e.slot===R.basic),list=require('../catalogs/ca/vocabulari-basic.json'),manifest=require('../audio/manifest.json');
+const words=basic.catalog.entries.filter(e=>e.mode==='words'),ids=new Set(words.map(e=>e.id));
+assert.equal(words.length,350);assert.equal(ids.size,350);assert.equal(R.basicWordCount,350);
+assert.deepEqual(words.map(e=>e.text).sort(new Intl.Collator('ca',{sensitivity:'variant'}).compare),list.words);
+assert.deepEqual(fs.readFileSync('catalogs/ca/vocabulari-basic.txt','utf8').trim().split('\n'),list.words);
+assert(words.every(e=>e.basicVocabulary&&e.vocabulary==='basic'));
+assert(['llit','mare','pare','amics','amigues','pintats','pintades','col·legi'].every(t=>words.some(e=>e.text===t)));
+for(const text of ['créixens','cossiol','verro']){const e=full.catalog.entries.find(e=>e.text===text);assert.equal(e.vocabulary,'expanded');assert(!S.matchesStage(e,'cm',full.profile.stageRules));assert(!ids.has(e.id));}
+assert.deepEqual(full.catalog.entries.map(e=>[e.id,e.text]),R.editions[1].catalog.entries.map(e=>[e.id,e.text]),'Word identities/spellings/order never change');
+const recipe={mode:'words',stage:'cs',count:24,tags:['accent']},p=S.prepare(basic,recipe);
+const required=['perquè','cançó'].map(t=>words.find(e=>e.text===t).id),found=S.searchSync(p,required,{maxAttempts:50000});assert(found.found);
+const code=S.encode({epoch:basic.slot,recipe,nonce:found.nonce}),selection=S.resolve(R.editions,code);
+assert(selection.entries.every(e=>ids.has(e.id)&&e.tags.includes('accent')));assert(required.every(id=>selection.entries.some(e=>e.id===id)));
+assert.deepEqual(selection.entries,found.entries);assert.equal(selection.epoch,basic.slot);
+for(const pack of manifest.packs.filter(p=>['central','valencia'].includes(p.dialect)))assert(selection.entries.every(e=>pack.files[e.id]),'Both audio varieties cover every basic seed');
+for(const file of ['seeds-v1-vectors.json','seeds-v2-vectors.json'])for(const vector of require('../docs/'+file).vectors)assert.deepEqual(S.resolve(R.editions,vector.code).entries.map(e=>e.text),vector.words);
+const old=S.resolve(R.editions,'ADZ52356A');assert.equal(old.epoch,1);assert(!R.editions.find(e=>e.slot===old.epoch).selection);
+console.log('Basic vocabulary: 350 explicit words, level/focus intersection, required-word search, code recovery, audio coverage and immutable old codes passed.');

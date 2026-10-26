@@ -8,6 +8,7 @@
     doc.setTitle(`${options.title || 'Dictat'}${options.seedCode ? ' · ' + options.seedCode : ''}${teacher ? ' · Guia docent' : ''}`);
     doc.setAuthor('Plec'); doc.setSubject('Dictat autocorrectiu en català');
     const regular = await doc.embedFont(StandardFonts.Helvetica), bold = await doc.embedFont(StandardFonts.HelveticaBold);
+    const brand = await doc.embedFont(StandardFonts.TimesRomanBold);
     const PT = 72 / 25.4, page = doc.addPage([210 * PT, 297 * PT]);
     const shapes = teacher ? core.teacherSheet(options, [...categories, { id: 'custom', label: 'Personalitzada' }]) : core.worksheet({ ...options, hidden: false });
     const color = hex => rgb(parseInt(hex.slice(1, 3), 16) / 255, parseInt(hex.slice(3, 5), 16) / 255, parseInt(hex.slice(5, 7), 16) / 255);
@@ -20,7 +21,7 @@
         const path = 'M '+s.points.map(p=>p.join(' ')).join(' L ')+(s.fill?' Z':'');
         page.drawSvgPath(path, {x:0,y:297*PT,scale:PT,borderWidth:s.width,borderColor:color(s.color),...(s.fill?{color:color(s.fill)}:{}),...(s.dash?{borderDashArray:[.8,.7]}:{})});
       } else {
-        const value = printable(s.value), font = s.weight ? bold : regular;
+        const value = printable(s.value), font = s.font==='brand' ? brand : s.weight ? bold : regular;
         const width = font.widthOfTextAtSize(value, s.size);
         const size = s.maxWidth ? Math.min(s.size, s.size * s.maxWidth * PT / Math.max(1, width)) : s.size;
         const actualWidth = font.widthOfTextAtSize(value, size);

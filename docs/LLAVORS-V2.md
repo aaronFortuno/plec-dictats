@@ -14,6 +14,8 @@ No s'exigeix una paraula de cada focus. Amb tots els focus marcats, el conjunt d
 
 Des de la interfície 1.17, l’edició actual és `seed-2.json` (slot 1): `accent` correspon exactament als mots amb à/è/é/í/ò/ó/ú i `dieresi` als que tenen ï/ü. Un mot pot tenir les dues etiquetes. Els mots amb altres focus continuen entrant si algun d’aquests altres està seleccionat. Els codis de l’edició inicial (`seed-1.json`, slot 0) es recuperen sense reclassificar ni canviar cap mot. Els dos arxius són immutables. Un canvi de focus o Nou dictat utilitza l’edició actual; canviar només el plec conserva el codi.
 
+La interfície 1.25 afegeix `seed-3.json` (slot 2, banc complet revisat) i `seed-4-basic.json` (slot 3, selecció editorial de 350 mots). El checkbox de vocabulari bàsic tria aquesta segona instantània; el nivell i els focus conserven la mateixa codificació. No es canvia ni el protocol ni el mostreig. Les instantànies anteriors continuen intactes. Vegeu [vocabulari bàsic](VOCABULARI-BASIC.md).
+
 ## Per què s'ha canviat el format
 
 El format inicial havia de repartir `30⁶` codis entre 81.975 configuracions i quatre edicions. Això deixava només **2.223 variants per configuració**, insuficients per a moltes parelles de mots en un banc de més de tres mil candidats. No era una limitació de velocitat de l'ordinador: aquella parella podia no aparèixer en cap de les variants representables.

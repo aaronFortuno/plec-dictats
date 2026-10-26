@@ -1,5 +1,12 @@
 # Historial
 
+## 1.25 · 26 d’octubre de 2026
+
+- Filtre complementari «Vocabulari bàsic»: primera selecció editorial revisable de 350 mots, combinable amb el nivell i els focus, consultable i descarregable en text des del catàleg.
+- «Créixens», «cossiol» i «verro» passen a ampliació. Dues instantànies noves conserven el banc complet i el bàsic als codis; els impresos anteriorment es recuperen sense canvis.
+- Marca amb símbol i «plec.» al PDF, sense el subtítol del format. Lema del header lleugerament més avall.
+- Paraules del gràfic de l’ajuda dins del paper. Retirat el subapartat «Com plego aquest full?». Scroll intern amb capçalera fixa i barres compartides als diàlegs d’ajuda i privacitat.
+
 ## 1.24 · 26 d’octubre de 2026
 
 - Arrossegament tàctil del full amb un dit i zoom amb dos, conservant el punt de contacte i els límits del paper; es mantenen els botons i el ratolí.

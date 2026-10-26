@@ -52,7 +52,7 @@
  }
  function render({resetScroll=false,target=''}={}){
   if(!config)return;stop();const list=$('catalog-list'),previousScroll=list.scrollTop,tag=$('catalog-tag').value,query=$('catalog-search').value.trim(),stage=$('catalog-stage').value;
-  const view=B.buildView(config.entries,{query,locale:config.locale,predicate:e=>e.mode===config.mode&&(!tag||e.tags.includes(tag))&&config.matchesStage(e,stage)});
+  const view=B.buildView(config.entries,{query,locale:config.locale,predicate:e=>e.mode===config.mode&&(!tag||e.tags.includes(tag))&&config.matchesStage(e,stage)&&(config.mode!=='words'||!$('catalog-basic').checked||e.basicVocabulary)});
   const active=initial&&view.counts[initial]?initial:query?null:view.activeInitial;
   const entries=active?view.groups[active]:view.entries;
   if(target){const index=entries.findIndex(e=>e.text===target);if(index>=0)limit=Math.max(50,Math.ceil((index+1)/50)*50);}
@@ -95,18 +95,21 @@
   try{published=await json('audio/manifest.json');if(!Array.isArray(published.packs))throw Error();}catch{published={packs:[]};}
   loaded=true;status();
  }
- function resetFilters(){openGeneration++;initial=null;limit=50;deepWord='';requestedPack='';$('catalog-search').value='';$('catalog-tag').value='';$('catalog-stage').value='all';render({resetScroll:true});}
+ function resetFilters(){openGeneration++;initial=null;limit=50;deepWord='';requestedPack='';$('catalog-search').value='';$('catalog-tag').value='';$('catalog-stage').value='all';$('catalog-basic').checked=false;render({resetScroll:true});}
  function filtersChanged(){openGeneration++;initial=null;limit=50;deepWord='';requestedPack='';render({resetScroll:true});}
- for(const id of ['catalog-search','catalog-tag','catalog-stage'])$(id).addEventListener(id==='catalog-search'?'input':'change',filtersChanged);
+ for(const id of ['catalog-search','catalog-tag','catalog-stage','catalog-basic'])$(id).addEventListener(id==='catalog-search'?'input':'change',filtersChanged);
  $('catalog-clear').addEventListener('click',()=>{$('catalog-search').value='';filtersChanged();$('catalog-search').focus();});
  function selectInitial(event){const link=event.target.closest('[data-initial]');if(!link)return;event.preventDefault();if(link.getAttribute('aria-disabled')==='true')return;openGeneration++;initial=link.dataset.initial;limit=50;deepWord='';requestedPack='';render({resetScroll:true});}
  $('catalog-initials').addEventListener('click',selectInitial);$('catalog-list').addEventListener('click',selectInitial);
  async function ensureData(){try{failed=false;if(!loading)loading=load();await loading;$('review-notice').hidden=!!manifest.packs.length;if(!manifest.packs.length)$('review-notice').innerHTML='Els àudios no estan disponibles. <button type="button" class="small-link" data-retry>Reintenta</button>';if($('catalog-dialog').open)render();}catch{loading=null;loaded=false;$('review-notice').hidden=false;$('review-notice').innerHTML='No s’han pogut carregar les pronunciacions. <button type="button" class="small-link" data-retry>Reintenta</button>';if($('catalog-dialog').open)render();}}
  $('review-notice').addEventListener('click',e=>{if(e.target.closest('[data-retry]')){loading=null;ensureData();}});
  function open(next,{word='',pack=''}={}){
-  const changed=!config||next.mode!==config.mode||next.revision!==config.revision;config=next;
+  const changed=!config||next.mode!==config.mode||next.revision!==config.revision,scopeChanged=!!config?.basic!==!!next.basic;config=next;
   if(changed){$('catalog-tag').innerHTML='<option value="">Tots els focus</option>'+config.categories.filter(c=>c.mode===config.mode).map(c=>'<option value="'+esc(c.id)+'">'+esc(c.label)+'</option>').join('');resetFilters();}
   $('catalog-title').textContent=config.mode==='words'?'El catàleg':'Les pseudoparaules';$('catalog-stage-field').hidden=config.mode==='pseudo';$('export-words-text').hidden=config.mode!=='words';$('export-pseudo-text').hidden=config.mode!=='pseudo';$('export-pronunciations').hidden=config.mode==='pseudo';document.querySelector('.catalog-hint').hidden=config.mode==='pseudo';
+  $('catalog-basic-field').hidden=config.mode!=='words';$('export-basic-text').hidden=config.mode!=='words';
+  if(changed||scopeChanged)$('catalog-basic').checked=!!config.basic;
+  if(word&&!config.entries.some(e=>e.text===word&&e.basicVocabulary))$('catalog-basic').checked=false;
   deepWord=word;requestedPack=pack;
   if(word){const entry=config.entries.find(e=>e.text===word&&e.mode===config.mode);if(entry){initial=B.initialFor(word,config.locale);if(!config.matchesStage(entry,$('catalog-stage').value))$('catalog-stage').value='all';if($('catalog-tag').value&&!entry.tags.includes($('catalog-tag').value))$('catalog-tag').value='';}}
   const generation=++openGeneration;PlecMotion.open($('catalog-dialog'));render({target:word});if(!open.tracked){window.PlecAnalytics?.track('catalog-opened');open.tracked=true;}

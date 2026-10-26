@@ -1,0 +1,5154 @@
+{
+  "protocol": 1,
+  "slot": 3,
+  "language": "ca",
+  "salt": 2574021155,
+  "catalog": {
+    "schemaVersion": 1,
+    "language": "ca",
+    "edition": "ca-2026-03-basic",
+    "status": "draft",
+    "reviewedByTeacher": false,
+    "version": 7,
+    "categories": [
+      {
+        "id": "accent",
+        "label": "Accentuació",
+        "title": "Mots amb accent gràfic",
+        "mode": "words"
+      },
+      {
+        "id": "essa",
+        "label": "s / ss / c / ç / z",
+        "title": "Les esses",
+        "mode": "words"
+      },
+      {
+        "id": "hac",
+        "label": "Amb h / sense h",
+        "title": "La hac",
+        "mode": "words"
+      },
+      {
+        "id": "gej",
+        "label": "g / j / tg / tj",
+        "title": "Ge i jota",
+        "mode": "words"
+      },
+      {
+        "id": "beve",
+        "label": "b / v",
+        "title": "Be i ve baixa",
+        "mode": "words"
+      },
+      {
+        "id": "erra",
+        "label": "r / rr",
+        "title": "Erra i erra doble",
+        "mode": "words"
+      },
+      {
+        "id": "qugu",
+        "label": "c / qu / g / gu / qü / gü",
+        "title": "Ce, cu i ge",
+        "mode": "words"
+      },
+      {
+        "id": "vocals",
+        "label": "a / e · o / u àtones",
+        "title": "Vocals àtones",
+        "mode": "words"
+      },
+      {
+        "id": "digrafs",
+        "label": "ll / ny / x / ix / tx / ig",
+        "title": "Dígrafs i xeix",
+        "mode": "words"
+      },
+      {
+        "id": "dieresi",
+        "label": "Dièresi",
+        "title": "La dièresi",
+        "mode": "words"
+      },
+      {
+        "id": "signes",
+        "label": "Ela geminada · l·l",
+        "title": "Ela geminada",
+        "mode": "words"
+      },
+      {
+        "id": "verbs",
+        "label": "Formes verbals",
+        "title": "Formes verbals",
+        "mode": "words"
+      },
+      {
+        "id": "simples",
+        "label": "Síl·labes simples",
+        "title": "Síl·labes simples",
+        "mode": "pseudo"
+      },
+      {
+        "id": "grups",
+        "label": "Grups consonàntics",
+        "title": "Grups consonàntics",
+        "mode": "pseudo"
+      },
+      {
+        "id": "pseudodigrafs",
+        "label": "Dígrafs",
+        "title": "Dígrafs",
+        "mode": "pseudo"
+      },
+      {
+        "id": "llargues",
+        "label": "Més de dues síl·labes",
+        "title": "Més de dues síl·labes",
+        "mode": "pseudo"
+      }
+    ],
+    "vocabularyBands": {
+      "basic": "Bàsic",
+      "common": "Habitual",
+      "expanded": "Ampliació",
+      "specialized": "Especialitzat",
+      "unrated": "Sense classificar"
+    },
+    "orthographyBands": {
+      "low": "Baixa",
+      "medium": "Mitjana",
+      "high": "Alta",
+      "unrated": "Sense classificar"
+    },
+    "stages": {
+      "cm": "Cicle mitjà",
+      "cs": "Cicle superior",
+      "eso": "Institut",
+      "all": "Tot el banc"
+    },
+    "entries": [
+      {
+        "id": "p-rxfsqz",
+        "text": "país",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1x6xp9v",
+        "text": "avió",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1ofiszc",
+        "text": "passadís",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1gbzn5f",
+        "text": "camió",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-hozgas",
+        "text": "cançó",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-18uxc6a",
+        "text": "jardí",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-8d3w0m",
+        "text": "cafè",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-zxcq2f",
+        "text": "també",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-o4hmwi",
+        "text": "després",
+        "mode": "words",
+        "tags": [
+          "erra",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-10qgfnb",
+        "text": "perquè",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-kg4im8",
+        "text": "això",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-u824sj",
+        "text": "allò",
+        "mode": "words",
+        "tags": [
+          "digrafs",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-hbr2vk",
+        "text": "arròs",
+        "mode": "words",
+        "tags": [
+          "erra",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1vwho31",
+        "text": "matí",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-vu0hgw",
+        "text": "dofí",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-t2bxfu",
+        "text": "botó",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-wxweip",
+        "text": "balcó",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-16wh9xr",
+        "text": "ratolí",
+        "mode": "words",
+        "tags": [
+          "erra",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1g2x4qq",
+        "text": "coixí",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-c2gsme",
+        "text": "menú",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-7fpqsk",
+        "text": "sofà",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1otep1n",
+        "text": "català",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-tnkhal",
+        "text": "pàgina",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-91r733",
+        "text": "música",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1yugrcr",
+        "text": "màquina",
+        "mode": "words",
+        "tags": [
+          "qugu",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-z5v2dj",
+        "text": "família",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-56qq2o",
+        "text": "àvia",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1uq1qgx",
+        "text": "núvol",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-k2suh6",
+        "text": "fàcil",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-lmifli",
+        "text": "difícil",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-k0jv1t",
+        "text": "llapis",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1759ikv",
+        "text": "imatge",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1yi9fi0",
+        "text": "futbol",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1e2graq",
+        "text": "paper",
+        "mode": "words",
+        "tags": [
+          "erra",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-19ilz5c",
+        "text": "animal",
+        "mode": "words",
+        "tags": [
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-s0ugdh",
+        "text": "escola",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-f6sibu",
+        "text": "cadira",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1dloi02",
+        "text": "finestra",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "erra",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-zayfce",
+        "text": "sabata",
+        "mode": "words",
+        "tags": [
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1e7yqr6",
+        "text": "motxilla",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1e65tz0",
+        "text": "ordinador",
+        "mode": "words",
+        "tags": [
+          "erra",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-3sofk1",
+        "text": "germana",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "erra",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-c4wo0d",
+        "text": "dissabte",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-19cq0yy",
+        "text": "diumenge",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1kykx7j",
+        "text": "plàtan",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-nri1dq",
+        "text": "telèfon",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-14cbk1w",
+        "text": "semàfor",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-yuf3oi",
+        "text": "mòbil",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-19xayyr",
+        "text": "cinema",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-yjobb4",
+        "text": "cirera",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-kwgyh5",
+        "text": "ceba",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-7nz3js",
+        "text": "cel",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-11dc67e",
+        "text": "cinturó",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-cx71zq",
+        "text": "cistell",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1q75y9l",
+        "text": "enciam",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1fi2x2a",
+        "text": "bicicleta",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-ly9msx",
+        "text": "policia",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-n2i8ke",
+        "text": "passar",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1cetajo",
+        "text": "tassa",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-dd4z13",
+        "text": "classe",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-j7j8eh",
+        "text": "professor",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-nb9ooj",
+        "text": "massa",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-ry0xzk",
+        "text": "bossa",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-9ahbmz",
+        "text": "plaça",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-wq7mhc",
+        "text": "braç",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1dq4k7f",
+        "text": "força",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-ykwk7c",
+        "text": "dolç",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1ts0cur",
+        "text": "feliç",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "common",
+          "number": "singular"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1ce36z",
+        "text": "peça",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-14ryuvk",
+        "text": "casa",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-smaiaz",
+        "text": "rosa",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-siuvxh",
+        "text": "tisores",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-yw9b2u",
+        "text": "camisa",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1af7z76",
+        "text": "zero",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-9zjowg",
+        "text": "zebra",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1q3kf84",
+        "text": "onze",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-11wdbuu",
+        "text": "dotze",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-7tbf43",
+        "text": "esmorzar",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "hac"
+        ],
+        "vocabulary": "basic",
+        "orthography": "high",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-jhyj3i",
+        "text": "ahir",
+        "mode": "words",
+        "tags": [
+          "hac"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-ya9go5",
+        "text": "avui",
+        "mode": "words",
+        "tags": [
+          "hac"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-fu2dmu",
+        "text": "ara",
+        "mode": "words",
+        "tags": [
+          "hac"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-100y49a",
+        "text": "hivern",
+        "mode": "words",
+        "tags": [
+          "hac",
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1n2z442",
+        "text": "herba",
+        "mode": "words",
+        "tags": [
+          "hac"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-14fjbz0",
+        "text": "hora",
+        "mode": "words",
+        "tags": [
+          "hac"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-z5qvsj",
+        "text": "hort",
+        "mode": "words",
+        "tags": [
+          "hac"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-17pyulj",
+        "text": "home",
+        "mode": "words",
+        "tags": [
+          "hac"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-5k399i",
+        "text": "hospital",
+        "mode": "words",
+        "tags": [
+          "hac"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-107zyxy",
+        "text": "habitació",
+        "mode": "words",
+        "tags": [
+          "hac",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1elhe88",
+        "text": "ou",
+        "mode": "words",
+        "tags": [
+          "hac"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-73q2o7",
+        "text": "ombra",
+        "mode": "words",
+        "tags": [
+          "hac"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1k054l6",
+        "text": "estiu",
+        "mode": "words",
+        "tags": [
+          "hac",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-gws6ky",
+        "text": "metge",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "high",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-gf78em",
+        "text": "rellotge",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "erra",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "high",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1581arw",
+        "text": "viatge",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "high",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1v3n3c0",
+        "text": "platja",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "high",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1k5nrgj",
+        "text": "mitja",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-onwism",
+        "text": "mongetes",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-106isxz",
+        "text": "gerra",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1u0hius",
+        "text": "gel",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-5sp5fz",
+        "text": "genoll",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1taihoj",
+        "text": "germà",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-179ibty",
+        "text": "gegant",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-cno27o",
+        "text": "girafa",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-xrn5dt",
+        "text": "girar",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-popzvu",
+        "text": "gent",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-q8eivh",
+        "text": "gener",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-cfapv4",
+        "text": "joc",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-106wt6j",
+        "text": "joguina",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1afljim",
+        "text": "jove",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1resf9d",
+        "text": "jugar",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-t75vgp",
+        "text": "jaqueta",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-hj63oe",
+        "text": "pluja",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-10bs8f4",
+        "text": "pijama",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1pheqqt",
+        "text": "menjar",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-h6ihcz",
+        "text": "taronja",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-erdvno",
+        "text": "esponja",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-uvb4d7",
+        "text": "formatge",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "high",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1yerxq7",
+        "text": "granja",
+        "mode": "words",
+        "tags": [
+          "gej"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-l7ufcn",
+        "text": "vaixell",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "high",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-5wgld9",
+        "text": "vaca",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-18l0n4f",
+        "text": "vent",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1omrh9i",
+        "text": "volar",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-eoo2zs",
+        "text": "veí",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-yditay",
+        "text": "vida",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1439b83",
+        "text": "verd",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-2ad75p",
+        "text": "viure",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1lylv5c",
+        "text": "vuit",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1ev1w8m",
+        "text": "vidre",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1gd88wf",
+        "text": "vestit",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-15h0hxt",
+        "text": "cavall",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-kaauc2",
+        "text": "avi",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-kzgb9",
+        "text": "beure",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "high",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1le46wb",
+        "text": "boca",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1us5loh",
+        "text": "bosc",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-m066h5",
+        "text": "barca",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-gt5s3h",
+        "text": "bufanda",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-n3favu",
+        "text": "banyera",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1sav2x2",
+        "text": "banc",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1akfsbk",
+        "text": "botiga",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1x3c6t0",
+        "text": "bombolla",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1isw4fd",
+        "text": "abella",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-xlsllz",
+        "text": "arribar",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-gve6hc",
+        "text": "trobar",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1xrgc7",
+        "text": "sabó",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-y7mlxo",
+        "text": "treball",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-12adwsx",
+        "text": "carro",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-q8xyk3",
+        "text": "carrer",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-hotxy6",
+        "text": "terra",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-145zfw3",
+        "text": "serra",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-72ya9g",
+        "text": "torre",
+        "mode": "words",
+        "tags": [
+          "erra",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1njzmzp",
+        "text": "sorra",
+        "mode": "words",
+        "tags": [
+          "erra",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-13hk3as",
+        "text": "correu",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-hrxkmk",
+        "text": "barret",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-13p00yc",
+        "text": "roda",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-tot7dq",
+        "text": "roba",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1wufcpk",
+        "text": "riu",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1edv3em",
+        "text": "porta",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-10ewn9e",
+        "text": "arbre",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1yq2emo",
+        "text": "cargol",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1cjid71",
+        "text": "cara",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-9ffmwy",
+        "text": "pera",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1we5akp",
+        "text": "farina",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-18i9unx",
+        "text": "pirata",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-b62418",
+        "text": "paperera",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1ul79u6",
+        "text": "cullera",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-17t4rom",
+        "text": "coca",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-gb5n91",
+        "text": "cuc",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-ygbvwf",
+        "text": "conte",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-15yl1r4",
+        "text": "canya",
+        "mode": "words",
+        "tags": [
+          "qugu",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1f1pbpp",
+        "text": "carta",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1gn96om",
+        "text": "cosa",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1ekf00u",
+        "text": "quatre",
+        "mode": "words",
+        "tags": [
+          "qugu",
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1bs1tsw",
+        "text": "quinze",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1oamop0",
+        "text": "equip",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1orlck0",
+        "text": "paquet",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-n6e53o",
+        "text": "esquena",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-dl376u",
+        "text": "quadern",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1rsxbaw",
+        "text": "gat",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1sxguoe",
+        "text": "got",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1trfnrb",
+        "text": "gos",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-19t8s14",
+        "text": "goma",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-bwqflq",
+        "text": "gallina",
+        "mode": "words",
+        "tags": [
+          "qugu",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-i0ont9",
+        "text": "formiga",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1wxb0g",
+        "text": "mànega",
+        "mode": "words",
+        "tags": [
+          "qugu",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-10524yx",
+        "text": "guix",
+        "mode": "words",
+        "tags": [
+          "qugu",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-lc6vpt",
+        "text": "aigua",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-4el192",
+        "text": "llengua",
+        "mode": "words",
+        "tags": [
+          "qugu",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-33gids",
+        "text": "paraigua",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-vxfzf9",
+        "text": "berenar",
+        "mode": "words",
+        "tags": [
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1lkl6y1",
+        "text": "davantal",
+        "mode": "words",
+        "tags": [
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-vuze9r",
+        "text": "treballar",
+        "mode": "words",
+        "tags": [
+          "vocals",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1hcktyc",
+        "text": "nedar",
+        "mode": "words",
+        "tags": [
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1bkn7x",
+        "text": "muntanya",
+        "mode": "words",
+        "tags": [
+          "vocals",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-8e645j",
+        "text": "conill",
+        "mode": "words",
+        "tags": [
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1iw2w5r",
+        "text": "ploma",
+        "mode": "words",
+        "tags": [
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1d77npc",
+        "text": "sortida",
+        "mode": "words",
+        "tags": [
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-4cxs2m",
+        "text": "lluna",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1umlab6",
+        "text": "llibre",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-9mziwu",
+        "text": "llavor",
+        "mode": "words",
+        "tags": [
+          "digrafs",
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1yrdcjp",
+        "text": "llit",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-5esefq",
+        "text": "ampolla",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-14gygmw",
+        "text": "papallona",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-nq682h",
+        "text": "colla",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-opau8a",
+        "text": "any",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-15svqvd",
+        "text": "pinya",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-j0para",
+        "text": "aranya",
+        "mode": "words",
+        "tags": [
+          "digrafs",
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-17mcr8a",
+        "text": "castanya",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-i339lg",
+        "text": "senyor",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-18k8jdz",
+        "text": "xocolata",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-t55f20",
+        "text": "xarxa",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-xgcg8w",
+        "text": "caixa",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-4qgz7y",
+        "text": "peix",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-nlv90h",
+        "text": "cotxe",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1r9d3ze",
+        "text": "dutxa",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-ksga2a",
+        "text": "maig",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-zwsym1",
+        "text": "raig",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "low",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1bwjj55",
+        "text": "raïm",
+        "mode": "words",
+        "tags": [
+          "dieresi"
+        ],
+        "vocabulary": "basic",
+        "orthography": "high",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-s3rwcz",
+        "text": "veïna",
+        "mode": "words",
+        "tags": [
+          "dieresi"
+        ],
+        "vocabulary": "basic",
+        "orthography": "high",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1879y2w",
+        "text": "col·legi",
+        "mode": "words",
+        "tags": [
+          "signes"
+        ],
+        "orthography": "high",
+        "vocabulary": "basic",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1ovzj6u",
+        "text": "pel·lícula",
+        "mode": "words",
+        "tags": [
+          "signes",
+          "accent"
+        ],
+        "orthography": "high",
+        "vocabulary": "basic",
+        "basicVocabulary": true
+      },
+      {
+        "id": "s-4wp27p",
+        "text": "nupi",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1a71s7v",
+        "text": "fepo",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1uxtkiu",
+        "text": "dumi",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1jqsg9y",
+        "text": "tapú",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1sfenkz",
+        "text": "binu",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-cc4x4s",
+        "text": "pafú",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-fsr1rc",
+        "text": "lomí",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-10v6qsc",
+        "text": "nufà",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-10c1mya",
+        "text": "tepú",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1vvmxe2",
+        "text": "dofípol",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-nkpg82",
+        "text": "mepu",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1y7wndi",
+        "text": "ganu",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1nxz1d0",
+        "text": "lutepi",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1i2zzk0",
+        "text": "fenupi",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-111m8ye",
+        "text": "dopali",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-gg60gq",
+        "text": "tupena",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1urc3v9",
+        "text": "mifanu",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-48kt8s",
+        "text": "panufi",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1igrzbx",
+        "text": "tedumi",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1yhusti",
+        "text": "nulapi",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1j08la",
+        "text": "fopenu",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-5nq4pj",
+        "text": "demufi",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-q2rbz2",
+        "text": "nabopi",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1s39bgl",
+        "text": "pumeli",
+        "mode": "pseudo",
+        "tags": [
+          "simples"
+        ]
+      },
+      {
+        "id": "s-1cwxr0w",
+        "text": "sclaf",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-17uxlgp",
+        "text": "blis",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-9jdhoo",
+        "text": "drall",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-1sj42x7",
+        "text": "cluf",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-1p6nytd",
+        "text": "plim",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-zhfds",
+        "text": "bruf",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-to4v8o",
+        "text": "flup",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-4qa3xa",
+        "text": "grisp",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-12mxf86",
+        "text": "trufec",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-grd7tk",
+        "text": "crunel",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-1bycyen",
+        "text": "prufal",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-1a9ujc9",
+        "text": "blanuf",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-1236ae5",
+        "text": "drupel",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-116bxc2",
+        "text": "glafí",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-1hduh1l",
+        "text": "frenup",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-sdpujs",
+        "text": "cralop",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-zg5fcv",
+        "text": "brunif",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-5udezm",
+        "text": "clenap",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-18vhbqf",
+        "text": "trupol",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-jvvw92",
+        "text": "flanec",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-q8mh0e",
+        "text": "graput",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-p5dyr5",
+        "text": "plonif",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-16kagy7",
+        "text": "frupel",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-c3biom",
+        "text": "blenuc",
+        "mode": "pseudo",
+        "tags": [
+          "grups"
+        ]
+      },
+      {
+        "id": "s-7htjjn",
+        "text": "platoll",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-1rnih9t",
+        "text": "cunyi",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-7b1rc",
+        "text": "frisquell",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-nq0xr9",
+        "text": "llunep",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-hm0b48",
+        "text": "nyapuf",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-d4ay3m",
+        "text": "fanyut",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-ufjcne",
+        "text": "banyup",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-qgqphr",
+        "text": "llunif",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-exrqz3",
+        "text": "palluf",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-329uw6",
+        "text": "garrup",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-1q19vh2",
+        "text": "terrufi",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-pxsglk",
+        "text": "marrup",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-r4w8wl",
+        "text": "quifol",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-15f8kf1",
+        "text": "guinel",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-qof2p",
+        "text": "guepuf",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-1lhx9lg",
+        "text": "xanufi",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-101g1k2",
+        "text": "mixup",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-xxhuut",
+        "text": "feixum",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-dfjurx",
+        "text": "txunel",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-gphznv",
+        "text": "patxuf",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-o5896o",
+        "text": "dunyal",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-1s9m4gv",
+        "text": "jufell",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-15g6b0j",
+        "text": "guinop",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-p04td1",
+        "text": "quepil",
+        "mode": "pseudo",
+        "tags": [
+          "pseudodigrafs"
+        ]
+      },
+      {
+        "id": "s-whdk4z",
+        "text": "sergaminya",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-aq2ths",
+        "text": "pirotet",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-j76w3n",
+        "text": "blanufeta",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-abwjxq",
+        "text": "grupinola",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-1upgqvr",
+        "text": "fresquinal",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-ui48r2",
+        "text": "clopiruna",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-9ga948",
+        "text": "trumifeta",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-1jk32ml",
+        "text": "pladunifa",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-lv5x86",
+        "text": "brufanell",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-wahwlg",
+        "text": "nyuparela",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-u1zcu1",
+        "text": "quepinofa",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-1dmyjo9",
+        "text": "guerunila",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-5empkf",
+        "text": "fenupali",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-1hzmc8p",
+        "text": "drapuneta",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-1hrv4ow",
+        "text": "crufanoli",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-1szlk5z",
+        "text": "tupinufa",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-lrrvww",
+        "text": "xemurali",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-zgq98v",
+        "text": "palunefi",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-fx01on",
+        "text": "flupinera",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-xthxfv",
+        "text": "gomifuna",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-wynulf",
+        "text": "nuparella",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-irnl77",
+        "text": "trefunila",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-38wv6j",
+        "text": "blinufeta",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "s-y2c03w",
+        "text": "carunepi",
+        "mode": "pseudo",
+        "tags": [
+          "llargues"
+        ]
+      },
+      {
+        "id": "p-rm46tm",
+        "text": "ànec",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-k40fgo",
+        "text": "àlbum",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-41pln4",
+        "text": "últim",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-195hlff",
+        "text": "útil",
+        "mode": "words",
+        "tags": [
+          "hac",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-4k62a6",
+        "text": "illa",
+        "mode": "words",
+        "tags": [
+          "digrafs",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-vw1emz",
+        "text": "idea",
+        "mode": "words",
+        "tags": [
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1cuf4yv",
+        "text": "alegria",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1s02i4h",
+        "text": "ajuda",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-d3e2oy",
+        "text": "alumne",
+        "mode": "words",
+        "tags": [
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1e21541",
+        "text": "amiga",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "singular"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1oot40r",
+        "text": "amistat",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-jyeiu",
+        "text": "anell",
+        "mode": "words",
+        "tags": [
+          "digrafs",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-xn5u8e",
+        "text": "aniversari",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "beve",
+          "erra",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1sf1d8w",
+        "text": "armari",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-18s3ec4",
+        "text": "autobús",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-e1nul",
+        "text": "bústia",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-jhipfx",
+        "text": "bé",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1fxl2cs",
+        "text": "bolet",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1il23ts",
+        "text": "bàsquet",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1kypnvt",
+        "text": "bombó",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1lv2bnw",
+        "text": "càmera",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1qndtsn",
+        "text": "cèntim",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-rw92jx",
+        "text": "còpia",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-dps5vg",
+        "text": "còmic",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-e8ayka",
+        "text": "créixer",
+        "mode": "words",
+        "tags": [
+          "verbs",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1n5bq06",
+        "text": "demà",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1tzuhdr",
+        "text": "dibuix",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "digrafs",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-7q3gm3",
+        "text": "dormitori",
+        "mode": "words",
+        "tags": [
+          "erra",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1jdb1fa",
+        "text": "drac",
+        "mode": "words",
+        "tags": [
+          "erra",
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-7l0gof",
+        "text": "elefant",
+        "mode": "words",
+        "tags": [
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1sq96ct",
+        "text": "església",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1771izc",
+        "text": "estació",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1mfm43q",
+        "text": "febrer",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "erra",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-8fnou2",
+        "text": "fotografia",
+        "mode": "words",
+        "tags": [
+          "erra",
+          "qugu",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1t343w8",
+        "text": "jersei",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "gej",
+          "erra",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1tmj1pw",
+        "text": "màgia",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1k8ffyd",
+        "text": "març",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-yh5kja",
+        "text": "món",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1ui7c6x",
+        "text": "número",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-svs75p",
+        "text": "ocell",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "digrafs",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1dfuf0w",
+        "text": "pastís",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1kxmqzc",
+        "text": "patí",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1g0x1m7",
+        "text": "patinet",
+        "mode": "words",
+        "tags": [
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-pl1brj",
+        "text": "plàstic",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-s83mt6",
+        "text": "ràdio",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1t4e5gb",
+        "text": "ràpid",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-obqglk",
+        "text": "robot",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "erra",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1wzslju",
+        "text": "síndria",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-15bc08v",
+        "text": "vídeo",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-s0poy3",
+        "text": "vint",
+        "mode": "words",
+        "tags": [
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-100s3ac",
+        "text": "xampú",
+        "mode": "words",
+        "tags": [
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1fv1ppd",
+        "text": "abans",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-5zflem",
+        "text": "agost",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1ma0c3f",
+        "text": "amanida",
+        "mode": "words",
+        "tags": [
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-7r3vj",
+        "text": "atenció",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1xx3xt8",
+        "text": "avisar",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "beve"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1whhycu",
+        "text": "bassal",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-z7udlv",
+        "text": "bessons",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-6i5mkx",
+        "text": "calces",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-3wlt8s",
+        "text": "carbassa",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-lqsdjy",
+        "text": "cent",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-p26ecz",
+        "text": "centre",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1qowlt5",
+        "text": "cereals",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-8bry8b",
+        "text": "cinc",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1752d38",
+        "text": "cinquanta",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1b7m4rg",
+        "text": "ciutat",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-4epfh4",
+        "text": "començar",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-quymvy",
+        "text": "conèixer",
+        "mode": "words",
+        "tags": [
+          "digrafs",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-hivxlx",
+        "text": "conversa",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-9lb6sz",
+        "text": "cos",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-kglhtm",
+        "text": "cosí",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-wp4yyb",
+        "text": "cosina",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-10eufew",
+        "text": "costat",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-kuow39",
+        "text": "desembre",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-o1ixzn",
+        "text": "dessuadora",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1w7ohwc",
+        "text": "disset",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-188caz2",
+        "text": "dos",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1td99r7",
+        "text": "escala",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-544tnc",
+        "text": "escombra",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-12giku2",
+        "text": "espai",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-ilkc6w",
+        "text": "estona",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1ymmc0o",
+        "text": "estrella",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1tqoa1y",
+        "text": "excursió",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "accent"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1d0meum",
+        "text": "exercici",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1vfvf7d",
+        "text": "festa",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-zk86os",
+        "text": "foc",
+        "mode": "words",
+        "tags": [
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-m4knq4",
+        "text": "gronxador",
+        "mode": "words",
+        "tags": [
+          "erra",
+          "qugu",
+          "digrafs",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-125nzjr",
+        "text": "gros",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1az5h5j",
+        "text": "grossa",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "singular"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-z8pdwb",
+        "text": "insecte",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-yfku9w",
+        "text": "llaç",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-covqkb",
+        "text": "llançar",
+        "mode": "words",
+        "tags": [
+          "essa"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-rwmzgn",
+        "text": "lleig",
+        "mode": "words",
+        "tags": [
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-k5v3rz",
+        "text": "mare",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-t65d0i",
+        "text": "pare",
+        "mode": "words",
+        "tags": [
+          "erra"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-19dp0vb",
+        "text": "pintada",
+        "mode": "words",
+        "tags": [
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "singular",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-nd6vw8",
+        "text": "pintades",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-15gbpyl",
+        "text": "pintats",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "masculine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-snr07k",
+        "text": "preparada",
+        "mode": "words",
+        "tags": [
+          "erra",
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "singular",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-nq948t",
+        "text": "preparades",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "erra",
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-otffp2",
+        "text": "preparats",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "erra",
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "masculine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1uz07ad",
+        "text": "cansada",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "singular",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-15ybcri",
+        "text": "cansades",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1ywdi73",
+        "text": "cansats",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "masculine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1vzr9m",
+        "text": "enfadada",
+        "mode": "words",
+        "tags": [
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "singular",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-xcgdbr",
+        "text": "enfadades",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-5q946c",
+        "text": "enfadats",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "masculine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-kwgoil",
+        "text": "oberta",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "singular",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1tm2pza",
+        "text": "obertes",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "beve",
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-osb487",
+        "text": "oberts",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "beve",
+          "vocals",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "masculine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-acg4ar",
+        "text": "escrita",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "erra",
+          "qugu",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "singular",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-y0yjhw",
+        "text": "escrites",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "erra",
+          "qugu",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-6glol5",
+        "text": "escrits",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "erra",
+          "qugu",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "masculine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-6vthxg",
+        "text": "llegida",
+        "mode": "words",
+        "tags": [
+          "gej",
+          "digrafs",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "singular",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-13808lt",
+        "text": "llegides",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "gej",
+          "digrafs",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-bu19m2",
+        "text": "llegits",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "gej",
+          "digrafs",
+          "verbs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "masculine",
+          "number": "plural",
+          "form": "participle"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-fhy7mp",
+        "text": "amigues",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "plural"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1b9qakn",
+        "text": "amics",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "masculine",
+          "number": "plural"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-38nv5u",
+        "text": "companya",
+        "mode": "words",
+        "tags": [
+          "vocals",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "singular"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-pgtwgv",
+        "text": "companyes",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "vocals",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "plural"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1x9z2ng",
+        "text": "companys",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "vocals",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "masculine",
+          "number": "plural"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-2gkjye",
+        "text": "bonica",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "singular"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1idfof4",
+        "text": "boniques",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "beve",
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "plural"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-6cezo0",
+        "text": "bonics",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "beve",
+          "qugu"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "masculine",
+          "number": "plural"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-t59y5s",
+        "text": "blava",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "singular"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-1f84dy5",
+        "text": "blaves",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "beve",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "plural"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-tozp1t",
+        "text": "blaus",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "beve",
+          "vocals"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "masculine",
+          "number": "plural"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-pzow36",
+        "text": "vermella",
+        "mode": "words",
+        "tags": [
+          "beve",
+          "erra",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "singular"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-zhlyvj",
+        "text": "vermelles",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "beve",
+          "erra",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "feminine",
+          "number": "plural"
+        },
+        "basicVocabulary": true
+      },
+      {
+        "id": "p-tvjbss",
+        "text": "vermells",
+        "mode": "words",
+        "tags": [
+          "essa",
+          "beve",
+          "erra",
+          "digrafs"
+        ],
+        "vocabulary": "basic",
+        "orthography": "medium",
+        "morphology": {
+          "gender": "masculine",
+          "number": "plural"
+        },
+        "basicVocabulary": true
+      }
+    ],
+    "basicVocabulary": {
+      "id": "ca-basic-1",
+      "count": 350,
+      "source": "vocabulari-basic.json"
+    },
+    "fingerprint": "52eec840ae93775be7be7d88dcd44e86a67a67c9029c1d22202fbe6057a7647f",
+    "revision": "ca-2026-03-basic.52eec840ae93775b"
+  },
+  "profile": {
+    "id": "ca",
+    "name": "Català",
+    "locale": "ca",
+    "catalogue": "catalogs/ca/catalog.json",
+    "uiLanguage": "ca",
+    "wordPattern": "^[a-zàèéíïòóúüç]+(?:[·'’-][a-zàèéíïòóúüç]+)*$",
+    "stageRules": {
+      "cm": {
+        "vocabulary": [
+          "basic",
+          "common"
+        ],
+        "orthography": [
+          "low",
+          "medium"
+        ]
+      },
+      "cs": {
+        "vocabulary": [
+          "basic",
+          "common",
+          "expanded"
+        ]
+      },
+      "eso": {
+        "any": [
+          {
+            "vocabulary": [
+              "expanded",
+              "specialized"
+            ]
+          },
+          {
+            "vocabulary": [
+              "basic",
+              "common"
+            ],
+            "orthography": [
+              "high"
+            ]
+          }
+        ]
+      }
+    },
+    "template": "templates/composer.html"
+  },
+  "selection": {
+    "vocabulary": "basic",
+    "list": "ca-basic-1",
+    "count": 350
+  }
+}
