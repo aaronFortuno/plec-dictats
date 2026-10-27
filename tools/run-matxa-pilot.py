@@ -16,7 +16,7 @@ import time
 import wave
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DIRECTORY = ROOT / "output/audio/matxa-v2-balear-pilot"
+DIRECTORIES = {"original": "output/audio/matxa-v2-balear-pilot", "slow": "output/audio/matxa-v2-balear-slow-pilot"}
 
 
 def read(path):
@@ -61,8 +61,13 @@ def main():
     parser = argparse.ArgumentParser(description="Generate only the frozen Matxa v2 audition locally")
     parser.add_argument("--execute", action="store_true")
     parser.add_argument("--limit", type=int, choices=range(1, 19), default=18)
+    parser.add_argument("--slow", action="store_true", help="Separate 1.25-duration audition; preserve originals")
     args = parser.parse_args()
+    DIRECTORY = ROOT / DIRECTORIES["slow" if args.slow else "original"]
     plan = read(DIRECTORY / "plan.json")
+    expected_id = "ca-mallorcan-palma-matxa-v2-slow-pilot-v1" if args.slow else "ca-mallorcan-palma-matxa-v2-pilot-v1"
+    if plan["id"] != expected_id or plan["settings"]["lengthScale"] != (1.25 if args.slow else 1.0):
+        raise ValueError("Unexpected audition ID or duration scale")
     if not args.execute:
         print(json.dumps({"inference": False, "words": args.limit, "voices": plan["voices"], "model": plan["model"]["repository"]}))
         return

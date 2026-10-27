@@ -2,6 +2,8 @@
 
 ## v1.28 · 27 d’octubre de 2026
 
+- Segona prova local de Matxa: 36 WAV regenerats amb escala de durada 1,25, més 72 derivats amb silenci inicial. Els 144 WAV de les dues mostres i els derivats es descodifiquen correctament; hashes, identitats i conservació exacta del PCM després dels zeros comprovats. Pàgina de 18 files/72 controls, canvi reversible del silenci, reproducció nativa de «xocolata» i vista de 390 px sense desbordament global. Els originals són intactes; la pronunciació queda pendent d’escolta.
+
 - Porta de qualitat completa: **44 comprovacions, 0 errors**, amb Node 24.22.1 i dependències exactes del lock. Inclou dades, llavors, simulacions d’àudio, PDF, navegador i compatibilitat. Sense síntesi ni comprovació del desplegament remot.
 - 96 pseudoparaules × 3 perfils IPA: identitats, ordre font, inventaris, decisions sobre vocals i exportacions coherents. Cap transcripció es marca com a validada.
 - 192 MP3 centrals/valencians descodificats amb Chromium: 0 errors, format natiu 24 kHz/48 kbit/s/mono, hashes i IPA congelades comprovats abans de publicar. Els 2 paquets de mots, els 6 mapes de revisió previs, defaults i 7 instantànies s’han preservat exactament. Revisió auditiva oberta.

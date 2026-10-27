@@ -92,6 +92,8 @@ La 1.28 incorpora [96 lectures IPA editorials en cada varietat](docs/PSEUDOPARAU
 
 El [pilot local de Matxa v2](docs/MATXA-PILOT.md) compara els mateixos 18 mots amb Olga i Quim, sense quota Azure i amb l’escolta pendent. La pàgina `output/audio/comparacio-matxa-azure.html` juxtaposa les cinc veus. Matxa rep grafies a velocitat nativa i Azure IPA a −10 %: no són configuracions equivalents. Els WAV i el model es conserven només en local i no activen una varietat balear al dictat públic.
 
+Després d’una escolta que detecta claredat inconsistent, la comparativa mostra els IDs 0/1 per la discrepància de noms de les veus. Una segona mostra conserva els originals i regenera 36 WAV amb escala de durada 1,25; `output/audio/comparacio-matxa-lenta.html` permet comparar-los i activar silenci inicial en ambdues versions. Pronunciació pendent de revisió i contrast nadiu ajornat; els àudios continuen només en local.
+
 **Mallorquí en pausa (1.27.1):** l’escolta ha descartat la mostra d’Azure per publicar-la: neutres tòniques com i i geminació b.bl artificial. La columna conserva les IPA com a propostes, amb l’àudio en pausa. El generador específic bloqueja noves execucions abans de llegir credencials o consumir quota. Les mostres i fonts es conserven per a una possible represa, sense iniciar altres proves automàticament.
 
 ## Compatibilitat i fase següent

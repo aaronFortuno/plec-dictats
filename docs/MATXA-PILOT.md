@@ -68,3 +68,20 @@ El programa pren la sortida del model des de la mostra inicial i no hi aplica re
 El [DCVB, entrada xocolata](https://dcvb.iec.cat/results.asp?word=xocolata), recull variació vocàlica i local, amb consonant inicial en les lectures indicades, incloses Sóller i Menorca. No és una justificació per acceptar l’absència de consonants com a característica general balear ni una validació específica del model de Palma. La pròpia [fitxa de Matxa](https://huggingface.co/BSC-LT/matxa-tts-v2-ca-multiaccent-graphemes) adverteix que la qualitat varia segons el parlant; la seva avaluació publicada utilitza frases, no demostra fiabilitat per a tots els mots aïllats de Plec.
 
 Proposta de continuació, encara sense executar: una diagnosi curta amb els mots problemàtics, originals preservats, contrast d’arrencada de reproducció i unes poques regeneracions controlades. Abans d’ampliar, cal revisió nadiua o especialitzada d’una mostra que cobreixi els contrastos. Si no és consistent, es prioritza enregistrament humà d’un banc reduït. No s’aprova una barreja automàtica de veus ni l’ús d’un reconeixedor de veu com a únic criteri de correcció.
+
+## Segona mostra autoritzada · ritme i arrencada
+
+El 27/10/2026 l’usuari autoritza les proves tècniques 1 i 2; el contrast nadiu queda ajornat. S’han regenerat els mateixos **18 mots × 2 veus = 36 WAV**, en una carpeta i una identitat noves, amb **escala de durada 1,25**. Model, grafia, temperatura 0,667, IDs i freqüència de mostreig es conserven. Aquesta escala allarga la parla aproximadament un 25 %, equivalent a una velocitat aproximada del 80 %. No es modifica la velocitat de reproducció de l’àudio antic.
+
+Durada total original: **29,884 s**; nova: **37,210 s**; relació **1,245**. La inferència dels 36 fitxers ha necessitat 47,58 s, excloent la inicialització del model. És una nova síntesi estocàstica: qualsevol diferència de qualitat no es pot atribuir exclusivament al ritme. La pronunciació segueix pendent de l’escolta de l’usuari, sense validació nadiua ni publicació com a veu de Plec.
+
+També es creen **72 còpies derivades** (36 originals i 36 noves) amb uns 250 ms de zeros davant: 5.513 mostres a 22.050 Hz, 250,023 ms. La resta del PCM es conserva byte a byte. L’interruptor de la pàgina canvia totes les fonts entre versions amb silenci i sense; atura la reproducció abans de canviar-les. La durada que s’indica sota el control no inclou aquest silenci. Això prova l’arrencada de reproducció i no reconstrueix cap so absent del model.
+
+```text
+node tools/prepare-matxa-pilot.cjs --write --slow
+tmp/matxa-venv/Scripts/python.exe tools/run-matxa-pilot.py --execute --slow
+node tools/prepare-matxa-slow-comparison.cjs --write --record
+node tools/check-matxa-pilot.cjs --local-audio
+```
+
+Les ordres de preparació/comparació no sintetitzen. Les execucions sense `--execute` només mostren el pla; una represa conserva els fitxers verificats i rebutja identitats incompatibles. La variant original continua essent la predeterminada. Carpeta nova: `output/audio/matxa-v2-balear-slow-pilot/`; pàgina local: `output/audio/comparacio-matxa-lenta.html`. La [metadada de la segona mostra](../audio/pronunciation/recordings/ca-mallorcan-palma-matxa-v2-slow-pilot-v1-result.json) conserva ajustos, durades, hashes i derivats. Cap WAV ni model s’afegeix als recursos públics, i el registre d’Azure no canvia.
