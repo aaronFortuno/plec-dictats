@@ -2,6 +2,8 @@
 
 ## 1.30 · 27 d’octubre de 2026
 
+- Manteniment del CI: proves de navegador independents de l’índex de revisió generat a l’ordinador de desenvolupament. Mateixos errors d’Actions reproduïts en una còpia neta i 47 comprovacions superades després de la correcció, mantenint la cobertura de fallades i privacitat.
+
 - Layout del preparador consolidat a `workspace-layout.css`: marc, columnes, calaixos, peu i impressió. Retirades les disposicions antigues de panells apilats i el full `responsive-workspace.css` que les anul·lava.
 - Formulari de recuperació unificat, amb l’aspecte i les propietats efectives conservats. Comparació amb 110 escenaris previs de mides, temes, panells i pàgines.
 - Corregida la impressió directa del navegador, on les regles de pantalla podien retallar el contenidor del full. Comprovada una pàgina A4 des de finestres amples i estretes; el PDF descarregable es conserva.

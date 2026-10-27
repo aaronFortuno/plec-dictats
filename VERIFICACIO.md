@@ -1,5 +1,13 @@
 # Verificació local · historial
 
+## Correcció del CI · 27 d’octubre de 2026
+
+- Contrastats dos logs d’Actions: `check-interactions.cjs` falla comprovant el missatge GPC de la bandera; `check-catalog-resilience.cjs` espera àudio quan el manifest publicat està bloquejat. Tots dos casos depenien de `output/audio/review-manifest.json`, absent al clon d’Actions.
+- Reproduïts els mateixos dos errors en una còpia local de HEAD creada amb `git archive`, sense fitxers ignorats ni índex de revisió generat.
+- Fixture explícita amb les metadades de revisió versionades, precedència conservada per a les fallades injectades i espera de l’estat real de la bandera. Afegida la comprovació de reproducció central/valenciana sense índex local.
+- **47 comprovacions, 0 errors** a la còpia neta amb les dues correccions: dades, PDF, àudios simulats, navegador i compatibilitat. `output/audio/` continua absent al final. Cap àudio sintetitzat, cap dependència instal·lada i cap canvi al funcionament del web. Evidència local a `output/ci-clean-proof.json` i `output/ci-clean-after.log`.
+- Sense comprovació del desplegament remot; la validació local no es presenta com un resultat de l’Actions posterior a la correcció.
+
 ## v1.30 · 27 d’octubre de 2026
 
 - **47 comprovacions locals, 0 errors**, amb navegador, accessibilitat, dades, compatibilitat, PDF i la prova nova de layout/impressió. Sense síntesi ni comprovació del desplegament remot.

@@ -20,8 +20,11 @@ const fakeAnalytics=`(()=>{let s={status:'disabled',reason:'gpc'},listeners=[];w
  await p.setViewportSize({width:1440,height:900});await p.reload();await p.waitForSelector('#sheet-preview svg');await p.waitForTimeout(250);
  await p.locator('#paper-viewport').hover();const z=(await read()).zoom;await p.mouse.wheel(0,80);await p.waitForTimeout(250);assert.equal((await read()).zoom,z);assert(await p.locator('#zoom-scroll-hint').isVisible());await p.keyboard.down('Control');await p.mouse.wheel(0,-100);await p.keyboard.up('Control');assert((await read()).zoom>z);
  await p.route('**/analytics.js?*',r=>r.fulfill({contentType:'text/javascript',body:fakeAnalytics}));
+ // A fresh checkout has no generated output/audio index. Use the committed
+ // recording metadata explicitly rather than depending on the author's files.
+ await p.route('**/output/audio/review-manifest.json',r=>r.fulfill({json:require('../audio/review-manifest.json')}));
  await p.addInitScript(()=>Object.defineProperty(navigator,'brave',{value:{isBrave:async()=>true},configurable:true}));
- await p.reload();await p.waitForSelector('#sheet-preview svg');await p.locator('#catalog-open').click();await p.waitForSelector('.pronunciation-row');await p.waitForTimeout(300);
+ await p.reload();await p.waitForSelector('#sheet-preview svg');await p.locator('#catalog-open').click();await p.waitForSelector('.pronunciation-row');await p.waitForFunction(()=>document.querySelector('.report-control')?.dataset.reportTooltip.includes('Global Privacy Control'));
  const caption=p.locator('.catalog-report-help');await caption.hover();await p.waitForTimeout(250);assert((await p.locator('#audio-report-tooltip').textContent()).includes('al costat de l’àudio concret'));
  const flag=p.locator('.report-control').first();await flag.hover();await p.waitForTimeout(250);
  let rects=await p.evaluate(()=>{const a=document.querySelector('.report-control').getBoundingClientRect(),t=document.querySelector('#audio-report-tooltip').getBoundingClientRect(),d=document.querySelector('#catalog-dialog').getBoundingClientRect();return {a:{x:a.x,y:a.y,right:a.right,bottom:a.bottom},t:{x:t.x,y:t.y,right:t.right,bottom:t.bottom},d:{x:d.x,y:d.y,right:d.right,bottom:d.bottom}};});

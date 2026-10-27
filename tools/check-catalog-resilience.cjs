@@ -3,16 +3,21 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLEC_NODE_MODULES,'playwright'):'playwright');
 const BASE='http://127.0.0.1:4176';
 (async()=>{const browser=await chromium.launch({channel:'chrome'});try{
- async function pageFor({blocked=[],delayMallorcan=0}={}){
+ async function pageFor({blocked=[],delayMallorcan=0,reviewAvailable=true}={}){
   const p=await browser.newPage({viewport:{width:1440,height:900}}),errors=[],requests=[];p.setDefaultTimeout(12000);
   p.on('pageerror',error=>errors.push(error.message));p.on('request',r=>requests.push(new URL(r.url()).pathname));
   await p.addInitScript(()=>{window.testAudio=[];window.Audio=class{constructor(url){this.url=url;this.paused=false;window.testAudio.push(this);}play(){return Promise.resolve();}pause(){this.paused=true;}removeAttribute(){}};});
+  // Deterministic fixture for the optional local review resource. Register it
+  // before fault routes, so the intentional failures below take precedence.
+  await p.route('**/output/audio/review-manifest.json',route=>reviewAvailable?route.fulfill({json:require('../audio/review-manifest.json')}):route.fulfill({status:404,body:'Not found'}));
   for(const resource of blocked)await p.route('**/'+resource,route=>route.abort());
   if(delayMallorcan)await p.route('**/runtime/mallorcan.json',async route=>{await new Promise(resolve=>setTimeout(resolve,delayMallorcan));await route.continue().catch(()=>{});});
   await p.goto(BASE+'/ca/');await p.waitForSelector('#sheet-preview svg');await p.click('#catalog-open');await p.waitForSelector('.pronunciation-row');
   return {p,errors,requests};
  }
  const play=(p,variety)=>p.locator('[data-action=play][data-variety='+variety+'].review-icon').first();
+ // Real clean-checkout case: no local review index, both published voices play.
+ {const {p,errors}=await pageFor({reviewAvailable:false});await p.locator('[data-retry-resource=review]').waitFor();await p.waitForFunction(()=>!document.querySelector('[data-action=play][data-variety=central].review-icon').disabled);assert(await play(p,'valencia').isEnabled());for(const variety of ['central','valencia']){await play(p,variety).click();assert((await p.evaluate(()=>window.testAudio.at(-1).url)).includes('/assets/audio/'));}assert.equal(await p.evaluate(()=>window.testAudio.length),2);assert.deepEqual(errors,[]);await p.close();}
  // A broken IPA resource cannot gate either audio manifest, identities or playback.
  {const {p,errors,requests}=await pageFor({blocked:['runtime/valencian.json']});await play(p,'central').waitFor({state:'visible'});await p.waitForFunction(()=>!document.querySelector('[data-action=play][data-variety=central].review-icon').disabled);
   await p.locator('[data-retry-resource=valencia]').waitFor();assert(await play(p,'valencia').isEnabled());assert.equal(await p.locator('[data-variety=valencia].ipa-play .ipa-text').first().textContent(),'—');

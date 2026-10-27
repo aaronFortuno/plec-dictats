@@ -66,3 +66,13 @@ node tools/check-all.cjs --browser --start-server
 La validació del generador ha d’acabar abans que comenci la publicació; cada fitxer es reemplaça amb un temporal. Això no converteix tota la col·lecció en una transacció indivisible. Els TXT de revisió editats a mà no se sobreescriuen i les instantànies de codis ja publicats no es modifiquen. Editar el TSV d’IPA requereix també l’exportació del perfil corresponent, segons la guia de pronunciació.
 
 Cap ordre d’aquesta guia porta `--execute` de síntesi. La creació d’àudios reals continua essent un flux separat amb pla, pressupost i paquet identificats.
+
+## Proves de navegador i recursos locals opcionals
+
+Una còpia neta no conté `output/audio/review-manifest.json`: és un índex de treball generat i ignorat per Git. No és un requisit per executar les comprovacions. Les proves que necessiten metadades de revisió les han d’injectar explícitament a partir de `audio/review-manifest.json`, que sí que forma part del repositori. Les rutes que simulen errors es registren després de la fixture perquè continuïn tenint prioritat.
+
+`check-interactions.cjs` fixa aquesta resposta i espera que les dades de la bandera estiguin preparades abans de comprovar GPC; un retard fix no acredita aquesta preparació. `check-catalog-resilience.cjs` separa la fixture dels casos de fallada i comprova també el cas real sense índex local: es pot reproduir des dels paquets publicats. Es conserven les comprovacions de bloqueig de manifests i taules IPA, reintents, privacitat i reproducció.
+
+El 27/10/2026 s’han reproduït en una còpia de només fitxers versionats els mateixos dos errors observats a Actions. Amb les dues correccions, les 47 comprovacions passen en aquella còpia, sense instal·lar dependències noves ni generar l’índex local. S’ha utilitzat un servidor temporal en un port diferent per no aturar el servidor de l’usuari; només s’han substituït els ports dels tests dins de la còpia descartable. No és una execució d’Ubuntu, però reprodueix i resol la dependència de dades que causava els errors dels registres de CI.
+
+Registres de referència: [execució del 26/10](https://github.com/aaronFortuno/plec-dictats/actions/runs/40378928936/job/121769539485) i [execució del 27/10](https://github.com/aaronFortuno/plec-dictats/actions/runs/40483492252/job/122119374905). En tots dos, Node, dependències i Chrome s’instal·len correctament; fallen les mateixes proves de navegador. Consultar aquests registres per diagnosticar el CI no equival a comprovar el desplegament del web.
