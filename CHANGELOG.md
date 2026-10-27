@@ -1,5 +1,11 @@
 # Historial
 
+## 1.30 · 27 d’octubre de 2026
+
+- Layout del preparador consolidat a `workspace-layout.css`: marc, columnes, calaixos, peu i impressió. Retirades les disposicions antigues de panells apilats i el full `responsive-workspace.css` que les anul·lava.
+- Formulari de recuperació unificat, amb l’aspecte i les propietats efectives conservats. Comparació amb 110 escenaris previs de mides, temes, panells i pàgines.
+- Corregida la impressió directa del navegador, on les regles de pantalla podien retallar el contenidor del full. Comprovada una pàgina A4 des de finestres amples i estretes; el PDF descarregable es conserva.
+
 ## 1.29 · 27 d’octubre de 2026
 
 - Cerca del preparador separada del DOM, amb cancel·lació, represa i protecció de resultats antics comprovades. Codis, fonts i ordre dels mots preservats.

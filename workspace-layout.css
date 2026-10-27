@@ -1,0 +1,456 @@
+/* Layout vigent del preparador: marc, columnes, calaixos, peu i impressió.
+   Els components i els seus controls es defineixen abans, sense layouts alternatius. */
+:root {
+  --drawer-width: min(340px, calc(100% - 45px));
+  --toolbar-h: 38px;
+  --drawer-transition: 220ms ease;
+}
+
+/* Estructura global a tots els amplades: cos fix, només panells amb scroll intern */
+html, body {
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow: hidden;
+}
+
+.site-header {
+  min-width: 0;
+}
+
+.site-header * {
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.app-main {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 16px 10px;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  overflow: hidden;
+}
+
+/* Tres columnes en escriptori; per sota de 1200 px només queda el visor. */
+.workspace.seed-workspace {
+  display:grid;
+  width:100%;
+  height:100%;
+  min-height:0;
+  grid-template-columns:clamp(304px,24vw,350px) minmax(0,1fr) clamp(248px,20vw,290px);
+  gap:14px;
+  align-items:stretch
+}
+
+.preview-column {
+  min-width:0;
+  min-height:0;
+  display:grid;
+  grid-template-rows:minmax(0,1fr);
+  gap:10px
+}
+
+@media(min-width:1700px) {
+  .workspace.seed-workspace {
+    gap:18px
+  }
+  .app-main {
+    padding-inline:20px
+  }
+}
+
+@media(min-width:1000px) and (max-width:1199px) {
+  body {
+    min-height:100svh
+  }
+  .workspace.seed-workspace {
+    gap:10px
+  }
+  .app-main {
+    padding-inline:10px
+  }
+  .config {
+    padding-inline:13px
+  }
+}
+
+@media(max-width:999px) {
+  body {
+    min-height:100dvh
+  }
+  .workspace.seed-workspace {
+    gap:12px
+  }
+  .app-main {
+    padding:12px
+  }
+  .config {
+    overflow:visible;
+    scrollbar-gutter:auto
+  }
+  .config-scroll {
+    scrollbar-gutter:auto;
+    padding-right:0
+  }
+}
+
+@media(max-width:760px) {
+  .workspace.seed-workspace {
+    gap:16px
+  }
+  .management-scroll {
+    padding-right:0
+  }
+}
+
+.workspace-toolbar {
+  display:none
+}
+
+.workspace-drawer-toggle,.workspace-drawer-close {
+  border:0;
+  background:transparent;
+  color:var(--green);
+  font:600 12px var(--sans);
+  cursor:pointer;
+  padding:7px 10px;
+  border-radius:6px
+}
+
+.workspace-drawer-toggle[aria-expanded=true] {
+  background:var(--soft)
+}
+
+.workspace-drawer-toggle .lucide,.workspace-drawer-close .lucide {
+  width:18px;
+  height:18px;
+  flex-shrink:0
+}
+
+.workspace-drawer-close {
+  align-items:center
+}
+
+/* Pantalles amples: conserva les 3 columnes existents */
+@media (min-width: 1200px) {
+  .workspace.seed-workspace {
+    min-height: 0;
+    overflow: hidden;
+  }
+  .workspace.seed-workspace .config-scroll,   .workspace.seed-workspace .management-scroll {
+    min-height: 0;
+    overflow-y: auto;
+  }
+  .workspace-drawer-toggle,   .workspace-drawer-close,   .workspace-backdrop {
+    display: none !important;
+  }
+}
+
+/* Pantalles estretes: previsualització central + calaixos off-canvas */
+@media (max-width: 1199px) {
+  .app-main {
+    grid-template-rows: var(--toolbar-h) minmax(0, 1fr);
+  }
+  .workspace-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0 0.75rem;
+    min-height: 0;
+    border-bottom: 1px solid var(--line);
+    background: var(--white);
+  }
+  .workspace-drawer-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    max-width: 48%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .workspace.seed-workspace {
+    position: relative;
+    display: grid;
+    min-height: 0;
+    overflow: hidden;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "preview";
+    grid-template-rows:minmax(0,1fr);
+    height:100%;
+    align-items:stretch;
+  }
+  .workspace.seed-workspace > .preview-column {
+    grid-area: preview;
+    min-height: 0;
+    min-width: 0;
+    display: grid;
+    height:100%;
+    max-height:none;
+    position:relative;
+    top:auto;
+    grid-column:1;
+    grid-row:1;
+  }
+  .workspace.seed-workspace .paper-stage,   .workspace.seed-workspace .paper-viewport {
+    min-height: 0;
+  }
+  /* Els panells laterals esdevenen calaixos absoluts, mai apilats */
+  .workspace.seed-workspace > aside.config.card,   .workspace.seed-workspace > aside.management.card {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: var(--drawer-width);
+    max-width: 100%;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    transition: transform var(--drawer-transition), visibility var(--drawer-transition);
+    visibility: hidden;
+    grid-column:auto;
+    grid-row:auto;
+    margin:0;
+    max-height:none;
+  }
+  .workspace.seed-workspace > aside.config.card {
+    left: 0;
+    transform: translateX(-100%);
+    border-right: 1px solid var(--line);
+  }
+  .workspace.seed-workspace > aside.management.card {
+    right: 0;
+    transform: translateX(100%);
+    border-left: 1px solid var(--line);
+  }
+  .workspace.seed-workspace > aside.config.card.drawer-open,   .workspace.seed-workspace > aside.management.card.drawer-open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+  .workspace.seed-workspace .config-scroll,   .workspace.seed-workspace .management-scroll {
+    min-height: 0;
+    flex: 1 1 auto;
+    overflow-y: auto;
+  }
+  .workspace-drawer-close {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    align-self: flex-end;
+    margin: 0.5rem 0.5rem 0;
+  }
+  .workspace-backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    background: var(--ink);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--drawer-transition), visibility var(--drawer-transition);
+  }
+  .workspace-backdrop.backdrop-visible {
+    opacity: 0.35;
+    visibility: visible;
+  }
+}
+
+/* Project identity centred independently of the side actions. */
+.site-footer {
+  border-top:1px solid var(--line);
+  font-size:11px;
+  color:var(--muted);
+  flex-wrap:nowrap;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  gap:8px 16px;
+  align-items:center;
+  height:auto;
+  min-height:40px
+}
+
+.site-footer .footer-brand {
+  display:none
+}
+
+.site-footer p {
+  margin:0;
+  line-height:1.3;
+  max-width:none
+}
+
+.site-footer .footer-tagline {
+  grid-column:1;
+  justify-self:start
+}
+
+.site-footer .umbrella-project {
+  display:block;
+  grid-column:2;
+  justify-self:center;
+  margin:0;
+  white-space:nowrap;
+  font-size:11px
+}
+
+.umbrella-project .umbrella-brand {
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  margin-left:3px;
+  vertical-align:middle;
+  color:var(--green);
+  font:700 15px/1 var(--serif);
+  letter-spacing:-.5px;
+  text-decoration:none
+}
+
+.umbrella-brand svg {
+  width:22px;
+  height:22px;
+  flex:none
+}
+
+.umbrella-brand .umbrella-dot {
+  color:var(--accent)
+}
+
+.umbrella-project .umbrella-brand:hover {
+  text-decoration:underline;
+  text-underline-offset:3px
+}
+
+.site-footer>span:last-child {
+  display:flex;
+  align-items:center;
+  gap:7px;
+  white-space:nowrap;
+  width:auto;
+  padding:0;
+  grid-column:3;
+  justify-self:end;
+  margin:0
+}
+
+@media(max-width:1000px) {
+  .site-footer .footer-tagline {
+    display:none
+  }
+}
+
+@media(max-width:999px) {
+  .site-footer {
+    padding-block:8px
+  }
+}
+
+@media(max-width:760px) {
+  .site-footer {
+    flex-wrap:wrap
+  }
+}
+
+@media(max-width:600px) {
+  .site-footer {
+    grid-template-columns:1fr;
+    gap:2px;
+    padding-block:6px;
+    min-height:50px
+  }
+  .site-footer .umbrella-project {
+    grid-column:1;
+    grid-row:1
+  }
+  .site-footer>span:last-child {
+    grid-column:1;
+    grid-row:2;
+    justify-self:center;
+    font-size:10px
+  }
+}
+
+/* At high browser zoom or in a short landscape window, keep a usable workspace
+   and allow page scrolling. The anchored footer remains the ordinary layout. */
+@media screen and (max-height:420px) {
+  body {
+    height:auto;
+    min-height:100dvh;
+    grid-template-rows:auto minmax(320px,1fr) auto;
+    overflow-y:auto
+  }
+  .app-main {
+    min-height:320px
+  }
+}
+
+@media screen and (max-height:420px) and (max-width:1199px) {
+  .workspace.seed-workspace>aside.config.card,   .workspace.seed-workspace>aside.management.card {
+    position:fixed;
+    top:8px;
+    bottom:8px;
+    max-height:calc(100dvh - 16px)
+  }
+  .workspace.seed-workspace>aside.config.card {
+    left:8px
+  }
+  .workspace.seed-workspace>aside.management.card {
+    right:8px
+  }
+  .workspace-backdrop {
+    position:fixed;
+    inset:0
+  }
+}
+
+/* Impressió: amaga la UI introduïda */
+@media print {
+  * {
+    animation:none!important;
+    transition:none!important
+  }
+  .app-main {
+    display:block;
+    padding:0;
+    overflow:visible
+  }
+  .paper {
+    position:static;
+    transform:none!important;
+    width:210mm!important;
+    height:297mm!important;
+    max-width:none;
+    max-height:none;
+    box-shadow:none
+  }
+  .paper svg {
+    width:210mm;
+    height:297mm
+  }
+  .zoom-tools,.sr-only {
+    display:none!important
+  }
+  body {
+    height:auto;
+    display:block;
+    overflow:visible
+  }
+  .workspace.seed-workspace>aside {
+    display:none!important
+  }
+  .workspace.seed-workspace,.workspace.seed-workspace>.preview-column,.workspace.seed-workspace .paper-stage,.workspace.seed-workspace .paper-viewport {
+    display:contents!important;
+    height:auto;
+    overflow:visible;
+    position:static
+  }
+  .workspace-toolbar,   .workspace-drawer-toggle,   .workspace-drawer-close,   .workspace-backdrop {
+    display: none !important;
+  }
+}

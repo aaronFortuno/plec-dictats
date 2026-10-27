@@ -1,5 +1,13 @@
 # Verificació local · historial
 
+## v1.30 · 27 d’octubre de 2026
+
+- **47 comprovacions locals, 0 errors**, amb navegador, accessibilitat, dades, compatibilitat, PDF i la prova nova de layout/impressió. Sense síntesi ni comprovació del desplegament remot.
+- Referència abans/després de 110 casos: 102 de pantalla conserven geometria i propietats calculades. 101 PNG idèntics i un amb un únic píxel diferent. Amplades de 320 a 1920 px, temes clar/fosc, laterals, diàlegs, quart de full, dictat i guia.
+- Els 8 casos d’impressió canvien només al cos/contenidor per corregir un retall preexistent de les regles de pantalla. Paper amb la mateixa geometria; PDF d’impressió del navegador d’una pàgina A4 a 1440, 1024 i 390 px. El generador de PDF descarregable continua passant les seves variants.
+- Propietari del layout: `workspace-layout.css`. Retirat `responsive-workspace.css`; fora de `workspace.css`, `styles.css` i `seeds.css` les disposicions antigues de les columnes. Formulari de recuperació sense blocs duplicats.
+- Comparador manual reutilitzable a `tools/compare-css-layout.cjs`; les diferències intencionades d’impressió s’han revisat explícitament, sense amagar la sortida d’error del contrast amb la referència antiga. Captures locals a `output/css-consolidation/`.
+
 ## v1.29 · 27 d’octubre de 2026
 
 - **46 comprovacions locals, 0 errors**, inclosos navegador, PDF, dades i compatibilitat. No s’ha fet síntesi ni comprovació del desplegament remot.

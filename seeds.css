@@ -1,12 +1,10 @@
-/* Content configuration, preview and management occupy separate columns. */
-.workspace.seed-workspace{grid-template-columns:clamp(304px,24vw,350px) minmax(0,1fr) clamp(248px,20vw,290px)}
+/* Controls del codi, mots obligatoris i opcions del preparador. */
 .seed-workspace .quick-settings{gap:8px;padding-bottom:12px}
 .seed-workspace .focus-settings{margin-top:12px}
 .seed-workspace .focus-heading{margin-bottom:8px}
 .seed-workspace .focus-settings .tag-options{gap:6px}
 .seed-workspace .focus-settings .tag span{padding-block:7px}
 .seed-workspace .focus-settings .field-hint{margin-top:8px}
-.seed-workspace .preview-column{grid-template-rows:minmax(0,1fr)}
 .management{min-width:0;min-height:0;padding:18px 16px;border-radius:9px;overflow:hidden;display:grid;grid-template-rows:minmax(0,1fr)}
 .management-scroll{min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:10px;display:flex;flex-direction:column;gap:24px}
 .seed-toolbar,.oral-management{display:grid;gap:14px;min-width:0;margin:0;padding:0;border:0}
@@ -19,10 +17,6 @@
 .code-action .lucide{width:17px;height:17px}
 .management .button{min-height:36px;padding:8px 11px;font-size:12px;white-space:nowrap;gap:8px;justify-content:center}
 .seed-toolbar #download-pdf{width:100%;min-height:46px;font-size:13px}
-.recover-form{display:grid;gap:7px}
-.recover-form label{font-size:12px;font-weight:600;color:var(--muted)}
-.recover-form>div{display:flex;gap:6px;min-width:0}
-.recover-form input{flex:1;min-width:0;width:100%;font:13px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1px;text-transform:uppercase;padding:8px 9px}
 .oral-management{border-top:1px solid var(--line);padding-top:20px;margin-top:8px;gap:12px}
 .oral-management h2{font-size:19px}
 .oral-management .small-link{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:32px;font-size:12px}
@@ -32,7 +26,7 @@
 .recover-form{display:grid;gap:4px;margin:0;max-width:100%;min-width:0}
 .recover-form>label{font-size:11px;font-weight:600;color:var(--muted)}
 .recover-form>div{display:flex;gap:7px;min-width:0}
-.recover-form input{flex:1;width:100%;min-width:0;padding:7px 9px;font:14px ui-monospace,SFMono-Regular,Consolas,monospace;text-transform:uppercase}
+.recover-form input{flex:1;width:100%;min-width:0;padding:7px 9px;font:14px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1px;text-transform:uppercase}
 .required-settings{border-top:1px solid var(--line);margin-top:10px;padding-top:10px}
 .required-heading{display:flex;align-items:center;gap:8px;margin-bottom:7px}
 .required-settings h2{font:600 13px var(--sans);letter-spacing:0;margin:0;display:flex;align-items:baseline;gap:8px}
@@ -50,7 +44,6 @@
 .zoom-scroll-hint{position:absolute;bottom:60px;left:50%;transform:translate(-50%,4px);z-index:3;width:max-content;max-width:calc(100% - 20px);padding:9px 13px;background:var(--green);color:var(--white);border-radius:7px;box-shadow:0 3px 14px #233a3326;font-size:12px;line-height:1.5;text-align:center;pointer-events:none;opacity:0;transition:opacity var(--motion-duration) var(--motion-ease),transform var(--motion-duration) var(--motion-ease)}
 .zoom-scroll-hint.is-visible{opacity:1;transform:translate(-50%,0)}
 .zoom-scroll-hint kbd{font:600 11px var(--sans);border:1px solid #ffffff70;border-radius:3px;padding:1px 4px;margin-inline:2px}
-.seed-workspace .paper-viewport{touch-action:none}
 .required-input{display:flex;gap:7px;min-width:0}
 .required-input input{min-width:0;flex:1;width:100%}
 .required-input .button{min-height:34px;padding:6px 9px;font-size:11px}
@@ -73,30 +66,5 @@
   .seed-workspace .focus-heading{margin-bottom:6px}
   .required-settings{padding-top:8px}
 }
-@media(max-width:1240px){.site-header .bank-summary{display:none}}
-@media(min-width:900px) and (max-width:1199px){
-  body{height:auto;min-height:100svh;display:block;overflow:auto}
-  .workspace.seed-workspace{grid-template-columns:310px minmax(0,1fr);height:auto;align-items:start}
-  .seed-workspace .config{grid-column:1;grid-row:1;display:block}
-  .seed-workspace .management{grid-column:1;grid-row:2}
-  .seed-workspace .preview-column{grid-column:2;grid-row:1/span 2;position:sticky;top:12px;height:calc(100svh - 100px);min-height:540px}
-  .config-scroll,.management-scroll{overflow:visible}
-}
-@media(min-width:761px) and (max-width:899px){
-  .workspace.seed-workspace{grid-template-columns:minmax(0,1fr) minmax(0,1fr);height:auto;align-items:stretch}
-  .seed-workspace .config{grid-column:1;grid-row:1}
-  .seed-workspace .management{grid-column:2;grid-row:1}
-  .seed-workspace .preview-column{grid-column:1/-1;grid-row:2;position:relative;top:auto;height:850px;min-height:540px}
-}
-@media(max-width:760px){
-  .workspace.seed-workspace{grid-template-columns:minmax(0,1fr);height:auto}
-  .seed-workspace .config{grid-column:1;grid-row:1}
-  .seed-workspace .management{grid-column:1;grid-row:2}
-  .seed-workspace .preview-column{grid-column:1;grid-row:3;height:calc(100svh - 90px);min-height:520px;max-height:850px;position:relative;top:auto}
-  .config-scroll,.management-scroll{overflow:visible;padding-right:0}
-  .recover-form{width:100%}.required-settings h2{font-size:13px}
-  .site-header{padding-right:65px!important}
-  .site-header .theme-toggle{position:absolute;right:16px;top:14px}
-  .site-header nav{flex-basis:100%;justify-content:flex-start;margin:0;gap:18px}
-}
+@media(max-width:760px){.recover-form{width:100%}}
 @media print{.management,.seed-toolbar,.required-help,.zoom-scroll-hint{display:none!important}}

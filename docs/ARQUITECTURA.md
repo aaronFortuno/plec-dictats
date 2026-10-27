@@ -1,6 +1,6 @@
 # Arquitectura i límits dels mòduls
 
-Estat 1.29 · 27/10/2026. Continua essent una aplicació estàtica, sense framework ni servei de dades. Aquest inventari distingeix el codi que s’executa avui de les peces conservades per compatibilitat.
+Estat 1.30 · 27/10/2026. Continua essent una aplicació estàtica, sense framework ni servei de dades. Aquest inventari distingeix el codi que s’executa avui de les peces conservades per compatibilitat.
 
 ## Preparador i cerques
 
@@ -35,6 +35,6 @@ El grup `compatibility` de la porta de qualitat segueix comprovant aquestes dade
 
 ## Estils i feina pendent
 
-El preparador carrega `styles.css`, `workspace.css`, `seeds.css`, `catalog-browser.css`, `pronunciations.css`, `analytics.css`, `theme.css` i finalment `responsive-workspace.css`. El dictat reutilitza alguns estils globals amb la seva capa pròpia. L’ordre actual és deliberat; encara hi ha regles històriques de layout anul·lades per capes posteriors.
+El preparador carrega `styles.css`, `workspace.css`, `seeds.css`, `catalog-browser.css`, `pronunciations.css`, `analytics.css`, `theme.css` i finalment `workspace-layout.css`. Aquest últim és el propietari del marc, columnes, calaixos, peu i impressió del preparador. Les disposicions antigues que apilaven panells s’han retirat; la capçalera i els controls conserven els seus estils als fitxers de components. El dictat reutilitza estils globals amb la seva capa pròpia.
 
-Aquesta passada retira només els selectors exclusius dels controls ocults. La consolidació general de CSS, la càrrega diferida dels snapshots antics i la separació més àmplia d’estat/persistència d’`app.js` continuen pendents. S’han de tractar en lots independents amb comprovacions de mides, temes, diàlegs i PDF. El futur model de respostes/puntuació digital no s’ha d’incorporar dins del controlador de reproducció ni modificar la selecció reproduïble.
+La [consolidació 1.30](CSS-CONSOLIDACIO.md) contrasta 110 escenaris amb una referència prèvia i corregeix una anul·lació de les regles d’impressió. Encara es pot revisar el CSS de components històrics amb inventari de consumidors; no s’ha eliminat globalment el full compartit. Continuen pendents la càrrega diferida dels snapshots antics i la separació més àmplia d’estat/persistència d’`app.js`. El futur model de respostes/puntuació digital no s’ha d’incorporar dins del controlador de reproducció ni modificar la selecció reproduïble.

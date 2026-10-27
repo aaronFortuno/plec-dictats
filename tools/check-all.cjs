@@ -6,7 +6,7 @@ const GROUPS={
   data:['check-catalogs.cjs','check-catalog-build-safety.cjs','check-focus-edition.cjs','check-basic-vocabulary.cjs','check-focus-sheet.cjs','check-lexicon.cjs','check-pronunciation-table.cjs','check-central-g2p.cjs','check-valencian-pilot.cjs','check-valencian-batch.cjs','check-mallorcan-g2p.cjs','check-mallorcan-pilot.cjs','check-pseudo-g2p.cjs','check-pseudo-audio.cjs','check-matxa-pilot.cjs','check-pseudo-publication.cjs','check-published-audio.cjs'],
   'audio-mock':['check-audio-tools.cjs','check-audio-retry.cjs','check-instructions.cjs','check-pronunciation-sample.cjs'],
   pdf:['check-pdf.cjs','check-seed-pdf.cjs'],
-  browser:['check-basic-ui.cjs','check-interactions.cjs','check-layout-actions.cjs','check-accessibility-fixes.cjs','check-catalog-resilience.cjs','check-pseudo-ui.cjs','check-composer-lifecycle-ui.cjs'],
+  browser:['check-basic-ui.cjs','check-interactions.cjs','check-layout-actions.cjs','check-accessibility-fixes.cjs','check-catalog-resilience.cjs','check-pseudo-ui.cjs','check-composer-lifecycle-ui.cjs','check-workspace-layout.cjs'],
   compatibility:['check-catalog-audio.cjs','check-pronunciations.cjs','check-pronunciation-review.cjs']
 };
 

@@ -4,6 +4,8 @@ Data: 26/10/2026. Base inspeccionada: `6bc8092`, interfície 1.26.
 
 ## Resum
 
+**Seguiment 1.30:** consolidació del layout de T07 a `workspace-layout.css`, retirada de les disposicions apilades anul·lades i de `responsive-workspace.css`, peu i recuperació unificats. Referència de 110 casos: pantalla preservada i impressió directa corregida perquè les regles de pantalla en retallaven el contenidor. L’[informe de CSS](CSS-CONSOLIDACIO.md) concreta abast i evidència. La càrrega diferida d’edicions de T04 i una revisió més àmplia de components/estat continuen separades.
+
 **Seguiment 1.29:** segona frontera de T06 extreta a `composer-search.js`: cancel·lació, continuació i protecció davant progrés/resultats antics, amb proves pures i d’interfície. T07 avança retirant formularis/bindings/CSS de revisió local inaccessibles; les dades i els mòduls de compatibilitat es conserven sense carregar-los al catàleg. L’[inventari vigent](ARQUITECTURA.md) concreta propietats i consumidors. La resta de T06, la consolidació general del CSS i la càrrega diferida d’edicions continuen pendents; no s’afirma que tota la neteja estigui tancada.
 
 **Seguiment 1.27:** T01, T02, T03, la primera part de T04 i T05 implementats i comprovats localment. T08 resolt com a decisió de producte: es conserva el canal de banderes/Umami i es fa visible l’alternativa de correcció/PR. Les barreres A01–A03 de la revisió complementària també es corregeixen. Les troballes següents descriuen la base original `6bc8092`; no s’ha fet una reescriptura general.
