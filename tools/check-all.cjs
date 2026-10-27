@@ -2,11 +2,11 @@
 const fs=require('node:fs'),path=require('node:path'),{spawn,spawnSync}=require('node:child_process');
 const ROOT=path.resolve(__dirname,'..');
 const GROUPS={
-  pure:['check.cjs','check-seeds.cjs','check-seeds-v2.cjs','check-dictation-session.cjs','check-dictation.cjs','check-catalog-browser.cjs','check-catalog-resources.cjs','check-audio-varieties.cjs','check-analytics.cjs','check-dictation-analytics.cjs','check-site-links.cjs','check-local-files.cjs'],
+  pure:['check.cjs','check-seeds.cjs','check-seeds-v2.cjs','check-dictation-session.cjs','check-dictation.cjs','check-catalog-browser.cjs','check-catalog-resources.cjs','check-composer-search.cjs','check-audio-varieties.cjs','check-analytics.cjs','check-dictation-analytics.cjs','check-site-links.cjs','check-local-files.cjs'],
   data:['check-catalogs.cjs','check-catalog-build-safety.cjs','check-focus-edition.cjs','check-basic-vocabulary.cjs','check-focus-sheet.cjs','check-lexicon.cjs','check-pronunciation-table.cjs','check-central-g2p.cjs','check-valencian-pilot.cjs','check-valencian-batch.cjs','check-mallorcan-g2p.cjs','check-mallorcan-pilot.cjs','check-pseudo-g2p.cjs','check-pseudo-audio.cjs','check-matxa-pilot.cjs','check-pseudo-publication.cjs','check-published-audio.cjs'],
   'audio-mock':['check-audio-tools.cjs','check-audio-retry.cjs','check-instructions.cjs','check-pronunciation-sample.cjs'],
   pdf:['check-pdf.cjs','check-seed-pdf.cjs'],
-  browser:['check-basic-ui.cjs','check-interactions.cjs','check-layout-actions.cjs','check-accessibility-fixes.cjs','check-catalog-resilience.cjs','check-pseudo-ui.cjs'],
+  browser:['check-basic-ui.cjs','check-interactions.cjs','check-layout-actions.cjs','check-accessibility-fixes.cjs','check-catalog-resilience.cjs','check-pseudo-ui.cjs','check-composer-lifecycle-ui.cjs'],
   compatibility:['check-catalog-audio.cjs','check-pronunciations.cjs','check-pronunciation-review.cjs']
 };
 

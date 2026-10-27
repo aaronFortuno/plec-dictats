@@ -18,9 +18,9 @@ Cada avís d’àudio identifica el mot, varietat, paquet immutable i empremta d
 
 ## Anotacions anteriors i descàrregues
 
-Les notes de revisió anteriors, amb la clau local `plec-pronunciation-reviews-v1`, es conserven sense enviar-les a Umami. Els mòduls d’importació/exportació continuen al codi per compatibilitat, però els controls antics no formen part del canal públic actual.
+Les notes de revisió anteriors, amb la clau local `plec-pronunciation-reviews-v1`, es conserven sense enviar-les a Umami. El mòdul d’importació/exportació es conserva per compatibilitat i recuperació de dades. A la 1.29 es retiren els controls ocults i els bindings del catàleg: el web actual no carrega el mòdul ni toca les anotacions anteriors.
 
-**Descarrega les IPA** reuneix central i valencià en un únic CSV amb els estats de proposta. Els TSV originals continuen sent fonts d’edició del projecte, però no cal obrir-los per consultar ni notificar errors.
+**Descarrega les IPA** reuneix les tres columnes IPA en un únic CSV amb els estats de proposta. Els TSV originals continuen sent fonts d’edició del projecte, però no cal obrir-los per consultar ni notificar errors.
 
 ## Identitat dels enregistraments
 

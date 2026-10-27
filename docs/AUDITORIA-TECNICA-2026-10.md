@@ -4,6 +4,8 @@ Data: 26/10/2026. Base inspeccionada: `6bc8092`, interfície 1.26.
 
 ## Resum
 
+**Seguiment 1.29:** segona frontera de T06 extreta a `composer-search.js`: cancel·lació, continuació i protecció davant progrés/resultats antics, amb proves pures i d’interfície. T07 avança retirant formularis/bindings/CSS de revisió local inaccessibles; les dades i els mòduls de compatibilitat es conserven sense carregar-los al catàleg. L’[inventari vigent](ARQUITECTURA.md) concreta propietats i consumidors. La resta de T06, la consolidació general del CSS i la càrrega diferida d’edicions continuen pendents; no s’afirma que tota la neteja estigui tancada.
+
 **Seguiment 1.27:** T01, T02, T03, la primera part de T04 i T05 implementats i comprovats localment. T08 resolt com a decisió de producte: es conserva el canal de banderes/Umami i es fa visible l’alternativa de correcció/PR. Les barreres A01–A03 de la revisió complementària també es corregeixen. Les troballes següents descriuen la base original `6bc8092`; no s’ha fet una reescriptura general.
 
 La base actual és aprofitable per continuar: el mostreig reproduïble, les edicions congelades, la geometria del full, la sessió del dictat i la validació dels àudios ja tenen separació i proves útils. No hi ha motiu per reescriure l’aplicació ni per introduir un framework abans del pilot digital. La [revisió d’accessibilitat complementària](AUDITORIA-ACCESSIBILITAT-2026-10.md) cobreix la navegació per teclat, el reflow i les comprovacions del navegador que no s’avaluen aquí.

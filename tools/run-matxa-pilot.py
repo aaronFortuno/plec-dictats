@@ -71,6 +71,9 @@ def main():
     if not args.execute:
         print(json.dumps({"inference": False, "words": args.limit, "voices": plan["voices"], "model": plan["model"]["repository"]}))
         return
+    feedback = read(ROOT / "audio/pronunciation/ca/matxa-pilot-feedback.json")
+    if feedback.get("synthesisStatus") == "on-hold":
+        raise ValueError("Matxa synthesis is on hold following the listening review")
     if len(plan["entries"]) != 18 or plan["voices"] != [{"name": "Olga", "speakerId": 0}, {"name": "Quim", "speakerId": 1}]:
         raise ValueError("Audition identity mismatch")
     if plan["source"] != "audio/pronunciation/recordings/ca-mallorcan-palma-pilot-v1.json" or plan["model"]["localPath"] != "tmp/matxa-model/model.onnx":

@@ -1,5 +1,11 @@
 # Historial
 
+## 1.29 · 27 d’octubre de 2026
+
+- Cerca del preparador separada del DOM, amb cancel·lació, represa i protecció de resultats antics comprovades. Codis, fonts i ordre dels mots preservats.
+- Retirats el formulari ocult de revisió local, els controls inaccessibles d’importació/exportació i el CSS exclusiu. Les anotacions antigues es conserven i el canal de banderes actual no canvia.
+- Àudios balears en pausa després de les proves amb Azure i Matxa. Es mantenen les IPA; el catàleg i la guia expliquen la manca de dicció prou clara i consistent per a l’ús educatiu. Les noves síntesis Matxa queden bloquejades.
+
 ## 1.28 · 27 d’octubre de 2026
 
 - Lectures IPA editorials per a les 96 pseudoparaules en central, valencià i mallorquí, sense modificar grafies, ID ni codis. Les formes inventades no es presenten com a mots amb una única escriptura normativa.

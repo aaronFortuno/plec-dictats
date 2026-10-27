@@ -1,5 +1,14 @@
 # Verificació local · historial
 
+## v1.29 · 27 d’octubre de 2026
+
+- **46 comprovacions locals, 0 errors**, inclosos navegador, PDF, dades i compatibilitat. No s’ha fet síntesi ni comprovació del desplegament remot.
+- Cerca desacoblada del DOM: filtres copiats, intents acumulats i nonce de continuació exactes; cancel·lació, recuperació i canvi de mode invaliden resultats/progrés antics. Una finalització antiga no modifica l’estat d’una cerca nova. Contrast addicional amb el motor real de llavors.
+- Prova de navegador amb cerques retardades: canvi de quantitat, represa, recuperació del codi antic ADZ52356A, cancel·lació i canvi a pseudoparaules. Varietat valenciana conservada; sense errors JavaScript.
+- Catàleg sense formulari/botons ocults de revisió local ni petició de `pronunciation-review.js`. Una anotació antiga amb bytes fins i tot malformats es conserva exactament a localStorage. Bandera, consentiment i compatibilitat de dades segueixen passant.
+- Catàleg i guia informen de la pausa balear per dicció insuficient; IPA visibles. Els dos executors Matxa (original i lent) rebutgen la síntesi abans de carregar el model, comprovat sense generar cap àudio.
+- El layout general no es reescriu: es retira només el CSS exclusiu dels controls ocults. La resta de neteja queda inventariada a `docs/ARQUITECTURA.md`.
+
 ## v1.28 · 27 d’octubre de 2026
 
 - Segona prova local de Matxa: 36 WAV regenerats amb escala de durada 1,25, més 72 derivats amb silenci inicial. Els 144 WAV de les dues mostres i els derivats es descodifiquen correctament; hashes, identitats i conservació exacta del PCM després dels zeros comprovats. Pàgina de 18 files/72 controls, canvi reversible del silenci, reproducció nativa de «xocolata» i vista de 390 px sense desbordament global. Els originals són intactes; la pronunciació queda pendent d’escolta.

@@ -1,5 +1,7 @@
 # Mostra local de Matxa-TTS v2
 
+**Estat vigent · 1.29, 27/10/2026: en pausa.** La segona escolta aprecia una millora amb el ritme més lent i prefereix la veu 0 (identificada per l’usuari com Quim). La veu 1 resulta metàl·lica o artificial en alguns mots i encara hi ha pronúncies poc clares. L’usuari decideix no publicar els àudios: la dicció dels sistemes provats no és prou acurada i consistent per a l’ús educatiu. Es mantenen les IPA i els enregistraments locals de recerca; també s’ajorna el contrast nadiu. El feedback marca `synthesisStatus: on-hold` i l’executor bloqueja `--execute`, tant original com lent, abans de carregar el model. Les instruccions de síntesi següents documenten el procediment històric, no una represa autoritzada.
+
 26/10/2026. L’usuari autoritza comparar els mateixos 18 mots del pilot d’Azure amb Matxa. Aquesta autorització cobreix una mostra local; **no reprèn el lot balear d’Azure ni publica una varietat mallorquina al dictat de l’alumnat**. L’escolta i la validació dialectal queden pendents.
 
 ## Model i diferències que cal tenir presents

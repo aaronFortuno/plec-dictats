@@ -15,7 +15,8 @@
   const STORAGE='plec-seeds-v1:'+L.id;
   const track=(name,data)=>window.PlecAnalytics?.track(name,data);
   const defaults=mode=>({count:mode==='words'?24:20,stage:mode==='words'?'cs':'all',basic:false,tags:[...(mode==='words'?S.WORD_FOCUSES:S.PSEUDO_FOCUSES)],required:[],code:null});
-  let state={mode:'words',modelSide:'left',foldStyle:'thirds',variety:'central',sessions:{words:defaults('words'),pseudo:defaults('pseudo')}},current=null,busy=false,job=0,controller=null,pendingSearch=null,toastTimer;
+  let state={mode:'words',modelSide:'left',foldStyle:'thirds',variety:'central',sessions:{words:defaults('words'),pseudo:defaults('pseudo')}},current=null,toastTimer;
+  const search=window.PlecComposerSearch.create({seeds:S,randomNonce:()=>randomNonce()});
   let legacy=null;
   try{legacy=localStorage.getItem('plec-dictats-v1:'+L.id)||localStorage.getItem('plec-dictats-v1');}catch{}
   const session=()=>state.sessions[state.mode];
@@ -51,31 +52,28 @@
     if(next.language!==L.id)throw new Error('El codi correspon a una altra llengua.');
     edition=next;C=next.catalog;state.mode=result.recipe.mode;
     const s=session();s.count=result.recipe.count;s.stage=result.recipe.stage;s.basic=next.selection?.vocabulary==='basic';s.tags=[...result.recipe.tags];s.code=result.code;if(!keepRequired)s.required=[];
-    current=result;pendingSearch=null;persist();updateControls();renderPreview();updateURL();
+    current=result;search.discardContinuation();persist();updateControls();renderPreview();updateURL();
   }
   const randomNonce=()=>{const values=new Uint32Array(1),ceiling=Math.floor(4294967296/S.VARIANTS)*S.VARIANTS;do{crypto.getRandomValues(values);}while(values[0]>=ceiling);return values[0]%S.VARIANTS;};
-  function stopSearch(){job++;controller?.abort();controller=null;busy=false;pendingSearch=null;}
+  const stopSearch=()=>search.cancel();
   async function generate({resume=false}={}){
-    const continuing=resume?pendingSearch:null;
-    // New exercises use current focus definitions; recovered codes keep their archive.
+    // Recovered codes retain their archive; new exercises use current definitions.
+    const continuing=resume&&search.canResume;
     const targetSlot=state.mode==='words'&&session().basic&&R.basic!==undefined?R.basic:R.current;
     if(!continuing&&edition.slot!==targetSlot){edition=R.editions.find(e=>e.slot===targetSlot);C=edition.catalog;updateControls();}
-    stopSearch();const id=job,previous=current;current=null;session().code=null;persist();updateURL();busy=true;controller=new AbortController();renderPreview();updateAvailability();
-    $('search-status').textContent=session().required.length?'Buscant un codi compatible…':'';
-    try{
-      const p=continuing?.prepared||S.prepare(edition,recipe()),required=continuing?.required||[...session().required],prior=continuing?.attempts||0;
-      let start=continuing?.nextNonce??randomNonce();if(!continuing&&previous&&previous.index===p.index&&previous.epoch===p.epoch&&start===previous.nonce)start=(start+1)%S.VARIANTS;
-      const result=await S.search(p,required,{start,maxAttempts:continuing?.remaining??S.VARIANTS,signal:controller.signal,onProgress:attempts=>{if(id===job)$('search-status').textContent=`${(prior+attempts).toLocaleString(L.locale)} de ${S.VARIANTS.toLocaleString(L.locale)} variants comprovades…`;}});
-      if(id!==job)return;
-      if(!result.found){
-        if(result.remaining){pendingSearch={prepared:p,required,nextNonce:result.nextNonce,remaining:result.remaining,attempts:prior+result.attempts};$('search-status').textContent=`Encara no hem trobat cap codi. ${(prior+result.attempts).toLocaleString(L.locale)} de ${S.VARIANTS.toLocaleString(L.locale)} variants comprovades. Pots continuar la cerca o ajustar els mots.`;}
-        else $('search-status').textContent=`Cap de les ${S.VARIANTS.toLocaleString(L.locale)} variants inclou tots aquests mots. Treu algun mot o ajusta els focus.`;
-        return;
-      }
-      const code=S.encode({epoch:p.epoch,recipe:p.index,nonce:result.nonce});setCode(code,{keepRequired:true});
-      const attempts=prior+result.attempts;$('search-status').textContent=required.length?`Codi trobat després de ${attempts.toLocaleString(L.locale)} ${attempts===1?'intent':'intents'}.`:'';
-    }catch(error){if(id===job&&!controller?.signal.aborted)$('search-status').textContent=error.message;}
-    finally{if(id===job){busy=false;controller=null;renderPreview();updateAvailability();}}
+    const outcome=await search.run({edition,recipe:recipe(),required:session().required,previous:current,resume,
+      onStart(){current=null;session().code=null;persist();updateURL();renderPreview();updateAvailability();$('search-status').textContent=session().required.length?'Buscant un codi compatible…':'';},
+      onProgress:attempts=>{$('search-status').textContent=attempts.toLocaleString(L.locale)+' de '+S.VARIANTS.toLocaleString(L.locale)+' variants comprovades…';}
+    });
+    if(!search.isCurrent(outcome)||outcome.status==='stale')return;
+    const attempts=outcome.attempts?.toLocaleString(L.locale),variants=S.VARIANTS.toLocaleString(L.locale);
+    if(outcome.status==='found'){
+      setCode(outcome.code,{keepRequired:true});
+      $('search-status').textContent=outcome.required.length?'Codi trobat després de '+attempts+' '+(outcome.attempts===1?'intent':'intents')+'.':'';
+    }else if(outcome.status==='paused')$('search-status').textContent='Encara no hem trobat cap codi. '+attempts+' de '+variants+' variants comprovades. Pots continuar la cerca o ajustar els mots.';
+    else if(outcome.status==='exhausted')$('search-status').textContent='Cap de les '+variants+' variants inclou tots aquests mots. Treu algun mot o ajusta els focus.';
+    else if(outcome.status==='error')$('search-status').textContent=outcome.error.message;
+    renderPreview();updateAvailability();
   }
   function updateControls(){
     $('pronunciation-variety').value=state.variety;
@@ -89,7 +87,7 @@
     $('pseudo-note').hidden=state.mode!=='pseudo';$('word-total').textContent=BANK.entries.filter(e=>e.mode==='words').length;$('pseudo-total').textContent=BANK.entries.filter(e=>e.mode==='pseudo').length;$('seed-language').textContent=L.id.toUpperCase();
     renderRequired();updateAvailability();
   }
-  function updateAvailability(){const p=pool();$('pool-count').textContent=p.length;$('pool-status').textContent=!session().tags.length?' · Tria almenys un focus.':p.length<session().count?' · Amplia els filtres o redueix la llargada.':'';$('cancel-search').hidden=!busy;$('resume-search').hidden=busy||!pendingSearch;$('new-dictation').disabled=busy;}
+  function updateAvailability(){const p=pool();$('pool-count').textContent=p.length;$('pool-status').textContent=!session().tags.length?' · Tria almenys un focus.':p.length<session().count?' · Amplia els filtres o redueix la llargada.':'';$('cancel-search').hidden=!search.busy;$('resume-search').hidden=search.busy||!search.canResume;$('new-dictation').disabled=search.busy;}
   function renderRequired(){
     $('required-list').innerHTML=session().required.map(id=>`<span class="required-chip">${escape(lookup(id)?.text||id)}<button type="button" data-remove-required="${id}" aria-label="Treu ${escape(lookup(id)?.text||id)}">${window.PlecIcons('x')}</button></span>`).join('');suggest();
   }
@@ -131,9 +129,9 @@
   function sheetOptions(){return{entries:chosen(),title:state.mode==='words'?'Dictat de paraules':'Dictat de pseudoparaules',mode:state.mode,modelSide:state.modelSide,foldStyle:state.foldStyle,seedCode:current?.code,seedLanguage:L.id,variety:state.variety,focusLabels:[...(session().basic?['Vocabulari bàsic']:[]),...session().tags.map(id=>C.categories.find(c=>c.id===id)?.label||id)]};}
   const fitPaper=()=>window.PlecPreview.fit();
   function renderPreview(){
-    const entries=chosen(),layout=K.foldLayout(state.foldStyle,state.modelSide),ready=!!current&&!busy;
-    $('sheet-preview').innerHTML=entries.length?svgFor(K.worksheet(sheetOptions()),layout):`<div class="empty-selection">${busy?'Buscant un dictat…':'Ajusta els filtres o recupera un codi per veure el full.'}</div>`;
-    $('seed-code').textContent=busy?'…':current?.code||'—';$('selection-summary').textContent=`${entries.length} / ${session().count} elements`;
+    const entries=chosen(),layout=K.foldLayout(state.foldStyle,state.modelSide),ready=!!current&&!search.busy;
+    $('sheet-preview').innerHTML=entries.length?svgFor(K.worksheet(sheetOptions()),layout):`<div class="empty-selection">${search.busy?'Buscant un dictat…':'Ajusta els filtres o recupera un codi per veure el full.'}</div>`;
+    $('seed-code').textContent=search.busy?'…':current?.code||'—';$('selection-summary').textContent=`${entries.length} / ${session().count} elements`;
     $('preview-layout').textContent=`${layout.name} · model a ${state.modelSide==='left'?'l’esquerra':'la dreta'}`;
     document.querySelector('.dictation-nav').href=new URL('./dictat/?variety='+state.variety,location.href).href;
     for(const id of ['download-pdf','copy-code','copy-link','open-student','copy-student-link'])$(id).disabled=!ready;
@@ -215,9 +213,9 @@
   const shareOptions=()=>({language:L.id,catalogue:current.catalogue,seed:current.code,variety:state.variety});
   $('pronunciation-variety').addEventListener('change',()=>{state.variety=window.PlecAudioVarieties.definition($('pronunciation-variety').value).id;persist();renderPreview();updateURL();});
   const studentURL=()=>LT.publicDictationURL(shareOptions());
-  $('open-student').addEventListener('click',()=>{if(current&&!busy)location.href=LT.dictationURL(new URL('../',location.href),shareOptions());});
-  $('copy-student-link').addEventListener('click',()=>{if(current&&!busy)copy(studentURL(),'Enllaç del dictat oral copiat.','student');});
-  $('copy-link').addEventListener('click',()=>{if(current&&!busy)copy(LT.publicComposerURL(shareOptions()),'Enllaç del full i del configurador copiat.','worksheet');});
+  $('open-student').addEventListener('click',()=>{if(current&&!search.busy)location.href=LT.dictationURL(new URL('../',location.href),shareOptions());});
+  $('copy-student-link').addEventListener('click',()=>{if(current&&!search.busy)copy(studentURL(),'Enllaç del dictat oral copiat.','student');});
+  $('copy-link').addEventListener('click',()=>{if(current&&!search.busy)copy(LT.publicComposerURL(shareOptions()),'Enllaç del full i del configurador copiat.','worksheet');});
   $('catalog-open').addEventListener('click',()=>openCatalog());$('help-open').addEventListener('click',()=>window.PlecMotion.open($('help-dialog')));
   function openInfo(dialogId, titleId) {
     const dialog = $(dialogId);
@@ -245,6 +243,7 @@
     }
   });
   const releases = [
+    ['1.29', '2026-10-27', ['Neteja tècnica: gestió de cerques separada de la interfície i retirada de controls antics de revisió que ja no eren accessibles, conservant les dades. Àudios balears en pausa per manca de dicció prou clara i consistent als sistemes provats; IPA disponibles al catàleg.']],
     ['1.28', '2026-10-27', ['Lectures IPA per a les 96 pseudoparaules en tres varietats, amb àudios centrals i valencians en revisió. El catàleg i el mode dictat seleccionen el paquet segons el tipus d’elements i la varietat, conservant els codis existents. Mostra local comparativa de Matxa v2 i Azure amb els mateixos 18 mots balears; encara sense publicació de veus balears.']],
     ['1.27.1', '2026-10-26', ['Àudio mallorquí en pausa: la mostra d’Azure no resol adequadament la neutra tònica i la geminació. Es conserven les propostes IPA i les fonts en revisió, amb l’estat actualitzat al catàleg i la guia. Nous lots bloquejats fins a reprendre explícitament la proposta.']],
     ['1.27', '2026-10-26', ['Catàleg amb recursos independents, reintents selectius i índexs lleugers. Propostes IPA mallorquines amb referència editorial de Palma i àudios en procés. Guia pública de criteris i fonts de pronunciació, i alternativa del repositori per a correccions. Millor continuïtat del teclat al dictat, configurador accessible amb ampliació i respecte pel moviment reduït. Generació segura i comprovacions de desenvolupament reproduïbles.']],

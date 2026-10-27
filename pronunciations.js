@@ -1,6 +1,6 @@
 (function(){
  'use strict';
- const $=id=>document.getElementById(id),R=window.PlecPronunciationReview,B=window.PlecCatalogBrowser,C=window.PlecCatalogResources;
+ const $=id=>document.getElementById(id),B=window.PlecCatalogBrowser,C=window.PlecCatalogResources;
  const base=new URL('.',document.currentScript.src),varieties=[['central','Central · Alba','ca-central-didactic-v1','central'],['valencia','Valencià · Enric','ca-valencian-didactic-v1','valencian'],['mallorqui','Mallorquí · Palma','ca-mallorcan-didactic-v1','mallorcan']];
  const pseudoProfiles={central:'ca-central-pseudo-didactic-v1',valencia:'ca-valencian-pseudo-didactic-v1',mallorqui:'ca-mallorcan-pseudo-didactic-v1'};
  function profileFor(variety,mode=config?.mode||'words'){return mode==='pseudo'?pseudoProfiles[variety]:varieties.find(v=>v[0]===variety)[2];}
@@ -9,9 +9,8 @@
  $('pronunciation-criteria').href=new URL('ca/pronunciacio/',base).href;
  const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const icon=name=>window.PlecIcons(name);
- let storage;try{storage=window.localStorage;}catch{storage={getItem(){throw Error();},setItem(){throw Error();}};}
- const store=R.create(storage);let rows=[],byId=new Map(),manifest={packs:[]},published={packs:[]};
- let config=null,initial=null,limit=50,deepWord='',requestedPack='',player=null,playing=null,epoch=0,report=null,openGeneration=0;
+ let rows=[],byId=new Map(),manifest={packs:[]},published={packs:[]};
+ let config=null,initial=null,limit=50,deepWord='',requestedPack='',player=null,playing=null,epoch=0,openGeneration=0;
  const resourceLabels={published:'Àudios publicats',review:'Versions de revisió',central:'IPA central',valencia:'IPA valenciana',mallorqui:'IPA mallorquina'};
  const local=['127.0.0.1','localhost','[::1]'].includes(location.hostname);
  const specs={published:{url:new URL('audio/manifest.json',base),validate:C.validateManifest},review:{url:new URL(local?'output/audio/review-manifest.json':'audio/review-manifest.json',base),validate:C.validateManifest}};
@@ -29,7 +28,7 @@
   if(config&&$('catalog-dialog').open)render({preservePlayback:true});
  }
  function resourceNotice(){const errors=activeResources().filter(key=>resources.get(key).status==='error');$('review-notice').hidden=!errors.length;$('review-notice').innerHTML=errors.map(key=>`<span class="resource-failure">${esc(resourceLabels[key])}: no disponible. <button type="button" class="small-link" data-retry-resource="${key}" aria-label="Reintenta la càrrega de ${esc(resourceLabels[key])}">Reintenta</button></span>`).join('');}
- function status(text=''){$('review-save-status').textContent=text;const warning=store.error();$('review-storage-warning').hidden=!warning;$('review-storage-warning').textContent=warning||'';}
+ function status(text=''){$('review-save-status').textContent=text;}
  function audioFor(row,variety){
   if(variety==='mallorqui')return null;
   const profile=profileFor(variety),valid=p=>p.profile===profile&&p.status==='ready'&&!!p.files?.[row.id];
@@ -74,7 +73,7 @@
  }
  function cell(row,variety,label){const ipa=row[variety]?.ipa,url=urlFor(row,variety),args=`data-word="${esc(row.id)}" data-variety="${variety}"`,name=label.split(' · ')[0],state=resources.get(resourceKey(variety)).status,shownIpa=ipa||(['idle','loading'].includes(state)?'Carregant…':'—');
   if(variety==='mallorqui'){
-   const message='Àudio en pausa. La mostra d’Azure no resol adequadament la neutra tònica i la geminació. Referència editorial: mallorquí de Palma. '+(ipa?'IPA provisional pendent de contrast lingüístic.':'Transcripció pendent de decidir.');
+   const message='Àudio en pausa. Els sistemes de síntesi provats no ofereixen una dicció prou clara i consistent per a l’ús educatiu. Referència editorial: mallorquí de Palma. '+(ipa?'IPA provisional pendent de contrast lingüístic.':'Transcripció pendent de decidir.');
    return `<section class="pronunciation-cell is-in-progress" aria-label="Mallorquí de ${esc(row.text)}"><span class="cell-variety">${esc(label)}</span><button type="button" class="ipa-play" data-action="pending" ${args} data-report-tooltip="${esc(message)}" aria-label="${esc(row.text)}: ${esc(shownIpa)}. ${esc(message)}" aria-disabled="true"><span class="ipa-text${ipa?'':' ipa-pending'}">${esc(shownIpa)}</span></button><button type="button" class="review-icon" data-action="pending" ${args} data-report-tooltip="${esc(message)}" aria-label="Àudio mallorquí de ${esc(row.text)}: en pausa" aria-disabled="true">${icon('volume-2')}</button></section>`;
   }
   return `<section class="pronunciation-cell" aria-label="${name} de ${esc(row.text)}"><span class="cell-variety">${esc(label)}</span><button type="button" class="ipa-play" data-action="play" ${args} title="Proposta IPA pendent de contrast. Prem per escoltar l’enregistrament disponible." aria-label="Escolta ${esc(row.text)}: ${esc(shownIpa)} (${name})" aria-pressed="false" ${url?'':'disabled'}><span class="ipa-text${ipa?'':' ipa-pending'}">${esc(shownIpa)}</span></button><button type="button" class="review-icon" data-action="play" ${args} aria-label="Escolta ${esc(row.text)} en ${name}" aria-pressed="false" ${url?'':'disabled'}>${icon('volume-2')}</button>${reportButton(row,variety,args,name)}</section>`;
@@ -102,20 +101,12 @@
  }
  function refreshFlags(){for(const b of $('catalog-list').querySelectorAll('[data-action=report]')){const row=byId.get(b.dataset.word);if(!row)continue;const info=reportInfo(row,b.dataset.variety),wrapper=b.closest('.report-control');b.disabled=info.disabled;b.setAttribute('aria-pressed',String(info.phase==='sent'));b.setAttribute('aria-busy',String(info.phase==='sending'));b.innerHTML=icon(info.phase==='sent'?'check':'flag');if(wrapper){wrapper.tabIndex=info.disabled?0:-1;wrapper.dataset.reportTooltip=info.message;wrapper.dataset.reportState=info.phase;wrapper.setAttribute('aria-label',info.message);}}}
  window.PlecAnalytics?.subscribe(refreshFlags);
- function reportTarget(){return report&&context(report.row,report.variety,$('pronunciation-report-kind').value);}
- function targetChanged(){const c=reportTarget(),saved=c&&store.get(c);$('pronunciation-report-note').value=saved?.note||'';$('pronunciation-report-clear').hidden=saved?.status!=='review';}
  async function openReport(row,variety){const info=reportInfo(row,variety);if(info.disabled)return;stop();status('Enviant l’avís…');
   try{const accepted=await window.PlecAnalytics.reportAudio(info.context);status(accepted?`Avís enviat. Gràcies: revisarem «${row.text}» (${variety==='central'?'català central':'valencià'}).`:'L’avís no s’ha pogut enviar. Comprova la connexió amb Umami des de «Privacitat».');}catch{status('L’avís no s’ha pogut enviar. Torna-ho a provar des de «Privacitat».');}refreshFlags();
  }
- $('catalog-list').addEventListener('click',event=>{const b=event.target.closest('[data-action]');if(!b||b.disabled)return;if(b.dataset.action==='more'){const oldCount=$('catalog-list').querySelectorAll('.pronunciation-row').length;openGeneration++;limit+=50;render();$('catalog-list').querySelectorAll('.pronunciation-row')[oldCount]?.focus({preventScroll:true});return;}if(b.dataset.action==='reset'){resetFilters();return;}if(b.dataset.action==='pending'){status('Mallorquí de Palma: transcripcions en revisió i síntesi en pausa després d’una mostra no apta. Consulta els criteris de pronunciació.');return;}const row=byId.get(b.dataset.word);if(!row)return;if(b.dataset.action==='play')play(row,b.dataset.variety);else if(b.dataset.action==='report')openReport(row,b.dataset.variety);});
- $('pronunciation-report-kind').addEventListener('change',targetChanged);
- $('pronunciation-report-form').addEventListener('submit',event=>{event.preventDefault();const c=reportTarget(),note=$('pronunciation-report-note').value.trim();if(!c||!note){$('pronunciation-report-note').focus();return;}const record=store.set(c,{status:'review',note});refreshFlags();status('Incidència desada en aquest navegador.');PlecMotion.close($('pronunciation-report'));if(event.submitter?.value==='github')window.open(R.issueURL([record]),'_blank','noopener,noreferrer');});
- $('pronunciation-report-clear').addEventListener('click',()=>{const c=reportTarget();if(!c)return;store.set(c,{status:'pending',note:''});refreshFlags();status('Incidència retirada.');PlecMotion.close($('pronunciation-report'));});
+ $('catalog-list').addEventListener('click',event=>{const b=event.target.closest('[data-action]');if(!b||b.disabled)return;if(b.dataset.action==='more'){const oldCount=$('catalog-list').querySelectorAll('.pronunciation-row').length;openGeneration++;limit+=50;render();$('catalog-list').querySelectorAll('.pronunciation-row')[oldCount]?.focus({preventScroll:true});return;}if(b.dataset.action==='reset'){resetFilters();return;}if(b.dataset.action==='pending'){status('Mallorquí de Palma: transcripcions en revisió i àudios en pausa: les proves de síntesi no ofereixen una dicció prou acurada. Consulta els criteris de pronunciació.');return;}const row=byId.get(b.dataset.word);if(!row)return;if(b.dataset.action==='play')play(row,b.dataset.variety);else if(b.dataset.action==='report')openReport(row,b.dataset.variety);});
  function download(text,name,type){const url=URL.createObjectURL(new Blob([text],{type})),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);}
- $('export-reviews').addEventListener('click',()=>{download(JSON.stringify(store.exportData(),null,2)+'\n','plec-revisio-pronunciacions.json','application/json');status('Incidències exportades.');});
  $('export-pronunciations').addEventListener('click',()=>{const quote=v=>'"'+String(v??'').replaceAll('"','""')+'"',head=['mot',...varieties.flatMap(([,label])=>['IPA '+label,'estat '+label])],body=rows.map(row=>[row.text,...varieties.flatMap(([key])=>[row[key]?.ipa||'',row[key]?.status||resources.get(resourceKey(key)).status])]);download('\uFEFF'+[head,...body].map(row=>row.map(quote).join(',')).join('\r\n')+'\r\n','plec-pronunciacions'+(config.mode==='pseudo'?'-pseudoparaules':'')+'.csv','text/csv;charset=utf-8');});
- $('import-reviews-open').addEventListener('click',()=>$('import-reviews').click());
- $('import-reviews').addEventListener('change',async event=>{try{const file=event.target.files[0];if(!file)return;if(file.size>20*1024*1024)throw Error();const count=store.importData(JSON.parse(await file.text()));refreshFlags();status(`${count} anotacions importades.`);}catch{status('No s’ha pogut importar el fitxer. Les anotacions actuals es conserven.');}finally{event.target.value='';}});
  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});window.addEventListener('pagehide',stop);
  function resetFilters(){openGeneration++;initial=null;limit=50;deepWord='';requestedPack='';$('catalog-search').value='';$('catalog-tag').value='';$('catalog-stage').value='all';$('catalog-basic').checked=false;render({resetScroll:true});}
  function filtersChanged(){openGeneration++;initial=null;limit=50;deepWord='';requestedPack='';render({resetScroll:true});}
@@ -129,7 +120,7 @@
   const changed=!config||next.mode!==config.mode||next.revision!==config.revision,scopeChanged=!!config?.basic!==!!next.basic;config=next;indexRows();
   if(changed){$('catalog-tag').innerHTML='<option value="">Tots els focus</option>'+config.categories.filter(c=>c.mode===config.mode).map(c=>'<option value="'+esc(c.id)+'">'+esc(c.label)+'</option>').join('');resetFilters();}
   $('catalog-title').textContent=config.mode==='words'?'El catàleg':'Les pseudoparaules';$('catalog-stage-field').hidden=config.mode==='pseudo';$('export-words-text').hidden=config.mode!=='words';$('export-pseudo-text').hidden=config.mode!=='pseudo';$('export-pronunciations').hidden=false;document.querySelector('.catalog-hint').hidden=false;
-  document.querySelector('.catalog-pronunciation-note span').textContent=config.mode==='pseudo'?'IPA proposada: no hi ha una grafia normativa única. Mallorquí: àudio en pausa.':'Mallorquí (Palma): IPA en revisió · àudio en pausa després de la mostra';resourceNotice();
+  document.querySelector('.catalog-pronunciation-note span').textContent=config.mode==='pseudo'?'IPA proposada: no hi ha una grafia normativa única. Mallorquí: àudio en pausa.':'Mallorquí (Palma): IPA en revisió · àudio en pausa.';resourceNotice();
   $('catalog-basic-field').hidden=config.mode!=='words';$('export-basic-text').hidden=config.mode!=='words';
   if(changed||scopeChanged)$('catalog-basic').checked=!!config.basic;
   if(word&&!config.entries.some(e=>e.text===word&&e.basicVocabulary))$('catalog-basic').checked=false;

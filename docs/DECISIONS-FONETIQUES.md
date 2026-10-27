@@ -6,6 +6,8 @@ Registre editorial · 26/10/2026. La [guia pública](https://plec.ortogra.fi/ca/
 
 ## Compromís i estat de revisió
 
+**Actualització 1.29, 27/10/2026:** l’escolta de Matxa a ritme més lent millora alguns mots i prefereix la veu 0, però no resol la inconsistència ni les realitzacions artificials. L’usuari pausa la síntesi balear també amb aquest motor. Les IPA continuen disponibles, els àudios de recerca no es publiquen i el contrast nadiu s’ajorna. El catàleg i la guia expliquen la insuficiència de dicció dels sistemes provats; no es canvien les dades fonètiques per acomodar-se als errors del generador.
+
 Es distingeixen **grafia del banc**, **proposta IPA**, **dicció didàctica** i **realització d’una veu**. Cap comprovació de format, descodificació d’MP3 o escolta d’una mostra valida totes quatre capes. Les taules actuals són propostes, amb fonts i decisions editorials per fila; no són transcripcions certificades extretes de diccionaris. El docent ha aprovat la selecció dels 350 mots bàsics, no les seves IPA.
 
 L’autor pot detectar problemes d’accent o d’articulació i orientar la revisió, però **no és parlant nadiu de la varietat balear**. La seva escolta no substitueix el contrast amb parlants del model triat o especialistes. Aquesta limitació és explícita a la guia pública i al perfil en preparació.

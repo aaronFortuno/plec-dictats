@@ -48,7 +48,7 @@ L’aparença s’ha comprovat en Chrome amb preferència del sistema, canvi en 
 
 ## Consulta oral del catàleg
 
-El catàleg docent utilitza `catalog-audio.js`, amb la mateixa validació de manifest de `audio-manifest.js` que el reproductor d’alumnat. Només reprodueix a petició, un mot cada vegada; tornar a prémer atura el mot. Canviar filtres, lletra, tancar el diàleg o ocultar la pàgina atura l’àudio. Els mots sense cobertura mantenen l’altaveu desactivat.
+El catàleg docent utilitza `pronunciations.js`, amb la mateixa validació de manifest de `audio-manifest.js` que el reproductor d’alumnat. Només reprodueix a petició, un mot cada vegada; tornar a prémer atura el mot. Canviar filtres, lletra, tancar el diàleg o ocultar la pàgina atura l’àudio. Els mots sense cobertura mantenen l’altaveu desactivat.
 
 `node tools/prepare-catalog-preview.cjs` construeix un índex de revisió **sense síntesi ni xarxa**, combinant els MP3 locals existents i les mostres IPA. Només s’utilitza des de loopback, a `output/audio/catalog-preview-manifest.json`; no altera el manifest públic ni el manifest de prova de l’alumnat. Les mostres més recents tenen prioritat per a l’audició docent, sense considerar-les aprovades.
 

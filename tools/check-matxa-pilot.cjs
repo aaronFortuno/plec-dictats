@@ -10,6 +10,7 @@ assert.deepEqual(p.voices,[{name:'Olga',speakerId:0},{name:'Quim',speakerId:1}],
 assert.equal(p.settings.device,'CPU');assert.equal(p.settings.sampleRate,22050);assert.equal(p.settings.lengthScale,1);assert.equal(p.settings.odeSteps,20);
 assert.equal(p.model.bytes,272805633);assert(/^[a-f0-9]{64}$/.test(p.model.sha256));assert(/^[a-f0-9]{64}$/.test(p.model.symbolsSha256));
 assert.equal(p.license.publicAudio,false);assert.equal(p.license.use,'local-non-commercial-audition-only');assert.equal(p.listeningReview,'pending');
+const feedback=JSON.parse(fs.readFileSync(path.join(ROOT,'audio/pronunciation/ca/matxa-pilot-feedback.json'),'utf8'));assert.equal(feedback.synthesisStatus,'on-hold');assert.equal(feedback.followUp.synthesis,false);
 assert.equal(p.sourceSha256,crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT,SOURCE))).digest('hex'));
 const published=JSON.parse(fs.readFileSync(path.join(ROOT,'audio/pronunciation/recordings/ca-mallorcan-palma-matxa-pilot-v1-result.json'),'utf8'));
 assert.equal(published.files.length,36);assert.equal(published.publicAudio,false);

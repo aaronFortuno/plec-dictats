@@ -7,8 +7,14 @@
   "publicationStatus": "not-approved-for-publication",
   "summary": "L’usuari percep una millora respecte dels intents d’Azure, amb qualitat inconsistent segons el mot i la veu. Alguns mots no són prou clars en cap veu. No és una validació dialectal nadiua o especialitzada.",
   "speakerLabels": {
-    "documented": {"0": "Olga", "1": "Quim"},
-    "identifiedByListener": {"0": "Quim", "1": "Olga"},
+    "documented": {
+      "0": "Olga",
+      "1": "Quim"
+    },
+    "identifiedByListener": {
+      "0": "Quim",
+      "1": "Olga"
+    },
     "status": "discrepancy-unresolved",
     "displayPolicy": "Show numeric speaker IDs; preserve original recording labels, files and hashes."
   },
@@ -34,6 +40,17 @@
   ],
   "followUp": {
     "largeBatch": false,
-    "suggestion": "Diagnosi breu de l’inici de reproducció i de la síntesi, amb originals preservats, abans de cap ampliació. Cal criteri nadiu o especialitzat per validar una mostra balear."
+    "synthesis": false,
+    "nativeReview": "postponed",
+    "suggestion": "Resume only after an explicit new decision; no further experiments scheduled."
+  },
+  "synthesisStatus": "on-hold",
+  "slowerAudition": {
+    "date": "2026-10-27",
+    "result": "Improved at a slower rate, still insufficiently consistent for publication.",
+    "preferredSpeakerId": 0,
+    "listenerIdentifiedName": "Quim",
+    "otherVoice": "Veu 1: metàl·lica, robòtica o antinatural en alguns mots.",
+    "decision": "Keep IPA public; pause audio synthesis and publication. Native review remains postponed."
   }
 }
