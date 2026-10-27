@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "source": "user-listening-feedback",
+  "pilot": "ca-mallorcan-palma-matxa-v2-pilot-v1",
+  "generationResult": "audio/pronunciation/recordings/ca-mallorcan-palma-matxa-pilot-v1-result.json",
+  "publicationStatus": "not-approved-for-publication",
+  "summary": "L’usuari percep una millora respecte dels intents d’Azure, amb qualitat inconsistent segons el mot i la veu. Alguns mots no són prou clars en cap veu. No és una validació dialectal nadiua o especialitzada.",
+  "speakerLabels": {
+    "documented": {"0": "Olga", "1": "Quim"},
+    "identifiedByListener": {"0": "Quim", "1": "Olga"},
+    "status": "discrepancy-unresolved",
+    "displayPolicy": "Show numeric speaker IDs; preserve original recording labels, files and hashes."
+  },
+  "observations": [
+    {
+      "text": "xocolata",
+      "speakerId": 0,
+      "originalRecordingLabel": "Olga",
+      "listenerIdentifiedName": "Quim",
+      "approximatePerception": "tocoata",
+      "status": "needs-review",
+      "note": "Descripció aproximada de l’usuari, no transcripció IPA: inici i consonants interiors poc definits."
+    },
+    {
+      "text": "xocolata",
+      "speakerId": 1,
+      "originalRecordingLabel": "Quim",
+      "listenerIdentifiedName": "Olga",
+      "approximatePerception": "ocolata",
+      "status": "needs-review",
+      "note": "Descripció aproximada de l’usuari, no transcripció IPA: primer so percebut com absent."
+    }
+  ],
+  "followUp": {
+    "largeBatch": false,
+    "suggestion": "Diagnosi breu de l’inici de reproducció i de la síntesi, amb originals preservats, abans de cap ampliació. Cal criteri nadiu o especialitzat per validar una mostra balear."
+  }
+}
