@@ -14,7 +14,7 @@ const required=['perquè','cançó'].map(t=>words.find(e=>e.text===t).id),found=
 const code=S.encode({epoch:basic.slot,recipe,nonce:found.nonce}),selection=S.resolve(R.editions,code);
 assert(selection.entries.every(e=>ids.has(e.id)&&e.tags.includes('accent')));assert(required.every(id=>selection.entries.some(e=>e.id===id)));
 assert.deepEqual(selection.entries,found.entries);assert.equal(selection.epoch,basic.slot);
-for(const pack of manifest.packs.filter(p=>['central','valencia'].includes(p.dialect)))assert(selection.entries.every(e=>pack.files[e.id]),'Both audio varieties cover every basic seed');
+for(const pack of manifest.packs.filter(p=>['central','valencia'].includes(p.dialect)&&p.mode!=='pseudo'))assert(selection.entries.every(e=>pack.files[e.id]),'Both word-audio varieties cover every basic seed');
 for(const file of ['seeds-v1-vectors.json','seeds-v2-vectors.json'])for(const vector of require('../docs/'+file).vectors)assert.deepEqual(S.resolve(R.editions,vector.code).entries.map(e=>e.text),vector.words);
 const old=S.resolve(R.editions,'ADZ52356A');assert.equal(old.epoch,1);assert(!R.editions.find(e=>e.slot===old.epoch).selection);
 console.log('Basic vocabulary: 350 explicit words, level/focus intersection, required-word search, code recovery, audio coverage and immutable old codes passed.');

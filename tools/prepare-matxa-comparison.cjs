@@ -1,0 +1,26 @@
+'use strict';
+// Assemble a local listening page from already-generated files; no inference.
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const A=require('./audio-plan.cjs');
+function prepare({write=false}={}){
+ const root=A.ROOT,azure=A.readJson(path.join(root,'audio/pronunciation/recordings/ca-mallorcan-palma-pilot-v1.json'));
+ const matxa=A.readJson(path.join(root,'output/audio/matxa-v2-balear-pilot/results.json'));
+ if(matxa.files.length!==36||new Set(matxa.files.map(f=>f.id+':'+f.voice)).size!==36)throw Error('Falten els 36 àudios de Matxa.');
+ const columns=[...['Joana','Alba','Enric'].map(name=>({name:'Azure · '+name,provider:'azure',voice:name})),...['Olga','Quim'].map(name=>({name:'Matxa v2 · '+name,provider:'matxa',voice:name}))];
+ const esc=A.escapeXml,encode=value=>value.split('/').map(encodeURIComponent).join('/');
+ const rows=azure.entries.map(entry=>{
+  const cells=columns.map(column=>{
+   const item=column.provider==='matxa'?matxa.files.find(f=>f.id===entry.id&&f.text===entry.text&&f.voice===column.voice):{localPath:'output/audio/ca-mallorcan-palma-'+column.voice.toLowerCase()+'-pilot-v1/words/'+A.wordFileName(entry.text)};
+   if(!item||!item.localPath.startsWith('output/audio/'))throw Error('Ruta o identitat de comparació incompatible.');
+   A.validateRelativePath(item.localPath,'Àudio');const buffer=fs.readFileSync(path.join(root,item.localPath));
+   if(item.sha256&&crypto.createHash('sha256').update(buffer).digest('hex')!==item.sha256)throw Error('Àudio Matxa modificat.');
+   return '<td><audio controls preload="none" aria-label="'+esc(entry.text+' · '+column.name)+'" src="'+encode(item.localPath.slice('output/audio/'.length))+'"></audio></td>';
+  });
+  return '<tr><th scope="row">'+esc(entry.text)+'<small>'+esc(entry.ipa)+'</small></th>'+cells.join('')+'</tr>';
+ });
+ const html=`<!doctype html><html lang="ca"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Plec · Matxa i Azure</title><style>:root{color-scheme:light dark;font:16px/1.65 system-ui}body{max-width:1480px;margin:30px auto;padding:0 20px}h1{font-size:30px}p{max-width:1000px}.notice{padding:14px 18px;border-left:3px solid #b85f43;background:#8881}.table-scroll{overflow:auto}table{width:100%;min-width:1120px;border-collapse:collapse}th,td{text-align:left;padding:12px 8px;border-bottom:1px solid #8885;vertical-align:top}tbody th{min-width:125px}small{display:block;font-weight:400}audio{display:block;width:100%;min-width:175px;max-width:240px}.azure{color:#b85f43}.matxa{color:#4b9072}button{font:inherit;padding:7px 12px;border-radius:6px}</style><h1>Matxa v2 i Azure · els mateixos 18 mots</h1><p>Escolta les veus balears d’Olga i Quim (Matxa v2) al costat de Joana, Alba i Enric (Azure). La mostra d’Azure s’ha descartat per publicar; Matxa continua pendent de revisió. <strong>No és una prova amb parlants nadius ni una validació de la varietat de Palma.</strong></p><p class="notice">Azure rep la IPA mostrada i ritme −10 %. Matxa v2 rep només la grafia, amb velocitat nativa 1,0, sense IPA ni pauses afegides. No són ajustos de velocitat equivalents. Compara els sons i l’accent, especialment <b>abella, ceba, pera</b> i <b>amable</b>. La IPA de la primera columna és el model editorial de referència, no una transcripció del que s’ha sentit a Matxa.</p><p>Matxa s’ha executat localment en CPU, amb model ONNX fixat i sense consumir quota d’Azure. Àudios d’aquesta prova només per escolta local, sota les condicions no comercials del proveïdor. <a href="https://huggingface.co/BSC-LT/matxa-tts-v2-ca-multiaccent-graphemes">Model i condicions</a>.</p><p><button id="pause-all" type="button">Atura la reproducció</button> <a href="pseudoparaules.html">Pseudoparaules · central i valencià</a></p><div class="table-scroll"><table><thead><tr><th>Mot · IPA de referència</th>${columns.map(c=>'<th class="'+c.provider+'">'+c.name+'</th>').join('')}</tr></thead><tbody>${rows.join('')}</tbody></table></div><script>function pauseAll(except){document.querySelectorAll('audio').forEach(a=>{if(a!==except)a.pause();});}document.addEventListener('play',e=>{if(e.target.tagName==='AUDIO')pauseAll(e.target);},true);document.getElementById('pause-all').addEventListener('click',()=>pauseAll());</script></html>`;
+ if(write)fs.writeFileSync(path.join(root,'output/audio/comparacio-matxa-azure.html'),html);
+ return {words:azure.entries.length,columns:columns.length,audioControls:90,inference:false,azureRequests:false};
+}
+if(require.main===module){try{const args=process.argv.slice(2);if(args.some(a=>a!=='--write'))throw Error('Ús: node tools/prepare-matxa-comparison.cjs [--write]');console.log(JSON.stringify(prepare({write:args.includes('--write')})));}catch(e){console.error(e.message);process.exitCode=1;}}
+module.exports={prepare};

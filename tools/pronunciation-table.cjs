@@ -12,6 +12,7 @@ function profile(id) {
   if(registry.schemaVersion!==1||!Array.isArray(registry.profiles))throw new Error('Registre fonètic invàlid.');
   const p=registry.profiles.find(p=>p.id===(id||registry.profiles[0]?.id));
   if(!p||!['ipa-azure-ca-ES','ipa-valencian-draft','ipa-mallorcan-draft'].includes(p.alphabet)||p.language!=='ca')throw new Error('Perfil o inventari fonètic no disponible.');
+  if(p.mode!==undefined&&!['words','pseudo'].includes(p.mode))throw new Error('Mode de la taula fonètica desconegut.');
   for(const key of ['table','export','readable','catalogPath'])A.validateRelativePath(p[key],key);
   return p;
 }
@@ -29,7 +30,8 @@ function parse(text) {
   });
 }
 function validate(rows,p,catalog) {
-  const words=catalog.entries.filter(e=>e.mode==='words'),byId=new Map(words.map(e=>[e.id,e])),seen=new Set();
+  const mode=p.mode||'words';if(!['words','pseudo'].includes(mode))throw new Error('Mode de la taula fonètica desconegut.');
+  const words=catalog.entries.filter(e=>e.mode===mode),byId=new Map(words.map(e=>[e.id,e])),seen=new Set();
   if(rows.length!==words.length)throw new Error('La taula ha de cobrir tots els mots de l’edició.');
   for(const row of rows){
     const word=byId.get(row.id);
@@ -76,7 +78,7 @@ function initialize(id) {
     proposed.set(row.id,{ipa:row.ipa,estat_ipa:row.status==='needs-review'?'pendent-contrast':'proposta',base:row.basis,fonts:row.sources.join(' | '),notes:row.note});
   }
   }
-  const rows=sorted(catalog.entries.filter(e=>e.mode==='words').map(entry=>({
+  const rows=sorted(catalog.entries.filter(e=>e.mode===(p.mode||'words')).map(entry=>({
     mot:entry.text,ipa:'',llengua:p.language,varietat:p.dialect,diccio:p.diction,estat_ipa:'pendent',base:'',fonts:'',notes:'',revisor:'',data_revisio:'',id:entry.id,...proposed.get(entry.id)
   })));
   if([...proposed.keys()].some(id=>!rows.some(row=>row.id===id)))throw new Error('Hi ha una proposta fora del banc.');
@@ -89,7 +91,7 @@ function exportData(data,check=false) {
   const rows=sorted(data.rows),p=data.profile;
   const entries=rows.map(row=>({id:row.id,text:row.mot,ipa:row.ipa||null,language:row.llengua,dialect:row.varietat,diction:row.diccio,
     status:row.estat_ipa,basis:row.base||null,sources:row.fonts?row.fonts.split(' | '):[],notes:row.notes,reviewer:row.revisor||null,reviewDate:row.data_revisio||null}));
-  const content={schemaVersion:1,profile:p.id,language:p.language,dialect:p.dialect,diction:p.diction,alphabet:p.alphabet,
+  const content={schemaVersion:1,profile:p.id,...(p.mode?{mode:p.mode}:{}),language:p.language,dialect:p.dialect,diction:p.diction,alphabet:p.alphabet,
     catalogFingerprint:p.catalogFingerprint,status:p.status,audioApproval:false,
     revision:crypto.createHash('sha256').update(JSON.stringify(entries)).digest('hex'),summary:summary(rows),entries};
   const readable='# '+p.label+' · Propostes en revisió; no valida cap veu ni àudio.\n# mot\tIPA\testat de la proposta\n'+rows.filter(row=>row.ipa).map(row=>[row.mot,row.ipa,row.estat_ipa].join('\t')).join('\n')+'\n';
@@ -107,7 +109,7 @@ function planWords(data,words) {
   if(!wanted.length)throw new Error('Falten mots per al pla.');
   const byWord=new Map(data.rows.map(row=>[row.mot,row]));
   const rows=wanted.map(word=>{const row=byWord.get(word);if(!row||!row.ipa)throw new Error('Mot sense proposta IPA: '+word+'.');return row;});
-  return {schemaVersion:1,kind:'offline-table-pronunciations',executable:false,profile:data.profile.id,catalogFingerprint:data.profile.catalogFingerprint,
+  return {schemaVersion:1,kind:'offline-table-pronunciations',executable:false,profile:data.profile.id,...(data.profile.mode?{mode:data.profile.mode}:{}),catalogFingerprint:data.profile.catalogFingerprint,
     note:'Selecció de la taula editable; cal una prova de síntesi en un paquet separat i revisió de cada àudio.',
     entries:rows.map(row=>{
       let azureCaEsCompatible=true;try{analyzeIpa(row.ipa);}catch{azureCaEsCompatible=false;}

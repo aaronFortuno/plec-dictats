@@ -18,11 +18,22 @@
     return true;
   }
 
+  function modeForEntries(entries) {
+    var modes = new Set(entries.map(function(e){return e.mode || (/^s-/.test(e.id)?'pseudo':/^p-/.test(e.id)?'words':null);}));
+    return modes.size === 1 && (modes.has('pseudo') || modes.has('words')) ? modes.values().next().value : null;
+  }
+  function supportsMode(pack, mode) {
+    if (!mode) return true;
+    if (pack.mode !== undefined) return pack.mode === mode;
+    var ids = Object.keys(pack.files || {}), hasWords=ids.some(function(id){return /^p-/.test(id);}), hasPseudo=ids.some(function(id){return /^s-/.test(id);});
+    return hasWords || hasPseudo ? (mode === 'pseudo' ? hasPseudo : hasWords) : mode === 'words';
+  }
+
   function coverage(manifest, entries, language, appBase, voice) {
     if (!manifest || manifest.schemaVersion !== 1 || !Array.isArray(manifest.packs)) {
       throw new Error("Manifest d'àudio invàlid.");
     }
-    var pack = null, i;
+    var pack = null, i, mode = modeForEntries(entries);
     for (i = 0; i < manifest.packs.length; i++) {
       var p = manifest.packs[i];
       if (!p || typeof p !== "object" || Array.isArray(p)) {
@@ -36,14 +47,19 @@
       if (!pack) throw new Error("La veu sol·licitada no existeix al manifest.");
     } else {
       var defId = manifest.defaultPacks && manifest.defaultPacks[language];
-      for (i = 0; i < manifest.packs.length; i++) {
-        if (manifest.packs[i].id === defId) { pack = manifest.packs[i]; break; }
-      }
+      var baseDefault=manifest.packs.find(function(p){return p.id===defId;});
+      if(!baseDefault)throw new Error("No hi ha paquet d'àudio per a aquesta llengua.");
+      if(baseDefault.language!==language)throw new Error("El paquet d'àudio és d'una altra llengua.");
+      var candidates = manifest.packs.filter(function(p){return p.language===language && p.dialect===baseDefault.dialect && supportsMode(p,mode);});
+      var defaultPack=candidates.find(function(p){return p.id===defId;});
+      var complete=function(p){return p.status==='ready' && entries.every(function(e){return !!p.files?.[e.id];});};
+      pack = defaultPack && complete(defaultPack) ? defaultPack : candidates.find(complete) || defaultPack || candidates[0];
       if (!pack) throw new Error("No hi ha paquet d'àudio per a aquesta llengua.");
     }
     if (pack.language !== language) {
       throw new Error("El paquet d'àudio és d'una altra llengua.");
     }
+    if (!supportsMode(pack,mode)) throw new Error("El paquet d'àudio no correspon al tipus de dictat.");
     var basePath = pack.basePath;
     if (!validRelative(basePath, true) || basePath.slice(-1) !== "/") {
       throw new Error("La basePath del paquet d'àudio no és vàlida.");
@@ -73,5 +89,5 @@
   }
 
 
-return {coverage:coverage};
+return {coverage:coverage,modeForEntries:modeForEntries,supportsMode:supportsMode};
 });

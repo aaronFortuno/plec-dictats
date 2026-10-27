@@ -1,5 +1,11 @@
 # Historial
 
+## 1.28 · 27 d’octubre de 2026
+
+- Lectures IPA editorials per a les 96 pseudoparaules en central, valencià i mallorquí, sense modificar grafies, ID ni codis. Les formes inventades no es presenten com a mots amb una única escriptura normativa.
+- Paquets d’àudio separats per a pseudoparaules centrals i valencianes, amb instantànies IPA, integritat i revisió auditiva oberta. Catàleg, CSV i mode dictat compatibles amb els dos tipus d’elements i sense substitucions entre varietats.
+- Mostra local dels mateixos 18 mots amb Matxa v2 (Olga i Quim), comparada amb les tres veus d’Azure. La prova de Matxa rep grafies i no IPA; velocitats i formats s’indiquen perquè no són equivalents. Àudio balear públic encara en pausa.
+
 ## 1.27.1 · 26 d’octubre de 2026
 
 - Proposta d’àudio mallorquí en pausa després de l’escolta: neutra tònica realitzada com i i geminació b.bl artificial. La mostra es descarta per publicar; les IPA i fonts es conserven com a propostes pendents de contrast.

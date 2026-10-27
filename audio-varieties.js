@@ -3,13 +3,17 @@
  'use strict';
  const varieties=Object.freeze([{id:'central',label:'Català central'},{id:'valencia',label:'Valencià'}].map(Object.freeze));
  function definition(id,language='ca'){const item=language==='ca'&&varieties.find(v=>v.id===id);if(!item)throw Error('La varietat de pronunciació no està disponible.');return item;}
- function select(manifest,language,{variety=null,voice=null}={}){
+ function select(manifest,language,{variety=null,voice=null,mode=null,entries=[]}={}){
   if(!Array.isArray(manifest?.packs))throw Error('Manifest d’àudio invàlid.');
+  const tools=typeof module==='object'&&module.exports?require('./audio-manifest.js'):globalThis.PlecAudioManifest;
+  const explicitMode=mode||tools.modeForEntries(entries),requestedMode=explicitMode||'words';
+  if(!['words','pseudo'].includes(requestedMode))throw Error('Tipus de dictat no disponible.');
   const explicit=variety!==null,wanted=explicit?definition(variety,language):null;
-  if(voice){const pack=manifest.packs.find(p=>p.id===voice&&p.language===language);if(!pack)throw Error('La veu sol·licitada no està disponible.');const selected=definition(pack.dialect,language);if(wanted&&selected.id!==wanted.id)throw Error('La veu no correspon a la varietat indicada a l’enllaç.');return {pack,variety:selected};}
+  if(voice){const pack=manifest.packs.find(p=>p.id===voice&&p.language===language);if(!pack)throw Error('La veu sol·licitada no està disponible.');const selected=definition(pack.dialect,language);if(wanted&&selected.id!==wanted.id)throw Error('La veu no correspon a la varietat indicada a l’enllaç.');if(explicitMode&&!tools.supportsMode(pack,requestedMode))throw Error('La veu no correspon al tipus de dictat.');return {pack,variety:selected};}
   const selected=wanted||definition('central',language),defaultId=manifest.defaultPacks?.[language];
-  const matches=p=>p.language===language&&p.dialect===selected.id;
-  const pack=manifest.packs.find(p=>p.id===defaultId&&matches(p))||manifest.packs.find(matches);
+  const matches=p=>p.language===language&&p.dialect===selected.id&&tools.supportsMode(p,requestedMode);
+  const candidates=manifest.packs.filter(matches),defaultPack=candidates.find(p=>p.id===defaultId),complete=p=>p.status==='ready'&&entries.every(e=>!!p.files?.[e.id]);
+  const pack=defaultPack&&complete(defaultPack)?defaultPack:candidates.find(complete)||defaultPack||candidates[0];
   if(!pack)throw Error('Encara no hi ha àudios per a aquesta varietat.');return {pack,variety:selected};
  }
  return {varieties,definition,select};

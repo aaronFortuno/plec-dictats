@@ -80,3 +80,9 @@ La [taula valenciana](ca/valencian-didactic.tsv) conté 3.299 propostes i cap va
 El perfil addicional **ca-mallorcan-didactic-v1** pren el mallorquí amb neutra tònica com a primera referència balear. Cobreix els 3.299 ID en una taula pròpia: **2.889 propostes i 410 IPA buides** per decisions lèxiques pendents; cap validació. Dels 350 mots bàsics, 291 tenen proposta i 59 queden pendents. No és un perfil comú de totes les illes ni de totes les localitats mallorquines.
 
 La [guia mallorquina](../../docs/IPA-MALLORQUI.md) explica fonts UIB/EBAP, regles, límits i cua de revisió. L’inventari d’edició `ipa-mallorcan-draft` conserva /v/; la compatibilitat amb l’inventari Azure es comprova separadament. Les ordres generals accepten `--profile ca-mallorcan-didactic-v1`; `node tools/check-mallorcan-g2p.cjs` comprova cobertura i exportacions. Aquesta preparació no afegeix cap àudio ni cap varietat reproduïble al web.
+
+## Pseudoparaules i prova alternativa
+
+La 1.28 afegeix tres perfils separats de mode pseudo, amb 96 propostes cadascun. Les fonts són ca/pseudo-{central,valencian,mallorcan}-didactic.tsv; els JSON, TXT i índexs de consulta en deriven. Vegeu les [decisions i edició de pseudoparaules](../../docs/PSEUDOPARAULES-PRONUNCIACIO.md). Central i valencià tenen enregistraments en paquets propis; la IPA mallorquina no activa cap àudio públic.
+
+La [mostra de Matxa v2](../../docs/MATXA-PILOT.md) és una comparació local de 18 mots amb dues veus balears. Rep grafies, no les IPA de la taula. La metadada conserva model, ajustos, identitats i hashes; els WAV i el model continuen fora de la publicació.

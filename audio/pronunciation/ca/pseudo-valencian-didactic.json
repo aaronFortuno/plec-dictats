@@ -1,0 +1,1653 @@
+{
+  "schemaVersion": 1,
+  "profile": "ca-valencian-pseudo-didactic-v1",
+  "mode": "pseudo",
+  "language": "ca",
+  "dialect": "valencia",
+  "diction": "didactic-explicit",
+  "alphabet": "ipa-valencian-draft",
+  "catalogFingerprint": "ee94edbd3b2d4fb4d44d1cd66f70b970e17520029d952593d69e5adb2139bbf5",
+  "status": "draft-editorial-nonword-readings-pending-review",
+  "audioApproval": false,
+  "revision": "4fd94f012e6389cc2e51611b9099e73e839cc03bd50232f0236c879f23323f52",
+  "summary": {
+    "words": 96,
+    "withIpa": 96,
+    "withoutIpa": 0,
+    "validated": 0
+  },
+  "entries": [
+    {
+      "id": "s-ufjcne",
+      "text": "banyup",
+      "ipa": "ba.ˈɲup",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1sfenkz",
+      "text": "binu",
+      "ipa": "ˈbi.nu",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1a9ujc9",
+      "text": "blanuf",
+      "ipa": "bla.ˈnuf",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-j76w3n",
+      "text": "blanufeta",
+      "ipa": "bla.nu.ˈfe.ta",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-c3biom",
+      "text": "blenuc",
+      "ipa": "ble.ˈnuk",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-38wv6j",
+      "text": "blinufeta",
+      "ipa": "bli.nu.ˈfe.ta",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-17uxlgp",
+      "text": "blis",
+      "ipa": "ˈblis",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-zhfds",
+      "text": "bruf",
+      "ipa": "ˈbɾuf",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-lv5x86",
+      "text": "brufanell",
+      "ipa": "bɾu.fa.ˈnɛʎ",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-zg5fcv",
+      "text": "brunif",
+      "ipa": "bɾu.ˈnif",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-y2c03w",
+      "text": "carunepi",
+      "ipa": "ka.ɾu.ˈnɛ.pi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-5udezm",
+      "text": "clenap",
+      "ipa": "kle.ˈnap",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-ui48r2",
+      "text": "clopiruna",
+      "ipa": "klo.pi.ˈɾu.na",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1sj42x7",
+      "text": "cluf",
+      "ipa": "ˈkluf",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-sdpujs",
+      "text": "cralop",
+      "ipa": "kɾa.ˈlop",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Vocal mitjana no resolta: tria editorial tancada /o/ (pista ó), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1hrv4ow",
+      "text": "crufanoli",
+      "ipa": "kɾu.fa.ˈnɔ.li",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-grd7tk",
+      "text": "crunel",
+      "ipa": "kɾu.ˈnɛl",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1rnih9t",
+      "text": "cunyi",
+      "ipa": "ˈku.ɲi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-5nq4pj",
+      "text": "demufi",
+      "ipa": "de.ˈmu.fi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1vvmxe2",
+      "text": "dofípol",
+      "ipa": "do.ˈfi.pol",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-111m8ye",
+      "text": "dopali",
+      "ipa": "do.ˈpa.li",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-9jdhoo",
+      "text": "drall",
+      "ipa": "ˈdɾaʎ",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1hzmc8p",
+      "text": "drapuneta",
+      "ipa": "dɾa.pu.ˈne.ta",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1236ae5",
+      "text": "drupel",
+      "ipa": "dɾu.ˈpɛl",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1uxtkiu",
+      "text": "dumi",
+      "ipa": "ˈdu.mi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-o5896o",
+      "text": "dunyal",
+      "ipa": "du.ˈɲal",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-d4ay3m",
+      "text": "fanyut",
+      "ipa": "fa.ˈɲut",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-xxhuut",
+      "text": "feixum",
+      "ipa": "fej.ˈʃum",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-5empkf",
+      "text": "fenupali",
+      "ipa": "fe.nu.ˈpa.li",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1i2zzk0",
+      "text": "fenupi",
+      "ipa": "fe.ˈnu.pi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1a71s7v",
+      "text": "fepo",
+      "ipa": "ˈfe.po",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Vocal mitjana no resolta: tria editorial tancada /e/ (pista é), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-jvvw92",
+      "text": "flanec",
+      "ipa": "fla.ˈnek",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Vocal mitjana no resolta: tria editorial tancada /e/ (pista é), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-to4v8o",
+      "text": "flup",
+      "ipa": "ˈflup",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-fx01on",
+      "text": "flupinera",
+      "ipa": "flu.pi.ˈne.ɾa",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1j08la",
+      "text": "fopenu",
+      "ipa": "fo.ˈpɛ.nu",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1hduh1l",
+      "text": "frenup",
+      "ipa": "fɾe.ˈnup",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1upgqvr",
+      "text": "fresquinal",
+      "ipa": "fɾes.ki.ˈnal",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-7b1rc",
+      "text": "frisquell",
+      "ipa": "fɾis.ˈkɛʎ",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-16kagy7",
+      "text": "frupel",
+      "ipa": "fɾu.ˈpɛl",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1y7wndi",
+      "text": "ganu",
+      "ipa": "ˈga.nu",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-329uw6",
+      "text": "garrup",
+      "ipa": "ga.ˈrup",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-116bxc2",
+      "text": "glafí",
+      "ipa": "gla.ˈfi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-xthxfv",
+      "text": "gomifuna",
+      "ipa": "go.mi.ˈfu.na",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-q8mh0e",
+      "text": "graput",
+      "ipa": "gɾa.ˈput",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-4qa3xa",
+      "text": "grisp",
+      "ipa": "ˈgɾisp",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-abwjxq",
+      "text": "grupinola",
+      "ipa": "gɾu.pi.ˈno.la",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Vocal mitjana no resolta: tria editorial tancada /o/ (pista ó), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-qof2p",
+      "text": "guepuf",
+      "ipa": "ge.ˈpuf",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1dmyjo9",
+      "text": "guerunila",
+      "ipa": "ge.ɾu.ˈni.la",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-15f8kf1",
+      "text": "guinel",
+      "ipa": "gi.ˈnɛl",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-15g6b0j",
+      "text": "guinop",
+      "ipa": "gi.ˈnop",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Vocal mitjana no resolta: tria editorial tancada /o/ (pista ó), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1s9m4gv",
+      "text": "jufell",
+      "ipa": "d͡ʒu.ˈfɛʎ",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-nq0xr9",
+      "text": "llunep",
+      "ipa": "ʎu.ˈnep",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Vocal mitjana no resolta: tria editorial tancada /e/ (pista é), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-qgqphr",
+      "text": "llunif",
+      "ipa": "ʎu.ˈnif",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-fsr1rc",
+      "text": "lomí",
+      "ipa": "lo.ˈmi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1nxz1d0",
+      "text": "lutepi",
+      "ipa": "lu.ˈtɛ.pi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-pxsglk",
+      "text": "marrup",
+      "ipa": "ma.ˈrup",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-nkpg82",
+      "text": "mepu",
+      "ipa": "ˈmɛ.pu",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1urc3v9",
+      "text": "mifanu",
+      "ipa": "mi.ˈfa.nu",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-101g1k2",
+      "text": "mixup",
+      "ipa": "mi.ˈʃup",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-q2rbz2",
+      "text": "nabopi",
+      "ipa": "na.ˈbɔ.pi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-10v6qsc",
+      "text": "nufà",
+      "ipa": "nu.ˈfa",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1yhusti",
+      "text": "nulapi",
+      "ipa": "nu.ˈla.pi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-wynulf",
+      "text": "nuparella",
+      "ipa": "nu.pa.ˈɾe.ʎa",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Vocal mitjana no resolta: tria editorial tancada /e/ (pista é), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-4wp27p",
+      "text": "nupi",
+      "ipa": "ˈnu.pi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-hm0b48",
+      "text": "nyapuf",
+      "ipa": "ɲa.ˈpuf",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-wahwlg",
+      "text": "nyuparela",
+      "ipa": "ɲu.pa.ˈɾɛ.la",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-cc4x4s",
+      "text": "pafú",
+      "ipa": "pa.ˈfu",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-exrqz3",
+      "text": "palluf",
+      "ipa": "pa.ˈʎuf",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-zgq98v",
+      "text": "palunefi",
+      "ipa": "pa.lu.ˈnɛ.fi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-48kt8s",
+      "text": "panufi",
+      "ipa": "pa.ˈnu.fi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-gphznv",
+      "text": "patxuf",
+      "ipa": "pa.ˈt͡ʃuf",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-aq2ths",
+      "text": "pirotet",
+      "ipa": "pi.ɾo.ˈtet",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1jk32ml",
+      "text": "pladunifa",
+      "ipa": "pla.du.ˈni.fa",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-7htjjn",
+      "text": "platoll",
+      "ipa": "pla.ˈtoʎ",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Vocal mitjana no resolta: tria editorial tancada /o/ (pista ó), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1p6nytd",
+      "text": "plim",
+      "ipa": "ˈplim",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-p5dyr5",
+      "text": "plonif",
+      "ipa": "plo.ˈnif",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1bycyen",
+      "text": "prufal",
+      "ipa": "pɾu.ˈfal",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1s39bgl",
+      "text": "pumeli",
+      "ipa": "pu.ˈmɛ.li",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-p04td1",
+      "text": "quepil",
+      "ipa": "ke.ˈpil",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-u1zcu1",
+      "text": "quepinofa",
+      "ipa": "ke.pi.ˈnɔ.fa",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-r4w8wl",
+      "text": "quifol",
+      "ipa": "ki.ˈfol",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Vocal mitjana no resolta: tria editorial tancada /o/ (pista ó), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1cwxr0w",
+      "text": "sclaf",
+      "ipa": "ˈsklaf",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Es conserva el grup inicial /skl/ sense inserir vocal: estructura extraordinària en català, explícita com a estímul. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-whdk4z",
+      "text": "sergaminya",
+      "ipa": "seɾ.ga.ˈmi.ɲa",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1jqsg9y",
+      "text": "tapú",
+      "ipa": "ta.ˈpu",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1igrzbx",
+      "text": "tedumi",
+      "ipa": "te.ˈdu.mi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-10c1mya",
+      "text": "tepú",
+      "ipa": "te.ˈpu",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1q19vh2",
+      "text": "terrufi",
+      "ipa": "te.ˈru.fi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-irnl77",
+      "text": "trefunila",
+      "ipa": "tɾe.fu.ˈni.la",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-12mxf86",
+      "text": "trufec",
+      "ipa": "tɾu.ˈfek",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Vocal mitjana no resolta: tria editorial tancada /e/ (pista é), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-9ga948",
+      "text": "trumifeta",
+      "ipa": "tɾu.mi.ˈfe.ta",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-18vhbqf",
+      "text": "trupol",
+      "ipa": "tɾu.ˈpol",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Vocal mitjana no resolta: tria editorial tancada /o/ (pista ó), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-gg60gq",
+      "text": "tupena",
+      "ipa": "tu.ˈpe.na",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1szlk5z",
+      "text": "tupinufa",
+      "ipa": "tu.pi.ˈnu.fa",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-dfjurx",
+      "text": "txunel",
+      "ipa": "t͡ʃu.ˈnɛl",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1lhx9lg",
+      "text": "xanufi",
+      "ipa": "t͡ʃa.ˈnu.fi",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-lrrvww",
+      "text": "xemurali",
+      "ipa": "t͡ʃe.mu.ˈɾa.li",
+      "language": "ca",
+      "dialect": "valencia",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-valencia",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-valencia. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    }
+  ]
+}

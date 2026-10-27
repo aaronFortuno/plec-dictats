@@ -2,6 +2,10 @@
  'use strict';
  const $=id=>document.getElementById(id),R=window.PlecPronunciationReview,B=window.PlecCatalogBrowser,C=window.PlecCatalogResources;
  const base=new URL('.',document.currentScript.src),varieties=[['central','Central · Alba','ca-central-didactic-v1','central'],['valencia','Valencià · Enric','ca-valencian-didactic-v1','valencian'],['mallorqui','Mallorquí · Palma','ca-mallorcan-didactic-v1','mallorcan']];
+ const pseudoProfiles={central:'ca-central-pseudo-didactic-v1',valencia:'ca-valencian-pseudo-didactic-v1',mallorqui:'ca-mallorcan-pseudo-didactic-v1'};
+ function profileFor(variety,mode=config?.mode||'words'){return mode==='pseudo'?pseudoProfiles[variety]:varieties.find(v=>v[0]===variety)[2];}
+ function resourceKey(variety,mode=config?.mode||'words'){return variety+(mode==='pseudo'?'-pseudo':'');}
+ function activeResources(){return ['published','review',...varieties.map(([key])=>resourceKey(key))];}
  $('pronunciation-criteria').href=new URL('ca/pronunciacio/',base).href;
  const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const icon=name=>window.PlecIcons(name);
@@ -11,12 +15,12 @@
  const resourceLabels={published:'Àudios publicats',review:'Versions de revisió',central:'IPA central',valencia:'IPA valenciana',mallorqui:'IPA mallorquina'};
  const local=['127.0.0.1','localhost','[::1]'].includes(location.hostname);
  const specs={published:{url:new URL('audio/manifest.json',base),validate:C.validateManifest},review:{url:new URL(local?'output/audio/review-manifest.json':'audio/review-manifest.json',base),validate:C.validateManifest}};
- for(const [key,,profile,file] of varieties)specs[key]={url:new URL('audio/pronunciation/runtime/'+file+'.json',base),validate:value=>{C.validateIndex(value,profile);if(config){const words=new Map(config.entries.filter(e=>e.mode==='words').map(e=>[e.id,e.text]));if(value.entries.length!==words.size||value.entries.some(e=>words.get(e.id)!==e.text))throw Error('Identitat IPA incompatible.');}return value;}};
+ for(const [key,,wordProfile,file] of varieties)for(const mode of ['words','pseudo']){const resource=resourceKey(key,mode),profile=mode==='words'?wordProfile:pseudoProfiles[key];resourceLabels[resource]=resourceLabels[key]+(mode==='pseudo'?' de pseudoparaules':'');specs[resource]={url:new URL('audio/pronunciation/runtime/'+file+(mode==='pseudo'?'-pseudo':'')+'.json',base),validate:value=>{C.validateIndex(value,profile,mode);if(config){const entries=new Map(config.entries.filter(e=>e.mode===mode).map(e=>[e.id,e.text]));if(value.entries.length!==entries.size||value.entries.some(e=>entries.get(e.id)!==e.text))throw Error('Identitat IPA incompatible.');}return value;}};}
  const resources=C.create(specs,{onChange:resourceChanged});
  function indexRows(){
   if(!config)return;
-  rows=config.entries.filter(e=>e.mode==='words').map(entry=>({id:entry.id,text:entry.text}));byId=new Map(rows.map(row=>[row.id,row]));
-  for(const [key] of varieties){const data=resources.get(key);if(data.status==='ready')for(const entry of data.value.entries){const row=byId.get(entry.id);if(row&&row.text===entry.text)row[key]=entry;}}
+  rows=config.entries.filter(e=>e.mode===config.mode).map(entry=>({id:entry.id,text:entry.text,mode:entry.mode}));byId=new Map(rows.map(row=>[row.id,row]));
+  for(const [key] of varieties){const data=resources.get(resourceKey(key));if(data.status==='ready')for(const entry of data.value.entries){const row=byId.get(entry.id);if(row&&row.text===entry.text)row[key]=entry;}}
   // Non-word catalogue identities also exist independently of pronunciation files.
   for(const entry of config.entries)if(!byId.has(entry.id))byId.set(entry.id,entry);
  }
@@ -24,18 +28,19 @@
   manifest=resources.get('review').value||{packs:[]};published=resources.get('published').value||{packs:[]};indexRows();resourceNotice();
   if(config&&$('catalog-dialog').open)render({preservePlayback:true});
  }
- function resourceNotice(){const errors=resources.keys().filter(key=>resources.get(key).status==='error');$('review-notice').hidden=!errors.length;$('review-notice').innerHTML=errors.map(key=>`<span class="resource-failure">${esc(resourceLabels[key])}: no disponible. <button type="button" class="small-link" data-retry-resource="${key}" aria-label="Reintenta la càrrega de ${esc(resourceLabels[key])}">Reintenta</button></span>`).join('');}
+ function resourceNotice(){const errors=activeResources().filter(key=>resources.get(key).status==='error');$('review-notice').hidden=!errors.length;$('review-notice').innerHTML=errors.map(key=>`<span class="resource-failure">${esc(resourceLabels[key])}: no disponible. <button type="button" class="small-link" data-retry-resource="${key}" aria-label="Reintenta la càrrega de ${esc(resourceLabels[key])}">Reintenta</button></span>`).join('');}
  function status(text=''){$('review-save-status').textContent=text;const warning=store.error();$('review-storage-warning').hidden=!warning;$('review-storage-warning').textContent=warning||'';}
  function audioFor(row,variety){
   if(variety==='mallorqui')return null;
-  const profile=varieties.find(v=>v[0]===variety)[2],valid=p=>p.profile===profile&&p.status==='ready'&&!!p.files?.[row.id];
+  const profile=profileFor(variety),valid=p=>p.profile===profile&&p.status==='ready'&&!!p.files?.[row.id];
   if(deepWord===row.text&&requestedPack){const exact=manifest.packs.find(p=>p.id===requestedPack&&valid(p));if(exact)return {pack:exact,manifest};}
   const publicPack=published.packs.find(p=>p.dialect===variety&&p.status==='ready'&&p.files?.[row.id]);
-  if(publicPack){const relative=publicPack.files[row.id],id=relative.startsWith('words/')?publicPack.id:relative.split('/')[0],exact=manifest.packs.find(p=>p.id===id&&valid(p));return exact?{pack:exact,manifest}:{pack:publicPack,manifest:published};}
-  const fallback=manifest.packs.find(p=>valid(p)&&p.id===(variety==='central'?'ca-central-alba-v1':'ca-valencian-enric-ipa-v1'))||manifest.packs.find(valid);
+  if(publicPack){const relative=publicPack.files[row.id],id=/^(words|pseudo)\//.test(relative)?publicPack.id:relative.split('/')[0],exact=manifest.packs.find(p=>p.id===id&&valid(p));return exact?{pack:exact,manifest}:{pack:publicPack,manifest:published};}
+  const fallbackId=config.mode==='pseudo'?(variety==='central'?'ca-central-alba-pseudo-ipa-v1':'ca-valencian-enric-pseudo-ipa-v1'):(variety==='central'?'ca-central-alba-v1':'ca-valencian-enric-ipa-v1');
+  const fallback=manifest.packs.find(p=>valid(p)&&p.id===fallbackId)||manifest.packs.find(valid);
   return fallback?{pack:fallback,manifest}:null;
  }
- function context(row,variety,target){const profile=varieties.find(v=>v[0]===variety)[2];
+ function context(row,variety,target){const profile=profileFor(variety);
   if(target==='ipa'){const ipa=row[variety]?.ipa;return ipa?{target,profile,id:row.id,word:row.text,pack:'',fingerprint:'',ipa}:null;}
   const pack=audioFor(row,variety)?.pack;return pack&&typeof pack.fingerprint==='string'?{target,profile,id:row.id,word:row.text,pack:pack.id,fingerprint:pack.fingerprint,ipa:pack.ipas?.[row.id]||''}:null;
  }
@@ -67,7 +72,7 @@
   if(!nav.children.length)nav.innerHTML=B.LETTERS.map(letter=>`<a href="#catalog-${letter}" data-initial="${letter}">${letter}</a>`).join('');
   for(const link of nav.querySelectorAll('a')){const letter=link.dataset.initial,count=view.counts[letter];link.setAttribute('aria-disabled',String(!count));link.tabIndex=count?0:-1;link.setAttribute('aria-label',`${letter}: ${count} mots`);if(letter===active)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');}
  }
- function cell(row,variety,label){const ipa=row[variety]?.ipa,url=urlFor(row,variety),args=`data-word="${esc(row.id)}" data-variety="${variety}"`,name=label.split(' · ')[0],state=resources.get(variety).status,shownIpa=ipa||(['idle','loading'].includes(state)?'Carregant…':'—');
+ function cell(row,variety,label){const ipa=row[variety]?.ipa,url=urlFor(row,variety),args=`data-word="${esc(row.id)}" data-variety="${variety}"`,name=label.split(' · ')[0],state=resources.get(resourceKey(variety)).status,shownIpa=ipa||(['idle','loading'].includes(state)?'Carregant…':'—');
   if(variety==='mallorqui'){
    const message='Àudio en pausa. La mostra d’Azure no resol adequadament la neutra tònica i la geminació. Referència editorial: mallorquí de Palma. '+(ipa?'IPA provisional pendent de contrast lingüístic.':'Transcripció pendent de decidir.');
    return `<section class="pronunciation-cell is-in-progress" aria-label="Mallorquí de ${esc(row.text)}"><span class="cell-variety">${esc(label)}</span><button type="button" class="ipa-play" data-action="pending" ${args} data-report-tooltip="${esc(message)}" aria-label="${esc(row.text)}: ${esc(shownIpa)}. ${esc(message)}" aria-disabled="true"><span class="ipa-text${ipa?'':' ipa-pending'}">${esc(shownIpa)}</span></button><button type="button" class="review-icon" data-action="pending" ${args} data-report-tooltip="${esc(message)}" aria-label="Àudio mallorquí de ${esc(row.text)}: en pausa" aria-disabled="true">${icon('volume-2')}</button></section>`;
@@ -84,13 +89,13 @@
   if(target){const index=entries.findIndex(e=>e.text===target);if(index>=0)limit=Math.max(50,Math.ceil((index+1)/50)*50);}
   renderInitials(view,active);
   $('catalog-clear').hidden=!query;
-  $('export-pronunciations').disabled=!varieties.some(([key])=>resources.get(key).status==='ready');
+  $('export-pronunciations').disabled=!varieties.some(([key])=>resources.get(resourceKey(key)).status==='ready');
   const visible=entries.slice(0,limit),shown=visible.length;
   $('catalog-count').textContent=view.total?view.total+' '+(view.total===1?'mot':'mots')+(active?' · '+active+': '+entries.length:'')+(shown<entries.length?' · '+shown+' visibles':''):'Cap mot amb aquests filtres.';
-  list.innerHTML=visible.map(entry=>{const row={...entry,...byId.get(entry.id)},labels=entry.tags.map(t=>config.categories.find(c=>c.id===t)?.label||t).join(' · ');return '<article class="pronunciation-row'+(row.text===deepWord?' is-target':'')+'" data-word="'+esc(row.id)+'" tabindex="-1"><div class="catalog-word"><h3 class="pronunciation-word">'+esc(row.text)+'</h3><p class="catalog-focuses">'+esc(labels)+'</p></div>'+(config.mode==='words'?varieties.map(v=>cell(row,v[0],v[1])).join(''):'')+'</article>';}).join('')||'<div class="catalog-empty"><p>No hi ha coincidències.</p><button type="button" class="small-link" data-action="reset">Neteja els filtres</button></div>';
+  list.innerHTML=visible.map(entry=>{const row={...entry,...byId.get(entry.id)},labels=entry.tags.map(t=>config.categories.find(c=>c.id===t)?.label||t).join(' · ');return '<article class="pronunciation-row'+(row.text===deepWord?' is-target':'')+'" data-word="'+esc(row.id)+'" tabindex="-1"><div class="catalog-word"><h3 class="pronunciation-word">'+esc(row.text)+'</h3><p class="catalog-focuses">'+esc(labels)+'</p></div>'+varieties.map(v=>cell(row,v[0],v[1])).join('')+'</article>';}).join('')||'<div class="catalog-empty"><p>No hi ha coincidències.</p><button type="button" class="small-link" data-action="reset">Neteja els filtres</button></div>';
   if(shown<entries.length)list.insertAdjacentHTML('beforeend','<button type="button" class="small-link catalog-next" data-action="more">Mostra 50 mots més '+icon('chevron-down')+'</button>');
   else if(active&&B.nextInitial(view.counts,active))list.insertAdjacentHTML('beforeend','<button type="button" class="small-link catalog-next" data-initial="'+B.nextInitial(view.counts,active)+'">Continua amb '+B.nextInitial(view.counts,active)+' '+icon('arrow-right')+'</button>');
-  $('catalog-columns').hidden=config.mode!=='words';list.classList.toggle('is-pseudo',config.mode==='pseudo');
+  $('catalog-columns').hidden=false;list.classList.remove('is-pseudo');
   list.scrollTop=resetScroll?0:previousScroll;
   if(target){const id=config.entries.find(e=>e.text===target)?.id,selected=[...list.querySelectorAll('.pronunciation-row')].find(e=>e.dataset.word===id);selected?.scrollIntoView({block:'center'});}
   if(preservePlayback){refreshPlay();if(focusIdentity){let target;if(focusIdentity.wrapper)target=list.querySelector(`.report-control:has(button[data-word="${focusIdentity.wrapper.word}"][data-variety="${focusIdentity.wrapper.variety}"])`);else if(focusIdentity.action)target=[...list.querySelectorAll('[data-action]')].find(e=>e.dataset.action===focusIdentity.action&&e.dataset.word===focusIdentity.word&&e.dataset.variety===focusIdentity.variety&&e.className===focusIdentity.className);else if(focusIdentity.word)target=list.querySelector(`.pronunciation-row[data-word="${focusIdentity.word}"]`);target?.focus({preventScroll:true});}}
@@ -108,7 +113,7 @@
  $('pronunciation-report-clear').addEventListener('click',()=>{const c=reportTarget();if(!c)return;store.set(c,{status:'pending',note:''});refreshFlags();status('Incidència retirada.');PlecMotion.close($('pronunciation-report'));});
  function download(text,name,type){const url=URL.createObjectURL(new Blob([text],{type})),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);}
  $('export-reviews').addEventListener('click',()=>{download(JSON.stringify(store.exportData(),null,2)+'\n','plec-revisio-pronunciacions.json','application/json');status('Incidències exportades.');});
- $('export-pronunciations').addEventListener('click',()=>{const quote=v=>'"'+String(v??'').replaceAll('"','""')+'"',head=['mot',...varieties.flatMap(([,label])=>['IPA '+label,'estat '+label])],body=rows.map(row=>[row.text,...varieties.flatMap(([key])=>[row[key]?.ipa||'',row[key]?.status||resources.get(key).status])]);download('\uFEFF'+[head,...body].map(row=>row.map(quote).join(',')).join('\r\n')+'\r\n','plec-pronunciacions.csv','text/csv;charset=utf-8');});
+ $('export-pronunciations').addEventListener('click',()=>{const quote=v=>'"'+String(v??'').replaceAll('"','""')+'"',head=['mot',...varieties.flatMap(([,label])=>['IPA '+label,'estat '+label])],body=rows.map(row=>[row.text,...varieties.flatMap(([key])=>[row[key]?.ipa||'',row[key]?.status||resources.get(resourceKey(key)).status])]);download('\uFEFF'+[head,...body].map(row=>row.map(quote).join(',')).join('\r\n')+'\r\n','plec-pronunciacions'+(config.mode==='pseudo'?'-pseudoparaules':'')+'.csv','text/csv;charset=utf-8');});
  $('import-reviews-open').addEventListener('click',()=>$('import-reviews').click());
  $('import-reviews').addEventListener('change',async event=>{try{const file=event.target.files[0];if(!file)return;if(file.size>20*1024*1024)throw Error();const count=store.importData(JSON.parse(await file.text()));refreshFlags();status(`${count} anotacions importades.`);}catch{status('No s’ha pogut importar el fitxer. Les anotacions actuals es conserven.');}finally{event.target.value='';}});
  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});window.addEventListener('pagehide',stop);
@@ -118,12 +123,13 @@
  $('catalog-clear').addEventListener('click',()=>{$('catalog-search').value='';filtersChanged();$('catalog-search').focus();});
  function selectInitial(event){const link=event.target.closest('[data-initial]');if(!link)return;event.preventDefault();if(link.getAttribute('aria-disabled')==='true')return;openGeneration++;initial=link.dataset.initial;limit=50;deepWord='';requestedPack='';render({resetScroll:true});}
  $('catalog-initials').addEventListener('click',selectInitial);$('catalog-list').addEventListener('click',selectInitial);
- function ensureData(){return resources.start();}
+ function ensureData(){return Promise.all(activeResources().map(key=>resources.load(key)));}
  $('review-notice').addEventListener('click',e=>{const button=e.target.closest('[data-retry-resource]');if(button)resources.load(button.dataset.retryResource,{retry:true});});
  function open(next,{word='',pack=''}={}){
   const changed=!config||next.mode!==config.mode||next.revision!==config.revision,scopeChanged=!!config?.basic!==!!next.basic;config=next;indexRows();
   if(changed){$('catalog-tag').innerHTML='<option value="">Tots els focus</option>'+config.categories.filter(c=>c.mode===config.mode).map(c=>'<option value="'+esc(c.id)+'">'+esc(c.label)+'</option>').join('');resetFilters();}
-  $('catalog-title').textContent=config.mode==='words'?'El catàleg':'Les pseudoparaules';$('catalog-stage-field').hidden=config.mode==='pseudo';$('export-words-text').hidden=config.mode!=='words';$('export-pseudo-text').hidden=config.mode!=='pseudo';$('export-pronunciations').hidden=config.mode==='pseudo';document.querySelector('.catalog-hint').hidden=config.mode==='pseudo';
+  $('catalog-title').textContent=config.mode==='words'?'El catàleg':'Les pseudoparaules';$('catalog-stage-field').hidden=config.mode==='pseudo';$('export-words-text').hidden=config.mode!=='words';$('export-pseudo-text').hidden=config.mode!=='pseudo';$('export-pronunciations').hidden=false;document.querySelector('.catalog-hint').hidden=false;
+  document.querySelector('.catalog-pronunciation-note span').textContent=config.mode==='pseudo'?'IPA proposada: no hi ha una grafia normativa única. Mallorquí: àudio en pausa.':'Mallorquí (Palma): IPA en revisió · àudio en pausa després de la mostra';resourceNotice();
   $('catalog-basic-field').hidden=config.mode!=='words';$('export-basic-text').hidden=config.mode!=='words';
   if(changed||scopeChanged)$('catalog-basic').checked=!!config.basic;
   if(word&&!config.entries.some(e=>e.text===word&&e.basicVocabulary))$('catalog-basic').checked=false;

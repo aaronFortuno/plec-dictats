@@ -64,3 +64,9 @@ Alba, Enric i Joana són veus ca-ES del proveïdor, no certificacions de central
 10. [Microsoft · conjunts fonètics SSML](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-ssml-phonetic-sets) i [llengües/veus](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=tts): restriccions tècniques, no autoritat dialectal.
 
 Les fonts generals no acrediten cadascuna de les 3.299 propostes: la procedència específica es conserva per fila i a les pistes. Les correccions futures han d’indicar què es modifica, per què i amb quina font o contrast.
+
+## F05 · Pseudoparaules i Matxa · 27/10/2026
+
+Les [96 pseudoparaules](PSEUDOPARAULES-PRONUNCIACIO.md) tenen propostes independents central/valenciana/mallorquina, totes sense validació final. En absència d’una pronúncia lèxica es fixen accent segons grafia i decisions editorials explícites sobre e/o, no una suposada autoritat de diccionari. El contrast entre sons i escriptura pot admetre alternatives; el model no basta per marcar-les com a errors. Els dos primers perfils tenen àudio en revisió; el tercer manté la pausa del motor Azure.
+
+Per petició expressa s’ha fet el [pilot local Matxa v2](MATXA-PILOT.md): mateixos 18 mots, amb Olga/Quim, entrada grafèmica i velocitat nativa. No replica la ruta IPA ni el ritme −10 % d’Azure. Les veus són balears segons el proveïdor, amb origen concret de Palma no verificat; ni la síntesi ni la integritat tècnica acrediten naturalitat. No s’han publicat els WAV ni activat la varietat al dictat de l’alumnat.

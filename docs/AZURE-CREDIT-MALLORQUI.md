@@ -42,3 +42,7 @@ Una mostra petita pot ser compatible amb el marge local actual, però cal calcul
 El 26/10/2026 s’han generat les 54 locucions de prova (18 mots × 3 veus) amb **4.608 caràcters reservats**, sense reintents. El registre local d’octubre passa de 429.782 a **434.390**; queden **15.610** abans del topall preventiu de 450.000. No és una consulta del consum facturat del compte.
 
 La mostra no s’ha convertit en un lot complet ni en una veu pública. No s’ha augmentat el topall, canviat F0 per S0 ni forçat la quota per comprovar si es descompta crèdit. Primer cal l’escolta del pilot. Arribar a 500.000 caràcters no és una prova necessària per esbrinar com factura la tarifa: es comproven recurs i subscripció al portal. Si F0 esgota la quota, no s’ha de donar per fet que continuï contra el saldo promocional. L’ús d’S0, si es decideix després, tindrà un pla i pressupost explícits.
+
+## Autorització posterior · pseudoparaules
+
+El 27/10/2026 es documenta l’autorització de pujar el topall local a **452.000** per completar central i valencià: 192 peticions, 16.513 caràcters, sense reintents. El registre queda en **450.903**. Això substitueix el topall preventiu anterior, sense modificar el nivell F0 ni comprovar la facturació esgotant la quota. La mostra balear de Matxa és local i no utilitza la subscripció Azure.

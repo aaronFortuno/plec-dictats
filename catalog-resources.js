@@ -18,10 +18,12 @@
   }
   return {get,keys:()=>[...records.keys()],load,start:()=>Promise.all([...records.keys()].map(key=>load(key)))};
  }
- function validateIndex(data,profile){
+ function validateIndex(data,profile,mode=data?.mode||'words'){
   if(data?.schemaVersion!==1||data.profile!==profile||data.language!=='ca'||!Array.isArray(data.entries))throw Error('Índex IPA invàlid.');
+  if(!['words','pseudo'].includes(mode)||(data.mode!==undefined&&data.mode!==mode))throw Error('Mode de l’índex IPA incompatible.');
+  const identity=mode==='pseudo'?/^s-[a-z0-9]+$/:/^p-[a-z0-9]+$/;
   const seen=new Set();
-  for(const e of data.entries){if(typeof e?.id!=='string'||!/^p-[a-z0-9]+$/.test(e.id)||seen.has(e.id)||typeof e.text!=='string'||typeof e.ipa!=='string'||typeof e.status!=='string')throw Error('Entrada IPA invàlida.');seen.add(e.id);}
+  for(const e of data.entries){if(typeof e?.id!=='string'||!identity.test(e.id)||seen.has(e.id)||typeof e.text!=='string'||typeof e.ipa!=='string'||typeof e.status!=='string')throw Error('Entrada IPA invàlida.');seen.add(e.id);}
   return data;
  }
  function validateManifest(data){if(data?.schemaVersion!==1||!Array.isArray(data.packs)||data.packs.some(p=>!p||typeof p.id!=='string'||p.language!=='ca'||typeof p.files!=='object'||!p.files||Array.isArray(p.files)))throw Error('Manifest invàlid.');return data;}

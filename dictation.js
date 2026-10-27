@@ -167,7 +167,7 @@
         if (gen !== state.generation) return;
         var cov;
         try {
-          var pronunciation = varieties.select(m, lang, {variety:qs.get("variety"),voice:qs.get("voice")});
+          var pronunciation = varieties.select(m, lang, {variety:qs.get("variety"),voice:qs.get("voice"),mode:sel.recipe.mode,entries:sel.entries});
           cov = coverage(m, sel.entries, lang, appBase, pronunciation.pack.id);
           $("dictation-variety").textContent = pronunciation.variety.label;
           state.variety = pronunciation.variety.id;

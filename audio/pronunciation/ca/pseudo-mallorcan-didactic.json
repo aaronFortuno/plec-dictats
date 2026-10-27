@@ -1,0 +1,1653 @@
+{
+  "schemaVersion": 1,
+  "profile": "ca-mallorcan-pseudo-didactic-v1",
+  "mode": "pseudo",
+  "language": "ca",
+  "dialect": "mallorqui",
+  "diction": "didactic-explicit",
+  "alphabet": "ipa-mallorcan-draft",
+  "catalogFingerprint": "ee94edbd3b2d4fb4d44d1cd66f70b970e17520029d952593d69e5adb2139bbf5",
+  "status": "draft-editorial-nonword-readings-pending-review",
+  "audioApproval": false,
+  "revision": "a391266cc887df7378e15316cb57714137a8208b4652f1c0d9eac8247a383811",
+  "summary": {
+    "words": 96,
+    "withIpa": 96,
+    "withoutIpa": 0,
+    "validated": 0
+  },
+  "entries": [
+    {
+      "id": "s-ufjcne",
+      "text": "banyup",
+      "ipa": "bə.ˈɲup",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1sfenkz",
+      "text": "binu",
+      "ipa": "ˈbi.nu",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1a9ujc9",
+      "text": "blanuf",
+      "ipa": "blə.ˈnuf",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-j76w3n",
+      "text": "blanufeta",
+      "ipa": "blə.nu.ˈfə.tə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-c3biom",
+      "text": "blenuc",
+      "ipa": "blə.ˈnuk",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-38wv6j",
+      "text": "blinufeta",
+      "ipa": "bli.nu.ˈfə.tə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-17uxlgp",
+      "text": "blis",
+      "ipa": "ˈblis",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-zhfds",
+      "text": "bruf",
+      "ipa": "ˈbɾuf",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-lv5x86",
+      "text": "brufanell",
+      "ipa": "bɾu.fə.ˈnɛʎ",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-zg5fcv",
+      "text": "brunif",
+      "ipa": "bɾu.ˈnif",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-y2c03w",
+      "text": "carunepi",
+      "ipa": "kə.ɾu.ˈnɛ.pi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-5udezm",
+      "text": "clenap",
+      "ipa": "klə.ˈnap",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-ui48r2",
+      "text": "clopiruna",
+      "ipa": "klo.pi.ˈɾu.nə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1sj42x7",
+      "text": "cluf",
+      "ipa": "ˈkluf",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-sdpujs",
+      "text": "cralop",
+      "ipa": "kɾə.ˈlop",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Vocal mitjana no resolta: tria editorial tancada /o/ (pista ó), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1hrv4ow",
+      "text": "crufanoli",
+      "ipa": "kɾu.fə.ˈnɔ.li",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-grd7tk",
+      "text": "crunel",
+      "ipa": "kɾu.ˈnɛl",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1rnih9t",
+      "text": "cunyi",
+      "ipa": "ˈku.ɲi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-5nq4pj",
+      "text": "demufi",
+      "ipa": "də.ˈmu.fi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1vvmxe2",
+      "text": "dofípol",
+      "ipa": "du.ˈfi.pol",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-111m8ye",
+      "text": "dopali",
+      "ipa": "do.ˈpa.li",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-9jdhoo",
+      "text": "drall",
+      "ipa": "ˈdɾaʎ",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1hzmc8p",
+      "text": "drapuneta",
+      "ipa": "dɾə.pu.ˈnə.tə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1236ae5",
+      "text": "drupel",
+      "ipa": "dɾu.ˈpɛl",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1uxtkiu",
+      "text": "dumi",
+      "ipa": "ˈdu.mi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-o5896o",
+      "text": "dunyal",
+      "ipa": "du.ˈɲal",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-d4ay3m",
+      "text": "fanyut",
+      "ipa": "fə.ˈɲut",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-xxhuut",
+      "text": "feixum",
+      "ipa": "fə.ˈʃum",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-5empkf",
+      "text": "fenupali",
+      "ipa": "fə.nu.ˈpa.li",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1i2zzk0",
+      "text": "fenupi",
+      "ipa": "fə.ˈnu.pi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1a71s7v",
+      "text": "fepo",
+      "ipa": "ˈfe.po",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Vocal mitjana no resolta: tria editorial tancada /e/ (pista é), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-jvvw92",
+      "text": "flanec",
+      "ipa": "flə.ˈnek",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Vocal mitjana no resolta: tria editorial tancada /e/ (pista é), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-to4v8o",
+      "text": "flup",
+      "ipa": "ˈflup",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-fx01on",
+      "text": "flupinera",
+      "ipa": "flu.pi.ˈne.ɾə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1j08la",
+      "text": "fopenu",
+      "ipa": "fo.ˈpɛ.nu",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1hduh1l",
+      "text": "frenup",
+      "ipa": "fɾə.ˈnup",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1upgqvr",
+      "text": "fresquinal",
+      "ipa": "fɾəs.ki.ˈnal",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-7b1rc",
+      "text": "frisquell",
+      "ipa": "fɾis.ˈkɛʎ",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-16kagy7",
+      "text": "frupel",
+      "ipa": "fɾu.ˈpɛl",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1y7wndi",
+      "text": "ganu",
+      "ipa": "ˈga.nu",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-329uw6",
+      "text": "garrup",
+      "ipa": "gə.ˈrup",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-116bxc2",
+      "text": "glafí",
+      "ipa": "glə.ˈfi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-xthxfv",
+      "text": "gomifuna",
+      "ipa": "go.mi.ˈfu.nə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-q8mh0e",
+      "text": "graput",
+      "ipa": "gɾə.ˈput",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-4qa3xa",
+      "text": "grisp",
+      "ipa": "ˈgɾisp",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-abwjxq",
+      "text": "grupinola",
+      "ipa": "gɾu.pi.ˈno.lə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Vocal mitjana no resolta: tria editorial tancada /o/ (pista ó), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-qof2p",
+      "text": "guepuf",
+      "ipa": "gə.ˈpuf",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1dmyjo9",
+      "text": "guerunila",
+      "ipa": "gə.ɾu.ˈni.lə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-15f8kf1",
+      "text": "guinel",
+      "ipa": "gi.ˈnɛl",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-15g6b0j",
+      "text": "guinop",
+      "ipa": "gi.ˈnop",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Vocal mitjana no resolta: tria editorial tancada /o/ (pista ó), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1s9m4gv",
+      "text": "jufell",
+      "ipa": "ʒu.ˈfɛʎ",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-nq0xr9",
+      "text": "llunep",
+      "ipa": "ʎu.ˈnep",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Vocal mitjana no resolta: tria editorial tancada /e/ (pista é), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-qgqphr",
+      "text": "llunif",
+      "ipa": "ʎu.ˈnif",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-fsr1rc",
+      "text": "lomí",
+      "ipa": "lu.ˈmi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1nxz1d0",
+      "text": "lutepi",
+      "ipa": "lu.ˈtɛ.pi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-pxsglk",
+      "text": "marrup",
+      "ipa": "mə.ˈrup",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-nkpg82",
+      "text": "mepu",
+      "ipa": "ˈmɛ.pu",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1urc3v9",
+      "text": "mifanu",
+      "ipa": "mi.ˈfa.nu",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-101g1k2",
+      "text": "mixup",
+      "ipa": "mi.ˈʃup",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-q2rbz2",
+      "text": "nabopi",
+      "ipa": "nə.ˈbɔ.pi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-10v6qsc",
+      "text": "nufà",
+      "ipa": "nu.ˈfa",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1yhusti",
+      "text": "nulapi",
+      "ipa": "nu.ˈla.pi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-wynulf",
+      "text": "nuparella",
+      "ipa": "nu.pə.ˈɾe.ʎə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Vocal mitjana no resolta: tria editorial tancada /e/ (pista é), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-4wp27p",
+      "text": "nupi",
+      "ipa": "ˈnu.pi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-hm0b48",
+      "text": "nyapuf",
+      "ipa": "ɲə.ˈpuf",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-wahwlg",
+      "text": "nyuparela",
+      "ipa": "ɲu.pə.ˈɾɛ.lə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-cc4x4s",
+      "text": "pafú",
+      "ipa": "pə.ˈfu",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-exrqz3",
+      "text": "palluf",
+      "ipa": "pə.ˈʎuf",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-zgq98v",
+      "text": "palunefi",
+      "ipa": "pə.lu.ˈnɛ.fi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-48kt8s",
+      "text": "panufi",
+      "ipa": "pə.ˈnu.fi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-gphznv",
+      "text": "patxuf",
+      "ipa": "pə.ˈt͡ʃuf",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-aq2ths",
+      "text": "pirotet",
+      "ipa": "pi.ɾo.ˈtət",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1jk32ml",
+      "text": "pladunifa",
+      "ipa": "plə.du.ˈni.fə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-7htjjn",
+      "text": "platoll",
+      "ipa": "plə.ˈtoʎ",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Vocal mitjana no resolta: tria editorial tancada /o/ (pista ó), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1p6nytd",
+      "text": "plim",
+      "ipa": "ˈplim",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-p5dyr5",
+      "text": "plonif",
+      "ipa": "plu.ˈnif",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1bycyen",
+      "text": "prufal",
+      "ipa": "pɾu.ˈfal",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1s39bgl",
+      "text": "pumeli",
+      "ipa": "pu.ˈmɛ.li",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-p04td1",
+      "text": "quepil",
+      "ipa": "kə.ˈpil",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-u1zcu1",
+      "text": "quepinofa",
+      "ipa": "kə.pi.ˈnɔ.fə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-r4w8wl",
+      "text": "quifol",
+      "ipa": "ki.ˈfol",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Vocal mitjana no resolta: tria editorial tancada /o/ (pista ó), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1cwxr0w",
+      "text": "sclaf",
+      "ipa": "ˈsklaf",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Es conserva el grup inicial /skl/ sense inserir vocal: estructura extraordinària en català, explícita com a estímul. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-whdk4z",
+      "text": "sergaminya",
+      "ipa": "səɾ.gə.ˈmi.ɲə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1jqsg9y",
+      "text": "tapú",
+      "ipa": "tə.ˈpu",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1igrzbx",
+      "text": "tedumi",
+      "ipa": "tə.ˈdu.mi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-10c1mya",
+      "text": "tepú",
+      "ipa": "tə.ˈpu",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1q19vh2",
+      "text": "terrufi",
+      "ipa": "tə.ˈru.fi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-irnl77",
+      "text": "trefunila",
+      "ipa": "tɾə.fu.ˈni.lə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-12mxf86",
+      "text": "trufec",
+      "ipa": "tɾu.ˈfek",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Vocal mitjana no resolta: tria editorial tancada /e/ (pista é), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-9ga948",
+      "text": "trumifeta",
+      "ipa": "tɾu.mi.ˈfə.tə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-18vhbqf",
+      "text": "trupol",
+      "ipa": "tɾu.ˈpol",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Vocal mitjana no resolta: tria editorial tancada /o/ (pista ó), sense modificar la grafia. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-gg60gq",
+      "text": "tupena",
+      "ipa": "tu.ˈpə.nə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1szlk5z",
+      "text": "tupinufa",
+      "ipa": "tu.pi.ˈnu.fə",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-dfjurx",
+      "text": "txunel",
+      "ipa": "t͡ʃu.ˈnɛl",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-1lhx9lg",
+      "text": "xanufi",
+      "ipa": "ʃə.ˈnu.fi",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "s-lrrvww",
+      "text": "xemurali",
+      "ipa": "ʃə.mu.ˈɾa.li",
+      "language": "ca",
+      "dialect": "mallorqui",
+      "diction": "didactic-explicit",
+      "status": "pendent-contrast",
+      "basis": "editorial-nonword-reading-mallorqui",
+      "sources": [
+        "https://github.com/Connum/catalan2ipa",
+        "https://oiec.iec.cat/"
+      ],
+      "notes": "Pseudoparaula: model de lectura editorial, no pronunciació de diccionari ni ortografia normativa única. Accent regular segons la grafia; branca ca-XB. Timbre i reduccions proposats per les regles del conversor, pendents de contrast; no són una decisió lèxica normativa. Les altres grafies compatibles amb el so dictat es valoren segons el focus. No s’afegeixen vocals ni s’ometen consonants per adaptar-se a Azure. Cap veu ni enregistrament validat.",
+      "reviewer": null,
+      "reviewDate": null
+    }
+  ]
+}

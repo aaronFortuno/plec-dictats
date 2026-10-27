@@ -1,0 +1,587 @@
+{
+  "schemaVersion": 1,
+  "profile": "ca-central-pseudo-didactic-v1",
+  "mode": "pseudo",
+  "language": "ca",
+  "dialect": "central",
+  "diction": "didactic-explicit",
+  "catalogFingerprint": "ee94edbd3b2d4fb4d44d1cd66f70b970e17520029d952593d69e5adb2139bbf5",
+  "entries": [
+    {
+      "id": "s-ufjcne",
+      "text": "banyup",
+      "ipa": "bə.ˈɲup",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1sfenkz",
+      "text": "binu",
+      "ipa": "ˈbi.nu",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1a9ujc9",
+      "text": "blanuf",
+      "ipa": "blə.ˈnuf",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-j76w3n",
+      "text": "blanufeta",
+      "ipa": "blə.nu.ˈfɛ.tə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-c3biom",
+      "text": "blenuc",
+      "ipa": "blə.ˈnuk",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-38wv6j",
+      "text": "blinufeta",
+      "ipa": "bli.nu.ˈfɛ.tə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-17uxlgp",
+      "text": "blis",
+      "ipa": "ˈblis",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-zhfds",
+      "text": "bruf",
+      "ipa": "ˈbɾuf",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-lv5x86",
+      "text": "brufanell",
+      "ipa": "bɾu.fə.ˈnɛʎ",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-zg5fcv",
+      "text": "brunif",
+      "ipa": "bɾu.ˈnif",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-y2c03w",
+      "text": "carunepi",
+      "ipa": "kə.ɾu.ˈnɛ.pi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-5udezm",
+      "text": "clenap",
+      "ipa": "klə.ˈnap",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-ui48r2",
+      "text": "clopiruna",
+      "ipa": "klu.pi.ˈɾu.nə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1sj42x7",
+      "text": "cluf",
+      "ipa": "ˈkluf",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-sdpujs",
+      "text": "cralop",
+      "ipa": "kɾə.ˈlop",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1hrv4ow",
+      "text": "crufanoli",
+      "ipa": "kɾu.fə.ˈnɔ.li",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-grd7tk",
+      "text": "crunel",
+      "ipa": "kɾu.ˈnɛl",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1rnih9t",
+      "text": "cunyi",
+      "ipa": "ˈku.ɲi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-5nq4pj",
+      "text": "demufi",
+      "ipa": "də.ˈmu.fi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1vvmxe2",
+      "text": "dofípol",
+      "ipa": "du.ˈfi.pul",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-111m8ye",
+      "text": "dopali",
+      "ipa": "du.ˈpa.li",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-9jdhoo",
+      "text": "drall",
+      "ipa": "ˈdɾaʎ",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1hzmc8p",
+      "text": "drapuneta",
+      "ipa": "dɾə.pu.ˈnɛ.tə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1236ae5",
+      "text": "drupel",
+      "ipa": "dɾu.ˈpɛl",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1uxtkiu",
+      "text": "dumi",
+      "ipa": "ˈdu.mi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-o5896o",
+      "text": "dunyal",
+      "ipa": "du.ˈɲal",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-d4ay3m",
+      "text": "fanyut",
+      "ipa": "fə.ˈɲut",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-xxhuut",
+      "text": "feixum",
+      "ipa": "fə.ˈʃum",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-5empkf",
+      "text": "fenupali",
+      "ipa": "fə.nu.ˈpa.li",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1i2zzk0",
+      "text": "fenupi",
+      "ipa": "fə.ˈnu.pi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1a71s7v",
+      "text": "fepo",
+      "ipa": "ˈfe.pu",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-jvvw92",
+      "text": "flanec",
+      "ipa": "flə.ˈnek",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-to4v8o",
+      "text": "flup",
+      "ipa": "ˈflup",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-fx01on",
+      "text": "flupinera",
+      "ipa": "flu.pi.ˈne.ɾə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1j08la",
+      "text": "fopenu",
+      "ipa": "fu.ˈpɛ.nu",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1hduh1l",
+      "text": "frenup",
+      "ipa": "fɾə.ˈnup",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1upgqvr",
+      "text": "fresquinal",
+      "ipa": "fɾəs.ki.ˈnal",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-7b1rc",
+      "text": "frisquell",
+      "ipa": "fɾis.ˈkɛʎ",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-16kagy7",
+      "text": "frupel",
+      "ipa": "fɾu.ˈpɛl",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1y7wndi",
+      "text": "ganu",
+      "ipa": "ˈga.nu",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-329uw6",
+      "text": "garrup",
+      "ipa": "gə.ˈrup",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-116bxc2",
+      "text": "glafí",
+      "ipa": "glə.ˈfi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-xthxfv",
+      "text": "gomifuna",
+      "ipa": "gu.mi.ˈfu.nə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-q8mh0e",
+      "text": "graput",
+      "ipa": "gɾə.ˈput",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-4qa3xa",
+      "text": "grisp",
+      "ipa": "ˈgɾisp",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-abwjxq",
+      "text": "grupinola",
+      "ipa": "gɾu.pi.ˈno.lə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-qof2p",
+      "text": "guepuf",
+      "ipa": "gə.ˈpuf",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1dmyjo9",
+      "text": "guerunila",
+      "ipa": "gə.ɾu.ˈni.lə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-15f8kf1",
+      "text": "guinel",
+      "ipa": "gi.ˈnɛl",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-15g6b0j",
+      "text": "guinop",
+      "ipa": "gi.ˈnop",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1s9m4gv",
+      "text": "jufell",
+      "ipa": "ʒu.ˈfɛʎ",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-nq0xr9",
+      "text": "llunep",
+      "ipa": "ʎu.ˈnep",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-qgqphr",
+      "text": "llunif",
+      "ipa": "ʎu.ˈnif",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-fsr1rc",
+      "text": "lomí",
+      "ipa": "lu.ˈmi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1nxz1d0",
+      "text": "lutepi",
+      "ipa": "lu.ˈtɛ.pi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-pxsglk",
+      "text": "marrup",
+      "ipa": "mə.ˈrup",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-nkpg82",
+      "text": "mepu",
+      "ipa": "ˈmɛ.pu",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1urc3v9",
+      "text": "mifanu",
+      "ipa": "mi.ˈfa.nu",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-101g1k2",
+      "text": "mixup",
+      "ipa": "mi.ˈʃup",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-q2rbz2",
+      "text": "nabopi",
+      "ipa": "nə.ˈbɔ.pi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-10v6qsc",
+      "text": "nufà",
+      "ipa": "nu.ˈfa",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1yhusti",
+      "text": "nulapi",
+      "ipa": "nu.ˈla.pi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-wynulf",
+      "text": "nuparella",
+      "ipa": "nu.pə.ˈɾe.ʎə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-4wp27p",
+      "text": "nupi",
+      "ipa": "ˈnu.pi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-hm0b48",
+      "text": "nyapuf",
+      "ipa": "ɲə.ˈpuf",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-wahwlg",
+      "text": "nyuparela",
+      "ipa": "ɲu.pə.ˈɾɛ.lə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-cc4x4s",
+      "text": "pafú",
+      "ipa": "pə.ˈfu",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-exrqz3",
+      "text": "palluf",
+      "ipa": "pə.ˈʎuf",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-zgq98v",
+      "text": "palunefi",
+      "ipa": "pə.lu.ˈnɛ.fi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-48kt8s",
+      "text": "panufi",
+      "ipa": "pə.ˈnu.fi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-gphznv",
+      "text": "patxuf",
+      "ipa": "pə.ˈt͡ʃuf",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-aq2ths",
+      "text": "pirotet",
+      "ipa": "pi.ɾu.ˈtɛt",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1jk32ml",
+      "text": "pladunifa",
+      "ipa": "plə.du.ˈni.fə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-7htjjn",
+      "text": "platoll",
+      "ipa": "plə.ˈtoʎ",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1p6nytd",
+      "text": "plim",
+      "ipa": "ˈplim",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-p5dyr5",
+      "text": "plonif",
+      "ipa": "plu.ˈnif",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1bycyen",
+      "text": "prufal",
+      "ipa": "pɾu.ˈfal",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1s39bgl",
+      "text": "pumeli",
+      "ipa": "pu.ˈmɛ.li",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-p04td1",
+      "text": "quepil",
+      "ipa": "kə.ˈpil",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-u1zcu1",
+      "text": "quepinofa",
+      "ipa": "kə.pi.ˈnɔ.fə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-r4w8wl",
+      "text": "quifol",
+      "ipa": "ki.ˈfol",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1cwxr0w",
+      "text": "sclaf",
+      "ipa": "ˈsklaf",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-whdk4z",
+      "text": "sergaminya",
+      "ipa": "sər.gə.ˈmi.ɲə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1jqsg9y",
+      "text": "tapú",
+      "ipa": "tə.ˈpu",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1igrzbx",
+      "text": "tedumi",
+      "ipa": "tə.ˈdu.mi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-10c1mya",
+      "text": "tepú",
+      "ipa": "tə.ˈpu",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1q19vh2",
+      "text": "terrufi",
+      "ipa": "tə.ˈru.fi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-irnl77",
+      "text": "trefunila",
+      "ipa": "tɾə.fu.ˈni.lə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-12mxf86",
+      "text": "trufec",
+      "ipa": "tɾu.ˈfek",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-9ga948",
+      "text": "trumifeta",
+      "ipa": "tɾu.mi.ˈfɛ.tə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-18vhbqf",
+      "text": "trupol",
+      "ipa": "tɾu.ˈpol",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-gg60gq",
+      "text": "tupena",
+      "ipa": "tu.ˈpɛ.nə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1szlk5z",
+      "text": "tupinufa",
+      "ipa": "tu.pi.ˈnu.fə",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-dfjurx",
+      "text": "txunel",
+      "ipa": "t͡ʃu.ˈnɛl",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-1lhx9lg",
+      "text": "xanufi",
+      "ipa": "ʃə.ˈnu.fi",
+      "status": "pendent-contrast"
+    },
+    {
+      "id": "s-lrrvww",
+      "text": "xemurali",
+      "ipa": "ʃə.mu.ˈɾa.li",
+      "status": "pendent-contrast"
+    }
+  ]
+}

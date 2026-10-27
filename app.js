@@ -245,6 +245,7 @@
     }
   });
   const releases = [
+    ['1.28', '2026-10-27', ['Lectures IPA per a les 96 pseudoparaules en tres varietats, amb àudios centrals i valencians en revisió. El catàleg i el mode dictat seleccionen el paquet segons el tipus d’elements i la varietat, conservant els codis existents. Mostra local comparativa de Matxa v2 i Azure amb els mateixos 18 mots balears; encara sense publicació de veus balears.']],
     ['1.27.1', '2026-10-26', ['Àudio mallorquí en pausa: la mostra d’Azure no resol adequadament la neutra tònica i la geminació. Es conserven les propostes IPA i les fonts en revisió, amb l’estat actualitzat al catàleg i la guia. Nous lots bloquejats fins a reprendre explícitament la proposta.']],
     ['1.27', '2026-10-26', ['Catàleg amb recursos independents, reintents selectius i índexs lleugers. Propostes IPA mallorquines amb referència editorial de Palma i àudios en procés. Guia pública de criteris i fonts de pronunciació, i alternativa del repositori per a correccions. Millor continuïtat del teclat al dictat, configurador accessible amb ampliació i respecte pel moviment reduït. Generació segura i comprovacions de desenvolupament reproduïbles.']],
     ['1.26', '2026-10-26', ['Marca vectorial compartida entre web i PDF, amb el lema imprès a la mateixa amplada. Lateral reorganitzat: PDF prioritari i dictat oral separat, còpia i compartició amb icones. Ajuda dels focus només a l’interrogant. Retirada la guia docent i recuperat el format de les notes de l’ajuda, amb una explicació breu del vocabulari bàsic.']],

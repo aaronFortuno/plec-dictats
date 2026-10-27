@@ -46,5 +46,57 @@
     "alphabet": "ipa-mallorcan-draft",
     "status": "incomplete-draft-pending-lexical-linguistic-and-auditory-review",
     "note": "Perfil mallorquí amb vocal neutra tònica i harmonització vocàlica, no representatiu de totes les localitats ni de tot el balear. Regles ca-XB i exemples UIB/EBAP; buits on falta decidir una vocal mitjana. Manté /v/ malgrat no figurar a l’inventari Azure ca-ES documentat. Cap veu ni àudio publicat. Els mateixos ID/grafies no constitueixen una adaptació lèxica o morfològica al mallorquí."
-  }]
+  },
+  {
+    "id": "ca-central-pseudo-didactic-v1",
+    "language": "ca",
+    "mode": "pseudo",
+    "dialect": "central",
+    "diction": "didactic-explicit",
+    "label": "Català central · pseudoparaules · lectures proposades",
+    "table": "ca/pseudo-central-didactic.tsv",
+    "export": "ca/pseudo-central-didactic.json",
+    "readable": "ca/pseudo-central-didactic-ipa.txt",
+    "catalogPath": "catalogs/ca/editions/seed-1.json",
+    "catalogFingerprint": "ee94edbd3b2d4fb4d44d1cd66f70b970e17520029d952593d69e5adb2139bbf5",
+    "alphabet": "ipa-azure-ca-ES",
+    "status": "draft-editorial-nonword-readings-pending-review",
+    "note": "Una proposta de lectura per a cadascuna de les 96 pseudoparaules. No són entrades lèxiques ni tenen una ortografia normativa única; accent i decisions de vocal mitjana són criteris editorials explícits. Les grafies i ID del banc immutable no canvien. Contrast lingüístic i escolta encara pendents."
+  },
+  {
+    "id": "ca-valencian-pseudo-didactic-v1",
+    "language": "ca",
+    "mode": "pseudo",
+    "dialect": "valencia",
+    "diction": "didactic-explicit",
+    "label": "Valencià · pseudoparaules · lectures proposades",
+    "table": "ca/pseudo-valencian-didactic.tsv",
+    "export": "ca/pseudo-valencian-didactic.json",
+    "readable": "ca/pseudo-valencian-didactic-ipa.txt",
+    "catalogPath": "catalogs/ca/editions/seed-1.json",
+    "catalogFingerprint": "ee94edbd3b2d4fb4d44d1cd66f70b970e17520029d952593d69e5adb2139bbf5",
+    "alphabet": "ipa-valencian-draft",
+    "status": "draft-editorial-nonword-readings-pending-review",
+    "note": "Una proposta de lectura per a cadascuna de les 96 pseudoparaules. No són entrades lèxiques ni tenen una ortografia normativa única; accent i decisions de vocal mitjana són criteris editorials explícits. Les grafies i ID del banc immutable no canvien. Contrast lingüístic i escolta encara pendents."
+  },
+  {
+    "id": "ca-mallorcan-pseudo-didactic-v1",
+    "language": "ca",
+    "mode": "pseudo",
+    "dialect": "mallorqui",
+    "diction": "didactic-explicit",
+    "label": "Mallorquí (Palma) · pseudoparaules · lectures proposades",
+    "table": "ca/pseudo-mallorcan-didactic.tsv",
+    "export": "ca/pseudo-mallorcan-didactic.json",
+    "readable": "ca/pseudo-mallorcan-didactic-ipa.txt",
+    "catalogPath": "catalogs/ca/editions/seed-1.json",
+    "catalogFingerprint": "ee94edbd3b2d4fb4d44d1cd66f70b970e17520029d952593d69e5adb2139bbf5",
+    "alphabet": "ipa-mallorcan-draft",
+    "status": "draft-editorial-nonword-readings-pending-review",
+    "referencePlace": "Palma",
+    "audioStatus": "on-hold",
+    "audioFeedback": "ca/mallorcan-pilot-feedback.json",
+    "note": "Una proposta de lectura per a cadascuna de les 96 pseudoparaules. No són entrades lèxiques ni tenen una ortografia normativa única; accent i decisions de vocal mitjana són criteris editorials explícits. Les grafies i ID del banc immutable no canvien. Contrast lingüístic i escolta encara pendents."
+  }
+  ]
 }

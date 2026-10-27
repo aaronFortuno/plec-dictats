@@ -1,6 +1,15 @@
-# Verificació local · v1.6 · 23 d’octubre de 2026
+# Verificació local · historial
 
-## Vista prèvia i configuració v1.6
+## v1.28 · 27 d’octubre de 2026
+
+- Porta de qualitat completa: **44 comprovacions, 0 errors**, amb Node 24.22.1 i dependències exactes del lock. Inclou dades, llavors, simulacions d’àudio, PDF, navegador i compatibilitat. Sense síntesi ni comprovació del desplegament remot.
+- 96 pseudoparaules × 3 perfils IPA: identitats, ordre font, inventaris, decisions sobre vocals i exportacions coherents. Cap transcripció es marca com a validada.
+- 192 MP3 centrals/valencians descodificats amb Chromium: 0 errors, format natiu 24 kHz/48 kbit/s/mono, hashes i IPA congelades comprovats abans de publicar. Els 2 paquets de mots, els 6 mapes de revisió previs, defaults i 7 instantànies s’han preservat exactament. Revisió auditiva oberta.
+- Catàleg real amb els dos àudios, tres columnes IPA i estat mallorquí en pausa, revisat a 1440 × 900 i 390 × 844. Reproducció del primer element de dictats de pseudoparaules amb central i valencià, codi EQ9T-AAAAB, sense errors JavaScript.
+- Matxa v2: 36 WAV locals dels mateixos 18 mots amb Olga/Quim, descodificació i hashes correctes; pàgina comparativa de 90 controls amb les tres veus d’Azure. S’ha provat la reproducció nativa d’un WAV. No s’ha avaluat la correcció fonètica ni publicat cap WAV.
+- Registre local Azure: 450.903 caràcters reservats; els 192 àudios nous representen 16.513, sense reintents. Topall local autoritzat de 452.000, sense canvi de tarifa. No substitueix el consum del portal Microsoft.
+
+## Vista prèvia i configuració v1.6 · 23 d’octubre de 2026
 
 - Configuració inicial de 220 px: aproximadament el 30 % del lateral a 1440 × 900 i el 36 % a 1366 × 768. Els focus i el recompte es veuen sense scroll en aquestes mides i a 1024 × 768; no s’ha reduït la mida del text.
 - Zoom comprovat amb botó, roda, arrossegament, doble clic, ajust i teclat. Proves de geometria del punt d’ancoratge, límits 50–400 % i limitació del desplaçament.
