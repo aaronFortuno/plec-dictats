@@ -243,6 +243,7 @@
     }
   });
   const releases = [
+    ['1.30.1', '2026-11-12', ['Les estadístiques i els avisos nous es recullen a l’Umami propi d’ortogra.fi. Es mantenen les opcions de privadesa.']],
     ['1.30', '2026-10-27', ['CSS del layout consolidat: columnes, calaixos, peu i impressió agrupats, sense les disposicions antigues que s’anul·laven entre fitxers. Aspecte de pantalla conservat i corregit el retall del full en la impressió directa del navegador.']],
     ['1.29', '2026-10-27', ['Neteja tècnica: gestió de cerques separada de la interfície i retirada de controls antics de revisió que ja no eren accessibles, conservant les dades. Àudios balears en pausa per manca de dicció prou clara i consistent als sistemes provats; IPA disponibles al catàleg.']],
     ['1.28', '2026-10-27', ['Lectures IPA per a les 96 pseudoparaules en tres varietats, amb àudios centrals i valencians en revisió. El catàleg i el mode dictat seleccionen el paquet segons el tipus d’elements i la varietat, conservant els codis existents. Mostra local comparativa de Matxa v2 i Azure amb els mateixos 18 mots balears; encara sense publicació de veus balears.']],

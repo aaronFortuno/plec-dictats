@@ -1,5 +1,9 @@
 # Historial
 
+## 1.30.1 · 12 de novembre de 2026
+
+- El seguiment d’ús i els avisos d’àudio passen a la instància pròpia d’Umami. Els esdeveniments i les opcions de privadesa es mantenen.
+
 ## 1.30 · 27 d’octubre de 2026
 
 - Manteniment del CI: proves de navegador independents de l’índex de revisió generat a l’ordinador de desenvolupament. Mateixos errors d’Actions reproduïts en una còpia neta i 47 comprovacions superades després de la correcció, mantenint la cobertura de fallades i privacitat.

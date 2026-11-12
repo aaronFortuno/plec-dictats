@@ -60,7 +60,7 @@ const report = { word: 'atapeït', variety: 'central', audioVersion: 'central-v1
   dom.env.document.createElement = () => ({ setAttribute: (k,v) => { attributes[k]=v; }, remove() {} });
   dom.env.document.head = { appendChild(script) { inserted=script; dom.env.umami={track(){}}; queueMicrotask(()=>script.onload()); } };
   assert(await dom.api.start());
-  assert.equal(inserted.src,'https://cloud.umami.is/script.js'); assert.equal(inserted.referrerPolicy,'no-referrer');
+  assert.equal(inserted.src,'https://maquestria.tail72bc84.ts.net:8443/script.js'); assert.equal(inserted.referrerPolicy,'no-referrer');
   assert.equal(attributes['data-auto-track'],'false'); assert.equal(attributes['data-exclude-search'],'true');
   assert.equal(attributes['data-exclude-hash'],'true'); assert.equal(attributes['data-do-not-track'],'true');
   assert.equal(attributes['data-domains'],'plec.ortogra.fi'); assert.equal(dom.calls.length,1);

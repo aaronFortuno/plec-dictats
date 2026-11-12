@@ -4,8 +4,8 @@
   else { root.PlecAnalytics = factory().create(root); root.PlecAnalytics.start(); }
 })(typeof window === 'undefined' ? globalThis : window, function () {
   'use strict';
-  const HOST = 'plec.ortogra.fi', WEBSITE = '3e7e3221-7e36-4b78-8a48-4893401163b1';
-  const SCRIPT = 'https://cloud.umami.is/script.js', COLLECTOR = 'https://gateway.umami.is/api/send';
+  const HOST = 'plec.ortogra.fi', WEBSITE = 'e6964ff4-1bea-40d4-b64b-dde5fde873de';
+  const SCRIPT = 'https://maquestria.tail72bc84.ts.net:8443/script.js', COLLECTOR = 'https://maquestria.tail72bc84.ts.net:8443/api/send';
   const TEMP = 'plec-analytics-temporary-v1', REPORTS = 'plec-audio-reports-v1';
   const values = {
     mode: ['words', 'pseudo'], count: [8, 12, 16, 20, 24], fold: ['thirds', 'quarter'],

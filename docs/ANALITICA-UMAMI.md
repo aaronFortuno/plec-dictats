@@ -1,6 +1,6 @@
 # Analítica agregada de Plec amb Umami
 
-Implementació 1.23 de 26/10/2026, a partir de la proposta de 25/10/2026. Domini únic de producció: `https://plec.ortogra.fi`. ID públic: `3e7e3221-7e36-4b78-8a48-4893401163b1`; script oficial: `https://cloud.umami.is/script.js`. Cap clau API al navegador.
+Implementació iniciada a la versió 1.23 i migrada a l’Umami propi d’ortogra.fi a la 1.30.1. Domini únic de producció: `https://plec.ortogra.fi`. ID públic: `e6964ff4-1bea-40d4-b64b-dde5fde873de`. El script i el receptor es publiquen per HTTPS al Funnel de l’Umbrel. Cap clau API al navegador.
 
 ## Què volem saber
 
@@ -15,7 +15,7 @@ Les dades serveixen per millorar el producte. No són registres d'avaluació, as
 
 El compte existent de l'autor mostra Free: 100.000 esdeveniments mensuals, 1 web i 6 mesos de retenció. Ús comunicat per l'autor: 922/100.000 després d'aproximadament una setmana; estimació inicial d'uns 4.000 al mes si el ritme es manté. No és una previsió de creixement.
 
-La quota correspon al compte/subscripció. L’autor ha creat un compte separat per a Plec perquè el pla existent només admet un web. Totes les llengües de Plec es mesuraran dins del mateix web, amb la ruta que les identifica.
+Les dades noves es recullen al mateix tauler privat que la resta de projectes d’ortogra.fi. Totes les llengües de Plec es mesuren dins del mateix web, amb la ruta que les identifica. L’històric anterior segueix a Umami Cloud.
 
 En el còmput d'Umami Cloud, les propietats també consumeixen quota. Per exemple, un esdeveniment amb quatre propietats representa cinc unitats. Evitem enviar dades repetides o un esdeveniment per cada interacció menor.
 
@@ -62,9 +62,9 @@ A Umami es filtra `audio-reported`, es consulta la propietat `word` i es concret
 
 Cal separar els avisos expressos dels errors tècnics detectats automàticament. Una fallada de xarxa, permisos de reproducció o descodificació no equival a una mala pronunciació. Si incorporem detecció automàtica vinculada al mot, serà un esdeveniment diferent (`audio-playback-error`), limitat i amb una categoria d'error predefinida; no s'enviarà per aturades voluntàries ni amb missatges o URL en brut.
 
-Umami proporciona una llista estadística d'avisos, sense estat editorial de «pendent» o «resolt» per incidència. La revisió i correcció es fan fora del panell. Identificar les versions permet distingir avisos d'enregistraments antics. La retenció de sis mesos del pla Free també s'aplica a aquests esdeveniments.
+Umami proporciona una llista estadística d'avisos, sense estat editorial de «pendent» o «resolt» per incidència. La revisió i correcció es fan fora del panell. Identificar les versions permet distingir avisos d'enregistraments antics. Els avisos anteriors a la migració continuen subjectes a la retenció del compte Cloud.
 
-Els bloquejadors, les preferències de privacitat, una fallada d'Umami o la quota poden impedir la recepció. No es mostrarà «Avís enviat» si no hi ha confirmació d'acceptació del receptor, i no s'esquivaran les preferències de l'usuari per garantir el report. Aquest canal serveix per recollir senyals de qualitat; no és un registre garantit d'incidències.
+Els bloquejadors, les preferències de privacitat o una fallada d'Umami poden impedir la recepció. No es mostrarà «Avís enviat» si no hi ha confirmació d'acceptació del receptor, i no s'esquivaran les preferències de l'usuari per garantir el report. Aquest canal serveix per recollir senyals de qualitat; no és un registre garantit d'incidències.
 
 La primera versió d'aquest canal serà per als enregistraments. Una possible notificació de transcripció IPA ha de quedar diferenciada per no atribuir un problema de taula al fitxer d'àudio.
 
@@ -86,7 +86,7 @@ En una aula amb ordinadors i navegadors semblants darrere de la mateixa IP, Umam
 
 `analytics.js` és l’únic emissor. Abans de carregar res comprova el domini HTTPS exacte, DNT, GPC i `umami.disabled`. El permís temporal es desa a la sessió de pestanya i no anul·la DNT/GPC ni esborra una negativa persistent. «Privacitat» és accessible al peu del preparador, al catàleg i a la capçalera del dictat.
 
-El script oficial es carrega amb `data-auto-track="false"`, exclusió de cerca/hash i domini explícit. Si un bloquejador impedeix carregar-lo, no s’intenta enviar pel receptor directament. L’emissor fa peticions controlades al mateix receptor utilitzat pel tracker Cloud actual, `https://gateway.umami.is/api/send`, sense cookies ni referència HTTP completa. Es comproven HTTP, JSON vàlid, `cache` i absència de `disabled`/`error`. Cal mantenir aquest contracte si Umami canvia el tracker; `umami.track()` per si sol no dona un justificant fiable d’acceptació.
+El script oficial es carrega amb `data-auto-track="false"`, exclusió de cerca/hash i domini explícit. Si un bloquejador impedeix carregar-lo, no s’intenta enviar pel receptor directament. L’emissor fa peticions controlades a l’`/api/send` de la mateixa instància, sense cookies ni referència HTTP completa. Es comproven HTTP, JSON vàlid, `cache` i absència de `disabled`/`error`. Cal mantenir aquest contracte si Umami canvia el tracker; `umami.track()` per si sol no dona un justificant fiable d’acceptació.
 
 Una única visita real inicial comprova la disponibilitat; no hi ha esdeveniments de prova, seguiment d’historial ni duplicació als redirects. Els esdeveniments tenen llistes tancades de noms, propietats i valors. Els errors tècnics es dedupliquen per categoria. No hi ha cues fora de línia, identificació persistent ni reintents silenciosos dels avisos.
 
