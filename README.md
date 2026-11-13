@@ -20,7 +20,7 @@ El catàleg mostra en una mateixa fila el mot, els focus i les columnes IPA: cat
 
 **Llista filtrada · PDF** exporta a A4 tots els resultats de la cerca, el nivell i el focus actius, de la A a la Z. **Per focus · PDF** agrupa aquests resultats per apartat i repeteix un mot quan treballa més d’un focus. Cada focus comença en una pàgina nova. Per imprimir la selecció de classe, activa **Vocabulari bàsic** i deixa oberts els altres filtres.
 
-La [primera edició castellana](docs/CASTELLA.md) té la ruta `/es/`. Comparteix el preparador, els fulls i l’exportació del catàleg amb la versió catalana, amb 350 mots bàsics i focus propis. Els codis castellans comencen per `ES-`. Els àudios estan pendents.
+La [primera edició castellana](docs/CASTELLA.md) té la ruta `/es/`. Comparteix el preparador, els fulls i l’exportació del catàleg amb la versió catalana, amb 350 mots bàsics i focus propis. Els codis castellans comencen per `ES-`. El dictat oral i el catàleg reprodueixen els 350 mots amb «Español de España · Elvira». Les instruccions de l’alumnat estan disponibles per escrit.
 
 ## Preparar els àudios
 
@@ -176,7 +176,7 @@ El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `buil
 
 ## Versions
 
-La interfície actual és **1.31**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.32**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 

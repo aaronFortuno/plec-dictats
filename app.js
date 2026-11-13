@@ -11,6 +11,8 @@
   const K=window.PlecCore,L=window.PlecLanguage,LT=window.PlecLanguageTools,R=window.PlecSeedRegistry;
   const S=L.id==='ca'?window.PlecSeeds:window.PlecSeeds.forLanguage(L.id),t=LT.text;
   const spanish=L.id==='es';
+  const audioVarieties=window.PlecAudioVarieties;
+  const pronunciationOptions=audioVarieties.forLanguage(L.id);
   let edition=R.editions.find(e=>e.slot===R.current),C=edition.catalog;
   const BANK=R.editions.find(e=>e.slot===R.current).catalog;
   const $=id=>document.getElementById(id),escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -18,7 +20,7 @@
   const track=(name,data)=>window.PlecAnalytics?.track(name,data);
   const hasPseudo=BANK.entries.some(entry=>entry.mode==='pseudo');
   const defaults=mode=>({count:mode==='words'?24:20,stage:mode==='words'?'cs':'all',basic:false,tags:BANK.categories.filter(category=>category.mode===mode).map(category=>category.id),required:[],code:null});
-  let state={mode:'words',modelSide:'left',foldStyle:'thirds',variety:spanish?undefined:'central',sessions:{words:defaults('words'),pseudo:defaults('pseudo')}},current=null,toastTimer;
+  let state={mode:'words',modelSide:'left',foldStyle:'thirds',variety:pronunciationOptions[0]?.id,sessions:{words:defaults('words'),pseudo:defaults('pseudo')}},current=null,toastTimer;
   const search=window.PlecComposerSearch.create({seeds:S,randomNonce:()=>randomNonce()});
   let legacy=null;
   try{if(!spanish)legacy=localStorage.getItem('plec-dictats-v1:'+L.id)||localStorage.getItem('plec-dictats-v1');}catch{}
@@ -37,7 +39,7 @@
       const saved=JSON.parse(localStorage.getItem(STORAGE)||'null'),data=saved||JSON.parse(legacy||'null');
       if(!data||data.language&&data.language!==L.id)return;
       state.mode=hasPseudo&&data.mode==='pseudo'?'pseudo':'words';state.modelSide=data.modelSide==='right'?'right':'left';state.foldStyle=data.foldStyle==='quarter'?'quarter':'thirds';
-      if(!spanish&&window.PlecAudioVarieties.varieties.some(v=>v.id===data.variety))state.variety=data.variety;
+      if(pronunciationOptions.some(v=>v.id===data.variety))state.variety=data.variety;
       if(saved&&R.editions.some(e=>e.slot===data.edition)){edition=R.editions.find(e=>e.slot===data.edition);C=edition.catalog;}
       for(const mode of ['words','pseudo']){
         const src=data.sessions?.[mode];if(!src)continue;const dest=state.sessions[mode];
@@ -216,7 +218,7 @@
   async function copy(value,success,target){try{await navigator.clipboard.writeText(value);if(target)track('share-copied',{target});say(success);}catch{say(t('No s’ha pogut copiar automàticament. El codi és {code}.',{code:current?.code||''}));}}
   $('copy-code').addEventListener('click',()=>current&&copy(current.code,'Codi copiat.','code'));
   const shareOptions=()=>({language:L.id,catalogue:current.catalogue,seed:current.code,variety:state.variety});
-  $('pronunciation-variety').addEventListener('change',()=>{state.variety=window.PlecAudioVarieties.definition($('pronunciation-variety').value).id;persist();renderPreview();updateURL();});
+  $('pronunciation-variety').addEventListener('change',()=>{state.variety=audioVarieties.definition($('pronunciation-variety').value,L.id).id;persist();renderPreview();updateURL();});
   const studentURL=()=>LT.publicDictationURL(shareOptions());
   $('open-student').addEventListener('click',()=>{if(current&&!search.busy)location.href=LT.dictationURL(new URL('../',location.href),shareOptions());});
   $('copy-student-link').addEventListener('click',()=>{if(current&&!search.busy)copy(studentURL(),'Enllaç del dictat oral copiat.','student');});
@@ -248,6 +250,7 @@
     }
   });
   const releases = [
+    ['1.32', '2026-11-13', [t('Dictat oral en castellà amb els 350 mots bàsics enregistrats amb Elvira.')]],
     ['1.31', '2026-11-13', [t('Primera versió en castellà amb 350 mots bàsics i PDF de vocabulari en ordre alfabètic o per focus.')]],
     ['1.30.2', '2026-11-13', ['El catàleg permet descarregar en PDF A4 la llista alfabètica que compleix els filtres, inclosa la selecció de vocabulari bàsic.']],
     ['1.30.1', '2026-11-12', ['Les estadístiques i els avisos nous es recullen a l’Umami propi d’ortogra.fi. Es mantenen les opcions de privadesa.']],
@@ -289,7 +292,7 @@
     ['1.0', '2026-10-23', ['Primera versió: catàleg, tries, mots propis i exportació de PDF.']]
   ];
   const releaseDate = new Intl.DateTimeFormat(L.locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  $('changelog-list').innerHTML = (spanish?releases.slice(0,1):releases).map(([version, date, notes]) => {
+  $('changelog-list').innerHTML = (spanish?releases.slice(0,2):releases).map(([version, date, notes]) => {
     const id = 'release-' + version.replaceAll('.', '-');
     return `<section class="release" aria-labelledby="${id}"><div><h3 id="${id}">${version}</h3><time datetime="${date}">${escape(releaseDate.format(new Date(date + 'T00:00:00Z')))}</time></div><p>${escape(notes.join(' '))}</p></section>`;
   }).join('');
@@ -308,18 +311,13 @@
   });
   $('download-pdf').addEventListener('click',exportPdf);
   restore();
-  if(!spanish&&arrival.searchParams.has('variety')){try{state.variety=window.PlecAudioVarieties.definition(arrival.searchParams.get('variety')).id;}catch(error){say(error.message);}}
+  if(arrival.searchParams.has('variety')){try{state.variety=audioVarieties.definition(arrival.searchParams.get('variety'),L.id).id;}catch(error){say(error.message);}}
   if(!hasPseudo){
     $('mode-control').closest('fieldset').hidden=true;
     $('pseudo-total').parentElement.hidden=true;
     document.querySelector('.bank-summary i').hidden=true;
   }
-  if(spanish){
-    $('oral-pending').hidden=false;
-    $('pronunciation-variety').closest('.pronunciation-setting').hidden=true;
-    $('open-student').hidden=true;
-    $('copy-student-link').hidden=true;
-  }
+  $('pronunciation-variety').replaceChildren(...pronunciationOptions.map(({id,label})=>new Option(label,id)));
   const languageSwitch=document.querySelector('.language-switch');
   const languageToggle=$('language-toggle'),languageOptions=$('language-options');
   function showLanguages(show){
@@ -345,7 +343,10 @@
       setCode(result.code);
     }else if(session().code){
       const result=S.resolve(R.editions,session().code);
-      if(S.recipeIndex(recipe())!==result.index||!session().required.every(id=>result.entries.some(e=>e.id===id)))generate();else setCode(result.code,{keepRequired:true});
+      const restored=recipe();
+      const sameRecipe=restored.mode===result.recipe.mode&&restored.count===result.recipe.count&&restored.stage===result.recipe.stage&&
+        restored.tags.length===result.recipe.tags.length&&restored.tags.every(tag=>result.recipe.tags.includes(tag));
+      if(!sameRecipe||!session().required.every(id=>result.entries.some(e=>e.id===id)))generate();else setCode(result.code,{keepRequired:true});
     }else generate();
   }catch(error){current=null;renderPreview();$('search-status').textContent=t(error.message);}
   if(['pronunciacions','cataleg'].includes(incoming.get('panel')))openCatalog({word:incoming.get('mot')||'',pack:incoming.get('audio')||''});

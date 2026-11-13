@@ -9,14 +9,20 @@
   if(!valid)throw Error('Codi no vàlid.');
   return code;
  }
+ function assertVariety(variety,language){
+  if(variety===undefined)return;
+  const allowed=language==='ca'?['central','valencia']:language==='es'?['es-es']:[];
+  if(!allowed.includes(variety))throw Error('La varietat de pronunciació no està disponible.');
+ }
  function publicURL(page,{language='ca',seed,catalogue,voice,variety}={}){
   if(!/^[a-z]{2}(?:-[A-Za-z]{2})?$/.test(language))throw Error('Llengua de l’enllaç invàlida.');
   const url=new URL(language+'/'+(page==='dictat'?'dictat/':''),ORIGIN);
   if(seed!==undefined)url.searchParams.set('seed',normalizeSeed(seed,language));
   if(catalogue!==undefined){if(typeof catalogue!=='string'||!catalogue.startsWith(language+'-'))throw Error('El catàleg no correspon a la llengua.');url.searchParams.set('catalogue',catalogue);}
-  if(variety!==undefined){if(!['central','valencia'].includes(variety))throw Error('La varietat de pronunciació no està disponible.');url.searchParams.set('variety',variety);}
+  assertVariety(variety,language);
+  if(variety!==undefined)url.searchParams.set('variety',variety);
   if(voice!==undefined){if(typeof voice!=='string'||! /^[a-z0-9-]+$/.test(voice))throw Error('Veu de l’enllaç invàlida.');url.searchParams.set('voice',voice);}
   return url.href;
  }
- return {ORIGIN,normalizeSeed,composerURL:options=>publicURL('composer',options),dictationURL:options=>publicURL('dictat',options)};
+ return {ORIGIN,normalizeSeed,assertVariety,composerURL:options=>publicURL('composer',options),dictationURL:options=>publicURL('dictat',options)};
 });

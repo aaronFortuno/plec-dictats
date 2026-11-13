@@ -10,8 +10,11 @@ const DEFAULT_MANIFEST = path.join(ROOT, 'audio', 'manifest.json');
 const VOICES = new Set([
   'ca-ES-AlbaNeural',
   'ca-ES-JoanaNeural',
-  'ca-ES-EnricNeural'
+  'ca-ES-EnricNeural',
+  'es-ES-ElviraNeural',
+  'es-ES-AlvaroNeural'
 ]);
+const SPEECH_LOCALES = { ca: 'ca-ES', es: 'es-ES' };
 const OUTPUT_FORMAT = 'audio-24khz-48kbitrate-mono-mp3';
 
 function fail(message) {
@@ -61,7 +64,9 @@ function validatePack(manifest, packId) {
   }
   const pack = manifest.packs.find(candidate => candidate?.id === id);
   if (!pack) fail(`No existeix el pack «${id}».`);
-  if (pack.provider !== 'azure' || pack.language !== 'ca' || pack.locale !== 'ca-ES' || !VOICES.has(pack.voice)) {
+  if (pack.provider !== 'azure' || !Object.hasOwn(SPEECH_LOCALES, pack.language) ||
+      pack.locale !== SPEECH_LOCALES[pack.language] || !VOICES.has(pack.voice) ||
+      !pack.voice.startsWith(pack.locale + '-')) {
     fail(`El pack «${id}» no té un proveïdor o una veu admesa.`);
   }
   if (pack.format !== OUTPUT_FORMAT) fail(`El format del pack «${id}» no és l’MP3 admès.`);
@@ -100,7 +105,7 @@ function wordFileName(text) {
 
 function buildSsml(pack, text, ipa) {
   const escapedText = escapeXml(text);
-  if (ipa !== undefined) analyzeIpa(ipa,{allowLabiodentalV:['ca-valencian-v-experimental','ca-mallorcan-v-experimental'].includes(pack.generationPolicy?.ipaInventory)});
+  if (ipa !== undefined) analyzeIpa(ipa,{locale:pack.locale,allowLabiodentalV:['ca-valencian-v-experimental','ca-mallorcan-v-experimental'].includes(pack.generationPolicy?.ipaInventory)});
   const content = ipa === undefined ? escapedText : `<phoneme alphabet="ipa" ph="${escapeXml(ipa)}">${escapedText}</phoneme>`;
   const billableBody = `<prosody rate="${pack.rate}">${content}</prosody>`;
   return {
@@ -155,8 +160,8 @@ function buildJobs(seed, manifest, options = {}) {
 
   let selection = jobs;
   if (options.words) {
-    const requested = [...new Set(options.words.map(word => word.trim().normalize('NFC').toLocaleLowerCase('ca')))];
-    const byWord = new Map(jobs.map(job => [job.text.normalize('NFC').toLocaleLowerCase('ca'), job]));
+    const requested = [...new Set(options.words.map(word => word.trim().normalize('NFC').toLocaleLowerCase(pack.language)))];
+    const byWord = new Map(jobs.map(job => [job.text.normalize('NFC').toLocaleLowerCase(pack.language), job]));
     if (!requested.length || requested.some(word => !byWord.has(word))) fail('Algun mot de la mostra no existeix al banc i mode seleccionats.');
     selection = requested.map(word => byWord.get(word));
   }

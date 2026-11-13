@@ -97,7 +97,7 @@
         try { state.introAudio.pause(); state.introAudio.removeAttribute("src"); } catch (e) {}
         state.introAudio = null;
       }
-      $("instruction-label").textContent = "Escolta les instruccions";
+      $("instruction-label").textContent = t("Escolta les instruccions");
       $("instruction-status").textContent = "";
     }
 
@@ -149,7 +149,6 @@
       state.activeSince = null; state.activeElapsed = 0; state.variety = null;
       $("start-dictation").disabled = true;
       for (var id of ["windowed-start", "fullscreen-note", "resume-windowed", "resume-note"]) $(id).hidden = true;
-      if ($("audio-pending")) $("audio-pending").hidden = true;
       setError("");
       show("setup-panel");
     }
@@ -164,12 +163,6 @@
         setError(t(e.message || "Codi no vàlid."));
         return;
       }
-      if(lang==='es'){
-        $("student-code").value=sel.code;
-        $("audio-pending").textContent=t("Codi {code} · {count} paraules. Els àudios encara estan en preparació. Pots fer el dictat a classe a partir del full.",{code:sel.code,count:sel.entries.length});
-        $("audio-pending").hidden=false;
-        return;
-      }
       state.selection = sel;
       Promise.resolve().then(fetchManifest).then(function (m) {
         if (gen !== state.generation) return;
@@ -180,25 +173,26 @@
           $("dictation-variety").textContent = pronunciation.variety.label;
           state.variety = pronunciation.variety.id;
         } catch (e) {
-          state.selection = null; setError(e.message); show("setup-panel"); return;
+          state.selection = null; setError(t(e.message)); show("setup-panel"); return;
         }
         state.cov = cov;
         $("session-summary").textContent =
-          "Codi " + sel.code + " · " + sel.entries.length + " paraules";
-        $("instructions").textContent = instructionText(sel.entries.length);
-        loadIntro(gen, sel.entries.length);
+          t("Codi {code} · {count} paraules", {code:sel.code,count:sel.entries.length});
+        $("instructions").textContent = lang==='es' ? t("Instruccions del dictat en paper", {count:sel.entries.length}) : instructionText(sel.entries.length);
+        $("read-instructions").hidden = lang==='es';
+        if(lang!=='es')loadIntro(gen, sel.entries.length);
         var note = $("local-preview-note");
         if (note) note.hidden = qs.get("preview") !== "local";
         var start = $("start-dictation");
         var status = $("audio-status");
         if (cov.ready) {
-          status.textContent = "Àudios preparats.";
+          status.textContent = t("Àudios preparats.");
           start.disabled = false;
         } else if (cov.pack.status !== "ready") {
-          status.textContent = "Els àudios encara s'estan preparant. Torna-ho a provar més tard.";
+          status.textContent = t("Els àudios encara s'estan preparant. Torna-ho a provar més tard.");
           start.disabled = true;
         } else {
-          status.textContent = "Falten " + cov.missing + " àudios. No es pot començar encara.";
+          status.textContent = t("Falten {count} àudios. No es pot començar encara.",{count:cov.missing});
           start.disabled = true;
         }
         var url = new URL(root.location.href);
@@ -213,16 +207,12 @@
         state.manifestPromise = null;
         track('technical-error', {kind: 'audio'});
         state.selection = null;
-        setError("No s'han pogut carregar els àudios. Torna-ho a provar.");
+        setError(t("No s'han pogut carregar els àudios. Torna-ho a provar."));
         show("setup-panel");
       });
     }
 
     $("instructions").textContent = "";
-    if(lang==='es'){
-      $("audio-pending").textContent=t("Els àudios encara estan en preparació.");
-      $("audio-pending").hidden=false;
-    }
 
     $("read-instructions").addEventListener("click", function () {
       if (!state.introUrl || state.session) return;
@@ -281,7 +271,7 @@
         if (ok) {
           beginSession();
         } else {
-          $("fullscreen-note").textContent = "Aquest navegador no ha pogut obrir la pantalla completa. Pots continuar en mode concentració.";
+          $("fullscreen-note").textContent = t("Aquest navegador no ha pogut obrir la pantalla completa. Pots continuar en mode concentració.");
           $("fullscreen-note").hidden = false;
           $("windowed-start").hidden = false;
         }
@@ -296,19 +286,19 @@
 
     function renderPlayer() {
       var s = state.session.snapshot();
-      $("word-progress").textContent = "Paraula " + (s.index + 1) + " de " + s.total;
+      $("word-progress").textContent = t("Paraula {index} de {total}",{index:s.index+1,total:s.total});
       doc.querySelectorAll('[data-word-number]').forEach(function (el) { el.textContent = s.index + 1; });
       doc.querySelectorAll('[data-word-total]').forEach(function (el) { el.textContent = 'de ' + s.total; });
-      $("listen-count").textContent = s.plays + " de 3 escoltes";
+      $("listen-count").textContent = t("{count} de 3 escoltes",{count:s.plays});
       var btn = $("listen-word"), label = $("listen-label"), next = $("next-word");
       $("playback-error").hidden = true;
       if (s.plays >= 3) {
         btn.hidden = true; next.hidden = false;
-        $("next-label").textContent = s.index === s.total - 1 ? "Acaba el dictat" : "Paraula següent";
+        $("next-label").textContent = t(s.index === s.total - 1 ? "Acaba el dictat" : "Paraula següent");
       } else {
         btn.hidden = false; next.hidden = true;
         btn.disabled = s.playing;
-        label.textContent = s.playing ? "Escoltant…" : (s.plays === 0 ? "Escolta" : "Torna a escoltar");
+        label.textContent = t(s.playing ? "Escoltant…" : (s.plays === 0 ? "Escolta" : "Torna a escoltar"));
       }
     }
 
@@ -351,7 +341,7 @@
         renderPlayer();
         if (!success) {
           track('technical-error', {kind: 'audio'});
-          $("playback-error").textContent = "No s'ha pogut reproduir la paraula. Torna-ho a provar; aquesta escolta no compta.";
+          $("playback-error").textContent = t("No s'ha pogut reproduir la paraula. Torna-ho a provar; aquesta escolta no compta.");
           $("playback-error").hidden = false;
         }
         var active = doc.activeElement;
@@ -417,7 +407,7 @@
       enterFullscreen().then(function (ok) {
         if (state.session !== session || generation !== state.generation || !session.snapshot().paused || doc.visibilityState === "hidden") return;
         if (ok) { session.resume(); startClock(); renderPlayer(); show("player-panel"); }
-        else { $("resume-note").textContent = "La pantalla completa no està disponible. Pots continuar en mode concentració."; $("resume-note").hidden = false; $("resume-windowed").hidden = false; }
+        else { $("resume-note").textContent = t("La pantalla completa no està disponible. Pots continuar en mode concentració."); $("resume-note").hidden = false; $("resume-windowed").hidden = false; }
       });
     });
 

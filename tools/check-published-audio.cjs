@@ -12,6 +12,27 @@ const review=A.readJson(path.join(root,'audio/review-manifest.json'));for(const 
 const instructions=A.readJson(path.join(root,'audio/instructions/manifest.json'));assert.equal(instructions.packs[0].status,'ready');assert.equal(Object.keys(instructions.packs[0].files).length,5);for(const file of Object.values(instructions.packs[0].files))assert(G.isValidMp3(fs.readFileSync(path.join(root,instructions.packs[0].basePath,file))));
 console.log('Published audio: word coverage, safe project subpaths, every MP3 and SHA-256, exact review recording identity and five instructions verified.');
 require('./check-pseudo-publication.cjs').publicChecks();
+const spanishId=manifest.defaultPacks.es;
+if(spanishId){
+ const spanish=A.readJson(path.join(root,'audio/spanish-publication.json'));
+ const {pack:expected,plan}=require('./run-spanish-audio.cjs');
+ const pack=A.validatePack(manifest,spanishId),jobs=plan();
+ const spanishWords=require('../catalogs/es/editions/seed-1-basic.json').catalog.entries;
+ const coverage=M.coverage(manifest,spanishWords,'es','https://example.test/plec/');
+ assert(coverage.ready&&coverage.urls.every(url=>url.startsWith('https://example.test/plec/assets/audio/es/')));
+ assert.equal(pack.id,expected.id);
+ assert.equal(pack.fingerprint,spanish.fingerprint);
+ assert.equal(pack.reviewStatus,'pending-auditory-review');
+ assert.equal(Object.keys(pack.files).length,350);
+ assert.equal(spanish.decode.decoded,350);
+ for(const job of jobs){
+  assert.equal(pack.files[job.id],job.relativePath);
+  const bytes=fs.readFileSync(path.join(root,pack.basePath,job.relativePath));
+  assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),spanish.sha256[job.relativePath]);
+  assert(G.isValidMp3(bytes));
+ }
+ console.log('Spanish publication: 350 MP3 digests, review status and full language-specific student coverage verified.');
+}
 const valencianFile=path.join(root,'audio/valencian-publication.json');
 if(fs.existsSync(valencianFile)){
  const v=A.readJson(valencianFile),pack=manifest.packs.find(p=>p.id===v.pack),r=review.packs.find(p=>p.id===v.pack),snapshot=A.readJson(path.join(root,'audio/pronunciation/recordings',v.pack+'.json'));

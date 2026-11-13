@@ -9,7 +9,7 @@
   const TEMP = 'plec-analytics-temporary-v1', REPORTS = 'plec-audio-reports-v1';
   const values = {
     mode: ['words', 'pseudo'], count: [8, 12, 16, 20, 24], fold: ['thirds', 'quarter'],
-    stage: ['cm', 'cs', 'eso', 'all', 'none'], variety: ['central', 'valencia'],
+    stage: ['cm', 'cs', 'eso', 'all', 'none'], variety: ['central', 'valencia', 'es-es'],
     duration_bucket: ['lt5', '5to10', '10to20', 'gt20'], result: ['ok', 'invalid'],
     target: ['worksheet', 'student', 'code'], kind: ['pdf', 'audio', 'catalog', 'code-load']
   };

@@ -61,7 +61,7 @@
   "Un projecte d’": "Un proyecto de ",
   "Privacitat": "Privacidad",
   "Sobre el projecte · V4V": "Sobre el proyecto · V4V",
-  "Versió 1.31: obre l’historial de canvis": "Versión 1.31. Abrir el historial de cambios",
+  "Versió 1.32: obre l’historial de canvis": "Versión 1.32. Abrir el historial de cambios",
   "Tanca el catàleg": "Cerrar el catálogo",
   "DE LA PANTALLA AL PAPER": "DE LA PANTALLA AL PAPEL",
   "Un full que es desplega.": "Una hoja que se despliega.",
@@ -104,7 +104,7 @@
   "Per reforçar els mots quotidians i escolars, activa aquesta selecció de 350 paraules. Es pot combinar amb el nivell i els focus de pràctica.": "El banco de esta primera edición está formado por 350 palabras cotidianas y escolares.",
   "És una proposta editorial revisable, no una escala validada ni una prescripció curricular. Els nivells no s’apliquen a les pseudoparaules.": "Los niveles son una orientación editorial que puede ajustarse según la práctica en el aula.",
   "Les pseudoparaules demanen un altre criteri.": "Primera edición en español.",
-  "Una forma inventada no té una ortografia normativa única. Per exemple, les grafies b/v o s/ss/c/ç poden representar un mateix so segons el parlar i la posició. Accepta les escriptures compatibles amb la pronunciació que has dictat i observa les correspondències que vols avaluar.": "Los dictados se pueden imprimir y leer en clase. Los audios y las pseudopalabras se añadirán más adelante.",
+  "Una forma inventada no té una ortografia normativa única. Per exemple, les grafies b/v o s/ss/c/ç poden representar un mateix so segons el parlar i la posició. Accepta les escriptures compatibles amb la pronunciació que has dictat i observa les correspondències que vols avaluar.": "Puedes leer las palabras en clase o escucharlas desde el modo dictado con la voz de Elvira. Los audios están pendientes de revisión individual.",
   "El banc és una proposta de pràctica per a l’aula, no una prova estandarditzada. Revisa les formes i la pronunciació abans d’utilitzar-lo.": "Cuando dos palabras suenan igual, dicta también una frase que aclare cuál estás usando.",
   "Referències per consultar dubtes:": "Referencias para resolver dudas:",
   "Ortografia catalana de l’IEC": "Ortografía de la lengua española",
@@ -136,7 +136,7 @@
   "Plec · llicència MIT": "Plec · licencia MIT",
   "Cada configuració té 24,3 milions de variants: una quantitat molt gran, però finita. Pots demanar fins a 5 mots que compleixin els filtres i buscarem un codi que ja els inclogui tots.": "Cada configuración tiene 24,3 millones de variantes. Puedes pedir hasta cinco palabras que cumplan los filtros y buscaremos un código que las incluya.",
   "Aquesta cerca entre variants pot trigar; per això comptem els intents. No es garanteix que cada combinació de mots tingui una coincidència. Quan una tanda acaba, pots continuar-la sense repetir intents. També pots cancel·lar la cerca.": "La búsqueda puede tardar y muestra cuántas variantes ha comprobado. Algunas combinaciones pueden quedar fuera. Puedes continuar desde donde se detuvo o cancelar.",
-  "El codi imprès recupera la mateixa llista i el mateix ordre, també temps després i des d’un altre dispositiu. Aquesta continuïtat permetrà vincular el full amb el futur dictat oral autònom.": "El código impreso recupera las mismas palabras en el mismo orden desde cualquier dispositivo. Servirá también para abrir el dictado oral cuando haya audios.",
+  "El codi imprès recupera la mateixa llista i el mateix ordre, també temps després i des d’un altre dispositiu. Aquesta continuïtat permetrà vincular el full amb el futur dictat oral autònom.": "El código impreso recupera las mismas palabras en el mismo orden desde cualquier dispositivo. También permite abrir el dictado oral.",
   "Cada mot ha de treballar almenys un dels focus seleccionats. No es garanteix un mot de cada focus.": "Cada palabra cumple al menos uno de los filtros elegidos. La selección puede incluir más palabras de un grupo que de otro.",
   "Marcar-los tots amplia el banc de candidats; no afegeix més condicions a la cerca.": "Marcar todos los filtros amplía el conjunto de palabras disponibles.",
   "Accentuació inclou mots amb accent gràfic; Dièresi, mots amb ï o ü. Si marques tots dos, cada mot ha de tenir accent o dièresi.": "Por ejemplo, si marcas «Con tilde» y «B / V», cada palabra llevará tilde, b o v.",
@@ -214,6 +214,5 @@
   "Dictat acabat.": "Dictado terminado.",
   "Ara desplega el full i comprova com has escrit les paraules.": "Despliega la hoja y comprueba cómo has escrito las palabras.",
   "Torna a començar": "Volver a empezar",
-  "Torna al preparador": "Volver al preparador",
-  "Àudios en preparació.": "Audios en preparación."
+  "Torna al preparador": "Volver al preparador"
 }

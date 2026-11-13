@@ -137,7 +137,7 @@ for (const {item,profile,source,revision,catalog,base,collator,seedRegistry,basi
     .replace('__CONFIG__', localeDir + '/config.js?v=1.31.0')
     .replace('__REGISTRY__', base + '/editions/index.js?v=1.31.0')
     .replaceAll('__COMPOSER__', item.path)
-    .replace('__LOCALE_MESSAGES__',runtime?'<script defer src="'+localeDir+'/messages.js?v=1.31.0"></script>':''))
+    .replace('__LOCALE_MESSAGES__',runtime?'<script defer src="'+localeDir+'/messages.js'+assetVersion+'"></script>':''))
     .replaceAll('__PLEC_MARK__',Brand.svg('mark'));
   student = student.replace(/((?:src|href)=")(?!https?:|lightning:|#|\.\/)([^\"]+)/g, (_, start, target) => start + prefix + '../' + target);
   emit(item.path + 'dictat/index.html', student);

@@ -14,6 +14,14 @@ Preparació: 24 d’octubre de 2026. Encara no s’ha creat cap recurs ni genera
 
 F0 ofereix actualment **500.000 caràcters de síntesi neural per mes**. És la quota del recurs de síntesi; el funcionament posterior del web reprodueix MP3 estàtics i no consumeix aquesta quota. Un pressupost de facturació amb alertes no és un límit dur: la nostra mesura principal és mantenir el recurs F0 i no activar altres serveis. [Preus oficials](https://azure.microsoft.com/en-us/pricing/details/speech/).
 
+### Consultar el consum abans d’un lot
+
+1. Al [portal d’Azure](https://portal.azure.com/), obre el recurs de **Speech** de Plec i comprova el **nivell de preus**. Ha de mostrar **Free (F0)**.
+2. Dins del mateix recurs, obre **Monitoring → Metrics** i selecciona **Synthesized Characters** amb l’agregació **Sum**. Tria un interval personalitzat des de l’inici del mes UTC. La mètrica mostra els caràcters sintetitzats del recurs, inclòs l’ús fet fora de Plec. [Guia de mètriques d’Azure Speech](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/text-to-speech#monitor-azure-text-to-speech-metrics).
+3. Per consultar càrrecs i dates facturades, ves a **Cost Management + Billing → Invoices**. Una factura de 0 USD indica l’import d’aquell període. Per veure el consum del recurs, consulta la mètrica de Speech. [Factures i dates d’ús](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/download-azure-invoice-daily-usage-date).
+
+En arribar a la quota mensual d’un recurs F0, Azure rebutja més peticions fins que es renova la quota. El pas a S0 requereix canviar el nivell del recurs. Un 429 també pot indicar excés de peticions per minut o capacitat temporal insuficient. El generador s’atura en aquests casos i conserva els MP3 completats. [Resposta de Microsoft sobre F0](https://learn.microsoft.com/en-us/answers/questions/5566384/azure-ai-speech-what-happens-after-free-tier-t0-ex) · [Límits de peticions](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits).
+
 ## Veu i primera mostra
 
 Microsoft enumera tres veus catalanes: `ca-ES-AlbaNeural`, `ca-ES-JoanaNeural` i `ca-ES-EnricNeural`. Començarem amb una mostra d’Alba i compararem si cal. El proveïdor les etiqueta com a català; la seva adequació al català central i a aquesta activitat necessita escolta docent. [Veus oficials](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support#text-to-speech).
@@ -28,7 +36,7 @@ El catàleg actual conté **3.299 paraules, 22.943 caràcters de text**, i **96 
 
 F0 permet **20 peticions cada 60 segons** i no inclou l’API de síntesi massiva. Els nostres lots faran peticions ordinàries seqüencials, amb quatre segons com a mínim entre inicis. A aquest ritme, 3.395 fitxers poden requerir prop de quatre hores, a més de latència i possibles aturades. El nombre de caràcters és modest, però el nombre de fitxers determina el temps. Es pot reprendre la feina saltant els MP3 ja generats. [Límits oficials](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits#text-to-speech-quotas-and-limits-per-resource).
 
-El generador s’ha de limitar a **450.000 caràcters estimats al mes**, comptant reserves abans de cada petició i ús extern declarat. Aquest registre és local: no consulta la quota d’Azure ni sap què has fet amb Speech Studio o altres eines. Si treballes en un altre ordinador o esborres el registre, no pots interpretar-ne el valor com el consum total. Conserva’l i contrasta’l amb les mètriques del recurs. Un error 429 atura el lot; no augmenta quota ni canvia automàticament de servei.
+El generador aplica un topall local de **452.000 caràcters estimats al mes UTC**, comptant reserves abans de cada petició i ús extern declarat. El registre cobreix les peticions llançades des d’aquesta còpia de Plec. Contrasta’l amb les mètriques del recurs, especialment si també fas servir Speech Studio o un altre ordinador.
 
 ## Publicació i varietats futures
 

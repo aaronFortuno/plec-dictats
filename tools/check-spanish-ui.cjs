@@ -17,7 +17,7 @@ async function main() {
     await page.route('**/*', route => {
       const url = new URL(route.request().url());
       if (url.origin !== origin) return route.abort();
-      if (url.pathname.startsWith('/audio/')) audioRequests.push(url.pathname);
+      if (/^\/(?:assets\/)?audio\//.test(url.pathname)) audioRequests.push(url.pathname);
       return route.continue();
     });
     await page.goto(origin + '/ca/?seed=ADZ52356A');
@@ -35,7 +35,8 @@ async function main() {
     assert.equal(await page.locator('html').getAttribute('lang'), 'es');
     assert.equal(await page.locator('#word-total').textContent(), '350');
     assert(await page.locator('#mode-control').isHidden());
-    assert(await page.locator('#oral-pending').isVisible());
+    assert.equal(await page.locator('#pronunciation-variety').inputValue(),'es-es');
+    assert(await page.locator('#open-student').isVisible());
     await page.screenshot({ path: 'output/plec-es-preparador.png', animations: 'disabled' });
 
     await page.selectOption('#count-control', '12');
@@ -54,7 +55,7 @@ async function main() {
     assert(selected.entries.every(entry => entry.tags.includes('bv')));
     const worksheet = await page.locator('#sheet-preview').textContent();
     assert(worksheet.includes('ESCRIBO Y REVISO') && worksheet.includes('/es/dictat/'));
-    assert(!worksheet.includes('variety='));
+    assert(worksheet.includes('variety=es-es'));
     await page.selectOption('#fold-style-control', 'quarter');
     await page.locator('#model-side-control [data-side="right"]').click();
     assert.equal(await page.locator('#sheet-preview svg').getAttribute('data-model-side'), 'right');
@@ -75,11 +76,14 @@ async function main() {
     await page.click('#catalog-open');
     assert.equal(await page.locator('#catalog-title').textContent(), 'El catálogo');
     assert.equal(await page.locator('#catalog-initials a').count(), 27);
-    assert.equal(await page.locator('.pronunciation-cell').count(), 0);
     await page.fill('#catalog-search', 'nino');
     assert.equal(await page.locator('.pronunciation-row').count(), 0);
     await page.fill('#catalog-search', 'niño');
     assert.equal(await page.locator('.pronunciation-word').textContent(), 'niño');
+    const play = page.getByRole('button',{name:'Escuchar niño con Elvira'});
+    const catalogClip = page.waitForResponse(response=>decodeURIComponent(new URL(response.url()).pathname).endsWith('/words/niño.mp3')&&response.ok());
+    await play.click();
+    await catalogClip;
     const listDownload = page.waitForEvent('download');
     await page.click('#export-focus-pdf');
     const list = await listDownload;
@@ -101,11 +105,22 @@ async function main() {
     assert.equal(await page.locator('#workspace-toggle-config').getAttribute('aria-expanded'), 'true');
 
     await page.goto(origin + '/es/dictat/?seed=' + code);
-    assert.match(await page.locator('#audio-pending').textContent(), /12 palabras.*audios están en preparación/);
-    assert(await page.locator('#start-dictation').isDisabled());
-    assert.deepEqual(audioRequests, []);
+    await page.waitForSelector('#ready-panel:not([hidden])');
+    assert.equal(await page.locator('#dictation-variety').textContent(),'Español de España · Elvira');
+    assert.match(await page.locator('#instructions').textContent(), /12 palabras/);
+    assert.equal(new URL(page.url()).searchParams.get('variety'),'es-es');
+    await page.evaluate(()=>{ document.querySelector('#focus-root').requestFullscreen=()=>Promise.reject(Error('Fullscreen unavailable in test')); });
+    await page.click('#start-dictation');
+    await page.click('#windowed-start');
+    assert.equal(await page.locator('#word-progress').textContent(),'Palabra 1 de 12');
+    const studentClip = page.waitForResponse(response=>decodeURIComponent(new URL(response.url()).pathname).endsWith('/words/'+selected.entries[0].text+'.mp3')&&response.ok());
+    await page.click('#listen-word');
+    await studentClip;
+    await page.waitForFunction(()=>document.querySelector('#listen-count').textContent==='1 de 3 escuchas');
+    assert(audioRequests.some(url=>url.startsWith('/assets/audio/es/es-es-elvira-basic-v1/')));
+    assert(!audioRequests.some(url=>url.startsWith('/assets/audio/ca/')||url.includes('/instructions/')));
     assert.deepEqual(errors, []);
-    console.log('Spanish pilot: language switch, folds, filters, required word, PDF, code recovery, catalogue, mobile and audio-pending screen passed.');
+    console.log('Spanish: filters, recovery, worksheet QR, catalogue audio, legacy link and real student playback passed.');
   } finally {
     await browser.close();
   }

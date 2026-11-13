@@ -28,3 +28,5 @@
 
 @media(max-width:1000px){.pronunciation-cell{padding-left:10px;padding-right:8px;gap:4px}.pronunciation-columns>span:not(:first-child){padding-left:10px}.pronunciation-word{font-size:18px}.ipa-text{font-size:15px}.review-icon{width:28px;height:28px;min-width:28px;padding:5px}}
 @media(max-width:800px){.pronunciation-columns{display:none}.pronunciation-row{grid-template-columns:1fr;padding:10px 3px;gap:6px}.pronunciation-word{font-size:21px;margin-bottom:2px}.pronunciation-cell{border:0;padding:0!important;gap:7px}.cell-variety{display:block;flex:0 0 90px;font-size:10px;color:var(--muted)}.ipa-text{font-size:16px}}
+html[lang="es"] .pronunciation-row{grid-template-columns:minmax(0,1fr) auto;gap:12px}
+html[lang="es"] .spanish-audio{border:0;padding:0}

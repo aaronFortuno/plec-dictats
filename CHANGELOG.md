@@ -1,5 +1,9 @@
 # Historial
 
+## 1.32 · 13 de novembre de 2026
+
+- Dictat oral en castellà amb els 350 mots bàsics, disponible des del codi, el QR o l’enllaç. Les gravacions d’«Español de España · Elvira» també es poden escoltar al catàleg. El paquet està pendent de revisió auditiva individual.
+
 ## 1.31 · 13 de novembre de 2026
 
 - Primera versió castellana a `/es/`, amb selector d’idioma, 350 mots bàsics, focus propis i codis amb prefix `ES-`. Inclou el preparador, el catàleg, la recuperació de dictats i els fulls A4. Els àudios i les pseudoparaules castellanes es prepararan en una fase posterior.
