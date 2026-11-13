@@ -8,17 +8,20 @@
     arrival.searchParams.delete('mode');student.search=arrival.searchParams.toString();
     location.replace(student.href);return;
   }
-  const S=window.PlecSeeds,K=window.PlecCore,L=window.PlecLanguage,LT=window.PlecLanguageTools,R=window.PlecSeedRegistry;
+  const K=window.PlecCore,L=window.PlecLanguage,LT=window.PlecLanguageTools,R=window.PlecSeedRegistry;
+  const S=L.id==='ca'?window.PlecSeeds:window.PlecSeeds.forLanguage(L.id),t=LT.text;
+  const spanish=L.id==='es';
   let edition=R.editions.find(e=>e.slot===R.current),C=edition.catalog;
   const BANK=R.editions.find(e=>e.slot===R.current).catalog;
   const $=id=>document.getElementById(id),escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const STORAGE='plec-seeds-v1:'+L.id;
   const track=(name,data)=>window.PlecAnalytics?.track(name,data);
-  const defaults=mode=>({count:mode==='words'?24:20,stage:mode==='words'?'cs':'all',basic:false,tags:[...(mode==='words'?S.WORD_FOCUSES:S.PSEUDO_FOCUSES)],required:[],code:null});
-  let state={mode:'words',modelSide:'left',foldStyle:'thirds',variety:'central',sessions:{words:defaults('words'),pseudo:defaults('pseudo')}},current=null,toastTimer;
+  const hasPseudo=BANK.entries.some(entry=>entry.mode==='pseudo');
+  const defaults=mode=>({count:mode==='words'?24:20,stage:mode==='words'?'cs':'all',basic:false,tags:BANK.categories.filter(category=>category.mode===mode).map(category=>category.id),required:[],code:null});
+  let state={mode:'words',modelSide:'left',foldStyle:'thirds',variety:spanish?undefined:'central',sessions:{words:defaults('words'),pseudo:defaults('pseudo')}},current=null,toastTimer;
   const search=window.PlecComposerSearch.create({seeds:S,randomNonce:()=>randomNonce()});
   let legacy=null;
-  try{legacy=localStorage.getItem('plec-dictats-v1:'+L.id)||localStorage.getItem('plec-dictats-v1');}catch{}
+  try{if(!spanish)legacy=localStorage.getItem('plec-dictats-v1:'+L.id)||localStorage.getItem('plec-dictats-v1');}catch{}
   const session=()=>state.sessions[state.mode];
   const modeTags=mode=>C.categories.filter(c=>c.mode===mode);
   // Keep the visual and keyboard order together; compact short focuses beside long ones.
@@ -27,14 +30,14 @@
   const chosen=()=>current?.entries||[];
   const recipe=()=>({mode:state.mode,count:session().count,stage:session().stage,tags:session().tags});
   const pool=()=>C.entries.filter(e=>e.mode===state.mode&&e.tags.some(t=>session().tags.includes(t))&&S.matchesStage(e,session().stage,edition.profile.stageRules));
-  function say(message){$('status').textContent=message;$('status').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('status').classList.remove('visible'),6500);}
+  function say(message){$('status').textContent=t(message);$('status').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('status').classList.remove('visible'),6500);}
   function persist(){try{localStorage.setItem(STORAGE,JSON.stringify({...state,language:L.id,edition:edition.slot}));}catch{say('No es poden desar les preferències. Conserva el codi o copia l’enllaç del dictat.');}}
   function restore(){
     try{
       const saved=JSON.parse(localStorage.getItem(STORAGE)||'null'),data=saved||JSON.parse(legacy||'null');
       if(!data||data.language&&data.language!==L.id)return;
-      state.mode=['words','pseudo'].includes(data.mode)?data.mode:'words';state.modelSide=data.modelSide==='right'?'right':'left';state.foldStyle=data.foldStyle==='quarter'?'quarter':'thirds';
-      if(window.PlecAudioVarieties.varieties.some(v=>v.id===data.variety))state.variety=data.variety;
+      state.mode=hasPseudo&&data.mode==='pseudo'?'pseudo':'words';state.modelSide=data.modelSide==='right'?'right':'left';state.foldStyle=data.foldStyle==='quarter'?'quarter':'thirds';
+      if(!spanish&&window.PlecAudioVarieties.varieties.some(v=>v.id===data.variety))state.variety=data.variety;
       if(saved&&R.editions.some(e=>e.slot===data.edition)){edition=R.editions.find(e=>e.slot===data.edition);C=edition.catalog;}
       for(const mode of ['words','pseudo']){
         const src=data.sessions?.[mode];if(!src)continue;const dest=state.sessions[mode];
@@ -46,7 +49,7 @@
       }
     }catch{}
   }
-  function updateURL(){try{const url=new URL(location.href),panel=new URLSearchParams(url.search);url.search='';url.hash='';if(current){url.searchParams.set('seed',S.normalize(current.code));url.searchParams.set('catalogue',current.catalogue);url.searchParams.set('variety',state.variety);}for(const name of ['panel','mot','audio'])if(panel.has(name))url.searchParams.set(name,panel.get(name));history.replaceState(null,'',url);}catch{}}
+  function updateURL(){try{const url=new URL(location.href),panel=new URLSearchParams(url.search);url.search='';url.hash='';if(current){url.searchParams.set('seed',S.normalize(current.code));url.searchParams.set('catalogue',current.catalogue);if(state.variety)url.searchParams.set('variety',state.variety);}for(const name of ['panel','mot','audio'])if(panel.has(name))url.searchParams.set(name,panel.get(name));history.replaceState(null,'',url);}catch{}}
   function setCode(code,{keepRequired=false}={}){
     const result=S.resolve(R.editions,code),next=R.editions.find(e=>e.slot===result.epoch);
     if(next.language!==L.id)throw new Error('El codi correspon a una altra llengua.');
@@ -62,34 +65,34 @@
     const targetSlot=state.mode==='words'&&session().basic&&R.basic!==undefined?R.basic:R.current;
     if(!continuing&&edition.slot!==targetSlot){edition=R.editions.find(e=>e.slot===targetSlot);C=edition.catalog;updateControls();}
     const outcome=await search.run({edition,recipe:recipe(),required:session().required,previous:current,resume,
-      onStart(){current=null;session().code=null;persist();updateURL();renderPreview();updateAvailability();$('search-status').textContent=session().required.length?'Buscant un codi compatible…':'';},
-      onProgress:attempts=>{$('search-status').textContent=attempts.toLocaleString(L.locale)+' de '+S.VARIANTS.toLocaleString(L.locale)+' variants comprovades…';}
+      onStart(){current=null;session().code=null;persist();updateURL();renderPreview();updateAvailability();$('search-status').textContent=session().required.length?t('Buscant un codi compatible…'):'';},
+      onProgress:attempts=>{$('search-status').textContent=t('{attempts} de {variants} variants comprovades…',{attempts:attempts.toLocaleString(L.locale),variants:S.VARIANTS.toLocaleString(L.locale)});}
     });
     if(!search.isCurrent(outcome)||outcome.status==='stale')return;
     const attempts=outcome.attempts?.toLocaleString(L.locale),variants=S.VARIANTS.toLocaleString(L.locale);
     if(outcome.status==='found'){
       setCode(outcome.code,{keepRequired:true});
-      $('search-status').textContent=outcome.required.length?'Codi trobat després de '+attempts+' '+(outcome.attempts===1?'intent':'intents')+'.':'';
-    }else if(outcome.status==='paused')$('search-status').textContent='Encara no hem trobat cap codi. '+attempts+' de '+variants+' variants comprovades. Pots continuar la cerca o ajustar els mots.';
-    else if(outcome.status==='exhausted')$('search-status').textContent='Cap de les '+variants+' variants inclou tots aquests mots. Treu algun mot o ajusta els focus.';
-    else if(outcome.status==='error')$('search-status').textContent=outcome.error.message;
+      $('search-status').textContent=outcome.required.length?t('Codi trobat després de {attempts} {unit}.',{attempts,unit:t(outcome.attempts===1?'intent':'intents')}):'';
+    }else if(outcome.status==='paused')$('search-status').textContent=t('Encara no hem trobat cap codi. {attempts} de {variants} variants comprovades. Pots continuar la cerca o ajustar els mots.',{attempts,variants});
+    else if(outcome.status==='exhausted')$('search-status').textContent=t('Cap de les {variants} variants inclou tots aquests mots. Treu algun mot o ajusta els focus.',{variants});
+    else if(outcome.status==='error')$('search-status').textContent=t(outcome.error.message);
     renderPreview();updateAvailability();
   }
   function updateControls(){
     $('pronunciation-variety').value=state.variety;
     const s=session();document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===state.mode)));
     $('count-control').value=s.count;$('stage-field').hidden=state.mode==='pseudo';$('stage-control').value=s.stage;
-    $('basic-vocabulary-field').hidden=state.mode==='pseudo'||R.basic===undefined;$('basic-vocabulary').checked=!!s.basic;
-    $('basic-vocabulary-count').textContent=(R.basicWordCount||0)+' mots';
+    $('basic-vocabulary-field').hidden=state.mode==='pseudo'||R.basic===undefined||R.basic===R.current;$('basic-vocabulary').checked=!!s.basic;
+    $('basic-vocabulary-count').textContent=(R.basicWordCount||0)+' '+t('mots');
     $('fold-style-control').value=state.foldStyle;document.querySelectorAll('[data-side]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.side===state.modelSide)));
-    const focuses=modeTags(state.mode);if(state.mode==='words')focuses.sort((a,b)=>focusOrder.indexOf(a.id)-focusOrder.indexOf(b.id));
+    const focuses=modeTags(state.mode);if(state.mode==='words'&&!spanish)focuses.sort((a,b)=>focusOrder.indexOf(a.id)-focusOrder.indexOf(b.id));
     $('tag-options').innerHTML=focuses.map(c=>`<label class="tag" title="${escape(c.title)}"><input type="checkbox" value="${c.id}" ${s.tags.includes(c.id)?'checked':''}><span>${window.PlecIcons('check')}${escape(c.label)}</span></label>`).join('');
     $('pseudo-note').hidden=state.mode!=='pseudo';$('word-total').textContent=BANK.entries.filter(e=>e.mode==='words').length;$('pseudo-total').textContent=BANK.entries.filter(e=>e.mode==='pseudo').length;$('seed-language').textContent=L.id.toUpperCase();
     renderRequired();updateAvailability();
   }
-  function updateAvailability(){const p=pool();$('pool-count').textContent=p.length;$('pool-status').textContent=!session().tags.length?' · Tria almenys un focus.':p.length<session().count?' · Amplia els filtres o redueix la llargada.':'';$('cancel-search').hidden=!search.busy;$('resume-search').hidden=search.busy||!search.canResume;$('new-dictation').disabled=search.busy;}
+  function updateAvailability(){const p=pool();$('pool-count').textContent=p.length;$('pool-status').textContent=t(!session().tags.length?' · Tria almenys un focus.':p.length<session().count?' · Amplia els filtres o redueix la llargada.':'');$('cancel-search').hidden=!search.busy;$('resume-search').hidden=search.busy||!search.canResume;$('new-dictation').disabled=search.busy;}
   function renderRequired(){
-    $('required-list').innerHTML=session().required.map(id=>`<span class="required-chip">${escape(lookup(id)?.text||id)}<button type="button" data-remove-required="${id}" aria-label="Treu ${escape(lookup(id)?.text||id)}">${window.PlecIcons('x')}</button></span>`).join('');suggest();
+    $('required-list').innerHTML=session().required.map(id=>`<span class="required-chip">${escape(lookup(id)?.text||id)}<button type="button" data-remove-required="${id}" aria-label="${escape(t('Treu {word}',{word:lookup(id)?.text||id}))}">${window.PlecIcons('x')}</button></span>`).join('');suggest();
   }
   function suggest(){const query=K.normalize($('required-word').value.trim());$('required-options').innerHTML=query?pool().filter(e=>!session().required.includes(e.id)&&K.normalize(e.text).includes(query)).slice(0,12).map(e=>`<option value="${escape(e.text)}"></option>`).join(''):'';}
   function addRequired(){
@@ -115,8 +118,9 @@
   }
   // Les fonts estàndard del PDF admeten tots els caràcters catalans.
   const printable = window.PlecPdf.printable;
+  const modelSideLabel=side=>t(side==='left'?'l’esquerra':'la dreta');
   function svgFor(shapes, layout = K.foldLayout(state.foldStyle, state.modelSide)) {
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" role="img" aria-label="Full A4: ${layout.name}, model a ${layout.side === 'left' ? 'l’esquerra' : 'la dreta'}" data-fold-style="${layout.foldStyle}" data-model-side="${layout.side}"><rect width="210" height="297" fill="white"/>${shapes.map(s => {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" role="img" aria-label="${escape(t('Full A4: {layout}, model a {side}',{layout:t(layout.name),side:modelSideLabel(layout.side)}))}" data-fold-style="${layout.foldStyle}" data-model-side="${layout.side}"><rect width="210" height="297" fill="white"/>${shapes.map(s => {
       if (s.type === 'line') return `<line x1="${s.x}" y1="${s.y}" x2="${s.x2}" y2="${s.y2}" stroke="${s.color}" stroke-width="${s.width}" ${s.dash ? 'stroke-dasharray="1.5 1.4"' : ''}/>`;
       if (s.type === 'rect') return `<rect x="${s.x}" y="${s.y}" width="${s.w}" height="${s.h}" fill="${s.color}"/>`;
       if (s.type === 'path') return `<path d="${s.d}" transform="translate(${s.x} ${s.y}) scale(${s.scale})" fill="${s.fill?s.color:'none'}" stroke="${s.fill?'none':s.color}" stroke-width="${s.width}" stroke-linecap="round" stroke-linejoin="round" data-brand-part="${s.part}"/>`;
@@ -126,19 +130,19 @@
     }).join('')}</svg>`;
   }
 
-  function sheetOptions(){return{entries:chosen(),title:state.mode==='words'?'Dictat de paraules':'Dictat de pseudoparaules',mode:state.mode,modelSide:state.modelSide,foldStyle:state.foldStyle,seedCode:current?.code,seedLanguage:L.id,variety:state.variety,focusLabels:[...(session().basic?['Vocabulari bàsic']:[]),...session().tags.map(id=>C.categories.find(c=>c.id===id)?.label||id)]};}
+  function sheetOptions(){return{entries:chosen(),title:t(state.mode==='words'?'Dictat de paraules':'Dictat de pseudoparaules'),mode:state.mode,modelSide:state.modelSide,foldStyle:state.foldStyle,seedCode:current?.code,seedLanguage:L.id,variety:state.variety,focusLabels:[...(session().basic?[t('Vocabulari bàsic')]:[]),...session().tags.map(id=>C.categories.find(c=>c.id===id)?.label||id)]};}
   const fitPaper=()=>window.PlecPreview.fit();
   function renderPreview(){
     const entries=chosen(),layout=K.foldLayout(state.foldStyle,state.modelSide),ready=!!current&&!search.busy;
-    $('sheet-preview').innerHTML=entries.length?svgFor(K.worksheet(sheetOptions()),layout):`<div class="empty-selection">${search.busy?'Buscant un dictat…':'Ajusta els filtres o recupera un codi per veure el full.'}</div>`;
-    $('seed-code').textContent=search.busy?'…':current?.code||'—';$('selection-summary').textContent=`${entries.length} / ${session().count} elements`;
-    $('preview-layout').textContent=`${layout.name} · model a ${state.modelSide==='left'?'l’esquerra':'la dreta'}`;
-    document.querySelector('.dictation-nav').href=new URL('./dictat/?variety='+state.variety,location.href).href;
+    $('sheet-preview').innerHTML=entries.length?svgFor(K.worksheet(sheetOptions()),layout):`<div class="empty-selection">${escape(t(search.busy?'Buscant un dictat…':'Ajusta els filtres o recupera un codi per veure el full.'))}</div>`;
+    $('seed-code').textContent=search.busy?'…':current?.code||'—';$('selection-summary').textContent=t('{count} / {total} elements',{count:entries.length,total:session().count});
+    $('preview-layout').textContent=t('{layout} · model a {side}',{layout:t(layout.name),side:modelSideLabel(state.modelSide)});
+    document.querySelector('.dictation-nav').href=new URL(state.variety?'./dictat/?variety='+state.variety:'./dictat/',location.href).href;
     for(const id of ['download-pdf','copy-code','copy-link','open-student','copy-student-link'])$(id).disabled=!ready;
     $('sheet-preview').setAttribute('aria-label',`Vista prèvia: ${entries.length} elements. Model visible.`);fitPaper();
   }
   function openCatalog(options={}){
-    window.PlecCatalogView.open({entries:BANK.entries,categories:BANK.categories,basic:session().basic,mode:state.mode,revision:BANK.revision,locale:L.locale,matchesStage:(entry,stage)=>S.matchesStage(entry,stage,R.editions.find(e=>e.slot===R.current).profile.stageRules)},options);
+    window.PlecCatalogView.open({entries:BANK.entries,categories:BANK.categories,basic:session().basic,onlyBasic:R.basic===R.current,mode:state.mode,revision:BANK.revision,locale:L.locale,matchesStage:(entry,stage)=>S.matchesStage(entry,stage,R.editions.find(e=>e.slot===R.current).profile.stageRules)},options);
   }
   function downloadBlob(blob, filename) {
     const url = URL.createObjectURL(blob), a = document.createElement('a');
@@ -148,13 +152,14 @@
   async function exportPdf() {
     const button = $('download-pdf'), original = button.innerHTML;
     const metrics={mode:state.mode,count:session().count,fold:state.foldStyle,stage:state.mode==='pseudo'?'none':session().stage};
-    button.disabled = true; button.textContent = 'Preparant…';
+    const filename=spanish?`plec-dictado-${session().count}-${S.normalize(current.code)}.pdf`:`plec-${state.mode === 'words' ? 'paraules' : 'pseudoparaules'}-${session().count}-${state.foldStyle === 'quarter' ? 'quart' : 'tercos'}-${state.modelSide === 'right' ? 'dreta' : 'esquerra'}.pdf`;
+    button.disabled = true; button.textContent = t('Preparant…');
     try {
       const bytes = await buildPdf();
-      downloadBlob(new Blob([bytes], { type: 'application/pdf' }), `plec-${state.mode === 'words' ? 'paraules' : 'pseudoparaules'}-${session().count}-${state.foldStyle === 'quarter' ? 'quart' : 'tercos'}-${state.modelSide === 'right' ? 'dreta' : 'esquerra'}.pdf`);
+      downloadBlob(new Blob([bytes], { type: 'application/pdf' }), filename);
       track('worksheet-exported',metrics);
       say('PDF descarregat. Imprimeix-lo en A4 a escala 100 %.');
-    } catch (error) { track('technical-error',{kind:'pdf'});say('No s’ha pogut generar el PDF. ' + error.message); }
+    } catch (error) { track('technical-error',{kind:'pdf'});say(spanish?'No s’ha pogut generar el PDF.':'No s’ha pogut generar el PDF. ' + error.message); }
     finally { button.innerHTML = original; renderPreview(); }
   }
 
@@ -167,7 +172,7 @@
   $('fold-style-control').addEventListener('change',event=>{state.foldStyle=event.target.value;persist();updateControls();renderPreview();});
   $('model-side-control').addEventListener('click',event=>{const b=event.target.closest('[data-side]');if(!b)return;state.modelSide=b.dataset.side;persist();updateControls();renderPreview();});
   $('new-dictation').addEventListener('click',generate);
-  $('cancel-search').addEventListener('click',()=>{stopSearch();$('search-status').textContent='Cerca cancel·lada.';renderPreview();updateAvailability();});
+  $('cancel-search').addEventListener('click',()=>{stopSearch();$('search-status').textContent=t('Cerca cancel·lada.');renderPreview();updateAvailability();});
   $('resume-search').addEventListener('click',()=>generate({resume:true}));
   $('required-word').addEventListener('input',event=>{if(!event.isComposing&&$('required-word').value.includes(','))addRequired();else suggest();});$('add-required').addEventListener('click',addRequired);
   $('required-word').addEventListener('keydown',event=>{if(!event.isComposing&&['Enter',','].includes(event.key)){event.preventDefault();addRequired();}});
@@ -208,7 +213,7 @@
   setupHelp('required-help-trigger','required-help-toggle','required-help');
   setupHelp('focus-help-toggle','focus-help-toggle','focus-help',{hoverTip:false});
   $('recover-form').addEventListener('submit',event=>{event.preventDefault();try{const resolved=S.resolve(R.editions,$('recover-code').value);stopSearch();setCode(resolved.code);$('recover-code').value='';$('search-status').textContent='';track('code-recovered',{result:'ok'});say('Dictat recuperat amb els mateixos mots, ordre i filtres.');}catch(error){track('code-recovered',{result:'invalid'});say(error.message);}});
-  async function copy(value,success,target){try{await navigator.clipboard.writeText(value);if(target)track('share-copied',{target});say(success);}catch{say('No s’ha pogut copiar automàticament. El codi és '+(current?.code||'')+'.');}}
+  async function copy(value,success,target){try{await navigator.clipboard.writeText(value);if(target)track('share-copied',{target});say(success);}catch{say(t('No s’ha pogut copiar automàticament. El codi és {code}.',{code:current?.code||''}));}}
   $('copy-code').addEventListener('click',()=>current&&copy(current.code,'Codi copiat.','code'));
   const shareOptions=()=>({language:L.id,catalogue:current.catalogue,seed:current.code,variety:state.variety});
   $('pronunciation-variety').addEventListener('change',()=>{state.variety=window.PlecAudioVarieties.definition($('pronunciation-variety').value).id;persist();renderPreview();updateURL();});
@@ -231,7 +236,7 @@
     clearTimeout(copyTimer);
     try {
       await navigator.clipboard.writeText(address.textContent.trim());
-      status.textContent = 'Adreça Lightning copiada.';
+      status.textContent = t('Adreça Lightning copiada.');
       button.innerHTML = window.PlecIcons('check'); button.classList.add('copied');
       copyTimer = setTimeout(() => { button.innerHTML = window.PlecIcons('copy'); button.classList.remove('copied'); status.textContent = ''; }, 3500);
     } catch {
@@ -239,10 +244,12 @@
       const range = document.createRange(); range.selectNodeContents(address);
       const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
       button.innerHTML = window.PlecIcons('copy'); button.classList.remove('copied');
-      status.textContent = 'Selecciona i copia l’adreça amb el menú del navegador o amb Ctrl+C (⌘C al Mac).';
+      status.textContent = t('Selecciona i copia l’adreça amb el menú del navegador o amb Ctrl+C (⌘C al Mac).');
     }
   });
   const releases = [
+    ['1.31', '2026-11-13', [t('Primera versió en castellà amb 350 mots bàsics i PDF de vocabulari en ordre alfabètic o per focus.')]],
+    ['1.30.2', '2026-11-13', ['El catàleg permet descarregar en PDF A4 la llista alfabètica que compleix els filtres, inclosa la selecció de vocabulari bàsic.']],
     ['1.30.1', '2026-11-12', ['Les estadístiques i els avisos nous es recullen a l’Umami propi d’ortogra.fi. Es mantenen les opcions de privadesa.']],
     ['1.30', '2026-10-27', ['CSS del layout consolidat: columnes, calaixos, peu i impressió agrupats, sense les disposicions antigues que s’anul·laven entre fitxers. Aspecte de pantalla conservat i corregit el retall del full en la impressió directa del navegador.']],
     ['1.29', '2026-10-27', ['Neteja tècnica: gestió de cerques separada de la interfície i retirada de controls antics de revisió que ja no eren accessibles, conservant les dades. Àudios balears en pausa per manca de dicció prou clara i consistent als sistemes provats; IPA disponibles al catàleg.']],
@@ -282,26 +289,53 @@
     ['1.0', '2026-10-23', ['Primera versió: catàleg, tries, mots propis i exportació de PDF.']]
   ];
   const releaseDate = new Intl.DateTimeFormat(L.locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  $('changelog-list').innerHTML = releases.map(([version, date, notes]) => {
+  $('changelog-list').innerHTML = (spanish?releases.slice(0,1):releases).map(([version, date, notes]) => {
     const id = 'release-' + version.replaceAll('.', '-');
     return `<section class="release" aria-labelledby="${id}"><div><h3 id="${id}">${version}</h3><time datetime="${date}">${escape(releaseDate.format(new Date(date + 'T00:00:00Z')))}</time></div><p>${escape(notes.join(' '))}</p></section>`;
   }).join('');
   document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', () => window.PlecMotion.close(b.closest('dialog'))));
   document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) window.PlecMotion.close(dialog); } }));
 
-  for(const [id,mode,name] of [['export-words-text','words','paraules'],['export-pseudo-text','pseudo','pseudoparaules']])$(id).addEventListener('click',()=>{
+  for(const [id,mode,name] of [['export-words-text','words',spanish?'vocabulario-basico':'paraules'],['export-pseudo-text','pseudo','pseudoparaules']])$(id).addEventListener('click',()=>{
     const text=BANK.entries.filter(e=>e.mode===mode).map(e=>e.text).sort(new Intl.Collator(L.locale,{sensitivity:'variant'}).compare).join('\n')+'\n';
     downloadBlob(new Blob([text],{type:'text/plain;charset=utf-8'}),`plec-${L.id}-${name}.txt`);
   });
   $('export-basic-text').addEventListener('click',()=>{const text=BANK.entries.filter(e=>e.mode==='words'&&e.basicVocabulary).map(e=>e.text).sort(new Intl.Collator(L.locale,{sensitivity:'variant'}).compare).join('\n')+'\n';downloadBlob(new Blob([text],{type:'text/plain;charset=utf-8'}),'plec-ca-vocabulari-basic.txt');});
   $('export-review').addEventListener('click',()=>{
     const rows=[...BANK.entries].sort((a,b)=>a.text.localeCompare(b.text,L.locale));
-    const text=['paraula\ttipus\tvocabulari\tortografia\tfocus\tid',...rows.map(e=>[e.text,e.mode,e.vocabulary||'',e.orthography||'',e.tags.join(','),e.id].join('\t'))].join('\n')+'\n';
-    downloadBlob(new Blob([text],{type:'text/tab-separated-values;charset=utf-8'}),`plec-${L.id}-revisio.tsv`);
+    const text=[t('paraula\ttipus\tvocabulari\tortografia\tfocus\tid'),...rows.map(e=>[e.text,e.mode,e.vocabulary||'',e.orthography||'',e.tags.join(','),e.id].join('\t'))].join('\n')+'\n';
+    downloadBlob(new Blob([text],{type:'text/tab-separated-values;charset=utf-8'}),`plec-${L.id}-${spanish?'revision':'revisio'}.tsv`);
   });
   $('download-pdf').addEventListener('click',exportPdf);
   restore();
-  if(arrival.searchParams.has('variety')){try{state.variety=window.PlecAudioVarieties.definition(arrival.searchParams.get('variety')).id;}catch(error){say(error.message);}}
+  if(!spanish&&arrival.searchParams.has('variety')){try{state.variety=window.PlecAudioVarieties.definition(arrival.searchParams.get('variety')).id;}catch(error){say(error.message);}}
+  if(!hasPseudo){
+    $('mode-control').closest('fieldset').hidden=true;
+    $('pseudo-total').parentElement.hidden=true;
+    document.querySelector('.bank-summary i').hidden=true;
+  }
+  if(spanish){
+    $('oral-pending').hidden=false;
+    $('pronunciation-variety').closest('.pronunciation-setting').hidden=true;
+    $('open-student').hidden=true;
+    $('copy-student-link').hidden=true;
+  }
+  const languageSwitch=document.querySelector('.language-switch');
+  const languageToggle=$('language-toggle'),languageOptions=$('language-options');
+  function showLanguages(show){
+    languageOptions.hidden=!show;
+    languageToggle.setAttribute('aria-expanded',String(show));
+  }
+  languageToggle.addEventListener('click',()=>showLanguages(languageOptions.hidden));
+  languageSwitch.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&!languageOptions.hidden){
+      showLanguages(false);
+      languageToggle.focus();
+    }
+  });
+  document.addEventListener('click',event=>{
+    if(!languageOptions.hidden&&!languageSwitch.contains(event.target))showLanguages(false);
+  });
   updateControls();renderPreview();
   const incoming=new URL(location.href).searchParams;
   try{
@@ -313,7 +347,7 @@
       const result=S.resolve(R.editions,session().code);
       if(S.recipeIndex(recipe())!==result.index||!session().required.every(id=>result.entries.some(e=>e.id===id)))generate();else setCode(result.code,{keepRequired:true});
     }else generate();
-  }catch(error){current=null;renderPreview();$('search-status').textContent=error.message;}
+  }catch(error){current=null;renderPreview();$('search-status').textContent=t(error.message);}
   if(['pronunciacions','cataleg'].includes(incoming.get('panel')))openCatalog({word:incoming.get('mot')||'',pack:incoming.get('audio')||''});
   window.PlecApp={buildPdf,svgFor};
 })();

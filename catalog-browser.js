@@ -6,46 +6,52 @@
   'use strict';
 
   const LETTERS=Object.freeze('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(''));
+  const SPANISH_LETTERS=Object.freeze('ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split(''));
+  const lettersFor=locale=>locale.startsWith('es')?SPANISH_LETTERS:LETTERS;
   const WHEEL_PAUSE=350;
 
   function normalize(value,locale='ca'){
-    return String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase(locale);
+    const lower=String(value??'').toLocaleLowerCase(locale).normalize('NFC');
+    return lower.normalize('NFD').replace(/[\u0300-\u036f]/g,(mark,offset,text)=>
+      locale.startsWith('es')&&mark==='\u0303'&&text[offset-1]==='n'?mark:'').normalize('NFC');
   }
 
   function initialFor(text,locale='ca'){
-    return normalize(text,locale).toLocaleUpperCase(locale).match(/[A-Z]/)?.[0]||'';
+    return normalize(text,locale).toLocaleUpperCase(locale).match(/[A-ZÑ]/)?.[0]||'';
   }
 
-  function chooseInitial(counts,requestedInitial){
+  function chooseInitial(counts,requestedInitial,letters=LETTERS){
     if(requestedInitial&&counts[requestedInitial]>0)return requestedInitial;
-    return counts.A>0?'A':LETTERS.find(letter=>counts[letter]>0)||null;
+    return counts.A>0?'A':letters.find(letter=>counts[letter]>0)||null;
   }
 
-  function nextInitial(counts,activeInitial){
-    const start=LETTERS.indexOf(activeInitial);
-    return start<0?null:LETTERS.slice(start+1).find(letter=>counts[letter]>0)||null;
+  function nextInitial(counts,activeInitial,letters=LETTERS){
+    const start=letters.indexOf(activeInitial);
+    return start<0?null:letters.slice(start+1).find(letter=>counts[letter]>0)||null;
   }
 
   function buildView(entries,{query='',requestedInitial=null,locale='ca',predicate=null}={}){
     const needle=normalize(query,locale).trim();
     const collator=new Intl.Collator(locale,{sensitivity:'variant'});
     const filtered=(entries||[]).filter(entry=>(!predicate||predicate(entry))&&(!needle||normalize(entry.text,locale).includes(needle))).sort((a,b)=>collator.compare(a.text,b.text));
-    const groups=Object.fromEntries(LETTERS.map(letter=>[letter,[]]));
+    const letters=lettersFor(locale);
+    const groups=Object.fromEntries(letters.map(letter=>[letter,[]]));
     for(const entry of filtered){
       const initial=initialFor(entry.text,locale);
       if(groups[initial])groups[initial].push(entry);
     }
-    const counts=Object.fromEntries(LETTERS.map(letter=>[letter,groups[letter].length]));
-    const activeInitial=chooseInitial(counts,requestedInitial);
+    const counts=Object.fromEntries(letters.map(letter=>[letter,groups[letter].length]));
+    const activeInitial=chooseInitial(counts,requestedInitial,letters);
     return{
       entries:filtered,
       groups,
+      letters,
       counts,
       total:filtered.length,
       activeInitial,
       visibleEntries:activeInitial?groups[activeInitial]:[],
       initialCount:activeInitial?counts[activeInitial]:0,
-      nextInitial:nextInitial(counts,activeInitial)
+      nextInitial:nextInitial(counts,activeInitial,letters)
     };
   }
 
@@ -66,5 +72,5 @@
     };
   }
 
-  return{LETTERS,WHEEL_PAUSE,normalize,initialFor,chooseInitial,nextInitial,buildView,createWheelState,noteWheelPosition,wheelGesture};
+  return{LETTERS,lettersFor,WHEEL_PAUSE,normalize,initialFor,chooseInitial,nextInitial,buildView,createWheelState,noteWheelPosition,wheelGesture};
 });

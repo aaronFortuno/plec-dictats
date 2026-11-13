@@ -1,5 +1,14 @@
 # Historial
 
+## 1.31 · 13 de novembre de 2026
+
+- Primera versió castellana a `/es/`, amb selector d’idioma, 350 mots bàsics, focus propis i codis amb prefix `ES-`. Inclou el preparador, el catàleg, la recuperació de dictats i els fulls A4. Els àudios i les pseudoparaules castellanes es prepararan en una fase posterior.
+- El PDF de llista també es pot agrupar per focus. Cada mot apareix a tots els focus que li corresponen i cada focus comença en una pàgina nova.
+
+## 1.30.2 · 13 de novembre de 2026
+
+- Des del catàleg es pot descarregar un PDF A4 amb tots els mots de la cerca i els filtres actius, ordenats alfabèticament. Amb «Vocabulari bàsic» i els altres filtres oberts, el PDF recull els 350 mots de la selecció.
+
 ## 1.30.1 · 12 de novembre de 2026
 
 - El seguiment d’ús i els avisos d’àudio passen a la instància pròpia d’Umami. Els esdeveniments i les opcions de privadesa es mantenen.

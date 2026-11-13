@@ -42,6 +42,7 @@
     var qs = new URLSearchParams(root.location.search);
     var $ = function (id) { return doc.getElementById(id); };
     var lang = (root.PlecLanguage && root.PlecLanguage.id) || "ca";
+    var t = root.PlecLanguageTools?.text || (message => message);
     var scenes = ["setup-panel", "ready-panel", "player-panel", "pause-panel", "finished-panel"];
     var state = {
       selection: null, cov: null, session: null, audio: null, epoch: 0,
@@ -148,6 +149,7 @@
       state.activeSince = null; state.activeElapsed = 0; state.variety = null;
       $("start-dictation").disabled = true;
       for (var id of ["windowed-start", "fullscreen-note", "resume-windowed", "resume-note"]) $(id).hidden = true;
+      if ($("audio-pending")) $("audio-pending").hidden = true;
       setError("");
       show("setup-panel");
     }
@@ -159,7 +161,13 @@
       try {
         sel = resolveSelection(root.PlecSeeds, root.PlecSeedRegistry.editions, code, lang, catalogue || null);
       } catch (e) {
-        setError(e.message || "Codi no vàlid.");
+        setError(t(e.message || "Codi no vàlid."));
+        return;
+      }
+      if(lang==='es'){
+        $("student-code").value=sel.code;
+        $("audio-pending").textContent=t("Codi {code} · {count} paraules. Els àudios encara estan en preparació. Pots fer el dictat a classe a partir del full.",{code:sel.code,count:sel.entries.length});
+        $("audio-pending").hidden=false;
         return;
       }
       state.selection = sel;
@@ -211,6 +219,10 @@
     }
 
     $("instructions").textContent = "";
+    if(lang==='es'){
+      $("audio-pending").textContent=t("Els àudios encara estan en preparació.");
+      $("audio-pending").hidden=false;
+    }
 
     $("read-instructions").addEventListener("click", function () {
       if (!state.introUrl || state.session) return;

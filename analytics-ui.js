@@ -2,6 +2,7 @@
   'use strict';
   const analytics = window.PlecAnalytics, dialog = document.getElementById('analytics-dialog');
   if (!analytics || !dialog) return;
+  const t=window.PlecLanguageTools?.text || (message=>message);
   const stateText = document.getElementById('analytics-state'), temporary = document.getElementById('analytics-temporary'), disable = document.getElementById('analytics-disable');
   const help=window.PlecPrivacyHelp,browserSelect=document.getElementById('analytics-browser');let browserChosen=false;
   if(help&&browserSelect){browserSelect.value=help.browserFor(navigator);browserSelect.addEventListener('change',()=>{browserChosen=true;update(analytics.getState());});
@@ -16,14 +17,14 @@
   };
   function update(state) {
     const browser = ['gpc', 'dnt'].includes(state.reason);
-    stateText.textContent = browser ? 'Els avisos estan bloquejats pel senyal de privacitat del navegador. A sota tens els passos per habilitar-los si ho vols.' : messages[state.status];
+    stateText.textContent = t(browser ? 'Els avisos estan bloquejats pel senyal de privacitat del navegador. A sota tens els passos per habilitar-los si ho vols.' : messages[state.status]);
     temporary.disabled = browser || ['loading', 'development', 'ready'].includes(state.status);
     disable.disabled = ['disabled', 'development'].includes(state.status);
     const panel=document.getElementById('analytics-browser-help');
     if(help&&panel){panel.hidden=!(browser||state.status==='unavailable');const guide=help.guide(browserSelect.value,state,navigator);
-      document.getElementById('analytics-help-intro').textContent=guide.intro;
-      document.getElementById('analytics-help-steps').replaceChildren(...guide.steps.map(step=>{const li=document.createElement('li');li.textContent=step;return li;}));
-      const scope=document.getElementById('analytics-help-scope');scope.textContent=guide.scope;scope.hidden=!guide.scope;
+      document.getElementById('analytics-help-intro').textContent=t(guide.intro);
+      document.getElementById('analytics-help-steps').replaceChildren(...guide.steps.map(step=>{const li=document.createElement('li');li.textContent=t(step);return li;}));
+      const scope=document.getElementById('analytics-help-scope');scope.textContent=t(guide.scope);scope.hidden=!guide.scope;
       const source=document.getElementById('analytics-help-source');source.hidden=!guide.source;if(guide.source)source.href=guide.source;
     }
   }

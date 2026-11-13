@@ -1,6 +1,7 @@
 {
   "defaultLanguage": "ca",
   "languages": [
-    { "id": "ca", "name": "Català", "path": "ca/", "config": "locales/ca/config.json" }
+    { "id": "ca", "name": "Català", "path": "ca/", "config": "locales/ca/config.json" },
+    { "id": "es", "name": "Español", "path": "es/", "config": "locales/es/config.json" }
   ]
 }

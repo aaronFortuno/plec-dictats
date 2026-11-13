@@ -7,6 +7,7 @@
 
   var els = {};
   var state = { open: null, opener: null, built: false };
+  var t = window.PlecLanguageTools?.text || (text => text);
 
   function icon(name, fallback) {
     if (typeof window.PlecIcons === 'function') {
@@ -59,11 +60,11 @@
     var bar = document.createElement('div');
     bar.className = 'workspace-toolbar';
 
-    var tCfg = makeButton('workspace-drawer-toggle toggle-config', 'Filtres', 'book-open', '\u25C0');
+    var tCfg = makeButton('workspace-drawer-toggle toggle-config', t('Filtres'), 'book-open', '\u25C0');
     tCfg.setAttribute('aria-controls', cfgId);
     tCfg.id = 'workspace-toggle-config';
 
-    var tMng = makeButton('workspace-drawer-toggle toggle-management', 'El teu dictat', 'download', '\u25B6');
+    var tMng = makeButton('workspace-drawer-toggle toggle-management', t('El teu dictat'), 'download', '\u25B6');
     tMng.setAttribute('aria-controls', mngId);
     tMng.id = 'workspace-toggle-management';
 
@@ -74,8 +75,8 @@
     // Botons de tancament dins de cada calaix
     ['config', 'manage'].forEach(function (which) {
       var panel = els[which];
-      var close = makeButton('workspace-drawer-close', 'Tanca', 'x', '\u00D7');
-      close.setAttribute('aria-label', 'Tanca el panell');
+      var close = makeButton('workspace-drawer-close', t('Tanca'), 'x', '\u00D7');
+      close.setAttribute('aria-label', t('Tanca el panell'));
       close.dataset.drawer = which;
       panel.insertBefore(close, panel.firstChild);
       panel.addEventListener('click', function (ev) {

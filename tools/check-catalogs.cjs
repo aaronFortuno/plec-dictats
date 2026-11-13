@@ -39,6 +39,12 @@ for(const base of ['https://pleg.at/','https://aaronfortuno.github.io/plec-dicta
  assert.equal(url.searchParams.has('mode'),false);
 }
 assert.throws(()=>L.dictationURL('https://pleg.at/',{language:'es',catalogue:'es-v1',seed:'X5D8TY'}));
+const ES=require('../catalogs/es/catalog.js'), esProfile=require('../locales/es/config.json'), esSource=require('../catalogs/es/catalog.json');
+const esWords=fs.readFileSync('catalogs/es/vocabulario-basico.txt','utf8').trimEnd().split('\n');
+assert.equal(esWords.length,350);
+assert.deepEqual(ES.entries.map(entry=>entry.text),esWords);
+assert.equal(ES.fingerprint,digest({source:esSource,profile:esProfile}));
+assert(ES.entries.every(entry=>entry.basicVocabulary&&entry.tags.length&&entry.tags.every(tag=>esProfile.seedFocuses.includes(tag))));
 assert.throws(()=>L.dictationURL('https://pleg.at/',{language:'ca',catalogue:'es-v1',seed:'X5D8TY'}));
 assert.throws(()=>L.dictationURL('https://pleg.at/',{language:'ca',catalogue:C.revision,seed:'O0I1LU'}));
 assert.equal(new URL(L.dictationURL('https://aaronfortuno.github.io/plec-dictats/',{language:'ca',catalogue:C.revision,seed:'m6qm-aavn4'})).searchParams.get('seed'),'M6QMAAVN4');

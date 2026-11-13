@@ -3,6 +3,7 @@
   const profile = root.PlecLanguage || (typeof module !== 'undefined' ? require('./locales/ca/config.json') : null);
   const QR = root.PlecWorksheetQR || (typeof module !== 'undefined' ? require('./worksheet-qr.js') : null);
   const Brand = root.PlecBrand || (typeof module !== 'undefined' ? require('./brand.js') : null);
+  const t = value => root.PlecLanguageTools?.text(value) ?? value;
   const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase(profile.locale);
   function migrateFocusTags(tags, available, retired = []) {
     const active = [...new Set(tags.filter(tag => available.includes(tag)))];
@@ -103,7 +104,7 @@
     const steps = quarter
       ? [['1. Plega el model', 'cap endins.'], ['2. Torna a plegar', 'cap endins.'], ['3. Inverteix el plec', 'per veure el model.']]
       : [['1. Plega el terç buit', 'cap enrere.'], ['2. Plega el model', 'cap enrere.'], ['3. Obre el model', 'per corregir.']];
-    const text = (y, value, size, weight, extra = {}) => shapes.push({ type:'text', x:x+2, y, value, size, weight, color:'#444444', maxWidth:width-4, role:'fold-guide', ...extra });
+    const text = (y, value, size, weight, extra = {}) => shapes.push({ type:'text', x:x+2, y, value:t(value), size, weight, color:'#444444', maxWidth:width-4, role:'fold-guide', ...extra });
     text(185, 'Com plegar el full', 9, true);
     steps.forEach((caption, index) => {
       const top = 194 + index * 32, step = index + 1;
@@ -140,7 +141,7 @@
         else{face([2,-.12],[3,-.12],'blank',true);face([2,0],[3,0],'model');face([3,0],[4,0],'writing');}
       }
       if(index===2)for(const [u,value] of [[quarter?2.5:.5,'Model'],[quarter?3.5:1.5,'Escric']]){
-        const [tx]=project([u,0]);shapes.push({type:'text',x:tx,y:origin+18,value,size:6,weight:false,color:'#555555',align:'center',maxWidth:unit-1,role:'fold-guide',foldStep:step});
+        const [tx]=project([u,0]);shapes.push({type:'text',x:tx,y:origin+18,value:t(value),size:6,weight:false,color:'#555555',align:'center',maxWidth:unit-1,role:'fold-guide',foldStep:step});
       }
     });
     return shapes;
@@ -155,15 +156,19 @@
     const { x: modelX, width: modelWidth } = layout.modelArea;
     const { x: writeX, width: writeWidth } = layout.writingArea;
     const brandWidth=Math.min(modelWidth-4,36);
-    shapes.push(...Brand.shapes(modelX+(modelWidth-brandWidth)/2,10,brandWidth));
-    text(writeX, 15, seedCode ? `${seedLanguage.toUpperCase()} / ${seedCode}` : 'plec / dictat', seedCode ? 9.5 : 8, true, '#234d43', { maxWidth: writeWidth });
+    const brandShapes=Brand.shapes(modelX+(modelWidth-brandWidth)/2,10,brandWidth);
+    shapes.push(...(seedLanguage==='ca'?brandShapes:brandShapes.filter(shape=>shape.part==='mark')));
+    if(seedLanguage!=='ca')text(modelX+modelWidth/2,28,t('Escolta. Escriu. Desplega.'),9,false,'#233a33',{maxWidth:brandWidth,align:'center'});
+    const codeLabel=seedLanguage==='ca'?`CA / ${seedCode}`:seedCode;
+    text(writeX, 15, seedCode ? codeLabel : t('plec / dictat'), seedCode ? 9.5 : 8, true, '#234d43', { maxWidth: writeWidth });
     text(writeX, 25, title || (mode === 'words' ? 'Dictat de paraules' : 'Dictat de pseudoparaules'), 12, true, '#222222', { maxWidth: writeWidth });
-    text(writeX, 34, 'Nom:', 8); line(writeX + 8, 35, writeX + writeWidth, 35);
-    text(writeX, 42, 'Data:', 8); line(writeX + 8, 43, writeX + writeWidth, 43);
+    const fieldOffset=seedLanguage==='ca'?8:13;
+    text(writeX, 34, t('Nom:'), 8); line(writeX + fieldOffset, 35, writeX + writeWidth, 35);
+    text(writeX, 42, t('Data:'), 8); line(writeX + fieldOffset, 43, writeX + writeWidth, 43);
     rect(modelX, 47, modelWidth, 8, '#f2f2f2');
     rect(writeX, 47, writeWidth, 8, '#f2f2f2');
-    text(modelX + 2, 52.5, 'MODEL', 9, true);
-    text(writeX + 2, 52.5, 'ESCRIC I REVISO', 9, true, '#222222', { maxWidth: writeWidth - 4 });
+    text(modelX + 2, 52.5, t('MODEL'), 9, true);
+    text(writeX + 2, 52.5, t('ESCRIC I REVISO'), 9, true, '#222222', { maxWidth: writeWidth - 4 });
     const top = 56, bottom = 268, rowH = Math.min(12, (bottom - top) / entries.length);
     entries.forEach((entry, i) => {
       const baseline = top + (i + 1) * rowH - 2.1;
@@ -197,8 +202,8 @@
       }
       if(labels.length){
         rect(fx,47,fw,14,'#f2f2f2');shapes[shapes.length-1].role='practice-focus';
-        text(fx+2,52.5,'Aquest dictat treballa',9,true,'#222222',{maxWidth:fw-4,role:'practice-focus'});
-        text(fx+2,57.5,'els següents focus:',9,true,'#222222',{maxWidth:fw-4,role:'practice-focus'});
+        text(fx+2,52.5,t('Aquest dictat treballa'),9,true,'#222222',{maxWidth:fw-4,role:'practice-focus'});
+        text(fx+2,57.5,t('els següents focus:'),9,true,'#222222',{maxWidth:fw-4,role:'practice-focus'});
         labels.forEach((label,i)=>text(fx+2,69+i*6,label,9,false,'#333333',{maxWidth:fw-4,role:'practice-focus'}));
       }
     }

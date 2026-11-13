@@ -1,6 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLEC_NODE_MODULES,'playwright'):'playwright');
+const {PDFDocument}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLEC_NODE_MODULES,'pdf-lib'):'pdf-lib');
 const fakeAnalytics=`window.PlecAnalytics={track(){},getState:()=>({status:'disabled',reason:'gpc'}),subscribe(f){f(this.getState());},refresh(){},disable(){},allowTemporarily:async()=>false,reportState:()=>'idle'};`;
 (async()=>{fs.mkdirSync('output',{recursive:true});const b=await chromium.launch({channel:'chrome'});try{
  const p=await b.newPage({viewport:{width:1440,height:900}}),errors=[];p.setDefaultTimeout(10000);p.on('pageerror',e=>errors.push(e.message));
@@ -26,6 +27,32 @@ const fakeAnalytics=`window.PlecAnalytics={track(){},getState:()=>({status:'disa
  await p.click('#catalog-open');await p.waitForSelector('.pronunciation-row');assert(await p.locator('#catalog-basic').isChecked());assert((await p.locator('#catalog-count').textContent()).startsWith('350 mots'));
  await p.selectOption('#catalog-tag','accent');const bank=require('../catalogs/ca/catalog.js'),byId=new Map(bank.entries.map(e=>[e.id,e]));const displayed=await p.locator('.pronunciation-row').evaluateAll(rows=>rows.map(r=>r.dataset.word));assert(displayed.every(id=>byId.get(id).basicVocabulary&&byId.get(id).tags.includes('accent')));
  const downloaded=p.waitForEvent('download');await p.click('#export-basic-text');const download=await downloaded;await download.saveAs('output/basic125.txt');assert.equal(fs.readFileSync('output/basic125.txt','utf8').trim().split('\n').length,350);
+ await p.selectOption('#catalog-tag','');
+ await p.selectOption('#catalog-stage','all');
+ const pdfDownload=p.waitForEvent('download');
+ await p.click('#export-catalog-pdf');
+ const vocabularyPdf=await pdfDownload;
+ assert.equal(vocabularyPdf.suggestedFilename(),'plec-ca-vocabulari-basic.pdf');
+ const pdfPath='output/pdf/plec-ca-vocabulari-basic.pdf';
+ await vocabularyPdf.saveAs(pdfPath);
+ const basicPdf=await PDFDocument.load(fs.readFileSync(pdfPath));
+ assert.equal(basicPdf.getPageCount(),4);
+ const firstPage=basicPdf.getPage(0);
+ assert(Math.abs(firstPage.getWidth()-210*72/25.4)<.01&&Math.abs(firstPage.getHeight()-297*72/25.4)<.01);
+ const focusDownload=p.waitForEvent('download');
+ await p.click('#export-focus-pdf');
+ const focusPdf=await focusDownload;
+ assert.equal(focusPdf.suggestedFilename(),'plec-ca-vocabulari-basic-focus.pdf');
+ const focusPath='output/pdf/plec-ca-vocabulari-basic-focus.pdf';
+ await focusPdf.saveAs(focusPath);
+ const basicEntries=bank.entries.filter(entry=>entry.basicVocabulary);
+ const focusPages=bank.categories.filter(category=>category.mode==='words')
+   .reduce((total,category)=>total+Math.ceil(basicEntries.filter(entry=>entry.tags.includes(category.id)).length/93),0);
+ assert.equal((await PDFDocument.load(fs.readFileSync(focusPath))).getPageCount(),focusPages);
+ await p.fill('#catalog-search','zzzzzzzz');
+ assert(await p.locator('#export-catalog-pdf').isDisabled());
+ assert(await p.locator('#export-focus-pdf').isDisabled());
+ await p.fill('#catalog-search','');
  assert.equal((await selection()).code,newCode);await p.screenshot({path:'output/catalog125-basic.png'});
  await p.locator('#catalog-dialog [data-close]').click();await p.waitForFunction(()=>!document.querySelector('#catalog-dialog').open);
  await p.route('**/analytics.js?*',r=>r.fulfill({contentType:'text/javascript',body:fakeAnalytics}));await p.addInitScript(()=>Object.defineProperty(navigator,'brave',{value:{isBrave:async()=>true}}));await p.reload();await p.waitForSelector('#sheet-preview svg');

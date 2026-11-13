@@ -24,11 +24,34 @@
     const epoch=Math.floor(block/V1.RECIPES),index=block%V1.RECIPES;
     return{protocol:2,code:format(c),epoch,index,nonce:integer(c.slice(4)),recipe:V1.recipeAt(index)};
   }
+  // A locale assigns its own meanings to the twelve positions in the word mask.
+  // The encoding, the index used by the sampler and all Catalan mappings stay fixed.
+  function prepare(edition,recipe){
+    const focuses=edition.profile.seedFocuses;
+    if(!focuses)return V1.prepare(edition,recipe);
+    if(recipe.mode!=='words'||recipe.tags.some(tag=>!focuses.includes(tag)))throw new Error('Configuració de dictat no vàlida.');
+    const tags=recipe.tags.map(tag=>V1.WORD_FOCUSES[focuses.indexOf(tag)]);
+    const index=V1.recipeIndex({...recipe,tags});
+    const pool=edition.catalog.entries.filter(entry=>entry.mode===recipe.mode&&entry.tags.some(tag=>recipe.tags.includes(tag))&&V1.matchesStage(entry,recipe.stage,edition.profile.stageRules));
+    if(pool.length<recipe.count){
+      const message='Només hi ha {count} mots disponibles. Amplia els focus o redueix la llargada.';
+      throw new Error(root.PlecLanguageTools?.text(message,{count:pool.length})||message.replace('{count}',pool.length));
+    }
+    return{pool,recipe,index,epoch:edition.slot,salt:edition.salt};
+  }
   function resolve(editions,code){
-    const decoded=decode(code);if(decoded.protocol===1)return{...V1.resolve(editions,code),protocol:1};
+    const language=editions[0]?.language||'ca';
+    const normalized=normalize(code);
+    const prefix=language==='ca'?'':language.toUpperCase();
+    if(prefix&&(!normalized.startsWith(prefix)||normalized.length!==prefix.length+9))throw new Error('Escriu el codi amb el prefix de la llengua.');
+    const decoded=decode(normalized.slice(prefix.length));if(decoded.protocol===1)return{...V1.resolve(editions,code),protocol:1};
     const edition=editions.find(e=>e.slot===decoded.epoch);if(!edition)throw new Error('Aquest codi pertany a una edició encara no disponible.');
-    const prepared=V1.prepare(edition,decoded.recipe);
-    return{...decoded,language:edition.language,catalogue:edition.catalog.revision,entries:V1.draw(prepared,decoded.nonce)};
+    let recipe=decoded.recipe;
+    if(edition.profile.seedFocuses&&recipe.mode==='words'){
+      recipe={...recipe,tags:recipe.tags.map(tag=>edition.profile.seedFocuses[V1.WORD_FOCUSES.indexOf(tag)])};
+    }
+    const prepared=prepare(edition,recipe);
+    return{...decoded,code:prefix?prefix+'-'+decoded.code:decoded.code,recipe,language:edition.language,catalogue:edition.catalog.revision,entries:V1.draw(prepared,decoded.nonce)};
   }
   function request(prepared,ids){
     const required=[...new Set(ids)];if(required.length>5)throw new Error('Pots demanar fins a cinc mots obligatoris.');
@@ -86,6 +109,7 @@
     }
     return result(prepared,start,maxAttempts,attempts);
   }
-  const api={...V1,PROTOCOL:2,V1,PREFIX_SPACE,VARIANTS,EPOCHS,SPACE:PREFIX_SPACE*VARIANTS,format,encode,decode,resolve,matcher,searchSync,search};
+  const api={...V1,PROTOCOL:2,V1,PREFIX_SPACE,VARIANTS,EPOCHS,SPACE:PREFIX_SPACE*VARIANTS,format,encode,decode,prepare,resolve,matcher,searchSync,search};
+  api.forLanguage=id=>id==='ca'?api:{...api,encode:options=>id.toUpperCase()+'-'+encode(options)};
   root.PlecSeeds=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof window==='undefined'?globalThis:window);

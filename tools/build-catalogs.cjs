@@ -4,6 +4,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const { assertStableCatalogue } = require('./catalog-policy.cjs');
 const { publishOutputs } = require('./generated-output.cjs');
+const { localizeHTML } = require('./localize-html.cjs');
 const Brand = require('../brand.js');
 const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root, name), 'utf8');
@@ -27,6 +28,11 @@ function prepareLanguage(item) {
   const validationPath = path.posix.dirname(profile.catalogue) + '/validation.json';
   assertStableCatalogue(source, read(profile.catalogue), fs.existsSync(path.join(root,validationPath)) ? json(validationPath) : null);
   if (profile.id !== item.id || source.language !== item.id) throw new Error('Language mismatch');
+  if (profile.seedFocuses && (profile.seedFocuses.length !== 12 || new Set(profile.seedFocuses).size !== 12 ||
+      source.categories.some(category => !profile.seedFocuses.includes(category.id)) ||
+      source.entries.some(entry => !entry.tags.length || entry.tags.some(tag => !profile.seedFocuses.includes(tag))))) {
+    throw new Error('Invalid locale seed focuses: ' + item.id);
+  }
   const fingerprint = hash({ source, profile });
   const revision = source.edition + '.' + fingerprint.slice(0, 16);
   const catalog = { ...source, fingerprint, revision };
@@ -100,20 +106,39 @@ for (const {item,profile,source,revision,catalog,base,collator,seedRegistry,basi
   if(basicWords)emit(base+'/vocabulari-basic.txt',basicWords.join('\n')+'\n');
   // Every locale gets a real directory entry point; project subpaths and file:// work.
   const prefix = '../'.repeat(item.path.split('/').filter(Boolean).length);
-  let html = read(profile.template).replace('__MANAGEMENT_PANEL__',read('templates/dictation-management.html')).replaceAll('__PLEC_MARK__',Brand.svg('mark')).replaceAll('__PLEC_TAGLINE__',Brand.svg('tagline')).replace('__PRONUNCIATION_PANEL__',read('templates/pronunciation-panel.html')).replace('__ANALYTICS_PANEL__',read('templates/analytics-panel.html'));
+  const localeDir=path.posix.dirname(item.config);
+  const messagesPath=localeDir+'/html.json',runtimePath=localeDir+'/messages.json';
+  const messages=fs.existsSync(path.join(root,messagesPath))?json(messagesPath):null;
+  const runtime=fs.existsSync(path.join(root,runtimePath))?json(runtimePath):null;
+  if(runtime)emit(localeDir+'/messages.js',bundle('PlecMessages',runtime));
+  const languageLinks=manifest.languages.map(locale=>
+    '<a href="'+locale.path+'" lang="'+locale.id+'" hreflang="'+locale.id+'"'+(locale.id===item.id?' aria-current="page"':'')+'>'+locale.name+'</a>'
+  ).join('');
+  const selector='<div class="language-switch"><button type="button" class="icon-button" id="language-toggle" aria-label="Idioma" title="Idioma" aria-expanded="false" aria-controls="language-options"><span data-icon="languages"></span></button><nav id="language-options" class="language-options" aria-label="Idioma" hidden>'+languageLinks+'</nav></div>';
+  function localize(markup){
+    if(!messages)return markup;
+    return localizeHTML(markup,messages)
+      .replace('<html lang="ca">','<html lang="'+profile.uiLanguage+'">')
+      .replaceAll('https://oiec.iec.cat/','https://www.rae.es/ortograf%C3%ADa/')
+      .replaceAll('https://dlc.iec.cat/','https://dle.rae.es/')
+      .replaceAll('https://github.com/aaronFortuno/plec-dictats/tree/main/audio/pronunciation/ca','https://github.com/aaronFortuno/plec-dictats/tree/main/'+base);
+  }
+  let html = localize(read(profile.template).replace('__MANAGEMENT_PANEL__',read('templates/dictation-management.html')).replace('__PRONUNCIATION_PANEL__',read('templates/pronunciation-panel.html')).replace('__ANALYTICS_PANEL__',read('templates/analytics-panel.html')));
+  html=html.replace('__LANGUAGE_SELECTOR__',selector).replaceAll('__PLEC_MARK__',Brand.svg('mark')).replaceAll('__PLEC_TAGLINE__',messages?messages['Escolta. Escriu. Desplega.']:Brand.svg('tagline'));
   const assetVersion = /src="catalog\.js(\?[^\"]*)"/.exec(html)?.[1] || '';
   html = html.replace(/((?:src|href)=")(?!https?:|lightning:|#|\.\/)([^\"]+)/g, (_, start, target) => start + prefix + target);
   html = html.replace('catalog.js' + assetVersion, base + '/catalog.js' + assetVersion);
-  html = html.replace('<script defer src="' + prefix + base, '<script defer src="' + prefix + 'locales/manifest.js' + assetVersion + '"></script>\n  <script defer src="' + prefix + path.posix.dirname(item.config) + '/config.js' + assetVersion + '"></script>\n  <script defer src="' + prefix + 'language.js' + assetVersion + '"></script>\n  <script defer src="' + prefix + base);
+  html = html.replace('catalogs/ca/editions/index.js',base+'/editions/index.js');
+  html = html.replace('<script defer src="' + prefix + base, '<script defer src="' + prefix + 'locales/manifest.js' + assetVersion + '"></script>\n  <script defer src="' + prefix + localeDir + '/config.js' + assetVersion + '"></script>\n  '+(runtime?'<script defer src="'+prefix+localeDir+'/messages.js'+assetVersion+'"></script>\n  ':'')+'<script defer src="' + prefix + 'language.js' + assetVersion + '"></script>\n  <script defer src="' + prefix + base);
   emit(item.path + 'index.html', html);
   // Student entry point shares the immutable registry, without the composer or PDF.
-  let student = read('templates/dictation.html')
-    .replaceAll('__PLEC_MARK__',Brand.svg('mark'))
+  let student = localize(read('templates/dictation.html')
     .replace('__ANALYTICS_PANEL__', read('templates/analytics-panel.html'))
-    .replace('__CONFIG__', path.posix.dirname(item.config) + '/config.js?v=1.30.0')
-    .replace('__REGISTRY__', base + '/editions/index.js?v=1.30.0')
+    .replace('__CONFIG__', localeDir + '/config.js?v=1.31.0')
+    .replace('__REGISTRY__', base + '/editions/index.js?v=1.31.0')
     .replaceAll('__COMPOSER__', item.path)
-    .replace('<html lang="ca">', '<html lang="' + profile.uiLanguage + '">');
+    .replace('__LOCALE_MESSAGES__',runtime?'<script defer src="'+localeDir+'/messages.js?v=1.31.0"></script>':''))
+    .replaceAll('__PLEC_MARK__',Brand.svg('mark'));
   student = student.replace(/((?:src|href)=")(?!https?:|lightning:|#|\.\/)([^\"]+)/g, (_, start, target) => start + prefix + '../' + target);
   emit(item.path + 'dictat/index.html', student);
   if(item.id==='ca'){

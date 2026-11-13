@@ -12,8 +12,7 @@
     return String(value).toUpperCase().replace(/[\s-]/g, '');
   }
   function dictationURL(base, { language: id, catalogue, seed, variety }) {
-    const pack = language(id), code = normalizeCode(seed);
-    if (!/^(?:[ABCDEFGHJKMNPQRSTVWXYZ2-9]{6}|[ABCDEFGHJKMNPQRSTVWXYZ2-9]{9})$/.test(code)) throw new Error('Codi no vàlid.');
+    const pack = language(id), code = site.normalizeSeed(seed,id);
     if (!catalogue || !catalogue.startsWith(id + '-')) throw new Error('El catàleg no correspon a la llengua.');
     const url = new URL(pack.path + 'dictat/', new URL('./', base));
     url.search = new URLSearchParams({ seed: code, catalogue }).toString();
@@ -32,6 +31,10 @@
   }
   function publicDictationURL(options){language(options.language);return site.dictationURL(options);}
   function publicComposerURL(options){language(options.language);return site.composerURL(options);}
-  root.PlecLanguageTools = { language, normalizeCode, dictationURL, publicDictationURL, publicComposerURL, assertImportLanguage, savedState };
+  function text(message,values={}){
+    const translated=root.PlecMessages?.[message]??message;
+    return translated.replace(/\{(\w+)\}/g,(placeholder,key)=>Object.hasOwn(values,key)?String(values[key]):placeholder);
+  }
+  root.PlecLanguageTools = { language, normalizeCode, dictationURL, publicDictationURL, publicComposerURL, assertImportLanguage, savedState, text };
   if (typeof module !== 'undefined') module.exports = root.PlecLanguageTools;
 })(typeof window === 'undefined' ? globalThis : window);

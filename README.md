@@ -18,6 +18,10 @@ El lateral esquerre conté els filtres i la configuració del full; el dret agru
 
 El catàleg mostra en una mateixa fila el mot, els focus i les columnes IPA: català central amb Alba, valencià amb Enric i mallorquí amb àudio en pausa. Funciona tant amb paraules com amb pseudoparaules. Prem la IPA o l’altaveu de la columna corresponent per escoltar; la bandera permet notificar un problema concret. Es carrega una inicial cada vegada, amb A per defecte, cerca sobre tot el banc filtrat i navegació per enllaços **A | B | C…**. Només es desplaça el llistat: filtres i descàrregues es mantenen fixos, i la continuació de lletra és al final del llistat.
 
+**Llista filtrada · PDF** exporta a A4 tots els resultats de la cerca, el nivell i el focus actius, de la A a la Z. **Per focus · PDF** agrupa aquests resultats per apartat i repeteix un mot quan treballa més d’un focus. Cada focus comença en una pàgina nova. Per imprimir la selecció de classe, activa **Vocabulari bàsic** i deixa oberts els altres filtres.
+
+La [primera edició castellana](docs/CASTELLA.md) té la ruta `/es/`. Comparteix el preparador, els fulls i l’exportació del catàleg amb la versió catalana, amb 350 mots bàsics i focus propis. Els codis castellans comencen per `ES-`. Els àudios estan pendents.
+
 ## Preparar els àudios
 
 El mode oral ja disposa de reproductor local; la resposta digital és treball pendent. Estan publicats els 3.299 mots i les 96 pseudoparaules centrals amb Alba, els mateixos recomptes valencians amb Enric i cinc locucions d’instruccions. **La revisió auditiva individual continua oberta.** El web comprova la cobertura segons el tipus d’elements i la varietat i no permet començar un dictat sense els àudios necessaris. Cap credencial ni petició Azure arriba al navegador.
@@ -172,7 +176,7 @@ El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `buil
 
 ## Versions
 
-La interfície actual és **1.26**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.31**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 

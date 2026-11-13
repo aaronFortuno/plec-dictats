@@ -1,0 +1,13 @@
+{
+  "current": 0,
+  "basic": 0,
+  "basicWordCount": 350,
+  "editions": [
+    {
+      "slot": 0,
+      "file": "seed-1-basic.json",
+      "sha256": "49fef5708fd5c3147c83e74795c33f43b3f738ef6dc5d724ba902c5485177793",
+      "revision": "es-2026-01-basic.fd9610d83762e2c1"
+    }
+  ]
+}

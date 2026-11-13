@@ -11,7 +11,8 @@
     html.dataset.themePreference=preference;
     const dark=html.dataset.theme==='dark';
     document.querySelectorAll('[data-theme-toggle]').forEach(button=>{
-      const label=dark?'Activa el tema clar':'Activa el tema fosc';
+      const message=dark?'Activa el tema clar':'Activa el tema fosc';
+      const label=window.PlecLanguageTools?.text(message) ?? message;
       button.setAttribute('aria-label',label);button.title=label;button.setAttribute('aria-pressed',String(dark));
       const icon=button.querySelector('[data-theme-icon]');
       if(icon&&window.PlecIcons){
