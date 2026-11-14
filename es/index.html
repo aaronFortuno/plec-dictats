@@ -9,21 +9,21 @@
   <script src="../theme.js?v=1.32.0"></script>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css?v=1.32.0">
-  <link rel="stylesheet" href="../workspace.css?v=1.32.0">
-  <link rel="stylesheet" href="../seeds.css?v=1.32.0">
+  <link rel="stylesheet" href="../workspace.css?v=1.32.1">
+  <link rel="stylesheet" href="../seeds.css?v=1.32.1">
   <link rel="stylesheet" href="../catalog-browser.css?v=1.32.0">
   <link rel="stylesheet" href="../pronunciations.css?v=1.32.0">
-  <link rel="stylesheet" href="../analytics.css?v=1.32.0">
-  <link rel="stylesheet" href="../theme.css?v=1.32.0">
+  <link rel="stylesheet" href="../analytics.css?v=1.32.1">
+  <link rel="stylesheet" href="../theme.css?v=1.32.1">
   <link rel="stylesheet" href="../workspace-layout.css?v=1.32.0">
   <script defer src="../site-links.js?v=1.32.0"></script>
   <script defer src="../analytics.js?v=1.32.0"></script>
   <script defer src="../audio-varieties.js?v=1.32.0"></script>
-  <script defer src="../locales/manifest.js?v=1.32.0"></script>
-  <script defer src="../locales/es/config.js?v=1.32.0"></script>
-  <script defer src="../locales/es/messages.js?v=1.32.0"></script>
-  <script defer src="../language.js?v=1.32.0"></script>
-  <script defer src="../catalogs/es/catalog.js?v=1.32.0"></script>
+  <script defer src="../locales/manifest.js?v=1.32.1"></script>
+  <script defer src="../locales/es/config.js?v=1.32.1"></script>
+  <script defer src="../locales/es/messages.js?v=1.32.1"></script>
+  <script defer src="../language.js?v=1.32.1"></script>
+  <script defer src="../catalogs/es/catalog.js?v=1.32.1"></script>
   <script defer src="../catalogs/es/editions/index.js?v=1.32.0"></script>
   <script defer src="../seeds.js?v=1.32.0"></script>
   <script defer src="../seeds-v2.js?v=1.32.0"></script>
@@ -43,7 +43,7 @@
   <script defer src="../catalog-resources.js?v=1.32.0"></script>
   <script defer src="../pronunciations.js?v=1.32.0"></script>
   <script defer src="../composer-search.js?v=1.32.0"></script>
-  <script defer src="../app.js?v=1.32.0"></script>
+  <script defer src="../app.js?v=1.32.1"></script>
   <script defer src="../workspace-panels.js?v=1.32.0"></script>
 </head>
 <body>
@@ -54,8 +54,8 @@
     <div class="bank-summary" aria-label="Contenido del banco"><span><b id="word-total">—</b> palabras</span><i></i><span><b id="pseudo-total">—</b> pseudopalabras</span></div>
     <nav class="header-tools" aria-label="Herramientas"><a class="text-button dictation-nav" title="Accede al modo dictado e introduce un código" href="./dictat/"><span data-icon="headphones"></span> Modo dictado</a><button class="text-button" id="catalog-open"><span data-icon="book-open"></span> El catálogo</button><button class="text-button" id="help-open"><span data-icon="circle-question-mark"></span> Cómo funciona</button></nav>
     <div class="header-actions">
-      <div class="language-switch"><button type="button" class="icon-button" id="language-toggle" aria-label="Idioma" title="Idioma" aria-expanded="false" aria-controls="language-options"><span data-icon="languages"></span></button><nav id="language-options" class="language-options" aria-label="Idioma" hidden><a href="../ca/" lang="ca" hreflang="ca">Català</a><a href="../es/" lang="es" hreflang="es" aria-current="page">Español</a></nav></div>
-      <button type="button" class="icon-button theme-toggle" data-theme-toggle data-theme-control aria-label="Activar tema oscuro" title="Activar tema oscuro" aria-pressed="false"><span data-theme-icon data-icon="moon"></span></button>
+      <div class="language-switch"><button type="button" class="icon-button header-icon" id="language-toggle" aria-label="Idioma" title="Idioma" aria-expanded="false" aria-controls="language-options"><span data-icon="languages"></span></button><nav id="language-options" class="language-options" aria-label="Idioma" hidden><a href="../ca/" lang="ca" hreflang="ca">Català</a><a href="../es/" lang="es" hreflang="es" aria-current="page">Español</a></nav></div>
+      <button type="button" class="icon-button header-icon theme-toggle" data-theme-toggle data-theme-control aria-label="Activar tema oscuro" title="Activar tema oscuro" aria-pressed="false"><span data-theme-icon data-icon="moon"></span></button>
     </div>
   </header>
   <main class="app-main">
@@ -82,8 +82,12 @@
     <section class="seed-toolbar" aria-labelledby="seed-management-heading">
       <h2 id="seed-management-heading">Tu hoja</h2>
       <div class="seed-identity">
-        <div class="seed-label-row"><span>Código del dictado · <span id="seed-language">ES</span></span><button class="icon-button code-action" id="copy-link" aria-label="Copiar el enlace de la hoja" title="Compartir el enlace para recuperar esta hoja"><span data-icon="share-2"></span></button></div>
-        <div class="seed-code-row"><output id="seed-code" aria-live="polite">—</output><button class="icon-button code-action" id="copy-code" aria-label="Copiar el código del dictado" title="Copiar el código"><span data-icon="copy"></span></button></div>
+        <span class="seed-label">Código del dictado · <span id="seed-language">ES</span></span>
+        <div class="seed-code-row">
+          <output id="seed-code" aria-live="polite">—</output>
+          <button class="icon-button code-action" id="copy-code" aria-label="Copiar el código del dictado" title="Copiar el código"><span data-icon="copy"></span></button>
+          <button class="icon-button code-action" id="copy-link" aria-label="Copiar el enlace de la hoja en el preparador" title="Copiar el enlace de la hoja en el preparador"><span data-icon="share-2"></span></button>
+        </div>
       </div>
       <button class="button primary" id="download-pdf"><span data-icon="download"></span> Descargar el PDF</button>
       <button class="button secondary" id="new-dictation"><span data-icon="refresh-cw"></span> Nuevo dictado</button>
@@ -93,7 +97,7 @@
       <h2 id="oral-management-heading">Dictado oral</h2>
       <div class="pronunciation-setting"><label for="pronunciation-variety">Pronunciación</label><select id="pronunciation-variety"><option value="central">Català central</option><option value="valencia">Valencià</option></select></div>
       <button class="button secondary" id="open-student"><span data-icon="headphones"></span> Empezar el dictado</button>
-      <button class="small-link" id="copy-student-link" title="Copiar el enlace del dictado oral"><span data-icon="share-2"></span> Compartir el dictado oral</button>
+      <button class="small-link" id="copy-student-link" title="Copiar el enlace del dictado oral">Copiar el enlace para el alumnado</button>
     </section>
   </div>
 </aside>
@@ -102,7 +106,7 @@
 
 
   </main>
-  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurso abierto para escuchar, escribir y aprender.</p><p class="umbrella-project">Un proyecto de <a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacidad</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el proyecto · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versión 1.32. Abrir el historial de cambios">v1.32</button></span></footer>
+  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurso abierto para escuchar, escribir y aprender.</p><p class="umbrella-project">Un proyecto de <a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacidad</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el proyecto · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versión 1.32.1. Abrir el historial de cambios">v1.32.1</button></span></footer>
   <div id="status" class="toast" role="status" aria-live="polite"></div>
   <dialog id="catalog-dialog" aria-labelledby="catalog-title">
     <div class="dialog-head"><h2 id="catalog-title">El catálogo</h2><button class="icon-button" data-close aria-label="Cerrar el catálogo"><span data-icon="x"></span></button></div>

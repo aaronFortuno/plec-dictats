@@ -103,10 +103,23 @@ async function main() {
     await page.keyboard.press('Escape');
     await page.click('#workspace-toggle-config');
     assert.equal(await page.locator('#workspace-toggle-config').getAttribute('aria-expanded'), 'true');
+    await page.click('#workspace-toggle-config');
+    await page.click('#workspace-toggle-management');
+    assert.equal(await page.locator('#copy-link').getAttribute('aria-label'), 'Copiar el enlace de la hoja en el preparador');
+    assert.equal(await page.locator('#copy-student-link').textContent(), 'Copiar el enlace para el alumnado');
+    assert(await page.locator('.seed-code-row').evaluate(row => {
+      const code = document.getElementById('seed-code');
+      const copy = document.getElementById('copy-code');
+      const share = document.getElementById('copy-link');
+      return code.scrollWidth <= code.clientWidth &&
+        copy.getBoundingClientRect().right < share.getBoundingClientRect().left &&
+        share.getBoundingClientRect().right <= row.getBoundingClientRect().right;
+    }), 'The full Spanish code and both icons fit at 320px');
 
     await page.goto(origin + '/es/dictat/?seed=' + code);
     await page.waitForSelector('#ready-panel:not([hidden])');
     assert.equal(await page.locator('#dictation-variety').textContent(),'Español de España · Elvira');
+    assert.equal(await page.locator('[data-analytics-settings]').count(),0);
     assert.match(await page.locator('#instructions').textContent(), /12 palabras/);
     assert.equal(new URL(page.url()).searchParams.get('variety'),'es-es');
     await page.evaluate(()=>{ document.querySelector('#focus-root').requestFullscreen=()=>Promise.reject(Error('Fullscreen unavailable in test')); });

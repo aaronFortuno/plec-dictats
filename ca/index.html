@@ -9,20 +9,20 @@
   <script src="../theme.js?v=1.32.0"></script>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css?v=1.32.0">
-  <link rel="stylesheet" href="../workspace.css?v=1.32.0">
-  <link rel="stylesheet" href="../seeds.css?v=1.32.0">
+  <link rel="stylesheet" href="../workspace.css?v=1.32.1">
+  <link rel="stylesheet" href="../seeds.css?v=1.32.1">
   <link rel="stylesheet" href="../catalog-browser.css?v=1.32.0">
   <link rel="stylesheet" href="../pronunciations.css?v=1.32.0">
-  <link rel="stylesheet" href="../analytics.css?v=1.32.0">
-  <link rel="stylesheet" href="../theme.css?v=1.32.0">
+  <link rel="stylesheet" href="../analytics.css?v=1.32.1">
+  <link rel="stylesheet" href="../theme.css?v=1.32.1">
   <link rel="stylesheet" href="../workspace-layout.css?v=1.32.0">
   <script defer src="../site-links.js?v=1.32.0"></script>
   <script defer src="../analytics.js?v=1.32.0"></script>
   <script defer src="../audio-varieties.js?v=1.32.0"></script>
-  <script defer src="../locales/manifest.js?v=1.32.0"></script>
-  <script defer src="../locales/ca/config.js?v=1.32.0"></script>
-  <script defer src="../language.js?v=1.32.0"></script>
-  <script defer src="../catalogs/ca/catalog.js?v=1.32.0"></script>
+  <script defer src="../locales/manifest.js?v=1.32.1"></script>
+  <script defer src="../locales/ca/config.js?v=1.32.1"></script>
+  <script defer src="../language.js?v=1.32.1"></script>
+  <script defer src="../catalogs/ca/catalog.js?v=1.32.1"></script>
   <script defer src="../catalogs/ca/editions/index.js?v=1.32.0"></script>
   <script defer src="../seeds.js?v=1.32.0"></script>
   <script defer src="../seeds-v2.js?v=1.32.0"></script>
@@ -42,7 +42,7 @@
   <script defer src="../catalog-resources.js?v=1.32.0"></script>
   <script defer src="../pronunciations.js?v=1.32.0"></script>
   <script defer src="../composer-search.js?v=1.32.0"></script>
-  <script defer src="../app.js?v=1.32.0"></script>
+  <script defer src="../app.js?v=1.32.1"></script>
   <script defer src="../workspace-panels.js?v=1.32.0"></script>
 </head>
 <body>
@@ -53,8 +53,8 @@
     <div class="bank-summary" aria-label="Contingut del banc"><span><b id="word-total">—</b> paraules</span><i></i><span><b id="pseudo-total">—</b> pseudoparaules</span></div>
     <nav class="header-tools" aria-label="Eines"><a class="text-button dictation-nav" title="Accedeix al mode dictat i introdueix un codi" href="./dictat/"><span data-icon="headphones"></span> Mode dictat</a><button class="text-button" id="catalog-open"><span data-icon="book-open"></span> El catàleg</button><button class="text-button" id="help-open"><span data-icon="circle-question-mark"></span> Com funciona</button></nav>
     <div class="header-actions">
-      <div class="language-switch"><button type="button" class="icon-button" id="language-toggle" aria-label="Idioma" title="Idioma" aria-expanded="false" aria-controls="language-options"><span data-icon="languages"></span></button><nav id="language-options" class="language-options" aria-label="Idioma" hidden><a href="../ca/" lang="ca" hreflang="ca" aria-current="page">Català</a><a href="../es/" lang="es" hreflang="es">Español</a></nav></div>
-      <button type="button" class="icon-button theme-toggle" data-theme-toggle data-theme-control aria-label="Activa el tema fosc" title="Activa el tema fosc" aria-pressed="false"><span data-theme-icon data-icon="moon"></span></button>
+      <div class="language-switch"><button type="button" class="icon-button header-icon" id="language-toggle" aria-label="Idioma" title="Idioma" aria-expanded="false" aria-controls="language-options"><span data-icon="languages"></span></button><nav id="language-options" class="language-options" aria-label="Idioma" hidden><a href="../ca/" lang="ca" hreflang="ca" aria-current="page">Català</a><a href="../es/" lang="es" hreflang="es">Español</a></nav></div>
+      <button type="button" class="icon-button header-icon theme-toggle" data-theme-toggle data-theme-control aria-label="Activa el tema fosc" title="Activa el tema fosc" aria-pressed="false"><span data-theme-icon data-icon="moon"></span></button>
     </div>
   </header>
   <main class="app-main">
@@ -81,8 +81,12 @@
     <section class="seed-toolbar" aria-labelledby="seed-management-heading">
       <h2 id="seed-management-heading">El teu full</h2>
       <div class="seed-identity">
-        <div class="seed-label-row"><span>Codi del dictat · <span id="seed-language">CA</span></span><button class="icon-button code-action" id="copy-link" aria-label="Copia l’enllaç del full i del configurador" title="Comparteix el full: obre aquest dictat al configurador"><span data-icon="share-2"></span></button></div>
-        <div class="seed-code-row"><output id="seed-code" aria-live="polite">—</output><button class="icon-button code-action" id="copy-code" aria-label="Copia el codi del dictat" title="Copia el codi"><span data-icon="copy"></span></button></div>
+        <span class="seed-label">Codi del dictat · <span id="seed-language">CA</span></span>
+        <div class="seed-code-row">
+          <output id="seed-code" aria-live="polite">—</output>
+          <button class="icon-button code-action" id="copy-code" aria-label="Copia el codi del dictat" title="Copia el codi"><span data-icon="copy"></span></button>
+          <button class="icon-button code-action" id="copy-link" aria-label="Copia l’enllaç del full al preparador" title="Copia l’enllaç del full al preparador"><span data-icon="share-2"></span></button>
+        </div>
       </div>
       <button class="button primary" id="download-pdf"><span data-icon="download"></span> Descarrega el PDF</button>
       <button class="button secondary" id="new-dictation"><span data-icon="refresh-cw"></span> Nou dictat</button>
@@ -92,7 +96,7 @@
       <h2 id="oral-management-heading">Dictat oral</h2>
       <div class="pronunciation-setting"><label for="pronunciation-variety">Pronunciació</label><select id="pronunciation-variety"><option value="central">Català central</option><option value="valencia">Valencià</option></select></div>
       <button class="button secondary" id="open-student"><span data-icon="headphones"></span> Comença el dictat</button>
-      <button class="small-link" id="copy-student-link" title="Copia l’enllaç que obre aquest dictat per escoltar-lo"><span data-icon="share-2"></span> Comparteix el dictat oral</button>
+      <button class="small-link" id="copy-student-link" title="Copia l’enllaç que obre aquest dictat per escoltar-lo">Copia l’enllaç per a l’alumnat</button>
     </section>
   </div>
 </aside>
@@ -101,7 +105,7 @@
 
 
   </main>
-  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurs obert per escoltar, escriure i aprendre.</p><p class="umbrella-project">Un projecte d’<a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacitat</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el projecte · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.32: obre l’historial de canvis">v1.32</button></span></footer>
+  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurs obert per escoltar, escriure i aprendre.</p><p class="umbrella-project">Un projecte d’<a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacitat</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el projecte · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.32.1: obre l’historial de canvis">v1.32.1</button></span></footer>
   <div id="status" class="toast" role="status" aria-live="polite"></div>
   <dialog id="catalog-dialog" aria-labelledby="catalog-title">
     <div class="dialog-head"><h2 id="catalog-title">El catàleg</h2><button class="icon-button" data-close aria-label="Tanca el catàleg"><span data-icon="x"></span></button></div>

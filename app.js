@@ -250,6 +250,7 @@
     }
   });
   const releases = [
+    ['1.32.1', '2026-11-14', [t('Botons de tema i idioma amb el mateix estil, pantalla de dictat més neta i enllaços del full i de l’alumnat identificats al lateral.')]],
     ['1.32', '2026-11-13', [t('Dictat oral en castellà amb els 350 mots bàsics enregistrats amb Elvira.')]],
     ['1.31', '2026-11-13', [t('Primera versió en castellà amb 350 mots bàsics i PDF de vocabulari en ordre alfabètic o per focus.')]],
     ['1.30.2', '2026-11-13', ['El catàleg permet descarregar en PDF A4 la llista alfabètica que compleix els filtres, inclosa la selecció de vocabulari bàsic.']],
@@ -292,7 +293,7 @@
     ['1.0', '2026-10-23', ['Primera versió: catàleg, tries, mots propis i exportació de PDF.']]
   ];
   const releaseDate = new Intl.DateTimeFormat(L.locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  $('changelog-list').innerHTML = (spanish?releases.slice(0,2):releases).map(([version, date, notes]) => {
+  $('changelog-list').innerHTML = (spanish?releases.slice(0,3):releases).map(([version, date, notes]) => {
     const id = 'release-' + version.replaceAll('.', '-');
     return `<section class="release" aria-labelledby="${id}"><div><h3 id="${id}">${version}</h3><time datetime="${date}">${escape(releaseDate.format(new Date(date + 'T00:00:00Z')))}</time></div><p>${escape(notes.join(' '))}</p></section>`;
   }).join('');

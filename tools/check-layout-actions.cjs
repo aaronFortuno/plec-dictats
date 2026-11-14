@@ -8,6 +8,22 @@ const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLE
  assert.equal(await p.locator('#teacher-pdf').count(),0);assert.equal(await p.locator('#download-pdf.primary').count(),1);assert.equal(await p.locator('#open-student.primary').count(),0);
  const order=await p.evaluate(()=>{const r=id=>document.getElementById(id).getBoundingClientRect();return [r('seed-code').bottom,r('download-pdf').top,r('new-dictation').top,r('recover-form').top,r('oral-management-heading').top];});assert(order.every((v,i)=>i===0||v>order[i-1]));
  assert.equal(await p.locator('#copy-code').evaluate(e=>e.parentElement.querySelector('output')?.id),'seed-code');
+ assert.equal(await p.locator('#copy-code + #copy-link').count(),1);
+ assert.equal(await p.locator('#copy-student-link').textContent(),'Copia l’enllaç per a l’alumnat');
+ assert.equal(await p.locator('.management [data-icon="share-2"]').count(),1);
+ const iconStyle=selector=>p.locator(selector).evaluate(el=>{
+  const css=getComputedStyle(el);
+  return {width:css.width,height:css.height,border:css.borderWidth,radius:css.borderRadius,background:css.backgroundColor,color:css.color};
+ });
+ const themeControl='[data-theme-toggle]';
+ const idleIcon=await iconStyle('#language-toggle');
+ assert.deepEqual(await iconStyle(themeControl),idleIcon);
+ assert.equal(idleIcon.border,'0px');
+ assert.equal(idleIcon.background,'rgba(0, 0, 0, 0)');
+ await p.locator(themeControl).hover();
+ await p.waitForFunction(()=>getComputedStyle(document.querySelector('[data-theme-toggle]')).backgroundColor!=='rgba(0, 0, 0, 0)');
+ await p.locator('#language-toggle').hover();
+ await p.mouse.move(0,0);
  const seed=await p.locator('#seed-code').textContent();await p.selectOption('#pronunciation-variety','valencia');
  await p.click('#copy-code');assert.equal(await p.evaluate(()=>window.testClipboard),seed);
  for(const [id,pathname] of [['copy-link','/ca/'],['copy-student-link','/ca/dictat/']]){await p.click('#'+id);const u=new URL(await p.evaluate(()=>window.testClipboard));assert.equal(u.origin,'https://plec.ortogra.fi');assert.equal(u.pathname,pathname);assert.equal(u.searchParams.get('seed'),seed.replace('-',''));assert.equal(u.searchParams.get('variety'),'valencia');}
@@ -30,6 +46,9 @@ const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLE
   if(width===390)await p.screenshot({path:'output/layout126-mobile.png'});
   if(width<1200){await p.locator('.management .workspace-drawer-close').click();await p.waitForTimeout(240);}
  }
+ await p.mouse.move(0,0);
  await p.goto('http://127.0.0.1:4176/ca/dictat/');await p.waitForSelector('.d-brand .brand-mark');assert.equal(await p.locator('.d-brand .brand-mark path').count(),await p.locator('.d-brand path').count());
+ assert.equal(await p.locator('[data-analytics-settings], #analytics-dialog').count(),0);
+ assert.deepEqual(await iconStyle(themeControl),idleIcon);
  assert.deepEqual(errors,[]);console.log('Unified brand geometry/equal caption width, PDF download, primary/secondary grouping, both share destinations, question-only helper, teacher-guide retirement, help typography and responsive code actions passed.');
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1);});

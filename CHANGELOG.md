@@ -1,5 +1,9 @@
 # Historial
 
+## 1.32.1 · 14 de novembre de 2026
+
+- Capçalera del dictat sense l’accés a Privacitat i botó de tema amb el mateix estil que el d’idioma. Al preparador, l’enllaç del full és al costat del codi i l’enllaç per a l’alumnat és a la secció de dictat oral.
+
 ## 1.32 · 13 de novembre de 2026
 
 - Dictat oral en castellà amb els 350 mots bàsics, disponible des del codi, el QR o l’enllaç. Les gravacions d’«Español de España · Elvira» també es poden escoltar al catàleg. El paquet està pendent de revisió auditiva individual.

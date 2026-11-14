@@ -114,7 +114,7 @@ for (const {item,profile,source,revision,catalog,base,collator,seedRegistry,basi
   const languageLinks=manifest.languages.map(locale=>
     '<a href="'+locale.path+'" lang="'+locale.id+'" hreflang="'+locale.id+'"'+(locale.id===item.id?' aria-current="page"':'')+'>'+locale.name+'</a>'
   ).join('');
-  const selector='<div class="language-switch"><button type="button" class="icon-button" id="language-toggle" aria-label="Idioma" title="Idioma" aria-expanded="false" aria-controls="language-options"><span data-icon="languages"></span></button><nav id="language-options" class="language-options" aria-label="Idioma" hidden>'+languageLinks+'</nav></div>';
+  const selector='<div class="language-switch"><button type="button" class="icon-button header-icon" id="language-toggle" aria-label="Idioma" title="Idioma" aria-expanded="false" aria-controls="language-options"><span data-icon="languages"></span></button><nav id="language-options" class="language-options" aria-label="Idioma" hidden>'+languageLinks+'</nav></div>';
   function localize(markup){
     if(!messages)return markup;
     return localizeHTML(markup,messages)
@@ -133,7 +133,6 @@ for (const {item,profile,source,revision,catalog,base,collator,seedRegistry,basi
   emit(item.path + 'index.html', html);
   // Student entry point shares the immutable registry, without the composer or PDF.
   let student = localize(read('templates/dictation.html')
-    .replace('__ANALYTICS_PANEL__', read('templates/analytics-panel.html'))
     .replace('__CONFIG__', localeDir + '/config.js?v=1.31.0')
     .replace('__REGISTRY__', base + '/editions/index.js?v=1.31.0')
     .replaceAll('__COMPOSER__', item.path)

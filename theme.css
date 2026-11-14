@@ -1,8 +1,8 @@
 :root[data-theme="dark"]{--paper:#101a17;--white:#192722;--ink:#e2e9e1;--green:#bdd7c8;--soft:#24382f;--muted:#a9b9ae;--line:#35483e;--accent:#efa58c;color-scheme:dark}
-.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:7px;border:1px solid var(--line);border-radius:50%;background:var(--white);color:var(--green);cursor:pointer;transition:background-color 220ms,color 220ms,border-color 220ms}
-.theme-toggle:hover{background:var(--soft)}
-.theme-toggle .lucide{width:19px;height:19px}
-.theme-toggle>span{display:flex}
+.header-icon{width:36px;height:36px;padding:8px;border-radius:50%;transition:background-color 220ms,color 220ms}
+.header-icon:focus-visible{background:var(--soft);color:var(--green)}
+.header-icon .lucide{width:20px;height:20px}
+.header-icon>span{display:flex}
 .d-header-actions{display:flex;gap:12px;align-items:center}
 :root[data-theme="dark"] .primary,:root[data-theme="dark"] .d-listen{background:#294f41;color:#edf4ee}
 :root[data-theme="dark"] .primary:hover:not(:disabled),:root[data-theme="dark"] .d-listen:hover:not(:disabled){background:#365f4e}
