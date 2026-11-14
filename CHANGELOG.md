@@ -2,7 +2,7 @@
 
 ## 1.34 · 14 de novembre de 2026
 
-- El catàleg castellà arriba a 3.056 mots amb 2.000 incorporacions i les transcripcions AFI corresponents. Banc editorial de 100 pseudoparaules en castellà amb focus i AFI, preparat per a la síntesi.
+- El catàleg castellà arriba a 3.056 mots amb 2.000 incorporacions, transcripcions AFI i gravacions d’Elvira. Banc editorial de 100 pseudoparaules en castellà amb focus i AFI, preparat per a la síntesi.
 
 ## 1.33 · 14 de novembre de 2026
 
