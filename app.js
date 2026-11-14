@@ -251,6 +251,7 @@
     }
   });
   const releases = [
+    ['1.35', '2026-11-14', [t('Cent pseudoparaules en castellà amb AFI i àudio d’Elvira, disponibles al catàleg i al dictat oral.')]],
     ['1.34', '2026-11-14', [t('El catàleg castellà arriba a 3.056 mots amb transcripcions AFI.')]],
     ['1.33', '2026-11-14', [t('Catàleg castellà ampliat a 1.056 mots, amb transcripcions AFI i focus en minúscules.')]],
     ['1.32.1', '2026-11-14', [t('Botons de tema i idioma amb el mateix estil, pantalla de dictat més neta i enllaços del full i de l’alumnat identificats al lateral.')]],
@@ -296,14 +297,14 @@
     ['1.0', '2026-10-23', ['Primera versió: catàleg, tries, mots propis i exportació de PDF.']]
   ];
   const releaseDate = new Intl.DateTimeFormat(L.locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  $('changelog-list').innerHTML = (spanish?releases.slice(0,5):releases).map(([version, date, notes]) => {
+  $('changelog-list').innerHTML = (spanish?releases.slice(0,6):releases).map(([version, date, notes]) => {
     const id = 'release-' + version.replaceAll('.', '-');
     return `<section class="release" aria-labelledby="${id}"><div><h3 id="${id}">${version}</h3><time datetime="${date}">${escape(releaseDate.format(new Date(date + 'T00:00:00Z')))}</time></div><p>${escape(notes.join(' '))}</p></section>`;
   }).join('');
   document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', () => window.PlecMotion.close(b.closest('dialog'))));
   document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) window.PlecMotion.close(dialog); } }));
 
-  for(const [id,mode,name] of [['export-words-text','words',spanish?'palabras':'paraules'],['export-pseudo-text','pseudo','pseudoparaules']])$(id).addEventListener('click',()=>{
+  for(const [id,mode,name] of [['export-words-text','words',spanish?'palabras':'paraules'],['export-pseudo-text','pseudo',spanish?'pseudopalabras':'pseudoparaules']])$(id).addEventListener('click',()=>{
     const text=BANK.entries.filter(e=>e.mode===mode).map(e=>e.text).sort(new Intl.Collator(L.locale,{sensitivity:'variant'}).compare).join('\n')+'\n';
     downloadBlob(new Blob([text],{type:'text/plain;charset=utf-8'}),`plec-${L.id}-${name}.txt`);
   });

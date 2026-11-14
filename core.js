@@ -179,8 +179,8 @@
     [layout.modelArea, layout.writingArea].forEach(area => line(area.x, top, area.x + area.width, top, '#aaaaaa', .18));
     layout.folds.forEach(x => line(x, 10, x, 287, '#777777', .25, true));
     if (mode === 'pseudo') {
-      text(modelX, 289, 'Model proposat: altres grafies poden', 6, false, '#555555', { maxWidth: modelWidth });
-      text(modelX, 293, 'representar el mateix so.', 6, false, '#555555');
+      text(modelX, 289, t('Model proposat: altres grafies poden'), 6, false, '#555555', { maxWidth: modelWidth });
+      text(modelX, 293, t('representar el mateix so.'), 6, false, '#555555', { maxWidth: modelWidth });
     }
     const labels = Array.isArray(focusLabels)
       ? [...new Set(focusLabels.map(l => String(l ?? '').trim()).filter(Boolean))].slice(0, 16)

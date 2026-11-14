@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "language": "es",
-  "edition": "es-2026-03-ampliacion",
+  "edition": "es-2026-04-pseudo",
   "status": "draft",
   "reviewedByTeacher": false,
-  "version": 3,
+  "version": 4,
   "categories": [
     {
       "id": "tilde",
@@ -77,6 +77,30 @@
       "label": "Formas verbales",
       "title": "Infinitivos y otras formas verbales",
       "mode": "words"
+    },
+    {
+      "id": "simples",
+      "label": "Sílabas simples",
+      "title": "Dos sílabas abiertas con una consonante y una vocal",
+      "mode": "pseudo"
+    },
+    {
+      "id": "grups",
+      "label": "Grupos consonánticos",
+      "title": "Grupos consonánticos al inicio de sílaba",
+      "mode": "pseudo"
+    },
+    {
+      "id": "pseudodigrafs",
+      "label": "Dígrafos",
+      "title": "Grafías como ch, ll, rr, qu y gu",
+      "mode": "pseudo"
+    },
+    {
+      "id": "llargues",
+      "label": "Más de dos sílabas",
+      "title": "Pseudopalabras de tres o más sílabas",
+      "mode": "pseudo"
     }
   ],
   "entries": [
@@ -35720,6 +35744,843 @@
       "tags": [
         "sin-tilde",
         "cquz"
+      ]
+    },
+    {
+      "id": "s-1q29336",
+      "text": "ametúfalo",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1m9j0iv",
+      "text": "anifedo",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-vrfru5",
+      "text": "atúmeli",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1pit1wj",
+      "text": "blapi",
+      "mode": "pseudo",
+      "tags": [
+        "grups"
+      ]
+    },
+    {
+      "id": "s-16m9ta0",
+      "text": "blapún",
+      "mode": "pseudo",
+      "tags": [
+        "grups"
+      ]
+    },
+    {
+      "id": "s-my57yu",
+      "text": "blermo",
+      "mode": "pseudo",
+      "tags": [
+        "grups"
+      ]
+    },
+    {
+      "id": "s-16k9gzz",
+      "text": "blorpe",
+      "mode": "pseudo",
+      "tags": [
+        "grups"
+      ]
+    },
+    {
+      "id": "s-7f22ux",
+      "text": "blufén",
+      "mode": "pseudo",
+      "tags": [
+        "grups"
+      ]
+    },
+    {
+      "id": "s-n5jjgz",
+      "text": "bralpo",
+      "mode": "pseudo",
+      "tags": [
+        "grups"
+      ]
+    },
+    {
+      "id": "s-1gt49mt",
+      "text": "brepu",
+      "mode": "pseudo",
+      "tags": [
+        "grups"
+      ]
+    },
+    {
+      "id": "s-1tzyn74",
+      "text": "brisno",
+      "mode": "pseudo",
+      "tags": [
+        "grups"
+      ]
+    },
+    {
+      "id": "s-1rc75ow",
+      "text": "carufemina",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1f8bhfs",
+      "text": "cemarifena",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1ngr92n",
+      "text": "chalpún",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs"
+      ]
+    },
+    {
+      "id": "s-e1z8kt",
+      "text": "chapune",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1umxbw4",
+      "text": "chemufe",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-gsj36v",
+      "text": "chifena",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-etatir",
+      "text": "chupanel",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-pc6mt9",
+      "text": "clamu",
+      "mode": "pseudo",
+      "tags": [
+        "grups"
+      ]
+    },
+    {
+      "id": "s-4s993",
+      "text": "clenufa",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1x570jd",
+      "text": "crinufa",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1j4tl6g",
+      "text": "crumapel",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-8rmxe9",
+      "text": "cumaípo",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-2fuetv",
+      "text": "dapi",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-1w2uo45",
+      "text": "dematupila",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-p8lljt",
+      "text": "deunavo",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1ixsnlu",
+      "text": "dofú",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-1uob97e",
+      "text": "drafeno",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1olvhkr",
+      "text": "dralpu",
+      "mode": "pseudo",
+      "tags": [
+        "grups"
+      ]
+    },
+    {
+      "id": "s-1ju69oz",
+      "text": "dulliche",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-4uqk27",
+      "text": "efumarela",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-7hcuxm",
+      "text": "eimúfana",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1a7etf8",
+      "text": "elupinaro",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1d0rdq4",
+      "text": "famorelu",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1eajvrt",
+      "text": "fardunela",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1wx3wjz",
+      "text": "farrume",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-46ciyc",
+      "text": "fellicú",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-11atdf5",
+      "text": "feno",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-mhtfwk",
+      "text": "fimu",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-1ldf974",
+      "text": "firmelena",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1l7xhcu",
+      "text": "firrano",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-11wyfz0",
+      "text": "flanufa",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-13ogt8",
+      "text": "flepuno",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1pmf77",
+      "text": "fota",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-glgw0h",
+      "text": "fraguno",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1up5vz8",
+      "text": "frinapu",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-196oc8a",
+      "text": "fuamepo",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1li7kzn",
+      "text": "fune",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-1l0uumf",
+      "text": "glenupo",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-d9d52n",
+      "text": "glonapi",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1j1s7qn",
+      "text": "grapune",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1vlf8k1",
+      "text": "grenís",
+      "mode": "pseudo",
+      "tags": [
+        "grups"
+      ]
+    },
+    {
+      "id": "s-fzgt2q",
+      "text": "guefina",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-50oek8",
+      "text": "guemifú",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-5eh0z4",
+      "text": "guenofa",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-63a2c1",
+      "text": "güerapi",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-c2husr",
+      "text": "guifán",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs"
+      ]
+    },
+    {
+      "id": "s-mh1tge",
+      "text": "guinufe",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1m4nkcz",
+      "text": "güirafe",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1ti8dp",
+      "text": "japi",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-ofn147",
+      "text": "jarunefa",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-pz89b7",
+      "text": "jife",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-1mp5s3i",
+      "text": "jomu",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-rczjhe",
+      "text": "lemu",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-xcuiti",
+      "text": "lioruña",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1mctmrc",
+      "text": "lozafime",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1e6wh35",
+      "text": "lufe",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-s6jjm8",
+      "text": "maludefi",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-8hgsrk",
+      "text": "medulafi",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1d49nbb",
+      "text": "mellafo",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-16bx9qw",
+      "text": "mifa",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-1d08uzu",
+      "text": "milu",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-1uecmj1",
+      "text": "mirrupo",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-17r3pla",
+      "text": "mufo",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-17ozpsk",
+      "text": "mupo",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-1nzqdur",
+      "text": "muquena",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-d8n12u",
+      "text": "naeñupo",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1f5l8l4",
+      "text": "nariúmelo",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-t2sooc",
+      "text": "narrelo",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1kp96fx",
+      "text": "nematulapo",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-flcu75",
+      "text": "nepu",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-1rdp13n",
+      "text": "nopu",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-1ml7ov",
+      "text": "nufa",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-tybcw4",
+      "text": "ñefu",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-15z4kj1",
+      "text": "omelutipá",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-188t0at",
+      "text": "pafi",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-smjxim",
+      "text": "pallifé",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1u8975h",
+      "text": "pefu",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-1ps9oj8",
+      "text": "penquejo",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1scpfmh",
+      "text": "plamufe",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-lj5kis",
+      "text": "prenifa",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-dl24om",
+      "text": "pume",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-h1i2qg",
+      "text": "quepano",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1wnggb8",
+      "text": "quilupé",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-18g1kkn",
+      "text": "rufe",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-9py2vg",
+      "text": "sepu",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-10acgr8",
+      "text": "tefú",
+      "mode": "pseudo",
+      "tags": [
+        "simples"
+      ]
+    },
+    {
+      "id": "s-1bn1m3j",
+      "text": "tralumo",
+      "mode": "pseudo",
+      "tags": [
+        "grups",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1edtp3m",
+      "text": "zarrupel",
+      "mode": "pseudo",
+      "tags": [
+        "pseudodigrafs",
+        "llargues"
+      ]
+    },
+    {
+      "id": "s-1lqkll9",
+      "text": "zefamunipo",
+      "mode": "pseudo",
+      "tags": [
+        "llargues"
       ]
     }
   ]

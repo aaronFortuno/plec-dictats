@@ -18,13 +18,13 @@
 __LOCALE_MESSAGES__
 <script defer src="__REGISTRY__"></script>
 <script defer src="seeds.js?v=1.32.0"></script>
-<script defer src="seeds-v2.js?v=1.32.0"></script>
+<script defer src="seeds-v2.js?v=1.35.0"></script>
 <script defer src="dictation-session.js?v=1.32.0"></script>
 <script defer src="icons.js?v=1.32.0"></script>
 <script defer src="motion.js?v=1.32.0"></script>
 <script defer src="audio-manifest.js?v=1.32.0"></script>
 <script defer src="audio-varieties.js?v=1.33.0"></script>
-<script defer src="dictation.js?v=1.32.0"></script>
+<script defer src="dictation.js?v=1.35.0"></script>
 </head>
 <body>
 <main id="focus-root" class="d-focus">
@@ -75,11 +75,11 @@ __LOCALE_MESSAGES__
 <h1 id="player-title" class="sr-only">Dictat en marxa</h1>
 <p id="word-progress" class="sr-only" aria-live="polite"></p>
 <button type="button" id="listen-word" class="d-listen" aria-describedby="listen-count">
-<span class="d-word-position"><span>Paraula</span> <strong data-word-number></strong> <span data-word-total></span></span>
+<span class="d-word-position"><span data-word-kind>Paraula</span> <strong data-word-number></strong> <span data-word-total></span></span>
 <span data-icon="volume-2" aria-hidden="true"></span>
 <span id="listen-label">Escolta</span>
 </button>
-<button type="button" id="next-word" class="d-listen" hidden><span class="d-word-position"><span>Paraula</span> <strong data-word-number></strong> <span data-word-total></span></span><span data-icon="arrow-right" aria-hidden="true"></span><span id="next-label">Paraula següent</span></button>
+<button type="button" id="next-word" class="d-listen" hidden><span class="d-word-position"><span data-word-kind>Paraula</span> <strong data-word-number></strong> <span data-word-total></span></span><span data-icon="arrow-right" aria-hidden="true"></span><span id="next-label">Paraula següent</span></button>
 <p id="listen-count" class="d-status" aria-live="polite"></p>
 <p id="playback-error" class="d-error" hidden role="alert"></p>
 </section>

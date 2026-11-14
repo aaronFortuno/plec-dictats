@@ -176,9 +176,12 @@
           state.selection = null; setError(t(e.message)); show("setup-panel"); return;
         }
         state.cov = cov;
+        var spanishPseudo = lang==='es' && sel.recipe.mode==='pseudo';
         $("session-summary").textContent =
-          t("Codi {code} · {count} paraules", {code:sel.code,count:sel.entries.length});
-        $("instructions").textContent = lang==='es' ? t("Instruccions del dictat en paper", {count:sel.entries.length}) : instructionText(sel.entries.length);
+          t(spanishPseudo?"Codi {code} · {count} pseudoparaules":"Codi {code} · {count} paraules", {code:sel.code,count:sel.entries.length});
+        $("instructions").textContent = lang==='es'
+          ? t(spanishPseudo?"Instruccions del dictat de pseudoparaules en paper":"Instruccions del dictat en paper", {count:sel.entries.length})
+          : instructionText(sel.entries.length);
         $("read-instructions").hidden = lang==='es';
         if(lang!=='es')loadIntro(gen, sel.entries.length);
         var note = $("local-preview-note");
@@ -286,7 +289,9 @@
 
     function renderPlayer() {
       var s = state.session.snapshot();
-      $("word-progress").textContent = t("Paraula {index} de {total}",{index:s.index+1,total:s.total});
+      var spanishPseudo = lang==='es' && state.selection.recipe.mode==='pseudo';
+      $("word-progress").textContent = t(spanishPseudo?"Pseudoparaula {index} de {total}":"Paraula {index} de {total}",{index:s.index+1,total:s.total});
+      doc.querySelectorAll('[data-word-kind]').forEach(function (el) { el.textContent = spanishPseudo?t("Pseudoparaula"):t("Paraula"); });
       doc.querySelectorAll('[data-word-number]').forEach(function (el) { el.textContent = s.index + 1; });
       doc.querySelectorAll('[data-word-total]').forEach(function (el) { el.textContent = 'de ' + s.total; });
       $("listen-count").textContent = t("{count} de 3 escoltes",{count:s.plays});
@@ -294,7 +299,7 @@
       $("playback-error").hidden = true;
       if (s.plays >= 3) {
         btn.hidden = true; next.hidden = false;
-        $("next-label").textContent = t(s.index === s.total - 1 ? "Acaba el dictat" : "Paraula següent");
+        $("next-label").textContent = t(s.index === s.total - 1 ? "Acaba el dictat" : spanishPseudo?"Pseudoparaula següent":"Paraula següent");
       } else {
         btn.hidden = false; next.hidden = true;
         btn.disabled = s.playing;

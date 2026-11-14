@@ -9,16 +9,20 @@ const {batch, plan} = require('./run-spanish-audio.cjs');
 const output = path.join(A.ROOT, 'output');
 const digest = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 
-function completedBatch(expansion,pack) {
-  const jobs = plan(expansion);
-  const result = A.readJson(path.join(output,'results',pack.id+'-words.json'));
+function completedBatch(jobs,pack) {
+  const result = A.readJson(path.join(output,'results',pack.id+'-'+pack.mode+'.json'));
   const settings = A.readJson(path.join(output,'audio',pack.id,'settings.json'));
   const {language,locale,voice,rate,format,contentFingerprint} = pack;
-  const identity = {language,locale,voice,rate,format,contentFingerprint};
+  const identity = {language,locale,voice,rate,format};
+  if (contentFingerprint) identity.contentFingerprint = contentFingerprint;
+  if (pack.generationPolicy?.requireIpa) {
+    const pronunciation = jobs.map(({id,text,ipa})=>({id,text,ipa})).sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0);
+    identity.ipaFingerprint = digest(JSON.stringify(pronunciation));
+  }
   const fingerprint = digest(JSON.stringify(identity));
-  if (settings.fingerprint!==fingerprint || settings.ipaFingerprint ||
+  if (settings.fingerprint!==fingerprint || settings.ipaFingerprint!==identity.ipaFingerprint ||
       Object.entries(identity).some(([key,value])=>settings[key]!==value) ||
-      result.schemaVersion!==1 || result.pack!==pack.id || result.mode!=='words' ||
+      result.schemaVersion!==1 || result.pack!==pack.id || result.mode!==pack.mode ||
       result.deferred?.length || Object.keys(result.files||{}).length!==jobs.length) {
     throw Error('El lot local no està complet o correspon a una altra síntesi.');
   }
@@ -32,7 +36,7 @@ function completedBatch(expansion,pack) {
     }
     return {job,file,data,hash:digest(data)};
   });
-  return {assets,fingerprint,result};
+  return {assets,fingerprint,result,ipaFingerprint:identity.ipaFingerprint};
 }
 
 async function decode(assets) {
@@ -93,13 +97,29 @@ function combinedPack(manifest,addition,edition,expansion) {
 }
 
 async function main(args) {
-  if (args.some(arg=>!['--publish','--expansion','--expansion-02'].includes(arg)) ||
-      (args.includes('--expansion')&&args.includes('--expansion-02'))) {
-    throw Error('Ús: node tools/publish-spanish-audio.cjs [--expansion | --expansion-02] [--publish]');
+  const selections = ['--expansion','--expansion-02','--pseudo'];
+  if (args.some(arg=>!['--publish',...selections].includes(arg)) ||
+      selections.filter(flag=>args.includes(flag)).length>1) {
+    throw Error('Ús: node tools/publish-spanish-audio.cjs [--expansion | --expansion-02 | --pseudo] [--publish]');
   }
+  const pseudo = args.includes('--pseudo');
   const expansion = args.includes('--expansion-02')?2:args.includes('--expansion');
-  const {pack,edition} = batch(expansion), revision = edition.catalog.revision;
-  const {assets,fingerprint,result} = completedBatch(expansion,pack);
+  const selection = pseudo?require('./plan-spanish-pseudo-audio.cjs'):batch(expansion);
+  const {pack} = selection;
+  const edition = pseudo?require('../catalogs/es/editions/seed-4-pseudo.json'):selection.edition;
+  const revision = edition.catalog.revision;
+  const jobs = pseudo?selection.jobs:plan(expansion);
+  if (pseudo) {
+    const index = A.readJson(path.join(A.ROOT,'audio/pronunciation/runtime/es-es-pseudo.json'));
+    const frozen = edition.catalog.entries.filter(entry=>entry.mode==='pseudo');
+    if (index.revision!==revision || frozen.length!==jobs.length || index.entries.length!==jobs.length ||
+        jobs.some((job,i)=>frozen[i].id!==job.id||frozen[i].text!==job.text||
+          index.entries[i].id!==job.id||index.entries[i].text!==job.text||
+          index.entries[i].ipa!==selection.entries[i].ipa)) {
+      throw Error('L’àudio i l’AFI no coincideixen amb l’edició de pseudoparaules.');
+    }
+  }
+  const {assets,fingerprint,result,ipaFingerprint} = completedBatch(jobs,pack);
   const audit = await decode(assets);
   if (audit.decoded!==assets.length) throw Error('Descodificació incompleta.');
   console.log(JSON.stringify({pack:pack.id,...audit}));
@@ -108,7 +128,8 @@ async function main(args) {
   const manifest = A.readJson(manifestFile);
   const prior = manifest.packs.find(item=>item.id===pack.id);
   if (prior && prior.fingerprint!==fingerprint) throw Error('El paquet públic té una identitat diferent.');
-  const addition = {...pack,status:'ready',reviewStatus:'pending-auditory-review',fingerprint,catalogue:revision,files:result.files};
+  const addition = {...pack,status:'ready',reviewStatus:'pending-auditory-review',fingerprint,catalogue:revision,files:result.files,
+    ...(pseudo?{profile:'es-es-pseudo-v1',ipaFingerprint}: {})};
   const combined = expansion?combinedPack(manifest,addition,edition,expansion):null;
   const existingCombined = manifest.packs.find(item=>item.id===combined?.id);
   if (existingCombined && existingCombined.fingerprint!==combined.fingerprint) throw Error('El paquet combinat té una identitat diferent.');
@@ -124,11 +145,12 @@ async function main(args) {
     fs.mkdirSync(path.dirname(destination),{recursive:true});
     await G.writeCompleteFile(destination,data);
   }
-  const auditFile = expansion===2?'spanish-expansion-02-publication.json':
+  const auditFile = pseudo?'spanish-pseudo-publication.json':expansion===2?'spanish-expansion-02-publication.json':
     expansion?'spanish-expansion-publication.json':'spanish-publication.json';
   await G.atomicWriteJson(path.join(A.ROOT,'audio',auditFile),{
     schemaVersion:1,pack:pack.id,voice:pack.voice,locale:pack.locale,rate:pack.rate,catalogue:revision,fingerprint,
-    coverage:assets.length,reviewStatus:addition.reviewStatus,source:'spelling',generatedAt:result.generatedAt,decode:audit,
+    coverage:assets.length,reviewStatus:addition.reviewStatus,source:pseudo?'ipa':'spelling',generatedAt:result.generatedAt,decode:audit,
+    ...(pseudo?{ipaFingerprint}: {}),
     sha256:Object.fromEntries(assets.map(({job,hash})=>[job.relativePath,hash]))
   });
   const defaultId = manifest.defaultPacks.es;

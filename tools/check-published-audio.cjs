@@ -60,9 +60,33 @@ if(spanishId){
  const current=require('../catalogs/es/editions/index.js');
  if(spanishId==='es-es-elvira-words-v3'){
   const full=current.editions.find(edition=>edition.slot===current.current);
-  assert.equal(Object.keys(latest.files).length,full.catalog.entries.length);
-  assert(M.coverage(manifest,full.catalog.entries,'es','https://example.test/plec/').ready);
+  const real=full.catalog.entries.filter(entry=>entry.mode==='words');
+  assert.equal(Object.keys(latest.files).length,real.length);
+  assert(M.coverage(manifest,real,'es','https://example.test/plec/').ready);
  }
+ const pseudoAudit=A.readJson(path.join(root,'audio/spanish-pseudo-publication.json'));
+ const pseudoPlan=require('./plan-spanish-pseudo-audio.cjs');
+ const pseudoPack=A.validatePack(manifest,pseudoPlan.pack.id);
+ const pseudoEntries=current.editions.find(edition=>edition.slot===current.current).catalog.entries.filter(entry=>entry.mode==='pseudo');
+ const identity=pseudoPlan.jobs.map(({id,text,ipa})=>({id,text,ipa})).sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0);
+ const ipaHash=crypto.createHash('sha256').update(JSON.stringify(identity)).digest('hex');
+ assert.equal(pseudoPack.ipaFingerprint,ipaHash);
+ assert.equal(pseudoAudit.ipaFingerprint,ipaHash);
+ assert.equal(pseudoAudit.fingerprint,pseudoPack.fingerprint);
+ assert.equal(pseudoAudit.source,'ipa');
+ assert.equal(pseudoAudit.decode.decoded,100);
+ assert.equal(pseudoAudit.coverage,100);
+ assert.equal(Object.keys(pseudoPack.files).length,100);
+ const pseudoCoverage=M.coverage(manifest,pseudoEntries,'es','https://example.test/plec/');
+ assert(pseudoCoverage.ready);
+ assert.equal(pseudoCoverage.pack.id,pseudoPack.id);
+ for(const job of pseudoPlan.jobs){
+  assert.equal(pseudoPack.files[job.id],job.relativePath);
+  const bytes=fs.readFileSync(path.join(root,pseudoPack.basePath,job.relativePath));
+  assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),pseudoAudit.sha256[job.relativePath]);
+  assert(G.isValidMp3(bytes));
+ }
+ console.log('Spanish pseudo: 100 decoded MP3, frozen IPA, digests and mode-specific student coverage verified.');
 }
 const valencianFile=path.join(root,'audio/valencian-publication.json');
 if(fs.existsSync(valencianFile)){

@@ -28,7 +28,7 @@
   // The encoding, the index used by the sampler and all Catalan mappings stay fixed.
   function prepare(edition,recipe){
     const focuses=edition.profile.seedFocuses;
-    if(!focuses)return V1.prepare(edition,recipe);
+    if(!focuses||recipe.mode==='pseudo')return V1.prepare(edition,recipe);
     if(recipe.mode!=='words'||recipe.tags.some(tag=>!focuses.includes(tag)))throw new Error('Configuració de dictat no vàlida.');
     const tags=recipe.tags.map(tag=>V1.WORD_FOCUSES[focuses.indexOf(tag)]);
     const index=V1.recipeIndex({...recipe,tags});

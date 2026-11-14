@@ -15,5 +15,7 @@ if(manifest.defaultPacks.es){
  assert.equal(A.select(manifest,'es').pack.id,manifest.defaultPacks.es);
  assert.equal(A.select(manifest,'es',{variety:'es-es'}).pack.id,manifest.defaultPacks.es);
  assert.throws(()=>A.select(manifest,'es',{voice:alba.id}));
- assert.throws(()=>A.select(manifest,'es',{mode:'pseudo'}));
+ const pseudo=A.select(manifest,'es',{mode:'pseudo',variety:'es-es'}).pack;
+ assert.equal(pseudo.id,'es-es-elvira-pseudo-ipa-v1');
+ assert.throws(()=>A.select(manifest,'es',{mode:'pseudo',voice:manifest.defaultPacks.es}));
 }

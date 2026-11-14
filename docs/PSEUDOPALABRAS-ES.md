@@ -1,6 +1,6 @@
 # Pseudoparaules de Plec en castellà
 
-El [banc editorial de 100 formes](../catalogs/es/pseudo/ampliacion-01.tsv) està preparat per a un futur lot de síntesi. Cada fila conté la grafia de referència, la lectura fonològica en AFI per a l’espanyol d’Espanya (`es-ES`) i els identificadors dels focus. L’ordre és alfabètic segons la col·lació castellana.
+El [banc editorial de 100 formes](../catalogs/es/pseudo/ampliacion-01.tsv) és al catàleg i al dictat oral en castellà. Cada fila conté la grafia de referència, la lectura fonològica en AFI per a l’espanyol d’Espanya (`es-ES`) i els identificadors dels focus. L’ordre és alfabètic segons la col·lació castellana.
 
 | Focus | Formes | Criteri |
 | --- | ---: | --- |
@@ -19,3 +19,5 @@ En corregir un dictat, es poden acceptar grafies que donin la mateixa lectura. P
 - Les 100 lectures s’han contrastat amb el transcriptor de Plec. S’ha comprovat que cada forma tingui un sol accent primari, un nucli per síl·laba i que les lectures siguin diferents entre si i respecte dels 1.056 mots de partida, amb la transcripció de referència aplicada.
 - El pla reproduïble `node tools/plan-spanish-pseudo-audio.cjs` torna a comprovar les coincidències de grafia i pronunciació amb els 3.056 mots del catàleg ampliat i construeix les peticions en local.
 - Per preparar peticions amb Elvira, transforma només `ʝ` en `j͡j` quan construeixis el valor del fonema per a Azure. El pla local de `tools/audio-plan.cjs` ha construït les 100 peticions `pseudo` amb AFI i ritme del −10 %, amb una estimació conservadora de 8.689 caràcters. Una mostra pot comprovar si Elvira conserva els contrastos i la tònica en `mellafo`, `farrume`, `güerapi`, `tralumo`, `cumaípo` i `zefamunipo`. [Inventari fonètic d’Azure es-ES](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-ssml-phonetic-sets#es-es).
+
+La quarta edició castellana es genera amb `node tools/prepare-spanish-pseudo-edition.cjs` i `node tools/build-catalogs.cjs`. Conserva els tres bancs anteriors per recuperar els codis impresos. La síntesi amb `node tools/run-spanish-audio.cjs --pseudo --execute --confirm-f0` envia les 100 transcripcions a Elvira. La publicació amb `node tools/publish-spanish-audio.cjs --pseudo --publish` verifica la identitat de les transcripcions i descodifica els 100 MP3. Les gravacions queden pendents de revisió auditiva individual. [Registre de publicació](../audio/spanish-pseudo-publication.json).

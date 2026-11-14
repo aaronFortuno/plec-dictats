@@ -1,0 +1,609 @@
+{
+  "schemaVersion": 1,
+  "language": "es",
+  "mode": "pseudo",
+  "profile": "es-es-pseudo-v1",
+  "revision": "es-2026-04-pseudo.e888907adb3f2e72",
+  "entries": [
+    {
+      "id": "s-1q29336",
+      "text": "ametúfalo",
+      "ipa": "a.me.ˈtu.fa.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1m9j0iv",
+      "text": "anifedo",
+      "ipa": "a.ni.ˈfe.do",
+      "status": "proposed"
+    },
+    {
+      "id": "s-vrfru5",
+      "text": "atúmeli",
+      "ipa": "a.ˈtu.me.li",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1pit1wj",
+      "text": "blapi",
+      "ipa": "ˈbla.pi",
+      "status": "proposed"
+    },
+    {
+      "id": "s-16m9ta0",
+      "text": "blapún",
+      "ipa": "bla.ˈpun",
+      "status": "proposed"
+    },
+    {
+      "id": "s-my57yu",
+      "text": "blermo",
+      "ipa": "ˈbleɾ.mo",
+      "status": "proposed"
+    },
+    {
+      "id": "s-16k9gzz",
+      "text": "blorpe",
+      "ipa": "ˈbloɾ.pe",
+      "status": "proposed"
+    },
+    {
+      "id": "s-7f22ux",
+      "text": "blufén",
+      "ipa": "blu.ˈfen",
+      "status": "proposed"
+    },
+    {
+      "id": "s-n5jjgz",
+      "text": "bralpo",
+      "ipa": "ˈbɾal.po",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1gt49mt",
+      "text": "brepu",
+      "ipa": "ˈbɾe.pu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1tzyn74",
+      "text": "brisno",
+      "ipa": "ˈbɾis.no",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1rc75ow",
+      "text": "carufemina",
+      "ipa": "ka.ɾu.fe.ˈmi.na",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1f8bhfs",
+      "text": "cemarifena",
+      "ipa": "θe.ma.ɾi.ˈfe.na",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1ngr92n",
+      "text": "chalpún",
+      "ipa": "t͡ʃal.ˈpun",
+      "status": "proposed"
+    },
+    {
+      "id": "s-e1z8kt",
+      "text": "chapune",
+      "ipa": "t͡ʃa.ˈpu.ne",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1umxbw4",
+      "text": "chemufe",
+      "ipa": "t͡ʃe.ˈmu.fe",
+      "status": "proposed"
+    },
+    {
+      "id": "s-gsj36v",
+      "text": "chifena",
+      "ipa": "t͡ʃi.ˈfe.na",
+      "status": "proposed"
+    },
+    {
+      "id": "s-etatir",
+      "text": "chupanel",
+      "ipa": "t͡ʃu.pa.ˈnel",
+      "status": "proposed"
+    },
+    {
+      "id": "s-pc6mt9",
+      "text": "clamu",
+      "ipa": "ˈkla.mu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-4s993",
+      "text": "clenufa",
+      "ipa": "kle.ˈnu.fa",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1x570jd",
+      "text": "crinufa",
+      "ipa": "kɾi.ˈnu.fa",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1j4tl6g",
+      "text": "crumapel",
+      "ipa": "kɾu.ma.ˈpel",
+      "status": "proposed"
+    },
+    {
+      "id": "s-8rmxe9",
+      "text": "cumaípo",
+      "ipa": "ku.ma.ˈi.po",
+      "status": "proposed"
+    },
+    {
+      "id": "s-2fuetv",
+      "text": "dapi",
+      "ipa": "ˈda.pi",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1w2uo45",
+      "text": "dematupila",
+      "ipa": "de.ma.tu.ˈpi.la",
+      "status": "proposed"
+    },
+    {
+      "id": "s-p8lljt",
+      "text": "deunavo",
+      "ipa": "dew.ˈna.bo",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1ixsnlu",
+      "text": "dofú",
+      "ipa": "do.ˈfu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1uob97e",
+      "text": "drafeno",
+      "ipa": "dɾa.ˈfe.no",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1olvhkr",
+      "text": "dralpu",
+      "ipa": "ˈdɾal.pu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1ju69oz",
+      "text": "dulliche",
+      "ipa": "du.ˈʝi.t͡ʃe",
+      "status": "proposed"
+    },
+    {
+      "id": "s-4uqk27",
+      "text": "efumarela",
+      "ipa": "e.fu.ma.ˈɾe.la",
+      "status": "proposed"
+    },
+    {
+      "id": "s-7hcuxm",
+      "text": "eimúfana",
+      "ipa": "ej.ˈmu.fa.na",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1a7etf8",
+      "text": "elupinaro",
+      "ipa": "e.lu.pi.ˈna.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1d0rdq4",
+      "text": "famorelu",
+      "ipa": "fa.mo.ˈɾe.lu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1eajvrt",
+      "text": "fardunela",
+      "ipa": "faɾ.du.ˈne.la",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1wx3wjz",
+      "text": "farrume",
+      "ipa": "fa.ˈru.me",
+      "status": "proposed"
+    },
+    {
+      "id": "s-46ciyc",
+      "text": "fellicú",
+      "ipa": "fe.ʝi.ˈku",
+      "status": "proposed"
+    },
+    {
+      "id": "s-11atdf5",
+      "text": "feno",
+      "ipa": "ˈfe.no",
+      "status": "proposed"
+    },
+    {
+      "id": "s-mhtfwk",
+      "text": "fimu",
+      "ipa": "ˈfi.mu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1ldf974",
+      "text": "firmelena",
+      "ipa": "fiɾ.me.ˈle.na",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1l7xhcu",
+      "text": "firrano",
+      "ipa": "fi.ˈra.no",
+      "status": "proposed"
+    },
+    {
+      "id": "s-11wyfz0",
+      "text": "flanufa",
+      "ipa": "fla.ˈnu.fa",
+      "status": "proposed"
+    },
+    {
+      "id": "s-13ogt8",
+      "text": "flepuno",
+      "ipa": "fle.ˈpu.no",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1pmf77",
+      "text": "fota",
+      "ipa": "ˈfo.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "s-glgw0h",
+      "text": "fraguno",
+      "ipa": "fɾa.ˈgu.no",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1up5vz8",
+      "text": "frinapu",
+      "ipa": "fɾi.ˈna.pu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-196oc8a",
+      "text": "fuamepo",
+      "ipa": "fwa.ˈme.po",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1li7kzn",
+      "text": "fune",
+      "ipa": "ˈfu.ne",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1l0uumf",
+      "text": "glenupo",
+      "ipa": "gle.ˈnu.po",
+      "status": "proposed"
+    },
+    {
+      "id": "s-d9d52n",
+      "text": "glonapi",
+      "ipa": "glo.ˈna.pi",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1j1s7qn",
+      "text": "grapune",
+      "ipa": "gɾa.ˈpu.ne",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1vlf8k1",
+      "text": "grenís",
+      "ipa": "gɾe.ˈnis",
+      "status": "proposed"
+    },
+    {
+      "id": "s-fzgt2q",
+      "text": "guefina",
+      "ipa": "ge.ˈfi.na",
+      "status": "proposed"
+    },
+    {
+      "id": "s-50oek8",
+      "text": "guemifú",
+      "ipa": "ge.mi.ˈfu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-5eh0z4",
+      "text": "guenofa",
+      "ipa": "ge.ˈno.fa",
+      "status": "proposed"
+    },
+    {
+      "id": "s-63a2c1",
+      "text": "güerapi",
+      "ipa": "gwe.ˈɾa.pi",
+      "status": "proposed"
+    },
+    {
+      "id": "s-c2husr",
+      "text": "guifán",
+      "ipa": "gi.ˈfan",
+      "status": "proposed"
+    },
+    {
+      "id": "s-mh1tge",
+      "text": "guinufe",
+      "ipa": "gi.ˈnu.fe",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1m4nkcz",
+      "text": "güirafe",
+      "ipa": "gwi.ˈɾa.fe",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1ti8dp",
+      "text": "japi",
+      "ipa": "ˈxa.pi",
+      "status": "proposed"
+    },
+    {
+      "id": "s-ofn147",
+      "text": "jarunefa",
+      "ipa": "xa.ɾu.ˈne.fa",
+      "status": "proposed"
+    },
+    {
+      "id": "s-pz89b7",
+      "text": "jife",
+      "ipa": "ˈxi.fe",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1mp5s3i",
+      "text": "jomu",
+      "ipa": "ˈxo.mu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-rczjhe",
+      "text": "lemu",
+      "ipa": "ˈle.mu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-xcuiti",
+      "text": "lioruña",
+      "ipa": "ljo.ˈɾu.ɲa",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1mctmrc",
+      "text": "lozafime",
+      "ipa": "lo.θa.ˈfi.me",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1e6wh35",
+      "text": "lufe",
+      "ipa": "ˈlu.fe",
+      "status": "proposed"
+    },
+    {
+      "id": "s-s6jjm8",
+      "text": "maludefi",
+      "ipa": "ma.lu.ˈde.fi",
+      "status": "proposed"
+    },
+    {
+      "id": "s-8hgsrk",
+      "text": "medulafi",
+      "ipa": "me.du.ˈla.fi",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1d49nbb",
+      "text": "mellafo",
+      "ipa": "me.ˈʝa.fo",
+      "status": "proposed"
+    },
+    {
+      "id": "s-16bx9qw",
+      "text": "mifa",
+      "ipa": "ˈmi.fa",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1d08uzu",
+      "text": "milu",
+      "ipa": "ˈmi.lu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1uecmj1",
+      "text": "mirrupo",
+      "ipa": "mi.ˈru.po",
+      "status": "proposed"
+    },
+    {
+      "id": "s-17r3pla",
+      "text": "mufo",
+      "ipa": "ˈmu.fo",
+      "status": "proposed"
+    },
+    {
+      "id": "s-17ozpsk",
+      "text": "mupo",
+      "ipa": "ˈmu.po",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1nzqdur",
+      "text": "muquena",
+      "ipa": "mu.ˈke.na",
+      "status": "proposed"
+    },
+    {
+      "id": "s-d8n12u",
+      "text": "naeñupo",
+      "ipa": "na.e.ˈɲu.po",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1f5l8l4",
+      "text": "nariúmelo",
+      "ipa": "na.ˈɾju.me.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "s-t2sooc",
+      "text": "narrelo",
+      "ipa": "na.ˈre.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1kp96fx",
+      "text": "nematulapo",
+      "ipa": "ne.ma.tu.ˈla.po",
+      "status": "proposed"
+    },
+    {
+      "id": "s-flcu75",
+      "text": "nepu",
+      "ipa": "ˈne.pu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1rdp13n",
+      "text": "nopu",
+      "ipa": "ˈno.pu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1ml7ov",
+      "text": "nufa",
+      "ipa": "ˈnu.fa",
+      "status": "proposed"
+    },
+    {
+      "id": "s-tybcw4",
+      "text": "ñefu",
+      "ipa": "ˈɲe.fu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-15z4kj1",
+      "text": "omelutipá",
+      "ipa": "o.me.lu.ti.ˈpa",
+      "status": "proposed"
+    },
+    {
+      "id": "s-188t0at",
+      "text": "pafi",
+      "ipa": "ˈpa.fi",
+      "status": "proposed"
+    },
+    {
+      "id": "s-smjxim",
+      "text": "pallifé",
+      "ipa": "pa.ʝi.ˈfe",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1u8975h",
+      "text": "pefu",
+      "ipa": "ˈpe.fu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1ps9oj8",
+      "text": "penquejo",
+      "ipa": "pen.ˈke.xo",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1scpfmh",
+      "text": "plamufe",
+      "ipa": "pla.ˈmu.fe",
+      "status": "proposed"
+    },
+    {
+      "id": "s-lj5kis",
+      "text": "prenifa",
+      "ipa": "pɾe.ˈni.fa",
+      "status": "proposed"
+    },
+    {
+      "id": "s-dl24om",
+      "text": "pume",
+      "ipa": "ˈpu.me",
+      "status": "proposed"
+    },
+    {
+      "id": "s-h1i2qg",
+      "text": "quepano",
+      "ipa": "ke.ˈpa.no",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1wnggb8",
+      "text": "quilupé",
+      "ipa": "ki.lu.ˈpe",
+      "status": "proposed"
+    },
+    {
+      "id": "s-18g1kkn",
+      "text": "rufe",
+      "ipa": "ˈru.fe",
+      "status": "proposed"
+    },
+    {
+      "id": "s-9py2vg",
+      "text": "sepu",
+      "ipa": "ˈse.pu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-10acgr8",
+      "text": "tefú",
+      "ipa": "te.ˈfu",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1bn1m3j",
+      "text": "tralumo",
+      "ipa": "tɾa.ˈlu.mo",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1edtp3m",
+      "text": "zarrupel",
+      "ipa": "θa.ru.ˈpel",
+      "status": "proposed"
+    },
+    {
+      "id": "s-1lqkll9",
+      "text": "zefamunipo",
+      "ipa": "θe.fa.mu.ˈni.po",
+      "status": "proposed"
+    }
+  ]
+}

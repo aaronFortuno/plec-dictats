@@ -34,7 +34,8 @@ async function main() {
     assert.equal(new URL(page.url()).pathname, '/es/');
     assert.equal(await page.locator('html').getAttribute('lang'), 'es');
     assert.equal(await page.locator('#word-total').textContent(), '3056');
-    assert(await page.locator('#mode-control').isHidden());
+    assert.equal(await page.locator('#pseudo-total').textContent(), '100');
+    assert(await page.locator('#mode-control').isVisible());
     assert.equal(await page.locator('#tag-options label').filter({has:page.locator('input[value="bv"]')}).textContent(),'b / v');
     assert.equal(await page.locator('#tag-options label').filter({has:page.locator('input[value="ggu"]')}).textContent(),'g / gu / gü');
     assert.equal(await page.locator('#pronunciation-variety').inputValue(),'es-es');
@@ -61,7 +62,7 @@ async function main() {
     const selected = await page.evaluate(code => PlecSeeds.resolve(PlecSeedRegistry.editions, code), code);
     assert(selected.entries.some(entry => entry.text === 'biblioteca'));
     assert(selected.entries.every(entry => entry.tags.includes('bv')));
-    assert.equal(selected.epoch,2);
+    assert.equal(selected.epoch,3);
     const worksheet = await page.locator('#sheet-preview').textContent();
     assert(worksheet.includes('ESCRIBO Y REVISO') && worksheet.includes('/es/dictat/'));
     assert(worksheet.includes('variety=es-es'));
@@ -184,6 +185,50 @@ async function main() {
       await newClip;
       await page.waitForFunction(()=>document.querySelector('#listen-count').textContent==='1 de 3 escuchas');
     }
+    await page.setViewportSize({width:1440,height:900});
+    await page.goto(origin+'/es/');
+    await page.locator('[data-mode=pseudo]').click();
+    await page.waitForSelector('#sheet-preview svg');
+    await page.selectOption('#count-control','8');
+    const pseudoCode=await page.locator('#seed-code').textContent();
+    const pseudo=await page.evaluate(code=>PlecSeeds.resolve(PlecSeedRegistry.editions,code),pseudoCode);
+    assert.equal(pseudo.recipe.mode,'pseudo');
+    assert.equal(pseudo.entries.length,8);
+    const pseudoWorksheet=await page.locator('#sheet-preview').textContent();
+    assert(pseudoWorksheet.includes('Dictado de pseudopalabras'));
+    assert(pseudoWorksheet.includes('Modelo propuesto: otras grafías pueden'));
+    const pseudoLink=await page.evaluate(()=>PlecCore.worksheet({
+      entries:[],mode:'pseudo',seedCode:document.getElementById('seed-code').textContent,seedLanguage:'es',variety:'es-es'
+    }).find(shape=>shape.url).url);
+    assert.equal(new URL(pseudoLink).searchParams.get('seed'),pseudoCode.replaceAll('-',''));
+    await page.locator('#catalog-open').click();
+    assert.equal(await page.locator('#catalog-title').textContent(),'Las pseudopalabras');
+    assert.match(await page.locator('#catalog-count').textContent(),/^100 /u);
+    await page.fill('#catalog-search','güerapi');
+    await page.waitForFunction(()=>document.querySelector('.ipa-text')?.textContent==='gwe.ˈɾa.pi');
+    const pseudoClip=page.waitForResponse(response=>
+      decodeURIComponent(new URL(response.url()).pathname).endsWith('/es-es-elvira-pseudo-ipa-v1/pseudo/güerapi.mp3')&&response.ok());
+    await page.getByRole('button',{name:'güerapi: gwe.ˈɾa.pi',exact:true}).click();
+    await pseudoClip;
+    const pseudoCSV=page.waitForEvent('download');
+    await page.click('#export-pronunciations');
+    const exportedPseudo=await pseudoCSV;
+    assert.equal(exportedPseudo.suggestedFilename(),'plec-es-pronunciaciones-pseudopalabras.csv');
+    const pseudoLines=fs.readFileSync(await exportedPseudo.path(),'utf8').trim().split(/\r?\n/u);
+    assert.equal(pseudoLines.length,101);
+    assert(pseudoLines.some(line=>line.includes('"güerapi","gwe.ˈɾa.pi"')));
+    await page.goto(origin+'/es/dictat/?seed='+pseudoCode+'&variety=es-es');
+    await page.waitForSelector('#start-dictation:enabled');
+    assert.match(await page.locator('#instructions').textContent(),/8 pseudopalabras/u);
+    await page.evaluate(()=>{document.querySelector('#focus-root').requestFullscreen=()=>Promise.reject(Error('Fullscreen unavailable in test'));});
+    await page.click('#start-dictation');
+    await page.click('#windowed-start');
+    assert.equal(await page.locator('#word-progress').textContent(),'Pseudopalabra 1 de 8');
+    const pseudoStudentClip=page.waitForResponse(response=>
+      decodeURIComponent(new URL(response.url()).pathname).endsWith('/es-es-elvira-pseudo-ipa-v1/pseudo/'+pseudo.entries[0].text+'.mp3')&&response.ok());
+    await page.click('#listen-word');
+    await pseudoStudentClip;
+    await page.waitForFunction(()=>document.querySelector('#listen-count').textContent==='1 de 3 escuchas');
     assert(audioRequests.some(url=>url.startsWith('/assets/audio/es/es-es-elvira-basic-v1/')));
     assert(!audioRequests.some(url=>url.startsWith('/assets/audio/ca/')||url.includes('/instructions/')));
     assert.deepEqual(errors, []);

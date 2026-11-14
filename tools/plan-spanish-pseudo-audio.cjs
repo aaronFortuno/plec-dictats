@@ -27,14 +27,19 @@ const entries = lines.map(line=>{
   assert(tags.length&&tags.every(tag=>PSEUDO_FOCUSES.includes(tag)),text);
   let hash = 2166136261;
   for (const char of 'pseudo:'+text) hash = Math.imul(hash ^ char.codePointAt(0),16777619);
-  return {id:'s-'+(hash>>>0).toString(36),text,mode:'pseudo',ipa:ipa.replaceAll('ʝ','j͡j'),tags};
+  return {id:'s-'+(hash>>>0).toString(36),text,mode:'pseudo',ipa,tags};
 });
+assert.equal(new Set(entries.map(({id})=>id)).size,entries.length);
 const id = 'es-es-elvira-pseudo-ipa-v1';
 const pack = {
   id,mode:'pseudo',provider:'azure',language:'es',locale:'es-ES',dialect:'es-es',
   voice:'es-ES-ElviraNeural',rate:'-10%',format:OUTPUT_FORMAT,files:{},
   basePath:'assets/audio/es/'+id+'/',generationPolicy:{requireIpa:true}
 };
-const {jobs} = buildJobs({language:'es',entries},{schemaVersion:1,packs:[pack]},{pack:id,mode:'pseudo'});
+const options = {
+  seed:{language:'es',entries:entries.map(entry=>({...entry,ipa:entry.ipa.replaceAll('ʝ','j͡j')}))},
+  manifest:{schemaVersion:1,packs:[pack]},pack:id,mode:'pseudo'
+};
+const {jobs} = buildJobs(options.seed,options.manifest,options);
 if (require.main===module) console.log(JSON.stringify(summarize(jobs)));
-module.exports = {entries,pack,jobs};
+module.exports = {entries,pack,jobs,options};

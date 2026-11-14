@@ -6,6 +6,7 @@ const { assertStableCatalogue } = require('./catalog-policy.cjs');
 const { publishOutputs } = require('./generated-output.cjs');
 const { localizeHTML } = require('./localize-html.cjs');
 const Brand = require('../brand.js');
+const { PSEUDO_FOCUSES } = require('../seeds.js');
 const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root, name), 'utf8');
 const json = name => JSON.parse(read(name));
@@ -28,10 +29,14 @@ function prepareLanguage(item) {
   const validationPath = path.posix.dirname(profile.catalogue) + '/validation.json';
   assertStableCatalogue(source, read(profile.catalogue), fs.existsSync(path.join(root,validationPath)) ? json(validationPath) : null);
   if (profile.id !== item.id || source.language !== item.id) throw new Error('Language mismatch');
-  if (profile.seedFocuses && (profile.seedFocuses.length !== 12 || new Set(profile.seedFocuses).size !== 12 ||
-      source.categories.some(category => !profile.seedFocuses.includes(category.id)) ||
-      source.entries.some(entry => !entry.tags.length || entry.tags.some(tag => !profile.seedFocuses.includes(tag))))) {
-    throw new Error('Invalid locale seed focuses: ' + item.id);
+  if (profile.seedFocuses) {
+    const focuses = {words:profile.seedFocuses,pseudo:PSEUDO_FOCUSES};
+    const valid = (mode,id) => Object.hasOwn(focuses,mode) && focuses[mode].includes(id);
+    if (profile.seedFocuses.length !== 12 || new Set(profile.seedFocuses).size !== 12 ||
+        source.categories.some(category => !valid(category.mode,category.id)) ||
+        source.entries.some(entry => !entry.tags.length || entry.tags.some(tag => !valid(entry.mode,tag)))) {
+      throw new Error('Invalid locale seed focuses: ' + item.id);
+    }
   }
   const fingerprint = hash({ source, profile });
   const revision = source.edition + '.' + fingerprint.slice(0, 16);

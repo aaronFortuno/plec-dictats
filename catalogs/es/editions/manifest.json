@@ -1,5 +1,5 @@
 {
-  "current": 2,
+  "current": 3,
   "basic": 0,
   "basicWordCount": 350,
   "editions": [
@@ -20,6 +20,12 @@
       "file": "seed-3-expanded.json",
       "sha256": "eb628ff3c8a311249527fdda0b454dff0fac7b03bda3b8f885f0e58032fbe663",
       "revision": "es-2026-03-ampliacion.e9008c03ae0d16c1"
+    },
+    {
+      "slot": 3,
+      "file": "seed-4-pseudo.json",
+      "sha256": "befeebebcb2dd79b63c1600d38df243f6e62504cd3c73bf52e04419bbb5b9701",
+      "revision": "es-2026-04-pseudo.e888907adb3f2e72"
     }
   ]
 }

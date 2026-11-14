@@ -1,5 +1,9 @@
 # Historial
 
+## 1.35 · 14 de novembre de 2026
+
+- El preparador i el dictat oral en castellà incorporen 100 pseudoparaules amb quatre focus, transcripcions AFI i gravacions d’Elvira. El catàleg en permet la consulta, l’escolta i l’exportació de l’AFI.
+
 ## 1.34 · 14 de novembre de 2026
 
 - El catàleg castellà arriba a 3.056 mots amb 2.000 incorporacions, transcripcions AFI i gravacions d’Elvira. Banc editorial de 100 pseudoparaules en castellà amb focus i AFI, preparat per a la síntesi.

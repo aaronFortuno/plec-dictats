@@ -32,7 +32,9 @@ El catàleg carrega un índex per varietat i permet descarregar les transcripcio
 
 El contrast automatitzat verifica les 3.056 grafies amb el lèxic RLA-ES i comprova els homòfons interns amb la transcripció de referència. Aquesta comprovació i l’exclusió de formes amb alternatives gràfiques conegudes redueixen l’ambigüitat dels dictats aïllats. El contrast no detecta necessàriament tots els homòfons de fora del banc. L’edició s’identifica com a proposta editorial i els àudios es mantenen en revisió auditiva.
 
-Per reproduir el contrast i generar les dades, executa `python tools/check-spanish-draft.py ruta/es_ES --second-expansion --json | node tools/prepare-spanish-expansion-02.cjs` i després `node tools/build-catalogs.cjs`. Les transcripcions apareixen al catàleg i són exportables com a CSV. La [guia de les pseudoparaules](PSEUDOPALABRAS-ES.md) recull el banc de 100 formes i el pla per a una síntesi posterior.
+Per reproduir el contrast i generar les dades, executa `python tools/check-spanish-draft.py ruta/es_ES --second-expansion --json | node tools/prepare-spanish-expansion-02.cjs` des de l’edició corresponent i després `node tools/build-catalogs.cjs`. Les transcripcions apareixen al catàleg i són exportables com a CSV.
+
+La quarta edició incorpora [100 pseudoparaules amb AFI i àudio d’Elvira](PSEUDOPALABRAS-ES.md). Es poden consultar al catàleg i dictar des d’un codi o l’enllaç del full.
 
 ## Primera veu
 

@@ -94,11 +94,13 @@ function reuseSample(jobs) {
 }
 
 async function main(args) {
-  if (args.some(arg => !['--execute','--confirm-f0','--expansion','--expansion-02'].includes(arg)) ||
-      (args.includes('--expansion')&&args.includes('--expansion-02'))) throw Error('Arguments no admesos.');
+  const selections = ['--expansion','--expansion-02','--pseudo'];
+  if (args.some(arg => !['--execute','--confirm-f0',...selections].includes(arg)) ||
+      selections.filter(flag=>args.includes(flag)).length>1) throw Error('Arguments no admesos.');
+  const pseudo = args.includes('--pseudo');
   const expansion = args.includes('--expansion-02')?2:args.includes('--expansion');
-  const selection = batch(expansion);
-  const jobs = plan(expansion);
+  const selection = pseudo?require('./plan-spanish-pseudo-audio.cjs'):batch(expansion);
+  const jobs = pseudo?selection.jobs:plan(expansion);
   console.log(JSON.stringify(A.summarize(jobs)));
   if (!args.includes('--execute')) return;
   if (!args.includes('--confirm-f0')) throw Error('Cal confirmar F0.');
@@ -107,7 +109,7 @@ async function main(args) {
   const release = G.acquireLock(path.join(directory,'spanish-audio-runner.lock'));
   try {
     const env = loadAzureEnvironment({});
-    if (!expansion) reuseSample(jobs);
+    if (!expansion&&!pseudo) reuseSample(jobs);
     const result = await G.runGeneration({...selection.options, execute:true, confirmF0:true, retryTransient:true}, {
       env, fetch:globalThis.fetch, shouldStop
     });
