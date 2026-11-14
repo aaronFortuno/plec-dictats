@@ -12,18 +12,18 @@
   <link rel="stylesheet" href="../workspace.css?v=1.32.1">
   <link rel="stylesheet" href="../seeds.css?v=1.32.1">
   <link rel="stylesheet" href="../catalog-browser.css?v=1.32.0">
-  <link rel="stylesheet" href="../pronunciations.css?v=1.32.0">
+  <link rel="stylesheet" href="../pronunciations.css?v=1.33.0">
   <link rel="stylesheet" href="../analytics.css?v=1.32.1">
   <link rel="stylesheet" href="../theme.css?v=1.32.1">
   <link rel="stylesheet" href="../workspace-layout.css?v=1.32.0">
   <script defer src="../site-links.js?v=1.32.0"></script>
   <script defer src="../analytics.js?v=1.32.0"></script>
-  <script defer src="../audio-varieties.js?v=1.32.0"></script>
-  <script defer src="../locales/manifest.js?v=1.32.1"></script>
-  <script defer src="../locales/es/config.js?v=1.32.1"></script>
-  <script defer src="../locales/es/messages.js?v=1.32.1"></script>
-  <script defer src="../language.js?v=1.32.1"></script>
-  <script defer src="../catalogs/es/catalog.js?v=1.32.1"></script>
+  <script defer src="../audio-varieties.js?v=1.33.0"></script>
+  <script defer src="../locales/manifest.js?v=1.33.0"></script>
+  <script defer src="../locales/es/config.js?v=1.33.0"></script>
+  <script defer src="../locales/es/messages.js?v=1.33.0"></script>
+  <script defer src="../language.js?v=1.33.0"></script>
+  <script defer src="../catalogs/es/catalog.js?v=1.33.0"></script>
   <script defer src="../catalogs/es/editions/index.js?v=1.32.0"></script>
   <script defer src="../seeds.js?v=1.32.0"></script>
   <script defer src="../seeds-v2.js?v=1.32.0"></script>
@@ -40,10 +40,10 @@
   <script defer src="../preview.js?v=1.32.0"></script>
   <script defer src="../catalog-browser.js?v=1.32.0"></script>
   <script defer src="../audio-manifest.js?v=1.32.0"></script>
-  <script defer src="../catalog-resources.js?v=1.32.0"></script>
-  <script defer src="../pronunciations.js?v=1.32.0"></script>
+  <script defer src="../catalog-resources.js?v=1.33.0"></script>
+  <script defer src="../pronunciations.js?v=1.33.0"></script>
   <script defer src="../composer-search.js?v=1.32.0"></script>
-  <script defer src="../app.js?v=1.32.1"></script>
+  <script defer src="../app.js?v=1.33.0"></script>
   <script defer src="../workspace-panels.js?v=1.32.0"></script>
 </head>
 <body>
@@ -106,7 +106,7 @@
 
 
   </main>
-  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurso abierto para escuchar, escribir y aprender.</p><p class="umbrella-project">Un proyecto de <a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacidad</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el proyecto · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versión 1.32.1. Abrir el historial de cambios">v1.32.1</button></span></footer>
+  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurso abierto para escuchar, escribir y aprender.</p><p class="umbrella-project">Un proyecto de <a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacidad</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el proyecto · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versión 1.33. Abrir el historial de cambios">v1.33</button></span></footer>
   <div id="status" class="toast" role="status" aria-live="polite"></div>
   <dialog id="catalog-dialog" aria-labelledby="catalog-title">
     <div class="dialog-head"><h2 id="catalog-title">El catálogo</h2><button class="icon-button" data-close aria-label="Cerrar el catálogo"><span data-icon="x"></span></button></div>
@@ -117,11 +117,10 @@
     <label id="catalog-stage-field"><span class="sr-only">Nivel orientativo</span><select id="catalog-stage"><option value="all">Todos los niveles</option><option value="cm">3.º y 4.º de Primaria</option><option value="cs">5.º y 6.º de Primaria</option><option value="eso">Secundaria</option></select></label>
   </div>
   <nav id="catalog-initials" class="catalog-initials" aria-label="Iniciales del catálogo"></nav>
-  <div class="catalog-status"><span id="catalog-count" role="status" aria-live="polite"></span><label id="catalog-basic-field" class="catalog-basic-option"><input id="catalog-basic" type="checkbox"> Vocabulario básico</label><span class="catalog-hint">Prem la IPA o l’altaveu per escoltar · <span class="catalog-report-help" tabindex="0" data-report-tooltip="Per notificar un error, prem la bandera que hi ha al costat de l’àudio concret, a la fila del mot i de la varietat corresponents."><span data-icon="flag"></span> Notifica un error</span></span></div>
-  <p class="catalog-pronunciation-note"><a id="pronunciation-criteria" href="../ca/pronunciacio/">Criteris de pronunciació</a><span>Mallorquí (Palma): IPA en revisió · àudio en pausa.</span></p>
+  <div class="catalog-status"><span id="catalog-count" role="status" aria-live="polite"></span><label id="catalog-basic-field" class="catalog-basic-option"><input id="catalog-basic" type="checkbox"> Vocabulario básico</label><span class="catalog-hint">Pulsa la transcripción AFI o el altavoz para escuchar · <span class="catalog-report-help" tabindex="0" data-report-tooltip="Para notificar un error, pulsa la bandera junto al audio de la palabra y la variedad correspondientes."><span data-icon="flag"></span> Notificar un error</span></span></div>
+  <p class="catalog-pronunciation-note"><a id="pronunciation-criteria" href="../ca/pronunciacio/">Criterios de pronunciación</a><span>Mallorquí (Palma): IPA en revisió · àudio en pausa.</span></p>
 </div>
 <p id="review-notice" class="review-notice" role="status" hidden></p>
-<p id="catalog-audio-voice" class="review-notice" hidden></p>
 <div id="catalog-columns" class="pronunciation-columns" aria-hidden="true"><span>Palabra y grafías</span><span>Central · Alba</span><span>Valencià · Enric</span><span>Mallorquí · Palma</span></div>
 <div id="catalog-list" class="catalog-results" role="region" tabindex="0" aria-label="Palabras y grafías" aria-describedby="catalog-count"></div>
 <footer class="catalog-footer">

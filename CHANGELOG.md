@@ -1,5 +1,9 @@
 # Historial
 
+## 1.33 · 14 de novembre de 2026
+
+- Catàleg castellà ampliat a 1.056 mots amb 706 incorporacions aprovades. Focus gràfics en minúscules, transcripcions AFI al catàleg i exportació en CSV. La segona edició conserva els codis i els àudios dels 350 mots bàsics.
+
 ## 1.32.1 · 14 de novembre de 2026
 
 - Capçalera del dictat sense l’accés a Privacitat i botó de tema amb el mateix estil que el d’idioma. Al preparador, l’enllaç del full és al costat del codi i l’enllaç per a l’alumnat és a la secció de dictat oral.

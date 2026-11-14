@@ -7,6 +7,7 @@ const G = require('./generate-audio.cjs');
 const {loadAzureEnvironment} = require('./azure-credentials.cjs');
 const seed = require('../catalogs/es/editions/seed-1-basic.json');
 const registry = require('../catalogs/es/editions/manifest.json');
+const expandedFile = 'seed-2-expanded.json';
 
 const directory = path.join(A.ROOT, 'output/audio');
 const pack = {
@@ -18,13 +19,36 @@ const pack = {
 };
 const options = {seed, manifest: {schemaVersion: 1, packs: [pack]}, pack: pack.id, mode: 'words'};
 const digest = data => crypto.createHash('sha256').update(data).digest('hex');
-function plan() {
-  const snapshot = fs.readFileSync(path.join(A.ROOT, 'catalogs/es/editions/seed-1-basic.json'));
-  if (digest(snapshot) !== registry.editions.find(edition => edition.file === 'seed-1-basic.json')?.sha256) {
+function readEdition(file) {
+  const snapshot = fs.readFileSync(path.join(A.ROOT, 'catalogs/es/editions',file));
+  if (digest(snapshot) !== registry.editions.find(edition => edition.file === file)?.sha256) {
     throw Error('L’edició castellana no coincideix amb el seu manifest.');
   }
-  const {jobs} = A.buildJobs(seed, options.manifest, options);
-  if (jobs.length !== 350) throw Error('El lot ha de tenir exactament 350 mots.');
+  return JSON.parse(snapshot);
+}
+function batch(expand = false) {
+  readEdition('seed-1-basic.json');
+  if (!expand) return {pack,options,edition:seed,count:350};
+  const edition = readEdition(expandedFile);
+  const basicIds = new Map(seed.catalog.entries.map(entry=>[entry.id,entry.text]));
+  const entries = edition.catalog.entries.filter(entry=>!basicIds.has(entry.id));
+  const retained = edition.catalog.entries.filter(entry=>basicIds.has(entry.id));
+  if (retained.length!==350 || retained.some(entry=>basicIds.get(entry.id)!==entry.text) ||
+      entries.length!==706 || edition.catalog.reviewedByTeacher!==true) {
+    throw Error('L’ampliació ha de conservar els 350 mots publicats i afegir-hi 706 mots revisats.');
+  }
+  const id = 'es-es-elvira-expansion-01';
+  const addition = {...pack,id,basePath:'assets/audio/es/'+id+'/',contentFingerprint:edition.catalog.fingerprint};
+  return {pack:addition,edition,count:706,options:{
+    seed:{catalog:{language:'es',entries}},
+    manifest:{schemaVersion:1,packs:[addition]},
+    pack:id,mode:'words'
+  }};
+}
+function plan(expand = false) {
+  const selected = batch(expand);
+  const {jobs} = A.buildJobs(selected.options.seed,selected.options.manifest,selected.options);
+  if (jobs.length!==selected.count) throw Error('Cobertura del lot incorrecta.');
   return jobs;
 }
 
@@ -64,8 +88,10 @@ function reuseSample(jobs) {
 }
 
 async function main(args) {
-  if (args.some(arg => !['--execute','--confirm-f0'].includes(arg))) throw Error('Arguments no admesos.');
-  const jobs = plan();
+  if (args.some(arg => !['--execute','--confirm-f0','--expansion'].includes(arg))) throw Error('Arguments no admesos.');
+  const expansion = args.includes('--expansion');
+  const selection = batch(expansion);
+  const jobs = plan(expansion);
   console.log(JSON.stringify(A.summarize(jobs)));
   if (!args.includes('--execute')) return;
   if (!args.includes('--confirm-f0')) throw Error('Cal confirmar F0.');
@@ -74,8 +100,8 @@ async function main(args) {
   const release = G.acquireLock(path.join(directory,'spanish-audio-runner.lock'));
   try {
     const env = loadAzureEnvironment({});
-    reuseSample(jobs);
-    const result = await G.runGeneration({...options, execute:true, confirmF0:true, retryTransient:true}, {
+    if (!expansion) reuseSample(jobs);
+    const result = await G.runGeneration({...selection.options, execute:true, confirmF0:true, retryTransient:true}, {
       env, fetch:globalThis.fetch, shouldStop
     });
     if (!result.ok) throw Error('Lot aturat: ' + result.reason);
@@ -87,4 +113,4 @@ if (require.main === module) main(process.argv.slice(2)).catch(error => {
   console.error(error.message);
   process.exitCode = 1;
 });
-module.exports = {pack, plan};
+module.exports = {pack, plan, batch};

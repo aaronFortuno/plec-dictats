@@ -1,0 +1,6345 @@
+{
+  "schemaVersion": 1,
+  "language": "es",
+  "mode": "words",
+  "profile": "es-es-yeismo-v1",
+  "revision": "es-2026-02-ampliacion.b982f1a9288ba430",
+  "entries": [
+    {
+      "id": "p-jjd391",
+      "text": "abecedario",
+      "ipa": "a.be.θe.ˈda.ɾjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-yqcqjf",
+      "text": "abeja",
+      "ipa": "a.ˈbe.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1iyl5nz",
+      "text": "abrazábamos",
+      "ipa": "a.bɾa.ˈθa.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1macgcr",
+      "text": "abrelatas",
+      "ipa": "a.bɾe.ˈla.tas",
+      "status": "proposed"
+    },
+    {
+      "id": "p-pz24mi",
+      "text": "abrigadas",
+      "ipa": "a.bɾi.ˈga.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-11pb9as",
+      "text": "abrir",
+      "ipa": "a.ˈbɾiɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-4uxkbi",
+      "text": "abrochadas",
+      "ipa": "a.bɾo.ˈt͡ʃa.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1jdkh3h",
+      "text": "absorbió",
+      "ipa": "ab.soɾ.ˈbjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1buxupa",
+      "text": "abuela",
+      "ipa": "a.ˈbwe.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1a708jg",
+      "text": "abuelo",
+      "ipa": "a.ˈbwe.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-12ijso0",
+      "text": "aceituna",
+      "ipa": "a.θej.ˈtu.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1nn4lji",
+      "text": "acento",
+      "ipa": "a.ˈθen.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-165tspu",
+      "text": "acera",
+      "ipa": "a.ˈθe.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15q6gzl",
+      "text": "acierto",
+      "ipa": "a.ˈθjeɾ.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1yfrofz",
+      "text": "acompañadas",
+      "ipa": "a.kom.pa.ˈɲa.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-sy4j1f",
+      "text": "actividad",
+      "ipa": "ak.ti.bi.ˈdad",
+      "status": "proposed"
+    },
+    {
+      "id": "p-oy8tyx",
+      "text": "actriz",
+      "ipa": "ak.ˈtɾiθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-xeguhe",
+      "text": "actuáis",
+      "ipa": "ak.ˈtwajs",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ai89y8",
+      "text": "acuarela",
+      "ipa": "a.kwa.ˈɾe.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qsj9qz",
+      "text": "acueducto",
+      "ipa": "a.kwe.ˈduk.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-rxf4xv",
+      "text": "además",
+      "ipa": "a.de.ˈmas",
+      "status": "proposed"
+    },
+    {
+      "id": "p-pxkzqb",
+      "text": "adorno",
+      "ipa": "a.ˈdoɾ.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-9kour4",
+      "text": "aeropuerto",
+      "ipa": "a.e.ɾo.ˈpweɾ.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-pog42k",
+      "text": "afeitar",
+      "ipa": "a.fej.ˈtaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-spagps",
+      "text": "agenda",
+      "ipa": "a.ˈxen.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1yps0cs",
+      "text": "agradecer",
+      "ipa": "a.gɾa.de.ˈθeɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qd69pq",
+      "text": "agua",
+      "ipa": "ˈa.gwa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1mh5hrx",
+      "text": "águila",
+      "ipa": "ˈa.gi.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19x6yql",
+      "text": "agujero",
+      "ipa": "a.gu.ˈxe.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qfk9ys",
+      "text": "ahí",
+      "ipa": "a.ˈi",
+      "status": "proposed"
+    },
+    {
+      "id": "p-14e4d5n",
+      "text": "ahora",
+      "ipa": "a.ˈo.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1jcq7x9",
+      "text": "ahorrábamos",
+      "ipa": "a.o.ˈra.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1pkp0i2",
+      "text": "alambre",
+      "ipa": "a.ˈlam.bɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1d0nuyl",
+      "text": "albergue",
+      "ipa": "al.ˈbeɾ.ge",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ugf1dr",
+      "text": "álbum",
+      "ipa": "ˈal.bum",
+      "status": "proposed"
+    },
+    {
+      "id": "p-9qfua6",
+      "text": "alcachofa",
+      "ipa": "al.ka.ˈt͡ʃo.fa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-stusv4",
+      "text": "álgebra",
+      "ipa": "ˈal.xe.bɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-vsbams",
+      "text": "algodón",
+      "ipa": "al.go.ˈdon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-te3bpm",
+      "text": "allí",
+      "ipa": "a.ˈʝi",
+      "status": "proposed"
+    },
+    {
+      "id": "p-nwbcv",
+      "text": "almacén",
+      "ipa": "al.ma.ˈθen",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1uhkq8c",
+      "text": "almendra",
+      "ipa": "al.ˈmen.dɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1pbgn1d",
+      "text": "almohada",
+      "ipa": "al.mo.ˈa.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1snra1t",
+      "text": "alquiler",
+      "ipa": "al.ki.ˈleɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1jfkntp",
+      "text": "altavoz",
+      "ipa": "al.ta.ˈboθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1j7if9q",
+      "text": "amable",
+      "ipa": "a.ˈma.ble",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1gtazgl",
+      "text": "amarillo",
+      "ipa": "a.ma.ˈɾi.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1erobz9",
+      "text": "ambulancia",
+      "ipa": "am.bu.ˈlan.θja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1e21541",
+      "text": "amiga",
+      "ipa": "a.ˈmi.ga",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ce3iy7",
+      "text": "amigo",
+      "ipa": "a.ˈmi.go",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1k8zgx7",
+      "text": "amistad",
+      "ipa": "a.mis.ˈtad",
+      "status": "proposed"
+    },
+    {
+      "id": "p-5zcxdh",
+      "text": "anacardo",
+      "ipa": "a.na.ˈkaɾ.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1thm3gj",
+      "text": "ancla",
+      "ipa": "ˈan.kla",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1oozahh",
+      "text": "anécdota",
+      "ipa": "a.ˈnek.do.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-7aginz",
+      "text": "anillo",
+      "ipa": "a.ˈni.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-itevn3",
+      "text": "antigüedad",
+      "ipa": "an.ti.gwe.ˈdad",
+      "status": "proposed"
+    },
+    {
+      "id": "p-z9fs42",
+      "text": "apacigüéis",
+      "ipa": "a.pa.θi.ˈgwejs",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1cl34yi",
+      "text": "apellido",
+      "ipa": "a.pe.ˈʝi.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-mfzdt5",
+      "text": "aperitivo",
+      "ipa": "a.pe.ɾi.ˈti.bo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-la88ze",
+      "text": "aprendimos",
+      "ipa": "a.pɾen.ˈdi.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1kf03oc",
+      "text": "aquí",
+      "ipa": "a.ˈki",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1uw8bto",
+      "text": "araña",
+      "ipa": "a.ˈɾa.ɲa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1oixx48",
+      "text": "árbol",
+      "ipa": "ˈaɾ.bol",
+      "status": "proposed"
+    },
+    {
+      "id": "p-13mkm6f",
+      "text": "ardilla",
+      "ipa": "aɾ.ˈdi.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19og4un",
+      "text": "arena",
+      "ipa": "a.ˈɾe.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1fjhjcd",
+      "text": "armario",
+      "ipa": "aɾ.ˈma.ɾjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1o7vv7n",
+      "text": "arqueología",
+      "ipa": "aɾ.ke.o.lo.ˈxi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-l4pksa",
+      "text": "arroz",
+      "ipa": "a.ˈroθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-dtzj9g",
+      "text": "artesanía",
+      "ipa": "aɾ.te.sa.ˈni.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1w963ct",
+      "text": "artículo",
+      "ipa": "aɾ.ˈti.ku.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-54hn2",
+      "text": "ascensor",
+      "ipa": "as.θen.ˈsoɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-187hdbp",
+      "text": "asiento",
+      "ipa": "a.ˈsjen.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ttwq8y",
+      "text": "astronauta",
+      "ipa": "as.tɾo.ˈnaw.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-7nyju0",
+      "text": "aterrizaste",
+      "ipa": "a.te.ri.ˈθas.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1jbz8c2",
+      "text": "atletismo",
+      "ipa": "at.le.ˈtis.mo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-29l0vm",
+      "text": "atmósfera",
+      "ipa": "at.ˈmos.fe.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1x48uo0",
+      "text": "atravesaron",
+      "ipa": "a.tɾa.be.ˈsa.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1sbxbu9",
+      "text": "aula",
+      "ipa": "ˈaw.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18s3ec4",
+      "text": "autobús",
+      "ipa": "aw.to.ˈbus",
+      "status": "proposed"
+    },
+    {
+      "id": "p-mn4xxy",
+      "text": "autopista",
+      "ipa": "aw.to.ˈpis.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1gvbsch",
+      "text": "avanzábamos",
+      "ipa": "a.ban.ˈθa.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-rhvn0k",
+      "text": "avenida",
+      "ipa": "a.be.ˈni.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-3p15ek",
+      "text": "averiguábamos",
+      "ipa": "a.be.ɾi.ˈgwa.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-16mw3d7",
+      "text": "averigüéis",
+      "ipa": "a.be.ɾi.ˈgwejs",
+      "status": "proposed"
+    },
+    {
+      "id": "p-rn57c7",
+      "text": "averigüen",
+      "ipa": "a.be.ˈɾi.gwen",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ang9du",
+      "text": "avestruz",
+      "ipa": "a.bes.ˈtɾuθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1uc30pz",
+      "text": "avión",
+      "ipa": "a.ˈbjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1tppums",
+      "text": "aviso",
+      "ipa": "a.ˈbi.so",
+      "status": "proposed"
+    },
+    {
+      "id": "p-16h0j6h",
+      "text": "ayer",
+      "ipa": "a.ˈʝeɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-23jza0",
+      "text": "ayudar",
+      "ipa": "a.ʝu.ˈdaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-a5jjua",
+      "text": "azotea",
+      "ipa": "a.θo.ˈte.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-jpjz6r",
+      "text": "azúcar",
+      "ipa": "a.ˈθu.kaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-bahgj6",
+      "text": "azul",
+      "ipa": "a.ˈθul",
+      "status": "proposed"
+    },
+    {
+      "id": "p-5svupy",
+      "text": "azulejo",
+      "ipa": "a.θu.ˈle.xo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18jcoyj",
+      "text": "bailar",
+      "ipa": "baj.ˈlaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-yg3g5z",
+      "text": "bailasteis",
+      "ipa": "baj.ˈlas.tejs",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1d2tn19",
+      "text": "balanza",
+      "ipa": "ba.ˈlan.θa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1n106kd",
+      "text": "balcón",
+      "ipa": "bal.ˈkon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1xtf0wx",
+      "text": "ballena",
+      "ipa": "ba.ˈʝe.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-81us5z",
+      "text": "bandeja",
+      "ipa": "ban.ˈde.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cjyq27",
+      "text": "bandera",
+      "ipa": "ban.ˈde.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1vwwqc9",
+      "text": "baño",
+      "ipa": "ˈba.ɲo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1743vdx",
+      "text": "barrera",
+      "ipa": "ba.ˈre.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-pat3k1",
+      "text": "barrio",
+      "ipa": "ˈba.rjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-otqfpq",
+      "text": "barro",
+      "ipa": "ˈba.ro",
+      "status": "proposed"
+    },
+    {
+      "id": "p-yssiak",
+      "text": "basura",
+      "ipa": "ba.ˈsu.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-122ypol",
+      "text": "batalla",
+      "ipa": "ba.ˈta.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1tw9yc2",
+      "text": "batería",
+      "ipa": "ba.te.ˈɾi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-5ih8yr",
+      "text": "baúl",
+      "ipa": "ba.ˈul",
+      "status": "proposed"
+    },
+    {
+      "id": "p-uwt2mp",
+      "text": "bautizaron",
+      "ipa": "baw.ti.ˈθa.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1o66dd4",
+      "text": "bebé",
+      "ipa": "be.ˈbe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1j4sciy",
+      "text": "beber",
+      "ipa": "be.ˈbeɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-smj312",
+      "text": "bendijeron",
+      "ipa": "ben.di.ˈxe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15qqple",
+      "text": "berenjena",
+      "ipa": "be.ɾen.ˈxe.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-hhdhub",
+      "text": "beso",
+      "ipa": "ˈbe.so",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ztfnt7",
+      "text": "biberón",
+      "ipa": "bi.be.ˈɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1jay6xk",
+      "text": "biblioteca",
+      "ipa": "bi.bljo.ˈte.ka",
+      "status": "proposed"
+    },
+    {
+      "id": "p-11s7u88",
+      "text": "bichos",
+      "ipa": "ˈbi.t͡ʃos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1fi2x2a",
+      "text": "bicicleta",
+      "ipa": "bi.θi.ˈkle.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-xmxdwi",
+      "text": "bien",
+      "ipa": "ˈbjen",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cgt434",
+      "text": "bigote",
+      "ipa": "bi.ˈgo.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-vfd1ei",
+      "text": "bilingüe",
+      "ipa": "bi.ˈlin.gwe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-12xvqxn",
+      "text": "bilingüismo",
+      "ipa": "bi.lin.ˈgwis.mo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-2my68j",
+      "text": "billete",
+      "ipa": "bi.ˈʝe.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-28bbtv",
+      "text": "biodiversidad",
+      "ipa": "bjo.di.beɾ.si.ˈdad",
+      "status": "proposed"
+    },
+    {
+      "id": "p-fyx8i1",
+      "text": "bizcocho",
+      "ipa": "biθ.ˈko.t͡ʃo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-aga4df",
+      "text": "blanco",
+      "ipa": "ˈblan.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-140d3xx",
+      "text": "blusa",
+      "ipa": "ˈblu.sa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1lqmi9t",
+      "text": "bocadillo",
+      "ipa": "bo.ka.ˈdi.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1372ufm",
+      "text": "bocina",
+      "ipa": "bo.ˈθi.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-a11eaj",
+      "text": "bolígrafo",
+      "ipa": "bo.ˈli.gɾa.fo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ozvfu",
+      "text": "bolsillo",
+      "ipa": "bol.ˈsi.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-pw60a0",
+      "text": "bombero",
+      "ipa": "bom.ˈbe.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1a2o1pa",
+      "text": "bombilla",
+      "ipa": "bom.ˈbi.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-e30rdz",
+      "text": "bonito",
+      "ipa": "bo.ˈni.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-143hdyb",
+      "text": "borrador",
+      "ipa": "bo.ra.ˈdoɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-gtrdu5",
+      "text": "bosque",
+      "ipa": "ˈbos.ke",
+      "status": "proposed"
+    },
+    {
+      "id": "p-y2d8vg",
+      "text": "bostezo",
+      "ipa": "bos.ˈte.θo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-43k5yg",
+      "text": "bostezó",
+      "ipa": "bos.te.ˈθo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-me181f",
+      "text": "botella",
+      "ipa": "bo.ˈte.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-kqugks",
+      "text": "botón",
+      "ipa": "bo.ˈton",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1crls14",
+      "text": "brazo",
+      "ipa": "ˈbɾa.θo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1wbvp0g",
+      "text": "brújula",
+      "ipa": "ˈbɾu.xu.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-fqqthb",
+      "text": "bucearon",
+      "ipa": "bu.θe.ˈa.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1spjqpf",
+      "text": "bueno",
+      "ipa": "ˈbwe.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-gt5s3h",
+      "text": "bufanda",
+      "ipa": "bu.ˈfan.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1f1katt",
+      "text": "búho",
+      "ipa": "ˈbu.o",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cwi5xd",
+      "text": "burbuja",
+      "ipa": "buɾ.ˈbu.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-o9hg3k",
+      "text": "buscar",
+      "ipa": "bus.ˈkaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-rn5oj4",
+      "text": "buzón",
+      "ipa": "bu.ˈθon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1pylpdi",
+      "text": "caballo",
+      "ipa": "ka.ˈba.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-oij02o",
+      "text": "cabecera",
+      "ipa": "ka.be.ˈθe.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1go3qd5",
+      "text": "cabíamos",
+      "ipa": "ka.ˈbi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-w6bpbj",
+      "text": "cabra",
+      "ipa": "ˈka.bɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1xh7x6o",
+      "text": "cabrían",
+      "ipa": "ka.ˈbɾi.an",
+      "status": "proposed"
+    },
+    {
+      "id": "p-con9x5",
+      "text": "cacahuete",
+      "ipa": "ka.ka.ˈwe.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-10rcyvp",
+      "text": "cachorro",
+      "ipa": "ka.ˈt͡ʃo.ro",
+      "status": "proposed"
+    },
+    {
+      "id": "p-171hp4f",
+      "text": "cada",
+      "ipa": "ˈka.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-c074gy",
+      "text": "cadena",
+      "ipa": "ka.ˈde.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-8n3hpl",
+      "text": "café",
+      "ipa": "ka.ˈfe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cncy4g",
+      "text": "cajera",
+      "ipa": "ka.ˈxe.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-5840g3",
+      "text": "cajón",
+      "ipa": "ka.ˈxon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-tgdakz",
+      "text": "calabaza",
+      "ipa": "ka.la.ˈba.θa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1hrwbfj",
+      "text": "calcetín",
+      "ipa": "kal.θe.ˈtin",
+      "status": "proposed"
+    },
+    {
+      "id": "p-16n4cye",
+      "text": "calendario",
+      "ipa": "ka.len.ˈda.ɾjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-172jc4v",
+      "text": "caligrafía",
+      "ipa": "ka.li.gɾa.ˈfi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-brp27y",
+      "text": "callaron",
+      "ipa": "ka.ˈʝa.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qsh8nj",
+      "text": "calle",
+      "ipa": "ˈka.ʝe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lnwkla",
+      "text": "callejón",
+      "ipa": "ka.ʝe.ˈxon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-13oy6p6",
+      "text": "cama",
+      "ipa": "ˈka.ma",
+      "status": "proposed"
+    },
+    {
+      "id": "p-i6k69d",
+      "text": "cambiáis",
+      "ipa": "kam.ˈbjajs",
+      "status": "proposed"
+    },
+    {
+      "id": "p-zizxsk",
+      "text": "cambios",
+      "ipa": "ˈkam.bjos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-11qrawx",
+      "text": "camino",
+      "ipa": "ka.ˈmi.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-11lrdbb",
+      "text": "camión",
+      "ipa": "ka.ˈmjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-syezax",
+      "text": "camiseta",
+      "ipa": "ka.mi.ˈse.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-y5no7h",
+      "text": "campana",
+      "ipa": "kam.ˈpa.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-frxz3a",
+      "text": "campo",
+      "ipa": "ˈkam.po",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cndw23",
+      "text": "canción",
+      "ipa": "kan.ˈθjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1cis481",
+      "text": "cangrejo",
+      "ipa": "kan.ˈgɾe.xo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1i4osgy",
+      "text": "canoa",
+      "ipa": "ka.ˈno.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1whszig",
+      "text": "cantabais",
+      "ipa": "kan.ˈta.bajs",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ncz9zl",
+      "text": "cantar",
+      "ipa": "kan.ˈtaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1b5xp5g",
+      "text": "cantimplora",
+      "ipa": "kan.tim.ˈplo.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lyaoqh",
+      "text": "caparazón",
+      "ipa": "ka.pa.ɾa.ˈθon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-28d4nd",
+      "text": "caracol",
+      "ipa": "ka.ɾa.ˈkol",
+      "status": "proposed"
+    },
+    {
+      "id": "p-rgc76a",
+      "text": "caramelo",
+      "ipa": "ka.ɾa.ˈme.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-biy3o1",
+      "text": "carbón",
+      "ipa": "kaɾ.ˈbon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qhnrww",
+      "text": "caricia",
+      "ipa": "ka.ˈɾi.θja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18ejznz",
+      "text": "carne",
+      "ipa": "ˈkaɾ.ne",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ejhrge",
+      "text": "carpeta",
+      "ipa": "kaɾ.ˈpe.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-amusia",
+      "text": "cartero",
+      "ipa": "kaɾ.ˈte.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-199k97f",
+      "text": "cartón",
+      "ipa": "kaɾ.ˈton",
+      "status": "proposed"
+    },
+    {
+      "id": "p-14ryuvk",
+      "text": "casa",
+      "ipa": "ˈka.sa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15zqtkc",
+      "text": "cáscara",
+      "ipa": "ˈkas.ka.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-16zvofc",
+      "text": "casi",
+      "ipa": "ˈka.si",
+      "status": "proposed"
+    },
+    {
+      "id": "p-fetbyo",
+      "text": "castaña",
+      "ipa": "kas.ˈta.ɲa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-s6zc7b",
+      "text": "castillo",
+      "ipa": "kas.ˈti.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-3zsb40",
+      "text": "catálogo",
+      "ipa": "ka.ˈta.lo.go",
+      "status": "proposed"
+    },
+    {
+      "id": "p-160t8ft",
+      "text": "cayeron",
+      "ipa": "ka.ˈʝe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-gof4zf",
+      "text": "cazuela",
+      "ipa": "ka.ˈθwe.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1xybfsy",
+      "text": "cebada",
+      "ipa": "θe.ˈba.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qjr08i",
+      "text": "cebolla",
+      "ipa": "θe.ˈbo.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-rkk14d",
+      "text": "cena",
+      "ipa": "ˈθe.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ru2fap",
+      "text": "centro",
+      "ipa": "ˈθen.tɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1edtggw",
+      "text": "cepillo",
+      "ipa": "θe.ˈpi.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qmqm3a",
+      "text": "cerca",
+      "ipa": "ˈθeɾ.ka",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1jwlmbo",
+      "text": "cereza",
+      "ipa": "θe.ˈɾe.θa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-16se69v",
+      "text": "cerrar",
+      "ipa": "θe.ˈraɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-17gg5ui",
+      "text": "césped",
+      "ipa": "ˈθes.ped",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1m43vjv",
+      "text": "champú",
+      "ipa": "t͡ʃam.ˈpu",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1fsjjnk",
+      "text": "chaqueta",
+      "ipa": "t͡ʃa.ˈke.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-16ttz7a",
+      "text": "charco",
+      "ipa": "ˈt͡ʃaɾ.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-feyre3",
+      "text": "chasquear",
+      "ipa": "t͡ʃas.ke.ˈaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ztp6qq",
+      "text": "chica",
+      "ipa": "ˈt͡ʃi.ka",
+      "status": "proposed"
+    },
+    {
+      "id": "p-10doe4o",
+      "text": "chico",
+      "ipa": "ˈt͡ʃi.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-b7ptm8",
+      "text": "chimenea",
+      "ipa": "t͡ʃi.me.ˈne.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19qfbgg",
+      "text": "chimpancé",
+      "ipa": "t͡ʃim.pan.ˈθe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-eyo9q4",
+      "text": "chispa",
+      "ipa": "ˈt͡ʃis.pa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-dmcgr6",
+      "text": "chocolate",
+      "ipa": "t͡ʃo.ko.ˈla.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1920ht7",
+      "text": "chorreaba",
+      "ipa": "t͡ʃo.re.ˈa.ba",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1q9mnku",
+      "text": "chubasquero",
+      "ipa": "t͡ʃu.bas.ˈke.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1og131d",
+      "text": "cicatriz",
+      "ipa": "θi.ka.ˈtɾiθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1lm7guq",
+      "text": "cielo",
+      "ipa": "ˈθje.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1gqo1su",
+      "text": "ciencia",
+      "ipa": "ˈθjen.θja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cq8k8j",
+      "text": "cifra",
+      "ipa": "ˈθi.fɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18nf4sw",
+      "text": "cigüeña",
+      "ipa": "θi.ˈgwe.ɲa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1lrjgok",
+      "text": "cigüeñal",
+      "ipa": "θi.gwe.ˈɲal",
+      "status": "proposed"
+    },
+    {
+      "id": "p-2vbbrg",
+      "text": "cinturón",
+      "ipa": "θin.tu.ˈɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1o5y58l",
+      "text": "circunferencia",
+      "ipa": "θiɾ.kun.fe.ˈɾen.θja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1fas77v",
+      "text": "ciruela",
+      "ipa": "θi.ˈɾwe.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1h58q6q",
+      "text": "civilización",
+      "ipa": "θi.bi.li.θa.ˈθjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-y5i8sq",
+      "text": "clase",
+      "ipa": "ˈkla.se",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1o42rg2",
+      "text": "clavija",
+      "ipa": "kla.ˈbi.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-bl2ctf",
+      "text": "clínica",
+      "ipa": "ˈkli.ni.ka",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1iq2qux",
+      "text": "clorofila",
+      "ipa": "klo.ɾo.ˈfi.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1tu8st8",
+      "text": "coche",
+      "ipa": "ˈko.t͡ʃe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1iqdner",
+      "text": "cocina",
+      "ipa": "ko.ˈθi.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1xx3xyf",
+      "text": "coexistían",
+      "ipa": "ko.ek.sis.ˈti.an",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1mpq3bi",
+      "text": "cohete",
+      "ipa": "ko.ˈe.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1vmkqar",
+      "text": "cojín",
+      "ipa": "ko.ˈxin",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1vz4oj2",
+      "text": "colegio",
+      "ipa": "ko.ˈle.xjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1js344x",
+      "text": "collar",
+      "ipa": "ko.ˈʝaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-12dh5i9",
+      "text": "colmena",
+      "ipa": "kol.ˈme.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-yjld0n",
+      "text": "color",
+      "ipa": "ko.ˈloɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19v5bep",
+      "text": "columna",
+      "ipa": "ko.ˈlum.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-riz4qx",
+      "text": "comedor",
+      "ipa": "ko.me.ˈdoɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1lm3ksz",
+      "text": "comenzábamos",
+      "ipa": "ko.men.ˈθa.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ptc9cu",
+      "text": "comer",
+      "ipa": "ko.ˈmeɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1howvb3",
+      "text": "cometa",
+      "ipa": "ko.ˈme.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-emshjv",
+      "text": "comida",
+      "ipa": "ko.ˈmi.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-bluwsp",
+      "text": "compañera",
+      "ipa": "kom.pa.ˈɲe.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-edqxqf",
+      "text": "compañero",
+      "ipa": "kom.pa.ˈɲe.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-12wzm7b",
+      "text": "compartir",
+      "ipa": "kom.paɾ.ˈtiɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1f8pufn",
+      "text": "compás",
+      "ipa": "kom.ˈpas",
+      "status": "proposed"
+    },
+    {
+      "id": "p-8zoro0",
+      "text": "concurso",
+      "ipa": "kon.ˈkuɾ.so",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ys90fh",
+      "text": "condujeron",
+      "ipa": "kon.du.ˈxe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1rwjq24",
+      "text": "conejo",
+      "ipa": "ko.ˈne.xo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1i54wnw",
+      "text": "congelador",
+      "ipa": "kon.xe.la.ˈdoɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1l0nf3l",
+      "text": "conserjería",
+      "ipa": "kon.seɾ.xe.ˈɾi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cg69k2",
+      "text": "construcción",
+      "ipa": "kons.tɾuk.ˈθjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1hgv9zn",
+      "text": "construyeron",
+      "ipa": "kons.tɾu.ˈʝe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ch2z9v",
+      "text": "contar",
+      "ipa": "kon.ˈtaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-up42u4",
+      "text": "contenta",
+      "ipa": "kon.ˈten.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1st1wvc",
+      "text": "contigüidad",
+      "ipa": "kon.ti.gwi.ˈdad",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18h2fxt",
+      "text": "contrarreloj",
+      "ipa": "kon.tɾa.re.ˈlox",
+      "status": "proposed"
+    },
+    {
+      "id": "p-m6gjo9",
+      "text": "contribuyeron",
+      "ipa": "kon.tɾi.bu.ˈʝe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1mz2n9l",
+      "text": "convencisteis",
+      "ipa": "kon.ben.ˈθis.tejs",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1t25dzj",
+      "text": "cordillera",
+      "ipa": "koɾ.di.ˈʝe.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-10j76t5",
+      "text": "cordón",
+      "ipa": "koɾ.ˈdon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-137khlt",
+      "text": "correr",
+      "ipa": "ko.ˈreɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1afzh6p",
+      "text": "corríamos",
+      "ipa": "ko.ˈri.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-95dau7",
+      "text": "corrigieron",
+      "ipa": "ko.ri.ˈxje.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qmrbva",
+      "text": "cortina",
+      "ipa": "koɾ.ˈti.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-2psali",
+      "text": "cosíamos",
+      "ipa": "ko.ˈsi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15v8eat",
+      "text": "costura",
+      "ipa": "kos.ˈtu.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1amz4rh",
+      "text": "creció",
+      "ipa": "kɾe.ˈθjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-c1xbn4",
+      "text": "cremallera",
+      "ipa": "kɾe.ma.ˈʝe.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1024qi5",
+      "text": "creyeron",
+      "ipa": "kɾe.ˈʝe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-13p5hr3",
+      "text": "cría",
+      "ipa": "ˈkɾi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1vv5fe6",
+      "text": "crujían",
+      "ipa": "kɾu.ˈxi.an",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1mxc0az",
+      "text": "crustáceo",
+      "ipa": "kɾus.ˈta.θe.o",
+      "status": "proposed"
+    },
+    {
+      "id": "p-zbr4hl",
+      "text": "cuaderno",
+      "ipa": "kwa.ˈdeɾ.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ige72n",
+      "text": "cuadrilátero",
+      "ipa": "kwa.dɾi.ˈla.te.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-upkntu",
+      "text": "cuadro",
+      "ipa": "ˈkwa.dɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1y7t65v",
+      "text": "cuchara",
+      "ipa": "ku.ˈt͡ʃa.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-4jcjlq",
+      "text": "cucharilla",
+      "ipa": "ku.t͡ʃa.ˈɾi.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1u3uuou",
+      "text": "cuestión",
+      "ipa": "kwes.ˈtjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1mpcpje",
+      "text": "cueva",
+      "ipa": "ˈkwe.ba",
+      "status": "proposed"
+    },
+    {
+      "id": "p-vv9tl6",
+      "text": "cuidábamos",
+      "ipa": "kwi.ˈda.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1csamna",
+      "text": "danza",
+      "ipa": "ˈdan.θa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1q8sl0k",
+      "text": "dátil",
+      "ipa": "ˈda.til",
+      "status": "proposed"
+    },
+    {
+      "id": "p-yyll98",
+      "text": "dedujeron",
+      "ipa": "de.du.ˈxe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1kogbhc",
+      "text": "dejábamos",
+      "ipa": "de.ˈxa.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1x7tfie",
+      "text": "delfín",
+      "ipa": "del.ˈfin",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1e4066y",
+      "text": "dentista",
+      "ipa": "den.ˈtis.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-fmc18z",
+      "text": "deporte",
+      "ipa": "de.ˈpoɾ.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1293400",
+      "text": "derrumbe",
+      "ipa": "de.ˈrum.be",
+      "status": "proposed"
+    },
+    {
+      "id": "p-a2ghqb",
+      "text": "desafío",
+      "ipa": "de.sa.ˈfi.o",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1hd8vaf",
+      "text": "desagüe",
+      "ipa": "de.ˈsa.gwe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1tcgb9d",
+      "text": "desahucio",
+      "ipa": "de.ˈsaw.θjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1l1lpid",
+      "text": "desastre",
+      "ipa": "de.ˈsas.tɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1prg9pa",
+      "text": "desayuno",
+      "ipa": "de.sa.ˈʝu.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1wvmnht",
+      "text": "descendíamos",
+      "ipa": "des.θen.ˈdi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-xu6kq9",
+      "text": "describíamos",
+      "ipa": "des.kɾi.ˈbi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-gfbg3v",
+      "text": "descubriste",
+      "ipa": "des.ku.ˈbɾis.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ohoqt3",
+      "text": "desenterrar",
+      "ipa": "de.sen.te.ˈraɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-4lmmxp",
+      "text": "despabilar",
+      "ipa": "des.pa.bi.ˈlaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qk24hb",
+      "text": "despertaron",
+      "ipa": "des.peɾ.ˈta.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1acc4h7",
+      "text": "después",
+      "ipa": "des.ˈpwes",
+      "status": "proposed"
+    },
+    {
+      "id": "p-zk255y",
+      "text": "día",
+      "ipa": "ˈdi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1cgj8us",
+      "text": "diagnóstico",
+      "ipa": "djag.ˈnos.ti.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-e9kgrb",
+      "text": "dibujar",
+      "ipa": "di.bu.ˈxaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-df6w8f",
+      "text": "dibujaste",
+      "ipa": "di.bu.ˈxas.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1opqd3l",
+      "text": "dibujo",
+      "ipa": "di.ˈbu.xo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-smvn22",
+      "text": "diccionario",
+      "ipa": "dik.θjo.ˈna.ɾjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-rvxknc",
+      "text": "diferente",
+      "ipa": "di.fe.ˈɾen.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lmifli",
+      "text": "difícil",
+      "ipa": "di.ˈfi.θil",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1n36ips",
+      "text": "digerir",
+      "ipa": "di.xe.ˈɾiɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-euv56l",
+      "text": "dijeron",
+      "ipa": "di.ˈxe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-175zuzo",
+      "text": "diptongo",
+      "ipa": "dip.ˈton.go",
+      "status": "proposed"
+    },
+    {
+      "id": "p-h9636i",
+      "text": "dirigíamos",
+      "ipa": "di.ɾi.ˈxi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1nnsujb",
+      "text": "disfraz",
+      "ipa": "dis.ˈfɾaθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-gu1h5o",
+      "text": "disfrazados",
+      "ipa": "dis.fɾa.ˈθa.dos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-mck0uy",
+      "text": "distancia",
+      "ipa": "dis.ˈtan.θja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-k88md5",
+      "text": "distribuyeron",
+      "ipa": "dis.tɾi.bu.ˈʝe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-fmwrqv",
+      "text": "división",
+      "ipa": "di.bi.ˈsjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19q6by6",
+      "text": "dobladas",
+      "ipa": "do.ˈbla.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-n2gie7",
+      "text": "dormir",
+      "ipa": "doɾ.ˈmiɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-nj8dyv",
+      "text": "dragón",
+      "ipa": "dɾa.ˈgon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-8aekxv",
+      "text": "ducha",
+      "ipa": "ˈdu.t͡ʃa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1lu6v26",
+      "text": "edificio",
+      "ipa": "e.di.ˈfi.θjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1cg13ep",
+      "text": "ejercicio",
+      "ipa": "e.xeɾ.ˈθi.θjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qvvz6s",
+      "text": "eléctrico",
+      "ipa": "e.ˈlek.tɾi.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-wermow",
+      "text": "elegíamos",
+      "ipa": "e.le.ˈxi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-169zao9",
+      "text": "embalse",
+      "ipa": "em.ˈbal.se",
+      "status": "proposed"
+    },
+    {
+      "id": "p-196meu8",
+      "text": "embrión",
+      "ipa": "em.ˈbɾjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-w1i5dy",
+      "text": "embudo",
+      "ipa": "em.ˈbu.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1rf6zez",
+      "text": "empanada",
+      "ipa": "em.pa.ˈna.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ax5m9n",
+      "text": "empujaron",
+      "ipa": "em.pu.ˈxa.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-7p7eay",
+      "text": "encajadas",
+      "ipa": "en.ka.ˈxa.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-o6yv7m",
+      "text": "enchufe",
+      "ipa": "en.ˈt͡ʃu.fe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1muy3y1",
+      "text": "encima",
+      "ipa": "en.ˈθi.ma",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1wwpr9r",
+      "text": "encontrabais",
+      "ipa": "en.kon.ˈtɾa.bajs",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1gcnanf",
+      "text": "energía",
+      "ipa": "e.neɾ.ˈxi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-e1i7mq",
+      "text": "enjabonar",
+      "ipa": "en.xa.bo.ˈnaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1dc8l8k",
+      "text": "enjambre",
+      "ipa": "en.ˈxam.bɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-14mxb6p",
+      "text": "enjuagábamos",
+      "ipa": "en.xwa.ˈga.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1g5ucl6",
+      "text": "enrollaron",
+      "ipa": "en.ro.ˈʝa.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-hz4k99",
+      "text": "ensayar",
+      "ipa": "en.sa.ˈʝaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1wbbuz5",
+      "text": "enseguida",
+      "ipa": "en.se.ˈgi.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-13axc4p",
+      "text": "enseñábamos",
+      "ipa": "en.se.ˈɲa.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-brvb5h",
+      "text": "entonces",
+      "ipa": "en.ˈton.θes",
+      "status": "proposed"
+    },
+    {
+      "id": "p-vc7vzq",
+      "text": "envergadura",
+      "ipa": "en.beɾ.ga.ˈdu.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-f1zk5t",
+      "text": "enviasteis",
+      "ipa": "en.ˈbjas.tejs",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ponld5",
+      "text": "envoltorio",
+      "ipa": "en.bol.ˈto.ɾjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lp3ap",
+      "text": "equipo",
+      "ipa": "e.ˈki.po",
+      "status": "proposed"
+    },
+    {
+      "id": "p-13i5s2l",
+      "text": "equivocadas",
+      "ipa": "e.ki.bo.ˈka.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qczkil",
+      "text": "erosión",
+      "ipa": "e.ɾo.ˈsjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1gzxjci",
+      "text": "escalera",
+      "ipa": "es.ka.ˈle.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ac8diz",
+      "text": "escarabajo",
+      "ipa": "es.ka.ɾa.ˈba.xo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-kt6fj5",
+      "text": "escena",
+      "ipa": "es.ˈθe.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qxvzsv",
+      "text": "escoba",
+      "ipa": "es.ˈko.ba",
+      "status": "proposed"
+    },
+    {
+      "id": "p-asl7pa",
+      "text": "escogíamos",
+      "ipa": "es.ko.ˈxi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-13e8fub",
+      "text": "escribieron",
+      "ipa": "es.kɾi.ˈbje.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-9ykhc9",
+      "text": "escribir",
+      "ipa": "es.kɾi.ˈbiɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-12pzqn0",
+      "text": "escuchar",
+      "ipa": "es.ku.ˈt͡ʃaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-o62uvt",
+      "text": "escudo",
+      "ipa": "es.ˈku.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1nmd1ly",
+      "text": "esdrújula",
+      "ipa": "es.ˈdɾu.xu.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cuy9jb",
+      "text": "esguince",
+      "ipa": "es.ˈgin.θe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-jtnd06",
+      "text": "esófago",
+      "ipa": "e.ˈso.fa.go",
+      "status": "proposed"
+    },
+    {
+      "id": "p-x2qgo0",
+      "text": "espacio",
+      "ipa": "es.ˈpa.θjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1io4nka",
+      "text": "espantapájaros",
+      "ipa": "es.pan.ta.ˈpa.xa.ɾos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-59q69g",
+      "text": "espejo",
+      "ipa": "es.ˈpe.xo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-vbzd9w",
+      "text": "esperar",
+      "ipa": "es.pe.ˈɾaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-erdvno",
+      "text": "esponja",
+      "ipa": "es.ˈpon.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-k8vtoi",
+      "text": "estación",
+      "ipa": "es.ta.ˈθjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1nefi6l",
+      "text": "estalactita",
+      "ipa": "es.ta.lak.ˈti.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-itxs7k",
+      "text": "estanque",
+      "ipa": "es.ˈtan.ke",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ymmc0o",
+      "text": "estrella",
+      "ipa": "es.ˈtɾe.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ol0vv6",
+      "text": "estudiabais",
+      "ipa": "es.tu.ˈdja.bajs",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lz5xiz",
+      "text": "estudiar",
+      "ipa": "es.tu.ˈdjaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ucvd3w",
+      "text": "estuviste",
+      "ipa": "es.tu.ˈbis.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1or0pwm",
+      "text": "eucalipto",
+      "ipa": "ew.ka.ˈlip.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ivoaix",
+      "text": "exagerar",
+      "ipa": "ek.sa.xe.ˈɾaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ppwbn8",
+      "text": "examen",
+      "ipa": "ek.ˈsa.men",
+      "status": "proposed"
+    },
+    {
+      "id": "p-309ar6",
+      "text": "excavar",
+      "ipa": "eks.ka.ˈbaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-dxl4ac",
+      "text": "excluíamos",
+      "ipa": "eks.ˈklwi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-hcrt9i",
+      "text": "excluyeron",
+      "ipa": "eks.klu.ˈʝe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-10t81so",
+      "text": "excursión",
+      "ipa": "eks.kuɾ.ˈsjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-tumqgc",
+      "text": "exhalación",
+      "ipa": "ek.sa.la.ˈθjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-z863rt",
+      "text": "éxito",
+      "ipa": "ˈek.si.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1tmgrnv",
+      "text": "exótico",
+      "ipa": "ek.ˈso.ti.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1y8pn9m",
+      "text": "explicábamos",
+      "ipa": "eks.pli.ˈka.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-kfppfy",
+      "text": "explicar",
+      "ipa": "eks.pli.ˈkaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qrnu7n",
+      "text": "explorar",
+      "ipa": "eks.plo.ˈɾaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-j9pgtk",
+      "text": "fábrica",
+      "ipa": "ˈfa.bɾi.ka",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1lsongj",
+      "text": "fábula",
+      "ipa": "ˈfa.bu.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-sdoh8i",
+      "text": "fachada",
+      "ipa": "fa.ˈt͡ʃa.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1p3nvu3",
+      "text": "fácil",
+      "ipa": "ˈfa.θil",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1rbusb4",
+      "text": "falda",
+      "ipa": "ˈfal.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-wi9rib",
+      "text": "familia",
+      "ipa": "fa.ˈmi.lja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-f4ru7u",
+      "text": "faro",
+      "ipa": "ˈfa.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-rvum9l",
+      "text": "farola",
+      "ipa": "fa.ˈɾo.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-gg7e71",
+      "text": "fecha",
+      "ipa": "ˈfe.t͡ʃa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-l3m1la",
+      "text": "felicitamos",
+      "ipa": "fe.li.θi.ˈta.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-11r4hsk",
+      "text": "feliz",
+      "ipa": "fe.ˈliθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-pu7237",
+      "text": "ferrocarril",
+      "ipa": "fe.ro.ka.ˈril",
+      "status": "proposed"
+    },
+    {
+      "id": "p-gdyg4s",
+      "text": "figura",
+      "ipa": "fi.ˈgu.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-wlnlxn",
+      "text": "flauta",
+      "ipa": "ˈflaw.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qived1",
+      "text": "flecha",
+      "ipa": "ˈfle.t͡ʃa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1q2acpj",
+      "text": "flor",
+      "ipa": "ˈfloɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-4fgup9",
+      "text": "flúor",
+      "ipa": "ˈflu.oɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-xc5jti",
+      "text": "fórmula",
+      "ipa": "ˈfoɾ.mu.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1f4u6u",
+      "text": "fotografía",
+      "ipa": "fo.to.gɾa.ˈfi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1d2qpq2",
+      "text": "frambuesa",
+      "ipa": "fɾam.ˈbwe.sa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18br7y0",
+      "text": "frío",
+      "ipa": "ˈfɾi.o",
+      "status": "proposed"
+    },
+    {
+      "id": "p-pqsrv4",
+      "text": "fruta",
+      "ipa": "ˈfɾu.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-2u07ak",
+      "text": "frutería",
+      "ipa": "fɾu.te.ˈɾi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-11swlwd",
+      "text": "fuente",
+      "ipa": "ˈfwen.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1cmfeqx",
+      "text": "fuerte",
+      "ipa": "ˈfweɾ.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1xmftep",
+      "text": "fútbol",
+      "ipa": "ˈfut.bol",
+      "status": "proposed"
+    },
+    {
+      "id": "p-fabvdn",
+      "text": "galaxia",
+      "ipa": "ga.ˈlak.sja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-akyl3w",
+      "text": "galleta",
+      "ipa": "ga.ˈʝe.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-bwqflq",
+      "text": "gallina",
+      "ipa": "ga.ˈʝi.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-jdia8c",
+      "text": "garabatear",
+      "ipa": "ga.ɾa.ba.te.ˈaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-5zvhh1",
+      "text": "gato",
+      "ipa": "ˈga.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-16hsnzx",
+      "text": "gaviota",
+      "ipa": "ga.ˈbjo.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-kwxue5",
+      "text": "gente",
+      "ipa": "ˈxen.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1r4cwl5",
+      "text": "geografía",
+      "ipa": "xe.o.gɾa.ˈfi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1j7er5q",
+      "text": "geólogo",
+      "ipa": "xe.ˈo.lo.go",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1f78c3r",
+      "text": "geometría",
+      "ipa": "xe.o.me.ˈtɾi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1rjwka0",
+      "text": "gesto",
+      "ipa": "ˈxes.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1df0fxh",
+      "text": "gigante",
+      "ipa": "xi.ˈgan.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1tcvv7f",
+      "text": "gimnasio",
+      "ipa": "xim.ˈna.sjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1oinhwt",
+      "text": "girasol",
+      "ipa": "xi.ɾa.ˈsol",
+      "status": "proposed"
+    },
+    {
+      "id": "p-pxujux",
+      "text": "glaciar",
+      "ipa": "gla.ˈθjaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-xphx0c",
+      "text": "glándula",
+      "ipa": "ˈglan.du.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-154qq8w",
+      "text": "gobernar",
+      "ipa": "go.beɾ.ˈnaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1hjlxci",
+      "text": "golosina",
+      "ipa": "go.lo.ˈsi.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19t8s14",
+      "text": "goma",
+      "ipa": "ˈgo.ma",
+      "status": "proposed"
+    },
+    {
+      "id": "p-bepv55",
+      "text": "gorra",
+      "ipa": "ˈgo.ra",
+      "status": "proposed"
+    },
+    {
+      "id": "p-uj8h88",
+      "text": "grafía",
+      "ipa": "gɾa.ˈfi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1sayeb0",
+      "text": "gramófono",
+      "ipa": "gɾa.ˈmo.fo.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ydrzix",
+      "text": "grande",
+      "ipa": "ˈgɾan.de",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1d0sn8e",
+      "text": "granizo",
+      "ipa": "gɾa.ˈni.θo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ctx8cp",
+      "text": "grillo",
+      "ipa": "ˈgɾi.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-xq0ng5",
+      "text": "gris",
+      "ipa": "ˈgɾis",
+      "status": "proposed"
+    },
+    {
+      "id": "p-xk9jr8",
+      "text": "grúa",
+      "ipa": "ˈgɾu.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-pgtwt9",
+      "text": "gruñían",
+      "ipa": "gɾu.ˈɲi.an",
+      "status": "proposed"
+    },
+    {
+      "id": "p-vjyu6c",
+      "text": "guante",
+      "ipa": "ˈgwan.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-46fci8",
+      "text": "guardería",
+      "ipa": "gwaɾ.de.ˈɾi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-af0qgq",
+      "text": "guerra",
+      "ipa": "ˈge.ra",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18i1dub",
+      "text": "guiaban",
+      "ipa": "gi.ˈa.ban",
+      "status": "proposed"
+    },
+    {
+      "id": "p-b4jjk0",
+      "text": "guinda",
+      "ipa": "ˈgin.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1e5z2m5",
+      "text": "guiñar",
+      "ipa": "gi.ˈɲaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-164gxc9",
+      "text": "güiro",
+      "ipa": "ˈgwi.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-i2ay5f",
+      "text": "guitarra",
+      "ipa": "gi.ˈta.ra",
+      "status": "proposed"
+    },
+    {
+      "id": "p-bdjyhj",
+      "text": "gusano",
+      "ipa": "gu.ˈsa.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1a8baou",
+      "text": "habíamos",
+      "ipa": "a.ˈbi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ko7y6w",
+      "text": "habitación",
+      "ipa": "a.bi.ta.ˈθjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-v90wx7",
+      "text": "hablando",
+      "ipa": "a.ˈblan.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-hy6nne",
+      "text": "hablar",
+      "ipa": "a.ˈblaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-12wzbou",
+      "text": "hablasteis",
+      "ipa": "a.ˈblas.tejs",
+      "status": "proposed"
+    },
+    {
+      "id": "p-14gx02d",
+      "text": "habrían",
+      "ipa": "a.ˈbɾi.an",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1lrh31r",
+      "text": "hacer",
+      "ipa": "a.ˈθeɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1n45otf",
+      "text": "hacha",
+      "ipa": "ˈa.t͡ʃa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-y29o8k",
+      "text": "hada",
+      "ipa": "ˈa.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-47qy8u",
+      "text": "halagüeño",
+      "ipa": "a.la.ˈgwe.ɲo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1wa9y7q",
+      "text": "hámster",
+      "ipa": "ˈams.teɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-nmimx7",
+      "text": "harina",
+      "ipa": "a.ˈɾi.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1bzvt8v",
+      "text": "hasta",
+      "ipa": "ˈas.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1v92ml5",
+      "text": "helado",
+      "ipa": "e.ˈla.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cq3l1c",
+      "text": "helecho",
+      "ipa": "e.ˈle.t͡ʃo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-sgopum",
+      "text": "helicóptero",
+      "ipa": "e.li.ˈkop.te.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-7h8dyu",
+      "text": "hematoma",
+      "ipa": "e.ma.ˈto.ma",
+      "status": "proposed"
+    },
+    {
+      "id": "p-134en17",
+      "text": "hemisferio",
+      "ipa": "e.mis.ˈfe.ɾjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-5ftz45",
+      "text": "herbicida",
+      "ipa": "eɾ.bi.ˈθi.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-u9bggu",
+      "text": "herbívoro",
+      "ipa": "eɾ.ˈbi.bo.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cxuwsp",
+      "text": "herida",
+      "ipa": "e.ˈɾi.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1o1ssdc",
+      "text": "hermana",
+      "ipa": "eɾ.ˈma.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1rxn82y",
+      "text": "hermano",
+      "ipa": "eɾ.ˈma.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-nzp6jk",
+      "text": "herramienta",
+      "ipa": "e.ra.ˈmjen.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1k9aush",
+      "text": "hexágono",
+      "ipa": "ek.ˈsa.go.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-175a6ht",
+      "text": "hicieron",
+      "ipa": "i.ˈθje.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1dnan6l",
+      "text": "hidrógeno",
+      "ipa": "i.ˈdɾo.xe.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1fbcvvj",
+      "text": "hielo",
+      "ipa": "ˈje.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cumfqt",
+      "text": "hierba",
+      "ipa": "ˈjeɾ.ba",
+      "status": "proposed"
+    },
+    {
+      "id": "p-2tdmyx",
+      "text": "higo",
+      "ipa": "ˈi.go",
+      "status": "proposed"
+    },
+    {
+      "id": "p-4hr0mm",
+      "text": "hija",
+      "ipa": "ˈi.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-2ttegs",
+      "text": "hijo",
+      "ipa": "ˈi.xo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1szvaue",
+      "text": "hilo",
+      "ipa": "ˈi.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-hr364p",
+      "text": "himno",
+      "ipa": "ˈim.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-m2n8pq",
+      "text": "hipérbole",
+      "ipa": "i.ˈpeɾ.bo.le",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1u449qw",
+      "text": "hipopótamo",
+      "ipa": "i.po.ˈpo.ta.mo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-zfknwk",
+      "text": "hipotenusa",
+      "ipa": "i.po.te.ˈnu.sa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-190vjei",
+      "text": "hipótesis",
+      "ipa": "i.ˈpo.te.sis",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ilis7t",
+      "text": "hoguera",
+      "ipa": "o.ˈge.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18uljh0",
+      "text": "hoja",
+      "ipa": "ˈo.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-91kpb7",
+      "text": "hombre",
+      "ipa": "ˈom.bɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-btgq8x",
+      "text": "hombro",
+      "ipa": "ˈom.bɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-swci1n",
+      "text": "homenaje",
+      "ipa": "o.me.ˈna.xe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15faaq",
+      "text": "horario",
+      "ipa": "o.ˈɾa.ɾjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-9yl0eo",
+      "text": "horizonte",
+      "ipa": "o.ɾi.ˈθon.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-c2okjr",
+      "text": "hormiga",
+      "ipa": "oɾ.ˈmi.ga",
+      "status": "proposed"
+    },
+    {
+      "id": "p-37qj8p",
+      "text": "hormigón",
+      "ipa": "oɾ.mi.ˈgon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-5k399i",
+      "text": "hospital",
+      "ipa": "os.pi.ˈtal",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lzhdis",
+      "text": "hoy",
+      "ipa": "ˈoj",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1vclhhs",
+      "text": "hubo",
+      "ipa": "ˈu.bo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-omaij9",
+      "text": "huella",
+      "ipa": "ˈwe.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-16ui3it",
+      "text": "huerto",
+      "ipa": "ˈweɾ.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-w9tj8g",
+      "text": "hueso",
+      "ipa": "ˈwe.so",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1lna3u0",
+      "text": "huésped",
+      "ipa": "ˈwes.ped",
+      "status": "proposed"
+    },
+    {
+      "id": "p-154yubx",
+      "text": "huevo",
+      "ipa": "ˈwe.bo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1farju",
+      "text": "humedad",
+      "ipa": "u.me.ˈdad",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1vd18zn",
+      "text": "humo",
+      "ipa": "ˈu.mo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1hbskkw",
+      "text": "huracán",
+      "ipa": "u.ɾa.ˈkan",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1cvfa85",
+      "text": "ilusión",
+      "ipa": "i.lu.ˈsjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1i5kwd5",
+      "text": "imagen",
+      "ipa": "i.ˈma.xen",
+      "status": "proposed"
+    },
+    {
+      "id": "p-17mu9md",
+      "text": "imán",
+      "ipa": "i.ˈman",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1e8d5lb",
+      "text": "impermeable",
+      "ipa": "im.peɾ.me.ˈa.ble",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1c1i1b5",
+      "text": "importante",
+      "ipa": "im.poɾ.ˈtan.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-f4sw26",
+      "text": "inaugurar",
+      "ipa": "i.naw.gu.ˈɾaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1t8shn1",
+      "text": "incendio",
+      "ipa": "in.ˈθen.djo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18t4jwp",
+      "text": "incluían",
+      "ipa": "in.ˈklwi.an",
+      "status": "proposed"
+    },
+    {
+      "id": "p-d3evco",
+      "text": "índice",
+      "ipa": "ˈin.di.θe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1nzj2pd",
+      "text": "influyeron",
+      "ipa": "in.flu.ˈʝe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-oagloy",
+      "text": "instruyeron",
+      "ipa": "ins.tɾu.ˈʝe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-14lzgcq",
+      "text": "interesante",
+      "ipa": "in.te.ɾe.ˈsan.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-tki06u",
+      "text": "interrogaban",
+      "ipa": "in.te.ro.ˈga.ban",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ixcnxq",
+      "text": "interrumpió",
+      "ipa": "in.te.rum.ˈpjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-fb9gyq",
+      "text": "investigábamos",
+      "ipa": "in.bes.ti.ˈga.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-bgmhkm",
+      "text": "invierno",
+      "ipa": "in.ˈbjeɾ.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1efdenv",
+      "text": "inyección",
+      "ipa": "in.ʝek.ˈθjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1dskpfr",
+      "text": "isla",
+      "ipa": "ˈis.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-pmxsli",
+      "text": "islote",
+      "ipa": "is.ˈlo.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-vfafeg",
+      "text": "izquierda",
+      "ipa": "iθ.ˈkjeɾ.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-2uspn3",
+      "text": "jabalí",
+      "ipa": "xa.ba.ˈli",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1uj01gc",
+      "text": "jabón",
+      "ipa": "xa.ˈbon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-xbs6hw",
+      "text": "jacinto",
+      "ipa": "xa.ˈθin.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-13fganp",
+      "text": "jamón",
+      "ipa": "xa.ˈmon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-45vpes",
+      "text": "jardín",
+      "ipa": "xaɾ.ˈdin",
+      "status": "proposed"
+    },
+    {
+      "id": "p-bj92qc",
+      "text": "jarra",
+      "ipa": "ˈxa.ra",
+      "status": "proposed"
+    },
+    {
+      "id": "p-d536rr",
+      "text": "jaula",
+      "ipa": "ˈxaw.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-f1r6b7",
+      "text": "jazmín",
+      "ipa": "xaθ.ˈmin",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1nqpef0",
+      "text": "jefa",
+      "ipa": "ˈxe.fa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-u7yksg",
+      "text": "jengibre",
+      "ipa": "xen.ˈxi.bɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1opefzr",
+      "text": "jeroglífico",
+      "ipa": "xe.ɾo.ˈgli.fi.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1xixqzs",
+      "text": "jersey",
+      "ipa": "xeɾ.ˈsej",
+      "status": "proposed"
+    },
+    {
+      "id": "p-2j7e5j",
+      "text": "jinete",
+      "ipa": "xi.ˈne.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-hfrgrd",
+      "text": "jornada",
+      "ipa": "xoɾ.ˈna.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1m4gs2o",
+      "text": "joven",
+      "ipa": "ˈxo.ben",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1duwagn",
+      "text": "joyería",
+      "ipa": "xo.ʝe.ˈɾi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1062xf9",
+      "text": "judía",
+      "ipa": "xu.ˈdi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18dmwjm",
+      "text": "juez",
+      "ipa": "ˈxweθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ok42dt",
+      "text": "jugábamos",
+      "ipa": "xu.ˈga.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1resf9d",
+      "text": "jugar",
+      "ipa": "xu.ˈgaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-vgshn0",
+      "text": "jugaron",
+      "ipa": "xu.ˈga.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ovbfx7",
+      "text": "juguete",
+      "ipa": "xu.ˈge.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-v1goq2",
+      "text": "jurisdicción",
+      "ipa": "xu.ɾis.dik.ˈθjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ae6svl",
+      "text": "juzgábamos",
+      "ipa": "xuθ.ˈga.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-187n3nt",
+      "text": "kilo",
+      "ipa": "ˈki.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1wrn7et",
+      "text": "ladrillo",
+      "ipa": "la.ˈdɾi.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qajt1l",
+      "text": "lagartija",
+      "ipa": "la.gaɾ.ˈti.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-z7pytn",
+      "text": "lágrima",
+      "ipa": "ˈla.gɾi.ma",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lt8jf2",
+      "text": "laguna",
+      "ipa": "la.ˈgu.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ngyipc",
+      "text": "lámpara",
+      "ipa": "ˈlam.pa.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ydq2tn",
+      "text": "lancha",
+      "ipa": "ˈlan.t͡ʃa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-vcgl36",
+      "text": "lápiz",
+      "ipa": "ˈla.piθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1n8s8r8",
+      "text": "lavar",
+      "ipa": "la.ˈbaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1n15b43",
+      "text": "lavaríamos",
+      "ipa": "la.ba.ˈɾi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1bs3t6o",
+      "text": "lazo",
+      "ipa": "ˈla.θo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19y2lo5",
+      "text": "lección",
+      "ipa": "lek.ˈθjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1r4wyvb",
+      "text": "leche",
+      "ipa": "ˈle.t͡ʃe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-16qe89v",
+      "text": "lechuga",
+      "ipa": "le.ˈt͡ʃu.ga",
+      "status": "proposed"
+    },
+    {
+      "id": "p-g4ohu6",
+      "text": "lectura",
+      "ipa": "lek.ˈtu.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1y5an1c",
+      "text": "leer",
+      "ipa": "le.ˈeɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ob5sso",
+      "text": "leíste",
+      "ipa": "le.ˈis.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19yvg7d",
+      "text": "lejía",
+      "ipa": "le.ˈxi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1bz0brh",
+      "text": "lejos",
+      "ipa": "ˈle.xos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-q9o030",
+      "text": "lengüeta",
+      "ipa": "len.ˈgwe.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1byy75t",
+      "text": "lenteja",
+      "ipa": "len.ˈte.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-6kfmoq",
+      "text": "león",
+      "ipa": "le.ˈon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ffmm8q",
+      "text": "leopardo",
+      "ipa": "le.o.ˈpaɾ.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-zcz0ss",
+      "text": "letra",
+      "ipa": "ˈle.tɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-tx2xli",
+      "text": "librería",
+      "ipa": "li.bɾe.ˈɾi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1mpdszp",
+      "text": "libreta",
+      "ipa": "li.ˈbɾe.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-o1ahpk",
+      "text": "libro",
+      "ipa": "ˈli.bɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lvjzgy",
+      "text": "licencia",
+      "ipa": "li.ˈθen.θja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1bc259p",
+      "text": "liebre",
+      "ipa": "ˈlje.bɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-x5w9az",
+      "text": "limón",
+      "ipa": "li.ˈmon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-i1j0p3",
+      "text": "limpiaron",
+      "ipa": "lim.ˈpja.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ydgtdu",
+      "text": "limpio",
+      "ipa": "ˈlim.pjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-i572y3",
+      "text": "lingüística",
+      "ipa": "lin.ˈgwis.ti.ka",
+      "status": "proposed"
+    },
+    {
+      "id": "p-7kcek1",
+      "text": "llamaste",
+      "ipa": "ʝa.ˈmas.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1x62uai",
+      "text": "llanto",
+      "ipa": "ˈʝan.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-13so8nz",
+      "text": "llanura",
+      "ipa": "ʝa.ˈnu.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-100ypqe",
+      "text": "llave",
+      "ipa": "ˈʝa.be",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18u5gz0",
+      "text": "llegada",
+      "ipa": "ʝe.ˈga.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-uhqns2",
+      "text": "llegué",
+      "ipa": "ʝe.ˈge",
+      "status": "proposed"
+    },
+    {
+      "id": "p-vnnvfw",
+      "text": "llevar",
+      "ipa": "ʝe.ˈbaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15kqz1x",
+      "text": "llevaron",
+      "ipa": "ʝe.ˈba.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-payl7q",
+      "text": "llorábamos",
+      "ipa": "ʝo.ˈɾa.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-4zzr4j",
+      "text": "llovizna",
+      "ipa": "ʝo.ˈbiθ.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-r140r1",
+      "text": "lluvia",
+      "ipa": "ˈʝu.bja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1gpoy7m",
+      "text": "longitud",
+      "ipa": "lon.xi.ˈtud",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1m1ou3p",
+      "text": "luciérnaga",
+      "ipa": "lu.ˈθjeɾ.na.ga",
+      "status": "proposed"
+    },
+    {
+      "id": "p-sod8dr",
+      "text": "lugar",
+      "ipa": "lu.ˈgaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-b5so7m",
+      "text": "luna",
+      "ipa": "ˈlu.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-277l49",
+      "text": "maceta",
+      "ipa": "ma.ˈθe.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1hze7ss",
+      "text": "madera",
+      "ipa": "ma.ˈde.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-t610tr",
+      "text": "madre",
+      "ipa": "ˈma.dɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1gnnphv",
+      "text": "maestra",
+      "ipa": "ma.ˈes.tɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1kji57h",
+      "text": "maestro",
+      "ipa": "ma.ˈes.tɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-2a5dmq",
+      "text": "magdalena",
+      "ipa": "mag.da.ˈle.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1xejvft",
+      "text": "magia",
+      "ipa": "ˈma.xja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19gxti7",
+      "text": "magnitud",
+      "ipa": "mag.ni.ˈtud",
+      "status": "proposed"
+    },
+    {
+      "id": "p-t6x56d",
+      "text": "maíz",
+      "ipa": "ma.ˈiθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-180o572",
+      "text": "maleta",
+      "ipa": "ma.ˈle.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1oh3a0u",
+      "text": "mamífero",
+      "ipa": "ma.ˈmi.fe.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-vf6bd2",
+      "text": "manguera",
+      "ipa": "man.ˈge.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-yhm6e8",
+      "text": "manillar",
+      "ipa": "ma.ni.ˈʝaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1lt34j7",
+      "text": "manta",
+      "ipa": "ˈman.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ycysw4",
+      "text": "manzana",
+      "ipa": "man.ˈθa.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-wc9qll",
+      "text": "mañana",
+      "ipa": "ma.ˈɲa.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-me0fxh",
+      "text": "mapa",
+      "ipa": "ˈma.pa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-124fluh",
+      "text": "maquillaron",
+      "ipa": "ma.ki.ˈʝa.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-r0hpb4",
+      "text": "mar",
+      "ipa": "ˈmaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-zgn9ic",
+      "text": "maratón",
+      "ipa": "ma.ɾa.ˈton",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ljdosp",
+      "text": "maravilla",
+      "ipa": "ma.ɾa.ˈbi.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1sg533m",
+      "text": "margarita",
+      "ipa": "maɾ.ga.ˈɾi.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qxi3wu",
+      "text": "mariposa",
+      "ipa": "ma.ɾi.ˈpo.sa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-30uyek",
+      "text": "mármol",
+      "ipa": "ˈmaɾ.mol",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19pfwn7",
+      "text": "marrón",
+      "ipa": "ma.ˈron",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1nu4lra",
+      "text": "máscara",
+      "ipa": "ˈmas.ka.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-svj41g",
+      "text": "matemática",
+      "ipa": "ma.te.ˈma.ti.ka",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18ym5jp",
+      "text": "mayúscula",
+      "ipa": "ma.ˈʝus.ku.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19fm2b0",
+      "text": "medalla",
+      "ipa": "me.ˈda.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1mohpwz",
+      "text": "médico",
+      "ipa": "ˈme.di.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1yw5hi8",
+      "text": "mediodía",
+      "ipa": "me.djo.ˈdi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1kbe1k2",
+      "text": "mejilla",
+      "ipa": "me.ˈxi.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1gb02pl",
+      "text": "mejor",
+      "ipa": "me.ˈxoɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ueq87m",
+      "text": "melocotón",
+      "ipa": "me.lo.ko.ˈton",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1xx6d6j",
+      "text": "melón",
+      "ipa": "me.ˈlon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-47xtv6",
+      "text": "menos",
+      "ipa": "ˈme.nos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-xe2wq9",
+      "text": "mensaje",
+      "ipa": "men.ˈsa.xe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-c2gsme",
+      "text": "menú",
+      "ipa": "me.ˈnu",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1a4h6pp",
+      "text": "mercado",
+      "ipa": "meɾ.ˈka.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1rmqbfe",
+      "text": "merluza",
+      "ipa": "meɾ.ˈlu.θa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1cga56y",
+      "text": "mesa",
+      "ipa": "ˈme.sa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-wytqbd",
+      "text": "mesilla",
+      "ipa": "me.ˈsi.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1kxrymf",
+      "text": "meteorología",
+      "ipa": "me.te.o.ɾo.lo.ˈxi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1lek8n1",
+      "text": "mezclaron",
+      "ipa": "meθ.ˈkla.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-p2q8gk",
+      "text": "micrófono",
+      "ipa": "mi.ˈkɾo.fo.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1o2epyb",
+      "text": "miel",
+      "ipa": "ˈmjel",
+      "status": "proposed"
+    },
+    {
+      "id": "p-5eufp7",
+      "text": "mientras",
+      "ipa": "ˈmjen.tɾas",
+      "status": "proposed"
+    },
+    {
+      "id": "p-atqq6x",
+      "text": "miércoles",
+      "ipa": "ˈmjeɾ.ko.les",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1b8de76",
+      "text": "milímetro",
+      "ipa": "mi.ˈli.me.tɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ajjef5",
+      "text": "milla",
+      "ipa": "ˈmi.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1vwarsj",
+      "text": "mirábamos",
+      "ipa": "mi.ˈɾa.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-hm2pdn",
+      "text": "mirar",
+      "ipa": "mi.ˈɾaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18fby39",
+      "text": "mitología",
+      "ipa": "mi.to.lo.ˈxi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-8mwml",
+      "text": "mochila",
+      "ipa": "mo.ˈt͡ʃi.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-w6yes",
+      "text": "molécula",
+      "ipa": "mo.ˈle.ku.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1u09p3o",
+      "text": "molino",
+      "ipa": "mo.ˈli.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1rm0d7a",
+      "text": "moneda",
+      "ipa": "mo.ˈne.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-zfanhw",
+      "text": "monolingüe",
+      "ipa": "mo.no.ˈlin.gwe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ue11oj",
+      "text": "monopatín",
+      "ipa": "mo.no.pa.ˈtin",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1nj3w5p",
+      "text": "monstruo",
+      "ipa": "ˈmons.tɾwo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-wabcjf",
+      "text": "montaña",
+      "ipa": "mon.ˈta.ɲa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-t3163i",
+      "text": "morada",
+      "ipa": "mo.ˈɾa.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1b57hvd",
+      "text": "mordíamos",
+      "ipa": "moɾ.ˈdi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15mw0k4",
+      "text": "mordisco",
+      "ipa": "moɾ.ˈdis.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-uttyt1",
+      "text": "mosca",
+      "ipa": "ˈmos.ka",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1e3brzl",
+      "text": "movisteis",
+      "ipa": "mo.ˈbis.tejs",
+      "status": "proposed"
+    },
+    {
+      "id": "p-a8p072",
+      "text": "mucho",
+      "ipa": "ˈmu.t͡ʃo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lrh6rq",
+      "text": "mueble",
+      "ipa": "ˈmwe.ble",
+      "status": "proposed"
+    },
+    {
+      "id": "p-a2atxf",
+      "text": "mujer",
+      "ipa": "mu.ˈxeɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-u8iktt",
+      "text": "mundo",
+      "ipa": "ˈmun.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-17fta88",
+      "text": "muñeca",
+      "ipa": "mu.ˈɲe.ka",
+      "status": "proposed"
+    },
+    {
+      "id": "p-12lgeeu",
+      "text": "murciélago",
+      "ipa": "muɾ.ˈθje.la.go",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1tsaa9l",
+      "text": "músculo",
+      "ipa": "ˈmus.ku.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ocnmlv",
+      "text": "museo",
+      "ipa": "mu.ˈse.o",
+      "status": "proposed"
+    },
+    {
+      "id": "p-apot8x",
+      "text": "músico",
+      "ipa": "ˈmu.si.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15q9ms5",
+      "text": "nacimiento",
+      "ipa": "na.θi.ˈmjen.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1iefb5k",
+      "text": "nadar",
+      "ipa": "na.ˈdaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-17h73rv",
+      "text": "naranja",
+      "ipa": "na.ˈɾan.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-kjewc1",
+      "text": "naturaleza",
+      "ipa": "na.tu.ɾa.ˈle.θa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-w565d2",
+      "text": "navegábamos",
+      "ipa": "na.be.ˈga.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-om1k11",
+      "text": "navío",
+      "ipa": "na.ˈbi.o",
+      "status": "proposed"
+    },
+    {
+      "id": "p-3by9gf",
+      "text": "negra",
+      "ipa": "ˈne.gɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19mo96p",
+      "text": "nevera",
+      "ipa": "ne.ˈbe.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1j3qyw9",
+      "text": "nieve",
+      "ipa": "ˈnje.be",
+      "status": "proposed"
+    },
+    {
+      "id": "p-10ch94b",
+      "text": "niña",
+      "ipa": "ˈni.ɲa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-zsi1qd",
+      "text": "niño",
+      "ipa": "ˈni.ɲo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-11m4m3j",
+      "text": "novedad",
+      "ipa": "no.be.ˈdad",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1m3opo8",
+      "text": "nube",
+      "ipa": "ˈnu.be",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1tat93w",
+      "text": "nudo",
+      "ipa": "ˈnu.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-im9h9r",
+      "text": "nuevo",
+      "ipa": "ˈnwe.bo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ngyg1i",
+      "text": "nuez",
+      "ipa": "ˈnweθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ui7c6x",
+      "text": "número",
+      "ipa": "ˈnu.me.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-d96hvx",
+      "text": "nunca",
+      "ipa": "ˈnun.ka",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1yd6jtb",
+      "text": "obedecíamos",
+      "ipa": "o.be.de.ˈθi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-94k1xf",
+      "text": "obsequio",
+      "ipa": "ob.ˈse.kjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-p3tqbq",
+      "text": "octógono",
+      "ipa": "ok.ˈto.go.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1lk3ify",
+      "text": "ofrecieron",
+      "ipa": "o.fɾe.ˈθje.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1kghqpx",
+      "text": "olivo",
+      "ipa": "o.ˈli.bo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-47lq8r",
+      "text": "ombligo",
+      "ipa": "om.ˈbli.go",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15durr",
+      "text": "órbita",
+      "ipa": "ˈoɾ.bi.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1tc16sg",
+      "text": "ordenador",
+      "ipa": "oɾ.de.na.ˈdoɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1d8tj3z",
+      "text": "ordenar",
+      "ipa": "oɾ.de.ˈnaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-160ewwn",
+      "text": "organizadas",
+      "ipa": "oɾ.ga.ni.ˈθa.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-eehr27",
+      "text": "orilla",
+      "ipa": "o.ˈɾi.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-12s0wak",
+      "text": "ortografía",
+      "ipa": "oɾ.to.gɾa.ˈfi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qn59w",
+      "text": "oruga",
+      "ipa": "o.ˈɾu.ga",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1wneomg",
+      "text": "otoño",
+      "ipa": "o.ˈto.ɲo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-5nbbhl",
+      "text": "oveja",
+      "ipa": "o.ˈbe.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1sb5zv1",
+      "text": "ovillo",
+      "ipa": "o.ˈbi.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qav6yr",
+      "text": "óxido",
+      "ipa": "ˈok.si.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ef2175",
+      "text": "oxígeno",
+      "ipa": "ok.ˈsi.xe.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1mprdst",
+      "text": "oyó",
+      "ipa": "o.ˈʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-98ps8w",
+      "text": "padre",
+      "ipa": "ˈpa.dɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-2qm6y1",
+      "text": "paella",
+      "ipa": "pa.ˈe.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qgj0ty",
+      "text": "página",
+      "ipa": "ˈpa.xi.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1n1qm75",
+      "text": "pájaro",
+      "ipa": "ˈpa.xa.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-mxxgkb",
+      "text": "paleolítico",
+      "ipa": "pa.le.o.ˈli.ti.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-bm68ef",
+      "text": "pan",
+      "ipa": "ˈpan",
+      "status": "proposed"
+    },
+    {
+      "id": "p-i577cr",
+      "text": "pañales",
+      "ipa": "pa.ˈɲa.les",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1nenzhx",
+      "text": "pañuelo",
+      "ipa": "pa.ˈɲwe.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1j29ls8",
+      "text": "papel",
+      "ipa": "pa.ˈpel",
+      "status": "proposed"
+    },
+    {
+      "id": "p-gaxi7y",
+      "text": "paraguas",
+      "ipa": "pa.ˈɾa.gwas",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1toe0oc",
+      "text": "parches",
+      "ipa": "ˈpaɾ.t͡ʃes",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1j5ninm",
+      "text": "pared",
+      "ipa": "pa.ˈɾed",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lz4se3",
+      "text": "pareja",
+      "ipa": "pa.ˈɾe.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-13g9bk",
+      "text": "paréntesis",
+      "ipa": "pa.ˈɾen.te.sis",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1rnt8q4",
+      "text": "parpadear",
+      "ipa": "paɾ.pa.de.ˈaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1d6hhus",
+      "text": "parque",
+      "ipa": "ˈpaɾ.ke",
+      "status": "proposed"
+    },
+    {
+      "id": "p-6im8yq",
+      "text": "partitura",
+      "ipa": "paɾ.ti.ˈtu.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-hsdfuk",
+      "text": "paseábamos",
+      "ipa": "pa.se.ˈa.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-zrlq1c",
+      "text": "paseo",
+      "ipa": "pa.ˈse.o",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ozmgks",
+      "text": "pasillo",
+      "ipa": "pa.ˈsi.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ua8o1c",
+      "text": "pastelería",
+      "ipa": "pas.te.le.ˈɾi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1nyba3v",
+      "text": "patata",
+      "ipa": "pa.ˈta.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-y8z7wi",
+      "text": "patín",
+      "ipa": "pa.ˈtin",
+      "status": "proposed"
+    },
+    {
+      "id": "p-171yfmu",
+      "text": "pecera",
+      "ipa": "pe.ˈθe.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1g1yd5z",
+      "text": "pechuga",
+      "ipa": "pe.ˈt͡ʃu.ga",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ohp4a1",
+      "text": "peinadas",
+      "ipa": "pej.ˈna.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1vvih2r",
+      "text": "peine",
+      "ipa": "ˈpej.ne",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1fzhea",
+      "text": "peldaño",
+      "ipa": "pel.ˈda.ɲo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qhbalj",
+      "text": "película",
+      "ipa": "pe.ˈli.ku.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1c628d4",
+      "text": "pelirroja",
+      "ipa": "pe.li.ˈro.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-8qmm06",
+      "text": "pellizcar",
+      "ipa": "pe.ʝiθ.ˈkaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-r9hvty",
+      "text": "peluche",
+      "ipa": "pe.ˈlu.t͡ʃe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-woxcb1",
+      "text": "péndulo",
+      "ipa": "ˈpen.du.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15yk51z",
+      "text": "península",
+      "ipa": "pe.ˈnin.su.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ll8wbd",
+      "text": "pentágono",
+      "ipa": "pen.ˈta.go.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1i0i06z",
+      "text": "pepino",
+      "ipa": "pe.ˈpi.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-u3y6do",
+      "text": "pequeño",
+      "ipa": "pe.ˈke.ɲo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-9ffmwy",
+      "text": "pera",
+      "ipa": "ˈpe.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-sgiuhu",
+      "text": "perdonaron",
+      "ipa": "peɾ.do.ˈna.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-xtwml7",
+      "text": "perímetro",
+      "ipa": "pe.ˈɾi.me.tɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-kxz6pc",
+      "text": "perro",
+      "ipa": "ˈpe.ro",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1behrot",
+      "text": "perseguían",
+      "ipa": "peɾ.se.ˈgi.an",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1eckx1j",
+      "text": "persiana",
+      "ipa": "peɾ.ˈsja.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-wy4qkc",
+      "text": "persona",
+      "ipa": "peɾ.ˈso.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1txw2i2",
+      "text": "pesado",
+      "ipa": "pe.ˈsa.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1s94gqe",
+      "text": "pescábamos",
+      "ipa": "pes.ˈka.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-e60gz9",
+      "text": "pescado",
+      "ipa": "pes.ˈka.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-p9nplh",
+      "text": "pestaña",
+      "ipa": "pes.ˈta.ɲa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-8aptof",
+      "text": "pez",
+      "ipa": "ˈpeθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1jp9fml",
+      "text": "picadura",
+      "ipa": "pi.ka.ˈdu.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-bdl6q3",
+      "text": "piedra",
+      "ipa": "ˈpje.dɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-134oxw4",
+      "text": "pingüino",
+      "ipa": "pin.ˈgwi.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-l5ovy4",
+      "text": "pintadas",
+      "ipa": "pin.ˈta.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-nclram",
+      "text": "pintados",
+      "ipa": "pin.ˈta.dos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1w2fyue",
+      "text": "pintar",
+      "ipa": "pin.ˈtaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1xuscq3",
+      "text": "piñón",
+      "ipa": "pi.ˈɲon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-rd7k69",
+      "text": "piragua",
+      "ipa": "pi.ˈɾa.gwa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-110y6et",
+      "text": "piragüismo",
+      "ipa": "pi.ɾa.ˈgwis.mo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qc29ff",
+      "text": "pirámide",
+      "ipa": "pi.ˈɾa.mi.de",
+      "status": "proposed"
+    },
+    {
+      "id": "p-toduo9",
+      "text": "piscina",
+      "ipa": "pis.ˈθi.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19xq4gh",
+      "text": "pizarra",
+      "ipa": "pi.ˈθa.ra",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1m7g3lh",
+      "text": "planchadas",
+      "ipa": "plan.ˈt͡ʃa.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18qmgb3",
+      "text": "plátano",
+      "ipa": "ˈpla.ta.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-eg6mx5",
+      "text": "playa",
+      "ipa": "ˈpla.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-l3rqgq",
+      "text": "plaza",
+      "ipa": "ˈpla.θa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-112ochk",
+      "text": "pobre",
+      "ipa": "ˈpo.bɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qczg6m",
+      "text": "podíamos",
+      "ipa": "po.ˈdi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ybgl41",
+      "text": "políglota",
+      "ipa": "po.ˈli.glo.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1y9r84n",
+      "text": "polígono",
+      "ipa": "po.ˈli.go.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ph4uut",
+      "text": "pollito",
+      "ipa": "po.ˈʝi.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-o638g9",
+      "text": "porche",
+      "ipa": "ˈpoɾ.t͡ʃe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-7iaouy",
+      "text": "portería",
+      "ipa": "poɾ.te.ˈɾi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15xpfbr",
+      "text": "postal",
+      "ipa": "pos.ˈtal",
+      "status": "proposed"
+    },
+    {
+      "id": "p-iahdvc",
+      "text": "precioso",
+      "ipa": "pɾe.ˈθjo.so",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1u19dcg",
+      "text": "preguntar",
+      "ipa": "pɾe.gun.ˈtaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19qqlr2",
+      "text": "prehistoria",
+      "ipa": "pɾe.is.ˈto.ɾja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1yvw4r4",
+      "text": "premio",
+      "ipa": "ˈpɾe.mjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-h23tzt",
+      "text": "preparadas",
+      "ipa": "pɾe.pa.ˈɾa.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-3ef9df",
+      "text": "prima",
+      "ipa": "ˈpɾi.ma",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1fagy4o",
+      "text": "primero",
+      "ipa": "pɾi.ˈme.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-7a9p31",
+      "text": "primo",
+      "ipa": "ˈpɾi.mo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-rn5u9o",
+      "text": "prisma",
+      "ipa": "ˈpɾis.ma",
+      "status": "proposed"
+    },
+    {
+      "id": "p-j7kufq",
+      "text": "profesor",
+      "ipa": "pɾo.fe.ˈsoɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-whr9ed",
+      "text": "profesora",
+      "ipa": "pɾo.fe.ˈso.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19256fs",
+      "text": "pronóstico",
+      "ipa": "pɾo.ˈnos.ti.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-jbges1",
+      "text": "proseguían",
+      "ipa": "pɾo.se.ˈgi.an",
+      "status": "proposed"
+    },
+    {
+      "id": "p-tn53k6",
+      "text": "protegieron",
+      "ipa": "pɾo.te.ˈxje.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1fcsal9",
+      "text": "prótesis",
+      "ipa": "ˈpɾo.te.sis",
+      "status": "proposed"
+    },
+    {
+      "id": "p-3237s5",
+      "text": "pueblo",
+      "ipa": "ˈpwe.blo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1w3jlrf",
+      "text": "puente",
+      "ipa": "ˈpwen.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-m02k6b",
+      "text": "puerta",
+      "ipa": "ˈpweɾ.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1xogbyw",
+      "text": "pulsera",
+      "ipa": "pul.ˈse.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1bsqk0h",
+      "text": "pupitre",
+      "ipa": "pu.ˈpi.tɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1rvvusn",
+      "text": "queso",
+      "ipa": "ˈke.so",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1o9ij97",
+      "text": "química",
+      "ipa": "ˈki.mi.ka",
+      "status": "proposed"
+    },
+    {
+      "id": "p-luqejs",
+      "text": "quincena",
+      "ipa": "kin.ˈθe.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-acjj18",
+      "text": "quiniela",
+      "ipa": "ki.ˈnje.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1tq1rwg",
+      "text": "quizá",
+      "ipa": "ki.ˈθa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ihbysx",
+      "text": "racimo",
+      "ipa": "ra.ˈθi.mo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qr4zwo",
+      "text": "ración",
+      "ipa": "ra.ˈθjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15imd6u",
+      "text": "raíz",
+      "ipa": "ra.ˈiθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-174fh5c",
+      "text": "rana",
+      "ipa": "ˈra.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1h5c9j",
+      "text": "rápido",
+      "ipa": "ˈra.pi.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-177ibrx",
+      "text": "rascacielos",
+      "ipa": "ras.ka.ˈθje.los",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1arozss",
+      "text": "rastrillo",
+      "ipa": "ras.ˈtɾi.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ee5kgq",
+      "text": "ratón",
+      "ipa": "ra.ˈton",
+      "status": "proposed"
+    },
+    {
+      "id": "p-skl2pd",
+      "text": "rayuela",
+      "ipa": "ra.ˈʝwe.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1mnyjg7",
+      "text": "rebajadas",
+      "ipa": "re.ba.ˈxa.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1d289zy",
+      "text": "recibo",
+      "ipa": "re.ˈθi.bo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-y58io",
+      "text": "recitábamos",
+      "ipa": "re.θi.ˈta.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-vkk53h",
+      "text": "recogieron",
+      "ipa": "re.ko.ˈxje.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-dpn790",
+      "text": "rectángulo",
+      "ipa": "rek.ˈtan.gu.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-u52vsn",
+      "text": "rectificaron",
+      "ipa": "rek.ti.fi.ˈka.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1rwmyfy",
+      "text": "redujeron",
+      "ipa": "re.du.ˈxe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-sd8yet",
+      "text": "reflejo",
+      "ipa": "re.ˈfle.xo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-qjyy5l",
+      "text": "refugio",
+      "ipa": "re.ˈfu.xjo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-i9uzf",
+      "text": "regadío",
+      "ipa": "re.ga.ˈdi.o",
+      "status": "proposed"
+    },
+    {
+      "id": "p-km4mi8",
+      "text": "regalar",
+      "ipa": "re.ga.ˈlaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-bpg3c8",
+      "text": "regañaban",
+      "ipa": "re.ga.ˈɲa.ban",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1gzt1uq",
+      "text": "registraron",
+      "ipa": "re.xis.ˈtɾa.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ndbpw9",
+      "text": "regla",
+      "ipa": "ˈre.gla",
+      "status": "proposed"
+    },
+    {
+      "id": "p-wlpy0g",
+      "text": "rehén",
+      "ipa": "re.ˈen",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1c8c180",
+      "text": "reíamos",
+      "ipa": "re.ˈi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1mkn24o",
+      "text": "relámpago",
+      "ipa": "re.ˈlam.pa.go",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1jrudls",
+      "text": "relinchar",
+      "ipa": "re.lin.ˈt͡ʃaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-21nh5q",
+      "text": "reloj",
+      "ipa": "re.ˈlox",
+      "status": "proposed"
+    },
+    {
+      "id": "p-mlrc41",
+      "text": "remolino",
+      "ipa": "re.mo.ˈli.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1h53ous",
+      "text": "renacuajo",
+      "ipa": "re.na.ˈkwa.xo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1afa0b9",
+      "text": "repetíamos",
+      "ipa": "re.pe.ˈti.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1c9hii4",
+      "text": "reportaje",
+      "ipa": "re.poɾ.ˈta.xe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-v93zt4",
+      "text": "resbaladizo",
+      "ipa": "res.ba.la.ˈdi.θo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-owzxzq",
+      "text": "responder",
+      "ipa": "res.pon.ˈdeɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-n4jxa2",
+      "text": "retahíla",
+      "ipa": "re.ta.ˈi.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-h85pzy",
+      "text": "revista",
+      "ipa": "re.ˈbis.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-kbft15",
+      "text": "revolvieron",
+      "ipa": "re.bol.ˈbje.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-4lmbm7",
+      "text": "rico",
+      "ipa": "ˈri.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18hi96i",
+      "text": "rifirrafe",
+      "ipa": "ri.fi.ˈra.fe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-x8a2i",
+      "text": "río",
+      "ipa": "ˈri.o",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1rzd4nv",
+      "text": "riqueza",
+      "ipa": "ri.ˈke.θa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-tpt71j",
+      "text": "ritmo",
+      "ipa": "ˈrit.mo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1nu8bq8",
+      "text": "rocío",
+      "ipa": "ro.ˈθi.o",
+      "status": "proposed"
+    },
+    {
+      "id": "p-114w78v",
+      "text": "rodilla",
+      "ipa": "ro.ˈdi.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-y3vevq",
+      "text": "roja",
+      "ipa": "ˈro.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-v21enl",
+      "text": "romper",
+      "ipa": "rom.ˈpeɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-o6sjb4",
+      "text": "ropa",
+      "ipa": "ˈro.pa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-smaiaz",
+      "text": "rosa",
+      "ipa": "ˈro.sa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-6wlo3k",
+      "text": "rotulador",
+      "ipa": "ro.tu.la.ˈdoɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ijd61g",
+      "text": "rubí",
+      "ipa": "ru.ˈbi",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1kftl57",
+      "text": "rubia",
+      "ipa": "ˈru.bja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-azdi1f",
+      "text": "rueda",
+      "ipa": "ˈrwe.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-79z5zt",
+      "text": "ruido",
+      "ipa": "ˈrwi.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-axfiw8",
+      "text": "sábana",
+      "ipa": "ˈsa.ba.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15h7e89",
+      "text": "sabíamos",
+      "ipa": "sa.ˈbi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1k95cb1",
+      "text": "sacapuntas",
+      "ipa": "sa.ka.ˈpun.tas",
+      "status": "proposed"
+    },
+    {
+      "id": "p-l2g3gs",
+      "text": "sal",
+      "ipa": "ˈsal",
+      "status": "proposed"
+    },
+    {
+      "id": "p-yv3780",
+      "text": "salchicha",
+      "ipa": "sal.ˈt͡ʃi.t͡ʃa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-124dg8n",
+      "text": "salir",
+      "ipa": "sa.ˈliɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-13o3dyi",
+      "text": "salmón",
+      "ipa": "sal.ˈmon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-u2tttl",
+      "text": "salón",
+      "ipa": "sa.ˈlon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-9dug8q",
+      "text": "salpicaron",
+      "ipa": "sal.pi.ˈka.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1yupw4y",
+      "text": "saltabais",
+      "ipa": "sal.ˈta.bajs",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1c0rw8g",
+      "text": "saltaban",
+      "ipa": "sal.ˈta.ban",
+      "status": "proposed"
+    },
+    {
+      "id": "p-tsxnh7",
+      "text": "saltar",
+      "ipa": "sal.ˈtaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1cy676s",
+      "text": "salvaríamos",
+      "ipa": "sal.ba.ˈɾi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-hhkbes",
+      "text": "salvavidas",
+      "ipa": "sal.ba.ˈbi.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-mylvas",
+      "text": "sandía",
+      "ipa": "san.ˈdi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-86an1t",
+      "text": "sartén",
+      "ipa": "saɾ.ˈten",
+      "status": "proposed"
+    },
+    {
+      "id": "p-zd49mr",
+      "text": "satélite",
+      "ipa": "sa.ˈte.li.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-jwjvnd",
+      "text": "sello",
+      "ipa": "ˈse.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-zkebku",
+      "text": "semáforo",
+      "ipa": "se.ˈma.fo.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-usjwdg",
+      "text": "sembrar",
+      "ipa": "sem.ˈbɾaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-163jw1x",
+      "text": "semilla",
+      "ipa": "se.ˈmi.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1owzln6",
+      "text": "sendero",
+      "ipa": "sen.ˈde.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1hqei9l",
+      "text": "sentíamos",
+      "ipa": "sen.ˈti.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1q8ew8y",
+      "text": "señal",
+      "ipa": "se.ˈɲal",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1hve98m",
+      "text": "señor",
+      "ipa": "se.ˈɲoɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1kusl7p",
+      "text": "señora",
+      "ipa": "se.ˈɲo.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-mqxxaj",
+      "text": "séptimo",
+      "ipa": "ˈsep.ti.mo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1y3xdh1",
+      "text": "serpiente",
+      "ipa": "seɾ.ˈpjen.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-hw4vnh",
+      "text": "servilleta",
+      "ipa": "seɾ.bi.ˈʝe.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1t9rvkf",
+      "text": "siempre",
+      "ipa": "ˈsjem.pɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-yccz92",
+      "text": "sílaba",
+      "ipa": "ˈsi.la.ba",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1x6gccx",
+      "text": "silbar",
+      "ipa": "sil.ˈbaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-yl0weg",
+      "text": "silbato",
+      "ipa": "sil.ˈba.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19o3jrf",
+      "text": "silla",
+      "ipa": "ˈsi.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-99t5zt",
+      "text": "silueta",
+      "ipa": "si.ˈlwe.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18niqmu",
+      "text": "simetría",
+      "ipa": "si.me.ˈtɾi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-7ppchj",
+      "text": "sofá",
+      "ipa": "so.ˈfa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-m6878q",
+      "text": "sol",
+      "ipa": "ˈsol",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1dhmri8",
+      "text": "sollozar",
+      "ipa": "so.ʝo.ˈθaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-14heejj",
+      "text": "solo",
+      "ipa": "ˈso.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-jzpsf7",
+      "text": "sombrero",
+      "ipa": "som.ˈbɾe.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-o5pih5",
+      "text": "sonreímos",
+      "ipa": "son.re.ˈi.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qnwi1t",
+      "text": "sonríes",
+      "ipa": "son.ˈri.es",
+      "status": "proposed"
+    },
+    {
+      "id": "p-35qc3e",
+      "text": "soñábamos",
+      "ipa": "so.ˈɲa.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ctf3cl",
+      "text": "sopa",
+      "ipa": "ˈso.pa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-avleta",
+      "text": "soplaban",
+      "ipa": "so.ˈpla.ban",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1sv8y76",
+      "text": "sótano",
+      "ipa": "ˈso.ta.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1920lje",
+      "text": "suave",
+      "ipa": "ˈswa.be",
+      "status": "proposed"
+    },
+    {
+      "id": "p-18j9iz7",
+      "text": "subieron",
+      "ipa": "su.ˈbje.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1i7yd4e",
+      "text": "subrayaban",
+      "ipa": "sub.ra.ˈʝa.ban",
+      "status": "proposed"
+    },
+    {
+      "id": "p-xmij7o",
+      "text": "sucias",
+      "ipa": "ˈsu.θjas",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1r8562u",
+      "text": "suelo",
+      "ipa": "ˈswe.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-um088i",
+      "text": "suéter",
+      "ipa": "ˈswe.teɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ijyhuu",
+      "text": "sugiere",
+      "ipa": "su.ˈxje.ɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1245hbn",
+      "text": "tabique",
+      "ipa": "ta.ˈbi.ke",
+      "status": "proposed"
+    },
+    {
+      "id": "p-e605lc",
+      "text": "tablón",
+      "ipa": "ta.ˈblon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-154epl5",
+      "text": "tacón",
+      "ipa": "ta.ˈkon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-t5m470",
+      "text": "también",
+      "ipa": "tam.ˈbjen",
+      "status": "proposed"
+    },
+    {
+      "id": "p-megxll",
+      "text": "tambor",
+      "ipa": "tam.ˈboɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-7qpdqj",
+      "text": "tapizadas",
+      "ipa": "ta.pi.ˈθa.das",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1tnq150",
+      "text": "tapón",
+      "ipa": "ta.ˈpon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1q00sfb",
+      "text": "taquilla",
+      "ipa": "ta.ˈki.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1fsi9y8",
+      "text": "tarántula",
+      "ipa": "ta.ˈɾan.tu.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-8n3qm5",
+      "text": "tarea",
+      "ipa": "ta.ˈɾe.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-dln6eg",
+      "text": "tarro",
+      "ipa": "ˈta.ro",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1rsyvbw",
+      "text": "taxi",
+      "ipa": "ˈtak.si",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qorxya",
+      "text": "taza",
+      "ipa": "ˈta.θa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-84ms19",
+      "text": "techo",
+      "ipa": "ˈte.t͡ʃo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-16r57h",
+      "text": "teclearon",
+      "ipa": "te.kle.ˈa.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1xordv",
+      "text": "telaraña",
+      "ipa": "te.la.ˈɾa.ɲa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-nczaeo",
+      "text": "teléfono",
+      "ipa": "te.ˈle.fo.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-6nmquk",
+      "text": "televisión",
+      "ipa": "te.le.bi.ˈsjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1014de4",
+      "text": "temprano",
+      "ipa": "tem.ˈpɾa.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-6ac803",
+      "text": "tenedor",
+      "ipa": "te.ne.ˈdoɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1d3kt76",
+      "text": "teñían",
+      "ipa": "te.ˈɲi.an",
+      "status": "proposed"
+    },
+    {
+      "id": "p-2ak9lo",
+      "text": "termómetro",
+      "ipa": "teɾ.ˈmo.me.tɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-oofxpz",
+      "text": "terraza",
+      "ipa": "te.ˈra.θa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-r5llgo",
+      "text": "terrestre",
+      "ipa": "te.ˈres.tɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1br09w8",
+      "text": "texto",
+      "ipa": "ˈteks.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1917fy1",
+      "text": "tiburón",
+      "ipa": "ti.bu.ˈɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-2i46s7",
+      "text": "tienda",
+      "ipa": "ˈtjen.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1jtcmbo",
+      "text": "tijeras",
+      "ipa": "ti.ˈxe.ɾas",
+      "status": "proposed"
+    },
+    {
+      "id": "p-94y4dy",
+      "text": "tilde",
+      "ipa": "ˈtil.de",
+      "status": "proposed"
+    },
+    {
+      "id": "p-136c871",
+      "text": "timbre",
+      "ipa": "ˈtim.bɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-14gzzpe",
+      "text": "tímida",
+      "ipa": "ˈti.mi.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-fmquke",
+      "text": "tirachinas",
+      "ipa": "ti.ɾa.ˈt͡ʃi.nas",
+      "status": "proposed"
+    },
+    {
+      "id": "p-12mc60q",
+      "text": "tiza",
+      "ipa": "ˈti.θa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1lmfqur",
+      "text": "toalla",
+      "ipa": "to.ˈa.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-11icqz1",
+      "text": "tobillo",
+      "ipa": "to.ˈbi.ʝo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1g9vndw",
+      "text": "tobogán",
+      "ipa": "to.bo.ˈgan",
+      "status": "proposed"
+    },
+    {
+      "id": "p-b7sqmu",
+      "text": "todavía",
+      "ipa": "to.da.ˈbi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qpwh5w",
+      "text": "tomate",
+      "ipa": "to.ˈma.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-72ya9g",
+      "text": "torre",
+      "ipa": "ˈto.re",
+      "status": "proposed"
+    },
+    {
+      "id": "p-12rphl",
+      "text": "tortilla",
+      "ipa": "toɾ.ˈti.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-liq6by",
+      "text": "tortuga",
+      "ipa": "toɾ.ˈtu.ga",
+      "status": "proposed"
+    },
+    {
+      "id": "p-k9e1u6",
+      "text": "tostaban",
+      "ipa": "tos.ˈta.ban",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15ymyv5",
+      "text": "tostadora",
+      "ipa": "tos.ta.ˈdo.ɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1uwskjv",
+      "text": "tractor",
+      "ipa": "tɾak.ˈtoɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1hullii",
+      "text": "traducíamos",
+      "ipa": "tɾa.du.ˈθi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1f82ce",
+      "text": "tráfico",
+      "ipa": "ˈtɾa.fi.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1mp043w",
+      "text": "tragaluz",
+      "ipa": "tɾa.ga.ˈluθ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1dn9a0z",
+      "text": "traían",
+      "ipa": "tɾa.ˈi.an",
+      "status": "proposed"
+    },
+    {
+      "id": "p-3ivxdo",
+      "text": "traje",
+      "ipa": "ˈtɾa.xe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-142iwzn",
+      "text": "trajeron",
+      "ipa": "tɾa.ˈxe.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-44vo4o",
+      "text": "trampolín",
+      "ipa": "tɾam.po.ˈlin",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1dyfhzv",
+      "text": "tranquilo",
+      "ipa": "tɾan.ˈki.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-h8xn47",
+      "text": "travesía",
+      "ipa": "tɾa.be.ˈsi.a",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ul0333",
+      "text": "trayectoria",
+      "ipa": "tɾa.ʝek.ˈto.ɾja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1t9pkoy",
+      "text": "trébol",
+      "ipa": "ˈtɾe.bol",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ge4bd",
+      "text": "tren",
+      "ipa": "ˈtɾen",
+      "status": "proposed"
+    },
+    {
+      "id": "p-17v968w",
+      "text": "trepar",
+      "ipa": "tɾe.ˈpaɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19m6su3",
+      "text": "triángulo",
+      "ipa": "ˈtɾjan.gu.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cy6kxy",
+      "text": "trompeta",
+      "ipa": "tɾom.ˈpe.ta",
+      "status": "proposed"
+    },
+    {
+      "id": "p-u48fdy",
+      "text": "tropezaban",
+      "ipa": "tɾo.pe.ˈθa.ban",
+      "status": "proposed"
+    },
+    {
+      "id": "p-e5vzjh",
+      "text": "túnel",
+      "ipa": "ˈtu.nel",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qp4qbm",
+      "text": "turrón",
+      "ipa": "tu.ˈron",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1efub3h",
+      "text": "último",
+      "ipa": "ˈul.ti.mo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-123ux7i",
+      "text": "ungüento",
+      "ipa": "un.ˈgwen.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-19e8wjb",
+      "text": "uniforme",
+      "ipa": "u.ni.ˈfoɾ.me",
+      "status": "proposed"
+    },
+    {
+      "id": "p-11goiwx",
+      "text": "universo",
+      "ipa": "u.ni.ˈbeɾ.so",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cepchd",
+      "text": "uña",
+      "ipa": "ˈu.ɲa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-148arny",
+      "text": "urgencia",
+      "ipa": "uɾ.ˈxen.θja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-14m78mm",
+      "text": "urraca",
+      "ipa": "u.ˈra.ka",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1tki5e7",
+      "text": "usábamos",
+      "ipa": "u.ˈsa.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ai7sde",
+      "text": "utensilio",
+      "ipa": "u.ten.ˈsi.ljo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-5wgld9",
+      "text": "vaca",
+      "ipa": "ˈba.ka",
+      "status": "proposed"
+    },
+    {
+      "id": "p-12qfgcg",
+      "text": "vacaciones",
+      "ipa": "ba.ka.ˈθjo.nes",
+      "status": "proposed"
+    },
+    {
+      "id": "p-14i0mr3",
+      "text": "vagón",
+      "ipa": "ba.ˈgon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-cb22x7",
+      "text": "vajilla",
+      "ipa": "ba.ˈxi.ʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1qj0cni",
+      "text": "valiente",
+      "ipa": "ba.ˈljen.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-fzyqh6",
+      "text": "vapor",
+      "ipa": "ba.ˈpoɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-7s9zhl",
+      "text": "vaquero",
+      "ipa": "ba.ˈke.ɾo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1v9js43",
+      "text": "varicela",
+      "ipa": "ba.ɾi.ˈθe.la",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1s7o08j",
+      "text": "vaso",
+      "ipa": "ˈba.so",
+      "status": "proposed"
+    },
+    {
+      "id": "p-hvwr8i",
+      "text": "veces",
+      "ipa": "ˈbe.θes",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ifugck",
+      "text": "vecina",
+      "ipa": "be.ˈθi.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1fnyfeu",
+      "text": "vecino",
+      "ipa": "be.ˈθi.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1i82h8t",
+      "text": "velocidad",
+      "ipa": "be.lo.θi.ˈdad",
+      "status": "proposed"
+    },
+    {
+      "id": "p-u3sbxr",
+      "text": "vendaje",
+      "ipa": "ben.ˈda.xe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1yx66g2",
+      "text": "vendíamos",
+      "ipa": "ben.ˈdi.a.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-9pvwsr",
+      "text": "veneno",
+      "ipa": "be.ˈne.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-q2wrcj",
+      "text": "ventaja",
+      "ipa": "ben.ˈta.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-wr21lj",
+      "text": "ventana",
+      "ipa": "ben.ˈta.na",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1r93gaz",
+      "text": "verano",
+      "ipa": "be.ˈɾa.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1t7d51e",
+      "text": "verde",
+      "ipa": "ˈbeɾ.de",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1wq9hdo",
+      "text": "vergüenza",
+      "ipa": "beɾ.ˈgwen.θa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lglv4x",
+      "text": "vértebra",
+      "ipa": "ˈbeɾ.te.bɾa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1nnvyi2",
+      "text": "vértice",
+      "ipa": "ˈbeɾ.ti.θe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-17dv9jk",
+      "text": "vestido",
+      "ipa": "bes.ˈti.do",
+      "status": "proposed"
+    },
+    {
+      "id": "p-9vh8qe",
+      "text": "veterinaria",
+      "ipa": "be.te.ɾi.ˈna.ɾja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1snuca1",
+      "text": "viajaremos",
+      "ipa": "bja.xa.ˈɾe.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1a0iejl",
+      "text": "viaje",
+      "ipa": "ˈbja.xe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-15bc08v",
+      "text": "vídeo",
+      "ipa": "ˈbi.de.o",
+      "status": "proposed"
+    },
+    {
+      "id": "p-mcd5xj",
+      "text": "viejo",
+      "ipa": "ˈbje.xo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-oc2paz",
+      "text": "viento",
+      "ipa": "ˈbjen.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1w4hqbr",
+      "text": "vigilaban",
+      "ipa": "bi.xi.ˈla.ban",
+      "status": "proposed"
+    },
+    {
+      "id": "p-e7ccrj",
+      "text": "vigilancia",
+      "ipa": "bi.xi.ˈlan.θja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lfw4ds",
+      "text": "villancico",
+      "ipa": "bi.ʝan.ˈθi.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-9dwy98",
+      "text": "vinagre",
+      "ipa": "bi.ˈna.gɾe",
+      "status": "proposed"
+    },
+    {
+      "id": "p-16no0l5",
+      "text": "violín",
+      "ipa": "bjo.ˈlin",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lw9tsi",
+      "text": "vivir",
+      "ipa": "bi.ˈbiɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-2d0vnm",
+      "text": "volábamos",
+      "ipa": "bo.ˈla.ba.mos",
+      "status": "proposed"
+    },
+    {
+      "id": "p-j7rh0h",
+      "text": "volcán",
+      "ipa": "bol.ˈkan",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1gi8m3o",
+      "text": "volumen",
+      "ipa": "bo.ˈlu.men",
+      "status": "proposed"
+    },
+    {
+      "id": "p-ydc81a",
+      "text": "volvieron",
+      "ipa": "bol.ˈbje.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-7j0og6",
+      "text": "xilófono",
+      "ipa": "si.ˈlo.fo.no",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1a3jrby",
+      "text": "ya",
+      "ipa": "ˈʝa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1ip94vm",
+      "text": "yacimiento",
+      "ipa": "ʝa.θi.ˈmjen.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1v9lbvl",
+      "text": "yate",
+      "ipa": "ˈʝa.te",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1dxoqth",
+      "text": "yegua",
+      "ipa": "ˈʝe.gwa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-wa5h7w",
+      "text": "yema",
+      "ipa": "ˈʝe.ma",
+      "status": "proposed"
+    },
+    {
+      "id": "p-16vfjrw",
+      "text": "yeso",
+      "ipa": "ˈʝe.so",
+      "status": "proposed"
+    },
+    {
+      "id": "p-lccrsq",
+      "text": "yogur",
+      "ipa": "ʝo.ˈguɾ",
+      "status": "proposed"
+    },
+    {
+      "id": "p-13tn63d",
+      "text": "yunque",
+      "ipa": "ˈʝun.ke",
+      "status": "proposed"
+    },
+    {
+      "id": "p-uqzu4l",
+      "text": "yuxtaposición",
+      "ipa": "ʝuks.ta.po.si.ˈθjon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-n4nl3",
+      "text": "zanahoria",
+      "ipa": "θa.na.ˈo.ɾja",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1mf00ha",
+      "text": "zancada",
+      "ipa": "θan.ˈka.da",
+      "status": "proposed"
+    },
+    {
+      "id": "p-nbm7iw",
+      "text": "zanja",
+      "ipa": "ˈθan.xa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1fxqd6f",
+      "text": "zanjaron",
+      "ipa": "θan.ˈxa.ɾon",
+      "status": "proposed"
+    },
+    {
+      "id": "p-mxnu3r",
+      "text": "zapato",
+      "ipa": "θa.ˈpa.to",
+      "status": "proposed"
+    },
+    {
+      "id": "p-o824t8",
+      "text": "zarza",
+      "ipa": "ˈθaɾ.θa",
+      "status": "proposed"
+    },
+    {
+      "id": "p-7jyazs",
+      "text": "zigzag",
+      "ipa": "θig.ˈθag",
+      "status": "proposed"
+    },
+    {
+      "id": "p-a3m98a",
+      "text": "zócalo",
+      "ipa": "ˈθo.ka.lo",
+      "status": "proposed"
+    },
+    {
+      "id": "p-hqn3iz",
+      "text": "zoológico",
+      "ipa": "θo.o.ˈlo.xi.ko",
+      "status": "proposed"
+    },
+    {
+      "id": "p-pc56qs",
+      "text": "zorro",
+      "ipa": "ˈθo.ro",
+      "status": "proposed"
+    },
+    {
+      "id": "p-1xdtxlt",
+      "text": "zumo",
+      "ipa": "ˈθu.mo",
+      "status": "proposed"
+    }
+  ]
+}

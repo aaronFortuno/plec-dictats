@@ -18,8 +18,8 @@
   }
   return {get,keys:()=>[...records.keys()],load,start:()=>Promise.all([...records.keys()].map(key=>load(key)))};
  }
- function validateIndex(data,profile,mode=data?.mode||'words'){
-  if(data?.schemaVersion!==1||data.profile!==profile||data.language!=='ca'||!Array.isArray(data.entries))throw Error('Índex IPA invàlid.');
+ function validateIndex(data,profile,mode=data?.mode||'words',language='ca'){
+  if(data?.schemaVersion!==1||data.profile!==profile||data.language!==language||!Array.isArray(data.entries))throw Error('Índex IPA invàlid.');
   if(!['words','pseudo'].includes(mode)||(data.mode!==undefined&&data.mode!==mode))throw Error('Mode de l’índex IPA incompatible.');
   const identity=mode==='pseudo'?/^s-[a-z0-9]+$/:/^p-[a-z0-9]+$/;
   const seen=new Set();

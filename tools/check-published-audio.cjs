@@ -15,8 +15,8 @@ require('./check-pseudo-publication.cjs').publicChecks();
 const spanishId=manifest.defaultPacks.es;
 if(spanishId){
  const spanish=A.readJson(path.join(root,'audio/spanish-publication.json'));
- const {pack:expected,plan}=require('./run-spanish-audio.cjs');
- const pack=A.validatePack(manifest,spanishId),jobs=plan();
+ const {pack:expected,plan,batch}=require('./run-spanish-audio.cjs');
+ const pack=A.validatePack(manifest,expected.id),jobs=plan();
  const spanishWords=require('../catalogs/es/editions/seed-1-basic.json').catalog.entries;
  const coverage=M.coverage(manifest,spanishWords,'es','https://example.test/plec/');
  assert(coverage.ready&&coverage.urls.every(url=>url.startsWith('https://example.test/plec/assets/audio/es/')));
@@ -32,6 +32,28 @@ if(spanishId){
   assert(G.isValidMp3(bytes));
  }
  console.log('Spanish publication: 350 MP3 digests, review status and full language-specific student coverage verified.');
+ if(spanishId!==expected.id){
+  const expansion=A.readJson(path.join(root,'audio/spanish-expansion-publication.json'));
+  const {pack:addition,edition}=batch(true),expanded=A.validatePack(manifest,addition.id);
+  const full=M.coverage(manifest,edition.catalog.entries,'es','https://example.test/plec/');
+  assert(full.ready);
+  assert.equal(full.pack.id,spanishId);
+  assert.equal(expansion.decode.decoded,706);
+  assert.equal(expansion.catalogue,edition.catalog.revision);
+  assert.equal(expanded.fingerprint,expansion.fingerprint);
+  assert.equal(Object.keys(expanded.files).length,706);
+  assert.equal(Object.keys(full.pack.files).length,1056);
+  for(const job of plan(true)){
+   const relative=expanded.files[job.id];
+   assert.equal(relative,job.relativePath);
+   assert.equal(full.pack.basePath+full.pack.files[job.id],expanded.basePath+relative);
+   const audio=fs.readFileSync(path.join(root,expanded.basePath,relative));
+   assert.equal(crypto.createHash('sha256').update(audio).digest('hex'),expansion.sha256[relative]);
+   assert(G.isValidMp3(audio));
+  }
+  for(const [id,file] of Object.entries(pack.files))assert.equal(full.pack.basePath+full.pack.files[id],pack.basePath+file);
+  console.log('Spanish expansion: 706 new recordings and all 1,056 words covered, including the original 350 audio URLs.');
+ }
 }
 const valencianFile=path.join(root,'audio/valencian-publication.json');
 if(fs.existsSync(valencianFile)){

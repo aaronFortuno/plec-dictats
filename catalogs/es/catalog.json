@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "language": "es",
-  "edition": "es-2026-01-basic",
-  "status": "draft",
-  "reviewedByTeacher": false,
-  "version": 1,
+  "edition": "es-2026-02-ampliacion",
+  "status": "stable",
+  "reviewedByTeacher": true,
+  "version": 2,
   "categories": [
     {
       "id": "tilde",
@@ -20,55 +20,55 @@
     },
     {
       "id": "h",
-      "label": "H",
+      "label": "h",
       "title": "H inicial o intercalada, fuera del dígrafo ch",
       "mode": "words"
     },
     {
       "id": "gj",
-      "label": "G / J",
+      "label": "g / j",
       "title": "J o g ante e, i",
       "mode": "words"
     },
     {
       "id": "bv",
-      "label": "B / V",
+      "label": "b / v",
       "title": "Palabras con b o v",
       "mode": "words"
     },
     {
       "id": "rr",
-      "label": "R / RR",
+      "label": "r / rr",
       "title": "R inicial, rr y r entre vocales",
       "mode": "words"
     },
     {
       "id": "cquz",
-      "label": "C / Z / QU",
+      "label": "c / z / qu",
       "title": "C fuera de ch, z o qu",
       "mode": "words"
     },
     {
       "id": "ggu",
-      "label": "G / GU / GÜ",
+      "label": "g / gu / gü",
       "title": "G ante a, o, u y las grafías gu o gü",
       "mode": "words"
     },
     {
       "id": "lly",
-      "label": "LL / Y",
+      "label": "ll / y",
       "title": "Palabras con ll o y",
       "mode": "words"
     },
     {
       "id": "enye-ch",
-      "label": "Ñ / CH",
+      "label": "ñ / ch",
       "title": "Palabras con ñ o ch",
       "mode": "words"
     },
     {
       "id": "x",
-      "label": "X",
+      "label": "x",
       "title": "Palabras con x",
       "mode": "words"
     },
@@ -80,6 +80,19 @@
     }
   ],
   "entries": [
+    {
+      "id": "p-jjd391",
+      "text": "abecedario",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "cquz"
+      ]
+    },
     {
       "id": "p-yqcqjf",
       "text": "abeja",
@@ -94,6 +107,43 @@
       ]
     },
     {
+      "id": "p-1iyl5nz",
+      "text": "abrazábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1macgcr",
+      "text": "abrelatas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-pz24mi",
+      "text": "abrigadas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-11pb9as",
       "text": "abrir",
       "mode": "words",
@@ -102,6 +152,31 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-4uxkbi",
+      "text": "abrochadas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "enye-ch",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1jdkh3h",
+      "text": "absorbió",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
         "bv",
         "verbos"
       ]
@@ -131,6 +206,28 @@
       ]
     },
     {
+      "id": "p-12ijso0",
+      "text": "aceituna",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1nn4lji",
+      "text": "acento",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-165tspu",
       "text": "acera",
       "mode": "words",
@@ -140,6 +237,17 @@
       "tags": [
         "sin-tilde",
         "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-15q6gzl",
+      "text": "acierto",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
         "cquz"
       ]
     },
@@ -158,6 +266,64 @@
       ]
     },
     {
+      "id": "p-sy4j1f",
+      "text": "actividad",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-oy8tyx",
+      "text": "actriz",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-xeguhe",
+      "text": "actuáis",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-ai89y8",
+      "text": "acuarela",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1qsj9qz",
+      "text": "acueducto",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-rxf4xv",
       "text": "además",
       "mode": "words",
@@ -166,6 +332,37 @@
       "basicVocabulary": true,
       "tags": [
         "tilde"
+      ]
+    },
+    {
+      "id": "p-pxkzqb",
+      "text": "adorno",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-9kour4",
+      "text": "aeropuerto",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-pog42k",
+      "text": "afeitar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
       ]
     },
     {
@@ -178,6 +375,18 @@
       "tags": [
         "sin-tilde",
         "gj"
+      ]
+    },
+    {
+      "id": "p-1yps0cs",
+      "text": "agradecer",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "verbos"
       ]
     },
     {
@@ -201,6 +410,19 @@
       "basicVocabulary": true,
       "tags": [
         "tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-19x6yql",
+      "text": "agujero",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
         "ggu"
       ]
     },
@@ -230,6 +452,89 @@
       ]
     },
     {
+      "id": "p-1jcq7x9",
+      "text": "ahorrábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "h",
+        "bv",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1pkp0i2",
+      "text": "alambre",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-1d0nuyl",
+      "text": "albergue",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-ugf1dr",
+      "text": "álbum",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-9qfua6",
+      "text": "alcachofa",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-stusv4",
+      "text": "álgebra",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-vsbams",
+      "text": "algodón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "ggu"
+      ]
+    },
+    {
       "id": "p-te3bpm",
       "text": "allí",
       "mode": "words",
@@ -239,6 +544,61 @@
       "tags": [
         "tilde",
         "lly"
+      ]
+    },
+    {
+      "id": "p-nwbcv",
+      "text": "almacén",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1uhkq8c",
+      "text": "almendra",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-1pbgn1d",
+      "text": "almohada",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-1snra1t",
+      "text": "alquiler",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1jfkntp",
+      "text": "altavoz",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
       ]
     },
     {
@@ -267,6 +627,18 @@
       ]
     },
     {
+      "id": "p-1erobz9",
+      "text": "ambulancia",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-1e21541",
       "text": "amiga",
       "mode": "words",
@@ -288,6 +660,107 @@
       "tags": [
         "sin-tilde",
         "ggu"
+      ]
+    },
+    {
+      "id": "p-1k8zgx7",
+      "text": "amistad",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-5zcxdh",
+      "text": "anacardo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1thm3gj",
+      "text": "ancla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1oozahh",
+      "text": "anécdota",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-7aginz",
+      "text": "anillo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-itevn3",
+      "text": "antigüedad",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-z9fs42",
+      "text": "apacigüéis",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "cquz",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1cl34yi",
+      "text": "apellido",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-mfzdt5",
+      "text": "aperitivo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr"
       ]
     },
     {
@@ -315,6 +788,18 @@
       ]
     },
     {
+      "id": "p-1uw8bto",
+      "text": "araña",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "enye-ch"
+      ]
+    },
+    {
       "id": "p-1oixx48",
       "text": "árbol",
       "mode": "words",
@@ -327,6 +812,17 @@
       ]
     },
     {
+      "id": "p-13mkm6f",
+      "text": "ardilla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
       "id": "p-19og4un",
       "text": "arena",
       "mode": "words",
@@ -336,6 +832,29 @@
       "tags": [
         "sin-tilde",
         "rr"
+      ]
+    },
+    {
+      "id": "p-1fjhjcd",
+      "text": "armario",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1o7vv7n",
+      "text": "arqueología",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj",
+        "cquz"
       ]
     },
     {
@@ -352,6 +871,105 @@
       ]
     },
     {
+      "id": "p-dtzj9g",
+      "text": "artesanía",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1w963ct",
+      "text": "artículo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-54hn2",
+      "text": "ascensor",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-187hdbp",
+      "text": "asiento",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-ttwq8y",
+      "text": "astronauta",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-7nyju0",
+      "text": "aterrizaste",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1jbz8c2",
+      "text": "atletismo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-29l0vm",
+      "text": "atmósfera",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1x48uo0",
+      "text": "atravesaron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-1sbxbu9",
       "text": "aula",
       "mode": "words",
@@ -360,6 +978,127 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-18s3ec4",
+      "text": "autobús",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-mn4xxy",
+      "text": "autopista",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-1gvbsch",
+      "text": "avanzábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-rhvn0k",
+      "text": "avenida",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-3p15ek",
+      "text": "averiguábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "rr",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-16mw3d7",
+      "text": "averigüéis",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "rr",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-rn57c7",
+      "text": "averigüen",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1ang9du",
+      "text": "avestruz",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1uc30pz",
+      "text": "avión",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-1tppums",
+      "text": "aviso",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
       ]
     },
     {
@@ -388,6 +1127,17 @@
       ]
     },
     {
+      "id": "p-a5jjua",
+      "text": "azotea",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-jpjz6r",
       "text": "azúcar",
       "mode": "words",
@@ -412,6 +1162,18 @@
       ]
     },
     {
+      "id": "p-5svupy",
+      "text": "azulejo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-18jcoyj",
       "text": "bailar",
       "mode": "words",
@@ -422,6 +1184,42 @@
         "sin-tilde",
         "bv",
         "verbos"
+      ]
+    },
+    {
+      "id": "p-yg3g5z",
+      "text": "bailasteis",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1d2tn19",
+      "text": "balanza",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1n106kd",
+      "text": "balcón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz"
       ]
     },
     {
@@ -438,6 +1236,30 @@
       ]
     },
     {
+      "id": "p-81us5z",
+      "text": "bandeja",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-cjyq27",
+      "text": "bandera",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr"
+      ]
+    },
+    {
       "id": "p-1vwwqc9",
       "text": "baño",
       "mode": "words",
@@ -451,6 +1273,18 @@
       ]
     },
     {
+      "id": "p-1743vdx",
+      "text": "barrera",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr"
+      ]
+    },
+    {
       "id": "p-pat3k1",
       "text": "barrio",
       "mode": "words",
@@ -461,6 +1295,79 @@
         "sin-tilde",
         "bv",
         "rr"
+      ]
+    },
+    {
+      "id": "p-otqfpq",
+      "text": "barro",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-yssiak",
+      "text": "basura",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-122ypol",
+      "text": "batalla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1tw9yc2",
+      "text": "batería",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-5ih8yr",
+      "text": "baúl",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-uwt2mp",
+      "text": "bautizaron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "cquz",
+        "verbos"
       ]
     },
     {
@@ -486,6 +1393,56 @@
         "sin-tilde",
         "bv",
         "verbos"
+      ]
+    },
+    {
+      "id": "p-smj312",
+      "text": "bendijeron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-15qqple",
+      "text": "berenjena",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-hhdhub",
+      "text": "beso",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-ztfnt7",
+      "text": "biberón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "rr"
       ]
     },
     {
@@ -540,6 +1497,78 @@
       ]
     },
     {
+      "id": "p-cgt434",
+      "text": "bigote",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-vfd1ei",
+      "text": "bilingüe",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-12xvqxn",
+      "text": "bilingüismo",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-2my68j",
+      "text": "billete",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-28bbtv",
+      "text": "biodiversidad",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-fyx8i1",
+      "text": "bizcocho",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz",
+        "enye-ch"
+      ]
+    },
+    {
       "id": "p-aga4df",
       "text": "blanco",
       "mode": "words",
@@ -550,6 +1579,17 @@
         "sin-tilde",
         "bv",
         "cquz"
+      ]
+    },
+    {
+      "id": "p-140d3xx",
+      "text": "blusa",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
       ]
     },
     {
@@ -567,6 +1607,18 @@
       ]
     },
     {
+      "id": "p-1372ufm",
+      "text": "bocina",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-a11eaj",
       "text": "bolígrafo",
       "mode": "words",
@@ -576,6 +1628,42 @@
       "tags": [
         "tilde",
         "bv"
+      ]
+    },
+    {
+      "id": "p-1ozvfu",
+      "text": "bolsillo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-pw60a0",
+      "text": "bombero",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1a2o1pa",
+      "text": "bombilla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "lly"
       ]
     },
     {
@@ -617,6 +1705,31 @@
       ]
     },
     {
+      "id": "p-y2d8vg",
+      "text": "bostezo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-43k5yg",
+      "text": "bostezó",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-me181f",
       "text": "botella",
       "mode": "words",
@@ -627,6 +1740,41 @@
         "sin-tilde",
         "bv",
         "lly"
+      ]
+    },
+    {
+      "id": "p-kqugks",
+      "text": "botón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-1crls14",
+      "text": "brazo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1wbvp0g",
+      "text": "brújula",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj",
+        "bv"
       ]
     },
     {
@@ -657,6 +1805,41 @@
       ]
     },
     {
+      "id": "p-gt5s3h",
+      "text": "bufanda",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-1f1katt",
+      "text": "búho",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "h",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-cwi5xd",
+      "text": "burbuja",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv"
+      ]
+    },
+    {
       "id": "p-o9hg3k",
       "text": "buscar",
       "mode": "words",
@@ -668,6 +1851,18 @@
         "bv",
         "cquz",
         "verbos"
+      ]
+    },
+    {
+      "id": "p-rn5oj4",
+      "text": "buzón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz"
       ]
     },
     {
@@ -685,12 +1880,99 @@
       ]
     },
     {
+      "id": "p-oij02o",
+      "text": "cabecera",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1go3qd5",
+      "text": "cabíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-w6bpbj",
+      "text": "cabra",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1xh7x6o",
+      "text": "cabrían",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-con9x5",
+      "text": "cacahuete",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-10rcyvp",
+      "text": "cachorro",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "enye-ch"
+      ]
+    },
+    {
       "id": "p-171hp4f",
       "text": "cada",
       "mode": "words",
       "vocabulary": "basic",
       "orthography": "medium",
       "basicVocabulary": true,
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-c074gy",
+      "text": "cadena",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
       "tags": [
         "sin-tilde",
         "cquz"
@@ -706,6 +1988,91 @@
       "tags": [
         "tilde",
         "cquz"
+      ]
+    },
+    {
+      "id": "p-cncy4g",
+      "text": "cajera",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-5840g3",
+      "text": "cajón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-tgdakz",
+      "text": "calabaza",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1hrwbfj",
+      "text": "calcetín",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-16n4cye",
+      "text": "calendario",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-172jc4v",
+      "text": "caligrafía",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-brp27y",
+      "text": "callaron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "lly",
+        "verbos"
       ]
     },
     {
@@ -748,6 +2115,19 @@
       ]
     },
     {
+      "id": "p-i6k69d",
+      "text": "cambiáis",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-zizxsk",
       "text": "cambios",
       "mode": "words",
@@ -785,6 +2165,28 @@
       ]
     },
     {
+      "id": "p-syezax",
+      "text": "camiseta",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-y5no7h",
+      "text": "campana",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-frxz3a",
       "text": "campo",
       "mode": "words",
@@ -794,6 +2196,53 @@
       "tags": [
         "sin-tilde",
         "cquz"
+      ]
+    },
+    {
+      "id": "p-cndw23",
+      "text": "canción",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1cis481",
+      "text": "cangrejo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1i4osgy",
+      "text": "canoa",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1whszig",
+      "text": "cantabais",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz",
+        "verbos"
       ]
     },
     {
@@ -807,6 +2256,78 @@
         "sin-tilde",
         "cquz",
         "verbos"
+      ]
+    },
+    {
+      "id": "p-1b5xp5g",
+      "text": "cantimplora",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-lyaoqh",
+      "text": "caparazón",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-28d4nd",
+      "text": "caracol",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-rgc76a",
+      "text": "caramelo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-biy3o1",
+      "text": "carbón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-qhnrww",
+      "text": "caricia",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
       ]
     },
     {
@@ -834,6 +2355,29 @@
       ]
     },
     {
+      "id": "p-amusia",
+      "text": "cartero",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-199k97f",
+      "text": "cartón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-14ryuvk",
       "text": "casa",
       "mode": "words",
@@ -842,6 +2386,18 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-15zqtkc",
+      "text": "cáscara",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr",
         "cquz"
       ]
     },
@@ -871,6 +2427,30 @@
       ]
     },
     {
+      "id": "p-s6zc7b",
+      "text": "castillo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-3zsb40",
+      "text": "catálogo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz",
+        "ggu"
+      ]
+    },
+    {
       "id": "p-160t8ft",
       "text": "cayeron",
       "mode": "words",
@@ -883,6 +2463,29 @@
         "cquz",
         "lly",
         "verbos"
+      ]
+    },
+    {
+      "id": "p-gof4zf",
+      "text": "cazuela",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1xybfsy",
+      "text": "cebada",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
       ]
     },
     {
@@ -976,6 +2579,65 @@
       ]
     },
     {
+      "id": "p-17gg5ui",
+      "text": "césped",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1m43vjv",
+      "text": "champú",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-1fsjjnk",
+      "text": "chaqueta",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-16ttz7a",
+      "text": "charco",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-feyre3",
+      "text": "chasquear",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "enye-ch",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-ztp6qq",
       "text": "chica",
       "mode": "words",
@@ -1002,6 +2664,40 @@
       ]
     },
     {
+      "id": "p-b7ptm8",
+      "text": "chimenea",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-19qfbgg",
+      "text": "chimpancé",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-eyo9q4",
+      "text": "chispa",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
       "id": "p-dmcgr6",
       "text": "chocolate",
       "mode": "words",
@@ -1012,6 +2708,45 @@
         "sin-tilde",
         "cquz",
         "enye-ch"
+      ]
+    },
+    {
+      "id": "p-1920ht7",
+      "text": "chorreaba",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "enye-ch",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1q9mnku",
+      "text": "chubasquero",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "cquz",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-1og131d",
+      "text": "cicatriz",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
       ]
     },
     {
@@ -1027,6 +2762,102 @@
       ]
     },
     {
+      "id": "p-1gqo1su",
+      "text": "ciencia",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-cq8k8j",
+      "text": "cifra",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-18nf4sw",
+      "text": "cigüeña",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "ggu",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-1lrjgok",
+      "text": "cigüeñal",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "ggu",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-2vbbrg",
+      "text": "cinturón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1o5y58l",
+      "text": "circunferencia",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1fas77v",
+      "text": "ciruela",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1h58q6q",
+      "text": "civilización",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-y5i8sq",
       "text": "clase",
       "mode": "words",
@@ -1035,6 +2866,42 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1o42rg2",
+      "text": "clavija",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-bl2ctf",
+      "text": "clínica",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1iq2qux",
+      "text": "clorofila",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
         "cquz"
       ]
     },
@@ -1060,6 +2927,31 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1xx3xyf",
+      "text": "coexistían",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "cquz",
+        "x",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1mpq3bi",
+      "text": "cohete",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
         "cquz"
       ]
     },
@@ -1090,12 +2982,46 @@
       ]
     },
     {
+      "id": "p-1js344x",
+      "text": "collar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-12dh5i9",
+      "text": "colmena",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-yjld0n",
       "text": "color",
       "mode": "words",
       "vocabulary": "basic",
       "orthography": "medium",
       "basicVocabulary": true,
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-19v5bep",
+      "text": "columna",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
       "tags": [
         "sin-tilde",
         "cquz"
@@ -1114,6 +3040,19 @@
       ]
     },
     {
+      "id": "p-1lm3ksz",
+      "text": "comenzábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-1ptc9cu",
       "text": "comer",
       "mode": "words",
@@ -1124,6 +3063,17 @@
         "sin-tilde",
         "cquz",
         "verbos"
+      ]
+    },
+    {
+      "id": "p-1howvb3",
+      "text": "cometa",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
       ]
     },
     {
@@ -1180,6 +3130,42 @@
       ]
     },
     {
+      "id": "p-1f8pufn",
+      "text": "compás",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-8zoro0",
+      "text": "concurso",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1ys90fh",
+      "text": "condujeron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-1rwjq24",
       "text": "conejo",
       "mode": "words",
@@ -1190,6 +3176,56 @@
         "sin-tilde",
         "gj",
         "cquz"
+      ]
+    },
+    {
+      "id": "p-1i54wnw",
+      "text": "congelador",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1l0nf3l",
+      "text": "conserjería",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "gj",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-cg69k2",
+      "text": "construcción",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1hgv9zn",
+      "text": "construyeron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "lly",
+        "verbos"
       ]
     },
     {
@@ -1214,6 +3250,83 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1st1wvc",
+      "text": "contigüidad",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-18h2fxt",
+      "text": "contrarreloj",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-m6gjo9",
+      "text": "contribuyeron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "cquz",
+        "lly",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1mz2n9l",
+      "text": "convencisteis",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1t25dzj",
+      "text": "cordillera",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-10j76t5",
+      "text": "cordón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
         "cquz"
       ]
     },
@@ -1246,6 +3359,20 @@
       ]
     },
     {
+      "id": "p-95dau7",
+      "text": "corrigieron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-qmrbva",
       "text": "cortina",
       "mode": "words",
@@ -1254,6 +3381,30 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-2psali",
+      "text": "cosíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-15v8eat",
+      "text": "costura",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
         "cquz"
       ]
     },
@@ -1268,6 +3419,19 @@
         "tilde",
         "cquz",
         "verbos"
+      ]
+    },
+    {
+      "id": "p-c1xbn4",
+      "text": "cremallera",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "lly"
       ]
     },
     {
@@ -1286,6 +3450,41 @@
       ]
     },
     {
+      "id": "p-13p5hr3",
+      "text": "cría",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1vv5fe6",
+      "text": "crujían",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "gj",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1mxc0az",
+      "text": "crustáceo",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-zbr4hl",
       "text": "cuaderno",
       "mode": "words",
@@ -1294,6 +3493,18 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1ige72n",
+      "text": "cuadrilátero",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr",
         "cquz"
       ]
     },
@@ -1339,6 +3550,174 @@
       ]
     },
     {
+      "id": "p-1u3uuou",
+      "text": "cuestión",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1mpcpje",
+      "text": "cueva",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-vv9tl6",
+      "text": "cuidábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1csamna",
+      "text": "danza",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1q8sl0k",
+      "text": "dátil",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-yyll98",
+      "text": "dedujeron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1kogbhc",
+      "text": "dejábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "gj",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1x7tfie",
+      "text": "delfín",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1e4066y",
+      "text": "dentista",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-fmc18z",
+      "text": "deporte",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-1293400",
+      "text": "derrumbe",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-a2ghqb",
+      "text": "desafío",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1hd8vaf",
+      "text": "desagüe",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-1tcgb9d",
+      "text": "desahucio",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1l1lpid",
+      "text": "desastre",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
       "id": "p-1prg9pa",
       "text": "desayuno",
       "mode": "words",
@@ -1348,6 +3727,80 @@
       "tags": [
         "sin-tilde",
         "lly"
+      ]
+    },
+    {
+      "id": "p-1wvmnht",
+      "text": "descendíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-xu6kq9",
+      "text": "describíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-gfbg3v",
+      "text": "descubriste",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1ohoqt3",
+      "text": "desenterrar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-4lmmxp",
+      "text": "despabilar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-qk24hb",
+      "text": "despertaron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "verbos"
       ]
     },
     {
@@ -1370,6 +3823,17 @@
       "basicVocabulary": true,
       "tags": [
         "tilde"
+      ]
+    },
+    {
+      "id": "p-1cgj8us",
+      "text": "diagnóstico",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
       ]
     },
     {
@@ -1451,6 +3915,19 @@
       ]
     },
     {
+      "id": "p-1n36ips",
+      "text": "digerir",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-euv56l",
       "text": "dijeron",
       "mode": "words",
@@ -1462,6 +3939,41 @@
         "gj",
         "rr",
         "verbos"
+      ]
+    },
+    {
+      "id": "p-175zuzo",
+      "text": "diptongo",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-h9636i",
+      "text": "dirigíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "gj",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1nnsujb",
+      "text": "disfraz",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
       ]
     },
     {
@@ -1478,6 +3990,54 @@
       ]
     },
     {
+      "id": "p-mck0uy",
+      "text": "distancia",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-k88md5",
+      "text": "distribuyeron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "lly",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-fmwrqv",
+      "text": "división",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-19q6by6",
+      "text": "dobladas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-n2gie7",
       "text": "dormir",
       "mode": "words",
@@ -1487,6 +4047,17 @@
       "tags": [
         "sin-tilde",
         "verbos"
+      ]
+    },
+    {
+      "id": "p-nj8dyv",
+      "text": "dragón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "ggu"
       ]
     },
     {
@@ -1527,6 +4098,109 @@
       ]
     },
     {
+      "id": "p-1qvvz6s",
+      "text": "eléctrico",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-wermow",
+      "text": "elegíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "gj",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-169zao9",
+      "text": "embalse",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-196meu8",
+      "text": "embrión",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-w1i5dy",
+      "text": "embudo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-1rf6zez",
+      "text": "empanada",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-ax5m9n",
+      "text": "empujaron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-7p7eay",
+      "text": "encajadas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-o6yv7m",
+      "text": "enchufe",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
       "id": "p-1muy3y1",
       "text": "encima",
       "mode": "words",
@@ -1536,6 +4210,94 @@
       "tags": [
         "sin-tilde",
         "cquz"
+      ]
+    },
+    {
+      "id": "p-1wwpr9r",
+      "text": "encontrabais",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1gcnanf",
+      "text": "energía",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-e1i7mq",
+      "text": "enjabonar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1dc8l8k",
+      "text": "enjambre",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-14mxb6p",
+      "text": "enjuagábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "gj",
+        "bv",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1g5ucl6",
+      "text": "enrollaron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "lly",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-hz4k99",
+      "text": "ensayar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly",
+        "verbos"
       ]
     },
     {
@@ -1551,6 +4313,19 @@
       ]
     },
     {
+      "id": "p-13axc4p",
+      "text": "enseñábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "enye-ch",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-brvb5h",
       "text": "entonces",
       "mode": "words",
@@ -1563,12 +4338,110 @@
       ]
     },
     {
+      "id": "p-vc7vzq",
+      "text": "envergadura",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-f1zk5t",
+      "text": "enviasteis",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1ponld5",
+      "text": "envoltorio",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr"
+      ]
+    },
+    {
       "id": "p-lp3ap",
       "text": "equipo",
       "mode": "words",
       "vocabulary": "basic",
       "orthography": "medium",
       "basicVocabulary": true,
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-13i5s2l",
+      "text": "equivocadas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-qczkil",
+      "text": "erosión",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1gzxjci",
+      "text": "escalera",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-ac8diz",
+      "text": "escarabajo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-kt6fj5",
+      "text": "escena",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
       "tags": [
         "sin-tilde",
         "cquz"
@@ -1585,6 +4458,19 @@
         "sin-tilde",
         "bv",
         "cquz"
+      ]
+    },
+    {
+      "id": "p-asl7pa",
+      "text": "escogíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "gj",
+        "cquz",
+        "verbos"
       ]
     },
     {
@@ -1631,6 +4517,74 @@
       ]
     },
     {
+      "id": "p-o62uvt",
+      "text": "escudo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1nmd1ly",
+      "text": "esdrújula",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-cuy9jb",
+      "text": "esguince",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-jtnd06",
+      "text": "esófago",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-x2qgo0",
+      "text": "espacio",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1io4nka",
+      "text": "espantapájaros",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj",
+        "rr"
+      ]
+    },
+    {
       "id": "p-59q69g",
       "text": "espejo",
       "mode": "words",
@@ -1656,6 +4610,17 @@
       ]
     },
     {
+      "id": "p-erdvno",
+      "text": "esponja",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj"
+      ]
+    },
+    {
       "id": "p-k8vtoi",
       "text": "estación",
       "mode": "words",
@@ -1664,6 +4629,28 @@
       "basicVocabulary": true,
       "tags": [
         "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1nefi6l",
+      "text": "estalactita",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-itxs7k",
+      "text": "estanque",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
         "cquz"
       ]
     },
@@ -1677,6 +4664,18 @@
       "tags": [
         "sin-tilde",
         "lly"
+      ]
+    },
+    {
+      "id": "p-1ol0vv6",
+      "text": "estudiabais",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "verbos"
       ]
     },
     {
@@ -1705,6 +4704,31 @@
       ]
     },
     {
+      "id": "p-1or0pwm",
+      "text": "eucalipto",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1ivoaix",
+      "text": "exagerar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "x",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-1ppwbn8",
       "text": "examen",
       "mode": "words",
@@ -1713,6 +4737,96 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde",
+        "x"
+      ]
+    },
+    {
+      "id": "p-309ar6",
+      "text": "excavar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz",
+        "x",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-dxl4ac",
+      "text": "excluíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "cquz",
+        "x",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-hcrt9i",
+      "text": "excluyeron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "lly",
+        "x",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-10t81so",
+      "text": "excursión",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "cquz",
+        "x"
+      ]
+    },
+    {
+      "id": "p-tumqgc",
+      "text": "exhalación",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "h",
+        "cquz",
+        "x"
+      ]
+    },
+    {
+      "id": "p-z863rt",
+      "text": "éxito",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "x"
+      ]
+    },
+    {
+      "id": "p-1tmgrnv",
+      "text": "exótico",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "cquz",
         "x"
       ]
     },
@@ -1746,6 +4860,53 @@
       ]
     },
     {
+      "id": "p-1qrnu7n",
+      "text": "explorar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "x",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-j9pgtk",
+      "text": "fábrica",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1lsongj",
+      "text": "fábula",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-sdoh8i",
+      "text": "fachada",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
       "id": "p-1p3nvu3",
       "text": "fácil",
       "mode": "words",
@@ -1758,6 +4919,16 @@
       ]
     },
     {
+      "id": "p-1rbusb4",
+      "text": "falda",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
       "id": "p-wi9rib",
       "text": "familia",
       "mode": "words",
@@ -1766,6 +4937,17 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-f4ru7u",
+      "text": "faro",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
       ]
     },
     {
@@ -1793,6 +4975,18 @@
       ]
     },
     {
+      "id": "p-l3m1la",
+      "text": "felicitamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-11r4hsk",
       "text": "feliz",
       "mode": "words",
@@ -1805,6 +4999,51 @@
       ]
     },
     {
+      "id": "p-pu7237",
+      "text": "ferrocarril",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-gdyg4s",
+      "text": "figura",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-wlnlxn",
+      "text": "flauta",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-1qived1",
+      "text": "flecha",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
       "id": "p-1q2acpj",
       "text": "flor",
       "mode": "words",
@@ -1813,6 +5052,47 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-4fgup9",
+      "text": "flúor",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-xc5jti",
+      "text": "fórmula",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1f4u6u",
+      "text": "fotografía",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1d2qpq2",
+      "text": "frambuesa",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
       ]
     },
     {
@@ -1838,6 +5118,17 @@
       ]
     },
     {
+      "id": "p-2u07ak",
+      "text": "frutería",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
       "id": "p-11swlwd",
       "text": "fuente",
       "mode": "words",
@@ -1857,6 +5148,29 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-1xmftep",
+      "text": "fútbol",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-fabvdn",
+      "text": "galaxia",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "ggu",
+        "x"
       ]
     },
     {
@@ -1886,6 +5200,20 @@
       ]
     },
     {
+      "id": "p-jdia8c",
+      "text": "garabatear",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-5zvhh1",
       "text": "gato",
       "mode": "words",
@@ -1894,6 +5222,18 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-16hsnzx",
+      "text": "gaviota",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
         "ggu"
       ]
     },
@@ -1910,6 +5250,131 @@
       ]
     },
     {
+      "id": "p-1r4cwl5",
+      "text": "geografía",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-1j7er5q",
+      "text": "geólogo",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-1f78c3r",
+      "text": "geometría",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-1rjwka0",
+      "text": "gesto",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-1df0fxh",
+      "text": "gigante",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-1tcvv7f",
+      "text": "gimnasio",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-1oinhwt",
+      "text": "girasol",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-pxujux",
+      "text": "glaciar",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-xphx0c",
+      "text": "glándula",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-154qq8w",
+      "text": "gobernar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1hjlxci",
+      "text": "golosina",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "ggu"
+      ]
+    },
+    {
       "id": "p-19t8s14",
       "text": "goma",
       "mode": "words",
@@ -1919,6 +5384,38 @@
       "tags": [
         "sin-tilde",
         "ggu"
+      ]
+    },
+    {
+      "id": "p-bepv55",
+      "text": "gorra",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-uj8h88",
+      "text": "grafía",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1sayeb0",
+      "text": "gramófono",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
       ]
     },
     {
@@ -1933,6 +5430,28 @@
       ]
     },
     {
+      "id": "p-1d0sn8e",
+      "text": "granizo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1ctx8cp",
+      "text": "grillo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
       "id": "p-xq0ng5",
       "text": "gris",
       "mode": "words",
@@ -1941,6 +5460,135 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-xk9jr8",
+      "text": "grúa",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-pgtwt9",
+      "text": "gruñían",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "enye-ch",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-vjyu6c",
+      "text": "guante",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-46fci8",
+      "text": "guardería",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-af0qgq",
+      "text": "guerra",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-18i1dub",
+      "text": "guiaban",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-b4jjk0",
+      "text": "guinda",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-1e5z2m5",
+      "text": "guiñar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "ggu",
+        "enye-ch",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-164gxc9",
+      "text": "güiro",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-i2ay5f",
+      "text": "guitarra",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-bdjyhj",
+      "text": "gusano",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "ggu"
       ]
     },
     {
@@ -2000,6 +5648,19 @@
       ]
     },
     {
+      "id": "p-12wzbou",
+      "text": "hablasteis",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-14gx02d",
       "text": "habrían",
       "mode": "words",
@@ -2028,6 +5689,65 @@
       ]
     },
     {
+      "id": "p-1n45otf",
+      "text": "hacha",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-y29o8k",
+      "text": "hada",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-47qy8u",
+      "text": "halagüeño",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "ggu",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-1wa9y7q",
+      "text": "hámster",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-nmimx7",
+      "text": "harina",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "rr"
+      ]
+    },
+    {
       "id": "p-1bzvt8v",
       "text": "hasta",
       "mode": "words",
@@ -2037,6 +5757,103 @@
       "tags": [
         "sin-tilde",
         "h"
+      ]
+    },
+    {
+      "id": "p-1v92ml5",
+      "text": "helado",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-cq3l1c",
+      "text": "helecho",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-sgopum",
+      "text": "helicóptero",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "h",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-7h8dyu",
+      "text": "hematoma",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-134en17",
+      "text": "hemisferio",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-5ftz45",
+      "text": "herbicida",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-u9bggu",
+      "text": "herbívoro",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "h",
+        "bv",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-cxuwsp",
+      "text": "herida",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "rr"
       ]
     },
     {
@@ -2064,6 +5881,31 @@
       ]
     },
     {
+      "id": "p-nzp6jk",
+      "text": "herramienta",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1k9aush",
+      "text": "hexágono",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "h",
+        "ggu",
+        "x"
+      ]
+    },
+    {
       "id": "p-175a6ht",
       "text": "hicieron",
       "mode": "words",
@@ -2079,6 +5921,29 @@
       ]
     },
     {
+      "id": "p-1dnan6l",
+      "text": "hidrógeno",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "h",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-1fbcvvj",
+      "text": "hielo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h"
+      ]
+    },
+    {
       "id": "p-cumfqt",
       "text": "hierba",
       "mode": "words",
@@ -2089,6 +5954,18 @@
         "sin-tilde",
         "h",
         "bv"
+      ]
+    },
+    {
+      "id": "p-2tdmyx",
+      "text": "higo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "ggu"
       ]
     },
     {
@@ -2118,6 +5995,86 @@
       ]
     },
     {
+      "id": "p-1szvaue",
+      "text": "hilo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-hr364p",
+      "text": "himno",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-m2n8pq",
+      "text": "hipérbole",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "h",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-1u449qw",
+      "text": "hipopótamo",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-zfknwk",
+      "text": "hipotenusa",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-190vjei",
+      "text": "hipótesis",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-ilis7t",
+      "text": "hoguera",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
       "id": "p-18uljh0",
       "text": "hoja",
       "mode": "words",
@@ -2144,6 +6101,30 @@
       ]
     },
     {
+      "id": "p-btgq8x",
+      "text": "hombro",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-swci1n",
+      "text": "homenaje",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "gj"
+      ]
+    },
+    {
       "id": "p-15faaq",
       "text": "horario",
       "mode": "words",
@@ -2157,6 +6138,19 @@
       ]
     },
     {
+      "id": "p-9yl0eo",
+      "text": "horizonte",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-c2okjr",
       "text": "hormiga",
       "mode": "words",
@@ -2165,6 +6159,18 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde",
+        "h",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-37qj8p",
+      "text": "hormigón",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
         "h",
         "ggu"
       ]
@@ -2195,6 +6201,64 @@
       ]
     },
     {
+      "id": "p-1vclhhs",
+      "text": "hubo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-omaij9",
+      "text": "huella",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-16ui3it",
+      "text": "huerto",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-w9tj8g",
+      "text": "hueso",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-1lna3u0",
+      "text": "huésped",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "h"
+      ]
+    },
+    {
       "id": "p-154yubx",
       "text": "huevo",
       "mode": "words",
@@ -2204,6 +6268,83 @@
       "tags": [
         "sin-tilde",
         "h",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-1farju",
+      "text": "humedad",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-1vd18zn",
+      "text": "humo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h"
+      ]
+    },
+    {
+      "id": "p-1hbskkw",
+      "text": "huracán",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "h",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1cvfa85",
+      "text": "ilusión",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1i5kwd5",
+      "text": "imagen",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-17mu9md",
+      "text": "imán",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1e8d5lb",
+      "text": "impermeable",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
         "bv"
       ]
     },
@@ -2219,6 +6360,79 @@
       ]
     },
     {
+      "id": "p-f4sw26",
+      "text": "inaugurar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1t8shn1",
+      "text": "incendio",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-18t4jwp",
+      "text": "incluían",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-d3evco",
+      "text": "índice",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1nzj2pd",
+      "text": "influyeron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "lly",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-oagloy",
+      "text": "instruyeron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "lly",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-14lzgcq",
       "text": "interesante",
       "mode": "words",
@@ -2228,6 +6442,68 @@
       "tags": [
         "sin-tilde",
         "rr"
+      ]
+    },
+    {
+      "id": "p-tki06u",
+      "text": "interrogaban",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1ixcnxq",
+      "text": "interrumpió",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-fb9gyq",
+      "text": "investigábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-bgmhkm",
+      "text": "invierno",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-1efdenv",
+      "text": "inyección",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz",
+        "lly"
       ]
     },
     {
@@ -2242,6 +6518,39 @@
       ]
     },
     {
+      "id": "p-pmxsli",
+      "text": "islote",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-vfafeg",
+      "text": "izquierda",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-2uspn3",
+      "text": "jabalí",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj",
+        "bv"
+      ]
+    },
+    {
       "id": "p-1uj01gc",
       "text": "jabón",
       "mode": "words",
@@ -2252,6 +6561,18 @@
         "tilde",
         "gj",
         "bv"
+      ]
+    },
+    {
+      "id": "p-xbs6hw",
+      "text": "jacinto",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "cquz"
       ]
     },
     {
@@ -2292,6 +6613,99 @@
       ]
     },
     {
+      "id": "p-d536rr",
+      "text": "jaula",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-f1r6b7",
+      "text": "jazmín",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1nqpef0",
+      "text": "jefa",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-u7yksg",
+      "text": "jengibre",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-1opefzr",
+      "text": "jeroglífico",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "gj",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1xixqzs",
+      "text": "jersey",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-2j7e5j",
+      "text": "jinete",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-hfrgrd",
+      "text": "jornada",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj"
+      ]
+    },
+    {
       "id": "p-1m4gs2o",
       "text": "joven",
       "mode": "words",
@@ -2302,6 +6716,42 @@
         "sin-tilde",
         "gj",
         "bv"
+      ]
+    },
+    {
+      "id": "p-1duwagn",
+      "text": "joyería",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "gj",
+        "rr",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1062xf9",
+      "text": "judía",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-18dmwjm",
+      "text": "juez",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "cquz"
       ]
     },
     {
@@ -2334,6 +6784,136 @@
       ]
     },
     {
+      "id": "p-vgshn0",
+      "text": "jugaron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1ovbfx7",
+      "text": "juguete",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-v1goq2",
+      "text": "jurisdicción",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "gj",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-ae6svl",
+      "text": "juzgábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "gj",
+        "bv",
+        "cquz",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-187n3nt",
+      "text": "kilo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-1wrn7et",
+      "text": "ladrillo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1qajt1l",
+      "text": "lagartija",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-z7pytn",
+      "text": "lágrima",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-lt8jf2",
+      "text": "laguna",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-ngyipc",
+      "text": "lámpara",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-ydq2tn",
+      "text": "lancha",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
       "id": "p-vcgl36",
       "text": "lápiz",
       "mode": "words",
@@ -2359,6 +6939,41 @@
       ]
     },
     {
+      "id": "p-1n15b43",
+      "text": "lavaríamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1bs3t6o",
+      "text": "lazo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-19y2lo5",
+      "text": "lección",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-1r4wyvb",
       "text": "leche",
       "mode": "words",
@@ -2367,6 +6982,18 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-16qe89v",
+      "text": "lechuga",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "ggu",
         "enye-ch"
       ]
     },
@@ -2408,6 +7035,17 @@
       ]
     },
     {
+      "id": "p-19yvg7d",
+      "text": "lejía",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj"
+      ]
+    },
+    {
       "id": "p-1bz0brh",
       "text": "lejos",
       "mode": "words",
@@ -2420,6 +7058,48 @@
       ]
     },
     {
+      "id": "p-q9o030",
+      "text": "lengüeta",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-1byy75t",
+      "text": "lenteja",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-6kfmoq",
+      "text": "león",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-ffmm8q",
+      "text": "leopardo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
       "id": "p-zcz0ss",
       "text": "letra",
       "mode": "words",
@@ -2428,6 +7108,18 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-tx2xli",
+      "text": "librería",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "rr"
       ]
     },
     {
@@ -2449,6 +7141,28 @@
       "vocabulary": "basic",
       "orthography": "medium",
       "basicVocabulary": true,
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-lvjzgy",
+      "text": "licencia",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1bc259p",
+      "text": "liebre",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
       "tags": [
         "sin-tilde",
         "bv"
@@ -2490,6 +7204,18 @@
       ]
     },
     {
+      "id": "p-i572y3",
+      "text": "lingüística",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "cquz",
+        "ggu"
+      ]
+    },
+    {
       "id": "p-7kcek1",
       "text": "llamaste",
       "mode": "words",
@@ -2503,6 +7229,29 @@
       ]
     },
     {
+      "id": "p-1x62uai",
+      "text": "llanto",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-13so8nz",
+      "text": "llanura",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "lly"
+      ]
+    },
+    {
       "id": "p-100ypqe",
       "text": "llave",
       "mode": "words",
@@ -2512,6 +7261,18 @@
       "tags": [
         "sin-tilde",
         "bv",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-18u5gz0",
+      "text": "llegada",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "ggu",
         "lly"
       ]
     },
@@ -2559,6 +7320,33 @@
       ]
     },
     {
+      "id": "p-payl7q",
+      "text": "llorábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "rr",
+        "lly",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-4zzr4j",
+      "text": "llovizna",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz",
+        "lly"
+      ]
+    },
+    {
       "id": "p-r140r1",
       "text": "lluvia",
       "mode": "words",
@@ -2569,6 +7357,29 @@
         "sin-tilde",
         "bv",
         "lly"
+      ]
+    },
+    {
+      "id": "p-1gpoy7m",
+      "text": "longitud",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-1m1ou3p",
+      "text": "luciérnaga",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz",
+        "ggu"
       ]
     },
     {
@@ -2592,6 +7403,28 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-277l49",
+      "text": "maceta",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1hze7ss",
+      "text": "madera",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
       ]
     },
     {
@@ -2628,6 +7461,48 @@
       ]
     },
     {
+      "id": "p-2a5dmq",
+      "text": "magdalena",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-1xejvft",
+      "text": "magia",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-19gxti7",
+      "text": "magnitud",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-t6x56d",
+      "text": "maíz",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-180o572",
       "text": "maleta",
       "mode": "words",
@@ -2636,6 +7511,40 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-1oh3a0u",
+      "text": "mamífero",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-vf6bd2",
+      "text": "manguera",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-yhm6e8",
+      "text": "manillar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
       ]
     },
     {
@@ -2685,6 +7594,20 @@
       ]
     },
     {
+      "id": "p-124fluh",
+      "text": "maquillaron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "lly",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-r0hpb4",
       "text": "mar",
       "mode": "words",
@@ -2693,6 +7616,63 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-zgn9ic",
+      "text": "maratón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1ljdosp",
+      "text": "maravilla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1sg533m",
+      "text": "margarita",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-qxi3wu",
+      "text": "mariposa",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-30uyek",
+      "text": "mármol",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
       ]
     },
     {
@@ -2708,6 +7688,63 @@
       ]
     },
     {
+      "id": "p-1nu4lra",
+      "text": "máscara",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-svj41g",
+      "text": "matemática",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-18ym5jp",
+      "text": "mayúscula",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-19fm2b0",
+      "text": "medalla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1mohpwz",
+      "text": "médico",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-1yw5hi8",
       "text": "mediodía",
       "mode": "words",
@@ -2716,6 +7753,18 @@
       "basicVocabulary": true,
       "tags": [
         "tilde"
+      ]
+    },
+    {
+      "id": "p-1kbe1k2",
+      "text": "mejilla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "lly"
       ]
     },
     {
@@ -2731,6 +7780,27 @@
       ]
     },
     {
+      "id": "p-ueq87m",
+      "text": "melocotón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1xx6d6j",
+      "text": "melón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
       "id": "p-47xtv6",
       "text": "menos",
       "mode": "words",
@@ -2739,6 +7809,27 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-xe2wq9",
+      "text": "mensaje",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-c2gsme",
+      "text": "menú",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
       ]
     },
     {
@@ -2754,6 +7845,17 @@
       ]
     },
     {
+      "id": "p-1rmqbfe",
+      "text": "merluza",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-1cga56y",
       "text": "mesa",
       "mode": "words",
@@ -2762,6 +7864,53 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-wytqbd",
+      "text": "mesilla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1kxrymf",
+      "text": "meteorología",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1lek8n1",
+      "text": "mezclaron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-p2q8gk",
+      "text": "micrófono",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
       ]
     },
     {
@@ -2784,6 +7933,38 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-atqq6x",
+      "text": "miércoles",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1b8de76",
+      "text": "milímetro",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1ajjef5",
+      "text": "milla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
       ]
     },
     {
@@ -2814,6 +7995,17 @@
       ]
     },
     {
+      "id": "p-18fby39",
+      "text": "mitología",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj"
+      ]
+    },
+    {
       "id": "p-8mwml",
       "text": "mochila",
       "mode": "words",
@@ -2823,6 +8015,68 @@
       "tags": [
         "sin-tilde",
         "enye-ch"
+      ]
+    },
+    {
+      "id": "p-w6yes",
+      "text": "molécula",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1u09p3o",
+      "text": "molino",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-1rm0d7a",
+      "text": "moneda",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-zfanhw",
+      "text": "monolingüe",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-1ue11oj",
+      "text": "monopatín",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1nj3w5p",
+      "text": "monstruo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
       ]
     },
     {
@@ -2850,6 +8104,28 @@
       ]
     },
     {
+      "id": "p-1b57hvd",
+      "text": "mordíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-15mw0k4",
+      "text": "mordisco",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-uttyt1",
       "text": "mosca",
       "mode": "words",
@@ -2859,6 +8135,18 @@
       "tags": [
         "sin-tilde",
         "cquz"
+      ]
+    },
+    {
+      "id": "p-1e3brzl",
+      "text": "movisteis",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "verbos"
       ]
     },
     {
@@ -2909,6 +8197,41 @@
       ]
     },
     {
+      "id": "p-17fta88",
+      "text": "muñeca",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-12lgeeu",
+      "text": "murciélago",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-1tsaa9l",
+      "text": "músculo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-ocnmlv",
       "text": "museo",
       "mode": "words",
@@ -2917,6 +8240,28 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-apot8x",
+      "text": "músico",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-15q9ms5",
+      "text": "nacimiento",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
       ]
     },
     {
@@ -2945,6 +8290,42 @@
       ]
     },
     {
+      "id": "p-kjewc1",
+      "text": "naturaleza",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-w565d2",
+      "text": "navegábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-om1k11",
+      "text": "navío",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
       "id": "p-3by9gf",
       "text": "negra",
       "mode": "words",
@@ -2953,6 +8334,18 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-19mo96p",
+      "text": "nevera",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr"
       ]
     },
     {
@@ -2992,6 +8385,17 @@
       ]
     },
     {
+      "id": "p-11m4m3j",
+      "text": "novedad",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
       "id": "p-1m3opo8",
       "text": "nube",
       "mode": "words",
@@ -3004,6 +8408,16 @@
       ]
     },
     {
+      "id": "p-1tat93w",
+      "text": "nudo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
       "id": "p-im9h9r",
       "text": "nuevo",
       "mode": "words",
@@ -3013,6 +8427,17 @@
       "tags": [
         "sin-tilde",
         "bv"
+      ]
+    },
+    {
+      "id": "p-1ngyg1i",
+      "text": "nuez",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
       ]
     },
     {
@@ -3037,6 +8462,90 @@
       "tags": [
         "sin-tilde",
         "cquz"
+      ]
+    },
+    {
+      "id": "p-1yd6jtb",
+      "text": "obedecíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-94k1xf",
+      "text": "obsequio",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-p3tqbq",
+      "text": "octógono",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-1lk3ify",
+      "text": "ofrecieron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1kghqpx",
+      "text": "olivo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-47lq8r",
+      "text": "ombligo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-15durr",
+      "text": "órbita",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
       ]
     },
     {
@@ -3077,6 +8586,110 @@
       ]
     },
     {
+      "id": "p-eehr27",
+      "text": "orilla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-12s0wak",
+      "text": "ortografía",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1qn59w",
+      "text": "oruga",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-1wneomg",
+      "text": "otoño",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-5nbbhl",
+      "text": "oveja",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-1sb5zv1",
+      "text": "ovillo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-qav6yr",
+      "text": "óxido",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "x"
+      ]
+    },
+    {
+      "id": "p-ef2175",
+      "text": "oxígeno",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "gj",
+        "x"
+      ]
+    },
+    {
+      "id": "p-1mprdst",
+      "text": "oyó",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "lly",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-98ps8w",
       "text": "padre",
       "mode": "words",
@@ -3085,6 +8698,17 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-2qm6y1",
+      "text": "paella",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
       ]
     },
     {
@@ -3113,6 +8737,17 @@
       ]
     },
     {
+      "id": "p-mxxgkb",
+      "text": "paleolítico",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-bm68ef",
       "text": "pan",
       "mode": "words",
@@ -3124,6 +8759,28 @@
       ]
     },
     {
+      "id": "p-i577cr",
+      "text": "pañales",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-1nenzhx",
+      "text": "pañuelo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
       "id": "p-1j29ls8",
       "text": "papel",
       "mode": "words",
@@ -3132,6 +8789,29 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-gaxi7y",
+      "text": "paraguas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-1toe0oc",
+      "text": "parches",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
       ]
     },
     {
@@ -3160,6 +8840,28 @@
       ]
     },
     {
+      "id": "p-13g9bk",
+      "text": "paréntesis",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1rnt8q4",
+      "text": "parpadear",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-1d6hhus",
       "text": "parque",
       "mode": "words",
@@ -3169,6 +8871,29 @@
       "tags": [
         "sin-tilde",
         "cquz"
+      ]
+    },
+    {
+      "id": "p-6im8yq",
+      "text": "partitura",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-hsdfuk",
+      "text": "paseábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "verbos"
       ]
     },
     {
@@ -3195,6 +8920,17 @@
       ]
     },
     {
+      "id": "p-ua8o1c",
+      "text": "pastelería",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
       "id": "p-1nyba3v",
       "text": "patata",
       "mode": "words",
@@ -3206,12 +8942,156 @@
       ]
     },
     {
+      "id": "p-y8z7wi",
+      "text": "patín",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-171yfmu",
+      "text": "pecera",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1g1yd5z",
+      "text": "pechuga",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "ggu",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-1ohp4a1",
+      "text": "peinadas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-1vvih2r",
       "text": "peine",
       "mode": "words",
       "vocabulary": "basic",
       "orthography": "low",
       "basicVocabulary": true,
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-1fzhea",
+      "text": "peldaño",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-qhbalj",
+      "text": "película",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1c628d4",
+      "text": "pelirroja",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-8qmm06",
+      "text": "pellizcar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "lly",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-r9hvty",
+      "text": "peluche",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-woxcb1",
+      "text": "péndulo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-15yk51z",
+      "text": "península",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1ll8wbd",
+      "text": "pentágono",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-1i0i06z",
+      "text": "pepino",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
       "tags": [
         "sin-tilde"
       ]
@@ -3242,6 +9122,29 @@
       ]
     },
     {
+      "id": "p-sgiuhu",
+      "text": "perdonaron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-xtwml7",
+      "text": "perímetro",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
       "id": "p-kxz6pc",
       "text": "perro",
       "mode": "words",
@@ -3251,6 +9154,28 @@
       "tags": [
         "sin-tilde",
         "rr"
+      ]
+    },
+    {
+      "id": "p-1behrot",
+      "text": "perseguían",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1eckx1j",
+      "text": "persiana",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
       ]
     },
     {
@@ -3276,6 +9201,19 @@
       ]
     },
     {
+      "id": "p-1s94gqe",
+      "text": "pescábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-e60gz9",
       "text": "pescado",
       "mode": "words",
@@ -3285,6 +9223,17 @@
       "tags": [
         "sin-tilde",
         "cquz"
+      ]
+    },
+    {
+      "id": "p-p9nplh",
+      "text": "pestaña",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
       ]
     },
     {
@@ -3300,6 +9249,18 @@
       ]
     },
     {
+      "id": "p-1jp9fml",
+      "text": "picadura",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-bdl6q3",
       "text": "piedra",
       "mode": "words",
@@ -3308,6 +9269,17 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-134oxw4",
+      "text": "pingüino",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "ggu"
       ]
     },
     {
@@ -3347,6 +9319,52 @@
       ]
     },
     {
+      "id": "p-1xuscq3",
+      "text": "piñón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-rd7k69",
+      "text": "piragua",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-110y6et",
+      "text": "piragüismo",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-qc29ff",
+      "text": "pirámide",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
       "id": "p-toduo9",
       "text": "piscina",
       "mode": "words",
@@ -3369,6 +9387,18 @@
         "sin-tilde",
         "rr",
         "cquz"
+      ]
+    },
+    {
+      "id": "p-1m7g3lh",
+      "text": "planchadas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "enye-ch",
+        "verbos"
       ]
     },
     {
@@ -3419,6 +9449,92 @@
       ]
     },
     {
+      "id": "p-qczg6m",
+      "text": "podíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-ybgl41",
+      "text": "políglota",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1y9r84n",
+      "text": "polígono",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-1ph4uut",
+      "text": "pollito",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-o638g9",
+      "text": "porche",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-7iaouy",
+      "text": "portería",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-15xpfbr",
+      "text": "postal",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-iahdvc",
+      "text": "precioso",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-1u19dcg",
       "text": "preguntar",
       "mode": "words",
@@ -3428,6 +9544,40 @@
       "tags": [
         "sin-tilde",
         "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-19qqlr2",
+      "text": "prehistoria",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1yvw4r4",
+      "text": "premio",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-h23tzt",
+      "text": "preparadas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
         "verbos"
       ]
     },
@@ -3466,6 +9616,16 @@
       ]
     },
     {
+      "id": "p-rn5u9o",
+      "text": "prisma",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
       "id": "p-j7kufq",
       "text": "profesor",
       "mode": "words",
@@ -3486,6 +9646,52 @@
       "tags": [
         "sin-tilde",
         "rr"
+      ]
+    },
+    {
+      "id": "p-19256fs",
+      "text": "pronóstico",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-jbges1",
+      "text": "proseguían",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "ggu",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-tn53k6",
+      "text": "protegieron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1fcsal9",
+      "text": "prótesis",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
       ]
     },
     {
@@ -3523,12 +9729,66 @@
       ]
     },
     {
+      "id": "p-1xogbyw",
+      "text": "pulsera",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1bsqk0h",
+      "text": "pupitre",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
       "id": "p-1rvvusn",
       "text": "queso",
       "mode": "words",
       "vocabulary": "basic",
       "orthography": "medium",
       "basicVocabulary": true,
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1o9ij97",
+      "text": "química",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-luqejs",
+      "text": "quincena",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-acjj18",
+      "text": "quiniela",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
       "tags": [
         "sin-tilde",
         "cquz"
@@ -3547,6 +9807,53 @@
       ]
     },
     {
+      "id": "p-1ihbysx",
+      "text": "racimo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1qr4zwo",
+      "text": "ración",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-15imd6u",
+      "text": "raíz",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-174fh5c",
+      "text": "rana",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
       "id": "p-1h5c9j",
       "text": "rápido",
       "mode": "words",
@@ -3556,6 +9863,94 @@
       "tags": [
         "tilde",
         "rr"
+      ]
+    },
+    {
+      "id": "p-177ibrx",
+      "text": "rascacielos",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1arozss",
+      "text": "rastrillo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-ee5kgq",
+      "text": "ratón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-skl2pd",
+      "text": "rayuela",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1mnyjg7",
+      "text": "rebajadas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1d289zy",
+      "text": "recibo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-y58io",
+      "text": "recitábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "rr",
+        "cquz",
+        "verbos"
       ]
     },
     {
@@ -3574,6 +9969,81 @@
       ]
     },
     {
+      "id": "p-dpn790",
+      "text": "rectángulo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "rr",
+        "cquz",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-u52vsn",
+      "text": "rectificaron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1rwmyfy",
+      "text": "redujeron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-sd8yet",
+      "text": "reflejo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-qjyy5l",
+      "text": "refugio",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-i9uzf",
+      "text": "regadío",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
       "id": "p-km4mi8",
       "text": "regalar",
       "mode": "words",
@@ -3588,6 +10058,34 @@
       ]
     },
     {
+      "id": "p-bpg3c8",
+      "text": "regañaban",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "ggu",
+        "enye-ch",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1gzt1uq",
+      "text": "registraron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-1ndbpw9",
       "text": "regla",
       "mode": "words",
@@ -3596,6 +10094,18 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-wlpy0g",
+      "text": "rehén",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "h",
         "rr"
       ]
     },
@@ -3613,6 +10123,31 @@
       ]
     },
     {
+      "id": "p-1mkn24o",
+      "text": "relámpago",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-1jrudls",
+      "text": "relinchar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "enye-ch",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-21nh5q",
       "text": "reloj",
       "mode": "words",
@@ -3626,6 +10161,67 @@
       ]
     },
     {
+      "id": "p-mlrc41",
+      "text": "remolino",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1h53ous",
+      "text": "renacuajo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1afa0b9",
+      "text": "repetíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1c9hii4",
+      "text": "reportaje",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-v93zt4",
+      "text": "resbaladizo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-owzxzq",
       "text": "responder",
       "mode": "words",
@@ -3634,6 +10230,43 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-n4jxa2",
+      "text": "retahíla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "h",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-h85pzy",
+      "text": "revista",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-kbft15",
+      "text": "revolvieron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
         "rr",
         "verbos"
       ]
@@ -3652,6 +10285,17 @@
       ]
     },
     {
+      "id": "p-18hi96i",
+      "text": "rifirrafe",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
       "id": "p-x8a2i",
       "text": "río",
       "mode": "words",
@@ -3661,6 +10305,53 @@
       "tags": [
         "tilde",
         "rr"
+      ]
+    },
+    {
+      "id": "p-1rzd4nv",
+      "text": "riqueza",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-tpt71j",
+      "text": "ritmo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1nu8bq8",
+      "text": "rocío",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-114w78v",
+      "text": "rodilla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "lly"
       ]
     },
     {
@@ -3726,6 +10417,18 @@
       ]
     },
     {
+      "id": "p-ijd61g",
+      "text": "rubí",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "rr"
+      ]
+    },
+    {
       "id": "p-1kftl57",
       "text": "rubia",
       "mode": "words",
@@ -3751,6 +10454,17 @@
       ]
     },
     {
+      "id": "p-79z5zt",
+      "text": "ruido",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
       "id": "p-axfiw8",
       "text": "sábana",
       "mode": "words",
@@ -3763,6 +10477,29 @@
       ]
     },
     {
+      "id": "p-15h7e89",
+      "text": "sabíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1k95cb1",
+      "text": "sacapuntas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-l2g3gs",
       "text": "sal",
       "mode": "words",
@@ -3771,6 +10508,17 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-yv3780",
+      "text": "salchicha",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
       ]
     },
     {
@@ -3786,6 +10534,16 @@
       ]
     },
     {
+      "id": "p-13o3dyi",
+      "text": "salmón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
       "id": "p-u2tttl",
       "text": "salón",
       "mode": "words",
@@ -3797,12 +10555,37 @@
       ]
     },
     {
+      "id": "p-9dug8q",
+      "text": "salpicaron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-1yupw4y",
       "text": "saltabais",
       "mode": "words",
       "vocabulary": "basic",
       "orthography": "high",
       "basicVocabulary": true,
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1c0rw8g",
+      "text": "saltaban",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
       "tags": [
         "sin-tilde",
         "bv",
@@ -3822,6 +10605,71 @@
       ]
     },
     {
+      "id": "p-1cy676s",
+      "text": "salvaríamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-hhkbes",
+      "text": "salvavidas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-mylvas",
+      "text": "sandía",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-86an1t",
+      "text": "sartén",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-zd49mr",
+      "text": "satélite",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-jwjvnd",
+      "text": "sello",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
       "id": "p-zkebku",
       "text": "semáforo",
       "mode": "words",
@@ -3831,6 +10679,62 @@
       "tags": [
         "tilde",
         "rr"
+      ]
+    },
+    {
+      "id": "p-usjwdg",
+      "text": "sembrar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-163jw1x",
+      "text": "semilla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1owzln6",
+      "text": "sendero",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1hqei9l",
+      "text": "sentíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1q8ew8y",
+      "text": "señal",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
       ]
     },
     {
@@ -3859,6 +10763,38 @@
       ]
     },
     {
+      "id": "p-mqxxaj",
+      "text": "séptimo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1y3xdh1",
+      "text": "serpiente",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-hw4vnh",
+      "text": "servilleta",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "lly"
+      ]
+    },
+    {
       "id": "p-1t9rvkf",
       "text": "siempre",
       "mode": "words",
@@ -3867,6 +10803,40 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-yccz92",
+      "text": "sílaba",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-1x6gccx",
+      "text": "silbar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-yl0weg",
+      "text": "silbato",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
       ]
     },
     {
@@ -3879,6 +10849,26 @@
       "tags": [
         "sin-tilde",
         "lly"
+      ]
+    },
+    {
+      "id": "p-99t5zt",
+      "text": "silueta",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-18niqmu",
+      "text": "simetría",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
       ]
     },
     {
@@ -3904,6 +10894,19 @@
       ]
     },
     {
+      "id": "p-1dhmri8",
+      "text": "sollozar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "lly",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-14heejj",
       "text": "solo",
       "mode": "words",
@@ -3912,6 +10915,18 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-jzpsf7",
+      "text": "sombrero",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr"
       ]
     },
     {
@@ -3927,6 +10942,31 @@
       ]
     },
     {
+      "id": "p-1qnwi1t",
+      "text": "sonríes",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-35qc3e",
+      "text": "soñábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "enye-ch",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-1ctf3cl",
       "text": "sopa",
       "mode": "words",
@@ -3935,6 +10975,28 @@
       "basicVocabulary": true,
       "tags": [
         "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-avleta",
+      "text": "soplaban",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1sv8y76",
+      "text": "sótano",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
       ]
     },
     {
@@ -3964,6 +11026,20 @@
       ]
     },
     {
+      "id": "p-1i7yd4e",
+      "text": "subrayaban",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "lly",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-xmij7o",
       "text": "sucias",
       "mode": "words",
@@ -3987,6 +11063,63 @@
       ]
     },
     {
+      "id": "p-um088i",
+      "text": "suéter",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1ijyhuu",
+      "text": "sugiere",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1245hbn",
+      "text": "tabique",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-e605lc",
+      "text": "tablón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-154epl5",
+      "text": "tacón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
       "id": "p-t5m470",
       "text": "también",
       "mode": "words",
@@ -3999,6 +11132,62 @@
       ]
     },
     {
+      "id": "p-megxll",
+      "text": "tambor",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-7qpdqj",
+      "text": "tapizadas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1tnq150",
+      "text": "tapón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1q00sfb",
+      "text": "taquilla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1fsi9y8",
+      "text": "tarántula",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
       "id": "p-8n3qm5",
       "text": "tarea",
       "mode": "words",
@@ -4008,6 +11197,28 @@
       "tags": [
         "sin-tilde",
         "rr"
+      ]
+    },
+    {
+      "id": "p-dln6eg",
+      "text": "tarro",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1rsyvbw",
+      "text": "taxi",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "x"
       ]
     },
     {
@@ -4035,6 +11246,52 @@
       ]
     },
     {
+      "id": "p-16r57h",
+      "text": "teclearon",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-1xordv",
+      "text": "telaraña",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-nczaeo",
+      "text": "teléfono",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-6nmquk",
+      "text": "televisión",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
       "id": "p-1014de4",
       "text": "temprano",
       "mode": "words",
@@ -4057,6 +11314,51 @@
       ]
     },
     {
+      "id": "p-1d3kt76",
+      "text": "teñían",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "enye-ch",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-2ak9lo",
+      "text": "termómetro",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-oofxpz",
+      "text": "terraza",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-r5llgo",
+      "text": "terrestre",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
       "id": "p-1br09w8",
       "text": "texto",
       "mode": "words",
@@ -4066,6 +11368,18 @@
       "tags": [
         "sin-tilde",
         "x"
+      ]
+    },
+    {
+      "id": "p-1917fy1",
+      "text": "tiburón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "rr"
       ]
     },
     {
@@ -4093,6 +11407,49 @@
       ]
     },
     {
+      "id": "p-94y4dy",
+      "text": "tilde",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-136c871",
+      "text": "timbre",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-14gzzpe",
+      "text": "tímida",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-fmquke",
+      "text": "tirachinas",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "enye-ch"
+      ]
+    },
+    {
       "id": "p-12mc60q",
       "text": "tiza",
       "mode": "words",
@@ -4114,6 +11471,30 @@
       "tags": [
         "sin-tilde",
         "lly"
+      ]
+    },
+    {
+      "id": "p-11icqz1",
+      "text": "tobillo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1g9vndw",
+      "text": "tobogán",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "ggu"
       ]
     },
     {
@@ -4140,6 +11521,85 @@
       ]
     },
     {
+      "id": "p-72ya9g",
+      "text": "torre",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-12rphl",
+      "text": "tortilla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-liq6by",
+      "text": "tortuga",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-k9e1u6",
+      "text": "tostaban",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-15ymyv5",
+      "text": "tostadora",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr"
+      ]
+    },
+    {
+      "id": "p-1uwskjv",
+      "text": "tractor",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1hullii",
+      "text": "traducíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-1f82ce",
       "text": "tráfico",
       "mode": "words",
@@ -4149,6 +11609,18 @@
       "tags": [
         "tilde",
         "cquz"
+      ]
+    },
+    {
+      "id": "p-1mp043w",
+      "text": "tragaluz",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "ggu"
       ]
     },
     {
@@ -4164,6 +11636,40 @@
       ]
     },
     {
+      "id": "p-3ivxdo",
+      "text": "traje",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj"
+      ]
+    },
+    {
+      "id": "p-142iwzn",
+      "text": "trajeron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-44vo4o",
+      "text": "trampolín",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
       "id": "p-1dyfhzv",
       "text": "tranquilo",
       "mode": "words",
@@ -4173,6 +11679,41 @@
       "tags": [
         "sin-tilde",
         "cquz"
+      ]
+    },
+    {
+      "id": "p-h8xn47",
+      "text": "travesía",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-ul0333",
+      "text": "trayectoria",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1t9pkoy",
+      "text": "trébol",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
       ]
     },
     {
@@ -4187,6 +11728,72 @@
       ]
     },
     {
+      "id": "p-17v968w",
+      "text": "trepar",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-19m6su3",
+      "text": "triángulo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-cy6kxy",
+      "text": "trompeta",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-u48fdy",
+      "text": "tropezaban",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-e5vzjh",
+      "text": "túnel",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde"
+      ]
+    },
+    {
+      "id": "p-1qp4qbm",
+      "text": "turrón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "rr"
+      ]
+    },
+    {
       "id": "p-1efub3h",
       "text": "último",
       "mode": "words",
@@ -4195,6 +11802,95 @@
       "basicVocabulary": true,
       "tags": [
         "tilde"
+      ]
+    },
+    {
+      "id": "p-123ux7i",
+      "text": "ungüento",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-19e8wjb",
+      "text": "uniforme",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
+      ]
+    },
+    {
+      "id": "p-11goiwx",
+      "text": "universo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-cepchd",
+      "text": "uña",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "enye-ch"
+      ]
+    },
+    {
+      "id": "p-148arny",
+      "text": "urgencia",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-14m78mm",
+      "text": "urraca",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1tki5e7",
+      "text": "usábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-ai7sde",
+      "text": "utensilio",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "low",
+      "tags": [
+        "sin-tilde"
       ]
     },
     {
@@ -4220,6 +11916,79 @@
       "tags": [
         "sin-tilde",
         "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-14i0mr3",
+      "text": "vagón",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-cb22x7",
+      "text": "vajilla",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1qj0cni",
+      "text": "valiente",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-fzyqh6",
+      "text": "vapor",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-7s9zhl",
+      "text": "vaquero",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1v9js43",
+      "text": "varicela",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
         "cquz"
       ]
     },
@@ -4275,6 +12044,65 @@
       ]
     },
     {
+      "id": "p-1i82h8t",
+      "text": "velocidad",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-u3sbxr",
+      "text": "vendaje",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-1yx66g2",
+      "text": "vendíamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-9pvwsr",
+      "text": "veneno",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-q2wrcj",
+      "text": "ventaja",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv"
+      ]
+    },
+    {
       "id": "p-wr21lj",
       "text": "ventana",
       "mode": "words",
@@ -4287,6 +12115,18 @@
       ]
     },
     {
+      "id": "p-1r93gaz",
+      "text": "verano",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr"
+      ]
+    },
+    {
       "id": "p-1t7d51e",
       "text": "verde",
       "mode": "words",
@@ -4296,6 +12136,65 @@
       "tags": [
         "sin-tilde",
         "bv"
+      ]
+    },
+    {
+      "id": "p-1wq9hdo",
+      "text": "vergüenza",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz",
+        "ggu"
+      ]
+    },
+    {
+      "id": "p-lglv4x",
+      "text": "vértebra",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-1nnvyi2",
+      "text": "vértice",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-17dv9jk",
+      "text": "vestido",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-9vh8qe",
+      "text": "veterinaria",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr"
       ]
     },
     {
@@ -4327,6 +12226,17 @@
       ]
     },
     {
+      "id": "p-15bc08v",
+      "text": "vídeo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
       "id": "p-mcd5xj",
       "text": "viejo",
       "mode": "words",
@@ -4352,6 +12262,67 @@
       ]
     },
     {
+      "id": "p-1w4hqbr",
+      "text": "vigilaban",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-e7ccrj",
+      "text": "vigilancia",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-lfw4ds",
+      "text": "villancico",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "cquz",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-9dwy98",
+      "text": "vinagre",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-16no0l5",
+      "text": "violín",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv"
+      ]
+    },
+    {
       "id": "p-lw9tsi",
       "text": "vivir",
       "mode": "words",
@@ -4365,12 +12336,128 @@
       ]
     },
     {
+      "id": "p-2d0vnm",
+      "text": "volábamos",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "bv",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-j7rh0h",
+      "text": "volcán",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "bv",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1gi8m3o",
+      "text": "volumen",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "bv"
+      ]
+    },
+    {
+      "id": "p-ydc81a",
+      "text": "volvieron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "bv",
+        "rr",
+        "verbos"
+      ]
+    },
+    {
+      "id": "p-7j0og6",
+      "text": "xilófono",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "x"
+      ]
+    },
+    {
       "id": "p-1a3jrby",
       "text": "ya",
       "mode": "words",
       "vocabulary": "basic",
       "orthography": "medium",
       "basicVocabulary": true,
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1ip94vm",
+      "text": "yacimiento",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1v9lbvl",
+      "text": "yate",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-1dxoqth",
+      "text": "yegua",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "ggu",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-wa5h7w",
+      "text": "yema",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-16vfjrw",
+      "text": "yeso",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
       "tags": [
         "sin-tilde",
         "lly"
@@ -4390,12 +12477,155 @@
       ]
     },
     {
+      "id": "p-13tn63d",
+      "text": "yunque",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz",
+        "lly"
+      ]
+    },
+    {
+      "id": "p-uqzu4l",
+      "text": "yuxtaposición",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "high",
+      "tags": [
+        "tilde",
+        "cquz",
+        "lly",
+        "x"
+      ]
+    },
+    {
+      "id": "p-n4nl3",
+      "text": "zanahoria",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "h",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1mf00ha",
+      "text": "zancada",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-nbm7iw",
+      "text": "zanja",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1fxqd6f",
+      "text": "zanjaron",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "high",
+      "tags": [
+        "sin-tilde",
+        "gj",
+        "rr",
+        "cquz",
+        "verbos"
+      ]
+    },
+    {
       "id": "p-mxnu3r",
       "text": "zapato",
       "mode": "words",
       "vocabulary": "basic",
       "orthography": "medium",
       "basicVocabulary": true,
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-o824t8",
+      "text": "zarza",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-7jyazs",
+      "text": "zigzag",
+      "mode": "words",
+      "vocabulary": "expanded",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-a3m98a",
+      "text": "zócalo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-hqn3iz",
+      "text": "zoológico",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "tilde",
+        "gj",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-pc56qs",
+      "text": "zorro",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
+      "tags": [
+        "sin-tilde",
+        "rr",
+        "cquz"
+      ]
+    },
+    {
+      "id": "p-1xdtxlt",
+      "text": "zumo",
+      "mode": "words",
+      "vocabulary": "common",
+      "orthography": "medium",
       "tags": [
         "sin-tilde",
         "cquz"

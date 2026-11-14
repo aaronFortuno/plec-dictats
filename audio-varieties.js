@@ -2,7 +2,7 @@
 (function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.PlecAudioVarieties=api;})(typeof globalThis!=='undefined'?globalThis:this,function(){
  'use strict';
  const varieties=Object.freeze([{id:'central',label:'Català central'},{id:'valencia',label:'Valencià'}].map(Object.freeze));
- const spanish=Object.freeze([Object.freeze({id:'es-es',label:'Español de España · Elvira'})]);
+ const spanish=Object.freeze([Object.freeze({id:'es-es',label:'Español de España · Elvira',profile:'es-es-yeismo-v1',speaker:'Elvira'})]);
  function forLanguage(language){return language==='ca'?varieties:language==='es'?spanish:[];}
  function definition(id,language='ca'){const item=forLanguage(language).find(v=>v.id===id);if(!item)throw Error('La varietat de pronunciació no està disponible.');return item;}
  function select(manifest,language,{variety=null,voice=null,mode=null,entries=[]}={}){

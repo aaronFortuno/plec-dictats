@@ -5,13 +5,12 @@ const crypto = require('node:crypto');
 const A = require('./audio-plan.cjs');
 const G = require('./generate-audio.cjs');
 const {mp3Header} = require('./verify-pseudo-audio.cjs');
-const {pack, plan} = require('./run-spanish-audio.cjs');
-const revision = require('../catalogs/es/editions/manifest.json').editions[0].revision;
+const {batch, plan} = require('./run-spanish-audio.cjs');
 const output = path.join(A.ROOT, 'output');
 const digest = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 
-function completedBatch() {
-  const jobs = plan();
+function completedBatch(expansion,pack) {
+  const jobs = plan(expansion);
   const result = A.readJson(path.join(output,'results',pack.id+'-words.json'));
   const settings = A.readJson(path.join(output,'audio',pack.id,'settings.json'));
   const {language,locale,voice,rate,format,contentFingerprint} = pack;
@@ -59,9 +58,39 @@ async function decode(assets) {
   } finally { await browser.close(); }
 }
 
+function combinedPack(manifest,addition,edition) {
+  const original = A.validatePack(manifest,'es-es-elvira-basic-v1');
+  if (original.status!=='ready' || ['language','locale','voice','rate','format','dialect'].some(key=>original[key]!==addition[key])) {
+    throw Error('Els àudios bàsics no tenen la mateixa veu o els mateixos ajustos.');
+  }
+  const basePath = 'assets/audio/es/';
+  const files = {};
+  for (const pack of [original,addition]) {
+    if (!pack.basePath.startsWith(basePath)) throw Error('Ruta d’àudio incompatible.');
+    for (const [id,file] of Object.entries(pack.files)) {
+      if (Object.hasOwn(files,id)) throw Error('ID d’àudio duplicat: '+id);
+      files[id] = pack.basePath.slice(basePath.length)+file;
+    }
+  }
+  if (Object.keys(files).length!==edition.catalog.entries.length || edition.catalog.entries.some(({id})=>!files[id])) {
+    throw Error('El paquet combinat no cobreix el catàleg castellà.');
+  }
+  const basicAudit = A.readJson(path.join(A.ROOT,'audio/spanish-publication.json'));
+  if (basicAudit.fingerprint!==original.fingerprint || basicAudit.coverage!==350) throw Error('Registre bàsic incompatible.');
+  for (const file of Object.values(original.files)) {
+    if (digest(fs.readFileSync(path.join(A.ROOT,original.basePath,file)))!==basicAudit.sha256[file]) {
+      throw Error('Ha canviat un àudio bàsic: '+file);
+    }
+  }
+  return {...addition,id:'es-es-elvira-words-v2',basePath,files,
+    fingerprint:digest(JSON.stringify([original.fingerprint,addition.fingerprint,files]))};
+}
+
 async function main(args) {
-  if (args.some(arg=>arg!=='--publish')) throw Error('Ús: node tools/publish-spanish-audio.cjs [--publish]');
-  const {assets,fingerprint,result} = completedBatch();
+  if (args.some(arg=>!['--publish','--expansion'].includes(arg))) throw Error('Ús: node tools/publish-spanish-audio.cjs [--expansion] [--publish]');
+  const expansion = args.includes('--expansion');
+  const {pack,edition} = batch(expansion), revision = edition.catalog.revision;
+  const {assets,fingerprint,result} = completedBatch(expansion,pack);
   const audit = await decode(assets);
   if (audit.decoded!==assets.length) throw Error('Descodificació incompleta.');
   console.log(JSON.stringify({pack:pack.id,...audit}));
@@ -70,6 +99,10 @@ async function main(args) {
   const manifest = A.readJson(manifestFile);
   const prior = manifest.packs.find(item=>item.id===pack.id);
   if (prior && prior.fingerprint!==fingerprint) throw Error('El paquet públic té una identitat diferent.');
+  const addition = {...pack,status:'ready',reviewStatus:'pending-auditory-review',fingerprint,catalogue:revision,files:result.files};
+  const combined = expansion?combinedPack(manifest,addition,edition):null;
+  const existingCombined = manifest.packs.find(item=>item.id===combined?.id);
+  if (existingCombined && existingCombined.fingerprint!==combined.fingerprint) throw Error('El paquet combinat té una identitat diferent.');
   const transfers = [];
   for (const {file,data,job,hash} of assets) {
     if (digest(fs.readFileSync(file))!==hash) throw Error('L’MP3 ha canviat durant la verificació: '+job.text);
@@ -82,15 +115,14 @@ async function main(args) {
     fs.mkdirSync(path.dirname(destination),{recursive:true});
     await G.writeCompleteFile(destination,data);
   }
-  const addition = {...pack,status:'ready',reviewStatus:'pending-auditory-review',fingerprint,catalogue:revision,files:result.files};
-  await G.atomicWriteJson(path.join(A.ROOT,'audio/spanish-publication.json'),{
+  await G.atomicWriteJson(path.join(A.ROOT,expansion?'audio/spanish-expansion-publication.json':'audio/spanish-publication.json'),{
     schemaVersion:1,pack:pack.id,voice:pack.voice,locale:pack.locale,rate:pack.rate,catalogue:revision,fingerprint,
     coverage:assets.length,reviewStatus:addition.reviewStatus,source:'spelling',generatedAt:result.generatedAt,decode:audit,
     sha256:Object.fromEntries(assets.map(({job,hash})=>[job.relativePath,hash]))
   });
   await G.atomicWriteJson(manifestFile,{
-    ...manifest,defaultPacks:{...manifest.defaultPacks,es:pack.id},
-    packs:[...manifest.packs.filter(item=>item.id!==pack.id),addition]
+    ...manifest,defaultPacks:{...manifest.defaultPacks,es:combined?.id||manifest.defaultPacks.es||pack.id},
+    packs:[...manifest.packs.filter(item=>item.id!==pack.id&&item.id!==combined?.id),addition,...(combined?[combined]:[])]
   });
 }
 if (require.main===module) main(process.argv.slice(2)).catch(error=>{

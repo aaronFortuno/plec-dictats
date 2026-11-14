@@ -134,7 +134,7 @@ for (const {item,profile,source,revision,catalog,base,collator,seedRegistry,basi
   // Student entry point shares the immutable registry, without the composer or PDF.
   let student = localize(read('templates/dictation.html')
     .replace('__CONFIG__', localeDir + '/config.js?v=1.31.0')
-    .replace('__REGISTRY__', base + '/editions/index.js?v=1.31.0')
+    .replace('__REGISTRY__', base + '/editions/index.js'+assetVersion)
     .replaceAll('__COMPOSER__', item.path)
     .replace('__LOCALE_MESSAGES__',runtime?'<script defer src="'+localeDir+'/messages.js'+assetVersion+'"></script>':''))
     .replaceAll('__PLEC_MARK__',Brand.svg('mark'));

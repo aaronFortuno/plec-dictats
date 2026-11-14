@@ -33,11 +33,19 @@ async function main() {
     await page.waitForSelector('#sheet-preview svg');
     assert.equal(new URL(page.url()).pathname, '/es/');
     assert.equal(await page.locator('html').getAttribute('lang'), 'es');
-    assert.equal(await page.locator('#word-total').textContent(), '350');
+    assert.equal(await page.locator('#word-total').textContent(), '1056');
     assert(await page.locator('#mode-control').isHidden());
+    assert.equal(await page.locator('#tag-options label').filter({has:page.locator('input[value="bv"]')}).textContent(),'b / v');
+    assert.equal(await page.locator('#tag-options label').filter({has:page.locator('input[value="ggu"]')}).textContent(),'g / gu / gü');
     assert.equal(await page.locator('#pronunciation-variety').inputValue(),'es-es');
     assert(await page.locator('#open-student').isVisible());
     await page.screenshot({ path: 'output/plec-es-preparador.png', animations: 'disabled' });
+    await page.locator('#basic-vocabulary').check();
+    await page.waitForFunction(()=>{
+      const code=document.querySelector('#seed-code').textContent;
+      return /^ES-/.test(code)&&PlecSeeds.resolve(PlecSeedRegistry.editions,code).epoch===0;
+    });
+    await page.locator('#basic-vocabulary').uncheck();
 
     await page.selectOption('#count-control', '12');
     await page.evaluate(() => {
@@ -53,9 +61,11 @@ async function main() {
     const selected = await page.evaluate(code => PlecSeeds.resolve(PlecSeedRegistry.editions, code), code);
     assert(selected.entries.some(entry => entry.text === 'biblioteca'));
     assert(selected.entries.every(entry => entry.tags.includes('bv')));
+    assert.equal(selected.epoch,1);
     const worksheet = await page.locator('#sheet-preview').textContent();
     assert(worksheet.includes('ESCRIBO Y REVISO') && worksheet.includes('/es/dictat/'));
     assert(worksheet.includes('variety=es-es'));
+    assert(worksheet.includes('b / v'));
     await page.selectOption('#fold-style-control', 'quarter');
     await page.locator('#model-side-control [data-side="right"]').click();
     assert.equal(await page.locator('#sheet-preview svg').getAttribute('data-model-side'), 'right');
@@ -80,16 +90,30 @@ async function main() {
     assert.equal(await page.locator('.pronunciation-row').count(), 0);
     await page.fill('#catalog-search', 'niño');
     assert.equal(await page.locator('.pronunciation-word').textContent(), 'niño');
+    assert.match(await page.locator('.catalog-focuses').textContent(), /ñ \/ ch/u);
+    await page.waitForFunction(()=>document.querySelector('.ipa-text')?.textContent==='ˈni.ɲo');
+    await page.locator('#catalog-basic').check();
     const play = page.getByRole('button',{name:'Escuchar niño con Elvira'});
+    await play.waitFor({state:'visible'});
     const catalogClip = page.waitForResponse(response=>decodeURIComponent(new URL(response.url()).pathname).endsWith('/words/niño.mp3')&&response.ok());
-    await play.click();
+    await page.getByRole('button',{name:'niño: ˈni.ɲo',exact:true}).click();
     await catalogClip;
+    assert.equal(await play.getAttribute('aria-pressed'),'true');
     const listDownload = page.waitForEvent('download');
     await page.click('#export-focus-pdf');
     const list = await listDownload;
     assert.equal(list.suggestedFilename(), 'plec-es-vocabulario-basico-grafias.pdf');
     const listDoc = await PDFDocument.load(fs.readFileSync(await list.path()));
-    assert.equal(listDoc.getPageCount(), 2); // «niño» belongs to Sin tilde and Ñ / CH.
+    assert.equal(listDoc.getPageCount(), 2); // «niño» belongs to Sin tilde and ñ / ch.
+    await page.locator('#catalog-basic').uncheck();
+    await page.fill('#catalog-search', 'pingüino');
+    await page.waitForFunction(()=>document.querySelector('.ipa-text')?.textContent==='pin.ˈgwi.no');
+    const ipaDownload = page.waitForEvent('download');
+    await page.click('#export-pronunciations');
+    const ipaFile = await ipaDownload;
+    const pronunciationCsv = fs.readFileSync(await ipaFile.path(),'utf8');
+    assert.equal(ipaFile.suggestedFilename(),'plec-es-pronunciaciones.csv');
+    assert.match(pronunciationCsv,/"pingüino","pin\.ˈgwi\.no","proposed"/u);
     await page.fill('#catalog-search', '');
     await page.setViewportSize({ width: 390, height: 844 });
     await page.screenshot({ path: 'output/plec-es-catalogo-mobil.png', animations: 'disabled' });
@@ -116,7 +140,13 @@ async function main() {
         share.getBoundingClientRect().right <= row.getBoundingClientRect().right;
     }), 'The full Spanish code and both icons fit at 320px');
 
-    await page.goto(origin + '/es/dictat/?seed=' + code);
+    const archived = await page.evaluate(()=>{
+      const baseline = PlecSeedRegistry.editions.find(edition=>edition.slot===0);
+      const recipe = PlecSeeds.prepare(baseline,{mode:'words',stage:'all',count:12,tags:['bv']}).index;
+      const code = PlecSeeds.forLanguage('es').encode({epoch:baseline.slot,recipe,nonce:17});
+      return PlecSeeds.resolve(PlecSeedRegistry.editions,code);
+    });
+    await page.goto(origin + '/es/dictat/?seed=' + archived.code);
     await page.waitForSelector('#ready-panel:not([hidden])');
     assert.equal(await page.locator('#dictation-variety').textContent(),'Español de España · Elvira');
     assert.equal(await page.locator('[data-analytics-settings]').count(),0);
@@ -126,10 +156,33 @@ async function main() {
     await page.click('#start-dictation');
     await page.click('#windowed-start');
     assert.equal(await page.locator('#word-progress').textContent(),'Palabra 1 de 12');
-    const studentClip = page.waitForResponse(response=>decodeURIComponent(new URL(response.url()).pathname).endsWith('/words/'+selected.entries[0].text+'.mp3')&&response.ok());
+    const studentClip = page.waitForResponse(response=>decodeURIComponent(new URL(response.url()).pathname).endsWith('/words/'+archived.entries[0].text+'.mp3')&&response.ok());
     await page.click('#listen-word');
     await studentClip;
     await page.waitForFunction(()=>document.querySelector('#listen-count').textContent==='1 de 3 escuchas');
+    const manifest=JSON.parse(fs.readFileSync('audio/manifest.json','utf8'));
+    const currentPack=manifest.packs.find(pack=>pack.id===manifest.defaultPacks.es);
+    if(Object.keys(currentPack.files).length===1056){
+      const newWord=await page.evaluate(()=>{
+        const edition=PlecSeedRegistry.editions.find(item=>item.slot===PlecSeedRegistry.current);
+        const recipe=PlecSeeds.prepare(edition,{mode:'words',stage:'all',count:12,tags:['ggu']}).index;
+        for(let nonce=0;nonce<100;nonce++){
+          const code=PlecSeeds.forLanguage('es').encode({epoch:edition.slot,recipe,nonce});
+          const result=PlecSeeds.resolve(PlecSeedRegistry.editions,code);
+          if(!result.entries[0].basicVocabulary)return {code,text:result.entries[0].text};
+        }
+      });
+      assert(newWord);
+      await page.goto(origin+'/es/dictat/?seed='+newWord.code);
+      await page.waitForSelector('#start-dictation:enabled');
+      await page.evaluate(()=>{document.querySelector('#focus-root').requestFullscreen=()=>Promise.reject(Error('Fullscreen unavailable in test'));});
+      await page.click('#start-dictation');
+      await page.click('#windowed-start');
+      const newClip=page.waitForResponse(response=>decodeURIComponent(new URL(response.url()).pathname).endsWith('/es-es-elvira-expansion-01/words/'+newWord.text+'.mp3')&&response.ok());
+      await page.click('#listen-word');
+      await newClip;
+      await page.waitForFunction(()=>document.querySelector('#listen-count').textContent==='1 de 3 escuchas');
+    }
     assert(audioRequests.some(url=>url.startsWith('/assets/audio/es/es-es-elvira-basic-v1/')));
     assert(!audioRequests.some(url=>url.startsWith('/assets/audio/ca/')||url.includes('/instructions/')));
     assert.deepEqual(errors, []);

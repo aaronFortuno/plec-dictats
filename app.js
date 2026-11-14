@@ -25,7 +25,8 @@
   let legacy=null;
   try{if(!spanish)legacy=localStorage.getItem('plec-dictats-v1:'+L.id)||localStorage.getItem('plec-dictats-v1');}catch{}
   const session=()=>state.sessions[state.mode];
-  const modeTags=mode=>C.categories.filter(c=>c.mode===mode);
+  const focusLabel=category=>({...category,label:t(category.label)});
+  const modeTags=mode=>C.categories.filter(c=>c.mode===mode).map(focusLabel);
   // Keep the visual and keyboard order together; compact short focuses beside long ones.
   const focusOrder=['accent','essa','hac','gej','beve','erra','verbs','qugu','vocals','dieresi','digrafs','signes'];
   const lookup=id=>C.entries.find(e=>e.id===id)||BANK.entries.find(e=>e.id===id);
@@ -132,7 +133,7 @@
     }).join('')}</svg>`;
   }
 
-  function sheetOptions(){return{entries:chosen(),title:t(state.mode==='words'?'Dictat de paraules':'Dictat de pseudoparaules'),mode:state.mode,modelSide:state.modelSide,foldStyle:state.foldStyle,seedCode:current?.code,seedLanguage:L.id,variety:state.variety,focusLabels:[...(session().basic?[t('Vocabulari bàsic')]:[]),...session().tags.map(id=>C.categories.find(c=>c.id===id)?.label||id)]};}
+  function sheetOptions(){return{entries:chosen(),title:t(state.mode==='words'?'Dictat de paraules':'Dictat de pseudoparaules'),mode:state.mode,modelSide:state.modelSide,foldStyle:state.foldStyle,seedCode:current?.code,seedLanguage:L.id,variety:state.variety,focusLabels:[...(session().basic?[t('Vocabulari bàsic')]:[]),...session().tags.map(id=>t(C.categories.find(c=>c.id===id)?.label||id))]};}
   const fitPaper=()=>window.PlecPreview.fit();
   function renderPreview(){
     const entries=chosen(),layout=K.foldLayout(state.foldStyle,state.modelSide),ready=!!current&&!search.busy;
@@ -144,7 +145,7 @@
     $('sheet-preview').setAttribute('aria-label',`Vista prèvia: ${entries.length} elements. Model visible.`);fitPaper();
   }
   function openCatalog(options={}){
-    window.PlecCatalogView.open({entries:BANK.entries,categories:BANK.categories,basic:session().basic,onlyBasic:R.basic===R.current,mode:state.mode,revision:BANK.revision,locale:L.locale,matchesStage:(entry,stage)=>S.matchesStage(entry,stage,R.editions.find(e=>e.slot===R.current).profile.stageRules)},options);
+    window.PlecCatalogView.open({entries:BANK.entries,categories:BANK.categories.map(focusLabel),basic:session().basic,onlyBasic:R.basic===R.current,mode:state.mode,revision:BANK.revision,locale:L.locale,matchesStage:(entry,stage)=>S.matchesStage(entry,stage,R.editions.find(e=>e.slot===R.current).profile.stageRules)},options);
   }
   function downloadBlob(blob, filename) {
     const url = URL.createObjectURL(blob), a = document.createElement('a');
@@ -250,6 +251,7 @@
     }
   });
   const releases = [
+    ['1.33', '2026-11-14', [t('Catàleg castellà ampliat a 1.056 mots, amb transcripcions AFI i focus en minúscules.')]],
     ['1.32.1', '2026-11-14', [t('Botons de tema i idioma amb el mateix estil, pantalla de dictat més neta i enllaços del full i de l’alumnat identificats al lateral.')]],
     ['1.32', '2026-11-13', [t('Dictat oral en castellà amb els 350 mots bàsics enregistrats amb Elvira.')]],
     ['1.31', '2026-11-13', [t('Primera versió en castellà amb 350 mots bàsics i PDF de vocabulari en ordre alfabètic o per focus.')]],
@@ -293,18 +295,18 @@
     ['1.0', '2026-10-23', ['Primera versió: catàleg, tries, mots propis i exportació de PDF.']]
   ];
   const releaseDate = new Intl.DateTimeFormat(L.locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  $('changelog-list').innerHTML = (spanish?releases.slice(0,3):releases).map(([version, date, notes]) => {
+  $('changelog-list').innerHTML = (spanish?releases.slice(0,4):releases).map(([version, date, notes]) => {
     const id = 'release-' + version.replaceAll('.', '-');
     return `<section class="release" aria-labelledby="${id}"><div><h3 id="${id}">${version}</h3><time datetime="${date}">${escape(releaseDate.format(new Date(date + 'T00:00:00Z')))}</time></div><p>${escape(notes.join(' '))}</p></section>`;
   }).join('');
   document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', () => window.PlecMotion.close(b.closest('dialog'))));
   document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) window.PlecMotion.close(dialog); } }));
 
-  for(const [id,mode,name] of [['export-words-text','words',spanish?'vocabulario-basico':'paraules'],['export-pseudo-text','pseudo','pseudoparaules']])$(id).addEventListener('click',()=>{
+  for(const [id,mode,name] of [['export-words-text','words',spanish?'palabras':'paraules'],['export-pseudo-text','pseudo','pseudoparaules']])$(id).addEventListener('click',()=>{
     const text=BANK.entries.filter(e=>e.mode===mode).map(e=>e.text).sort(new Intl.Collator(L.locale,{sensitivity:'variant'}).compare).join('\n')+'\n';
     downloadBlob(new Blob([text],{type:'text/plain;charset=utf-8'}),`plec-${L.id}-${name}.txt`);
   });
-  $('export-basic-text').addEventListener('click',()=>{const text=BANK.entries.filter(e=>e.mode==='words'&&e.basicVocabulary).map(e=>e.text).sort(new Intl.Collator(L.locale,{sensitivity:'variant'}).compare).join('\n')+'\n';downloadBlob(new Blob([text],{type:'text/plain;charset=utf-8'}),'plec-ca-vocabulari-basic.txt');});
+  $('export-basic-text').addEventListener('click',()=>{const text=BANK.entries.filter(e=>e.mode==='words'&&e.basicVocabulary).map(e=>e.text).sort(new Intl.Collator(L.locale,{sensitivity:'variant'}).compare).join('\n')+'\n';downloadBlob(new Blob([text],{type:'text/plain;charset=utf-8'}),spanish?'plec-es-vocabulario-basico.txt':'plec-ca-vocabulari-basic.txt');});
   $('export-review').addEventListener('click',()=>{
     const rows=[...BANK.entries].sort((a,b)=>a.text.localeCompare(b.text,L.locale));
     const text=[t('paraula\ttipus\tvocabulari\tortografia\tfocus\tid'),...rows.map(e=>[e.text,e.mode,e.vocabulary||'',e.orthography||'',e.tags.join(','),e.id].join('\t'))].join('\n')+'\n';
