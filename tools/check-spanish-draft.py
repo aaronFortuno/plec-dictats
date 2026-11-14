@@ -43,13 +43,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("dictionary", type=Path, help="path to es_ES, without an extension")
     parser.add_argument("--json", action="store_true", help="emit proof for the edition builder")
+    parser.add_argument("--second-expansion", action="store_true")
     args = parser.parse_args()
     for extension, expected in DICTIONARY_HASHES.items():
         file = args.dictionary.with_suffix(extension)
         if hashlib.sha256(file.read_bytes()).hexdigest() != expected:
             fail(f"Diccionari incompatible: {file.name}")
     dictionary = Dictionary.from_files(str(args.dictionary))
-    draft = read_table(BASE / "review/ampliacion-01.tsv")
+    review = BASE / ("review/ampliacion-02.tsv" if args.second_expansion else "review/ampliacion-01.tsv")
+    draft = read_table(review)
     basic = read_table(BASE / "review/vocabulario-basico-afi.tsv")
     published = json.loads((BASE / "editions/seed-1-basic.json").read_text(encoding="utf-8"))["catalog"]
     messages = json.loads((ROOT / "locales/es/messages.json").read_text(encoding="utf-8"))
@@ -57,8 +59,10 @@ def main():
               for category in published["categories"]}
     if [row["palabra"] for row in basic] != [entry["text"] for entry in published["entries"]]:
         fail("La taula AFI del vocabulari bàsic no coincideix amb el catàleg.")
-    if [row["palabra"] for row in draft] != (BASE / "review/ampliacion-01.txt").read_text(encoding="utf-8").splitlines():
+    if not args.second_expansion and [row["palabra"] for row in draft] != (BASE / "review/ampliacion-01.txt").read_text(encoding="utf-8").splitlines():
         fail("El llistat alfabètic no coincideix amb la taula de revisió.")
+    if args.second_expansion:
+        basic += read_table(BASE / "review/ampliacion-01.tsv")
     words = set()
     by_sound = defaultdict(list)
     for row in basic + draft:
@@ -88,10 +92,18 @@ def main():
     collisions = [group for group in by_sound.values() if len(group) > 1]
     if collisions:
         fail(f"Homòfons interns segons l’AFI de referència: {collisions}")
+    if args.second_expansion:
+        pseudo = read_table(BASE / "pseudo/ampliacion-01.tsv")
+        if len(pseudo) != 100 or len({sound_key(row["afi_es_ES"]) for row in pseudo}) != len(pseudo):
+            fail("El banc de pseudoparaules no conté 100 lectures diferents.")
+        for row in pseudo:
+            word = row["palabra"]
+            if word in words or dictionary.lookup(word) or sound_key(row["afi_es_ES"]) in by_sound:
+                fail(f"Pseudoparaula amb una coincidència lèxica o fonètica: {word}")
     if args.json:
         print(json.dumps({
             "basic": len(basic), "additions": len(draft), "wordCount": len(words),
-            "reviewSHA256": hashlib.sha256((BASE / "review/ampliacion-01.tsv").read_bytes()).hexdigest(),
+            "reviewSHA256": hashlib.sha256(review.read_bytes()).hexdigest(),
             "basicIpaSHA256": hashlib.sha256((BASE / "review/vocabulario-basico-afi.tsv").read_bytes()).hexdigest(),
             "dictionarySHA256": DICTIONARY_HASHES,
         }))

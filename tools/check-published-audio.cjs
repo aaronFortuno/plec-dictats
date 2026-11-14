@@ -32,27 +32,36 @@ if(spanishId){
   assert(G.isValidMp3(bytes));
  }
  console.log('Spanish publication: 350 MP3 digests, review status and full language-specific student coverage verified.');
- if(spanishId!==expected.id){
-  const expansion=A.readJson(path.join(root,'audio/spanish-expansion-publication.json'));
-  const {pack:addition,edition}=batch(true),expanded=A.validatePack(manifest,addition.id);
+ const spanishExpansionFiles=[[1,'spanish-expansion-publication.json'],[2,'spanish-expansion-02-publication.json']];
+ const latest=A.validatePack(manifest,spanishId);
+ for(const [id,file] of Object.entries(pack.files))assert.equal(latest.basePath+latest.files[id],pack.basePath+file);
+ for(const [number,file] of spanishExpansionFiles){
+  const filename=path.join(root,'audio',file);
+  if(!fs.existsSync(filename))continue;
+  const audit=A.readJson(filename);
+  const {pack:addition,edition,count}=batch(number),expanded=A.validatePack(manifest,addition.id);
   const full=M.coverage(manifest,edition.catalog.entries,'es','https://example.test/plec/');
   assert(full.ready);
   assert.equal(full.pack.id,spanishId);
-  assert.equal(expansion.decode.decoded,706);
-  assert.equal(expansion.catalogue,edition.catalog.revision);
-  assert.equal(expanded.fingerprint,expansion.fingerprint);
-  assert.equal(Object.keys(expanded.files).length,706);
-  assert.equal(Object.keys(full.pack.files).length,1056);
-  for(const job of plan(true)){
+  assert.equal(audit.decode.decoded,count);
+  assert.equal(audit.catalogue,edition.catalog.revision);
+  assert.equal(expanded.fingerprint,audit.fingerprint);
+  assert.equal(Object.keys(expanded.files).length,count);
+  for(const job of plan(number)){
    const relative=expanded.files[job.id];
    assert.equal(relative,job.relativePath);
-   assert.equal(full.pack.basePath+full.pack.files[job.id],expanded.basePath+relative);
+   assert.equal(latest.basePath+latest.files[job.id],expanded.basePath+relative);
    const audio=fs.readFileSync(path.join(root,expanded.basePath,relative));
-   assert.equal(crypto.createHash('sha256').update(audio).digest('hex'),expansion.sha256[relative]);
+   assert.equal(crypto.createHash('sha256').update(audio).digest('hex'),audit.sha256[relative]);
    assert(G.isValidMp3(audio));
   }
-  for(const [id,file] of Object.entries(pack.files))assert.equal(full.pack.basePath+full.pack.files[id],pack.basePath+file);
-  console.log('Spanish expansion: 706 new recordings and all 1,056 words covered, including the original 350 audio URLs.');
+  console.log(`Spanish expansion ${number}: ${count} recordings verified and all ${edition.catalog.entries.length} words covered.`);
+ }
+ const current=require('../catalogs/es/editions/index.js');
+ if(spanishId==='es-es-elvira-words-v3'){
+  const full=current.editions.find(edition=>edition.slot===current.current);
+  assert.equal(Object.keys(latest.files).length,full.catalog.entries.length);
+  assert(M.coverage(manifest,full.catalog.entries,'es','https://example.test/plec/').ready);
  }
 }
 const valencianFile=path.join(root,'audio/valencian-publication.json');

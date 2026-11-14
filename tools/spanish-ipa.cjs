@@ -4,8 +4,10 @@
 const accented = {á:'a', é:'e', í:'i', ó:'o', ú:'u', ü:'u'};
 const onsetPairs = new Set(['bl','bɾ','dɾ','fl','fɾ','gl','gɾ','kl','kɾ','pl','pɾ','tɾ']);
 const exceptions = new Map([
+  ['ahumaron','a.u.ˈma.ɾon'],
   ['cacahuete','ka.ka.ˈwe.te'],
   ['guiaban','gi.ˈa.ban'],
+  ['infrahumana','in.fɾa.u.ˈma.na'],
   ['prehistoria','pɾe.is.ˈto.ɾja'],
   ['subrayaban','sub.ra.ˈʝa.ban']
 ]);

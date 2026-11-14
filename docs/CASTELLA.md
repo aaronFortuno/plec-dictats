@@ -26,6 +26,14 @@ L’AFI és una proposta fonològica per a la veu `es-ES`, amb distinció entre 
 
 El catàleg carrega un índex per varietat i permet descarregar les transcripcions en CSV. El perfil d’Elvira és `es-es-yeismo-v1`. L’índex es valida amb els identificadors i la grafia del catàleg, independentment de si l’àudio està disponible.
 
+## Segona ampliació
+
+[La tria editorial de 2.000 mots](../catalogs/es/review/ampliacion-02.tsv) inclou 1.025 noms, adjectius i altres formes habituals, 440 mots d’ampliació i 535 formes verbals, de les quals 225 són formes flexionades. Les etiquetes ortogràfiques segueixen els dotze focus del preparador. El banc arriba a 3.056 mots. S’ha mantingut la selecció inicial de 350 mots bàsics i s’han congelat les tres edicions per conservar les llavors anteriors.
+
+El contrast automatitzat verifica les 3.056 grafies amb el lèxic RLA-ES i comprova els homòfons interns amb la transcripció de referència. Aquesta comprovació i l’exclusió de formes amb alternatives gràfiques conegudes redueixen l’ambigüitat dels dictats aïllats. El contrast no detecta necessàriament tots els homòfons de fora del banc. L’edició s’identifica com a proposta editorial i els àudios es mantenen en revisió auditiva.
+
+Per reproduir el contrast i generar les dades, executa `python tools/check-spanish-draft.py ruta/es_ES --second-expansion --json | node tools/prepare-spanish-expansion-02.cjs` i després `node tools/build-catalogs.cjs`. Les transcripcions apareixen al catàleg i són exportables com a CSV. La [guia de les pseudoparaules](PSEUDOPALABRAS-ES.md) recull el banc de 100 formes i el pla per a una síntesi posterior.
+
 ## Primera veu
 
 La primera mostra va comparar Elvira i Álvaro (`es-ES`), dues veus neurals estàndard del [catàleg d’Azure](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support#text-to-speech). En dictat de mots aïllats, parelles com «tubo» i «tuvo» necessiten context per exigir una sola grafia. Cal revisar aquests casos abans de generar àudios per a les ampliacions del catàleg.
@@ -45,3 +53,5 @@ La mostra AFI no va aportar una millora clara a l’escolta docent. Es va triar 
 El paquet està pendent de revisió auditiva individual. La pantalla en castellà ofereix les instruccions per escrit.
 
 El lot de la primera ampliació es prepara amb `node tools/run-spanish-audio.cjs --expansion --execute --confirm-f0`. Es van generar 706 fitxers a partir de la grafia amb la mateixa veu i ritme. La reserva local del lot va ser de 27.388 caràcters amb el reintent inclòs. `node tools/publish-spanish-audio.cjs --expansion --publish` va descodificar els 706 fitxers i va crear el paquet conjunt `es-es-elvira-words-v2`, que manté les 350 rutes anteriors. El lot queda pendent de revisió auditiva. [Registre de publicació i SHA-256](../audio/spanish-expansion-publication.json).
+
+La segona ampliació utilitza `node tools/run-spanish-audio.cjs --expansion-02 --execute --confirm-f0`. Les peticions a Elvira parteixen de la grafia a −10 %, igual que les edicions anteriors. La previsió és de 78.183 caràcters amb el comptador local abans de reintents. `node tools/publish-spanish-audio.cjs --expansion-02 --publish` verifica els MP3 nous i crea un paquet de reproducció que conserva les rutes dels 1.056 àudios existents.

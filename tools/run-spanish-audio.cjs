@@ -7,7 +7,10 @@ const G = require('./generate-audio.cjs');
 const {loadAzureEnvironment} = require('./azure-credentials.cjs');
 const seed = require('../catalogs/es/editions/seed-1-basic.json');
 const registry = require('../catalogs/es/editions/manifest.json');
-const expandedFile = 'seed-2-expanded.json';
+const expansions = {
+  1:{file:'seed-2-expanded.json',baseline:'seed-1-basic.json',retained:350,count:706},
+  2:{file:'seed-3-expanded.json',baseline:'seed-2-expanded.json',retained:1056,count:2000}
+};
 
 const directory = path.join(A.ROOT, 'output/audio');
 const pack = {
@@ -29,17 +32,20 @@ function readEdition(file) {
 function batch(expand = false) {
   readEdition('seed-1-basic.json');
   if (!expand) return {pack,options,edition:seed,count:350};
-  const edition = readEdition(expandedFile);
-  const basicIds = new Map(seed.catalog.entries.map(entry=>[entry.id,entry.text]));
+  const number = Number(expand), specification = expansions[number];
+  if (!specification) throw Error('Ampliació castellana desconeguda.');
+  const edition = readEdition(specification.file);
+  const baseline = readEdition(specification.baseline);
+  const basicIds = new Map(baseline.catalog.entries.map(entry=>[entry.id,entry.text]));
   const entries = edition.catalog.entries.filter(entry=>!basicIds.has(entry.id));
   const retained = edition.catalog.entries.filter(entry=>basicIds.has(entry.id));
-  if (retained.length!==350 || retained.some(entry=>basicIds.get(entry.id)!==entry.text) ||
-      entries.length!==706 || edition.catalog.reviewedByTeacher!==true) {
-    throw Error('L’ampliació ha de conservar els 350 mots publicats i afegir-hi 706 mots revisats.');
+  if (retained.length!==specification.retained || retained.some(entry=>basicIds.get(entry.id)!==entry.text) ||
+      entries.length!==specification.count || (number===1&&edition.catalog.reviewedByTeacher!==true)) {
+    throw Error('Els mots nous no coincideixen amb l’edició congelada.');
   }
-  const id = 'es-es-elvira-expansion-01';
+  const id = 'es-es-elvira-expansion-0'+number;
   const addition = {...pack,id,basePath:'assets/audio/es/'+id+'/',contentFingerprint:edition.catalog.fingerprint};
-  return {pack:addition,edition,count:706,options:{
+  return {pack:addition,edition,count:specification.count,options:{
     seed:{catalog:{language:'es',entries}},
     manifest:{schemaVersion:1,packs:[addition]},
     pack:id,mode:'words'
@@ -88,8 +94,9 @@ function reuseSample(jobs) {
 }
 
 async function main(args) {
-  if (args.some(arg => !['--execute','--confirm-f0','--expansion'].includes(arg))) throw Error('Arguments no admesos.');
-  const expansion = args.includes('--expansion');
+  if (args.some(arg => !['--execute','--confirm-f0','--expansion','--expansion-02'].includes(arg)) ||
+      (args.includes('--expansion')&&args.includes('--expansion-02'))) throw Error('Arguments no admesos.');
+  const expansion = args.includes('--expansion-02')?2:args.includes('--expansion');
   const selection = batch(expansion);
   const jobs = plan(expansion);
   console.log(JSON.stringify(A.summarize(jobs)));

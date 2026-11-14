@@ -33,7 +33,7 @@ async function main() {
     await page.waitForSelector('#sheet-preview svg');
     assert.equal(new URL(page.url()).pathname, '/es/');
     assert.equal(await page.locator('html').getAttribute('lang'), 'es');
-    assert.equal(await page.locator('#word-total').textContent(), '1056');
+    assert.equal(await page.locator('#word-total').textContent(), '3056');
     assert(await page.locator('#mode-control').isHidden());
     assert.equal(await page.locator('#tag-options label').filter({has:page.locator('input[value="bv"]')}).textContent(),'b / v');
     assert.equal(await page.locator('#tag-options label').filter({has:page.locator('input[value="ggu"]')}).textContent(),'g / gu / gü');
@@ -61,7 +61,7 @@ async function main() {
     const selected = await page.evaluate(code => PlecSeeds.resolve(PlecSeedRegistry.editions, code), code);
     assert(selected.entries.some(entry => entry.text === 'biblioteca'));
     assert(selected.entries.every(entry => entry.tags.includes('bv')));
-    assert.equal(selected.epoch,1);
+    assert.equal(selected.epoch,2);
     const worksheet = await page.locator('#sheet-preview').textContent();
     assert(worksheet.includes('ESCRIBO Y REVISO') && worksheet.includes('/es/dictat/'));
     assert(worksheet.includes('variety=es-es'));
@@ -162,14 +162,15 @@ async function main() {
     await page.waitForFunction(()=>document.querySelector('#listen-count').textContent==='1 de 3 escuchas');
     const manifest=JSON.parse(fs.readFileSync('audio/manifest.json','utf8'));
     const currentPack=manifest.packs.find(pack=>pack.id===manifest.defaultPacks.es);
-    if(Object.keys(currentPack.files).length===1056){
+    if(Object.keys(currentPack.files).length===3056){
       const newWord=await page.evaluate(()=>{
         const edition=PlecSeedRegistry.editions.find(item=>item.slot===PlecSeedRegistry.current);
         const recipe=PlecSeeds.prepare(edition,{mode:'words',stage:'all',count:12,tags:['ggu']}).index;
+        const previous=new Set(PlecSeedRegistry.editions.find(item=>item.slot===1).catalog.entries.map(entry=>entry.id));
         for(let nonce=0;nonce<100;nonce++){
           const code=PlecSeeds.forLanguage('es').encode({epoch:edition.slot,recipe,nonce});
           const result=PlecSeeds.resolve(PlecSeedRegistry.editions,code);
-          if(!result.entries[0].basicVocabulary)return {code,text:result.entries[0].text};
+          if(!previous.has(result.entries[0].id))return {code,text:result.entries[0].text};
         }
       });
       assert(newWord);
@@ -178,7 +179,7 @@ async function main() {
       await page.evaluate(()=>{document.querySelector('#focus-root').requestFullscreen=()=>Promise.reject(Error('Fullscreen unavailable in test'));});
       await page.click('#start-dictation');
       await page.click('#windowed-start');
-      const newClip=page.waitForResponse(response=>decodeURIComponent(new URL(response.url()).pathname).endsWith('/es-es-elvira-expansion-01/words/'+newWord.text+'.mp3')&&response.ok());
+      const newClip=page.waitForResponse(response=>decodeURIComponent(new URL(response.url()).pathname).endsWith('/es-es-elvira-expansion-02/words/'+newWord.text+'.mp3')&&response.ok());
       await page.click('#listen-word');
       await newClip;
       await page.waitForFunction(()=>document.querySelector('#listen-count').textContent==='1 de 3 escuchas');
