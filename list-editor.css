@@ -1,0 +1,38 @@
+/* Same A4 layout as the PDF; only the surrounding editor follows the theme. */
+#list-editor{width:min(1160px,calc(100% - 32px));height:min(92svh,940px);max-height:92svh;padding:24px;overflow:hidden}
+#list-editor[open]{display:flex;flex-direction:column;gap:20px}
+#list-editor .dialog-head{margin:0;flex-shrink:0}
+#list-editor .dialog-head h2{margin:0}
+#list-editor-kind{margin:4px 0 0;color:var(--muted);font-size:13px}
+.list-editor-body{display:grid;grid-template-columns:240px minmax(0,1fr);gap:24px;min-height:0;flex:1}
+#list-layout-form{display:flex;flex-direction:column;gap:18px;min-height:0;overflow:auto;padding:2px 12px 2px 0}
+#list-layout-form label{display:grid;gap:7px;font-size:13px;font-weight:600}
+#list-layout-form input,#list-layout-form select{width:100%;min-width:0;font:inherit;font-weight:400;border:1px solid var(--line);background:var(--white);color:var(--ink);border-radius:7px;padding:9px 10px;min-height:40px}
+.list-editor-settings{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.list-editor-actions{margin-top:auto;display:grid;gap:14px;padding-top:12px}
+.list-editor-actions .button{justify-content:center}
+#list-reset{justify-self:center}
+.list-editor-preview{display:flex;flex-direction:column;min-height:0;min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.list-preview-scroll{display:grid;place-items:center;overflow:auto;min-height:0;flex:1;padding:20px;scrollbar-gutter:stable}
+#list-page{max-width:660px;min-width:0;margin:0 auto;transition:opacity var(--motion-duration) var(--motion-ease)}
+#list-page[aria-busy="true"]{opacity:.45}
+#list-page svg{display:block;width:100%;height:auto;background:white;box-shadow:0 2px 12px #0002;font-family:Arial,Helvetica,sans-serif}
+.list-page-nav{display:flex;justify-content:center;align-items:center;gap:16px;padding:8px 12px;border-top:1px solid var(--line);flex-shrink:0;min-height:48px}
+#list-page-number{font-size:13px;min-width:110px;text-align:center}
+#list-prev .lucide{transform:rotate(180deg)}
+#list-preview-status{color:var(--muted);font-size:13px;text-align:center;margin:0;padding:0 12px}
+#list-preview-status:not(:empty){padding:12px}
+#list-fit-note{font-size:12px;color:var(--muted);line-height:1.5;margin:0}
+@media(max-width:720px){
+ #list-editor{width:calc(100% - 16px);padding:16px;height:94svh;max-height:94svh}
+ #list-editor[open]{gap:12px}
+ .list-editor-body{display:flex;flex-direction:column;gap:12px}
+ #list-layout-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 12px;overflow:auto;max-height:52%;flex-shrink:0;padding-right:8px}
+ #list-layout-form>label:first-child{grid-column:1/-1}
+ .list-editor-settings{display:contents}
+ #list-layout-form>label[for="list-orientation"]{grid-column:1/-1}
+ .list-editor-actions{margin:0;padding:0;grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+ .list-editor-preview{flex:1;min-height:160px}
+ .list-preview-scroll{padding:12px}
+}
+@media print{#list-editor{display:none!important}}

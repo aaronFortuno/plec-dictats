@@ -15,7 +15,6 @@
  const icon=name=>window.PlecIcons(name);
  let rows=[],byId=new Map(),manifest={packs:[]},published={packs:[]};
  let config=null,initial=null,limit=50,deepWord='',requestedPack='',player=null,playing=null,epoch=0,openGeneration=0;
- let exportingPDF=false;
  const resourceLabels={published:'Àudios publicats',review:'Versions de revisió',central:'IPA central',valencia:'IPA valenciana',mallorqui:'IPA mallorquina'};
  const local=['127.0.0.1','localhost','[::1]'].includes(location.hostname);
  const specs={published:{url:new URL('audio/manifest.json',base),validate:C.validateManifest},review:{url:new URL(local?'output/audio/review-manifest.json':'audio/review-manifest.json',base),validate:C.validateManifest}};
@@ -128,7 +127,7 @@
   if(target){const index=entries.findIndex(e=>e.text===target);if(index>=0)limit=Math.max(50,Math.ceil((index+1)/50)*50);}
   renderInitials(view,active);
   $('catalog-clear').hidden=!query;
-  for(const id of ['export-catalog-pdf','export-focus-pdf'])$(id).disabled=!view.total||exportingPDF;
+  for(const id of ['export-catalog-pdf','export-focus-pdf'])$(id).disabled=!view.total;
   $('export-pronunciations').disabled=!varieties.some(([key])=>resources.get(resourceKey(key)).status==='ready');
   const visible=entries.slice(0,limit),shown=visible.length;
   $('catalog-count').textContent=view.total?view.total+' '+t(view.total===1?'mot':'mots')+(active?' · '+active+': '+entries.length:'')+(shown<entries.length?' · '+shown+' visibles':''):t('Cap mot amb aquests filtres.');
@@ -149,8 +148,8 @@
  }
  $('catalog-list').addEventListener('click',event=>{const b=event.target.closest('[data-action]');if(!b||b.disabled)return;if(b.dataset.action==='more'){const oldCount=$('catalog-list').querySelectorAll('.pronunciation-row').length;openGeneration++;limit+=50;render();$('catalog-list').querySelectorAll('.pronunciation-row')[oldCount]?.focus({preventScroll:true});return;}if(b.dataset.action==='reset'){resetFilters();return;}if(b.dataset.action==='pending'){status('Mallorquí de Palma: transcripcions en revisió i àudios en pausa: les proves de síntesi no ofereixen una dicció prou acurada. Consulta els criteris de pronunciació.');return;}const row=byId.get(b.dataset.word);if(!row)return;if(b.dataset.action==='play')play(row,b.dataset.variety);else if(b.dataset.action==='report')openReport(row,b.dataset.variety);});
  function download(content,name,type){const url=URL.createObjectURL(new Blob([content],{type})),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);}
- async function exportListPDF(byFocus){
-  if(!config||exportingPDF)return;
+ function exportListPDF(byFocus){
+  if(!config)return;
   const query=$('catalog-search').value.trim();
   const {entries,total}=catalogueView(query);
   if(!total)return;
@@ -162,22 +161,7 @@
   if(query)filters.push(t('Cerca:')+' '+query);
   const subtitle=count=>[count+' '+t(count===1?'mot':'mots'),...filters].join(' · ');
   const categories=byFocus?config.categories.filter(category=>category.mode===mode&&(!$('catalog-tag').value||category.id===$('catalog-tag').value)):undefined;
-  const buttons=['export-catalog-pdf','export-focus-pdf'].map($);
-  const button=$(byFocus?'export-focus-pdf':'export-catalog-pdf');
-  exportingPDF=true;
-  for(const control of buttons)control.disabled=true;
-  button.setAttribute('aria-busy','true');
-  try{
-   const bytes=await window.PlecPdf.buildWordList({entries,title,subtitle,locale,categories});
-   download(bytes,`plec-${language}-${name}${byFocus?(language==='es'?'-grafias':'-focus'):''}.pdf`,'application/pdf');
-  }catch{
-   status(t('No s’ha pogut generar la llista en PDF. Torna-ho a provar.'));
-  }finally{
-   exportingPDF=false;
-   const empty=!catalogueView($('catalog-search').value.trim()).total;
-   for(const control of buttons)control.disabled=empty;
-   button.removeAttribute('aria-busy');
-  }
+  window.PlecListEditor.open({entries,title,subtitle,locale,categories},`plec-${language}-${name}${byFocus?(language==='es'?'-grafias':'-focus'):''}.pdf`);
  }
  $('export-catalog-pdf').addEventListener('click',()=>exportListPDF(false));
  $('export-focus-pdf').addEventListener('click',()=>exportListPDF(true));

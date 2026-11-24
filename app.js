@@ -251,6 +251,7 @@
     }
   });
   const releases = [
+    ['1.36', '2026-11-24', [t('Llistes imprimibles amb títol, mida de lletra, columnes, orientació i vista prèvia abans de descarregar.')]],
     ['1.35', '2026-11-14', [t('Cent pseudoparaules en castellà amb AFI i àudio d’Elvira, disponibles al catàleg i al dictat oral.')]],
     ['1.34', '2026-11-14', [t('El catàleg castellà arriba a 3.056 mots amb transcripcions AFI.')]],
     ['1.33', '2026-11-14', [t('Catàleg castellà ampliat a 1.056 mots, amb transcripcions AFI i focus en minúscules.')]],
@@ -297,7 +298,7 @@
     ['1.0', '2026-10-23', ['Primera versió: catàleg, tries, mots propis i exportació de PDF.']]
   ];
   const releaseDate = new Intl.DateTimeFormat(L.locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  $('changelog-list').innerHTML = (spanish?releases.slice(0,6):releases).map(([version, date, notes]) => {
+  $('changelog-list').innerHTML = (spanish?releases.slice(0,7):releases).map(([version, date, notes]) => {
     const id = 'release-' + version.replaceAll('.', '-');
     return `<section class="release" aria-labelledby="${id}"><div><h3 id="${id}">${version}</h3><time datetime="${date}">${escape(releaseDate.format(new Date(date + 'T00:00:00Z')))}</time></div><p>${escape(notes.join(' '))}</p></section>`;
   }).join('');

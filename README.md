@@ -176,7 +176,7 @@ El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `buil
 
 ## Versions
 
-La interfície actual és **1.35**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.36**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 
@@ -199,3 +199,9 @@ La [revisió d’usabilitat del catàleg](docs/AUDITORIA-CATALEG.md) documenta e
 El peu comparteix la marca del portal [ortogra.fi](https://ortogra.fi/), mantingut al [repositori independent ortogra-fi](https://github.com/aaronFortuno/ortogra-fi). La guia de la marca es troba a assets/ortografi/README.md.
 
 La marca i el lema comparteixen [geometria vectorial](assets/brand/README.md) al web i al PDF. Al lateral dret, la gestió del full prioritza la descàrrega; la secció de dictat oral agrupa la pronunciació i els enllaços d’escolta. Compartir el full obre el configurador, mentre que compartir el dictat oral obre la pantalla de l’alumnat. Des de la versió 1.26 no hi ha una guia docent separada.
+
+### Maquetació de les llistes imprimibles
+
+Al catàleg, «Llista filtrada · PDF» i «Per focus · PDF» obren un editor amb títol opcional, lletra de 10 a 30 punts, entre una i quatre columnes i A4 vertical o horitzontal. La vista prèvia permet recórrer totes les pàgines abans de descarregar. Exporta tots els mots dels filtres actius, no només la inicial o la tanda visible; per focus, un mot apareix en cadascun dels focus que li corresponen. Els controls no alteren la selecció del dictat ni el codi.
+
+`pdf.js` prepara una sola geometria amb les mètriques de la font del PDF; `list-editor.js` en mostra les mateixes posicions en SVG i descarrega els mateixos bytes ja preparats. Les pàgines es recalculen segons el títol, la mida i les columnes; els mots massa llargs es redueixen individualment amb un avís a l’editor. Les preferències de format es conserven mentre l’editor és obert i es restableixen en preparar una llista nova. No s’hi fan peticions externes.

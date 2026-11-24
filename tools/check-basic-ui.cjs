@@ -31,6 +31,7 @@ const fakeAnalytics=`window.PlecAnalytics={track(){},getState:()=>({status:'disa
  await p.selectOption('#catalog-stage','all');
  const pdfDownload=p.waitForEvent('download');
  await p.click('#export-catalog-pdf');
+ await p.click('#list-download');
  const vocabularyPdf=await pdfDownload;
  assert.equal(vocabularyPdf.suggestedFilename(),'plec-ca-vocabulari-basic.pdf');
  const pdfPath='output/pdf/plec-ca-vocabulari-basic.pdf';
@@ -39,8 +40,10 @@ const fakeAnalytics=`window.PlecAnalytics={track(){},getState:()=>({status:'disa
  assert.equal(basicPdf.getPageCount(),4);
  const firstPage=basicPdf.getPage(0);
  assert(Math.abs(firstPage.getWidth()-210*72/25.4)<.01&&Math.abs(firstPage.getHeight()-297*72/25.4)<.01);
+ await p.locator('#list-editor [data-close]').click();await p.waitForFunction(()=>!document.querySelector('#list-editor').open);
  const focusDownload=p.waitForEvent('download');
  await p.click('#export-focus-pdf');
+ await p.click('#list-download');
  const focusPdf=await focusDownload;
  assert.equal(focusPdf.suggestedFilename(),'plec-ca-vocabulari-basic-focus.pdf');
  const focusPath='output/pdf/plec-ca-vocabulari-basic-focus.pdf';
@@ -49,6 +52,7 @@ const fakeAnalytics=`window.PlecAnalytics={track(){},getState:()=>({status:'disa
  const focusPages=bank.categories.filter(category=>category.mode==='words')
    .reduce((total,category)=>total+Math.ceil(basicEntries.filter(entry=>entry.tags.includes(category.id)).length/93),0);
  assert.equal((await PDFDocument.load(fs.readFileSync(focusPath))).getPageCount(),focusPages);
+ await p.locator('#list-editor [data-close]').click();await p.waitForFunction(()=>!document.querySelector('#list-editor').open);
  await p.fill('#catalog-search','zzzzzzzz');
  assert(await p.locator('#export-catalog-pdf').isDisabled());
  assert(await p.locator('#export-focus-pdf').isDisabled());

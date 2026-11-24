@@ -217,5 +217,20 @@
   "Dictat acabat.": "Dictado terminado.",
   "Ara desplega el full i comprova com has escrit les paraules.": "Despliega la hoja y comprueba cómo has escrito las palabras.",
   "Torna a començar": "Volver a empezar",
-  "Torna al preparador": "Volver al preparador"
+  "Torna al preparador": "Volver al preparador",
+  "Prepara la llista per imprimir": "Prepara la lista para imprimir",
+  "Tanca la maquetació": "Cerrar la maquetación",
+  "Títol": "Título",
+  "Lletra (pt)": "Letra (pt)",
+  "Columnes": "Columnas",
+  "Paper A4": "Papel A4",
+  "Horitzontal": "Horizontal",
+  "Els mots que no caben a la columna s’ajusten amb una lletra més petita. Redueix el nombre de columnes per donar-los més espai.": "Las palabras que no caben en la columna se ajustan con una letra más pequeña. Reduce el número de columnas para darles más espacio.",
+  "Restableix el format": "Restablecer el formato",
+  "Vista prèvia de la llista": "Vista previa de la lista",
+  "Pàgina de la llista": "Página de la lista",
+  "Pàgines de la llista": "Páginas de la lista",
+  "Pàgina anterior": "Página anterior",
+  "Pàgina següent": "Página siguiente",
+  "Versió 1.36: obre l’historial de canvis": "Versión 1.36. Abrir el historial de cambios"
 }

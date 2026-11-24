@@ -102,10 +102,13 @@ async function main() {
     assert.equal(await play.getAttribute('aria-pressed'),'true');
     const listDownload = page.waitForEvent('download');
     await page.click('#export-focus-pdf');
+    await page.click('#list-download');
     const list = await listDownload;
     assert.equal(list.suggestedFilename(), 'plec-es-vocabulario-basico-grafias.pdf');
     const listDoc = await PDFDocument.load(fs.readFileSync(await list.path()));
     assert.equal(listDoc.getPageCount(), 2); // «niño» belongs to Sin tilde and ñ / ch.
+    await page.locator('#list-editor [data-close]').click();
+    await page.waitForFunction(()=>!document.querySelector('#list-editor').open);
     await page.locator('#catalog-basic').uncheck();
     await page.fill('#catalog-search', 'pingüino');
     await page.waitForFunction(()=>document.querySelector('.ipa-text')?.textContent==='pin.ˈgwi.no');

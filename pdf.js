@@ -32,7 +32,8 @@
     }
     return doc.save();
   }
-  async function buildWordList({ entries, title, subtitle, locale, categories }, library = root.PDFLib) {
+  // One layout for the browser preview and the downloadable PDF, in PDF points.
+  async function prepareWordList({ entries, title = '', subtitle = () => '', locale, categories, fontSize = 16, columns = 3, orientation = 'portrait' }, library = root.PDFLib) {
     if (!library) throw new Error('No s’ha carregat l’eina de PDF. Torna a obrir el web.');
     const { PDFDocument, StandardFonts, rgb } = library;
     if (!entries.length) throw new Error('No hi ha mots per imprimir amb aquests filtres.');
@@ -41,6 +42,7 @@
     const groups = categories
       ? categories.map(({ id, label }) => ({ label, entries: ordered.filter(entry => entry.tags.includes(id)) })).filter(group => group.entries.length)
       : [{ label: '', entries: ordered }];
+    if (!groups.length) throw new Error('No hi ha mots per imprimir amb aquests filtres.');
 
     const doc = await PDFDocument.create();
     doc.setTitle(title);
@@ -48,50 +50,80 @@
     const regular = await doc.embedFont(StandardFonts.Helvetica);
     const bold = await doc.embedFont(StandardFonts.HelveticaBold);
     const ptPerMm = 72 / 25.4;
-    const width = 210 * ptPerMm;
-    const height = 297 * ptPerMm;
+    const landscape = orientation === 'landscape';
+    const width = (landscape ? 297 : 210) * ptPerMm;
+    const height = (landscape ? 210 : 297) * ptPerMm;
     const margin = 40;
     const columnGap = 18;
-    const columns = 3;
+    fontSize = Math.min(30, Math.max(10, Number(fontSize) || 16));
+    columns = Math.min(4, Math.max(1, Math.round(Number(columns) || 3)));
     const columnWidth = (width - 2 * margin - (columns - 1) * columnGap) / columns;
-    const rowsPerColumn = 31;
-    const rowHeight = 21.8;
-    const pageCapacity = columns * rowsPerColumn;
+    const rowHeight = fontSize * 1.3625;
+    function wrap(value, font, size, maxLines = Infinity) {
+      const lines = [''];
+      for (const char of printable(String(value)).replace(/\s+/g, ' ').trim()) {
+        const last = lines.length - 1;
+        if (font.widthOfTextAtSize(lines[last] + char, size) > width - 2 * margin) {
+          const space = lines[last].lastIndexOf(' ');
+          const carry = space > 0 ? lines[last].slice(space + 1) : '';
+          if (space > 0) lines[last] = lines[last].slice(0, space);
+          if (lines.length === maxLines) { lines[last] = lines[last].slice(0, -3) + '...'; break; }
+          lines.push((carry + char).trimStart());
+        } else lines[last] += char;
+      }
+      return lines;
+    }
+    title = String(title).slice(0, 120).trim();
+    const headings = wrap(title, bold, 25);
     const pages = [];
     for (const group of groups) {
+      const caption = [group.label, subtitle(group.entries.length)].filter(Boolean).join(' · ');
+      const captions = wrap(caption, regular, 11, 2);
+      const headerExtra = (headings.length - 1) * 29 + (captions.length - 1) * 14;
+      const firstRow = 123 + headerExtra + Math.max(0, fontSize - 16);
+      const rowsPerColumn = Math.max(1, Math.floor((height - firstRow - 64) / rowHeight) + 1);
+      const pageCapacity = columns * rowsPerColumn;
       for (let start = 0; start < group.entries.length; start += pageCapacity) {
-        pages.push({ label: group.label, count: group.entries.length, items: group.entries.slice(start, start + pageCapacity) });
+        pages.push({ captions, headerExtra, firstRow, items: group.entries.slice(start, start + pageCapacity) });
       }
     }
-    const ink = rgb(.1, .13, .12), muted = rgb(.33, .36, .35), rule = rgb(.78, .8, .79);
-    for (const [index, { label, count, items }] of pages.entries()) {
+    const ink = '#1a211f', muted = '#545c59', rule = '#c7ccca';
+    const color = hex => rgb(...[1, 3, 5].map(offset => parseInt(hex.slice(offset, offset + 2), 16) / 255));
+    let fittedCount = 0;
+    const previews = [];
+    for (const [index, { captions, headerExtra, firstRow, items }] of pages.entries()) {
       const page = doc.addPage([width, height]);
-      const rows = Math.ceil(items.length / columns);
-      const heading = printable(label || title);
-      const headingSize = Math.min(25, 25 * (width - 2 * margin) / bold.widthOfTextAtSize(heading, 25));
-      const caption = subtitle(count);
-      let fittedCaption = printable((label ? title + ' · ' + caption : caption).replace(/\s+/g, ' ').trim().slice(0, 160));
-      while (regular.widthOfTextAtSize(fittedCaption, 11) > width - 2 * margin) {
-        fittedCaption = fittedCaption.replace(/.{2}$/, '…');
+      const shapes = [];
+      function text(value, x, top, size, weight = false, fill = ink) {
+        page.drawText(value, { x, y: height - top, size, font: weight ? bold : regular, color: color(fill) });
+        shapes.push({ type: 'text', value, x, y: top, size, weight, color: fill });
       }
-      page.drawText(heading, { x: margin, y: height - 59, size: headingSize, font: bold, color: ink });
-      page.drawText(fittedCaption, { x: margin, y: height - 82, size: 11, font: regular, color: muted });
-      page.drawLine({ start: { x: margin, y: height - 96 }, end: { x: width - margin, y: height - 96 }, thickness: .6, color: rule });
+      function line(top) {
+        page.drawLine({ start: { x: margin, y: height - top }, end: { x: width - margin, y: height - top }, thickness: .6, color: color(rule) });
+        shapes.push({ type: 'line', x: margin, x2: width - margin, y: top, color: rule });
+      }
+      const rows = Math.ceil(items.length / columns);
+      headings.forEach((value, row) => text(value, margin, 59 + row * 29, 25, true));
+      captions.forEach((value, row) => text(value, margin, 82 + (headings.length - 1) * 29 + row * 14, 11, false, muted));
+      line(96 + headerExtra);
 
       items.forEach((entry, index) => {
         const word = printable(entry.text);
         const column = Math.floor(index / rows);
         const row = index % rows;
-        const size = Math.min(16, 16 * columnWidth / regular.widthOfTextAtSize(word, 16));
-        page.drawText(word, { x: margin + column * (columnWidth + columnGap), y: height - 123 - row * rowHeight, size, font: regular, color: ink });
+        const size = Math.min(fontSize, fontSize * columnWidth / regular.widthOfTextAtSize(word, fontSize));
+        if (size < fontSize - .01) fittedCount++;
+        text(word, margin + column * (columnWidth + columnGap), firstRow + row * rowHeight, size);
       });
 
       const number = `${index + 1} / ${pages.length}`;
-      page.drawText('Plec · plec.ortogra.fi', { x: margin, y: 33, size: 10, font: regular, color: muted });
-      page.drawText(number, { x: width - margin - regular.widthOfTextAtSize(number, 10), y: 33, size: 10, font: regular, color: muted });
+      text('Plec · plec.ortogra.fi', margin, height - 33, 10, false, muted);
+      text(number, width - margin - regular.widthOfTextAtSize(number, 10), height - 33, 10, false, muted);
+      previews.push(shapes);
     }
-    return doc.save();
+    return { bytes: await doc.save(), pages: previews, width, height, fittedCount };
   }
-  root.PlecPdf = { build, buildWordList, printable };
+  async function buildWordList(options, library = root.PDFLib) { return (await prepareWordList(options, library)).bytes; }
+  root.PlecPdf = { build, buildWordList, prepareWordList, printable };
   if (typeof module !== 'undefined') module.exports = root.PlecPdf;
 })(typeof window === 'undefined' ? globalThis : window);

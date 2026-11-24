@@ -180,5 +180,12 @@
   "Umami no està disponible. Si tens un bloquejador, permet Umami en aquest web i prem «Permet temporalment» per reintentar-ho.": "Umami no está disponible. Si tu navegador lo bloquea, permite Umami en este sitio y pulsa «Permitir temporalmente» para volver a intentarlo.",
   "En aquesta còpia local no carreguem Umami ni enviem dades. Els avisos s’activen al web públic.": "En esta copia local, Umami está desactivado.",
   "L’analítica està desactivada i els avisos no es poden enviar. Pots permetre-la temporalment per a aquesta pestanya.": "La analítica está desactivada. Puedes permitirla temporalmente en esta pestaña.",
-  "Els avisos estan bloquejats pel senyal de privacitat del navegador. A sota tens els passos per habilitar-los si ho vols.": "El navegador ha activado una señal de privacidad que bloquea Umami."
+  "Els avisos estan bloquejats pel senyal de privacitat del navegador. A sota tens els passos per habilitar-los si ho vols.": "El navegador ha activado una señal de privacidad que bloquea Umami.",
+  "Llistes imprimibles amb títol, mida de lletra, columnes, orientació i vista prèvia abans de descarregar.": "Listas imprimibles con título, tamaño de letra, columnas, orientación y vista previa antes de descargar.",
+  "Actualitzant la vista prèvia…": "Actualizando la vista previa…",
+  "Pàgina {page} de {total}": "Página {page} de {total}",
+  "Tria una mida de lletra entre 10 i 30 punts.": "Elige un tamaño de letra entre 10 y 30 puntos.",
+  "No s’ha pogut generar la vista prèvia. Canvia una opció per tornar-ho a provar.": "No se ha podido generar la vista previa. Cambia una opción para volver a intentarlo.",
+  "Per focus de pràctica": "Por aspectos de práctica",
+  "Llista alfabètica": "Lista alfabética"
 }

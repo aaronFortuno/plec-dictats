@@ -1,5 +1,9 @@
 # Historial
 
+## 1.36 · 24 de novembre de 2026
+
+- Editor de maquetació per a les llistes filtrades i per focus: títol editable, mida de lletra, columnes i orientació A4. Previsualització de totes les pàgines amb la mateixa geometria que el PDF, en català i castellà, també en mòbil i tema fosc.
+
 ## 1.35 · 14 de novembre de 2026
 
 - El preparador i el dictat oral en castellà incorporen 100 pseudoparaules amb quatre focus, transcripcions AFI i gravacions d’Elvira. El catàleg en permet la consulta, l’escolta i l’exportació de l’AFI.
