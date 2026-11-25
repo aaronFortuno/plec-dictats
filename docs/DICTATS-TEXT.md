@@ -49,9 +49,26 @@ Després de validar els textos, agrupar-ne diversos amb llengua, veu i dicció c
 
 `tools/synthesize-text-pilot.cjs` només descriu la petició per defecte. Un enviament futur requereix una aprovació expressa vinculada a l'empremta exacta, controla la quota compartida i un lock, conserva l'ID de la interacció i no reenvia intents incerts. `tools/text-pilot-audio.cjs` recupera només una resposta ja conservada. `tools/prepare-text-pilot.cjs` és local i requereix autorització de publicació abans de modificar recursos públics. La recuperació estricta del contenidor està adaptada de Sentit (MIT) a `tools/streamed-text-wave.cjs`; no és una correcció perceptiva de pronunciació.
 
-## Locució de puntuació · fase posterior
+## Escaleta editorial dels quatre ritmes · 25/11
 
-Preveure «coma», «punt i seguit» i «punt i a part» com a indicacions de dictat separades del contingut editorial. Aquestes locucions no han de formar part del recompte de mots ni canviar el text imprès; es definiran en preparar la síntesi i la temporització, amb validació docent del lot. En aquesta iteració només es modifica la maquetació: no s’ha afegit cap locució al guió de Gemini ni s’ha fet cap petició.
+Accés «Escaleta» a la capçalera del preview; només al mode de text català. `content/prosody/ca-ll-001-v1.json` conserva la instantània del text i els finals de paràgraf, els finals de fragment d’autor i les excepcions explicades. No hi ha aprovació de text, veu o lot: estat `draft`, veu `null`, independent del fitxer d’autoritzacions de producció.
+
+- 2–3 mots: 26 fragments, tots dins del rang.
+- 4–5 mots: 14 fragments, cinc ajustos de sentit, curts al final de frase o més llargs per conservar un complement o subjecte.
+- 6–8 mots: nou fragments, tres ajustos. Pot incloure un punt i seguit a l’interior d’una tirada, que es continua locutant.
+- 9–12 mots: sis fragments, una frase sencera per tirada.
+
+Cada variant reprodueix exactament els 63 mots i els tres paràgrafs. Cap fragment travessa un punt i a part. Cada mot conserva un índex estable 1–63 i cada locució l’índex del mot després del qual es diu; això prepara el futur canvi de ritme sense omissions. La comparativa encara no substitueix la fragmentació antiga del reproductor: primer cal revisar l’escaleta i decidir veu i lot.
+
+La vista docent mostra quatre columnes i, en pantalles estretes, un selector de quatre ritmes sense tancar el quadre. El PDF comparatiu té tres pàgines A4 horitzontals, una per paràgraf, amb direccions breus i excepcions. La direcció general completa es consulta a «Direcció de veu i pauses» i al JSON font.
+
+Puntuació prevista: tres comes, tres punts i seguit, dos punts i a part, un signe de dos punts i un punt final. Són deu locucions, 24 mots addicionals de locució: cada versió té 63 mots del dictat i 87 mots efectivament locutats. Les quatre sumen 252 mots de dictat i 348 locutats, abans de pauses, per a un futur càlcul de lot.
+
+Pauses proposades, pendents de validar: 1 s al tall; 1,6 s al canvi de paràgraf o final; 0,25 s abans i 0,35 s després de cada locució. Són marges de gravació i muntatge, no un temps límit per escriure. Cal comprovar la presa real abans de donar els talls per bons. No s’ha creat una nova petició de Gemini ni s’ha tocat cap aprovació o registre de quota.
+
+## Locució de puntuació · síntesi posterior
+
+Preveure «coma», «punt i seguit» i «punt i a part» com a indicacions de dictat separades del contingut editorial. Aquestes locucions no han de formar part del recompte de mots ni canviar el text imprès; ja es poden revisar a l’escaleta; la seva realització i temporització es validaran abans de la síntesi, amb validació docent del lot. L’escaleta continua sent un document de planificació: no s’ha afegit cap locució al guió de Gemini ni s’ha fet cap petició.
 
 ## Següent validació
 

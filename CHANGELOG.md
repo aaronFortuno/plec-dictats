@@ -1,5 +1,10 @@
 # Historial
 
+## 1.38 · 25 de novembre de 2026
+
+- Accés discret «Escaleta» al preview del dictat normal. Comparativa de quatre ritmes (2–3, 4–5, 6–8 i 9–12 mots), amb intervals estables de mots, locucions de puntuació separades, pauses proposades, inflexions i justificació dels ajustos de sentit.
+- PDF docent A4 horitzontal de tres pàgines i selector de ritme per a pantalles estretes. Les quatre variants conserven els 63 mots; cadascuna incorpora 10 locucions i suma 87 mots locutats. Esborrany pendent de validar, veu per confirmar i cap petició de síntesi.
+
 ## 1.37.3 · 25 de novembre de 2026
 
 - Mida del model i interlineat amb camps numèrics i fletxes natives, actualització immediata i validació dels valors abans de generar el PDF. Adreça impresa sota el QR, alineada a la dreta, en un màxim de dues línies. Cap petició de síntesi.

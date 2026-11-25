@@ -1,0 +1,12 @@
+<dialog id="prosody-dialog" aria-labelledby="prosody-title">
+  <div class="dialog-head"><div><h2 id="prosody-title">Escaleta de prosòdia</h2><p id="prosody-text-title"></p></div><button type="button" class="icon-button" data-close aria-label="Tanca l’escaleta"><span data-icon="x"></span></button></div>
+  <div class="prosody-toolbar"><p id="prosody-summary"></p><button type="button" class="button secondary" id="prosody-pdf"><span data-icon="download"></span> PDF de l’escaleta</button></div>
+  <p class="prosody-draft">Proposta pendent de validar · veu pendent de confirmar · escaleta no enviada a síntesi</p>
+  <p class="prosody-legend">Les etiquetes de puntuació són locucions: no compten com a mots del dictat. Els rangs són orientatius; els ajustos de sentit estan indicats.</p>
+  <nav id="prosody-tabs" class="prosody-tabs" aria-label="Ritme de l’escaleta"></nav>
+  <div class="prosody-scroll" role="region" tabindex="0" aria-label="Comparació dels quatre ritmes">
+    <div id="prosody-content" data-variant="r23"></div>
+    <details class="prosody-guidance"><summary>Direcció de veu i pauses</summary><div id="prosody-guidance"></div></details>
+  </div>
+  <p id="prosody-status" role="status" aria-live="polite"></p>
+</dialog>

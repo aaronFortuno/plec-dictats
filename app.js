@@ -259,6 +259,7 @@
     }
   });
   const releases = [
+    ['1.38', '2026-11-25', [t('Escaleta docent dels quatre ritmes de dictat, amb talls, locucions de puntuació, recomptes i PDF comparatiu. Proposta pendent de validar, sense síntesi.')]],
     ['1.37.3', '2026-11-25', [t('Dictat normal: camps numèrics per a mida i interlineat, i adreça sota el QR alineada a la dreta.')]],
     ['1.37.2', '2026-11-25', [t('Dictat normal: més espai d’escriptura, pauta en blocs de paràgraf i controls de mida i interlineat. Plec horitzontal amb pauta contínua.')]],
     ['1.37.1', '2026-11-25', [t('Dictat normal: text més gran en tres paràgrafs, pauta alineada i més espaiada, QR a dalt de la zona d’escriptura i model a la dreta per defecte.')]],
@@ -310,7 +311,7 @@
     ['1.0', '2026-10-23', ['Primera versió: catàleg, tries, mots propis i exportació de PDF.']]
   ];
   const releaseDate = new Intl.DateTimeFormat(L.locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  $('changelog-list').innerHTML = (spanish?releases.slice(0,11):releases).map(([version, date, notes]) => {
+  $('changelog-list').innerHTML = (spanish?releases.slice(0,12):releases).map(([version, date, notes]) => {
     const id = 'release-' + version.replaceAll('.', '-');
     return `<section class="release" aria-labelledby="${id}"><div><h3 id="${id}">${version}</h3><time datetime="${date}">${escape(releaseDate.format(new Date(date + 'T00:00:00Z')))}</time></div><p>${escape(notes.join(' '))}</p></section>`;
   }).join('');

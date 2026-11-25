@@ -44,6 +44,7 @@
  async function copy(student){try{await navigator.clipboard.writeText(T.url(entry,settings,student));notify('Enllaç copiat.');}catch{notify('No s’ha pogut copiar l’enllaç.');}}
  $('text-share').addEventListener('click',()=>copy(false));$('text-share-student').addEventListener('click',()=>copy(true));
  $('text-open-student').addEventListener('click',()=>{location.href=T.url(entry,settings,true,location.origin+'/');});
+ $('prosody-open').addEventListener('click',()=>{if(active)window.PlecProsodyView.open(entry);});
  window.PlecTextMode={
   get active(){return active;},
   activate(input){
@@ -52,9 +53,10 @@
    if(id&&!T.find(id,entry.language)){$('status').textContent='Aquest dictat de text no està disponible.';$('status').classList.add('visible');return false;}
    if(input)settings=T.options(Object.fromEntries(input));
    active=true;document.body.dataset.activity='text';
+   $('prosody-open').hidden=!window.PlecProsody.has(entry);
    for(const [key,control]of Object.entries(layoutControls))$(control).value=settings[key];
    $('text-title').textContent=entry.title;render();return true;
   },
-  deactivate(){active=false;generation++;prepared=null;delete document.body.dataset.activity;}
+  deactivate(){active=false;generation++;prepared=null;delete document.body.dataset.activity;$('prosody-open').hidden=true;}
  };
 })();
