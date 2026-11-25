@@ -11,16 +11,17 @@ El 25/11 es va enviar **una petició** de Gemini sense la confirmació concreta 
 ## Preparador i full
 
 - Tercer element «Dictat normal» al selector. Les preferències i els codis de paraules/pseudoparaules es conserven separats i es recuperen en tornar-hi.
-- Un A4 vertical, plegat per una línia vertical (esquerra/dreta) o horitzontal (dalt/baix). «Primera/segona meitat» situa el model; per defecte és a la dreta o a baix i l’escriptura a l’esquerra o a dalt. L’altra meitat té nom, data i ratlles per escriure i revisar.
-- Model amb text complet, marca de Plec i focus. QR i adreça a la capçalera de la meitat d’escriptura. Només un plec, sense la franja intermèdia del dictat de mots. Cal valorar la transparència del paper durant la prova física.
-- Cos del model de 16 punts amb 10 mm entre línies i 20 mm entre l’última línia d’un paràgraf i la primera del següent. Les línies de pauta tenen els mateixos 10 mm i coincideixen amb les baselines del model, en coordenades relatives a cada meitat. Tres paràgrafs de dues frases, amb el text parlat intacte. La revisió del text es fa al preview, sense un desplegable duplicat al sidebar.
+- Un A4 vertical, amb un únic plec. En vertical: 125 mm d’escriptura i 85 mm de model; plec a 125 mm amb model a la dreta (defecte), o a 85 mm si el model és a l’esquerra. En horitzontal: 170 mm d’escriptura i 127 mm de model, amb el plec a 170 o 127 mm segons el costat. El model més petit es plega darrere de la part d’escriptura.
+- Model amb text complet, marca de Plec i focus. QR i adreça a la capçalera de la part d’escriptura. Només un plec, sense la franja intermèdia del dictat de mots. Cal valorar la transparència del paper durant la prova física.
+- Controls de model (12–16 pt, defecte 14) i interlineat de pauta (8–12 mm, defecte 10). En vertical, el primer text i la primera pauta comencen a 80 mm de l’inici del panell: alineació de baselines dins de cada paràgraf, una ratlla extra per bloc i una franja sense ratlles abans del següent. Les posicions es recalculen amb les mètriques del model. No s’afegeixen ratlles després del tercer bloc. Si una combinació no cap, es mostra un avís, es retira la vista anterior i es desactiva el PDF fins a ajustar-la.
+- En horitzontal, la pauta d’escriptura és contínua des dels 80 mm. El model ocupa l’altra part amb cos configurable i interlineat compacte (derivat de la pauta, amb mínim 6 mm), tres paràgrafs i inici a 60 mm. No es força una alineació de línies entre les parts de dalt i baix. La revisió es fa al preview, sense duplicar el text al sidebar.
 - `text-worksheet.js` calcula una geometria compartida en mil·límetres amb les mètriques Helvetica del PDF. `pdf.js` la dibuixa i el preview mostra les mateixes posicions. Comprovació de cabuda abans d'exportar.
 
 ## Identitat i navegació
 
 `text-dictations.js` defineix contingut versionat, focus i unitats editorials. No introdueix un mode nou als protocols de llavors ja publicats. Si el text canvia després de validar-lo s'ha de crear un identificador nou, conservant l'anterior.
 
-Preparador: `https://plec.ortogra.fi/ca/?text=ca-ll-001-v1&fold=vertical&side=start&pace=6&rate=1`.
+Preparador: `https://plec.ortogra.fi/ca/?text=ca-ll-001-v1&fold=vertical&side=end&pace=6&rate=1&fontSize=14&lineSpacing=10`. La mida i l’interlineat es recuperen des d’aquest enllaç; el QR d’alumnat continua independent de la maquetació.
 
 Alumnat i QR: `https://plec.ortogra.fi/ca/dictat/?text=ca-ll-001-v1&pace=6&rate=1`. També s'admetrà el codi LL01 al camp d'entrada de l'alumnat. L'idioma i el text queden identificats; la llengua castellana no resol aquest text català. Els ajustos fora del conjunt admès es substitueixen per valors segurs.
 
@@ -47,6 +48,10 @@ La [fitxa oficial de Gemini 3.8 Flash TTS](https://aistudio.google.com/docs/mode
 Després de validar els textos, agrupar-ne diversos amb llengua, veu i dicció compatibles, conservant els límits i la identitat de cadascun. Objectiu inicial orientatiu de 6–8 minuts, amb marge; no afegir text de farciment per omplir una petició. Compartir la direcció sostinguda i usar indicacions locals breus per no repetir-la a cada fragment fins a esgotar l'entrada. La petició antiga del pilot queda conservada tal com es va enviar i no es reutilitza com a autorització d'un lot futur. Presentar text complet, composició del lot i estimació abans de demanar-ne la confirmació explícita.
 
 `tools/synthesize-text-pilot.cjs` només descriu la petició per defecte. Un enviament futur requereix una aprovació expressa vinculada a l'empremta exacta, controla la quota compartida i un lock, conserva l'ID de la interacció i no reenvia intents incerts. `tools/text-pilot-audio.cjs` recupera només una resposta ja conservada. `tools/prepare-text-pilot.cjs` és local i requereix autorització de publicació abans de modificar recursos públics. La recuperació estricta del contenidor està adaptada de Sentit (MIT) a `tools/streamed-text-wave.cjs`; no és una correcció perceptiva de pronunciació.
+
+## Locució de puntuació · fase posterior
+
+Preveure «coma», «punt i seguit» i «punt i a part» com a indicacions de dictat separades del contingut editorial. Aquestes locucions no han de formar part del recompte de mots ni canviar el text imprès; es definiran en preparar la síntesi i la temporització, amb validació docent del lot. En aquesta iteració només es modifica la maquetació: no s’ha afegit cap locució al guió de Gemini ni s’ha fet cap petició.
 
 ## Següent validació
 

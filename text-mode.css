@@ -3,6 +3,8 @@
 body[data-activity="text"] .text-config,body[data-activity="text"] .text-management{display:grid;gap:18px}
 body[data-activity="text"] .quick-settings>:not(.mode-setting),body[data-activity="text"] .config-scroll>.focus-settings,body[data-activity="text"] .config-scroll>.required-settings,body[data-activity="text"] #pseudo-note,body[data-activity="text"] .management-scroll>:not(.text-management){display:none!important}
 .text-config{margin-top:20px}
+.text-layout-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:end}
+.text-config .text-layout-error{color:var(--accent)}
 .text-config label,.text-management label{display:grid;gap:7px;font-size:13px;font-weight:600}
 .text-config select,.text-management select{width:100%;min-height:38px;font:inherit;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:8px;background:var(--white)}
 .text-config h2,.text-management h2{font-size:16px;margin:0;line-height:1.4}

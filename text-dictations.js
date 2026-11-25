@@ -23,7 +23,7 @@
  const text=entry=>entry.paragraphs.join(' '),wordCount=value=>value.trim().split(/\s+/u).filter(Boolean).length;
  function find(id,language='ca'){return catalogue.find(e=>e.language===language&&(e.id===id||e.code===String(id).toUpperCase()));}
  function options(input={}){
-  return {fold:input.fold==='horizontal'?'horizontal':'vertical',side:input.side==='start'?'start':'end',pace:[0,4,6,10].includes(Number(input.pace))?Number(input.pace):6,rate:[.75,.85,1].includes(Number(input.rate))?Number(input.rate):1};
+  return {fold:input.fold==='horizontal'?'horizontal':'vertical',side:input.side==='start'?'start':'end',pace:[0,4,6,10].includes(Number(input.pace))?Number(input.pace):6,rate:[.75,.85,1].includes(Number(input.rate))?Number(input.rate):1,fontSize:[12,13,14,15,16].includes(Number(input.fontSize))?Number(input.fontSize):14,lineSpacing:[8,9,10,11,12].includes(Number(input.lineSpacing))?Number(input.lineSpacing):10};
  }
  function fragments(entry,pace=6){
   const units=entry.phrases.map((value,index)=>({text:value,words:wordCount(value),first:index,last:index})),groups=[];
@@ -40,7 +40,7 @@
   if(!catalogue.some(e=>e.id===entry.id&&e.language===entry.language))throw Error('Dictat de text desconegut.');
   const settings=options(input),link=new URL(entry.language+'/'+(student?'dictat/':''),origin);
   link.searchParams.set('text',entry.id);
-  for(const key of student?['pace','rate']:['fold','side','pace','rate'])link.searchParams.set(key,settings[key]);
+  for(const key of student?['pace','rate']:['fold','side','pace','rate','fontSize','lineSpacing'])link.searchParams.set(key,settings[key]);
   return link.href;
  }
  return {catalogue,text,wordCount,find,options,fragments,url};

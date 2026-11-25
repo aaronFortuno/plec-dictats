@@ -176,7 +176,7 @@ El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `buil
 
 ## Versions
 
-La interfície actual és **1.37.1**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.37.2**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 
@@ -208,6 +208,6 @@ Al catàleg, «Llista filtrada · PDF» i «Per focus · PDF» obren un editor a
 
 ### Dictat normal · prototip de frases
 
-El tercer selector obre un pilot català de 63 mots per a la l·l. Ofereix A4 amb un sol plec vertical o horitzontal, model a la primera o segona meitat, QR i enllaços amb identificador estable `ca-ll-001-v1` (`LL01`). El text té identitat pròpia i no modifica els catàlegs ni els protocols de llavors. El reproductor preveu 4, 6 o 10 mots aproximats o frases senceres, velocitats 100/85/75 %, fins a tres escoltes i pausa en perdre la visibilitat o sortir de pantalla completa. Sense un àudio publicat queda desactivat amb un missatge explícit; els tests de reproducció utilitzen una simulació local. En castellà el selector del pilot queda desactivat.
+El tercer selector obre un pilot català de 63 mots per a la l·l. Ofereix A4 amb un sol plec vertical o horitzontal, dues parts asimètriques, model a qualsevol costat, QR i enllaços amb identificador estable `ca-ll-001-v1` (`LL01`). En vertical, l’escriptura disposa de 125 mm i el model de 85 mm, amb pauta agrupada per paràgrafs i una línia extra a cada bloc. En horitzontal, 170 mm d’escriptura contínua i 127 mm de model compacte. Mida del model i interlineat de pauta ajustables, amb avís si no cap. El text té identitat pròpia i no modifica els catàlegs ni els protocols de llavors. El reproductor preveu 4, 6 o 10 mots aproximats o frases senceres, velocitats 100/85/75 %, fins a tres escoltes i pausa en perdre la visibilitat o sortir de pantalla completa. Sense un àudio publicat queda desactivat amb un missatge explícit; els tests de reproducció utilitzen una simulació local. En castellà el selector del pilot queda desactivat.
 
 [Arquitectura, estat i control de síntesi](docs/DICTATS-TEXT.md). La presa rebuda de Gemini es conserva només en local i no està publicada. Cap enviament nou sense confirmació explícita del docent per al text, la veu i el lot concret.

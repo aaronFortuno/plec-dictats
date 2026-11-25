@@ -1,5 +1,11 @@
 # Historial
 
+## 1.37.2 · 25 de novembre de 2026
+
+- Plec vertical amb 125 mm per escriure i 85 mm de model. Pauta en tres blocs amb una línia extra per paràgraf i una franja sense ratlles entre blocs, alineats amb el model. Inici del dictat a 80 mm de la part superior.
+- Controls de mida del model (12–16 pt) i interlineat de la pauta (8–12 mm), amb preview/PDF sincronitzats, opcions a l’enllaç del preparador i avís de cabuda. En horitzontal, 170 mm d’escriptura amb pauta contínua i model compacte de 127 mm.
+- Anotada la futura locució de puntuació com a indicacions fora del text i del recompte de mots. Cap petició de síntesi.
+
 ## 1.37.1 · 25 de novembre de 2026
 
 - Millora del full de dictat normal: model de 16 punts en tres paràgrafs, pauta i interlineat de 10 mm, separació de 20 mm entre paràgrafs i baselines compartides. QR a dalt de la meitat d’escriptura i model a la dreta (o a baix) per defecte. Eliminat el desplegable redundant del text al sidebar. Cap canvi de text parlat ni petició de síntesi.
