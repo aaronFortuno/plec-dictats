@@ -5,6 +5,11 @@
   <p class="prosody-legend">Les etiquetes de puntuació són locucions: no compten com a mots del dictat. Els rangs són orientatius; els ajustos de sentit estan indicats.</p>
   <nav id="prosody-tabs" class="prosody-tabs" aria-label="Ritme de l’escaleta"></nav>
   <div class="prosody-scroll" role="region" tabindex="0" aria-label="Comparació dels quatre ritmes">
+    <section id="prosody-listening" class="prosody-listening" aria-labelledby="prosody-listening-title" hidden>
+      <div><h3 id="prosody-listening-title">Escolta seguida</h3><p id="prosody-listening-help">Tots els fragments de la versió triada, amb les pauses i la puntuació originals. Pots pausar i avançar per revisar qualsevol passatge.</p></div>
+      <div class="prosody-listening-controls"><label for="prosody-audio-variant">Versió<select id="prosody-audio-variant"></select></label><audio id="prosody-audio" controls preload="metadata" aria-label="Escolta seguida del dictat" aria-describedby="prosody-listening-help"></audio></div>
+      <p id="prosody-audio-error" role="alert" hidden>No s’ha pogut carregar l’àudio. Torna a triar la versió per reintentar-ho.</p>
+    </section>
     <div id="prosody-content" data-variant="r23"></div>
     <details class="prosody-guidance"><summary>Direcció de veu i pauses</summary><div id="prosody-guidance"></div></details>
   </div>

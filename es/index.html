@@ -15,18 +15,18 @@
   <link rel="stylesheet" href="../pronunciations.css?v=1.33.0">
   <link rel="stylesheet" href="../list-editor.css?v=1.36.0">
   <link rel="stylesheet" href="../text-mode.css?v=1.39.0">
-  <link rel="stylesheet" href="../prosody.css?v=1.38.0">
+  <link rel="stylesheet" href="../prosody.css?v=1.39.1">
   <link rel="stylesheet" href="../analytics.css?v=1.32.1">
   <link rel="stylesheet" href="../theme.css?v=1.32.1">
   <link rel="stylesheet" href="../workspace-layout.css?v=1.32.0">
   <script defer src="../site-links.js?v=1.32.0"></script>
   <script defer src="../analytics.js?v=1.32.0"></script>
   <script defer src="../audio-varieties.js?v=1.33.0"></script>
-  <script defer src="../locales/manifest.js?v=1.39.0"></script>
-  <script defer src="../locales/es/config.js?v=1.39.0"></script>
-  <script defer src="../locales/es/messages.js?v=1.39.0"></script>
-  <script defer src="../language.js?v=1.39.0"></script>
-  <script defer src="../catalogs/es/catalog.js?v=1.39.0"></script>
+  <script defer src="../locales/manifest.js?v=1.39.1"></script>
+  <script defer src="../locales/es/config.js?v=1.39.1"></script>
+  <script defer src="../locales/es/messages.js?v=1.39.1"></script>
+  <script defer src="../language.js?v=1.39.1"></script>
+  <script defer src="../catalogs/es/catalog.js?v=1.39.1"></script>
   <script defer src="../catalogs/es/editions/index.js?v=1.32.0"></script>
   <script defer src="../seeds.js?v=1.32.0"></script>
   <script defer src="../seeds-v2.js?v=1.36.0"></script>
@@ -53,9 +53,9 @@
   <script defer src="../prosody-draft.js?v=1.39.0"></script>
   <script defer src="../prosody.js?v=1.38.0"></script>
   <script defer src="../prosody-pdf.js?v=1.39.0"></script>
-  <script defer src="../prosody-view.js?v=1.38.0"></script>
+  <script defer src="../prosody-view.js?v=1.39.1"></script>
   <script defer src="../text-mode.js?v=1.39.0"></script>
-  <script defer src="../app.js?v=1.39.0"></script>
+  <script defer src="../app.js?v=1.39.1"></script>
   <script defer src="../workspace-panels.js?v=1.32.0"></script>
 </head>
 <body>
@@ -98,7 +98,7 @@
         </div>
       </aside>
       <section class="preview-column" aria-label="Vista previa del dictado">
-        <div class="paper-stage"><div class="paper-topline"><span id="preview-layout">VISTA PREVIA</span><div class="paper-topline-actions"><span id="selection-summary"></span><button type="button" class="small-link" id="prosody-open" hidden title="Revisa los cuatro ritmos antes de la síntesis"><span data-icon="speech"></span> Escaleta</button></div></div><div class="paper-viewport" id="paper-viewport" role="group" tabindex="0" aria-label="Vista previa. Usa Ctrl y la rueda o un gesto con dos dedos para cambiar el zoom. Arrastra para desplazar la hoja y haz doble clic para ajustarla." aria-describedby="zoom-help"><div class="paper" id="sheet-preview" aria-label="Vista previa de la hoja imprimible"></div><div id="zoom-scroll-hint" class="zoom-scroll-hint" role="status" aria-live="polite" hidden>Pulsa <kbd>Ctrl</kbd> y mueve la rueda para ampliar o reducir la hoja.</div><div class="zoom-tools" role="group" aria-label="Zoom de la vista previa"><button class="icon-button" id="zoom-out" aria-label="Reducir el zoom" title="Reducir el zoom"><span data-icon="zoom-out"></span></button><output id="zoom-value" aria-label="Zoom respecto a la hoja ajustada">100 %</output><button class="icon-button" id="zoom-in" aria-label="Ampliar el zoom" title="Ampliar el zoom"><span data-icon="zoom-in"></span></button><span class="zoom-divider" aria-hidden="true"></span><button class="icon-button" id="zoom-fit" aria-label="Ajustar la hoja" title="Ajustar la hoja · doble clic"><span data-icon="scan"></span></button></div></div></div><p class="sr-only" id="zoom-help">Usa Ctrl y la rueda o un gesto con dos dedos para cambiar el zoom. Arrastra la hoja para desplazarla. Haz doble clic o pulsa 0 para ajustarla. También puedes usar +, − y las flechas del teclado.</p>
+        <div class="paper-stage"><div class="paper-topline"><span id="preview-layout">VISTA PREVIA</span><div class="paper-topline-actions"><span id="selection-summary"></span><button type="button" class="small-link" id="prosody-open" hidden title="Compara la escaleta y escucha las cuatro versiones"><span data-icon="speech"></span> Escaleta y audios</button></div></div><div class="paper-viewport" id="paper-viewport" role="group" tabindex="0" aria-label="Vista previa. Usa Ctrl y la rueda o un gesto con dos dedos para cambiar el zoom. Arrastra para desplazar la hoja y haz doble clic para ajustarla." aria-describedby="zoom-help"><div class="paper" id="sheet-preview" aria-label="Vista previa de la hoja imprimible"></div><div id="zoom-scroll-hint" class="zoom-scroll-hint" role="status" aria-live="polite" hidden>Pulsa <kbd>Ctrl</kbd> y mueve la rueda para ampliar o reducir la hoja.</div><div class="zoom-tools" role="group" aria-label="Zoom de la vista previa"><button class="icon-button" id="zoom-out" aria-label="Reducir el zoom" title="Reducir el zoom"><span data-icon="zoom-out"></span></button><output id="zoom-value" aria-label="Zoom respecto a la hoja ajustada">100 %</output><button class="icon-button" id="zoom-in" aria-label="Ampliar el zoom" title="Ampliar el zoom"><span data-icon="zoom-in"></span></button><span class="zoom-divider" aria-hidden="true"></span><button class="icon-button" id="zoom-fit" aria-label="Ajustar la hoja" title="Ajustar la hoja · doble clic"><span data-icon="scan"></span></button></div></div></div><p class="sr-only" id="zoom-help">Usa Ctrl y la rueda o un gesto con dos dedos para cambiar el zoom. Arrastra la hoja para desplazarla. Haz doble clic o pulsa 0 para ajustarla. También puedes usar +, − y las flechas del teclado.</p>
       </section>
       <aside class="management card" aria-label="Gestión de la hoja y el dictado oral">
   <div class="management-scroll">
@@ -138,7 +138,7 @@
 
 
   </main>
-  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurso abierto para escuchar, escribir y aprender.</p><p class="umbrella-project">Un proyecto de <a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacidad</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el proyecto · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versión 1.39. Abrir el historial de cambios">v1.39</button></span></footer>
+  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurso abierto para escuchar, escribir y aprender.</p><p class="umbrella-project">Un proyecto de <a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacidad</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el proyecto · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versión 1.39.1. Abrir el historial de cambios">v1.39.1</button></span></footer>
   <div id="status" class="toast" role="status" aria-live="polite"></div>
   <dialog id="catalog-dialog" aria-labelledby="catalog-title">
     <div class="dialog-head"><h2 id="catalog-title">El catálogo</h2><button class="icon-button" data-close aria-label="Cerrar el catálogo"><span data-icon="x"></span></button></div>
@@ -200,6 +200,11 @@
   <p class="prosody-legend">Las etiquetas de puntuación son locuciones: no cuentan como palabras del dictado. Los rangos son orientativos; se indican los ajustes de sentido.</p>
   <nav id="prosody-tabs" class="prosody-tabs" aria-label="Ritmo de la escaleta"></nav>
   <div class="prosody-scroll" role="region" tabindex="0" aria-label="Comparación de los cuatro ritmos">
+    <section id="prosody-listening" class="prosody-listening" aria-labelledby="prosody-listening-title" hidden>
+      <div><h3 id="prosody-listening-title">Escucha continua</h3><p id="prosody-listening-help">Todos los fragmentos de la versión elegida, con las pausas y la puntuación originales. Puedes pausar y avanzar para revisar cualquier pasaje.</p></div>
+      <div class="prosody-listening-controls"><label for="prosody-audio-variant">Versión<select id="prosody-audio-variant"></select></label><audio id="prosody-audio" controls preload="metadata" aria-label="Escucha continua del dictado" aria-describedby="prosody-listening-help"></audio></div>
+      <p id="prosody-audio-error" role="alert" hidden>No se ha podido cargar el audio. Vuelve a elegir la versión para reintentarlo.</p>
+    </section>
     <div id="prosody-content" data-variant="r23"></div>
     <details class="prosody-guidance"><summary>Dirección de voz y pausas</summary><div id="prosody-guidance"></div></details>
   </div>

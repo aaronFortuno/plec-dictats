@@ -83,3 +83,9 @@ Pauses previstes a la direcció validada: 1 s al tall; 1,6 s al canvi de paràgr
 **Pendent de validació perceptiva:** naturalitat, tonicitat, geminació, atacs i finals, pronunciació dels anuncis i correcció dels talls escoltant cada ritme. L’aprovació de l’escaleta no equival a l’aprovació dels àudios. No regenerar cap mostra sense un nou encàrrec explícit.
 
 Comprovacions locals: 54 proves passades (pures, dades, àudio simulat, PDF, navegador i compatibilitat). Verificació addicional del canvi de ritme durant una escolta, callbacks antics i error de reproducció sense consumir escoltes. La comprovació del desplegament remot correspon al docent.
+
+## Audició docent contínua · 1.39.1
+
+«Escaleta i àudios» inclou un reproductor de la versió completa (2–3, 4–5, 6–8 o 9–12 mots), amb pausa, cerca temporal i tots els fragments seguits. Utilitza els mateixos quatre MP3 que l’alumnat; no remunta ni sintetitza res. El selector es coordina amb les pestanyes de l’escaleta en mòbil. Canviar de versió, tancar el diàleg, amagar la pestanya o sortir de la pàgina pausa la reproducció.
+
+Incidència comunicada pel docent el 25/11/2026: a la versió `r912` (9–12 mots), inici del primer fragment, «Al col·legi» sona «Al col·leja». **Pendent de corregir**, amb la presa original conservada. No regenerar sense autorització; completar primer l’audició de les quatre versions per agrupar les correccions necessàries.

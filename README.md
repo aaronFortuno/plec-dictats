@@ -176,7 +176,7 @@ El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `buil
 
 ## Versions
 
-La interfície actual és **1.39**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.39.1**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 
@@ -217,3 +217,5 @@ El tercer selector obre un pilot català de 63 mots per a la l·l. Ofereix A4 am
 Al mode de dictat normal, «Escaleta» apareix discretament a la capçalera del preview. Mostra els quatre repartiments del text actual amb puntuació locutada, inflexions, pauses i intervals de mots. En ordinador es comparen en quatre columnes; en mòbil es tria el ritme dins del mateix quadre. El PDF docent conté tres A4 horitzontals, un per paràgraf, amb els quatre ritmes al costat.
 
 La font editorial és `content/prosody/ca-ll-001-v1.json`; `tools/build-catalogs.cjs` genera `prosody-draft.js`. `prosody.js` comprova correspondència amb el text, cobertura, paràgrafs i excepcions justificades. `prosody-view.js` presenta la comparativa i `prosody-pdf.js` en fa el document imprimible. Aquestes vistes no fan crides de veu ni aproven lots automàticament. El registre `audio/texts/index.json` vincula les quatre lectures amb els intervals de mots i els temps verificats del pilot; `audio/texts/batches/` conserva l’autorització exacta i el rebut de producció.
+
+A «Escaleta i àudios», «Escolta seguida» permet triar qualsevol de les quatre preses completes. El reproductor conserva tots els talls, pauses i anuncis originals i permet pausar o buscar un passatge. No s’atura a cada fragment com la interfície de l’alumnat. En canviar de versió, tancar el quadre o deixar la pestanya, l’àudio es pausa.
