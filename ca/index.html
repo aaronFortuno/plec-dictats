@@ -14,17 +14,17 @@
   <link rel="stylesheet" href="../catalog-browser.css?v=1.32.0">
   <link rel="stylesheet" href="../pronunciations.css?v=1.33.0">
   <link rel="stylesheet" href="../list-editor.css?v=1.36.0">
-  <link rel="stylesheet" href="../text-mode.css?v=1.37.2">
+  <link rel="stylesheet" href="../text-mode.css?v=1.37.3">
   <link rel="stylesheet" href="../analytics.css?v=1.32.1">
   <link rel="stylesheet" href="../theme.css?v=1.32.1">
   <link rel="stylesheet" href="../workspace-layout.css?v=1.32.0">
   <script defer src="../site-links.js?v=1.32.0"></script>
   <script defer src="../analytics.js?v=1.32.0"></script>
   <script defer src="../audio-varieties.js?v=1.33.0"></script>
-  <script defer src="../locales/manifest.js?v=1.37.2"></script>
-  <script defer src="../locales/ca/config.js?v=1.37.2"></script>
-  <script defer src="../language.js?v=1.37.2"></script>
-  <script defer src="../catalogs/ca/catalog.js?v=1.37.2"></script>
+  <script defer src="../locales/manifest.js?v=1.37.3"></script>
+  <script defer src="../locales/ca/config.js?v=1.37.3"></script>
+  <script defer src="../language.js?v=1.37.3"></script>
+  <script defer src="../catalogs/ca/catalog.js?v=1.37.3"></script>
   <script defer src="../catalogs/ca/editions/index.js?v=1.32.0"></script>
   <script defer src="../seeds.js?v=1.32.0"></script>
   <script defer src="../seeds-v2.js?v=1.36.0"></script>
@@ -47,9 +47,9 @@
   <script defer src="../composer-search.js?v=1.32.0"></script>
   <script defer src="../text-audio.js?v=1.37.0"></script>
   <script defer src="../text-dictations.js?v=1.37.2"></script>
-  <script defer src="../text-worksheet.js?v=1.37.2"></script>
-  <script defer src="../text-mode.js?v=1.37.2"></script>
-  <script defer src="../app.js?v=1.37.2"></script>
+  <script defer src="../text-worksheet.js?v=1.37.3"></script>
+  <script defer src="../text-mode.js?v=1.37.3"></script>
+  <script defer src="../app.js?v=1.37.3"></script>
   <script defer src="../workspace-panels.js?v=1.32.0"></script>
 </head>
 <body>
@@ -82,7 +82,7 @@
   <p>Primer pilot: un text per practicar la ela geminada. Ampliarem els textos i els focus després de validar-lo.</p>
   <label for="text-fold">Plec en dues parts<select id="text-fold"><option value="vertical">Vertical · esquerra i dreta</option><option value="horizontal">Horitzontal · dalt i baix</option></select></label>
   <label for="text-side">Posició del model<select id="text-side"><option value="start">Primera meitat</option><option value="end">Segona meitat</option></select></label>
-  <div class="text-layout-controls"><label for="text-font-size">Mida del model<select id="text-font-size"><option value="12">12 pt</option><option value="13">13 pt</option><option value="14" selected>14 pt</option><option value="15">15 pt</option><option value="16">16 pt</option></select></label><label for="text-line-spacing">Interlineat de la pauta<select id="text-line-spacing"><option value="8">8 mm</option><option value="9">9 mm</option><option value="10" selected>10 mm</option><option value="11">11 mm</option><option value="12">12 mm</option></select></label></div>
+  <div class="text-layout-controls"><label for="text-font-size">Mida del model (pt)<input id="text-font-size" type="number" inputmode="numeric" min="12" max="16" step="1" value="14" required></label><label for="text-line-spacing">Interlineat de la pauta (mm)<input id="text-line-spacing" type="number" inputmode="numeric" min="8" max="12" step="1" value="10" required></label></div>
   <p id="text-layout-hint"></p><p id="text-layout-error" class="text-layout-error" role="status" aria-live="polite" hidden></p>
 </section>
 
@@ -132,7 +132,7 @@
 
 
   </main>
-  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurs obert per escoltar, escriure i aprendre.</p><p class="umbrella-project">Un projecte d’<a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacitat</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el projecte · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.37.2: obre l’historial de canvis">v1.37.2</button></span></footer>
+  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurs obert per escoltar, escriure i aprendre.</p><p class="umbrella-project">Un projecte d’<a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacitat</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el projecte · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.37.3: obre l’historial de canvis">v1.37.3</button></span></footer>
   <div id="status" class="toast" role="status" aria-live="polite"></div>
   <dialog id="catalog-dialog" aria-labelledby="catalog-title">
     <div class="dialog-head"><h2 id="catalog-title">El catàleg</h2><button class="icon-button" data-close aria-label="Tanca el catàleg"><span data-icon="x"></span></button></div>

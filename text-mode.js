@@ -28,7 +28,15 @@
    $('text-download').disabled=false;window.PlecPreview.fit();notify('');
   }catch(e){if(active&&ticket===generation){$('text-layout-error').textContent=e.message;$('text-layout-error').hidden=false;$('sheet-preview').replaceChildren();notify(e.message);}}
  }
- for(const id of Object.values(layoutControls))$(id).addEventListener('change',()=>{settings=T.options(Object.fromEntries(Object.entries(layoutControls).map(([key,control])=>[key,$(control).value])));render();});
+ function updateSettings(){
+  if(['text-font-size','text-line-spacing'].some(id=>!$(id).validity.valid)){
+   generation++;prepared=null;$('text-download').disabled=true;$('sheet-preview').replaceChildren();
+   const message='Mida del model: de 12 a 16 pt. Interlineat: de 8 a 12 mm.';
+   $('text-layout-error').textContent=message;$('text-layout-error').hidden=false;notify(message);return;
+  }
+  settings=T.options(Object.fromEntries(Object.entries(layoutControls).map(([key,control])=>[key,$(control).value])));render();
+ }
+ for(const id of Object.values(layoutControls))$(id).addEventListener($(id).type==='number'?'input':'change',updateSettings);
  $('text-download').addEventListener('click',()=>{
   if(!prepared)return;const url=URL.createObjectURL(new Blob([prepared.bytes],{type:'application/pdf'})),a=document.createElement('a');
   a.href=url;a.download='plec-'+entry.code.toLowerCase()+'-'+settings.fold+'.pdf';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);

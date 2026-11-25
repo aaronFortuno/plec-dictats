@@ -1,5 +1,9 @@
 # Historial
 
+## 1.37.3 · 25 de novembre de 2026
+
+- Mida del model i interlineat amb camps numèrics i fletxes natives, actualització immediata i validació dels valors abans de generar el PDF. Adreça impresa sota el QR, alineada a la dreta, en un màxim de dues línies. Cap petició de síntesi.
+
 ## 1.37.2 · 25 de novembre de 2026
 
 - Plec vertical amb 125 mm per escriure i 85 mm de model. Pauta en tres blocs amb una línia extra per paràgraf i una franja sense ratlles entre blocs, alineats amb el model. Inici del dictat a 80 mm de la part superior.

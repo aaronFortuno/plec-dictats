@@ -6,7 +6,8 @@ body[data-activity="text"] .quick-settings>:not(.mode-setting),body[data-activit
 .text-layout-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:end}
 .text-config .text-layout-error{color:var(--accent)}
 .text-config label,.text-management label{display:grid;gap:7px;font-size:13px;font-weight:600}
-.text-config select,.text-management select{width:100%;min-height:38px;font:inherit;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:8px;background:var(--white)}
+.text-config select,.text-config input,.text-management select{width:100%;min-width:0;min-height:38px;font:inherit;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:8px;background:var(--white)}
+.text-layout-controls input::-webkit-inner-spin-button{opacity:1}
 .text-config h2,.text-management h2{font-size:16px;margin:0;line-height:1.4}
 .text-config p,.text-management p{font-size:12px;line-height:1.6;margin:0;color:var(--muted)}
 .text-focus{border:1px solid var(--line);background:var(--soft);border-radius:8px;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;font-size:13px}

@@ -29,6 +29,10 @@ const T=require('../text-dictations.js'),W=require('../text-worksheet.js'),entry
   const qr=result.shapes.find(s=>s.role==='worksheet-qr');
   assert(qr.x>=writingArea.x&&qr.x+qr.w<=writingArea.x+writingArea.w);
   assert(qr.y>=writingArea.y&&qr.y+qr.h<=writingArea.y+40);
+  const address=result.shapes.filter(s=>s.role==='text-dictation-url');
+  assert(address.length>0&&address.length<=2);
+  assert(address.every(s=>s.align==='right'&&s.x===qr.x+qr.w&&s.y>qr.y+qr.h));
+  assert.equal(address.map(s=>s.value).join(''),result.url.replace('https://',''));
   const body=result.shapes.filter(s=>s.role==='text-model-line'),rules=result.shapes.filter(s=>s.role==='text-writing-rule');
   assert(body.every(s=>s.size===14));assert.equal(rowHeight,10);
   const paragraphs=[0,1,2].map(index=>body.filter(s=>s.paragraph===index));
@@ -43,7 +47,7 @@ const T=require('../text-dictations.js'),W=require('../text-worksheet.js'),entry
    }
   }else{assert(rules.every((s,i)=>!i||s.y-rules[i-1].y===rowHeight));assert(rules.every(s=>s.paragraph===undefined));}
   const font=await doc.embedFont(lib.StandardFonts.Helvetica);
-  for(const shape of result.shapes.filter(s=>s.type==='text')){assert(shape.y>0&&shape.y<297);assert(shape.x>=9);assert(shape.x+font.widthOfTextAtSize(shape.value,shape.size)*25.4/72<=201.1);}
+  for(const shape of result.shapes.filter(s=>s.type==='text')){const width=font.widthOfTextAtSize(shape.value,shape.size)*25.4/72,left=shape.align==='right'?shape.x-width:shape.x;assert(shape.y>0&&shape.y<297);assert(left>=9);assert(left+width<=201.1);if(shape.role==='text-dictation-url')assert(left>=writingArea.x+63&&width<=52);}
   fs.writeFileSync(`output/pdf/text-ll01-${fold}-${side}.pdf`,result.bytes);
  }
  for(const fold of ['vertical','horizontal']){
