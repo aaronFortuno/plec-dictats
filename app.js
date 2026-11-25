@@ -259,6 +259,7 @@
     }
   });
   const releases = [
+    ['1.39', '2026-11-25', [t('Pilot oral amb Aoede: quatre ritmes de dictat i puntuació amb la mateixa veu. Ajustos de fragments i velocitat durant el dictat, sense saltar paraules.')]],
     ['1.38', '2026-11-25', [t('Escaleta docent dels quatre ritmes de dictat, amb talls, locucions de puntuació, recomptes i PDF comparatiu. Proposta pendent de validar, sense síntesi.')]],
     ['1.37.3', '2026-11-25', [t('Dictat normal: camps numèrics per a mida i interlineat, i adreça sota el QR alineada a la dreta.')]],
     ['1.37.2', '2026-11-25', [t('Dictat normal: més espai d’escriptura, pauta en blocs de paràgraf i controls de mida i interlineat. Plec horitzontal amb pauta contínua.')]],

@@ -7,7 +7,7 @@
   const printable=root.PlecPdf?.printable||(typeof module!=='undefined'?require('./pdf.js').printable:String);
   const ink='#233a33',muted='#65736a',accent='#9a412c',rule='#d0d8d1',width=297,height=210,margin=12,gap=5,columnWidth=(width-2*margin-gap*3)/4;
   const color=hex=>rgb(...[1,3,5].map(offset=>parseInt(hex.slice(offset,offset+2),16)/255)),pages=[];
-  doc.setTitle('Plec · '+entry.code+' · Escaleta de prosòdia');doc.setAuthor('Plec');doc.setSubject('Proposta editorial pendent de validar. Escaleta no enviada a síntesi.');
+  doc.setTitle('Plec · '+entry.code+' · Escaleta de prosòdia');doc.setAuthor('Plec');doc.setSubject('Escaleta validada. Aoede. Àudio pilot pendent d’audició.');
   function wrap(value,size,maxWidth,weight=false){
    const font=weight?bold:regular,rows=[''];
    for(const word of printable(value).split(/\s+/u)){const last=rows.length-1,next=rows[last]?rows[last]+' '+word:word;if(font.widthOfTextAtSize(next,size)/pt>maxWidth&&rows[last])rows.push(word);else rows[last]=next;}
@@ -20,7 +20,7 @@
    function paragraphText(value,x,y,size,maxWidth,lineHeight,weight=false,fill=ink){const rows=wrap(value,size,maxWidth,weight);rows.forEach((row,i)=>text(row,x,y+i*lineHeight,size,weight,fill));return y+rows.length*lineHeight;}
    text('Escaleta de prosòdia · '+entry.code,margin,15,18,true);
    text(entry.title,margin,23,12);
-   text(`Proposta pendent de validar · veu per confirmar · paràgraf ${paragraph} de ${plan.paragraphCount}`,margin,30,9,false,accent);
+   text(`Escaleta validada · Aoede · paràgraf ${paragraph} de ${plan.paragraphCount}`,margin,30,9,false,accent);
    text('Etiquetes entre claudàtors: puntuació locutada, fora del recompte de mots. Els rangs són orientatius.',margin,36,9,false,muted);
    text('Talls: 1 s; canvi de paràgraf/final: 1,6 s. Locucions: 0,25 s abans i 0,35 s després. L’escriptura espera el botó Següent.',margin,42,8.3,false,muted);
    line(margin,46,width-margin,46);

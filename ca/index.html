@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../catalog-browser.css?v=1.32.0">
   <link rel="stylesheet" href="../pronunciations.css?v=1.33.0">
   <link rel="stylesheet" href="../list-editor.css?v=1.36.0">
-  <link rel="stylesheet" href="../text-mode.css?v=1.37.3">
+  <link rel="stylesheet" href="../text-mode.css?v=1.39.0">
   <link rel="stylesheet" href="../prosody.css?v=1.38.0">
   <link rel="stylesheet" href="../analytics.css?v=1.32.1">
   <link rel="stylesheet" href="../theme.css?v=1.32.1">
@@ -22,10 +22,10 @@
   <script defer src="../site-links.js?v=1.32.0"></script>
   <script defer src="../analytics.js?v=1.32.0"></script>
   <script defer src="../audio-varieties.js?v=1.33.0"></script>
-  <script defer src="../locales/manifest.js?v=1.38.0"></script>
-  <script defer src="../locales/ca/config.js?v=1.38.0"></script>
-  <script defer src="../language.js?v=1.38.0"></script>
-  <script defer src="../catalogs/ca/catalog.js?v=1.38.0"></script>
+  <script defer src="../locales/manifest.js?v=1.39.0"></script>
+  <script defer src="../locales/ca/config.js?v=1.39.0"></script>
+  <script defer src="../language.js?v=1.39.0"></script>
+  <script defer src="../catalogs/ca/catalog.js?v=1.39.0"></script>
   <script defer src="../catalogs/ca/editions/index.js?v=1.32.0"></script>
   <script defer src="../seeds.js?v=1.32.0"></script>
   <script defer src="../seeds-v2.js?v=1.36.0"></script>
@@ -46,15 +46,15 @@
   <script defer src="../list-editor.js?v=1.36.0"></script>
   <script defer src="../pronunciations.js?v=1.36.0"></script>
   <script defer src="../composer-search.js?v=1.32.0"></script>
-  <script defer src="../text-audio.js?v=1.37.0"></script>
-  <script defer src="../text-dictations.js?v=1.37.2"></script>
+  <script defer src="../text-audio.js?v=1.39.0"></script>
+  <script defer src="../text-dictations.js?v=1.39.0"></script>
   <script defer src="../text-worksheet.js?v=1.37.3"></script>
-  <script defer src="../prosody-draft.js?v=1.38.0"></script>
+  <script defer src="../prosody-draft.js?v=1.39.0"></script>
   <script defer src="../prosody.js?v=1.38.0"></script>
-  <script defer src="../prosody-pdf.js?v=1.38.0"></script>
+  <script defer src="../prosody-pdf.js?v=1.39.0"></script>
   <script defer src="../prosody-view.js?v=1.38.0"></script>
-  <script defer src="../text-mode.js?v=1.38.0"></script>
-  <script defer src="../app.js?v=1.38.0"></script>
+  <script defer src="../text-mode.js?v=1.39.0"></script>
+  <script defer src="../app.js?v=1.39.0"></script>
   <script defer src="../workspace-panels.js?v=1.32.0"></script>
 </head>
 <body>
@@ -104,7 +104,7 @@
     <div class="text-management">
       <section aria-labelledby="text-sheet-heading"><h2 id="text-sheet-heading">El teu full</h2><div class="text-id-row"><output>LL01</output><button type="button" class="icon-button" id="text-share" aria-label="Copia l’enllaç del full al preparador" title="Copia l’enllaç del full al preparador"><span data-icon="share-2"></span></button></div><button type="button" class="button primary" id="text-download" disabled><span data-icon="download"></span> Descarrega el PDF</button></section>
       <section aria-labelledby="text-oral-heading"><h2 id="text-oral-heading">Dictat oral</h2>
-        <label for="text-pace">Mots aproximats per fragment<select id="text-pace"><option value="4">4 mots · fragments curts</option><option value="6" selected>6 mots</option><option value="10">10 mots</option><option value="0">Frases senceres</option></select></label>
+        <label for="text-pace">Mots aproximats per fragment<select id="text-pace"><option value="2">2–3 mots</option><option value="4">4–5 mots</option><option value="6">6–8 mots</option><option value="10">9–12 mots</option></select></label>
         <label for="text-rate">Velocitat<select id="text-rate"><option value="1">Habitual</option><option value="0.85">Més a poc · 85 %</option><option value="0.75">Molt a poc · 75 %</option></select></label>
         <p id="text-fragment-summary"></p><p id="text-audio-note"></p>
         <button type="button" class="button secondary" id="text-open-student"><span data-icon="headphones"></span><span id="text-open-label">Previsualitza el dictat</span></button><button type="button" class="small-link" id="text-share-student">Copia l’enllaç per a l’alumnat</button>
@@ -137,7 +137,7 @@
 
 
   </main>
-  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurs obert per escoltar, escriure i aprendre.</p><p class="umbrella-project">Un projecte d’<a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacitat</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el projecte · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.38: obre l’historial de canvis">v1.38</button></span></footer>
+  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurs obert per escoltar, escriure i aprendre.</p><p class="umbrella-project">Un projecte d’<a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacitat</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el projecte · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.39: obre l’historial de canvis">v1.39</button></span></footer>
   <div id="status" class="toast" role="status" aria-live="polite"></div>
   <dialog id="catalog-dialog" aria-labelledby="catalog-title">
     <div class="dialog-head"><h2 id="catalog-title">El catàleg</h2><button class="icon-button" data-close aria-label="Tanca el catàleg"><span data-icon="x"></span></button></div>
@@ -195,7 +195,7 @@
   <dialog id="prosody-dialog" aria-labelledby="prosody-title">
   <div class="dialog-head"><div><h2 id="prosody-title">Escaleta de prosòdia</h2><p id="prosody-text-title"></p></div><button type="button" class="icon-button" data-close aria-label="Tanca l’escaleta"><span data-icon="x"></span></button></div>
   <div class="prosody-toolbar"><p id="prosody-summary"></p><button type="button" class="button secondary" id="prosody-pdf"><span data-icon="download"></span> PDF de l’escaleta</button></div>
-  <p class="prosody-draft">Proposta pendent de validar · veu pendent de confirmar · escaleta no enviada a síntesi</p>
+  <p class="prosody-draft">Escaleta validada · Aoede · àudio pilot pendent d’audició</p>
   <p class="prosody-legend">Les etiquetes de puntuació són locucions: no compten com a mots del dictat. Els rangs són orientatius; els ajustos de sentit estan indicats.</p>
   <nav id="prosody-tabs" class="prosody-tabs" aria-label="Ritme de l’escaleta"></nav>
   <div class="prosody-scroll" role="region" tabindex="0" aria-label="Comparació dels quatre ritmes">

@@ -11,7 +11,7 @@ const library=name=>require(process.env.PLEC_NODE_MODULES?path.join(process.env.
   await page.click('#prosody-open');assert(await page.locator('#prosody-dialog').isVisible());
   assert.equal(await page.locator('.prosody-paragraph').count(),3);assert.equal(await page.locator('.prosody-column:visible').count(),12);
   assert.equal(await page.locator('.prosody-fragment').count(),55);assert.equal(await page.locator('.prosody-cue').count(),40);
-  assert((await page.locator('#prosody-summary').textContent()).includes('63 mots'));assert((await page.locator('.prosody-draft').textContent()).includes('pendent de validar'));
+  assert((await page.locator('#prosody-summary').textContent()).includes('63 mots'));assert((await page.locator('.prosody-draft').textContent()).includes('Escaleta validada'));
   const download=page.waitForEvent('download');await page.click('#prosody-pdf');const file=await download;assert.equal(file.suggestedFilename(),'plec-ll01-escaleta-prosodia.pdf');assert.equal((await PDFDocument.load(fs.readFileSync(await file.path()))).getPageCount(),3);
   await page.screenshot({path:'output/prosody-desktop.png',animations:'disabled'});
   await page.locator('.prosody-guidance summary').click();assert((await page.locator('#prosody-guidance').textContent()).includes('87 mots locutats'));await page.locator('.prosody-guidance summary').click();

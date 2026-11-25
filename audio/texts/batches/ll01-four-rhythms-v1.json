@@ -1,0 +1,15 @@
+{
+  "id": "ll01-four-rhythms-v1",
+  "textId": "ca-ll-001-v1",
+  "status": "approved-for-pilot",
+  "approvedBy": "docent",
+  "approvedAt": "2026-11-25",
+  "confirmation": "Val, he revisat l’escaleta i em sembla bé. Fem el pilot amb les quatre variants en una sola petició a Gemini, amb Aoede, i integrem els àudios al reproductor per comprovar la interfície. Abans de fer l'enviament comprova si l'extensió temporal és inferior a uns 6-7 minuts, que seria el màxim per petició sense arriscar-nos a que es retorni amb un error",
+  "voice": "Aoede",
+  "maximumNewRequests": 1,
+  "requestHash": "28b3ed21a923fceac4267c6b3dbf447aa0aa346e52097dd38f47bd51fd50884f",
+  "planHash": "a92fbd28975ff17b4ea55453218bc15a75b438a517a96deb4b710ffd0827a929",
+  "estimate": { "spokenWords": 348, "nominalSeconds": 258, "conservativeSeconds": 381, "maximumSeconds": 390 },
+  "publishPilot": true,
+  "pronunciationValidated": false
+}

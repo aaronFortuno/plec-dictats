@@ -25,6 +25,10 @@ body[data-activity="text-player"] #text-player-root{display:contents}
 .tx-controls{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0;text-align:left}
 .tx-controls label{display:grid;gap:8px;font-size:14px;font-weight:600}
 .tx-controls select{min-width:0;width:100%;background:var(--white);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit}
+.tx-adjust{width:min(420px,100%);text-align:left;color:var(--muted);font-size:14px}
+.tx-adjust summary{cursor:pointer;text-align:center;padding:12px}
+.tx-adjust .tx-controls{margin:12px 0}
+.tx-adjust p{line-height:1.5}
 .tx-pilot{font-size:12px;color:var(--muted);line-height:1.6}
 #tx-player{gap:18px}
 #tx-listen{padding:24px 16px;min-height:300px}

@@ -6,6 +6,12 @@
 - Gemini comparteix una quota molt limitada de 10 peticions diàries amb Sentit. Preparar les peticions sense enviar-les i acordar lots que aprofitin la quota. Ni una quota restablerta ni un fitxer de configuració disponible autoritzen una petició.
 - El 25/11 s'ha enviat per error una petició de Plec LL01 (63 paraules, Aoede). La resposta està conservada a `output/audio/text-ll01/`, pendent d'audició i decisió docent; no repetir-la ni publicar-ne l'àudio automàticament.
 
+## Pilot oral autoritzat · 25/11/2026
+
+- El docent ha validat l’escaleta i autoritzat explícitament les quatre variants en una única petició amb Aoede i integració al reproductor, sota uns 6–7 minuts. Autorització exacta: `audio/texts/batches/ll01-four-rhythms-v1.json`.
+- Lot completat: una petició, 219,66 s totals, quatre MP3 publicats com a pilot pendent d’audició. No repetir ni regenerar per iniciativa pròpia. La presa anterior de `text-ll01` segueix sense autorització de publicació.
+- La puntuació locutada ha de formar part de la mateixa presa i utilitzar sempre la mateixa veu que narra, també en futurs lots. No enganxar un banc de locucions d’una altra veu.
+
 **Estat 25/10/2026:** l’usuari ha reautoritzat encàrrecs acotats a K3 amb esforç baix, després de les proves costoses amb K3.1. T008 i T009 estan completats; no hi ha cap encàrrec actiu. Conserva pressupostos, límits de passos i temps, eines acotades i revisió de Codex abans d’integrar. El registre vigent és `../protocol-codex-kimi/ESTAT-WORKER.json`. No canviïs configuració global.
 
 - L’usuari explica les necessitats i confirma visualment el resultat. Codex especifica, coordina, revisa i integra; **Kimi K3 Low** pot implementar encàrrecs acotats mitjançant Kimi Code CLI. Separa els fitxers dels encàrrecs i evita escriptors simultanis sobre els mateixos fitxers.

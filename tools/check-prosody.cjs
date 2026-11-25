@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const P=require('../prosody.js'),T=require('../text-dictations.js'),entry=T.catalogue[0],plan=P.build(entry),draft=require('../content/prosody/ca-ll-001-v1.json');
 const lib=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLEC_NODE_MODULES,'pdf-lib'):'pdf-lib');
 (async()=>{
- assert.equal(plan.status,'draft');assert.equal(plan.voice,null);assert.equal(plan.wordCount,63);assert.equal(plan.paragraphCount,3);assert.equal(plan.spokenWordsPerVariant,87);
+ assert.equal(plan.status,'approved-for-pilot');assert.equal(plan.voice,'Aoede');assert.equal(plan.wordCount,63);assert.equal(plan.paragraphCount,3);assert.equal(plan.spokenWordsPerVariant,87);
  assert.deepEqual(plan.cues.map(c=>[c.afterWord,c.text]),[[2,'Coma'],[11,'Punt i seguit'],[22,'Punt i a part'],[33,'Punt i seguit'],[37,'Coma'],[43,'Punt i a part'],[47,'Dos punts'],[52,'Punt i seguit'],[53,'Coma'],[63,'Punt final']]);
  assert.deepEqual(plan.variants.map(v=>v.fragments.length),[26,14,9,6]);
  assert.deepEqual(plan.variants.map(v=>v.exceptionCount),[0,5,3,0]);

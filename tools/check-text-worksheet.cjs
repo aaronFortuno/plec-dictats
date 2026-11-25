@@ -7,9 +7,9 @@ const T=require('../text-dictations.js'),W=require('../text-worksheet.js'),entry
  assert.equal(T.find('LL01'),entry);assert.equal(T.find('ca-ll-001-v1','es'),undefined);
  assert.deepEqual(T.options({pace:999,rate:3,fold:'bad',side:'invalid',fontSize:99,lineSpacing:-1}),{pace:6,rate:1,fold:'vertical',side:'end',fontSize:14,lineSpacing:10});
  assert.equal(entry.paragraphs.length,3);assert.equal(T.options().side,'end');
- for(const pace of [4,6,10,0]){
+ for(const pace of [2,4,6,10,0]){
   const segments=T.fragments(entry,pace);assert.equal(segments.map(s=>s.text).join(' '),T.text(entry));
-  assert.equal(segments[0].first,0);assert.equal(segments.at(-1).last,entry.phrases.length-1);
+  assert.equal(segments[0].startWord,1);assert.equal(segments.at(-1).endWord,63);
   if(pace===0)assert.equal(segments.length,6);
  }
  assert(T.fragments(entry,4).length>T.fragments(entry,10).length);
