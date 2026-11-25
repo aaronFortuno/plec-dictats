@@ -1,17 +1,20 @@
 <dialog id="prosody-dialog" aria-labelledby="prosody-title">
   <div class="dialog-head"><div><h2 id="prosody-title">Escaleta de prosòdia</h2><p id="prosody-text-title"></p></div><button type="button" class="icon-button" data-close aria-label="Tanca l’escaleta"><span data-icon="x"></span></button></div>
   <div class="prosody-toolbar"><p id="prosody-summary"></p><button type="button" class="button secondary" id="prosody-pdf"><span data-icon="download"></span> PDF de l’escaleta</button></div>
-  <p class="prosody-draft">Escaleta validada · Aoede · àudio pilot pendent d’audició</p>
-  <p class="prosody-legend">Les etiquetes de puntuació són locucions: no compten com a mots del dictat. Els rangs són orientatius; els ajustos de sentit estan indicats.</p>
   <nav id="prosody-tabs" class="prosody-tabs" aria-label="Ritme de l’escaleta"></nav>
-  <div class="prosody-scroll" role="region" tabindex="0" aria-label="Comparació dels quatre ritmes">
     <section id="prosody-listening" class="prosody-listening" aria-labelledby="prosody-listening-title" hidden>
-      <div><h3 id="prosody-listening-title">Escolta seguida</h3><p id="prosody-listening-help">Tots els fragments de la versió triada, amb les pauses i la puntuació originals. Pots pausar i avançar per revisar qualsevol passatge.</p></div>
+      <div><h3 id="prosody-listening-title">Escolta seguida</h3><p id="prosody-listening-help">Tria una versió per escoltar tots els fragments seguits, amb les pauses i la puntuació originals.</p></div>
       <div class="prosody-listening-controls"><label for="prosody-audio-variant">Versió<select id="prosody-audio-variant"></select></label><audio id="prosody-audio" controls preload="metadata" aria-label="Escolta seguida del dictat" aria-describedby="prosody-listening-help"></audio></div>
       <p id="prosody-audio-error" role="alert" hidden>No s’ha pogut carregar l’àudio. Torna a triar la versió per reintentar-ho.</p>
     </section>
+  <div class="prosody-scroll" role="region" tabindex="0" aria-label="Comparació dels quatre ritmes">
+  <p class="prosody-draft">Escaleta validada · Aoede · àudio pilot pendent d’audició</p>
+  <p class="prosody-legend">Les etiquetes de puntuació són locucions: no compten com a mots del dictat. Els rangs són orientatius; els ajustos de sentit estan indicats.</p>
+  <p class="prosody-review-help">Clica un fragment per marcar-hi un error. Hi pots afegir una nota; torna-hi a clicar per desmarcar-lo.</p>
     <div id="prosody-content" data-variant="r23"></div>
     <details class="prosody-guidance"><summary>Direcció de veu i pauses</summary><div id="prosody-guidance"></div></details>
   </div>
+  <div class="prosody-review-export"><p id="prosody-review-count" aria-live="polite"></p><div><button type="button" class="button secondary" id="prosody-review-copy"><span data-icon="copy"></span> Copia errors</button></div><p id="prosody-review-storage"></p></div>
+  <textarea id="prosody-review-fallback" class="prosody-review-fallback" readonly rows="3" aria-label="Resum d’errors per copiar" hidden></textarea>
   <p id="prosody-status" role="status" aria-live="polite"></p>
 </dialog>

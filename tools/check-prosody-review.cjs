@@ -1,0 +1,11 @@
+'use strict';
+const assert=require('node:assert/strict'),R=require('../prosody-review.js'),T=require('../text-dictations.js'),P=require('../prosody.js'),entry=T.catalogue[0],plan=P.build(entry);
+const saved=new Map(),storage={getItem:key=>saved.get(key)||null,setItem:(key,value)=>saved.set(key,value)};
+let review=R.create(entry,plan,storage);assert.equal(review.count(),2);assert.match(review.get('r23:5'),/enganjat/);assert.match(review.get('r912:1'),/col·leja/);
+review.toggle('r45:2');review.note('r45:2','Un so dubtós.\nSegona observació.');assert.equal(review.count(),3);
+let text=review.text();assert.match(text,/r23 · F5 · mots 12–13/);assert.match(text,/Ha enganxat/);assert.match(text,/4–5 mots · r45 · F2/);assert.match(text,/Segona observació/);assert.match(text,/r912 · F1/);assert.match(text,new RegExp(entry.audio.requestHash));assert.match(text,/Temps dins de la versió/);
+review=R.create(entry,plan,storage);assert.equal(review.count(),3);review.toggle('r45:2');assert(!review.text().includes('r45 · F2'));review.toggle('r23:5');review.toggle('r912:1');assert.equal(R.create(entry,plan,storage).count(),0,'Cleared known issues stay cleared on reload.');
+review.toggle('bad:999');assert.equal(review.count(),0);review.toggle('r23:1');review.note('r23:1','a'.repeat(3000));assert.equal(review.get('r23:1').length,1200);
+const changed=R.create({...entry,audio:{...entry.audio,requestHash:'another-take'}},plan,storage);assert.equal(changed.count(),0,'Notes never attach to a different take.');
+const denied=R.create(entry,plan,{getItem(){throw Error('Denied');},setItem(){throw Error('Denied');}});denied.toggle('r23:1');assert.equal(denied.count(),3);assert(denied.error());assert(denied.text().includes('r23 · F1'));
+console.log('Text review: seeded reports, take identity, stable variants/cuts, plain-text export, notes, reload, removal, invalid keys, bounded input and unavailable storage passed. No network.');

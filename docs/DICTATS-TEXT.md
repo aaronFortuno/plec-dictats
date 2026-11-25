@@ -89,3 +89,11 @@ Comprovacions locals: 54 proves passades (pures, dades, àudio simulat, PDF, nav
 «Escaleta i àudios» inclou un reproductor de la versió completa (2–3, 4–5, 6–8 o 9–12 mots), amb pausa, cerca temporal i tots els fragments seguits. Utilitza els mateixos quatre MP3 que l’alumnat; no remunta ni sintetitza res. El selector es coordina amb les pestanyes de l’escaleta en mòbil. Canviar de versió, tancar el diàleg, amagar la pestanya o sortir de la pàgina pausa la reproducció.
 
 Incidència comunicada pel docent el 25/11/2026: a la versió `r912` (9–12 mots), inici del primer fragment, «Al col·legi» sona «Al col·leja». **Pendent de corregir**, amb la presa original conservada. No regenerar sense autorització; completar primer l’audició de les quatre versions per agrupar les correccions necessàries.
+
+## Marques i còpia d’errors · 1.39.2
+
+El reproductor queda fora del scroll, fix sobre les quatre columnes. Cada quadre de fragment és un botó accessible per ratolí, tacte i teclat; marcar-lo desplega una nota opcional. Un segon clic el desmarca. «Copia errors», sempre accessible al peu del diàleg, genera un únic text pla de totes les versions marcades. Inclou identitat de la presa, versió, fragment, mots, text, puntuació locutada, interval temporal, arxiu i empremta d’àudio, i observació. Si el navegador denega el porta-retalls, es mostra el mateix text seleccionat per copiar manualment. No s’ofereix una descàrrega de document.
+
+`prosody-review.js` conserva les marques en local, separades per text, petició i presa PCM; només l’exportació voluntària les comparteix. Sense emmagatzematge, es mantenen durant la sessió amb un avís explícit. `audio/texts/review-notes.json` recull les incidències ja comunicades: `r912/F1` («col·legi» → «col·leja») i `r23/F5` («Ha enganxat» → «Ha enganjat» o similar). Es mostren marcades en una primera revisió; una desmarcació explícita es respecta en tornar-hi. El docent ha donat per bones les altres locucions. Cap síntesi ni correcció automàtica autoritzada per aquestes marques.
+
+Verificació 1.39.2: 55 comprovacions locals passades, incloent marques per fragment, notes, còpia al porta-retalls i alternativa manual, persistència, selectors, reproducció contínua i reproductor fix. Comprovació addicional del quadre en pantalla horitzontal baixa.

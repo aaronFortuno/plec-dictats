@@ -1,0 +1,9 @@
+{
+  "ca-ll-001-v1": {
+    "requestHash": "28b3ed21a923fceac4267c6b3dbf447aa0aa346e52097dd38f47bd51fd50884f",
+    "issues": [
+      { "variant": "r23", "fragment": 5, "note": "«Ha enganxat» sona més aviat «Ha enganjat» o similar." },
+      { "variant": "r912", "fragment": 1, "note": "«Al col·legi» sona «Al col·leja»." }
+    ]
+  }
+}

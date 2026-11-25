@@ -13,6 +13,14 @@ const library=name=>require(process.env.PLEC_NODE_MODULES?path.join(process.env.
   assert.equal(await page.locator('.prosody-fragment').count(),55);assert.equal(await page.locator('.prosody-cue').count(),40);
   assert((await page.locator('#prosody-summary').textContent()).includes('63 mots'));assert((await page.locator('.prosody-draft').textContent()).includes('Escaleta validada'));
   assert(await page.locator('#prosody-listening').isVisible());
+  assert.equal(await page.locator('.has-error').count(),2);assert((await page.locator('#prosody-review-count').textContent()).includes('2 fragments'));
+  const marked=page.locator('[data-review-key="r45:2"]');await marked.locator('.prosody-mark').click();await marked.locator('textarea').fill('El mot sona dubtós.');assert.equal(await page.locator('.has-error').count(),3);
+  await page.evaluate(()=>{Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async text=>{window.copiedReview=text;}}});});
+  await page.click('#prosody-review-copy');assert.match(await page.evaluate(()=>copiedReview),/r45 · F2/);assert.match(await page.evaluate(()=>copiedReview),/El mot sona dubtós/);assert.match(await page.evaluate(()=>copiedReview),/Ha enganjat/);
+  await marked.locator('.prosody-mark').focus();await page.keyboard.press('Space');assert(await marked.locator('textarea').isHidden());
+  await page.evaluate(()=>{navigator.clipboard.writeText=async()=>{throw Error('Denied');};});await page.click('#prosody-review-copy');assert(await page.locator('#prosody-review-fallback').isVisible());assert.match(await page.locator('#prosody-review-fallback').inputValue(),/col·leja/);
+  await page.keyboard.press('Escape');await page.click('#prosody-open');assert.equal(await page.locator('.has-error').count(),2);assert(await page.locator('#prosody-review-fallback').isHidden());
+  const before=await page.locator('#prosody-listening').boundingBox();await page.locator('.prosody-scroll').evaluate(el=>el.scrollTop=el.scrollHeight);const after=await page.locator('#prosody-listening').boundingBox();assert.equal(after.y,before.y);assert(await page.locator('#prosody-review-copy').isVisible());await page.locator('.prosody-scroll').evaluate(el=>el.scrollTop=0);
   for(const id of ['r23','r45','r68','r912']){
    await page.selectOption('#prosody-audio-variant',id);await page.waitForFunction(()=>document.querySelector('#prosody-audio').readyState>=1);
    const media=await page.locator('#prosody-audio').evaluate(audio=>({src:audio.currentSrc,duration:audio.duration,paused:audio.paused}));
@@ -37,9 +45,12 @@ const library=name=>require(process.env.PLEC_NODE_MODULES?path.join(process.env.
    assert(bounds.width<=width&&bounds.body>180);assert.equal(bounds.scroll,bounds.client);
    await page.screenshot({path:`output/prosody-mobile-${width}.png`,animations:'disabled'});
   }
+  await page.setViewportSize({width:844,height:390});
+  assert(await page.locator('.prosody-scroll').evaluate(el=>el.clientHeight>80));
+  assert(await page.locator('#prosody-review-copy').evaluate(el=>el.getBoundingClientRect().bottom<390));
   await page.locator('#prosody-audio').evaluate(audio=>audio.play());
   await page.keyboard.press('Escape');await page.waitForFunction(()=>!document.querySelector('#prosody-dialog').open);assert(await page.locator('#prosody-open').evaluate(el=>el===document.activeElement));assert.equal(await page.locator('#prosody-audio').evaluate(audio=>audio.paused),true);
   await page.setViewportSize({width:1440,height:900});await page.click('[data-mode="words"]');assert(await page.locator('#prosody-open').isHidden());
-  assert.deepEqual(errors,[]);console.log('Prosody UI: discreet text-only preview action, same-modal four-rhythm comparison, four real MP3s with continuous playback across cuts, synchronized selectors, paused on switch/close, locution labels, print download, direction details, narrow/dark rhythm switching, no overflow and keyboard focus restoration passed. No synthesis.');
+  assert.deepEqual(errors,[]);console.log('Prosody UI: discreet text-only preview action, same-modal four-rhythm comparison, local fragment marks/notes, keyboard toggles, clipboard/fallback, saved annotations and fixed player while scrolling, four real MP3s with continuous playback across cuts, synchronized selectors, paused on switch/close, locution labels, print download, direction details, narrow/dark rhythm switching, no overflow and keyboard focus restoration passed. No synthesis.');
  }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

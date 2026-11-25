@@ -259,6 +259,7 @@
     }
   });
   const releases = [
+    ['1.39.2', '2026-11-25', [t('Revisió dels àudios per fragment, notes i còpia conjunta d’errors com a text pla. Reproductor fix sobre les columnes de l’escaleta.')]],
     ['1.39.1', '2026-11-25', [t('Escolta seguida de les quatre versions del dictat des de l’escaleta, amb pausa i navegació per revisar els àudios.')]],
     ['1.39', '2026-11-25', [t('Pilot oral amb Aoede: quatre ritmes de dictat i puntuació amb la mateixa veu. Ajustos de fragments i velocitat durant el dictat, sense saltar paraules.')]],
     ['1.38', '2026-11-25', [t('Escaleta docent dels quatre ritmes de dictat, amb talls, locucions de puntuació, recomptes i PDF comparatiu. Proposta pendent de validar, sense síntesi.')]],

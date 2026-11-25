@@ -293,5 +293,10 @@
   "No s’ha pogut carregar l’àudio. Torna a triar la versió per reintentar-ho.": "No se ha podido cargar el audio. Vuelve a elegir la versión para reintentarlo.",
   "Compara l’escaleta i escolta les quatre versions": "Compara la escaleta y escucha las cuatro versiones",
   "Escaleta i àudios": "Escaleta y audios",
-  "Versió 1.39.1: obre l’historial de canvis": "Versión 1.39.1. Abrir el historial de cambios"
+  "Versió 1.39.1: obre l’historial de canvis": "Versión 1.39.1. Abrir el historial de cambios",
+  "Tria una versió per escoltar tots els fragments seguits, amb les pauses i la puntuació originals.": "Elige una versión para escuchar todos los fragmentos seguidos, con las pausas y la puntuación originales.",
+  "Clica un fragment per marcar-hi un error. Hi pots afegir una nota; torna-hi a clicar per desmarcar-lo.": "Pulsa un fragmento para marcar un error. Puedes añadir una nota; vuelve a pulsarlo para desmarcarlo.",
+  "Copia errors": "Copia errores",
+  "Resum d’errors per copiar": "Resumen de errores para copiar",
+  "Versió 1.39.2: obre l’historial de canvis": "Versión 1.39.2. Abrir el historial de cambios"
 }
