@@ -259,6 +259,7 @@
     }
   });
   const releases = [
+    ['1.37.1', '2026-11-25', [t('Dictat normal: text més gran en tres paràgrafs, pauta alineada i més espaiada, QR a dalt de la zona d’escriptura i model a la dreta per defecte.')]],
     ['1.37', '2026-11-25', [t('Prototip de dictat de frases amb l·l: full en dues meitats, QR, fragments i velocitat ajustables. Àudio pendent de revisió.')]],
     ['1.36', '2026-11-24', [t('Llistes imprimibles amb títol, mida de lletra, columnes, orientació i vista prèvia abans de descarregar.')]],
     ['1.35', '2026-11-14', [t('Cent pseudoparaules en castellà amb AFI i àudio d’Elvira, disponibles al catàleg i al dictat oral.')]],
@@ -307,7 +308,7 @@
     ['1.0', '2026-10-23', ['Primera versió: catàleg, tries, mots propis i exportació de PDF.']]
   ];
   const releaseDate = new Intl.DateTimeFormat(L.locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  $('changelog-list').innerHTML = (spanish?releases.slice(0,8):releases).map(([version, date, notes]) => {
+  $('changelog-list').innerHTML = (spanish?releases.slice(0,9):releases).map(([version, date, notes]) => {
     const id = 'release-' + version.replaceAll('.', '-');
     return `<section class="release" aria-labelledby="${id}"><div><h3 id="${id}">${version}</h3><time datetime="${date}">${escape(releaseDate.format(new Date(date + 'T00:00:00Z')))}</time></div><p>${escape(notes.join(' '))}</p></section>`;
   }).join('');

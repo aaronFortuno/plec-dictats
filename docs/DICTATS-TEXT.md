@@ -2,7 +2,7 @@
 
 ## Estat · 25/11/2026
 
-Pilot català `ca-ll-001-v1`, codi imprès `LL01`, «Una exposició al col·legi»: 63 mots, sis frases, vint unitats de prosòdia. Focus l·l en context amb altres grafies ordinàries. El text i la dicció encara no tenen validació docent. El primer pilot ofereix només aquest focus; no simula un banc de textos ni assigna textos a focus inexistents. El castellà continua amb paraules i pseudoparaules.
+Pilot català `ca-ll-001-v1`, codi imprès `LL01`, «Una exposició al col·legi»: 63 mots, sis frases agrupades en tres paràgrafs, vint unitats de prosòdia. Focus l·l en context amb altres grafies ordinàries. El text i la dicció encara no tenen validació docent. El primer pilot ofereix només aquest focus; no simula un banc de textos ni assigna textos a focus inexistents. El castellà continua amb paraules i pseudoparaules.
 
 El 25/11 es va enviar **una petició** de Gemini sense la confirmació concreta necessària, per una interpretació errònia de l'encàrrec. La resposta de 79,18 s està conservada a `output/audio/text-ll01/`; no s'ha repetit ni se'n publica l'àudio. El registre compartit amb Sentit inclou aquesta petició. La recuperació local ha eliminat només metadades de contenidor intercalades, conservant totes les mostres PCM, sense retallar ni accelerar la veu. L'alineació local és una ajuda temporal i no certifica pronunciació.
 
@@ -11,8 +11,9 @@ El 25/11 es va enviar **una petició** de Gemini sense la confirmació concreta 
 ## Preparador i full
 
 - Tercer element «Dictat normal» al selector. Les preferències i els codis de paraules/pseudoparaules es conserven separats i es recuperen en tornar-hi.
-- Un A4 vertical, plegat per una línia vertical (esquerra/dreta) o horitzontal (dalt/baix). «Primera/segona meitat» situa el model; l'altra meitat té nom, data i ratlles per escriure i revisar.
-- Model amb text complet, marca de Plec, focus, QR i adreça. Només un plec, sense la franja intermèdia del dictat de mots. Cal valorar la transparència del paper durant la prova física.
+- Un A4 vertical, plegat per una línia vertical (esquerra/dreta) o horitzontal (dalt/baix). «Primera/segona meitat» situa el model; per defecte és a la dreta o a baix i l’escriptura a l’esquerra o a dalt. L’altra meitat té nom, data i ratlles per escriure i revisar.
+- Model amb text complet, marca de Plec i focus. QR i adreça a la capçalera de la meitat d’escriptura. Només un plec, sense la franja intermèdia del dictat de mots. Cal valorar la transparència del paper durant la prova física.
+- Cos del model de 16 punts amb 10 mm entre línies i 20 mm entre l’última línia d’un paràgraf i la primera del següent. Les línies de pauta tenen els mateixos 10 mm i coincideixen amb les baselines del model, en coordenades relatives a cada meitat. Tres paràgrafs de dues frases, amb el text parlat intacte. La revisió del text es fa al preview, sense un desplegable duplicat al sidebar.
 - `text-worksheet.js` calcula una geometria compartida en mil·límetres amb les mètriques Helvetica del PDF. `pdf.js` la dibuixa i el preview mostra les mateixes posicions. Comprovació de cabuda abans d'exportar.
 
 ## Identitat i navegació

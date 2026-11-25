@@ -41,7 +41,7 @@
    if(input)settings=T.options(Object.fromEntries(input));
    active=true;document.body.dataset.activity='text';
    for(const key of ['fold','side','pace','rate'])$('text-'+key).value=settings[key];
-   $('text-title').textContent=entry.title;$('text-preview-body').textContent=T.text(entry);render();return true;
+   $('text-title').textContent=entry.title;render();return true;
   },
   deactivate(){active=false;generation++;prepared=null;delete document.body.dataset.activity;}
  };

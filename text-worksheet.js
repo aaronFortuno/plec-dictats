@@ -12,7 +12,7 @@
   const shapes=[],half=settings.fold==='vertical'?{w:105,h:297}:{w:210,h:148.5};
   const first={x:0,y:0,...half},second={x:settings.fold==='vertical'?105:0,y:settings.fold==='horizontal'?148.5:0,...half};
   const model=settings.side==='start'?first:second,writing=settings.side==='start'?second:first;
-  const text=(value,x,y,size=11,weight=false,color=ink)=>shapes.push({type:'text',value,x,y,size,weight,color});
+  const text=(value,x,y,size=11,weight=false,color=ink,extra={})=>shapes.push({type:'text',value,x,y,size,weight,color,...extra});
   function lines(value,width,size,weight=false){
    const face=weight?bold:font,out=[''];
    for(const word of Pdf.printable(value).split(/\s+/u)){
@@ -22,30 +22,36 @@
    return out;
   }
   function paragraph(value,x,y,width,size=12,lineHeight=5.6){const rows=lines(value,width,size);rows.forEach((row,i)=>text(row,x,y+i*lineHeight,size));return y+rows.length*lineHeight;}
-  const line=(x,y,x2,y2,color='#ccd4ce',dash=false)=>shapes.push({type:'line',x,y,x2,y2,color,width:.2,...(dash?{dash:true}:{})});
+  const line=(x,y,x2,y2,color='#ccd4ce',dash=false,extra={})=>shapes.push({type:'line',x,y,x2,y2,color,width:.2,...(dash?{dash:true}:{}),...extra});
   if(settings.fold==='vertical')line(105,7,105,290,muted,true);else line(7,148.5,203,148.5,muted,true);
   for(const area of [model,writing])shapes.push(...Brand.shapes(area.x+10,area.y+10,30));
-  const top=30,bodyTop=44;
-  text('Model de correcció',model.x+10,model.y+top,12,true);
-  let y=paragraph(entry.title,model.x+10,model.y+top+7,model.w-20,11,5);
-  y+=4;
-  y=paragraph(T.text(entry),model.x+10,y,model.w-20,12,5.6);
-  const foot=model.y+model.h-48,url=T.url(entry,settings,true);
-  if(y>foot-4)throw Error('El text no cap en aquesta meitat del full.');
-  shapes.push(...QR.shapes(url,model.x+9,foot,27));
-  paragraph('Focus de pràctica: '+entry.focusLabels.join(' · '),model.x+39,foot+6,model.w-49,10,4.5);
-  text('CA / '+entry.code,model.x+39,foot+16,9,true);
+  const bodyTop=64,fontSize=16,rowHeight=10,paragraphGap=10;
+  text('Model de correcció',model.x+10,model.y+30,12,true);
+  paragraph(entry.title,model.x+10,model.y+38,model.w-20,12,5);
+  text('Focus de pràctica: '+entry.focusLabels.join(' · '),model.x+10,model.y+46,10,false,muted);
+  let y=bodyTop;
+  const paragraphRows=entry.paragraphs.map((value,index)=>{
+   const rows=lines(value,model.w-20,fontSize),start=y;
+   rows.forEach((row,i)=>text(row,model.x+10,model.y+start+i*rowHeight,fontSize,false,ink,{role:'text-model-line',paragraph:index}));
+   y+=rows.length*rowHeight+paragraphGap;
+   return {start,rows:rows.length};
+  });
+  const lastBaseline=y-rowHeight-paragraphGap;
+  if(lastBaseline>model.h-14)throw Error('El text no cap en aquesta meitat del full.');
+  paragraph('Plega el model cap enrere. En acabar, desplega i revisa.',model.x+10,model.y+model.h-(settings.fold==='vertical'?12:5),model.w-20,8,3.4);
+  const url=T.url(entry,settings,true);
+  shapes.push(...QR.shapes(url,writing.x+writing.w-35,writing.y+9,25));
+  text('CA / '+entry.code,writing.x+writing.w-35,writing.y+39,8,true);
   // Break long URLs at character boundaries without changing the printed address.
-  const visible=url.replace('https://',''),limit=model.w-20,rows=[''];
+  const visible=url.replace('https://',''),limit=writing.w-20,rows=[''];
   for(const char of visible){let last=rows.length-1;if(font.widthOfTextAtSize(rows[last]+char,6.8)*mm>limit){rows.push(char);}else rows[last]+=char;}
-  rows.forEach((row,i)=>text(row,model.x+10,foot+30+i*3,6.8,false,muted));
-  paragraph('Plega el model cap enrere. En acabar, desplega i revisa.',model.x+10,foot+39,model.w-20,8,3.4);
-  text('Escric i reviso',writing.x+10,writing.y+top,12,true);
-  text('Nom: ______________________',writing.x+10,writing.y+top+8,10);
-  text('Data: ______________________',writing.x+10,writing.y+top+15,10);
-  for(let row=writing.y+bodyTop+10;row<writing.y+writing.h-10;row+=7)line(writing.x+10,row,writing.x+writing.w-10,row);
+  rows.forEach((row,i)=>text(row,writing.x+10,writing.y+54+i*3,6.8,false,muted));
+  text('Escric i reviso',writing.x+10,writing.y+30,12,true);
+  text('Nom: __________________',writing.x+10,writing.y+40,10);
+  text('Data: __________________',writing.x+10,writing.y+48,10);
+  for(let row=bodyTop;row<writing.h-10;row+=rowHeight)line(writing.x+10,writing.y+row,writing.x+writing.w-10,writing.y+row,'#ccd4ce',false,{role:'text-writing-rule'});
   const bytes=await Pdf.build({title:entry.title,seedCode:entry.code},library,{worksheet:()=>shapes});
-  return {bytes,shapes,settings,url};
+  return {bytes,shapes,settings,url,layout:{model,writing,bodyTop,fontSize,rowHeight,paragraphGap,paragraphRows}};
  }
  function svg(shapes){
   const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

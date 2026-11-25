@@ -4,12 +4,9 @@
  const catalogue=[{
   id:'ca-ll-001-v1',code:'LL01',language:'ca',title:'Una exposició al col·legi',focuses:['signes'],focusLabels:['l·l'],stage:'Cicle superior',status:'pilot',
   paragraphs:[
-   'Al col·legi, la Júlia prepara una petita exposició sobre les papallones.',
-   'Ha enganxat una il·lustració groga al costat d’una col·lecció de fulles.',
-   'El Marc col·labora amb ella i col·loca els cartells al passadís.',
-   'Quan encenen la llum, una bombeta il·lumina tota la taula.',
-   'La mestra els felicita: la feina ha quedat excel·lent.',
-   'Demà, els companys de la classe visitaran l’exposició amb molta il·lusió.'
+   'Al col·legi, la Júlia prepara una petita exposició sobre les papallones. Ha enganxat una il·lustració groga al costat d’una col·lecció de fulles.',
+   'El Marc col·labora amb ella i col·loca els cartells al passadís. Quan encenen la llum, una bombeta il·lumina tota la taula.',
+   'La mestra els felicita: la feina ha quedat excel·lent. Demà, els companys de la classe visitaran l’exposició amb molta il·lusió.'
   ],
   // Phrase ends are editorial; timestamps are added only after receiving the take.
   phrases:[
@@ -26,7 +23,7 @@
  const text=entry=>entry.paragraphs.join(' '),wordCount=value=>value.trim().split(/\s+/u).filter(Boolean).length;
  function find(id,language='ca'){return catalogue.find(e=>e.language===language&&(e.id===id||e.code===String(id).toUpperCase()));}
  function options(input={}){
-  return {fold:input.fold==='horizontal'?'horizontal':'vertical',side:input.side==='end'?'end':'start',pace:[0,4,6,10].includes(Number(input.pace))?Number(input.pace):6,rate:[.75,.85,1].includes(Number(input.rate))?Number(input.rate):1};
+  return {fold:input.fold==='horizontal'?'horizontal':'vertical',side:input.side==='start'?'start':'end',pace:[0,4,6,10].includes(Number(input.pace))?Number(input.pace):6,rate:[.75,.85,1].includes(Number(input.rate))?Number(input.rate):1};
  }
  function fragments(entry,pace=6){
   const units=entry.phrases.map((value,index)=>({text:value,words:wordCount(value),first:index,last:index})),groups=[];

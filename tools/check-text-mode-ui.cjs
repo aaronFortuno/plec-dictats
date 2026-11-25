@@ -11,6 +11,9 @@ const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLE
   const seed=await page.locator('#seed-code').textContent();
   await page.click('[data-mode="text"]');await page.waitForFunction(()=>!document.querySelector('#text-download').disabled);
   assert.equal(await page.locator('[data-mode="text"]').getAttribute('aria-pressed'),'true');
+  assert.equal(await page.locator('#text-side').inputValue(),'end');
+  assert.equal(await page.locator('#text-preview-body').count(),0);
+  assert.equal(await page.locator('.text-config details').count(),0);
   assert.equal(await page.locator('.focus-settings').isVisible(),false);assert.equal(await page.locator('#download-pdf').isVisible(),false);
   assert((await page.locator('#sheet-preview').textContent()).includes('Una exposició al col·legi'));
   assert.equal(new URL(page.url()).searchParams.get('text'),'ca-ll-001-v1');

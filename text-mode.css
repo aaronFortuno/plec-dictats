@@ -9,9 +9,6 @@ body[data-activity="text"] .quick-settings>:not(.mode-setting),body[data-activit
 .text-config p,.text-management p{font-size:12px;line-height:1.6;margin:0;color:var(--muted)}
 .text-focus{border:1px solid var(--line);background:var(--soft);border-radius:8px;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;font-size:13px}
 .text-focus b{font-size:18px}
-.text-config details{border-top:1px solid var(--line);padding-top:12px;font-size:12px}
-.text-config summary{cursor:pointer;font-weight:600}
-#text-preview-body{padding-top:12px;color:var(--ink)}
 .text-pilot-label{color:var(--accent)!important;font-weight:600}
 .text-management section{display:grid;gap:13px}
 .text-management section+section{border-top:1px solid var(--line);padding-top:20px}

@@ -1,5 +1,9 @@
 # Historial
 
+## 1.37.1 · 25 de novembre de 2026
+
+- Millora del full de dictat normal: model de 16 punts en tres paràgrafs, pauta i interlineat de 10 mm, separació de 20 mm entre paràgrafs i baselines compartides. QR a dalt de la meitat d’escriptura i model a la dreta (o a baix) per defecte. Eliminat el desplegable redundant del text al sidebar. Cap canvi de text parlat ni petició de síntesi.
+
 ## 1.37 · 25 de novembre de 2026
 
 - Prototip català de dictat normal de frases amb focus l·l, dues meitats plegables en vertical o horitzontal, model reversible, QR i preparació del reproductor per fragments amb velocitat ajustable. La síntesi i la publicació d’àudio requereixen aprovació explícita; la presa rebuda queda només en local.
