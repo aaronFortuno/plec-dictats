@@ -1,5 +1,9 @@
 # Historial
 
+## 1.37 · 25 de novembre de 2026
+
+- Prototip català de dictat normal de frases amb focus l·l, dues meitats plegables en vertical o horitzontal, model reversible, QR i preparació del reproductor per fragments amb velocitat ajustable. La síntesi i la publicació d’àudio requereixen aprovació explícita; la presa rebuda queda només en local.
+
 ## 1.36 · 24 de novembre de 2026
 
 - Editor de maquetació per a les llistes filtrades i per focus: títol editable, mida de lletra, columnes i orientació A4. Previsualització de totes les pàgines amb la mateixa geometria que el PDF, en català i castellà, també en mòbil i tema fosc.

@@ -136,6 +136,7 @@
   function sheetOptions(){return{entries:chosen(),title:t(state.mode==='words'?'Dictat de paraules':'Dictat de pseudoparaules'),mode:state.mode,modelSide:state.modelSide,foldStyle:state.foldStyle,seedCode:current?.code,seedLanguage:L.id,variety:state.variety,focusLabels:[...(session().basic?[t('Vocabulari bàsic')]:[]),...session().tags.map(id=>t(C.categories.find(c=>c.id===id)?.label||id))]};}
   const fitPaper=()=>window.PlecPreview.fit();
   function renderPreview(){
+    if(window.PlecTextMode?.active)return;
     const entries=chosen(),layout=K.foldLayout(state.foldStyle,state.modelSide),ready=!!current&&!search.busy;
     $('sheet-preview').innerHTML=entries.length?svgFor(K.worksheet(sheetOptions()),layout):`<div class="empty-selection">${escape(t(search.busy?'Buscant un dictat…':'Ajusta els filtres o recupera un codi per veure el full.'))}</div>`;
     $('seed-code').textContent=search.busy?'…':current?.code||'—';$('selection-summary').textContent=t('{count} / {total} elements',{count:entries.length,total:session().count});
@@ -166,7 +167,14 @@
     finally { button.innerHTML = original; renderPreview(); }
   }
 
-  $('mode-control').addEventListener('click',event=>{const b=event.target.closest('[data-mode]');if(!b||b.dataset.mode===state.mode)return;state.mode=b.dataset.mode;edition=R.editions.find(e=>e.slot===R.current);C=edition.catalog;updateControls();generate();});
+  $('mode-control').addEventListener('click',event=>{
+    const b=event.target.closest('[data-mode]');if(!b||b.disabled)return;
+    if(b.dataset.mode==='text'){if(!window.PlecTextMode.active){stopSearch();window.PlecTextMode.activate();}return;}
+    const leavingText=window.PlecTextMode.active;window.PlecTextMode.deactivate();
+    if(b.dataset.mode===state.mode){if(leavingText){if(!current&&session().code){try{setCode(session().code,{keepRequired:true});}catch{generate();}}else{updateControls();renderPreview();updateURL();if(!current)generate();}}return;}
+    state.mode=b.dataset.mode;edition=R.editions.find(e=>e.slot===R.current);C=edition.catalog;updateControls();
+    if(leavingText&&session().code){try{setCode(session().code,{keepRequired:true});}catch{generate();}}else generate();
+  });
   $('count-control').addEventListener('change',event=>{session().count=+event.target.value;persist();generate();});
   $('stage-control').addEventListener('change',event=>{session().stage=event.target.value;persist();generate();});
   $('basic-vocabulary').addEventListener('change',event=>{session().basic=event.target.checked;persist();generate();});
@@ -251,6 +259,7 @@
     }
   });
   const releases = [
+    ['1.37', '2026-11-25', [t('Prototip de dictat de frases amb l·l: full en dues meitats, QR, fragments i velocitat ajustables. Àudio pendent de revisió.')]],
     ['1.36', '2026-11-24', [t('Llistes imprimibles amb títol, mida de lletra, columnes, orientació i vista prèvia abans de descarregar.')]],
     ['1.35', '2026-11-14', [t('Cent pseudoparaules en castellà amb AFI i àudio d’Elvira, disponibles al catàleg i al dictat oral.')]],
     ['1.34', '2026-11-14', [t('El catàleg castellà arriba a 3.056 mots amb transcripcions AFI.')]],
@@ -298,7 +307,7 @@
     ['1.0', '2026-10-23', ['Primera versió: catàleg, tries, mots propis i exportació de PDF.']]
   ];
   const releaseDate = new Intl.DateTimeFormat(L.locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  $('changelog-list').innerHTML = (spanish?releases.slice(0,7):releases).map(([version, date, notes]) => {
+  $('changelog-list').innerHTML = (spanish?releases.slice(0,8):releases).map(([version, date, notes]) => {
     const id = 'release-' + version.replaceAll('.', '-');
     return `<section class="release" aria-labelledby="${id}"><div><h3 id="${id}">${version}</h3><time datetime="${date}">${escape(releaseDate.format(new Date(date + 'T00:00:00Z')))}</time></div><p>${escape(notes.join(' '))}</p></section>`;
   }).join('');
@@ -343,7 +352,9 @@
   updateControls();renderPreview();
   const incoming=new URL(location.href).searchParams;
   try{
-    if(incoming.has('seed')){
+    if(incoming.has('text')&&window.PlecTextMode.activate(incoming)){
+      // The versioned text owns its URL and worksheet; word seeds are untouched.
+    }else if(incoming.has('seed')){
       const result=S.resolve(R.editions,incoming.get('seed'));
       if(incoming.has('catalogue')&&incoming.get('catalogue')!==result.catalogue)throw new Error('El catàleg de l’enllaç no correspon a aquest codi.');
       setCode(result.code);

@@ -176,7 +176,7 @@ El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `buil
 
 ## Versions
 
-La interfície actual és **1.36**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.37**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 
@@ -205,3 +205,9 @@ La marca i el lema comparteixen [geometria vectorial](assets/brand/README.md) al
 Al catàleg, «Llista filtrada · PDF» i «Per focus · PDF» obren un editor amb títol opcional, lletra de 10 a 30 punts, entre una i quatre columnes i A4 vertical o horitzontal. La vista prèvia permet recórrer totes les pàgines abans de descarregar. Exporta tots els mots dels filtres actius, no només la inicial o la tanda visible; per focus, un mot apareix en cadascun dels focus que li corresponen. Els controls no alteren la selecció del dictat ni el codi.
 
 `pdf.js` prepara una sola geometria amb les mètriques de la font del PDF; `list-editor.js` en mostra les mateixes posicions en SVG i descarrega els mateixos bytes ja preparats. Les pàgines es recalculen segons el títol, la mida i les columnes; els mots massa llargs es redueixen individualment amb un avís a l’editor. Les preferències de format es conserven mentre l’editor és obert i es restableixen en preparar una llista nova. No s’hi fan peticions externes.
+
+### Dictat normal · prototip de frases
+
+El tercer selector obre un pilot català de 63 mots per a la l·l. Ofereix A4 amb un sol plec vertical o horitzontal, model a la primera o segona meitat, QR i enllaços amb identificador estable `ca-ll-001-v1` (`LL01`). El text té identitat pròpia i no modifica els catàlegs ni els protocols de llavors. El reproductor preveu 4, 6 o 10 mots aproximats o frases senceres, velocitats 100/85/75 %, fins a tres escoltes i pausa en perdre la visibilitat o sortir de pantalla completa. Sense un àudio publicat queda desactivat amb un missatge explícit; els tests de reproducció utilitzen una simulació local. En castellà el selector del pilot queda desactivat.
+
+[Arquitectura, estat i control de síntesi](docs/DICTATS-TEXT.md). La presa rebuda de Gemini es conserva només en local i no està publicada. Cap enviament nou sense confirmació explícita del docent per al text, la veu i el lot concret.

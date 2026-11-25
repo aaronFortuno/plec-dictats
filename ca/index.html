@@ -14,16 +14,17 @@
   <link rel="stylesheet" href="../catalog-browser.css?v=1.32.0">
   <link rel="stylesheet" href="../pronunciations.css?v=1.33.0">
   <link rel="stylesheet" href="../list-editor.css?v=1.36.0">
+  <link rel="stylesheet" href="../text-mode.css?v=1.37.0">
   <link rel="stylesheet" href="../analytics.css?v=1.32.1">
   <link rel="stylesheet" href="../theme.css?v=1.32.1">
   <link rel="stylesheet" href="../workspace-layout.css?v=1.32.0">
   <script defer src="../site-links.js?v=1.32.0"></script>
   <script defer src="../analytics.js?v=1.32.0"></script>
   <script defer src="../audio-varieties.js?v=1.33.0"></script>
-  <script defer src="../locales/manifest.js?v=1.36.0"></script>
-  <script defer src="../locales/ca/config.js?v=1.36.0"></script>
-  <script defer src="../language.js?v=1.36.0"></script>
-  <script defer src="../catalogs/ca/catalog.js?v=1.36.0"></script>
+  <script defer src="../locales/manifest.js?v=1.37.0"></script>
+  <script defer src="../locales/ca/config.js?v=1.37.0"></script>
+  <script defer src="../language.js?v=1.37.0"></script>
+  <script defer src="../catalogs/ca/catalog.js?v=1.37.0"></script>
   <script defer src="../catalogs/ca/editions/index.js?v=1.32.0"></script>
   <script defer src="../seeds.js?v=1.32.0"></script>
   <script defer src="../seeds-v2.js?v=1.36.0"></script>
@@ -44,7 +45,11 @@
   <script defer src="../list-editor.js?v=1.36.0"></script>
   <script defer src="../pronunciations.js?v=1.36.0"></script>
   <script defer src="../composer-search.js?v=1.32.0"></script>
-  <script defer src="../app.js?v=1.36.0"></script>
+  <script defer src="../text-audio.js?v=1.37.0"></script>
+  <script defer src="../text-dictations.js?v=1.37.0"></script>
+  <script defer src="../text-worksheet.js?v=1.37.0"></script>
+  <script defer src="../text-mode.js?v=1.37.0"></script>
+  <script defer src="../app.js?v=1.37.0"></script>
   <script defer src="../workspace-panels.js?v=1.32.0"></script>
 </head>
 <body>
@@ -64,12 +69,22 @@
       <aside class="config card">
         <div class="config-scroll">
         <div class="quick-settings" aria-label="Opcions del dictat">
-          <fieldset class="mode-setting"><legend class="sr-only">Què practiquem?</legend><div class="segmented" id="mode-control"><button data-mode="words" aria-pressed="true">Paraules</button><button data-mode="pseudo" aria-pressed="false">Pseudoparaules</button></div></fieldset>
+          <fieldset class="mode-setting"><legend class="sr-only">Què practiquem?</legend><div class="segmented" id="mode-control"><button data-mode="words" aria-pressed="true">Paraules</button><button data-mode="pseudo" aria-pressed="false">Pseudoparaules</button><button data-mode="text" aria-pressed="false">Dictat normal</button></div></fieldset>
           <div class="setting-row"><label for="fold-style-control">Format del plec</label><select id="fold-style-control"><option value="thirds">Terços</option><option value="quarter">Quart de full</option></select></div>
           <div class="paired-settings"><fieldset class="model-setting"><legend>Model amagat</legend><div class="segmented" id="model-side-control"><button data-side="left" aria-pressed="true" aria-label="Model a l’esquerra" title="Model a l’esquerra"><span data-icon="model-left"></span></button><button data-side="right" aria-pressed="false" aria-label="Model a la dreta" title="Model a la dreta"><span data-icon="model-right"></span></button></div></fieldset><label class="count-setting" for="count-control">Nombre de mots<select id="count-control"><option value="8">8</option><option value="12">12</option><option value="16">16</option><option value="20">20</option><option value="24" selected>24</option></select></label></div>
           <div class="setting-row" id="stage-field"><label for="stage-control">Nivell orientatiu</label><select id="stage-control"><option value="cm">Cicle mitjà</option><option value="cs" selected>Cicle superior</option><option value="eso">Institut</option><option value="all">Tot el banc</option></select></div>
           <label id="basic-vocabulary-field" class="basic-vocabulary-setting" title="Selecció editorial de mots quotidians i escolars. Es combina amb el nivell i els focus que triïs."><input type="checkbox" id="basic-vocabulary"><span>Vocabulari bàsic</span><small id="basic-vocabulary-count">350 mots</small></label>
         </div>
+        <section class="text-config" aria-labelledby="text-title">
+  <p class="text-pilot-label">Dictat normal · Prototip</p>
+  <h2 id="text-title">Una exposició al col·legi</h2>
+  <div class="text-focus"><span>Focus de pràctica</span><b>l·l</b></div>
+  <p>Primer pilot: un text per practicar la ela geminada. Ampliarem els textos i els focus després de validar-lo.</p>
+  <label for="text-fold">Plec en dues meitats<select id="text-fold"><option value="vertical">Vertical · esquerra i dreta</option><option value="horizontal">Horitzontal · dalt i baix</option></select></label>
+  <label for="text-side">Posició del model<select id="text-side"><option value="start">Primera meitat</option><option value="end">Segona meitat</option></select></label>
+  <details><summary>Text per validar</summary><p id="text-preview-body"></p></details>
+</section>
+
         <section class="focus-settings" aria-labelledby="focus-heading"><div class="focus-heading"><div class="focus-help-trigger" id="focus-help-trigger"><h2 id="focus-heading">Focus de pràctica</h2><button type="button" class="icon-button" id="focus-help-toggle" aria-label="Com es combinen els focus?" aria-describedby="focus-help" aria-controls="focus-help" aria-expanded="false"><span data-icon="circle-question-mark"></span></button></div><button class="small-link" id="all-tags">Tots</button></div><div id="tag-options" class="tag-options"></div><p class="field-hint pool-status" role="status" aria-live="polite"><span id="pool-count"></span> disponibles<span id="pool-status"></span></p></section>
         <section class="required-settings" aria-labelledby="required-heading"><div class="required-heading" id="required-help-trigger"><h2 id="required-heading">Mots obligatoris <span>opcional</span></h2><button type="button" class="icon-button" id="required-help-toggle" aria-label="Com funcionen els mots obligatoris?" aria-describedby="required-help" aria-controls="required-help" aria-expanded="false"><span data-icon="circle-question-mark"></span></button></div><div class="required-input"><label class="sr-only" for="required-word">Mot que vols incloure; prem Enter o coma per afegir-lo</label><input id="required-word" list="required-options" placeholder="Escriu un mot i prem Enter o ," autocomplete="off" maxlength="160"><datalist id="required-options"></datalist><button class="button secondary" type="button" id="add-required">Afegeix</button></div><div id="required-list" class="required-list"></div><p id="search-status" class="search-status" role="status" aria-live="polite"></p><button type="button" class="small-link" id="resume-search" hidden>Continua la cerca</button><button type="button" class="small-link" id="cancel-search" hidden>Cancel·la la cerca</button></section>
         <p class="notice pseudo-note" id="pseudo-note" hidden>El model és una proposta. En pseudoparaules, altres grafies poden representar el mateix so.</p>
@@ -80,6 +95,15 @@
       </section>
       <aside class="management card" aria-label="Gestió del full i del dictat oral">
   <div class="management-scroll">
+    <div class="text-management">
+      <section aria-labelledby="text-sheet-heading"><h2 id="text-sheet-heading">El teu full</h2><div class="text-id-row"><output>LL01</output><button type="button" class="icon-button" id="text-share" aria-label="Copia l’enllaç del full al preparador" title="Copia l’enllaç del full al preparador"><span data-icon="share-2"></span></button></div><button type="button" class="button primary" id="text-download" disabled><span data-icon="download"></span> Descarrega el PDF</button></section>
+      <section aria-labelledby="text-oral-heading"><h2 id="text-oral-heading">Dictat oral</h2>
+        <label for="text-pace">Mots aproximats per fragment<select id="text-pace"><option value="4">4 mots · fragments curts</option><option value="6" selected>6 mots</option><option value="10">10 mots</option><option value="0">Frases senceres</option></select></label>
+        <label for="text-rate">Velocitat<select id="text-rate"><option value="1">Habitual</option><option value="0.85">Més a poc · 85 %</option><option value="0.75">Molt a poc · 75 %</option></select></label>
+        <p id="text-fragment-summary"></p><p id="text-audio-note"></p>
+        <button type="button" class="button secondary" id="text-open-student"><span data-icon="headphones"></span><span id="text-open-label">Previsualitza el dictat</span></button><button type="button" class="small-link" id="text-share-student">Copia l’enllaç per a l’alumnat</button>
+      </section><p id="text-status" role="status" aria-live="polite"></p>
+    </div>
     <section class="seed-toolbar" aria-labelledby="seed-management-heading">
       <h2 id="seed-management-heading">El teu full</h2>
       <div class="seed-identity">
@@ -107,7 +131,7 @@
 
 
   </main>
-  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurs obert per escoltar, escriure i aprendre.</p><p class="umbrella-project">Un projecte d’<a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacitat</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el projecte · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.36: obre l’historial de canvis">v1.36</button></span></footer>
+  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurs obert per escoltar, escriure i aprendre.</p><p class="umbrella-project">Un projecte d’<a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacitat</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el projecte · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.37: obre l’historial de canvis">v1.37</button></span></footer>
   <div id="status" class="toast" role="status" aria-live="polite"></div>
   <dialog id="catalog-dialog" aria-labelledby="catalog-title">
     <div class="dialog-head"><h2 id="catalog-title">El catàleg</h2><button class="icon-button" data-close aria-label="Tanca el catàleg"><span data-icon="x"></span></button></div>

@@ -7,7 +7,7 @@
     root.PlecDictationTools = api;
   }
   if (typeof document !== "undefined" && document.currentScript) {
-    api.initDom(root);
+    if(!root.PlecTextPlayer?.active)api.initDom(root);
   }
 }(typeof self !== "undefined" ? self : globalThis, function (manifestTools, varieties) {
   "use strict";

@@ -1,0 +1,35 @@
+/* A separate content mode inside the existing composer and focus player. */
+.text-config,.text-management{display:none}
+body[data-activity="text"] .text-config,body[data-activity="text"] .text-management{display:grid;gap:18px}
+body[data-activity="text"] .quick-settings>:not(.mode-setting),body[data-activity="text"] .config-scroll>.focus-settings,body[data-activity="text"] .config-scroll>.required-settings,body[data-activity="text"] #pseudo-note,body[data-activity="text"] .management-scroll>:not(.text-management){display:none!important}
+.text-config{margin-top:20px}
+.text-config label,.text-management label{display:grid;gap:7px;font-size:13px;font-weight:600}
+.text-config select,.text-management select{width:100%;min-height:38px;font:inherit;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:8px;background:var(--white)}
+.text-config h2,.text-management h2{font-size:16px;margin:0;line-height:1.4}
+.text-config p,.text-management p{font-size:12px;line-height:1.6;margin:0;color:var(--muted)}
+.text-focus{border:1px solid var(--line);background:var(--soft);border-radius:8px;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;font-size:13px}
+.text-focus b{font-size:18px}
+.text-config details{border-top:1px solid var(--line);padding-top:12px;font-size:12px}
+.text-config summary{cursor:pointer;font-weight:600}
+#text-preview-body{padding-top:12px;color:var(--ink)}
+.text-pilot-label{color:var(--accent)!important;font-weight:600}
+.text-management section{display:grid;gap:13px}
+.text-management section+section{border-top:1px solid var(--line);padding-top:20px}
+.text-management .button{justify-content:center;width:100%}
+.text-id-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.text-id-row output{font-size:24px;font-weight:600;letter-spacing:2px}
+#text-status{color:var(--accent)}
+#text-player-root{display:none}
+body[data-activity="text-player"] #focus-root>.d-scene{display:none}
+body[data-activity="text-player"] #text-player-root{display:contents}
+.tx-controls{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0;text-align:left}
+.tx-controls label{display:grid;gap:8px;font-size:14px;font-weight:600}
+.tx-controls select{min-width:0;width:100%;background:var(--white);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit}
+.tx-pilot{font-size:12px;color:var(--muted);line-height:1.6}
+#tx-player{gap:18px}
+#tx-listen{padding:24px 16px;min-height:300px}
+#tx-listen .tx-position{font-size:24px;line-height:1.4}
+#tx-listen .tx-position strong{font-size:52px;display:block;font-weight:700}
+#tx-next{display:flex;gap:8px;align-items:center;justify-content:center}
+#tx-error{max-width:440px;text-align:center}
+@media(max-width:720px){#mode-control button{font-size:11px;padding-inline:3px}.tx-controls{grid-template-columns:1fr}.text-config{gap:14px}}

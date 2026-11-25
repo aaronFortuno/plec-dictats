@@ -21,6 +21,7 @@ function emit(name, text) {
   outputs.set(name, text);
 }
 const bundle = (global, data) => '/* Generat amb tools/build-catalogs.cjs. Edita el JSON font. */\n(function(root){root.' + global + '=' + JSON.stringify(data) + ';if(typeof module!=="undefined")module.exports=root.' + global + ';})(typeof window==="undefined"?globalThis:window);\n';
+emit('text-audio.js',bundle('PlecTextAudio',json('audio/texts/index.json')));
 const manifest = json('locales/manifest.json');
 if (!Array.isArray(manifest.languages) || !manifest.languages.length || !manifest.languages.some(item=>item.id===manifest.defaultLanguage)) throw new Error('Invalid language manifest');
 if (new Set(manifest.languages.map(item=>item.id)).size!==manifest.languages.length || new Set(manifest.languages.map(item=>item.path)).size!==manifest.languages.length) throw new Error('Duplicate language manifest entry');
@@ -128,7 +129,7 @@ for (const {item,profile,source,revision,catalog,base,collator,seedRegistry,basi
       .replaceAll('https://dlc.iec.cat/','https://dle.rae.es/')
       .replaceAll('https://github.com/aaronFortuno/plec-dictats/tree/main/audio/pronunciation/ca','https://github.com/aaronFortuno/plec-dictats/tree/main/'+base);
   }
-  let html = localize(read(profile.template).replace('__MANAGEMENT_PANEL__',read('templates/dictation-management.html')).replace('__PRONUNCIATION_PANEL__',read('templates/pronunciation-panel.html')).replace('__ANALYTICS_PANEL__',read('templates/analytics-panel.html')));
+  let html = localize(read(profile.template).replace('__MANAGEMENT_PANEL__',read('templates/dictation-management.html')).replace('__TEXT_CONFIG__',read('templates/text-config.html')).replace('__PRONUNCIATION_PANEL__',read('templates/pronunciation-panel.html')).replace('__ANALYTICS_PANEL__',read('templates/analytics-panel.html')));
   html=html.replace('__LANGUAGE_SELECTOR__',selector).replaceAll('__PLEC_MARK__',Brand.svg('mark')).replaceAll('__PLEC_TAGLINE__',messages?messages['Escolta. Escriu. Desplega.']:Brand.svg('tagline'));
   const assetVersion = /src="catalog\.js(\?[^\"]*)"/.exec(html)?.[1] || '';
   html = html.replace(/((?:src|href)=")(?!https?:|lightning:|#|\.\/)([^\"]+)/g, (_, start, target) => start + prefix + target);
@@ -137,7 +138,7 @@ for (const {item,profile,source,revision,catalog,base,collator,seedRegistry,basi
   html = html.replace('<script defer src="' + prefix + base, '<script defer src="' + prefix + 'locales/manifest.js' + assetVersion + '"></script>\n  <script defer src="' + prefix + localeDir + '/config.js' + assetVersion + '"></script>\n  '+(runtime?'<script defer src="'+prefix+localeDir+'/messages.js'+assetVersion+'"></script>\n  ':'')+'<script defer src="' + prefix + 'language.js' + assetVersion + '"></script>\n  <script defer src="' + prefix + base);
   emit(item.path + 'index.html', html);
   // Student entry point shares the immutable registry, without the composer or PDF.
-  let student = localize(read('templates/dictation.html')
+  let student = localize(read('templates/dictation.html').replace('__TEXT_PLAYER__',read('templates/text-player.html'))
     .replace('__CONFIG__', localeDir + '/config.js?v=1.31.0')
     .replace('__REGISTRY__', base + '/editions/index.js'+assetVersion)
     .replaceAll('__COMPOSER__', item.path)

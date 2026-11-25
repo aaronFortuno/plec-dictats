@@ -10,7 +10,7 @@ const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLE
  assert.equal(await p.locator('#copy-code').evaluate(e=>e.parentElement.querySelector('output')?.id),'seed-code');
  assert.equal(await p.locator('#copy-code + #copy-link').count(),1);
  assert.equal(await p.locator('#copy-student-link').textContent(),'Copia l’enllaç per a l’alumnat');
- assert.equal(await p.locator('.management [data-icon="share-2"]').count(),1);
+ assert.equal(await p.locator('.management [data-icon="share-2"]:visible').count(),1);
  const iconStyle=selector=>p.locator(selector).evaluate(el=>{
   const css=getComputedStyle(el);
   return {width:css.width,height:css.height,border:css.borderWidth,radius:css.borderRadius,background:css.backgroundColor,color:css.color};
