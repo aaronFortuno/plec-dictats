@@ -54,7 +54,7 @@ const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLE
    Element.prototype.requestFullscreen=()=>Promise.reject(Error('unavailable in test'));
   });
   await page.reload();await page.waitForSelector('#tx-ready:not([hidden])');await page.selectOption('#tx-pace','4');
-  await page.click('#tx-start');assert(await page.locator('#tx-player').isVisible());assert(await page.locator('#tx-next').isHidden());
+  assert(await page.locator('#tx-auto-ready').isChecked());await page.uncheck('#tx-auto-ready');await page.click('#tx-start');assert(await page.locator('#tx-player').isVisible());assert(await page.locator('#tx-next').isHidden());
   const groups=T.fragments(T.catalogue[0],4);
   await page.click('#tx-listen');await page.waitForFunction(()=>testTextAudio.started);await page.evaluate(()=>testTextAudio.onerror());assert((await page.locator('#tx-listen-count').textContent()).startsWith('0 de'));assert(await page.locator('#tx-error').isVisible());
   for(let i=0;i<3;i++){await page.click('#tx-listen');await page.waitForFunction(()=>window.testTextAudio?.started);await page.evaluate(end=>{testTextAudio.currentTime=end;},groups[0].end);await page.waitForFunction(n=>document.querySelector('#tx-listen-count').textContent.startsWith(n+' de'),i+1);}
@@ -74,8 +74,23 @@ const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLE
   await page.click('#tx-start');
   for(let i=0;i<groups.length;i++){await page.click('#tx-listen');await page.waitForFunction(()=>testTextAudio.started);await page.evaluate(()=>{testTextAudio.currentTime=300;});await page.waitForFunction(()=>document.querySelector('#tx-listen-count').textContent.startsWith('1 de'));await page.click('#tx-next');}
   assert(await page.locator('#tx-finished').isVisible());
+  // Accelerated browser clock verifies writing waits without real-time sleeps.
+  await page.clock.install();await page.goto('http://127.0.0.1:4176/ca/dictat/?text=ca-ll-001-v1&pace=2&rate=1');await page.waitForSelector('#tx-ready:not([hidden])');
+  assert(await page.locator('#tx-auto-ready').isChecked());await page.click('#tx-start');await page.waitForFunction(()=>testTextAudio.started);
+  await page.evaluate(()=>testTextAudio.onended());assert((await page.locator('#tx-countdown').textContent()).includes('4 s'));
+  await page.screenshot({path:'output/text-auto-countdown-mobile.png',animations:'disabled'});
+  await page.clock.fastForward(3000);assert.equal(await page.evaluate(()=>testTextAudio.started),false);
+  await page.clock.fastForward(1100);await page.waitForFunction(()=>testTextAudio.started);assert((await page.locator('#tx-listen-count').textContent()).startsWith('1 de'));
+  await page.evaluate(()=>testTextAudio.onended());await page.clock.fastForward(4100);await page.waitForFunction(()=>testTextAudio.started);await page.evaluate(()=>testTextAudio.onended());
+  assert((await page.locator('#tx-listen-count').textContent()).startsWith('3 de'));assert(await page.locator('#tx-countdown').isHidden());await page.clock.fastForward(60000);assert.equal(await page.locator('#tx-number').textContent(),'1');assert.equal(await page.evaluate(()=>testTextAudio.started),false);
+  await page.click('#tx-next');await page.waitForFunction(()=>testTextAudio.started);assert.equal(await page.locator('#tx-number').textContent(),'2');
+  await page.click('#tx-auto');assert.equal(await page.evaluate(()=>testTextAudio.started),false);assert((await page.locator('#tx-listen-count').textContent()).startsWith('0 de'));await page.clock.fastForward(60000);assert.equal(await page.evaluate(()=>testTextAudio.started),false);
+  await page.click('#tx-auto');await page.waitForFunction(()=>testTextAudio.started);await page.evaluate(()=>testTextAudio.onended());assert((await page.locator('#tx-countdown').textContent()).includes('5 s'));
+  await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'));});assert(await page.locator('#tx-paused').isVisible());await page.clock.fastForward(60000);assert.equal(await page.evaluate(()=>testTextAudio.started),false);
+  await page.evaluate(()=>Object.defineProperty(document,'hidden',{configurable:true,value:false}));await page.click('#tx-resume');assert((await page.locator('#tx-countdown').textContent()).includes('5 s'));assert.equal(await page.evaluate(()=>testTextAudio.started),false);
+  await page.click('#exit-focus');await page.clock.fastForward(60000);assert.equal(await page.evaluate(()=>testTextAudio.started),false);assert(await page.locator('#tx-ready').isVisible());
   await page.goto('http://127.0.0.1:4176/ca/dictat/?text=unknown');await page.waitForSelector('#tx-ready:not([hidden])');assert(await page.locator('#tx-start').isDisabled());
   await page.goto('http://127.0.0.1:4176/es/');await page.waitForSelector('#sheet-preview svg');assert(await page.locator('[data-mode="text"]').isDisabled());
-  assert.deepEqual(errors,[]);console.log('Text mode: composer switching, preserved word/pseudoword seeds, PDF, URL reload, mobile drawers, four real MP3 decodes, mock playback/ranges/three repeats, in-session rhythm/speed controls without skips, no text shown, pause/resume and invalid/language routes passed. No synthesis.');
+  assert.deepEqual(errors,[]);console.log('Text mode: composer switching, preserved word/pseudoword seeds, PDF, URL reload, mobile drawers, four real MP3 decodes, mock playback/ranges/three repeats, automatic repeats up to three, proportional countdowns, no automatic next fragment, pause/visibility/exit cancellation, in-session rhythm/speed controls without skips, no text shown, pause/resume and invalid/language routes passed. No synthesis.');
  }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

@@ -298,5 +298,13 @@
   "Clica un fragment per marcar-hi un error. Hi pots afegir una nota; torna-hi a clicar per desmarcar-lo.": "Pulsa un fragmento para marcar un error. Puedes añadir una nota; vuelve a pulsarlo para desmarcarlo.",
   "Copia errors": "Copia errores",
   "Resum d’errors per copiar": "Resumen de errores para copiar",
-  "Versió 1.39.2: obre l’historial de canvis": "Versión 1.39.2. Abrir el historial de cambios"
+  "Versió 1.39.2: obre l’historial de canvis": "Versión 1.39.2. Abrir el historial de cambios",
+  "Escoltaràs el text per fragments. Escriu-lo al full plegat. Per defecte, cada fragment es repetirà fins a tres vegades, amb una espera per escriure que depèn del nombre de mots. Pots aturar l’escolta automàtica o tornar-lo a sentir abans. Passa al següent quan l’hagis escrit. En acabar, desplega el model per revisar-lo.": "Escucharás el texto por fragmentos. Escríbelo en la hoja plegada. Por defecto, cada fragmento se repetirá hasta tres veces, con una espera para escribir que depende del número de palabras. Puedes detener la escucha automática o volver a escucharlo antes. Pasa al siguiente cuando lo hayas escrito. Al terminar, despliega el modelo para revisarlo.",
+  "Escolta automàtica entre repeticions": "Escucha automática entre repeticiones",
+  "Atura l’escolta automàtica": "Detén la escucha automática",
+  "Temps per escriure": "Tiempo para escribir",
+  "Àgil · 4–10 segons": "Ágil · 4–10 segundos",
+  "Habitual · 4–12 segons": "Habitual · 4–12 segundos",
+  "Més marge · 4–15 segons": "Más margen · 4–15 segundos",
+  "Versió 1.40: obre l’historial de canvis": "Versión 1.40. Abrir el historial de cambios"
 }

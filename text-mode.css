@@ -30,6 +30,10 @@ body[data-activity="text-player"] #text-player-root{display:contents}
 .tx-adjust .tx-controls{margin:12px 0}
 .tx-adjust p{line-height:1.5}
 .tx-pilot{font-size:12px;color:var(--muted);line-height:1.6}
+.tx-auto-setting{display:flex;align-items:center;gap:10px;text-align:left;margin:18px 0}
+.tx-auto-setting input{width:18px;height:18px;min-height:18px;flex:none;accent-color:var(--green)}
+.tx-countdown{font-size:15px!important;color:var(--muted);text-align:center;max-width:360px;font-variant-numeric:tabular-nums}
+.tx-wait-setting{grid-column:1 / -1}
 #tx-player{gap:18px}
 #tx-listen{padding:24px 16px;min-height:300px}
 #tx-listen .tx-position{font-size:24px;line-height:1.4}
