@@ -14,7 +14,7 @@
   const ticket=++generation;prepared=null;$('text-download').disabled=true;$('text-open-student').disabled=false;
   document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode==='text')));
   $('text-fragment-summary').textContent=T.fragments(entry,settings.pace).length+' fragments · '+T.wordCount(T.text(entry))+' paraules';
-  $('selection-summary').textContent='Dictat normal · '+entry.focusLabels.join(' · ');
+  $('selection-summary').textContent='Frases · '+entry.focusLabels.join(' · ');
   $('preview-layout').textContent='Plec '+settings.fold+' · model a '+(settings.fold==='vertical'?(settings.side==='start'?'l’esquerra':'la dreta'):(settings.side==='start'?'dalt':'baix'));
   $('text-layout-hint').textContent=settings.fold==='vertical'?'Pauta per paràgrafs, amb una línia extra a cada bloc i el model alineat al costat.':'Pauta contínua per escriure tot el text. Model compacte a l’altra part del full.';
   for(const option of $('text-side').options)option.textContent=settings.fold==='vertical'?(option.value==='start'?'A l’esquerra':'A la dreta'):(option.value==='start'?'A dalt':'A baix');
@@ -27,7 +27,7 @@
    const next=await window.PlecTextWorksheet.prepare(entry,settings);
    if(!active||ticket!==generation)return;
    prepared=next;$('sheet-preview').innerHTML=window.PlecTextWorksheet.svg(next.shapes);
-   $('sheet-preview').setAttribute('aria-label','Dictat normal: model i espai per escriure');
+   $('sheet-preview').setAttribute('aria-label','Dictat de frases: model i espai per escriure');
    $('text-download').disabled=false;window.PlecPreview.fit();notify('');
   }catch(e){if(active&&ticket===generation){$('text-layout-error').textContent=e.message;$('text-layout-error').hidden=false;$('sheet-preview').replaceChildren();notify(e.message);}}
  }

@@ -53,3 +53,16 @@ body[data-activity="text-player"] #text-player-root{display:contents}
  #tx-listen .tx-position strong{display:inline;line-height:1.2}
  #tx-listen .tx-position #tx-total{font-size:17px}
 }
+
+.tx-rhythm-form{margin:18px 0 0;text-align:left}
+.tx-rhythm-form label{display:block;font-size:12px;color:var(--muted);margin-bottom:5px}
+.tx-rhythm-form>div{display:flex;align-items:center;gap:12px}
+.tx-rhythm-form #tx-rhythm-input{width:150px;min-height:38px;padding:7px 10px;font-size:14px;text-transform:uppercase;letter-spacing:1px}
+.tx-rhythm-form .small-link{min-height:38px}
+#text-player-root .tx-rhythm-status{font-size:12px;color:var(--muted);margin:4px 0 0}
+.tx-rhythm-status:empty{display:none}
+.tx-rhythm-finished{margin:20px 0;padding:14px;border:1px solid var(--line);border-radius:9px;background:var(--soft)}
+#text-player-root .tx-rhythm-finished p{font-size:12px;line-height:1.5;color:var(--muted)}
+.tx-rhythm-finished>div{display:flex;align-items:center;justify-content:center;gap:10px;margin:4px 0}
+#tx-rhythm-result{font-size:24px;font-weight:600;letter-spacing:3px;user-select:text;color:var(--green)}
+#tx-rhythm-copy{width:36px;height:36px}

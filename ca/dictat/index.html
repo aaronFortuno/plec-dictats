@@ -10,14 +10,14 @@
 <link rel="stylesheet" href="../../styles.css?v=1.32.0">
 <link rel="stylesheet" href="../../dictation.css?v=1.32.0">
 <link rel="stylesheet" href="../../theme.css?v=1.32.1">
-<link rel="stylesheet" href="../../text-mode.css?v=1.41.0">
+<link rel="stylesheet" href="../../text-mode.css?v=1.44.0">
 <script defer src="../../locales/manifest.js?v=1.32.0"></script>
 <script defer src="../../locales/ca/config.js?v=1.31.0"></script>
 <script defer src="../../site-links.js?v=1.32.0"></script>
 <script defer src="../../analytics.js?v=1.32.0"></script>
 <script defer src="../../language.js?v=1.32.0"></script>
 
-<script defer src="../../catalogs/ca/editions/index.js?v=1.43.0"></script>
+<script defer src="../../catalogs/ca/editions/index.js?v=1.44.0"></script>
 <script defer src="../../seeds.js?v=1.32.0"></script>
 <script defer src="../../seeds-v2.js?v=1.35.0"></script>
 <script defer src="../../dictation-session.js?v=1.32.0"></script>
@@ -29,7 +29,9 @@
 <script defer src="../../text-catalogue.js?v=1.42.0"></script>
 <script defer src="../../text-dictations.js?v=1.42.0"></script>
 <script defer src="../../text-repeat.js?v=1.40.0"></script>
-<script defer src="../../text-player.js?v=1.43.0"></script>
+<script defer src="../../rhythm-profiles.js?v=1.44.0"></script>
+<script defer src="../../rhythm-code.js?v=1.44.0"></script>
+<script defer src="../../text-player.js?v=1.44.0"></script>
 <script defer src="../../dictation.js?v=1.37.0"></script>
 </head>
 <body>
@@ -109,10 +111,10 @@
 </div>
 </section>
 <div id="text-player-root">
-  <section id="tx-ready" class="d-scene" aria-labelledby="tx-title"><div class="d-card"><p class="d-eyebrow">Dictat normal · Prototip</p><h1 id="tx-title" tabindex="-1">Som-hi?</h1><p id="tx-summary"></p><p>Escoltaràs el text per fragments. Escriu-lo al full plegat. Per defecte, cada fragment es repetirà fins a tres vegades, amb una espera per escriure que depèn del nombre de mots. Pots aturar l’escolta automàtica o tornar-lo a sentir abans. Passa al següent quan l’hagis escrit. En acabar, desplega el model per revisar-lo.</p><div id="tx-ready-controls" class="tx-adjust" aria-label="Ajustos del dictat"></div><label class="tx-auto-setting"><input id="tx-auto-ready" type="checkbox" checked> Escolta automàtica entre repeticions</label><p class="tx-pilot">Aoede · català central. Àudio de prova pendent d’audició docent.</p><p id="tx-setup-error" class="d-error" role="alert" hidden></p><button type="button" id="tx-start" class="button primary">Comença a pantalla completa</button></div></section>
+  <section id="tx-ready" class="d-scene" aria-labelledby="tx-title"><div class="d-card"><p class="d-eyebrow">Frases · Prototip</p><h1 id="tx-title" tabindex="-1">Som-hi?</h1><p id="tx-summary"></p><p>Escolta i escriu al full. Cada fragment es repeteix fins a tres vegades. Pots aturar-ho i ajustar el ritme. Prem «Següent» quan estiguis a punt; al final, desplega el full per revisar-lo.</p><form id="tx-rhythm-form" class="tx-rhythm-form"><label for="tx-rhythm-input">Codi de ritme (opcional)</label><div><input id="tx-rhythm-input" type="text" placeholder="Ex.: ROSA" maxlength="12" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="tx-rhythm-status"><button type="submit" class="small-link">Aplica</button></div><p id="tx-rhythm-status" class="tx-rhythm-status" role="status" aria-live="polite"></p></form><div id="tx-ready-controls" class="tx-adjust" aria-label="Ajustos del dictat"></div><label class="tx-auto-setting"><input id="tx-auto-ready" type="checkbox" checked> Escolta automàtica entre repeticions</label><p class="tx-pilot">Aoede · català central. Àudio de prova pendent d’audició docent.</p><p id="tx-setup-error" class="d-error" role="alert" hidden></p><button type="button" id="tx-start" class="button primary">Comença a pantalla completa</button></div></section>
   <section id="tx-player" class="d-scene" aria-label="Dictat en marxa" hidden><button type="button" id="tx-listen" class="d-listen"><span class="tx-position">Fragment <strong id="tx-number">1</strong><span id="tx-total"></span></span><span data-icon="volume-2"></span><span id="tx-listen-label">Escolta</span></button><p id="tx-listen-count" class="d-status" aria-live="polite"></p><p id="tx-countdown" class="tx-countdown" role="timer" aria-live="off" hidden></p><button type="button" id="tx-auto" class="button secondary" aria-pressed="true">Atura l’escolta automàtica</button><button type="button" id="tx-next" class="button secondary" hidden><span data-icon="arrow-right"></span><span id="tx-next-label">Fragment següent</span></button><div id="tx-adjust" class="tx-adjust" aria-label="Ajustos del dictat"></div><p id="tx-error" class="d-error" role="alert" hidden></p></section>
   <section id="tx-paused" class="d-scene" aria-labelledby="tx-paused-title" hidden><div class="d-card"><h1 id="tx-paused-title" tabindex="-1">Dictat en pausa.</h1><p>Torna a concentrar-te per continuar on eres.</p><button type="button" id="tx-resume" class="button primary">Torna al dictat</button></div></section>
-  <section id="tx-finished" class="d-scene" aria-labelledby="tx-finished-title" hidden><div class="d-card"><h1 id="tx-finished-title" tabindex="-1">Dictat acabat.</h1><p>Desplega el full i compara el teu text amb el model. Revisa els accents, les grafies i els signes de puntuació.</p><button type="button" class="button primary" id="tx-restart">Torna a començar</button><a id="tx-back" class="small-link" href="../../ca/">Torna al preparador</a></div></section>
+  <section id="tx-finished" class="d-scene" aria-labelledby="tx-finished-title" hidden><div class="d-card"><h1 id="tx-finished-title" tabindex="-1">Dictat acabat.</h1><p>Desplega el full i compara el teu text amb el model. Revisa els accents, les grafies i els signes de puntuació.</p><div class="tx-rhythm-finished"><p>El teu codi de ritme</p><div><output id="tx-rhythm-result" aria-label="Codi de ritme"></output><button type="button" id="tx-rhythm-copy" class="icon-button" aria-label="Copia el codi de ritme" title="Copia el codi de ritme"><span data-icon="copy"></span></button></div><p id="tx-rhythm-summary"></p><p>Guarda’l per al pròxim dictat. Correspon als ajustos que has triat.</p><p id="tx-rhythm-copy-status" role="status" aria-live="polite"></p></div><button type="button" class="button primary" id="tx-restart">Torna a començar</button><a id="tx-back" class="small-link" href="../../ca/">Torna al preparador</a></div></section>
 </div>
 
 </main>

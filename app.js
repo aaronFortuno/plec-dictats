@@ -259,6 +259,7 @@
     }
   });
   const releases = [
+    ['1.44', '2026-11-26', [t('Codis de ritme opcionals per recuperar mots, velocitat i pausa en qualsevol dispositiu; codi dels ajustos al final.'), t('El mode de textos passa a dir-se Frases. Incorporem les set incidències d’àudio de LL02 comunicades pel docent, pendents de corregir.')]],
     ['1.43', '2026-11-26', [t('Quatre reproductors independents fixos a les columnes de l’escaleta, sense desplegable de variants.'), t('La creu del dictat normal tanca l’àudio i torna al preparador del mateix text, conservant els ajustos.')]],
     ['1.42', '2026-11-26', [t('LL02 · Llavors al jardí: nou dictat amb l·l i quatre lectures amb Aoede. Selector de textos, full plegable, escolta seguida i revisió per fragment.')]],
     ['1.41', '2026-11-26', [t('Dictat normal: velocitats 100/90/80 % i botons directes per ajustar mots, velocitat i pausa, sense desplegables.')]],

@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../catalog-browser.css?v=1.32.0">
   <link rel="stylesheet" href="../pronunciations.css?v=1.33.0">
   <link rel="stylesheet" href="../list-editor.css?v=1.36.0">
-  <link rel="stylesheet" href="../text-mode.css?v=1.41.0">
+  <link rel="stylesheet" href="../text-mode.css?v=1.44.0">
   <link rel="stylesheet" href="../prosody.css?v=1.43.0">
   <link rel="stylesheet" href="../analytics.css?v=1.32.1">
   <link rel="stylesheet" href="../theme.css?v=1.32.1">
@@ -22,10 +22,10 @@
   <script defer src="../site-links.js?v=1.32.0"></script>
   <script defer src="../analytics.js?v=1.32.0"></script>
   <script defer src="../audio-varieties.js?v=1.33.0"></script>
-  <script defer src="../locales/manifest.js?v=1.43.0"></script>
-  <script defer src="../locales/ca/config.js?v=1.43.0"></script>
-  <script defer src="../language.js?v=1.43.0"></script>
-  <script defer src="../catalogs/ca/catalog.js?v=1.43.0"></script>
+  <script defer src="../locales/manifest.js?v=1.44.0"></script>
+  <script defer src="../locales/ca/config.js?v=1.44.0"></script>
+  <script defer src="../language.js?v=1.44.0"></script>
+  <script defer src="../catalogs/ca/catalog.js?v=1.44.0"></script>
   <script defer src="../catalogs/ca/editions/index.js?v=1.32.0"></script>
   <script defer src="../seeds.js?v=1.32.0"></script>
   <script defer src="../seeds-v2.js?v=1.36.0"></script>
@@ -53,11 +53,11 @@
   <script defer src="../prosody-draft.js?v=1.42.0"></script>
   <script defer src="../prosody.js?v=1.42.0"></script>
   <script defer src="../prosody-pdf.js?v=1.39.0"></script>
-  <script defer src="../text-review-notes.js?v=1.39.2"></script>
+  <script defer src="../text-review-notes.js?v=1.44.0"></script>
   <script defer src="../prosody-review.js?v=1.39.2"></script>
   <script defer src="../prosody-view.js?v=1.43.0"></script>
-  <script defer src="../text-mode.js?v=1.42.0"></script>
-  <script defer src="../app.js?v=1.43.0"></script>
+  <script defer src="../text-mode.js?v=1.44.0"></script>
+  <script defer src="../app.js?v=1.44.0"></script>
   <script defer src="../workspace-panels.js?v=1.32.0"></script>
 </head>
 <body>
@@ -77,14 +77,14 @@
       <aside class="config card">
         <div class="config-scroll">
         <div class="quick-settings" aria-label="Opcions del dictat">
-          <fieldset class="mode-setting"><legend class="sr-only">Què practiquem?</legend><div class="segmented" id="mode-control"><button data-mode="words" aria-pressed="true">Paraules</button><button data-mode="pseudo" aria-pressed="false">Pseudoparaules</button><button data-mode="text" aria-pressed="false">Dictat normal</button></div></fieldset>
+          <fieldset class="mode-setting"><legend class="sr-only">Què practiquem?</legend><div class="segmented" id="mode-control"><button data-mode="words" aria-pressed="true">Paraules</button><button data-mode="pseudo" aria-pressed="false">Pseudoparaules</button><button data-mode="text" aria-pressed="false">Frases</button></div></fieldset>
           <div class="setting-row"><label for="fold-style-control">Format del plec</label><select id="fold-style-control"><option value="thirds">Terços</option><option value="quarter">Quart de full</option></select></div>
           <div class="paired-settings"><fieldset class="model-setting"><legend>Model amagat</legend><div class="segmented" id="model-side-control"><button data-side="left" aria-pressed="true" aria-label="Model a l’esquerra" title="Model a l’esquerra"><span data-icon="model-left"></span></button><button data-side="right" aria-pressed="false" aria-label="Model a la dreta" title="Model a la dreta"><span data-icon="model-right"></span></button></div></fieldset><label class="count-setting" for="count-control">Nombre de mots<select id="count-control"><option value="8">8</option><option value="12">12</option><option value="16">16</option><option value="20">20</option><option value="24" selected>24</option></select></label></div>
           <div class="setting-row" id="stage-field"><label for="stage-control">Nivell orientatiu</label><select id="stage-control"><option value="cm">Cicle mitjà</option><option value="cs" selected>Cicle superior</option><option value="eso">Institut</option><option value="all">Tot el banc</option></select></div>
           <label id="basic-vocabulary-field" class="basic-vocabulary-setting" title="Selecció editorial de mots quotidians i escolars. Es combina amb el nivell i els focus que triïs."><input type="checkbox" id="basic-vocabulary"><span>Vocabulari bàsic</span><small id="basic-vocabulary-count">350 mots</small></label>
         </div>
         <section class="text-config" aria-labelledby="text-title">
-  <p class="text-pilot-label">Dictat normal · Prototip</p>
+  <p class="text-pilot-label">Frases · Prototip</p>
   <label for="text-selection">Text del dictat<select id="text-selection"></select></label>
   <h2 id="text-title">Una exposició al col·legi</h2>
   <div class="text-focus"><span>Focus de pràctica</span><b>l·l</b></div>
@@ -141,7 +141,7 @@
 
 
   </main>
-  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurs obert per escoltar, escriure i aprendre.</p><p class="umbrella-project">Un projecte d’<a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacitat</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el projecte · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.43: obre l’historial de canvis">v1.43</button></span></footer>
+  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurs obert per escoltar, escriure i aprendre.</p><p class="umbrella-project">Un projecte d’<a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacitat</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el projecte · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.44: obre l’historial de canvis">v1.44</button></span></footer>
   <div id="status" class="toast" role="status" aria-live="polite"></div>
   <dialog id="catalog-dialog" aria-labelledby="catalog-title">
     <div class="dialog-head"><h2 id="catalog-title">El catàleg</h2><button class="icon-button" data-close aria-label="Tanca el catàleg"><span data-icon="x"></span></button></div>

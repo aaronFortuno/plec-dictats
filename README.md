@@ -176,7 +176,7 @@ El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `buil
 
 ## Versions
 
-La interfície actual és **1.43**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.44**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 
@@ -206,7 +206,7 @@ Al catàleg, «Llista filtrada · PDF» i «Per focus · PDF» obren un editor a
 
 `pdf.js` prepara una sola geometria amb les mètriques de la font del PDF; `list-editor.js` en mostra les mateixes posicions en SVG i descarrega els mateixos bytes ja preparats. Les pàgines es recalculen segons el títol, la mida i les columnes; els mots massa llargs es redueixen individualment amb un avís a l’editor. Les preferències de format es conserven mentre l’editor és obert i es restableixen en preparar una llista nova. No s’hi fan peticions externes.
 
-### Dictat normal · prototip de frases
+### Frases · dictats en context
 
 El tercer selector obre dos dictats catalans per a la l·l: LL01, «Una exposició al col·legi» (63 mots), i LL02, «Llavors al jardí» (57 mots). El selector docent permet triar el text; cada codi recupera el seu full, escaleta i àudios. Ofereix A4 amb un sol plec vertical o horitzontal, dues parts asimètriques, model a qualsevol costat, QR i enllaços amb identificador estable `ca-ll-001-v1` (`LL01`). En vertical, l’escriptura disposa de 125 mm i el model de 85 mm, amb pauta agrupada per paràgrafs i una línia extra a cada bloc. En horitzontal, 170 mm d’escriptura contínua i 127 mm de model compacte. Mida del model i interlineat de pauta ajustables, amb avís si no cap. El text té identitat pròpia i no modifica els catàlegs ni els protocols de llavors. El reproductor ofereix quatre lectures pròpies amb Aoede (2–3, 4–5, 6–8 i 9–12 mots), velocitats 100/90/80 %, fins a tres escoltes automàtiques amb espera proporcional als mots (habitualment 4–12 s, màxim 15 s amb més marge), control per aturar-les i pausa en perdre la visibilitat o sortir de pantalla completa. Els controls visibles «Mots», «Velocitat» i «Pausa», amb botons −/+, permeten ajustar el dictat sense desplegar menús: es pot repetir algun mot, però no se’n salta cap. Les locucions de puntuació formen part de la mateixa presa i de la mateixa veu. En castellà el selector del pilot queda desactivat.
 
@@ -223,3 +223,7 @@ A «Escaleta i àudios», quatre reproductors fixos, alineats amb les columnes, 
 Per revisar la dicció, clica el quadre d’un fragment: queda marcat i s’obre una nota opcional. «Copia errors» copia en text pla tots els fragments marcats de les quatre versions, identificats amb versió, tall, mots, temps, text, puntuació i nota. Les marques es conserven al navegador per a aquella presa concreta; no es transmeten automàticament. Els dos errors ja comunicats pel docent hi apareixen marcats inicialment.
 
 LL02 s’ha sintetitzat amb Aoede en una única petició autoritzada: quatre versions (26/12/8/6 fragments), 324 mots locutats i 211,83 s totals. Àudios integrats com a pilot pendent d’audició. La font dels textos és `content/texts/`, amb el registre `index.json`; el web carrega `text-catalogue.js`, generat a partir d’aquests JSON. Cada escaleta conserva el seu identificador i instantània del text.
+
+El tercer botó del selector es diu **Frases** (el valor intern `text` i els codis/URL es conserven). Les set incidències de LL02 comunicades pel docent estan a `audio/texts/review-notes.json`, vinculades a les empremtes originals. La proposta conjunta de correcció queda pendent d’autorització; no s’ha generat cap àudio nou.
+
+A **Frases**, el codi de ritme opcional recupera els mots per fragment, la velocitat i la pausa sense comptes ni preferències del navegador. Al final es mostra un codi copiable amb els últims ajustos triats. Exemple: **ROSA** = 6–8 mots, 100 %, pausa habitual. Hi ha 36 combinacions estables; els codis no són els codis dels dictats ni una puntuació de l’alumne.

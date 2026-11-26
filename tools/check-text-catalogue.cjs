@@ -11,7 +11,7 @@ const lib=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLEC_NODE_
    for(let n=0;n<groups.length;n++){assert.equal(groups[n].startWord,v.fragments[n].start);assert.equal(groups[n].endWord,v.fragments[n].end);if(n)assert.equal(groups[n].start,groups[n-1].end);}
   }
  }
- const entry=T.find('LL02');assert.equal(require('../prosody-review.js').create(entry,P.build(entry),{getItem:()=>null,setItem:()=>{}}).count(),0);
+ const entry=T.find('LL02');assert.equal(require('../prosody-review.js').create(entry,P.build(entry),{getItem:()=>null,setItem:()=>{}}).count(),7);
  for(const fold of ['vertical','horizontal'])for(const side of ['start','end']){const result=await require('../text-worksheet.js').prepare(entry,{fold,side},lib),pdf=await lib.PDFDocument.load(result.bytes);assert.equal(pdf.getPageCount(),1);assert.equal(new URL(result.url).searchParams.get('text'),entry.id);}
  console.log('Text catalogue: LL01 preserved, approved LL02/57 words, frozen batch, four MP3 hashes and ranges, separate review identity and four one-page fold layouts passed. No synthesis.');
 })().catch(e=>{console.error(e);process.exitCode=1;});

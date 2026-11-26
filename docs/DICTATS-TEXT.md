@@ -143,3 +143,27 @@ L’escaleta ofereix quatre reproductors independents fixos sobre les columnes d
 En iniciar una versió es pausa qualsevol altra; es conserva el punt de cada àudio i no es torna a carregar l’arxiu en alternar-los. Tancar el quadre, amagar la pestanya o sortir de la pàgina els pausa tots. En pantalles estretes, les pestanyes existents mostren una columna amb el seu reproductor corresponent, amb les mateixes quatre instàncies i sense menú desplegable. Cada àudio mostra el seu error i permet reintentar-ne la càrrega de forma independent.
 
 Comprovacions locals: X des de la pantalla inicial, reproducció i espera, retorn al text i ajustos correctes, absència de repeticions tardanes; quatre MP3 reals, alineació dels reproductors amb les columnes, continuïtat entre fragments, pausa mútua, conservació del punt, pausa en tancar, marques/porta-retalls i vista estreta/fosca/horitzontal baixa. Cap síntesi nova ni comprovació remota.
+
+## Revisió docent de LL02 i nom Frases · 1.44
+
+El mode visible passa de «Dictat normal» a **Frases**, també a la capçalera del preparador i de l’alumnat. No es canvien el valor intern `text`, els codis ni els enllaços existents.
+
+S’incorporen literalment set incidències de la presa `fc409397881b…`, després de comprovar les empremtes dels MP3, els rangs i els textos: r45/F7–F10, «castellanitzat»; r912/F2, «una mica massa ràpid»; r912/F3, «punt i seguit» molt més lent que el text; r912/F6, «punto final». Els informes inicials de l’escaleta les mostren marcades; les notes locals desades de l’usuari continuen tenint prioritat. No es dona la resta per validada només per absència de marca.
+
+La deriva de llengua en un bloc consecutiu i en una locució de puntuació està confirmada per l’audició docent. La causa del comportament del model no està demostrada. La proposta de correcció reforça català central en cada fragment i indicació oral, i un ritme homogeni entre text i puntuació.
+
+Proposta preparada, **no autoritzada ni enviada**, a `audio/texts/batches/ll01-ll02-corrections-proposal-v1.json`: refer quatre versions completes en una petició amb Aoede (LL01 r23/r912 i LL02 r45/r912), mantenint intactes les altres. Així es cobreixen els nou fragments comunicats entre els dos dictats i es preserva la coherència de veu dins de cada versió. Textos i talls originals; 336 mots locutats, estimació nominal 254 s i conservadora 366 s, sota 390 s. És una estimació de planificació, pendent de compilar, validar i autoritzar la petició exacta. El generador no reconeix aquest identificador de proposta com un lot executable.
+
+## Codi de ritme portable · 1.44
+
+Pilot disponible al mode **Frases**. A la pantalla inicial hi ha un camp discret «Codi de ritme (opcional)»: introduir la paraula i prémer Enter o «Aplica». Un codi vàlid recupera immediatament mots per fragment, velocitat i pausa. Un codi desconegut informa de l’error, manté els valors previs i permet començar sense codi. Es pot deixar el camp buit i ajustar directament els controls.
+
+Al final es mostra la paraula corresponent als **últims ajustos seleccionats**, amb resum dels valors i botó de còpia. No hi ha test inicial ni inferència de capacitat o de velocitat d’escriptura; les tres escoltes i el temps manual no es converteixen en una avaluació. Si l’alumne afina els valors durant el dictat, el codi final reflecteix aquesta elecció. És el mateix per a qualsevol text i qualsevol dispositiu, i no es desa al navegador ni identifica l’alumne.
+
+Matriu de 36 perfils: 4 quantitats de mots × 3 velocitats (80/90/100 %) × 3 pauses (àgil/habitual/més marge, sempre limitades a 4–15 s). La reproducció automàtica es tria separadament; no forma part del codi. **ROSA** representa 6–8 mots, 100 % i pausa habitual. Les paraules dels codis són identificadors neutres, sense jerarquia de nivell ni etiquetes de rendiment.
+
+Font immutable `content/rhythm-profiles-v1.json`, protocol `plec-rhythm-v1`, paquet generat `rhythm-profiles.js` i conversió pura a `rhythm-code.js`. El test fixa l’empremta de la matriu: no reassignar mai un codi existent a una combinació diferent. Una futura ampliació necessitarà codis nous o un protocol nou compatible amb els anteriors. Els codis de ritme són independents de les llavors, LL01/LL02, la veu, la llengua i les transcripcions. Els codis funcionen actualment a Frases; no s’afegeix una dependència a emmagatzematge local o serveis externs.
+
+Proves: 36 conversions reversibles, invalidesa i normalització, codi dels ajustos finals després de canviar la pausa, còpia, recuperació en un context de navegador nou amb LL02 i sense les dades del primer, camps opcionals i instruccions compactes per al mòbil. No es genera cap àudio.
+
+Validació de la versió 1.44: 59 comprovacions locals passades, incloses les 36 correspondències del protocol, la recuperació en un navegador nou, el codi final després de modificar la pausa, la còpia, els camps opcionals, les set marques de LL02 i la resta de funcionalitats de Plec. Cap nova petició de síntesi ni comprovació remota.

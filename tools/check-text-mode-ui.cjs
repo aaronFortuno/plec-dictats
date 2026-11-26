@@ -1,6 +1,6 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLEC_NODE_MODULES,'playwright'):'playwright'),T=require('../text-dictations.js');
+const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLEC_NODE_MODULES,'playwright'):'playwright'),T=require('../text-dictations.js'),R=require('../rhythm-code.js');
 (async()=>{
  const browser=await chromium.launch({channel:'chrome'});
  try{
@@ -9,7 +9,7 @@ const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLE
   await page.route('**/*',route=>new URL(route.request().url()).origin==='http://127.0.0.1:4176'?route.continue():route.abort());
   await page.goto('http://127.0.0.1:4176/ca/?seed=ADZ52356A');await page.waitForSelector('#sheet-preview svg');
   const seed=await page.locator('#seed-code').textContent();
-  await page.click('[data-mode="text"]');await page.waitForFunction(()=>!document.querySelector('#text-download').disabled);
+  assert.equal(await page.locator('[data-mode="text"]').textContent(),'Frases');await page.click('[data-mode="text"]');await page.waitForFunction(()=>!document.querySelector('#text-download').disabled);
   assert.equal(await page.locator('[data-mode="text"]').getAttribute('aria-pressed'),'true');
   await page.selectOption('#text-selection','ca-ll-002-v1');await page.waitForFunction(()=>!document.querySelector('#text-download').disabled);assert.equal(await page.locator('#text-code').textContent(),'LL02');assert((await page.locator('#sheet-preview').textContent()).includes('Llavors al jardí'));assert.equal(new URL(page.url()).searchParams.get('text'),'ca-ll-002-v1');
   await page.reload();await page.waitForFunction(()=>!document.querySelector('#text-download').disabled);assert.equal(await page.locator('#text-selection').inputValue(),'ca-ll-002-v1');
@@ -53,6 +53,10 @@ const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLE
   await page.goto('http://127.0.0.1:4176/ca/dictat/?text=ca-ll-002-v1');await page.waitForSelector('#tx-ready:not([hidden])');assert(await page.locator('#tx-start').isEnabled());assert((await page.locator('#tx-summary').textContent()).includes('57 paraules'));
   const secondDurations=await page.evaluate(async()=>Promise.all(Object.values(PlecTexts.find('LL02').audio.variants).map(v=>new Promise((resolve,reject)=>{const audio=new Audio('../../'+v.path);audio.onloadedmetadata=()=>resolve(Math.abs(audio.duration-v.seconds)<.15);audio.onerror=()=>reject(Error('LL02 media'));audio.load();}))));assert(secondDurations.every(Boolean));
   await page.goto('http://127.0.0.1:4176/ca/dictat/?text=ca-ll-001-v1&pace=6&rate=1');
+  await page.fill('#tx-rhythm-input','ZZZZ');await page.locator('#tx-rhythm-input').press('Enter');assert.equal(await page.locator('#tx-rhythm-input').getAttribute('aria-invalid'),'true');assert(await page.locator('#tx-start').isEnabled());assert.equal(await page.locator('#tx-rate').textContent(),'100 %');
+  await page.fill('#tx-rhythm-input',R.encode({pace:2,rate:.8},1.25));await page.locator('#tx-rhythm-input').press('Enter');assert.equal(await page.locator('#tx-pace').textContent(),'2–3');assert.equal(await page.locator('#tx-rate').textContent(),'80 %');assert.equal(await page.locator('#tx-wait').textContent(),'4–15 s');
+  await page.fill('#tx-rhythm-input','rosa');await page.locator('#tx-rhythm-input').press('Enter');assert.equal(await page.locator('#tx-pace').textContent(),'6–8');assert.equal(await page.locator('#tx-rate').textContent(),'100 %');assert.equal(await page.locator('#tx-rhythm-input').inputValue(),'ROSA');assert.equal(await page.locator('#tx-rhythm-input').getAttribute('aria-invalid'),'false');
+  await page.screenshot({path:'output/text-rhythm-ready-mobile.png',animations:'disabled'});
   // A local media double exercises the player. It neither synthesizes nor downloads speech.
   await page.route('**/text-audio.js?*',route=>route.fulfill({contentType:'text/javascript',body:'window.PlecTextAudio='+JSON.stringify({'ca-ll-001-v1':{...T.catalogue[0].audio,variants:Object.fromEntries(Object.entries(T.catalogue[0].audio.variants).map(([id,v])=>[id,{...v,path:'test-only-'+id+'.mp3',seconds:300}]))}})}));
   await page.addInitScript(()=>{
@@ -82,8 +86,13 @@ const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLE
   await page.click('#exit-focus');await page.waitForURL(url=>url.pathname==='/ca/'&&url.searchParams.get('text')==='ca-ll-001-v1');await page.waitForFunction(()=>!document.querySelector('#text-download').disabled);assert.equal(await page.locator('#text-selection').inputValue(),'ca-ll-001-v1');assert.equal(new URL(page.url()).searchParams.get('pace'),'6');assert.equal(new URL(page.url()).searchParams.get('rate'),'0.8');
   await page.goto('http://127.0.0.1:4176/ca/dictat/?text=ca-ll-001-v1&pace=4&rate=0.8');await page.waitForSelector('#tx-ready:not([hidden])');await page.uncheck('#tx-auto-ready');
   await page.click('#tx-start');
-  for(let i=0;i<groups.length;i++){await page.click('#tx-listen');await page.waitForFunction(()=>testTextAudio.started);await page.evaluate(()=>{testTextAudio.currentTime=300;});await page.waitForFunction(()=>document.querySelector('#tx-listen-count').textContent.startsWith('1 de'));await page.click('#tx-next');}
+  for(let i=0;i<groups.length;i++){if(i===groups.length-1)await page.locator('#tx-adjust [data-adjust=wait][data-step="1"]').click();await page.click('#tx-listen');await page.waitForFunction(()=>testTextAudio.started);await page.evaluate(()=>{testTextAudio.currentTime=300;});await page.waitForFunction(()=>document.querySelector('#tx-listen-count').textContent.startsWith('1 de'));await page.click('#tx-next');}
   assert(await page.locator('#tx-finished').isVisible());
+  const personal=R.encode({pace:4,rate:.8},1.25);assert.equal(await page.locator('#tx-rhythm-result').textContent(),personal);assert.equal(await page.locator('#tx-rhythm-input').inputValue(),personal);
+  await page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async value=>{window.copiedRhythm=value;}}}));await page.click('#tx-rhythm-copy');assert.equal(await page.evaluate(()=>copiedRhythm),personal);
+  await page.screenshot({path:'output/text-rhythm-finished-mobile.png',animations:'disabled'});
+  const fresh=await browser.newPage({viewport:{width:390,height:844}});await fresh.route('**/*',route=>new URL(route.request().url()).origin==='http://127.0.0.1:4176'?route.continue():route.abort());await fresh.goto('http://127.0.0.1:4176/ca/dictat/?text=ca-ll-002-v1');await fresh.waitForSelector('#tx-ready:not([hidden])');await fresh.fill('#tx-rhythm-input',personal);await fresh.locator('#tx-rhythm-input').press('Enter');assert.equal(await fresh.locator('#tx-pace').textContent(),'4–5');assert.equal(await fresh.locator('#tx-rate').textContent(),'80 %');assert.equal(await fresh.locator('#tx-wait').textContent(),'4–15 s');assert((await fresh.locator('#tx-summary').textContent()).includes('LL02'));await fresh.close();
+
   // Accelerated browser clock verifies writing waits without real-time sleeps.
   await page.clock.install();await page.goto('http://127.0.0.1:4176/ca/dictat/?text=ca-ll-001-v1&pace=2&rate=1');await page.waitForSelector('#tx-ready:not([hidden])');
   assert(await page.locator('#tx-auto-ready').isChecked());await page.click('#tx-start');await page.waitForFunction(()=>testTextAudio.started);

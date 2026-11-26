@@ -24,6 +24,8 @@
  function wait(){if(automatic&&scene==='player'&&plays<3&&!document.hidden)repeat.start(groups[index].words,waitFactor);}
  function show(name){scene=name;for(const key of ['ready','player','paused','finished'])$('tx-'+key).hidden=key!==name;}
  function links(){if(!entry)return;const base=new URL('../../',location.href).href;for(const id of ['composer-link','tx-back'])$(id).href=T.url(entry,settings,false,base);}
+ function rhythmResult(){const code=window.PlecRhythmCode.encode(settings,waitFactor);$('tx-rhythm-result').textContent=code;$('tx-rhythm-input').value=code;$('tx-rhythm-status').textContent='';$('tx-rhythm-input').setAttribute('aria-invalid','false');$('tx-rhythm-summary').textContent=controls.pace.format(settings.pace)+' mots · '+controls.rate.format(settings.rate)+' · pausa '+controls.wait.format(waitFactor);$('tx-rhythm-copy-status').textContent='';}
+ function saveUrl(){const url=new URL(location.href);url.searchParams.set('pace',settings.pace);url.searchParams.set('rate',settings.rate);history.replaceState(null,'',url);}
  function setup(){
   syncControls();
   if(!entry){$('tx-setup-error').hidden=false;$('tx-setup-error').textContent='Aquest dictat de text no està disponible en aquesta llengua.';$('tx-start').disabled=true;return;}
@@ -75,7 +77,7 @@
  $('tx-listen').addEventListener('click',play);
  $('tx-next').addEventListener('click',()=>{
   if(playing||!plays)return;stop();
-  if(index===groups.length-1){show('finished');document.exitFullscreen?.().catch(()=>{});$('tx-finished-title').focus();return;}
+  if(index===groups.length-1){rhythmResult();show('finished');document.exitFullscreen?.().catch(()=>{});$('tx-finished-title').focus();return;}
   completedThrough=Math.max(completedThrough,groups[index].endWord||0);index++;plays=0;draw();$('tx-listen').focus();if(automatic&&!document.hidden)play();
  });
  function pause(){if(scene!=='player')return;stop();show('paused');$('tx-paused-title').focus();}
@@ -87,11 +89,20 @@
  $('tx-restart').addEventListener('click',()=>{stop();show('ready');$('tx-title').focus();});
  function change(key,step){
   if(!entry)return;const c=controls[key],old=key==='wait'?waitFactor:settings[key],value=c.values[c.values.indexOf(old)+step];if(value===undefined)return;
+  if(scene==='ready'){$('tx-rhythm-input').value='';$('tx-rhythm-status').textContent='';$('tx-rhythm-input').setAttribute('aria-invalid','false');}
   if(key==='wait'){waitFactor=value;cancelRepeat();}
   else{settings=T.options({...settings,[key]:value});if(key==='pace'){stop();groups=T.fragments(entry,settings.pace);index=T.fragmentIndex(groups,completedThrough);plays=0;loading=null;loadedPath=null;audio=null;}else if(audio)audio.playbackRate=value;}
   setup();if(scene==='player'){draw();if(!playing)wait();}
-  const url=new URL(location.href);url.searchParams.set('pace',settings.pace);url.searchParams.set('rate',settings.rate);history.replaceState(null,'',url);
+  saveUrl();
  }
+ $('tx-rhythm-form').addEventListener('submit',event=>{
+  event.preventDefault();if(!entry||scene!=='ready')return;const profile=window.PlecRhythmCode.decode($('tx-rhythm-input').value);
+  $('tx-rhythm-input').setAttribute('aria-invalid',String(!profile));
+  if(!profile){$('tx-rhythm-status').textContent='No reconec aquest codi. Revisa’l o continua sense codi.';return;}
+  settings=T.options({...settings,pace:profile.pace,rate:profile.rate});waitFactor=profile.waitFactor;groups=T.fragments(entry,settings.pace);index=0;plays=0;completedThrough=0;
+  $('tx-rhythm-input').value=profile.code;$('tx-rhythm-status').textContent='Codi '+profile.code+' aplicat.';setup();saveUrl();
+ });
+ $('tx-rhythm-copy').addEventListener('click',async()=>{const code=$('tx-rhythm-result').textContent;try{await navigator.clipboard.writeText(code);$('tx-rhythm-copy-status').textContent='Codi copiat.';}catch{const selection=getSelection(),range=document.createRange();range.selectNodeContents($('tx-rhythm-result'));selection.removeAllRanges();selection.addRange(range);$('tx-rhythm-copy-status').textContent='Copia el codi seleccionat o apunta’l per al pròxim dictat.';}});
  $('text-player-root').addEventListener('click',event=>{const button=event.target.closest('[data-adjust]');if(button)change(button.dataset.adjust,Number(button.dataset.step));});
  window.addEventListener('pagehide',stop);setup();show('ready');
 })();

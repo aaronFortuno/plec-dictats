@@ -1,0 +1,43 @@
+{
+  "id": "ll01-ll02-corrections-proposal-v1",
+  "status": "proposal-not-approved",
+  "voice": "Aoede",
+  "maximumNewRequests": 1,
+  "maximumSeconds": 390,
+  "scope": [
+    {
+      "textId": "ca-ll-001-v1",
+      "sourceRequestHash": "28b3ed21a923fceac4267c6b3dbf447aa0aa346e52097dd38f47bd51fd50884f",
+      "variants": [
+        "r23",
+        "r912"
+      ]
+    },
+    {
+      "textId": "ca-ll-002-v1",
+      "sourceRequestHash": "fc409397881ba7ff7aba4e9995373bd916f55cdd88ac0cf4a17e4af7e186b61a",
+      "variants": [
+        "r45",
+        "r912"
+      ]
+    }
+  ],
+  "reason": "Regenerate the four affected complete renditions to keep internal voice/pace consistent; preserve all other recordings. Not an approval to synthesize.",
+  "direction": [
+    "Català central sostingut a cada fragment i indicació oral; la causa de la deriva no està demostrada.",
+    "Mateixa veu i ritme per al text i la puntuació; Punt final, sense afegir una o.",
+    "Lectura natural i estable; evitar acceleracions en r912.",
+    "Conservar els textos i talls aprovats i comprovar els nou fragments comunicats pel docent."
+  ],
+  "estimate": {
+    "spokenWords": 336,
+    "punctuationAnnouncements": 40,
+    "plannedPauseSeconds": 92.2,
+    "nominalWpm": 125,
+    "nominalSeconds": 254,
+    "conservativeWpm": 95,
+    "safetyFactor": 1.2,
+    "conservativeSeconds": 366
+  },
+  "newRequestsSent": 0
+}
