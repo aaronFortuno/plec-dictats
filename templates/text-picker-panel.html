@@ -1,0 +1,9 @@
+<dialog id="text-picker-dialog" aria-labelledby="text-picker-title">
+  <div class="dialog-head"><h2 id="text-picker-title">Tria un dictat</h2><button type="button" class="icon-button" data-close aria-label="Tanca la tria de dictat"><span data-icon="x"></span></button></div>
+  <div class="text-picker-controls">
+    <label class="text-picker-search"><span class="sr-only">Cerca per títol o codi</span><input id="text-picker-search" type="search" placeholder="Cerca per títol o codi…" autocomplete="off"><button type="button" class="icon-button" id="text-picker-clear" aria-label="Esborra la cerca" hidden><span data-icon="x"></span></button></label>
+    <div class="text-picker-focus"><span id="text-picker-focus-label">Focus de pràctica</span><div id="text-picker-focuses" role="group" aria-labelledby="text-picker-focus-label"></div></div>
+    <p id="text-picker-count" role="status" aria-live="polite"></p>
+  </div>
+  <div class="text-picker-scroll" tabindex="0" role="region" aria-label="Dictats disponibles"><div id="text-picker-results"></div><div id="text-picker-empty" hidden><p>Cap dictat amb aquests filtres.</p><button type="button" class="small-link" id="text-picker-reset">Esborra els filtres</button></div></div>
+</dialog>

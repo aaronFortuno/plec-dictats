@@ -10,8 +10,6 @@ body[data-activity="text"] .quick-settings>:not(.mode-setting),body[data-activit
 .text-layout-controls input::-webkit-inner-spin-button{opacity:1}
 .text-config h2,.text-management h2{font-size:16px;margin:0;line-height:1.4}
 .text-config p,.text-management p{font-size:12px;line-height:1.6;margin:0;color:var(--muted)}
-.text-focus{border:1px solid var(--line);background:var(--soft);border-radius:8px;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;font-size:13px}
-.text-focus b{font-size:18px}
 .text-pilot-label{color:var(--accent)!important;font-weight:600}
 .text-management section{display:grid;gap:13px}
 .text-management section+section{border-top:1px solid var(--line);padding-top:20px}

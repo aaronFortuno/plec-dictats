@@ -192,3 +192,13 @@ Comprovat sense scroll a 1440×900, 1366×768, 1280×720 i 1024×768; revisió d
 El docent ha aprovat els 36 codis i les seves imatges. `content/rhythm-labels.json` passa a `stage: "final"`, revisió `rhythm-labels-v1`, sense canviar cap correspondència. La taula és només informativa: s’han retirat el codi d’edició, la persistència de propostes, els botons de còpia/restabliment i els camps d’exportació. Les propostes antigues del navegador no es llegeixen ni alteren la taula. Es mantenen el disseny compacte, les pestanyes mòbils i una explicació breu d’ús. El botó de l’alumne per copiar el seu codi final continua disponible.
 
 Validació local: matriu i àlies, 36 imatges i absència de controls d’edició/exportació, propostes antigues ignorades, graella sense scroll en ordinador, pestanyes mòbils/tema fosc, reproductor de Frases i generació coherent dels catàlegs. Sense síntesi ni comprovació remota.
+
+## Catàleg de tria de textos · 1.46
+
+Al mode Frases, «Canvia el dictat» obre un catàleg emergent de targetes amb títol, codi, nivell, nombre de mots i focus. Cerca per títol/codi sense distingir accents ni majúscules. Els focus disponibles es deriven dels textos de la llengua activa i es combinen amb OR: qualsevol dels seleccionats. No es mostren focus sense textos. Ara mateix LL01/LL02 treballen l·l. Es fan servir les etiquetes precises `focusLabels`, perquè el grup genèric `signes` del catàleg de mots no distingeix aquesta norma.
+
+Triar una targeta actualitza el resum del sidebar, el full, l’enllaç i l’escaleta, conservant els ajustos de maquetació i de ritme. Reobrir mostra tot el banc, sense arrossegar cap cerca anterior ni emplenar-la amb el text triat. Els filtres no alteren els focus ni les llavors de paraules/pseudoparaules. Cap canvi en textos, àudios o identificadors publicats.
+
+`text-picker.js` gestiona només el catàleg emergent; `text-mode.js` conserva la selecció i el full. Capçaleres/filtres fixos, scroll intern als resultats, focus de teclat i variants de mòbil/tema fosc. Les proves de filtratge amb diversos focus i banc ampli utilitzen dades efímeres al navegador; no publiquen textos ficticis.
+
+Validació 1.46: 61 comprovacions locals passades. Cerca i selecció reals de LL01/LL02, filtres combinats sense duplicats, cap resultat/restabliment, resum/URL/PDF/escaleta, conservació dels ajustos, reobertura neta, creixement del banc i controls fixos, mòbil/tema fosc i regressions de la resta de Plec. Sense síntesi ni comprovació remota.

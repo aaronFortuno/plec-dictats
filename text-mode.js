@@ -5,12 +5,14 @@
  let entry=T.catalogue.find(e=>e.language===window.PlecLanguage.id);
  let active=false,settings=T.options(),prepared=null,generation=0;
  const layoutControls={fold:'text-fold',side:'text-side',pace:'text-pace',rate:'text-rate',fontSize:'text-font-size',lineSpacing:'text-line-spacing'};
- $('text-selection').replaceChildren(...T.catalogue.filter(e=>e.language===window.PlecLanguage.id).map(e=>new Option(e.code+' · '+e.title,e.id)));
- $('text-selection').addEventListener('change',()=>{const next=T.find($('text-selection').value,window.PlecLanguage.id);if(next){entry=next;render();}});
+ $('text-picker-open').addEventListener('click',()=>{if(active)window.PlecTextPicker.open(entry,next=>{entry=next;render();});});
  if(!entry){button.disabled=true;button.title=window.PlecLanguageTools.text('Pilot disponible en català');}
  function notify(message){$('text-status').textContent=message;}
  async function render(){
-  $('text-title').textContent=entry.title;$('text-code').textContent=entry.code;$('text-selection').value=entry.id;
+  $('text-title').textContent=entry.title;$('text-code').textContent=entry.code;$('text-picker-open').dataset.textId=entry.id;
+  $('text-selected-meta').textContent=entry.code+' · '+T.wordCount(T.text(entry))+' '+window.PlecLanguageTools.text('mots')+' · '+window.PlecLanguageTools.text(entry.stage);
+  $('text-selected-focuses').replaceChildren(...entry.focusLabels.map(label=>{const tag=document.createElement('span');tag.textContent=label;return tag;}));
+  $('prosody-open').hidden=!window.PlecProsody.has(entry);
   const ticket=++generation;prepared=null;$('text-download').disabled=true;$('text-open-student').disabled=false;
   document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode==='text')));
   $('text-fragment-summary').textContent=T.fragments(entry,settings.pace).length+' fragments · '+T.wordCount(T.text(entry))+' paraules';
@@ -57,7 +59,6 @@
    if(id)entry=T.find(id,entry.language);
    if(input)settings=T.options(Object.fromEntries(input));
    active=true;document.body.dataset.activity='text';
-   $('prosody-open').hidden=!window.PlecProsody.has(entry);
    for(const [key,control]of Object.entries(layoutControls))$(control).value=settings[key];
    $('text-title').textContent=entry.title;render();return true;
   },

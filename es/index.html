@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="../catalog-browser.css?v=1.32.0">
   <link rel="stylesheet" href="../pronunciations.css?v=1.33.0">
   <link rel="stylesheet" href="../list-editor.css?v=1.36.0">
-  <link rel="stylesheet" href="../text-mode.css?v=1.45.0">
+  <link rel="stylesheet" href="../text-mode.css?v=1.46.0">
+  <link rel="stylesheet" href="../text-picker.css?v=1.46.0">
   <link rel="stylesheet" href="../rhythm-table.css?v=1.45.2">
   <link rel="stylesheet" href="../prosody.css?v=1.43.0">
   <link rel="stylesheet" href="../analytics.css?v=1.32.1">
@@ -23,11 +24,11 @@
   <script defer src="../site-links.js?v=1.32.0"></script>
   <script defer src="../analytics.js?v=1.32.0"></script>
   <script defer src="../audio-varieties.js?v=1.33.0"></script>
-  <script defer src="../locales/manifest.js?v=1.45.3"></script>
-  <script defer src="../locales/es/config.js?v=1.45.3"></script>
-  <script defer src="../locales/es/messages.js?v=1.45.3"></script>
-  <script defer src="../language.js?v=1.45.3"></script>
-  <script defer src="../catalogs/es/catalog.js?v=1.45.3"></script>
+  <script defer src="../locales/manifest.js?v=1.46.0"></script>
+  <script defer src="../locales/es/config.js?v=1.46.0"></script>
+  <script defer src="../locales/es/messages.js?v=1.46.0"></script>
+  <script defer src="../language.js?v=1.46.0"></script>
+  <script defer src="../catalogs/es/catalog.js?v=1.46.0"></script>
   <script defer src="../catalogs/es/editions/index.js?v=1.32.0"></script>
   <script defer src="../seeds.js?v=1.32.0"></script>
   <script defer src="../seeds-v2.js?v=1.36.0"></script>
@@ -62,8 +63,9 @@
   <script defer src="../rhythm-labels.js?v=1.45.2"></script>
   <script defer src="../rhythm-code.js?v=1.45.0"></script>
   <script defer src="../rhythm-table.js?v=1.45.2"></script>
-  <script defer src="../text-mode.js?v=1.44.0"></script>
-  <script defer src="../app.js?v=1.45.3"></script>
+  <script defer src="../text-picker.js?v=1.46.0"></script>
+  <script defer src="../text-mode.js?v=1.46.0"></script>
+  <script defer src="../app.js?v=1.46.0"></script>
   <script defer src="../workspace-panels.js?v=1.32.0"></script>
 </head>
 <body>
@@ -91,10 +93,7 @@
         </div>
         <section class="text-config" aria-labelledby="text-title">
   <p class="text-pilot-label">Frases · Prototipo</p>
-  <label for="text-selection">Texto del dictado<select id="text-selection"></select></label>
-  <h2 id="text-title">Una exposición en el colegio</h2>
-  <div class="text-focus"><span>Qué practicar</span><b>l·l</b></div>
-  <p>Textos para practicar la ele geminada catalana. Audios pendientes de revisión docente.</p>
+  <div class="text-selected-summary"><p class="text-selected-label">Texto del dictado</p><h2 id="text-title">Una exposición en el colegio</h2><p id="text-selected-meta"></p><div id="text-selected-focuses" class="text-selected-focus" aria-label="Focos del dictado seleccionado"></div><button type="button" class="small-link" id="text-picker-open" aria-haspopup="dialog" aria-controls="text-picker-dialog"><span data-icon="book-open"></span> Cambia el dictado</button></div>
   <label for="text-fold">Pliegue en dos partes<select id="text-fold"><option value="vertical">Vertical · izquierda y derecha</option><option value="horizontal">Horizontal · arriba y abajo</option></select></label>
   <label for="text-side">Posición del modelo<select id="text-side"><option value="start">Primera mitad</option><option value="end">Segunda mitad</option></select></label>
   <div class="text-layout-controls"><label for="text-font-size">Tamaño del modelo (pt)<input id="text-font-size" type="number" inputmode="numeric" min="12" max="16" step="1" value="14" required></label><label for="text-line-spacing">Interlineado de la pauta (mm)<input id="text-line-spacing" type="number" inputmode="numeric" min="8" max="12" step="1" value="10" required></label></div>
@@ -148,7 +147,7 @@
 
 
   </main>
-  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurso abierto para escuchar, escribir y aprender.</p><p class="umbrella-project">Un proyecto de <a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacidad</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el proyecto · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versión 1.45.3: abre el historial de cambios">v1.45.3</button></span></footer>
+  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurso abierto para escuchar, escribir y aprender.</p><p class="umbrella-project">Un proyecto de <a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacidad</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el proyecto · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versión 1.46: abre el historial de cambios">v1.46</button></span></footer>
   <div id="status" class="toast" role="status" aria-live="polite"></div>
   <dialog id="catalog-dialog" aria-labelledby="catalog-title">
     <div class="dialog-head"><h2 id="catalog-title">El catálogo</h2><button class="icon-button" data-close aria-label="Cerrar el catálogo"><span data-icon="x"></span></button></div>
@@ -203,6 +202,16 @@
       </section>
     </div>
   </dialog>
+  <dialog id="text-picker-dialog" aria-labelledby="text-picker-title">
+  <div class="dialog-head"><h2 id="text-picker-title">Elige un dictado</h2><button type="button" class="icon-button" data-close aria-label="Cierra la selección de dictado"><span data-icon="x"></span></button></div>
+  <div class="text-picker-controls">
+    <label class="text-picker-search"><span class="sr-only">Busca por título o código</span><input id="text-picker-search" type="search" placeholder="Busca por título o código…" autocomplete="off"><button type="button" class="icon-button" id="text-picker-clear" aria-label="Borrar la búsqueda" hidden><span data-icon="x"></span></button></label>
+    <div class="text-picker-focus"><span id="text-picker-focus-label">Qué practicar</span><div id="text-picker-focuses" role="group" aria-labelledby="text-picker-focus-label"></div></div>
+    <p id="text-picker-count" role="status" aria-live="polite"></p>
+  </div>
+  <div class="text-picker-scroll" tabindex="0" role="region" aria-label="Dictados disponibles"><div id="text-picker-results"></div><div id="text-picker-empty" hidden><p>Ningún dictado con estos filtros.</p><button type="button" class="small-link" id="text-picker-reset">Borra los filtros</button></div></div>
+</dialog>
+
   <dialog id="prosody-dialog" aria-labelledby="prosody-title">
   <div class="dialog-head"><div><h2 id="prosody-title">Escaleta de prosodia</h2><p id="prosody-text-title"></p></div><button type="button" class="icon-button" data-close aria-label="Cerrar la escaleta"><span data-icon="x"></span></button></div>
   <div class="prosody-toolbar"><p id="prosody-summary"></p><button type="button" class="button secondary" id="prosody-pdf"><span data-icon="download"></span> PDF de la escaleta</button></div>
