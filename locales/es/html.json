@@ -335,5 +335,11 @@
   "Copia canvis": "Copia cambios",
   "Desfés les propostes": "Deshaz las propuestas",
   "Proposta per copiar": "Propuesta para copiar",
-  "Versió 1.45: obre l’historial de canvis": "Versión 1.45: abre el historial de cambios"
+  "Versió 1.45: obre l’historial de canvis": "Versión 1.45: abre el historial de cambios",
+  "Cada codi recorda els mots per fragment, la velocitat i la pausa. Funciona en qualsevol dispositiu i no indica cap nivell ni nota.": "Cada código recuerda las palabras por fragmento, la velocidad y la pausa. Funciona en cualquier dispositivo y no indica ningún nivel ni nota.",
+  "Clica un codi per proposar un altre nom. «Copia canvis» permet compartir les propostes sense alterar els codis de l’alumnat.": "Haz clic en un código para proponer otro nombre. «Copia cambios» permite compartir las propuestas sin alterar los códigos del alumnado.",
+  "Pausa entre escoltes": "Pausa entre escuchas",
+  "Breu": "Breve",
+  "Llarga": "Larga",
+  "Versió 1.45.1: obre l’historial de canvis": "Versión 1.45.1: abre el historial de cambios"
 }

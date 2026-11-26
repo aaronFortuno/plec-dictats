@@ -1,8 +1,9 @@
-<dialog id="rhythm-table-dialog" aria-labelledby="rhythm-table-title">
-  <div class="dialog-head"><div><h2 id="rhythm-table-title">Codis de ritme</h2><p>Una paraula i una imatge per recordar els teus ajustos.</p></div><button type="button" class="icon-button" data-close aria-label="Tanca la taula de codis"><span data-icon="x"></span></button></div>
+<dialog id="rhythm-table-dialog" data-pause="1" aria-labelledby="rhythm-table-title">
+  <div class="dialog-head"><div><h2 id="rhythm-table-title">Codis de ritme</h2></div><button type="button" class="icon-button" data-close aria-label="Tanca la taula de codis"><span data-icon="x"></span></button></div>
   <div class="rhythm-table-scroll" tabindex="0" role="region" aria-label="Taula de codis de ritme">
-    <p class="rhythm-table-intro">El codi recupera els mots per fragment, la velocitat i la pausa entre escoltes, en qualsevol dispositiu. No indica cap nivell ni cap nota: tria els ajustos que et van bé.</p>
-    <p id="rhythm-table-review">Proposta en revisió: pots canviar la paraula i suggerir una altra imatge. Els canvis queden en aquest navegador; no alteren els codis de l’alumnat. Copia’ls per compartir-los abans de fer-los definitius.</p>
+    <p class="rhythm-table-intro">Cada codi recorda els mots per fragment, la velocitat i la pausa. Funciona en qualsevol dispositiu i no indica cap nivell ni nota.</p>
+    <p id="rhythm-table-review">Clica un codi per proposar un altre nom. «Copia canvis» permet compartir les propostes sense alterar els codis de l’alumnat.</p>
+    <nav class="rhythm-pause-tabs" aria-label="Pausa entre escoltes"><button type="button" data-rhythm-pause="0.8" aria-pressed="false">Breu</button><button type="button" data-rhythm-pause="1" aria-pressed="true">Habitual</button><button type="button" data-rhythm-pause="1.25" aria-pressed="false">Llarga</button></nav>
     <div id="rhythm-table-content"></div>
   </div>
   <div class="rhythm-table-footer"><div id="rhythm-table-actions"><button type="button" class="button secondary" id="rhythm-table-copy"><span data-icon="copy"></span> Copia canvis</button><button type="button" class="small-link" id="rhythm-table-reset">Desfés les propostes</button></div><p id="rhythm-table-status" role="status" aria-live="polite"></p><textarea id="rhythm-table-fallback" readonly aria-label="Proposta per copiar" hidden></textarea></div>

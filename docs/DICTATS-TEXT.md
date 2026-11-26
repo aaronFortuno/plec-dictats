@@ -180,3 +180,9 @@ Amb `stage: "review"`, la taula permet suggerir un codi i una imatge per cel·la
 Un cop aprovats els noms i les imatges, integrar els canvis i posar `stage: "final"`: el mateix diàleg esdevé informatiu, sense camps editables ni còpia/exportació. Els codis d’alumnat no es desen ni depenen d’aquest esborrany docent. Cap petició de síntesi en aquesta iteració.
 
 Validació 1.45: 60 comprovacions locals passades. Inclou la matriu immutable, els àlies anteriors, les 36 imatges, les propostes independents del reproductor, col·lisions de noms, persistència, còpia i alternativa manual, restabliment, focus de teclat, mòbil/tema fosc i estat final de només lectura. La comprovació nova s’ha repetit després de corregir l’espera de tancament del test i el títol de pausa breu detectat a la revisió visual. No s’ha comprovat el desplegament remot.
+
+### Graella compacta · 1.45.1
+
+Els tres blocs de pausa es mostren de costat en un diàleg ample, amb quatre files i tres velocitats per bloc. Cada cel·la només conté la imatge i el nom editable, sense vores ni descripció addicional. Les propostes anteriors es conserven; la còpia només inclou les diferències. En pantalles estretes s’alterna entre les pauses amb tres pestanyes, conservant una graella llegible. El mode final continua sent de només lectura.
+
+Comprovat sense scroll a 1440×900, 1366×768, 1280×720 i 1024×768; revisió de pestanyes a 390/320 px, edició, còpia, recuperació de propostes i mode final. Passades també les comprovacions del protocol, generació de catàlegs i interfície castellana. Sense síntesi ni comprovació remota.
