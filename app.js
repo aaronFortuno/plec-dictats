@@ -259,6 +259,7 @@
     }
   });
   const releases = [
+    ['1.45.2', '2026-11-26', [t('Codis de ritme aprovats: taula informativa amb imatges, sense edició ni exportació de propostes.')]],
     ['1.45.1', '2026-11-26', [t('Graella compacta de codis: tres blocs de costat, imatge i nom editable, sense requadres ni descripcions redundants.')]],
     ['1.45', '2026-11-26', [t('Taula editable de codis de ritme: propostes de noms i imatges, amb còpia de canvis.'), t('Codis amb il·lustracions neutres per recordar els ajustos. Els noms anteriors continuen funcionant.')]],
     ['1.44', '2026-11-26', [t('Codis de ritme opcionals per recuperar mots, velocitat i pausa en qualsevol dispositiu; codi dels ajustos al final.'), t('El mode de textos passa a dir-se Frases. Incorporem les set incidències d’àudio de LL02 comunicades pel docent, pendents de corregir.')]],

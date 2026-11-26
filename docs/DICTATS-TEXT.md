@@ -186,3 +186,9 @@ Validació 1.45: 60 comprovacions locals passades. Inclou la matriu immutable, e
 Els tres blocs de pausa es mostren de costat en un diàleg ample, amb quatre files i tres velocitats per bloc. Cada cel·la només conté la imatge i el nom editable, sense vores ni descripció addicional. Les propostes anteriors es conserven; la còpia només inclou les diferències. En pantalles estretes s’alterna entre les pauses amb tres pestanyes, conservant una graella llegible. El mode final continua sent de només lectura.
 
 Comprovat sense scroll a 1440×900, 1366×768, 1280×720 i 1024×768; revisió de pestanyes a 390/320 px, edició, còpia, recuperació de propostes i mode final. Passades també les comprovacions del protocol, generació de catàlegs i interfície castellana. Sense síntesi ni comprovació remota.
+
+### Codis aprovats · 1.45.2
+
+El docent ha aprovat els 36 codis i les seves imatges. `content/rhythm-labels.json` passa a `stage: "final"`, revisió `rhythm-labels-v1`, sense canviar cap correspondència. La taula és només informativa: s’han retirat el codi d’edició, la persistència de propostes, els botons de còpia/restabliment i els camps d’exportació. Les propostes antigues del navegador no es llegeixen ni alteren la taula. Es mantenen el disseny compacte, les pestanyes mòbils i una explicació breu d’ús. El botó de l’alumne per copiar el seu codi final continua disponible.
+
+Validació local: matriu i àlies, 36 imatges i absència de controls d’edició/exportació, propostes antigues ignorades, graella sense scroll en ordinador, pestanyes mòbils/tema fosc, reproductor de Frases i generació coherent dels catàlegs. Sense síntesi ni comprovació remota.

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "stage": "review",
-  "revision": "rhythm-labels-review-1",
+  "stage": "final",
+  "revision": "rhythm-labels-v1",
   "entries": {
     "FAR": {
       "code": "FAR",
