@@ -259,6 +259,7 @@
     }
   });
   const releases = [
+    ['1.41', '2026-11-26', [t('Dictat normal: velocitats 100/90/80 % i botons directes per ajustar mots, velocitat i pausa, sense desplegables.')]],
     ['1.40', '2026-11-25', [t('Dictat normal amb fins a tres escoltes automàtiques, espera segons els mots i controls per aturar-les o ajustar el temps d’escriptura.')]],
     ['1.39.2', '2026-11-25', [t('Revisió dels àudios per fragment, notes i còpia conjunta d’errors com a text pla. Reproductor fix sobre les columnes de l’escaleta.')]],
     ['1.39.1', '2026-11-25', [t('Escolta seguida de les quatre versions del dictat des de l’escaleta, amb pausa i navegació per revisar els àudios.')]],

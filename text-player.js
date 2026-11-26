@@ -14,6 +14,9 @@
  window.PlecTextPlayer={active:true};document.body.dataset.activity='text-player';
  const root=$('focus-root');$('exit-focus').hidden=false;
  let settings=T.options(Object.fromEntries(params)),groups=entry?T.fragments(entry,settings.pace):[],index=0,plays=0,completedThrough=0,scene='ready',audio=null,loading=null,loadedPath=null,epoch=0,frame,playing=false,automatic=true,waitFactor=1;
+ const controls={pace:{label:'Mots',less:'Menys mots per fragment',more:'Més mots per fragment',values:[2,4,6,10],format:value=>({2:'2–3',4:'4–5',6:'6–8',10:'9–12'})[value]},rate:{label:'Velocitat',less:'Llegeix més a poc',more:'Llegeix més ràpid',values:[.8,.9,1],format:value=>Math.round(value*100)+' %'},wait:{label:'Pausa',less:'Menys temps per escriure',more:'Més temps per escriure',values:[.8,1,1.25],format:value=>({'0.8':'4–10 s','1':'4–12 s','1.25':'4–15 s'})[value]}};
+ for(const [mount,prefix]of [['tx-ready-controls','tx-'],['tx-adjust','tx-adjust-']])$(mount).innerHTML=Object.entries(controls).map(([key,c])=>`<div class="tx-step"><span id="${prefix+key}-label">${c.label}</span><div role="group" aria-labelledby="${prefix+key}-label"><button type="button" data-adjust="${key}" data-step="-1" aria-label="${c.less}" title="${c.less}">−</button><output id="${prefix+key}" aria-live="polite"></output><button type="button" data-adjust="${key}" data-step="1" aria-label="${c.more}" title="${c.more}">+</button></div></div>`).join('');
+ function syncControls(){for(const mount of ['tx-ready-controls','tx-adjust'])for(const [key,c]of Object.entries(controls)){const row=$(mount).querySelector(`[data-adjust="${key}"]`).closest('.tx-step'),value=key==='wait'?waitFactor:settings[key],at=c.values.indexOf(value);row.querySelector('output').textContent=c.format(value);for(const button of row.querySelectorAll('button'))button.disabled=!entry||(Number(button.dataset.step)<0?at===0:at===c.values.length-1);}}
  const repeat=window.PlecTextRepeat.create({onTick:seconds=>{$('tx-countdown').hidden=false;$('tx-countdown').textContent='Tornaràs a sentir el fragment d’aquí a '+seconds+' s';},onEnd:()=>{cancelRepeat();if(automatic&&scene==='player'&&!document.hidden&&plays<3)play();}});
  function cancelRepeat(){repeat.cancel();$('tx-countdown').hidden=true;}
  function stop(){epoch++;cancelAnimationFrame(frame);cancelRepeat();audio?.pause();playing=false;}
@@ -21,8 +24,8 @@
  function show(name){scene=name;for(const key of ['ready','player','paused','finished'])$('tx-'+key).hidden=key!==name;}
  function links(){if(!entry)return;const base=new URL('../../',location.href).href;for(const id of ['composer-link','tx-back'])$(id).href=T.url(entry,settings,false,base);}
  function setup(){
+  syncControls();
   if(!entry){$('tx-setup-error').hidden=false;$('tx-setup-error').textContent='Aquest dictat de text no està disponible en aquesta llengua.';$('tx-start').disabled=true;return;}
-  for(const prefix of ['tx-','tx-adjust-']){ $(prefix+'pace').value=settings.pace;$(prefix+'rate').value=settings.rate; }
   $('tx-summary').textContent=`${entry.code} · ${T.wordCount(T.text(entry))} paraules · ${groups.length} fragments`;
   $('tx-start').disabled=!entry.audio;
   if(!entry.audio){$('tx-setup-error').hidden=false;$('tx-setup-error').textContent='L’àudio d’aquest prototip encara està en preparació.';}
@@ -79,18 +82,15 @@
  document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement)pause();});
  $('tx-resume').addEventListener('click',async()=>{await fullscreen();show('player');draw();$('tx-listen').focus();wait();});
  $('tx-auto').addEventListener('click',()=>{automatic=!automatic;if(!automatic)stop();draw();if(automatic&&!playing&&plays<3){if(plays===0)play();else wait();}});
- $('tx-wait-factor').addEventListener('change',()=>{waitFactor=Number($('tx-wait-factor').value);cancelRepeat();if(!playing)wait();});
- $('tx-adjust').addEventListener('toggle',()=>{if($('tx-adjust').open&&scene==='player'){automatic=false;stop();draw();}});
  $('exit-focus').addEventListener('click',()=>{stop();show('ready');document.exitFullscreen?.().catch(()=>{});$('tx-title').focus();});
  $('tx-restart').addEventListener('click',()=>{stop();show('ready');$('tx-title').focus();});
- function change(prefix){
-  if(!entry)return;
-  stop();const previousPace=settings.pace;
-  settings=T.options({...settings,pace:$(prefix+'pace').value,rate:$(prefix+'rate').value});groups=T.fragments(entry,settings.pace);
-  if(previousPace!==settings.pace){index=T.fragmentIndex(groups,completedThrough);plays=0;loading=null;loadedPath=null;audio=null;}
-  setup();if(scene==='player'){draw();wait();}
+ function change(key,step){
+  if(!entry)return;const c=controls[key],old=key==='wait'?waitFactor:settings[key],value=c.values[c.values.indexOf(old)+step];if(value===undefined)return;
+  if(key==='wait'){waitFactor=value;cancelRepeat();}
+  else{settings=T.options({...settings,[key]:value});if(key==='pace'){stop();groups=T.fragments(entry,settings.pace);index=T.fragmentIndex(groups,completedThrough);plays=0;loading=null;loadedPath=null;audio=null;}else if(audio)audio.playbackRate=value;}
+  setup();if(scene==='player'){draw();if(!playing)wait();}
   const url=new URL(location.href);url.searchParams.set('pace',settings.pace);url.searchParams.set('rate',settings.rate);history.replaceState(null,'',url);
  }
- for(const prefix of ['tx-','tx-adjust-'])for(const key of ['pace','rate'])$(prefix+key).addEventListener('change',()=>change(prefix));
+ $('text-player-root').addEventListener('click',event=>{const button=event.target.closest('[data-adjust]');if(button)change(button.dataset.adjust,Number(button.dataset.step));});
  window.addEventListener('pagehide',stop);setup();show('ready');
 })();

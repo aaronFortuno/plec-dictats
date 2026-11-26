@@ -6,14 +6,14 @@ const T=require('../text-dictations.js'),W=require('../text-worksheet.js'),entry
  assert.equal(T.text(entry),entry.phrases.join(' '));assert.equal(T.wordCount(T.text(entry)),63);
  assert.equal(T.find('LL01'),entry);assert.equal(T.find('ca-ll-001-v1','es'),undefined);
  assert.deepEqual(T.options({pace:999,rate:3,fold:'bad',side:'invalid',fontSize:99,lineSpacing:-1}),{pace:6,rate:1,fold:'vertical',side:'end',fontSize:14,lineSpacing:10});
- assert.equal(entry.paragraphs.length,3);assert.equal(T.options().side,'end');
+ assert.equal(entry.paragraphs.length,3);assert.equal(T.options().side,'end');assert.equal(T.options({rate:.85}).rate,.9);assert.equal(T.options({rate:.75}).rate,.8);for(const rate of [.8,.9,1])assert.equal(T.options({rate}).rate,rate);
  for(const pace of [2,4,6,10,0]){
   const segments=T.fragments(entry,pace);assert.equal(segments.map(s=>s.text).join(' '),T.text(entry));
   assert.equal(segments[0].startWord,1);assert.equal(segments.at(-1).endWord,63);
   if(pace===0)assert.equal(segments.length,6);
  }
  assert(T.fragments(entry,4).length>T.fragments(entry,10).length);
- const link=new URL(T.url(entry,{pace:10,rate:.85},true));assert.equal(link.host,'plec.ortogra.fi');assert.equal(link.pathname,'/ca/dictat/');assert.equal(link.searchParams.get('pace'),'10');assert.equal(link.searchParams.get('rate'),'0.85');assert(!link.searchParams.has('seed'));
+ const link=new URL(T.url(entry,{pace:10,rate:.85},true));assert.equal(link.host,'plec.ortogra.fi');assert.equal(link.pathname,'/ca/dictat/');assert.equal(link.searchParams.get('pace'),'10');assert.equal(link.searchParams.get('rate'),'0.9');assert(!link.searchParams.has('seed'));
  const printLink=new URL(T.url(entry,{fontSize:13,lineSpacing:11}));assert.equal(printLink.searchParams.get('fontSize'),'13');assert.equal(printLink.searchParams.get('lineSpacing'),'11');assert(!link.searchParams.has('fontSize'));
  fs.mkdirSync('output/pdf',{recursive:true});
  for(const fold of ['vertical','horizontal'])for(const side of ['start','end']){
