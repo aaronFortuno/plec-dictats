@@ -1,24 +1,7 @@
 /* Versioned texts are independent of immutable word seed catalogues. */
-(function(root,factory){const node=typeof module==='object'&&module.exports,api=factory(node?require('./audio/texts/index.json'):root.PlecTextAudio||{});if(node)module.exports=api;else root.PlecTexts=api;})(typeof globalThis==='undefined'?this:globalThis,function(audio){
+(function(root,factory){const node=typeof module==='object'&&module.exports,api=factory(node?require('./audio/texts/index.json'):root.PlecTextAudio||{},node?require('./content/texts/index.json').map(id=>require('./content/texts/'+id+'.json')):root.PlecTextCatalogue||[]);if(node)module.exports=api;else root.PlecTexts=api;})(typeof globalThis==='undefined'?this:globalThis,function(audio,entries){
  'use strict';
- const catalogue=[{
-  id:'ca-ll-001-v1',code:'LL01',language:'ca',title:'Una exposició al col·legi',focuses:['signes'],focusLabels:['l·l'],stage:'Cicle superior',status:'pilot',
-  paragraphs:[
-   'Al col·legi, la Júlia prepara una petita exposició sobre les papallones. Ha enganxat una il·lustració groga al costat d’una col·lecció de fulles.',
-   'El Marc col·labora amb ella i col·loca els cartells al passadís. Quan encenen la llum, una bombeta il·lumina tota la taula.',
-   'La mestra els felicita: la feina ha quedat excel·lent. Demà, els companys de la classe visitaran l’exposició amb molta il·lusió.'
-  ],
-  // Phrase ends are editorial; timestamps are added only after receiving the take.
-  phrases:[
-   'Al col·legi,','la Júlia prepara','una petita exposició','sobre les papallones.',
-   'Ha enganxat','una il·lustració groga','al costat','d’una col·lecció de fulles.',
-   'El Marc col·labora','amb ella','i col·loca els cartells','al passadís.',
-   'Quan encenen la llum,','una bombeta il·lumina','tota la taula.',
-   'La mestra els felicita:','la feina ha quedat excel·lent.',
-   'Demà, els companys de la classe','visitaran l’exposició','amb molta il·lusió.'
-  ],
-  audio:null
- }];
+ const catalogue=entries.map(entry=>({...entry}));
  for(const entry of catalogue)entry.audio=audio[entry.id]||null;
  const text=entry=>entry.paragraphs.join(' '),wordCount=value=>value.trim().split(/\s+/u).filter(Boolean).length;
  function find(id,language='ca'){return catalogue.find(e=>e.language===language&&(e.id===id||e.code===String(id).toUpperCase()));}

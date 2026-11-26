@@ -23,7 +23,8 @@ function emit(name, text) {
 const bundle = (global, data) => '/* Generat amb tools/build-catalogs.cjs. Edita el JSON font. */\n(function(root){root.' + global + '=' + JSON.stringify(data) + ';if(typeof module!=="undefined")module.exports=root.' + global + ';})(typeof window==="undefined"?globalThis:window);\n';
 emit('text-audio.js',bundle('PlecTextAudio',json('audio/texts/index.json')));
 emit('text-review-notes.js',bundle('PlecTextAudioReview',json('audio/texts/review-notes.json')));
-emit('prosody-draft.js',bundle('PlecProsodyDraft',json('content/prosody/ca-ll-001-v1.json')));
+emit('text-catalogue.js',bundle('PlecTextCatalogue',json('content/texts/index.json').map(id=>json('content/texts/'+id+'.json'))));
+  emit('prosody-draft.js',bundle('PlecProsodyDraft',Object.fromEntries(json('content/texts/index.json').map(id=>[id,json('content/prosody/'+id+'.json')]))));
 const manifest = json('locales/manifest.json');
 if (!Array.isArray(manifest.languages) || !manifest.languages.length || !manifest.languages.some(item=>item.id===manifest.defaultLanguage)) throw new Error('Invalid language manifest');
 if (new Set(manifest.languages.map(item=>item.id)).size!==manifest.languages.length || new Set(manifest.languages.map(item=>item.path)).size!==manifest.languages.length) throw new Error('Duplicate language manifest entry');

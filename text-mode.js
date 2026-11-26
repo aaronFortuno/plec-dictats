@@ -2,12 +2,15 @@
 (function(){
  'use strict';
  const $=id=>document.getElementById(id),T=window.PlecTexts,button=document.querySelector('[data-mode="text"]');
- const entry=T.catalogue.find(e=>e.language===window.PlecLanguage.id);
+ let entry=T.catalogue.find(e=>e.language===window.PlecLanguage.id);
  let active=false,settings=T.options(),prepared=null,generation=0;
  const layoutControls={fold:'text-fold',side:'text-side',pace:'text-pace',rate:'text-rate',fontSize:'text-font-size',lineSpacing:'text-line-spacing'};
+ $('text-selection').replaceChildren(...T.catalogue.filter(e=>e.language===window.PlecLanguage.id).map(e=>new Option(e.code+' · '+e.title,e.id)));
+ $('text-selection').addEventListener('change',()=>{const next=T.find($('text-selection').value,window.PlecLanguage.id);if(next){entry=next;render();}});
  if(!entry){button.disabled=true;button.title=window.PlecLanguageTools.text('Pilot disponible en català');}
  function notify(message){$('text-status').textContent=message;}
  async function render(){
+  $('text-title').textContent=entry.title;$('text-code').textContent=entry.code;$('text-selection').value=entry.id;
   const ticket=++generation;prepared=null;$('text-download').disabled=true;$('text-open-student').disabled=false;
   document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode==='text')));
   $('text-fragment-summary').textContent=T.fragments(entry,settings.pace).length+' fragments · '+T.wordCount(T.text(entry))+' paraules';
@@ -51,6 +54,7 @@
    if(!entry)return false;
    const id=input?.get?.('text');
    if(id&&!T.find(id,entry.language)){$('status').textContent='Aquest dictat de text no està disponible.';$('status').classList.add('visible');return false;}
+   if(id)entry=T.find(id,entry.language);
    if(input)settings=T.options(Object.fromEntries(input));
    active=true;document.body.dataset.activity='text';
    $('prosody-open').hidden=!window.PlecProsody.has(entry);

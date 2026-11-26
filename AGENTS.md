@@ -12,6 +12,12 @@
 - Lot completat: una petició, 219,66 s totals, quatre MP3 publicats com a pilot pendent d’audició. No repetir ni regenerar per iniciativa pròpia. La presa anterior de `text-ll01` segueix sense autorització de publicació.
 - La puntuació locutada ha de formar part de la mateixa presa i utilitzar sempre la mateixa veu que narra, també en futurs lots. No enganxar un banc de locucions d’una altra veu.
 
+## LL02 autoritzat i rebut · 26/11/2026
+
+- El docent ha validat «Llavors al jardí» (57 mots) i autoritzat una única petició amb Aoede, quatre ritmes i puntuació amb la mateixa veu. Autorització congelada: `audio/texts/batches/ll02-four-rhythms-v1.json`.
+- Resposta conservada: 211,83 s en total, quatre versions publicades com a pilot pendent d’audició. No repetir la petició ni regenerar correccions sense un nou encàrrec explícit. Els bloqueigs previs de lock/interval no han enviat cap petició.
+- Els textos són a `content/texts/` i les escaletes a `content/prosody/`. Conserva els identificadors LL01 i LL02 i les seves empremtes de producció.
+
 **Estat 25/10/2026:** l’usuari ha reautoritzat encàrrecs acotats a K3 amb esforç baix, després de les proves costoses amb K3.1. T008 i T009 estan completats; no hi ha cap encàrrec actiu. Conserva pressupostos, límits de passos i temps, eines acotades i revisió de Codex abans d’integrar. El registre vigent és `../protocol-codex-kimi/ESTAT-WORKER.json`. No canviïs configuració global.
 
 - L’usuari explica les necessitats i confirma visualment el resultat. Codex especifica, coordina, revisa i integra; **Kimi K3 Low** pot implementar encàrrecs acotats mitjançant Kimi Code CLI. Separa els fitxers dels encàrrecs i evita escriptors simultanis sobre els mateixos fitxers.

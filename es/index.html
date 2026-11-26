@@ -22,11 +22,11 @@
   <script defer src="../site-links.js?v=1.32.0"></script>
   <script defer src="../analytics.js?v=1.32.0"></script>
   <script defer src="../audio-varieties.js?v=1.33.0"></script>
-  <script defer src="../locales/manifest.js?v=1.41.0"></script>
-  <script defer src="../locales/es/config.js?v=1.41.0"></script>
-  <script defer src="../locales/es/messages.js?v=1.41.0"></script>
-  <script defer src="../language.js?v=1.41.0"></script>
-  <script defer src="../catalogs/es/catalog.js?v=1.41.0"></script>
+  <script defer src="../locales/manifest.js?v=1.42.0"></script>
+  <script defer src="../locales/es/config.js?v=1.42.0"></script>
+  <script defer src="../locales/es/messages.js?v=1.42.0"></script>
+  <script defer src="../language.js?v=1.42.0"></script>
+  <script defer src="../catalogs/es/catalog.js?v=1.42.0"></script>
   <script defer src="../catalogs/es/editions/index.js?v=1.32.0"></script>
   <script defer src="../seeds.js?v=1.32.0"></script>
   <script defer src="../seeds-v2.js?v=1.36.0"></script>
@@ -47,17 +47,18 @@
   <script defer src="../list-editor.js?v=1.36.0"></script>
   <script defer src="../pronunciations.js?v=1.36.0"></script>
   <script defer src="../composer-search.js?v=1.32.0"></script>
-  <script defer src="../text-audio.js?v=1.39.2"></script>
-  <script defer src="../text-dictations.js?v=1.41.0"></script>
+  <script defer src="../text-audio.js?v=1.42.0"></script>
+  <script defer src="../text-catalogue.js?v=1.42.0"></script>
+<script defer src="../text-dictations.js?v=1.42.0"></script>
   <script defer src="../text-worksheet.js?v=1.37.3"></script>
-  <script defer src="../prosody-draft.js?v=1.39.0"></script>
-  <script defer src="../prosody.js?v=1.38.0"></script>
+  <script defer src="../prosody-draft.js?v=1.42.0"></script>
+  <script defer src="../prosody.js?v=1.42.0"></script>
   <script defer src="../prosody-pdf.js?v=1.39.0"></script>
   <script defer src="../text-review-notes.js?v=1.39.2"></script>
   <script defer src="../prosody-review.js?v=1.39.2"></script>
   <script defer src="../prosody-view.js?v=1.39.2"></script>
-  <script defer src="../text-mode.js?v=1.39.0"></script>
-  <script defer src="../app.js?v=1.41.0"></script>
+  <script defer src="../text-mode.js?v=1.42.0"></script>
+  <script defer src="../app.js?v=1.42.0"></script>
   <script defer src="../workspace-panels.js?v=1.32.0"></script>
 </head>
 <body>
@@ -85,9 +86,10 @@
         </div>
         <section class="text-config" aria-labelledby="text-title">
   <p class="text-pilot-label">Dictado normal · Prototipo</p>
+  <label for="text-selection">Texto del dictado<select id="text-selection"></select></label>
   <h2 id="text-title">Una exposición en el colegio</h2>
   <div class="text-focus"><span>Qué practicar</span><b>l·l</b></div>
-  <p>Primer piloto en catalán para practicar la ele geminada. Ampliaremos los textos y los aspectos de práctica después de validarlo.</p>
+  <p>Textos para practicar la ele geminada catalana. Audios pendientes de revisión docente.</p>
   <label for="text-fold">Pliegue en dos partes<select id="text-fold"><option value="vertical">Vertical · izquierda y derecha</option><option value="horizontal">Horizontal · arriba y abajo</option></select></label>
   <label for="text-side">Posición del modelo<select id="text-side"><option value="start">Primera mitad</option><option value="end">Segunda mitad</option></select></label>
   <div class="text-layout-controls"><label for="text-font-size">Tamaño del modelo (pt)<input id="text-font-size" type="number" inputmode="numeric" min="12" max="16" step="1" value="14" required></label><label for="text-line-spacing">Interlineado de la pauta (mm)<input id="text-line-spacing" type="number" inputmode="numeric" min="8" max="12" step="1" value="10" required></label></div>
@@ -105,7 +107,7 @@
       <aside class="management card" aria-label="Gestión de la hoja y el dictado oral">
   <div class="management-scroll">
     <div class="text-management">
-      <section aria-labelledby="text-sheet-heading"><h2 id="text-sheet-heading">Tu hoja</h2><div class="text-id-row"><output>LL01</output><button type="button" class="icon-button" id="text-share" aria-label="Copiar el enlace de la hoja en el preparador" title="Copiar el enlace de la hoja en el preparador"><span data-icon="share-2"></span></button></div><button type="button" class="button primary" id="text-download" disabled><span data-icon="download"></span> Descargar el PDF</button></section>
+      <section aria-labelledby="text-sheet-heading"><h2 id="text-sheet-heading">Tu hoja</h2><div class="text-id-row"><output id="text-code">LL01</output><button type="button" class="icon-button" id="text-share" aria-label="Copiar el enlace de la hoja en el preparador" title="Copiar el enlace de la hoja en el preparador"><span data-icon="share-2"></span></button></div><button type="button" class="button primary" id="text-download" disabled><span data-icon="download"></span> Descargar el PDF</button></section>
       <section aria-labelledby="text-oral-heading"><h2 id="text-oral-heading">Dictado oral</h2>
         <label for="text-pace">Palabras aproximadas por fragmento<select id="text-pace"><option value="2">2–3 palabras</option><option value="4">4–5 palabras</option><option value="6">6–8 palabras</option><option value="10">9–12 palabras</option></select></label>
         <label for="text-rate">Velocidad<select id="text-rate"><option value="1">Habitual</option><option value="0.9">Más despacio · 90 %</option><option value="0.8">Mucho más despacio · 80 %</option></select></label>
@@ -140,7 +142,7 @@
 
 
   </main>
-  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurso abierto para escuchar, escribir y aprender.</p><p class="umbrella-project">Un proyecto de <a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacidad</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el proyecto · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versión 1.41. Abrir el historial de cambios">v1.41</button></span></footer>
+  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurso abierto para escuchar, escribir y aprender.</p><p class="umbrella-project">Un proyecto de <a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacidad</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el proyecto · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versión 1.42. Abrir el historial de cambios">v1.42</button></span></footer>
   <div id="status" class="toast" role="status" aria-live="polite"></div>
   <dialog id="catalog-dialog" aria-labelledby="catalog-title">
     <div class="dialog-head"><h2 id="catalog-title">El catálogo</h2><button class="icon-button" data-close aria-label="Cerrar el catálogo"><span data-icon="x"></span></button></div>

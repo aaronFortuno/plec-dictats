@@ -115,3 +115,19 @@ S’elimina l’acordió d’ajustos i tots els selectors desplegables de l’al
 Les velocitats són ara **80 %, 90 % i 100 %**. El preparador docent, els enllaços i el reproductor comparteixen aquestes opcions. Els antics `rate=0.75` i `rate=0.85` es recuperen com 80 % i 90 %, respectivament. Els controls del mode de paraules i pseudoparaules no canvien.
 
 La velocitat es pot canviar mentre sona el fragment, conservant posició i to; no reinicia l’escolta ni en consumeix una de nova. La pausa d’escriptura segueix limitada a 4–15 s; canviar-la durant la lectura afecta l’espera següent. Canviar els mots manté l’últim mot confirmat i tria el fragment que conté el primer pendent, amb possible repetició però sense omissions. No es creen àudios nous ni es modifiquen les preses publicades.
+
+## LL02 · Llavors al jardí · 26/11/2026
+
+57 mots en tres paràgrafs; set paraules amb l·l (col·lecció, il·lusió, parcel·la, col·labora, col·loca, il·lustració, excel·lent). Text validat expressament pel docent, amb autorització d’una única petició de quatre ritmes, Aoede, català central i puntuació amb la mateixa veu. S’han preparat 26/12/8/6 fragments; els ajustos de sentit fora dels rangs estan justificats a l’escaleta.
+
+Estimació nominal 244 s; conservadora 359 s, sota el topall de 390 s. La petició s’ha enviat abans del canvi de quota diària, després d’esperar el lock compartit i la separació respecte de Sentit. Els dos bloqueigs previs no han reservat ni enviat peticions. Resultat únic: **211,83 s**, 662 tokens d’entrada i 5.296 de sortida. Resposta i presa originals conservades a `output/audio/ll02-four-rhythms-v1/fc409397881b/`; aprovació i rebut públics a `audio/texts/batches/`.
+
+El proveïdor ha retornat un prefix PCM de 70 ms (3.360 bytes) abans del C2PA i del flux intercalat. La recuperació local accepta aquest nou format observat mantenint totes les comprovacions anteriors i totes les mostres PCM. No s’ha reenviat la petició ni s’ha modificat la velocitat de la presa. Les quatre versions duren 70,65 / 48,12 / 52,41 / 40,65 s, MP3 mono de 24 kHz i 64 kbit/s.
+
+Alineació orientativa del 95,06 %. El límit després de F7 en 4–5 mots («…les arrels») s’ha situat amb àncores de context i una finestra silenciosa verificada perquè Vosk no reconeix bé els mots finals. Consta com `asrBoundaryUncertain` al rebut. Això no valida la pronunciació: prioritzar l’audició de F6–F8 d’aquesta versió i comprovar també la resta. No s’han afegit banderes d’error a partir de l’ASR; les marca el docent escoltant.
+
+Els textos passen a `content/texts/`, amb una llista indexada i el paquet generat `text-catalogue.js`. LL01 conserva exactament text, pla, MP3, empremtes, notes i codi; el selector docent permet alternar sense modificar les llavors de paraules/pseudoparaules. Els enllaços i QR de LL02 identifiquen `ca-ll-002-v1`; el codi LL02 també s’admet a l’entrada de l’alumnat. L’escaleta, l’escolta seguida i l’exportació de marques funcionen separadament per a cada presa.
+
+`tools/prosody-batch.cjs --batch=ll02-four-rhythms-v1` només prepara i estima per defecte. Qualsevol intent de generació exigeix aprovació exacta i un màxim explícit d’una petició. Una presa rebuda no es reenvia. `tools/prepare-prosody-pilot.cjs --batch=ll02-four-rhythms-v1` treballa exclusivament sobre la resposta local. Els lots LL01 i LL02 estan enumerats expressament: no s’accepten identificadors arbitraris.
+
+Validació local de LL02: 58 comprovacions passades, inclosos selector i recàrrega de cada text, recuperació per codi/URL, descodificació dels vuit MP3, escaletes independents, exportació de marques, integritat dels rangs i quatre variants de plec en una pàgina. Sense comprovació del desplegament remot.

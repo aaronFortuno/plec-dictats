@@ -1,0 +1,26 @@
+{
+  "id": "ll02-four-rhythms-v1",
+  "textId": "ca-ll-002-v1",
+  "status": "approved-for-pilot",
+  "approvedBy": "docent",
+  "approvedAt": "2026-11-26",
+  "confirmation": "Sí, valida el text i envia el lot amb Aoede. Text Llavors al jardí (57 mots), català central, quatre ritmes i puntuació amb la mateixa veu, una única petició amb durada conservadora inferior a 6 min 30 s.",
+  "voice": "Aoede",
+  "maximumNewRequests": 1,
+  "requestHash": "fc409397881ba7ff7aba4e9995373bd916f55cdd88ac0cf4a17e4af7e186b61a",
+  "planHash": "31b1bb41e9fa45bac842a13c836573a5a48e2128547bbd430e7117042b8b38cb",
+  "estimate": {
+    "spokenWords": 324,
+    "cueCount": 40,
+    "plannedPauseSeconds": 94.2,
+    "nominalSeconds": 244,
+    "conservativeSeconds": 359,
+    "maximumSeconds": 390,
+    "nominalWpm": 130,
+    "conservativeWpm": 95,
+    "safetyFactor": 1.2,
+    "estimatedInputTokens": 6688
+  },
+  "publishPilot": true,
+  "pronunciationValidated": false
+}

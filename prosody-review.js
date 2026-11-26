@@ -5,7 +5,7 @@
  function create(entry,plan,storage){
   const take=entry.audio?.requestHash+':'+entry.audio?.rawSha256,key='plec-text-review-v1:'+entry.id+':'+take,valid=new Set(plan.variants.flatMap(v=>v.fragments.map(f=>id(v.id,f.number))));
   let marks={},error='',writable=true;
-  const initial=known[entry.id];if(initial?.requestHash===entry.audio?.requestHash)for(const issue of initial.issues)if(valid.has(id(issue.variant,issue.fragment)))marks[id(issue.variant,issue.fragment)]=issue.note;
+  const initial=known[entry.id];if(initial&&initial.requestHash===entry.audio?.requestHash)for(const issue of initial.issues)if(valid.has(id(issue.variant,issue.fragment)))marks[id(issue.variant,issue.fragment)]=issue.note;
   try{if(!storage)throw Error('Storage unavailable');const saved=storage.getItem(key);if(saved){const parsed=JSON.parse(saved);if(!parsed||Array.isArray(parsed)||typeof parsed!=='object')throw Error('Invalid notes');marks=Object.fromEntries(Object.entries(parsed).filter(([k,v])=>valid.has(k)&&typeof v==='string').map(([k,v])=>[k,v.slice(0,1200)]));}}catch{writable=false;error='No es poden recuperar les marques desades. Copia les notes abans de sortir.';}
   function save(){if(!writable)return;try{storage.setItem(key,JSON.stringify(marks));error='';}catch{error='Les marques només es conserven en aquesta sessió. Copia-les abans de sortir.';}}
   return {get:k=>marks[k],count:()=>Object.keys(marks).length,error:()=>error,

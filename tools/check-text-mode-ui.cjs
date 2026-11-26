@@ -11,6 +11,9 @@ const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLE
   const seed=await page.locator('#seed-code').textContent();
   await page.click('[data-mode="text"]');await page.waitForFunction(()=>!document.querySelector('#text-download').disabled);
   assert.equal(await page.locator('[data-mode="text"]').getAttribute('aria-pressed'),'true');
+  await page.selectOption('#text-selection','ca-ll-002-v1');await page.waitForFunction(()=>!document.querySelector('#text-download').disabled);assert.equal(await page.locator('#text-code').textContent(),'LL02');assert((await page.locator('#sheet-preview').textContent()).includes('Llavors al jardí'));assert.equal(new URL(page.url()).searchParams.get('text'),'ca-ll-002-v1');
+  await page.reload();await page.waitForFunction(()=>!document.querySelector('#text-download').disabled);assert.equal(await page.locator('#text-selection').inputValue(),'ca-ll-002-v1');
+  await page.selectOption('#text-selection','ca-ll-001-v1');await page.waitForFunction(()=>!document.querySelector('#text-download').disabled);
   assert.equal(await page.locator('#text-side').inputValue(),'end');
   assert.equal(await page.locator('#text-font-size').inputValue(),'14');assert.equal(await page.locator('#text-line-spacing').inputValue(),'10');
   assert.equal(await page.locator('#text-font-size').getAttribute('type'),'number');assert.equal(await page.locator('#text-line-spacing').getAttribute('type'),'number');
@@ -47,6 +50,9 @@ const {chromium}=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLE
    const variants=Object.values(PlecTexts.catalogue[0].audio.variants);
    return Promise.all(variants.map(v=>new Promise((resolve,reject)=>{const audio=new Audio('../../'+v.path);audio.onloadedmetadata=()=>resolve({actual:audio.duration,expected:v.seconds});audio.onerror=()=>reject(Error('Published pilot does not decode'));audio.load();})));
   });assert.equal(durations.length,4);assert(durations.every(d=>Math.abs(d.actual-d.expected)<.15));
+  await page.goto('http://127.0.0.1:4176/ca/dictat/?text=ca-ll-002-v1');await page.waitForSelector('#tx-ready:not([hidden])');assert(await page.locator('#tx-start').isEnabled());assert((await page.locator('#tx-summary').textContent()).includes('57 paraules'));
+  const secondDurations=await page.evaluate(async()=>Promise.all(Object.values(PlecTexts.find('LL02').audio.variants).map(v=>new Promise((resolve,reject)=>{const audio=new Audio('../../'+v.path);audio.onloadedmetadata=()=>resolve(Math.abs(audio.duration-v.seconds)<.15);audio.onerror=()=>reject(Error('LL02 media'));audio.load();}))));assert(secondDurations.every(Boolean));
+  await page.goto('http://127.0.0.1:4176/ca/dictat/?text=ca-ll-001-v1&pace=6&rate=1');
   // A local media double exercises the player. It neither synthesizes nor downloads speech.
   await page.route('**/text-audio.js?*',route=>route.fulfill({contentType:'text/javascript',body:'window.PlecTextAudio='+JSON.stringify({'ca-ll-001-v1':{...T.catalogue[0].audio,variants:Object.fromEntries(Object.entries(T.catalogue[0].audio.variants).map(([id,v])=>[id,{...v,path:'test-only-'+id+'.mp3',seconds:300}]))}})}));
   await page.addInitScript(()=>{

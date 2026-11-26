@@ -5,8 +5,10 @@ const root=path.resolve(__dirname,'..'),shared=path.resolve(root,'../output/sent
 const batchId='ll01-four-rhythms-v1',T=require('../text-dictations.js'),P=require('../prosody.js');
 const sha=value=>createHash('sha256').update(value).digest('hex');
 async function read(file,fallback){try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(e){if(e.code==='ENOENT')return fallback;throw e;}}
-function compile(){
- const entry=T.catalogue[0],plan=P.build(entry),content=[],items=[];
+function compile(selectedBatch=batchId){
+ if(!['ll01-four-rhythms-v1','ll02-four-rhythms-v1'].includes(selectedBatch))throw Error('Lot desconegut.');
+ const entry=selectedBatch===batchId?T.catalogue[0]:require('../content/texts/ca-ll-002-v1.json');
+ const planSource=require('../content/prosody/'+entry.id+'.json'),plan=P.build(entry,planSource),content=[],items=[];
  const common='Read all four complete renditions of this Catalan dictation, in order, using the SAME Aoede adult female voice and central Catalan pronunciation. The repeated text is intentional: do not omit or summarize any repetition. Speak only the supplied transcript, including punctuation announcements, never variant numbers or directions. Clear natural teacher diction at about 130-145 words per minute within phrases, NOT slow-motion spelling. Preserve lexical stress, complete consonants and audible natural alveolar l·l (never palatal ll). Keep timbre and base speaking speed consistent across renditions. No title, introduction, music, sound effects or added words. Pauses in metadata are silent recording margins, not spoken content.';
  for(const [variantIndex,variant]of plan.variants.entries())for(const fragment of variant.fragments){
   let run=[],start=fragment.start;
@@ -32,13 +34,13 @@ function compile(){
  const spokenWords=plan.variants.reduce((n,v)=>n+v.spokenWords,0),cueCount=plan.cues.length*plan.variants.length;
  const plannedPauseSeconds=plan.variants.flatMap(v=>v.fragments).reduce((n,f)=>n+f.pauseMs/1000,0)+cueCount*(plan.pauses.beforeCueMs+plan.pauses.afterCueMs)/1000+3*(plan.variants.length-1)+2;
  const nominalSeconds=Math.ceil(spokenWords*60/130+plannedPauseSeconds),conservativeSeconds=Math.ceil((spokenWords*60/95+plannedPauseSeconds)*1.2);
- const requestHash=sha(JSON.stringify(body)),planHash=sha(JSON.stringify(require('../content/prosody/ca-ll-001-v1.json')));
+ const requestHash=sha(JSON.stringify(body)),planHash=sha(JSON.stringify(planSource));
  const estimate={spokenWords,cueCount,plannedPauseSeconds:Number(plannedPauseSeconds.toFixed(2)),nominalSeconds,conservativeSeconds,maximumSeconds:390,nominalWpm:130,conservativeWpm:95,safetyFactor:1.2,estimatedInputTokens:Math.ceil(Buffer.byteLength(JSON.stringify(body),'utf8')/3)};
- return {batchId,entryId:entry.id,body,items,estimate,requestHash,planHash};
+ return {batchId:selectedBatch,entryId:entry.id,entry,plan,body,items,estimate,requestHash,planHash};
 }
 function assertEstimate(built){if(built.estimate.conservativeSeconds>built.estimate.maximumSeconds)throw Error('El lot supera el topall preventiu de 6 min 30 s. Cap petició enviada.');if(built.estimate.estimatedInputTokens>7900)throw Error('Cal compactar les instruccions d’entrada abans d’enviar.');}
 async function main(){
- const built=compile();assertEstimate(built);const folder=path.join(root,'output/audio',batchId,built.requestHash.slice(0,12));
+ const selected=process.argv.find(arg=>arg.startsWith('--batch='))?.slice(8),built=compile(selected);assertEstimate(built);const batchId=built.batchId,folder=path.join(root,'output/audio',batchId,built.requestHash.slice(0,12));
  console.log(JSON.stringify({batch:batchId,voice:'Aoede',requestHash:built.requestHash,planHash:built.planHash,estimate:built.estimate,folder}));
  if(!process.argv.includes('--generate'))return;
  if(!process.argv.includes('--max-requests=1'))throw Error('Cal limitar el lot a una única petició.');

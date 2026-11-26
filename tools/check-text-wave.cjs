@@ -1,0 +1,7 @@
+'use strict';
+const assert=require('node:assert/strict'),{recoverStreamedWave}=require('./streamed-text-wave.cjs');
+function fixture(size){const fmt=Buffer.alloc(16);fmt.writeUInt16LE(1,0);fmt.writeUInt16LE(1,2);fmt.writeUInt32LE(24000,4);fmt.writeUInt32LE(48000,8);fmt.writeUInt16LE(2,12);fmt.writeUInt16LE(16,14);const first=Buffer.alloc(size,7),rest=Buffer.alloc(960,9),parts=[];for(const [tag,data]of [['fmt ',fmt],['data',first],['C2PA',Buffer.from('c2pa manifest store\0jumb')]]){const header=Buffer.alloc(8);header.write(tag);header.writeUInt32LE(data.length,4);parts.push(header,data,...(data.length%2?[Buffer.alloc(1)]:[]));}const prefix=Buffer.concat(parts),header=Buffer.alloc(12);header.write('RIFF');header.writeUInt32LE(prefix.length+4,4);header.write('WAVE',8);return {bytes:Buffer.concat([header,prefix,rest]),pcm:Buffer.concat([first,rest])};}
+for(const size of [960,1920,3360,3840]){const f=fixture(size),r=recoverStreamedWave(f.bytes);assert(r.audio.subarray(44).equals(f.pcm));assert.equal(r.report.prefixPcmBytes,size);assert.equal(r.report.allPcmSamplesPreserved,true);assert.equal(r.report.voiceRetimed,false);assert.equal(r.report.seconds,f.pcm.length/48000);}
+assert.throws(()=>recoverStreamedWave(fixture(1000).bytes),/Unexpected first/);
+const invalid=fixture(3360).bytes;invalid.writeUInt32LE(16000,24);assert.throws(()=>recoverStreamedWave(invalid),/Unsupported PCM/);
+console.log('Streaming WAV: observed 20/40/70/80ms prefix frames preserved, unknown frame/PCM formats rejected, no samples removed or retimed. No network.');

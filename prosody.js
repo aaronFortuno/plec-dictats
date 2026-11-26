@@ -1,8 +1,8 @@
 /* Editorial rehearsal only. No audio client, credentials or approval mutations. */
-(function(root,factory){const node=typeof module==='object'&&module.exports,api=factory(node?require('./content/prosody/ca-ll-001-v1.json'):root.PlecProsodyDraft);if(node)module.exports=api;else root.PlecProsody=api;})(typeof globalThis==='undefined'?this:globalThis,function(draft){
+(function(root,factory){const node=typeof module==='object'&&module.exports,api=factory(node?Object.fromEntries(require('./content/texts/index.json').map(id=>[id,require('./content/prosody/'+id+'.json')])):root.PlecProsodyDraft);if(node)module.exports=api;else root.PlecProsody=api;})(typeof globalThis==='undefined'?this:globalThis,function(source){
  'use strict';
  const count=value=>value.trim().split(/\s+/u).filter(Boolean).length;
- function build(entry){
+ function build(entry,draft=source?.[entry.id]){
   if(!draft||entry.id!==draft.textId)throw Error('Encara no hi ha escaleta per a aquest text.');
   const text=entry.paragraphs.join(' '),words=[],paragraphEnds=[];
   entry.paragraphs.forEach((paragraph,p)=>{paragraph.split(/\s+/u).forEach(value=>words.push({index:words.length+1,text:value,paragraph:p+1}));paragraphEnds.push(words.length);});
@@ -30,5 +30,5 @@
   });
   return {...draft,words,cues,variants,wordCount:words.length,paragraphCount:paragraphEnds.length,spokenWordsPerVariant:words.length+cues.reduce((n,c)=>n+c.spokenWords,0)};
  }
- return {build,has:entry=>!!draft&&entry?.id===draft.textId};
+ return {build,has:entry=>!!entry&&!!source?.[entry.id]};
 });
