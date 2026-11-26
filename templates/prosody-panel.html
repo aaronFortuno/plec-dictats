@@ -2,11 +2,9 @@
   <div class="dialog-head"><div><h2 id="prosody-title">Escaleta de prosòdia</h2><p id="prosody-text-title"></p></div><button type="button" class="icon-button" data-close aria-label="Tanca l’escaleta"><span data-icon="x"></span></button></div>
   <div class="prosody-toolbar"><p id="prosody-summary"></p><button type="button" class="button secondary" id="prosody-pdf"><span data-icon="download"></span> PDF de l’escaleta</button></div>
   <nav id="prosody-tabs" class="prosody-tabs" aria-label="Ritme de l’escaleta"></nav>
-    <section id="prosody-listening" class="prosody-listening" aria-labelledby="prosody-listening-title" hidden>
-      <div><h3 id="prosody-listening-title">Escolta seguida</h3><p id="prosody-listening-help">Tria una versió per escoltar tots els fragments seguits, amb les pauses i la puntuació originals.</p></div>
-      <div class="prosody-listening-controls"><label for="prosody-audio-variant">Versió<select id="prosody-audio-variant"></select></label><audio id="prosody-audio" controls preload="metadata" aria-label="Escolta seguida del dictat" aria-describedby="prosody-listening-help"></audio></div>
-      <p id="prosody-audio-error" role="alert" hidden>No s’ha pogut carregar l’àudio. Torna a triar la versió per reintentar-ho.</p>
-    </section>
+  <section id="prosody-listening" class="prosody-listening" aria-label="Escolta seguida de les quatre versions" data-variant="r23" hidden>
+    <div id="prosody-audio-grid" class="prosody-audio-grid"></div>
+  </section>
   <div class="prosody-scroll" role="region" tabindex="0" aria-label="Comparació dels quatre ritmes">
   <p class="prosody-draft">Escaleta validada · Aoede · àudio pilot pendent d’audició</p>
   <p class="prosody-legend">Les etiquetes de puntuació són locucions: no compten com a mots del dictat. Els rangs són orientatius; els ajustos de sentit estan indicats.</p>

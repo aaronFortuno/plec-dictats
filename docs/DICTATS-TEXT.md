@@ -86,7 +86,7 @@ Comprovacions locals: 54 proves passades (pures, dades, àudio simulat, PDF, nav
 
 ## Audició docent contínua · 1.39.1
 
-«Escaleta i àudios» inclou un reproductor de la versió completa (2–3, 4–5, 6–8 o 9–12 mots), amb pausa, cerca temporal i tots els fragments seguits. Utilitza els mateixos quatre MP3 que l’alumnat; no remunta ni sintetitza res. El selector es coordina amb les pestanyes de l’escaleta en mòbil. Canviar de versió, tancar el diàleg, amagar la pestanya o sortir de la pàgina pausa la reproducció.
+«Escaleta i àudios» permet escoltar les versions completes (2–3, 4–5, 6–8 o 9–12 mots), amb pausa, cerca temporal i tots els fragments seguits. Utilitza els mateixos quatre MP3 que l’alumnat; no remunta ni sintetitza res. Des de la versió 1.43 hi ha quatre reproductors fixos, un per columna, i s’elimina el selector desplegable. En mòbil es coordinen amb les pestanyes de l’escaleta. Només pot sonar una versió alhora; tancar el diàleg, amagar la pestanya o sortir de la pàgina pausa tots els reproductors.
 
 Incidència comunicada pel docent el 25/11/2026: a la versió `r912` (9–12 mots), inici del primer fragment, «Al col·legi» sona «Al col·leja». **Pendent de corregir**, amb la presa original conservada. No regenerar sense autorització; completar primer l’audició de les quatre versions per agrupar les correccions necessàries.
 
@@ -131,3 +131,15 @@ Els textos passen a `content/texts/`, amb una llista indexada i el paquet genera
 `tools/prosody-batch.cjs --batch=ll02-four-rhythms-v1` només prepara i estima per defecte. Qualsevol intent de generació exigeix aprovació exacta i un màxim explícit d’una petició. Una presa rebuda no es reenvia. `tools/prepare-prosody-pilot.cjs --batch=ll02-four-rhythms-v1` treballa exclusivament sobre la resposta local. Els lots LL01 i LL02 estan enumerats expressament: no s’accepten identificadors arbitraris.
 
 Validació local de LL02: 58 comprovacions passades, inclosos selector i recàrrega de cada text, recuperació per codi/URL, descodificació dels vuit MP3, escaletes independents, exportació de marques, integritat dels rangs i quatre variants de plec en una pàgina. Sense comprovació del desplegament remot.
+
+## Tancar el dictat · 1.43
+
+La creu de la interfície de text atura l’àudio i el temporitzador i torna al mateix preparador que l’enllaç del logotip, conservant text, nombre de mots i velocitat. Funciona des de la preparació, durant l’escolta, en espera i després d’acabar. Abans només retornava a la pantalla inicial del reproductor, i semblava no fer res si ja s’hi era. «Torna a començar» continua disponible al final de l’activitat. El mode de paraules conserva el retorn al camp de codi.
+
+## Quatre reproductors de revisió · 1.43
+
+L’escaleta ofereix quatre reproductors independents fixos sobre les columnes de 2–3, 4–5, 6–8 i 9–12 mots. No hi ha cap desplegable per escollir l’àudio. El marge dret del grid es calcula amb l’amplada real del scroll per alinear cada reproductor amb la seva columna. Els fragments continuen desplaçant-se per sota; la còpia de marques segueix fixa al peu.
+
+En iniciar una versió es pausa qualsevol altra; es conserva el punt de cada àudio i no es torna a carregar l’arxiu en alternar-los. Tancar el quadre, amagar la pestanya o sortir de la pàgina els pausa tots. En pantalles estretes, les pestanyes existents mostren una columna amb el seu reproductor corresponent, amb les mateixes quatre instàncies i sense menú desplegable. Cada àudio mostra el seu error i permet reintentar-ne la càrrega de forma independent.
+
+Comprovacions locals: X des de la pantalla inicial, reproducció i espera, retorn al text i ajustos correctes, absència de repeticions tardanes; quatre MP3 reals, alineació dels reproductors amb les columnes, continuïtat entre fragments, pausa mútua, conservació del punt, pausa en tancar, marques/porta-retalls i vista estreta/fosca/horitzontal baixa. Cap síntesi nova ni comprovació remota.

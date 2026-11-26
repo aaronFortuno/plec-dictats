@@ -176,7 +176,7 @@ El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `buil
 
 ## Versions
 
-La interfície actual és **1.42**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.43**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 
@@ -218,7 +218,7 @@ Al mode de dictat normal, «Escaleta» apareix discretament a la capçalera del 
 
 La font editorial és `content/prosody/ca-ll-001-v1.json`; `tools/build-catalogs.cjs` genera `prosody-draft.js`. `prosody.js` comprova correspondència amb el text, cobertura, paràgrafs i excepcions justificades. `prosody-view.js` presenta la comparativa i `prosody-pdf.js` en fa el document imprimible. Aquestes vistes no fan crides de veu ni aproven lots automàticament. El registre `audio/texts/index.json` vincula les quatre lectures amb els intervals de mots i els temps verificats del pilot; `audio/texts/batches/` conserva l’autorització exacta i el rebut de producció.
 
-A «Escaleta i àudios», el reproductor fix «Escolta seguida» permet triar qualsevol de les quatre preses completes. El reproductor conserva tots els talls, pauses i anuncis originals i permet pausar o buscar un passatge. No s’atura a cada fragment com la interfície de l’alumnat. En canviar de versió, tancar el quadre o deixar la pestanya, l’àudio es pausa.
+A «Escaleta i àudios», quatre reproductors fixos, alineats amb les columnes, permeten escoltar directament cadascuna de les preses completes. Conserven els talls, pauses i anuncis originals i permeten pausar o buscar un passatge. Només en sona un alhora; cada reproductor conserva la seva posició. En mòbil es mostra el de la pestanya seleccionada. No s’atura a cada fragment com la interfície de l’alumnat. En canviar de versió, tancar el quadre o deixar la pestanya, l’àudio es pausa.
 
 Per revisar la dicció, clica el quadre d’un fragment: queda marcat i s’obre una nota opcional. «Copia errors» copia en text pla tots els fragments marcats de les quatre versions, identificats amb versió, tall, mots, temps, text, puntuació i nota. Les marques es conserven al navegador per a aquella presa concreta; no es transmeten automàticament. Els dos errors ja comunicats pel docent hi apareixen marcats inicialment.
 

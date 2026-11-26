@@ -13,6 +13,7 @@
  }
  window.PlecTextPlayer={active:true};document.body.dataset.activity='text-player';
  const root=$('focus-root');$('exit-focus').hidden=false;
+ $('exit-focus').setAttribute('aria-label','Tanca el dictat i torna al preparador');$('exit-focus').title='Tanca el dictat i torna al preparador';
  let settings=T.options(Object.fromEntries(params)),groups=entry?T.fragments(entry,settings.pace):[],index=0,plays=0,completedThrough=0,scene='ready',audio=null,loading=null,loadedPath=null,epoch=0,frame,playing=false,automatic=true,waitFactor=1;
  const controls={pace:{label:'Mots',less:'Menys mots per fragment',more:'Més mots per fragment',values:[2,4,6,10],format:value=>({2:'2–3',4:'4–5',6:'6–8',10:'9–12'})[value]},rate:{label:'Velocitat',less:'Llegeix més a poc',more:'Llegeix més ràpid',values:[.8,.9,1],format:value=>Math.round(value*100)+' %'},wait:{label:'Pausa',less:'Menys temps per escriure',more:'Més temps per escriure',values:[.8,1,1.25],format:value=>({'0.8':'4–10 s','1':'4–12 s','1.25':'4–15 s'})[value]}};
  for(const [mount,prefix]of [['tx-ready-controls','tx-'],['tx-adjust','tx-adjust-']])$(mount).innerHTML=Object.entries(controls).map(([key,c])=>`<div class="tx-step"><span id="${prefix+key}-label">${c.label}</span><div role="group" aria-labelledby="${prefix+key}-label"><button type="button" data-adjust="${key}" data-step="-1" aria-label="${c.less}" title="${c.less}">−</button><output id="${prefix+key}" aria-live="polite"></output><button type="button" data-adjust="${key}" data-step="1" aria-label="${c.more}" title="${c.more}">+</button></div></div>`).join('');
@@ -82,7 +83,7 @@
  document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement)pause();});
  $('tx-resume').addEventListener('click',async()=>{await fullscreen();show('player');draw();$('tx-listen').focus();wait();});
  $('tx-auto').addEventListener('click',()=>{automatic=!automatic;if(!automatic)stop();draw();if(automatic&&!playing&&plays<3){if(plays===0)play();else wait();}});
- $('exit-focus').addEventListener('click',()=>{stop();show('ready');document.exitFullscreen?.().catch(()=>{});$('tx-title').focus();});
+ $('exit-focus').addEventListener('click',()=>{stop();document.exitFullscreen?.().catch(()=>{});location.assign($('composer-link').href);});
  $('tx-restart').addEventListener('click',()=>{stop();show('ready');$('tx-title').focus();});
  function change(key,step){
   if(!entry)return;const c=controls[key],old=key==='wait'?waitFactor:settings[key],value=c.values[c.values.indexOf(old)+step];if(value===undefined)return;

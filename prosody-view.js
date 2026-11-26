@@ -9,12 +9,14 @@
   $('prosody-review-count').textContent=review.count()+(review.count()===1?' fragment amb errors':' fragments amb errors');$('prosody-review-copy').disabled=review.count()===0;
   $('prosody-review-storage').textContent=review.error()||'Marques desades en aquest navegador. Copia-les per compartir-les.';
  }
+ const players=()=>[...$('prosody-audio-grid').querySelectorAll('audio')];
+ function stopAudios(){for(const player of players())player.pause();}
+ function alignPlayers(){const scroll=$('prosody-dialog').querySelector('.prosody-scroll');$('prosody-audio-grid').style.paddingRight=(scroll.offsetWidth-scroll.clientWidth+parseFloat(getComputedStyle(scroll).paddingRight))+'px';}
+ if(window.ResizeObserver)new ResizeObserver(alignPlayers).observe($('prosody-dialog').querySelector('.prosody-scroll'));
+ else window.addEventListener('resize',alignPlayers);
  function selectVersion(id){
-  const player=$('prosody-audio'),variant=entry?.audio?.variants?.[id];player.pause();
-  $('prosody-audio-error').hidden=true;$('prosody-audio-variant').value=id;
-  if(variant){player.src=new URL('../'+variant.path,location.href).href;player.load();}
-  else{player.removeAttribute('src');player.load();}
-  $('prosody-content').dataset.variant=id;
+  $('prosody-content').dataset.variant=id;$('prosody-listening').dataset.variant=id;
+  if(matchMedia('(max-width:900px)').matches)for(const player of players())if(player.dataset.audioVariant!==id)player.pause();
   for(const button of $('prosody-tabs').querySelectorAll('button'))button.setAttribute('aria-pressed',String(button.dataset.prosodyVariant===id));
  }
  function render(){
@@ -26,9 +28,10 @@
   $('prosody-content').dataset.variant=plan.variants[0].id;
   $('prosody-content').innerHTML=entry.paragraphs.map((_,p)=>`<section class="prosody-paragraph"><h3>Paràgraf ${p+1} · mots ${p?plan.paragraphEnds[p-1]+1:1}–${plan.paragraphEnds[p]}</h3><div class="prosody-grid">${plan.variants.map(v=>`<section class="prosody-column" data-variant="${v.id}"><h4>${escape(v.label)}</h4><p>${v.fragments.length} fragments en tot el dictat · ${v.exceptionCount} ajustos de sentit</p><ol class="prosody-fragments">${v.fragments.filter(f=>f.paragraph===p+1).map(f=>fragmentCard(f,v)).join('')}</ol></section>`).join('')}</div></section>`).join('');
   reviewStatus();$('prosody-review-fallback').hidden=true;
+  stopAudios();
   const available=plan.variants.filter(v=>entry.audio?.variants?.[v.id]);
   $('prosody-listening').hidden=available.length===0;
-  $('prosody-audio-variant').innerHTML=available.map(v=>`<option value="${v.id}">${escape(v.label)} · ${v.fragments.length} fragments</option>`).join('');
+  $('prosody-audio-grid').innerHTML=available.map(v=>`<section class="prosody-audio-card" data-variant="${v.id}" aria-labelledby="audio-title-${v.id}"><h4 id="audio-title-${v.id}">${escape(v.label)}<small>${v.fragments.length} fragments</small></h4><audio id="prosody-audio-${v.id}" data-audio-variant="${v.id}" controls preload="metadata" src="${escape(new URL('../'+entry.audio.variants[v.id].path,location.href).href)}" aria-label="Escolta seguida: ${escape(v.label)}"></audio><p id="prosody-audio-error-${v.id}" class="prosody-audio-error" role="alert" hidden>No s’ha pogut carregar l’àudio. <button type="button" class="small-link" data-audio-retry="${v.id}">Torna-ho a provar</button></p></section>`).join('');
   selectVersion(plan.variants[0].id);
   $('prosody-guidance').innerHTML=`<p>${escape(plan.direction)}</p><p>${escape(plan.punctuationDirection)}</p><ul>${plan.variants.map(v=>`<li><b>${escape(v.label)}:</b> ${escape(v.direction)}</li>`).join('')}</ul><p>Pauses proposades: ${seconds(plan.pauses.fragmentMs)} al tall; ${seconds(plan.pauses.paragraphMs)} al canvi de paràgraf o final. Abans de cada locució: ${seconds(plan.pauses.beforeCueMs)}; després: ${seconds(plan.pauses.afterCueMs)}.</p><p>Les pauses són de gravació. El temps per escriure continua sent lliure fins a prémer «Següent». Les ${plan.wordCount} paraules del dictat i les locucions sumen ${plan.spokenWordsPerVariant} mots locutats per variant per estimar el lot.</p>`;
   $('prosody-status').textContent='';$('prosody-dialog').querySelector('.prosody-scroll').scrollTop=0;
@@ -52,8 +55,9 @@
   try{await navigator.clipboard.writeText(text);$('prosody-status').textContent='Errors copiats. Ja els pots enganxar a la conversa.';}
   catch{const field=$('prosody-review-fallback');field.value=text;field.hidden=false;field.focus();field.select();$('prosody-status').textContent='No s’ha pogut copiar automàticament. Copia el text seleccionat amb Ctrl+C o el menú del dispositiu.';}
  });
- $('prosody-audio-variant').addEventListener('change',event=>{selectVersion(event.target.value);window.PlecMotion.animate($('prosody-content'),[{opacity:.4},{opacity:1}]);});
- $('prosody-audio').addEventListener('error',()=>{$('prosody-audio-error').hidden=false;});
+ $('prosody-audio-grid').addEventListener('play',event=>{const player=event.target;if(!player.matches('audio'))return;for(const other of players())if(other!==player)other.pause();selectVersion(player.dataset.audioVariant);},true);
+ $('prosody-audio-grid').addEventListener('error',event=>{if(event.target.matches('audio'))$('prosody-audio-error-'+event.target.dataset.audioVariant).hidden=false;},true);
+ $('prosody-audio-grid').addEventListener('click',event=>{const button=event.target.closest('[data-audio-retry]');if(button){$('prosody-audio-error-'+button.dataset.audioRetry).hidden=true;$('prosody-audio-'+button.dataset.audioRetry).load();}});
  $('prosody-pdf').addEventListener('click',async()=>{
   if(!plan)return;const button=$('prosody-pdf');button.disabled=true;
   try{
@@ -62,8 +66,8 @@
   }catch(error){$('prosody-status').textContent='No s’ha pogut preparar el PDF. '+error.message;}
   finally{button.disabled=false;}
  });
- $('prosody-dialog').addEventListener('close',()=>{$('prosody-audio').pause();returnFocus?.focus();});
- document.addEventListener('visibilitychange',()=>{if(document.hidden)$('prosody-audio').pause();});
- window.addEventListener('pagehide',()=>{$('prosody-audio').pause();});
+ $('prosody-dialog').addEventListener('close',()=>{stopAudios();returnFocus?.focus();});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAudios();});
+ window.addEventListener('pagehide',stopAudios);
  window.PlecProsodyView={open(value){entry=value;returnFocus=document.activeElement;try{plan=window.PlecProsody.build(entry);render();window.PlecMotion.open($('prosody-dialog'));}catch(error){$('text-status').textContent=error.message;}}};
 })();
