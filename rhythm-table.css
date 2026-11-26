@@ -1,0 +1,27 @@
+#rhythm-table-dialog{width:min(820px,calc(100% - 32px));height:min(90svh,900px);max-height:90svh;padding:22px;overflow:hidden}
+#rhythm-table-dialog[open]{display:flex;flex-direction:column;gap:16px}
+#rhythm-table-dialog .dialog-head{margin:0;flex-shrink:0}
+#rhythm-table-dialog h2{margin:0}
+#rhythm-table-dialog .dialog-head p{margin:5px 0 0;font-size:13px;color:var(--muted)}
+.rhythm-table-link{display:inline-flex;align-items:center;gap:5px;align-self:flex-start}
+.rhythm-table-link svg{width:15px;height:15px}
+.rhythm-table-scroll{overflow:auto;min-height:0;padding:0 14px 6px 0;overscroll-behavior:contain;scrollbar-gutter:stable}
+.rhythm-table-intro,#rhythm-table-review{font-size:13px;line-height:1.6;margin:0 0 12px;color:var(--muted)}
+#rhythm-table-review{padding:10px 12px;background:var(--soft);border-radius:8px}
+#rhythm-table-content table{width:100%;table-layout:fixed;border-collapse:collapse;margin:18px 0 24px}
+#rhythm-table-content caption{text-align:left;font-weight:600;font-size:14px;padding:0 0 10px}
+#rhythm-table-content th{font-size:12px;font-weight:500;color:var(--muted);text-align:center;padding:8px 4px}
+#rhythm-table-content th:first-child{width:48px}
+#rhythm-table-content td{border-top:1px solid var(--line);padding:10px 7px;vertical-align:top}
+.rhythm-code-card{display:grid;justify-items:center;gap:6px;min-width:0}
+.rhythm-code-card img{border-radius:10px;max-width:100%;height:auto}
+.rhythm-code-card input{width:100%;min-width:0;padding:7px 5px;font-size:12px;text-align:center;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink)}
+.rhythm-code-card input[id^="rhythm-code-"]{font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+.rhythm-code-card input[id^="rhythm-picture-"]{font-size:11px;color:var(--muted)}
+.rhythm-code-card input[aria-invalid="true"]{border-color:#a34a31}
+.rhythm-code-card b{font-size:13px;letter-spacing:.5px}
+.rhythm-table-footer{flex-shrink:0;border-top:1px solid var(--line);padding-top:12px}
+#rhythm-table-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+#rhythm-table-status{font-size:12px;color:var(--muted);margin:8px 0 0}
+#rhythm-table-fallback{margin-top:8px;width:100%;height:75px;font-size:12px}
+@media(max-width:600px){#rhythm-table-dialog{width:calc(100% - 16px);padding:14px;gap:12px}.rhythm-table-scroll{padding-right:8px}#rhythm-table-content th:first-child{width:32px}#rhythm-table-content td{padding:9px 3px}.rhythm-code-card input{font-size:11px;padding:7px 2px}.rhythm-code-card input[id^="rhythm-picture-"]{font-size:10px}.rhythm-code-card img{width:42px}#rhythm-table-actions{gap:10px}}

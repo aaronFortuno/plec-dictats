@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "stage": "review",
+  "revision": "rhythm-labels-review-1",
+  "entries": {
+    "FAR": {
+      "code": "FAR",
+      "name": "far",
+      "picture": "un far",
+      "image": "assets/rhythm/lighthouse.svg"
+    },
+    "ONA": {
+      "code": "ONA",
+      "name": "ona",
+      "picture": "una ona",
+      "image": "assets/rhythm/wave.svg"
+    },
+    "POMA": {
+      "code": "POMA",
+      "name": "poma",
+      "picture": "una poma",
+      "image": "assets/rhythm/apple.svg"
+    },
+    "PERA": {
+      "code": "PERA",
+      "name": "pera",
+      "picture": "una pera",
+      "image": "assets/rhythm/pear.svg"
+    },
+    "MAPA": {
+      "code": "MAPA",
+      "name": "mapa",
+      "picture": "un mapa",
+      "image": "assets/rhythm/map.svg"
+    },
+    "RUTA": {
+      "code": "RUTA",
+      "name": "ruta",
+      "picture": "un camí dibuixat en un mapa",
+      "image": "assets/rhythm/route.svg"
+    },
+    "ROCA": {
+      "code": "ROCA",
+      "name": "roca",
+      "picture": "una roca",
+      "image": "assets/rhythm/rock.svg"
+    },
+    "CASA": {
+      "code": "CASA",
+      "name": "casa",
+      "picture": "una casa",
+      "image": "assets/rhythm/house.svg"
+    },
+    "BOCA": {
+      "code": "TAULA",
+      "name": "taula",
+      "picture": "una taula",
+      "image": "assets/rhythm/table.svg"
+    },
+    "NENA": {
+      "code": "LLAPIS",
+      "name": "llapis",
+      "picture": "un llapis",
+      "image": "assets/rhythm/pencil.svg"
+    },
+    "NINA": {
+      "code": "TASSA",
+      "name": "tassa",
+      "picture": "una tassa",
+      "image": "assets/rhythm/mug.svg"
+    },
+    "LILA": {
+      "code": "PILOTA",
+      "name": "pilota",
+      "picture": "una pilota",
+      "image": "assets/rhythm/ball.svg"
+    },
+    "LLUNA": {
+      "code": "LLUNA",
+      "name": "lluna",
+      "picture": "la lluna",
+      "image": "assets/rhythm/moon.svg"
+    },
+    "LLUM": {
+      "code": "LLUM",
+      "name": "llum",
+      "picture": "una bombeta",
+      "image": "assets/rhythm/bulb.svg"
+    },
+    "PATI": {
+      "code": "TEST",
+      "name": "test",
+      "picture": "un test amb una planta",
+      "image": "assets/rhythm/plant-pot.svg"
+    },
+    "TORRE": {
+      "code": "TORRE",
+      "name": "torre",
+      "picture": "una torre",
+      "image": "assets/rhythm/tower.svg"
+    },
+    "MENTA": {
+      "code": "MENTA",
+      "name": "menta",
+      "picture": "unes fulles de menta",
+      "image": "assets/rhythm/mint.svg"
+    },
+    "PINYA": {
+      "code": "PINYA",
+      "name": "pinya",
+      "picture": "una pinya",
+      "image": "assets/rhythm/pineapple.svg"
+    },
+    "BOSC": {
+      "code": "BOSC",
+      "name": "bosc",
+      "picture": "un bosc",
+      "image": "assets/rhythm/forest.svg"
+    },
+    "PONT": {
+      "code": "PONT",
+      "name": "pont",
+      "picture": "un pont",
+      "image": "assets/rhythm/bridge.svg"
+    },
+    "FONT": {
+      "code": "FONT",
+      "name": "font",
+      "picture": "una font",
+      "image": "assets/rhythm/fountain.svg"
+    },
+    "MEL": {
+      "code": "MEL",
+      "name": "mel",
+      "picture": "un pot de mel",
+      "image": "assets/rhythm/honey.svg"
+    },
+    "CANYA": {
+      "code": "CANYA",
+      "name": "canya",
+      "picture": "unes canyes",
+      "image": "assets/rhythm/reed.svg"
+    },
+    "TERRA": {
+      "code": "TERRA",
+      "name": "terra",
+      "picture": "el planeta Terra",
+      "image": "assets/rhythm/earth.svg"
+    },
+    "SERRA": {
+      "code": "SERRA",
+      "name": "serra",
+      "picture": "una serra de mà",
+      "image": "assets/rhythm/saw.svg"
+    },
+    "ROSA": {
+      "code": "ROSA",
+      "name": "rosa",
+      "picture": "una rosa",
+      "image": "assets/rhythm/rose.svg"
+    },
+    "LLAC": {
+      "code": "LLAC",
+      "name": "llac",
+      "picture": "un llac",
+      "image": "assets/rhythm/lake.svg"
+    },
+    "RIU": {
+      "code": "RIU",
+      "name": "riu",
+      "picture": "un riu",
+      "image": "assets/rhythm/river.svg"
+    },
+    "GAT": {
+      "code": "CLAU",
+      "name": "clau",
+      "picture": "una clau",
+      "image": "assets/rhythm/key.svg"
+    },
+    "GOS": {
+      "code": "GOMA",
+      "name": "goma",
+      "picture": "una goma d’esborrar",
+      "image": "assets/rhythm/eraser.svg"
+    },
+    "CARGOL": {
+      "code": "BOLA",
+      "name": "bola",
+      "picture": "una bola de vidre",
+      "image": "assets/rhythm/marble.svg"
+    },
+    "FULLA": {
+      "code": "FULLA",
+      "name": "fulla",
+      "picture": "una fulla",
+      "image": "assets/rhythm/leaf.svg"
+    },
+    "PLUJA": {
+      "code": "PLUJA",
+      "name": "pluja",
+      "picture": "un núvol amb pluja",
+      "image": "assets/rhythm/rain.svg"
+    },
+    "SOL": {
+      "code": "SOL",
+      "name": "sol",
+      "picture": "el sol",
+      "image": "assets/rhythm/sun.svg"
+    },
+    "MAR": {
+      "code": "MAR",
+      "name": "mar",
+      "picture": "el mar",
+      "image": "assets/rhythm/sea.svg"
+    },
+    "BRISA": {
+      "code": "NOU",
+      "name": "nou",
+      "picture": "una nou",
+      "image": "assets/rhythm/walnut.svg"
+    }
+  }
+}

@@ -167,3 +167,16 @@ Font immutable `content/rhythm-profiles-v1.json`, protocol `plec-rhythm-v1`, paq
 Proves: 36 conversions reversibles, invalidesa i normalització, codi dels ajustos finals després de canviar la pausa, còpia, recuperació en un context de navegador nou amb LL02 i sense les dades del primer, camps opcionals i instruccions compactes per al mòbil. No es genera cap àudio.
 
 Validació de la versió 1.44: 59 comprovacions locals passades, incloses les 36 correspondències del protocol, la recuperació en un navegador nou, el codi final després de modificar la pausa, la còpia, els camps opcionals, les set marques de LL02 i la resta de funcionalitats de Plec. Cap nova petició de síntesi ni comprovació remota.
+
+
+## Taula de noms i imatges · 1.45
+
+Al preparador de **Frases**, l’enllaç **Codis de ritme** del sidebar dret obre la taula completa: tres pauses, quatre quantitats de mots i tres velocitats. Els 36 codis tenen una il·lustració SVG pròpia, mostrada també en aplicar un codi i al final del dictat. Objectes, plantes i paisatges sense jerarquia de rendiment; descartem persones i animals associables a rapidesa. Dibuixos originals de Plec a `assets/rhythm/`, sense dependències externes.
+
+`content/rhythm-labels.json` separa la presentació del protocol numèric immutable. Els noms nous preferits substitueixen BOCA/NENA/NINA/LILA/PATI/GAT/GOS/CARGOL/BRISA per TAULA/LLAPIS/TASSA/PILOTA/TEST/CLAU/GOMA/BOLA/NOU. Els noms anteriors continuen acceptats amb exactament els mateixos valors. Si es canvia un nom en el futur, cal conservar-lo a `aliases` de la seva entrada i comprovar que no col·lideix amb cap altre perfil. Mai reassignar un nom publicat.
+
+Amb `stage: "review"`, la taula permet suggerir un codi i una imatge per cel·la. Són propostes locals del docent: no modifiquen la font ni les preferències de l’alumnat. «Copia canvis» copia només les diferències com a text pla, amb ID estable i ajustos per revisar-les al xat; si falla el porta-retalls, ofereix el text seleccionat. Les propostes es conserven per revisió del catàleg en aquest navegador, separadament del reproductor. «Desfés les propostes» les elimina. Es rebutgen codis repetits o que reassignin un nom reservat. La descripció d’imatge és una idea editorial; no genera cap dibuix automàticament.
+
+Un cop aprovats els noms i les imatges, integrar els canvis i posar `stage: "final"`: el mateix diàleg esdevé informatiu, sense camps editables ni còpia/exportació. Els codis d’alumnat no es desen ni depenen d’aquest esborrany docent. Cap petició de síntesi en aquesta iteració.
+
+Validació 1.45: 60 comprovacions locals passades. Inclou la matriu immutable, els àlies anteriors, les 36 imatges, les propostes independents del reproductor, col·lisions de noms, persistència, còpia i alternativa manual, restabliment, focus de teclat, mòbil/tema fosc i estat final de només lectura. La comprovació nova s’ha repetit després de corregir l’espera de tancament del test i el títol de pausa breu detectat a la revisió visual. No s’ha comprovat el desplegament remot.

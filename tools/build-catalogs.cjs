@@ -24,6 +24,7 @@ const bundle = (global, data) => '/* Generat amb tools/build-catalogs.cjs. Edita
 emit('text-audio.js',bundle('PlecTextAudio',json('audio/texts/index.json')));
 emit('text-review-notes.js',bundle('PlecTextAudioReview',json('audio/texts/review-notes.json')));
 emit('rhythm-profiles.js',bundle('PlecRhythmProfiles',json('content/rhythm-profiles-v1.json')));
+emit('rhythm-labels.js',bundle('PlecRhythmLabels',json('content/rhythm-labels.json')));
 emit('text-catalogue.js',bundle('PlecTextCatalogue',json('content/texts/index.json').map(id=>json('content/texts/'+id+'.json'))));
   emit('prosody-draft.js',bundle('PlecProsodyDraft',Object.fromEntries(json('content/texts/index.json').map(id=>[id,json('content/prosody/'+id+'.json')]))));
 const manifest = json('locales/manifest.json');
@@ -133,7 +134,7 @@ for (const {item,profile,source,revision,catalog,base,collator,seedRegistry,basi
       .replaceAll('https://dlc.iec.cat/','https://dle.rae.es/')
       .replaceAll('https://github.com/aaronFortuno/plec-dictats/tree/main/audio/pronunciation/ca','https://github.com/aaronFortuno/plec-dictats/tree/main/'+base);
   }
-  let html = localize(read(profile.template).replace('__MANAGEMENT_PANEL__',read('templates/dictation-management.html')).replace('__TEXT_CONFIG__',read('templates/text-config.html')).replace('__PROSODY_PANEL__',read('templates/prosody-panel.html')).replace('__PRONUNCIATION_PANEL__',read('templates/pronunciation-panel.html')).replace('__ANALYTICS_PANEL__',read('templates/analytics-panel.html')));
+  let html = localize(read(profile.template).replace('__MANAGEMENT_PANEL__',read('templates/dictation-management.html')).replace('__TEXT_CONFIG__',read('templates/text-config.html')).replace('__PROSODY_PANEL__',read('templates/prosody-panel.html')).replace('__RHYTHM_TABLE_PANEL__',read('templates/rhythm-table-panel.html')).replace('__PRONUNCIATION_PANEL__',read('templates/pronunciation-panel.html')).replace('__ANALYTICS_PANEL__',read('templates/analytics-panel.html')));
   html=html.replace('__LANGUAGE_SELECTOR__',selector).replaceAll('__PLEC_MARK__',Brand.svg('mark')).replaceAll('__PLEC_TAGLINE__',messages?messages['Escolta. Escriu. Desplega.']:Brand.svg('tagline'));
   const assetVersion = /src="catalog\.js(\?[^\"]*)"/.exec(html)?.[1] || '';
   html = html.replace(/((?:src|href)=")(?!https?:|lightning:|#|\.\/)([^\"]+)/g, (_, start, target) => start + prefix + target);

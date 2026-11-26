@@ -325,5 +325,15 @@
   "Codi de ritme": "Código de ritmo",
   "Copia el codi de ritme": "Copia el código de ritmo",
   "Guarda’l per al pròxim dictat. Correspon als ajustos que has triat.": "Guárdalo para el próximo dictado. Corresponde a los ajustes que has elegido.",
-  "Escolta i escriu al full. Cada fragment es repeteix fins a tres vegades. Pots aturar-ho i ajustar el ritme. Prem «Següent» quan estiguis a punt; al final, desplega el full per revisar-lo.": "Escucha y escribe en la hoja. Cada fragmento se repite hasta tres veces. Puedes detenerlo y ajustar el ritmo. Pulsa «Siguiente» cuando estés a punto; al final, despliega la hoja para revisarlo."
+  "Escolta i escriu al full. Cada fragment es repeteix fins a tres vegades. Pots aturar-ho i ajustar el ritme. Prem «Següent» quan estiguis a punt; al final, desplega el full per revisar-lo.": "Escucha y escribe en la hoja. Cada fragmento se repite hasta tres veces. Puedes detenerlo y ajustar el ritmo. Pulsa «Siguiente» cuando estés a punto; al final, despliega la hoja para revisarlo.",
+  "Codis de ritme": "Códigos de ritmo",
+  "Tanca la taula de codis": "Cierra la tabla de códigos",
+  "Una paraula i una imatge per recordar els teus ajustos.": "Una palabra y una imagen para recordar tus ajustes.",
+  "Taula de codis de ritme": "Tabla de códigos de ritmo",
+  "El codi recupera els mots per fragment, la velocitat i la pausa entre escoltes, en qualsevol dispositiu. No indica cap nivell ni cap nota: tria els ajustos que et van bé.": "El código recupera las palabras por fragmento, la velocidad y la pausa entre escuchas, en cualquier dispositivo. No indica ningún nivel ni nota: elige los ajustes que te van bien.",
+  "Proposta en revisió: pots canviar la paraula i suggerir una altra imatge. Els canvis queden en aquest navegador; no alteren els codis de l’alumnat. Copia’ls per compartir-los abans de fer-los definitius.": "Propuesta en revisión: puedes cambiar la palabra y sugerir otra imagen. Los cambios quedan en este navegador; no alteran los códigos del alumnado. Cópialos para compartirlos antes de hacerlos definitivos.",
+  "Copia canvis": "Copia cambios",
+  "Desfés les propostes": "Deshaz las propuestas",
+  "Proposta per copiar": "Propuesta para copiar",
+  "Versió 1.45: obre l’historial de canvis": "Versión 1.45: abre el historial de cambios"
 }
