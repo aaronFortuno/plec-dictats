@@ -1,0 +1,77 @@
+{
+  "id": "ca-text-004-v1",
+  "code": "CA0004",
+  "language": "ca",
+  "title": "El mocador perdut",
+  "focuses": [
+    "essa"
+  ],
+  "focusLabels": [
+    "s / ss / c / ç"
+  ],
+  "stage": "Cicle superior",
+  "status": "draft",
+  "paragraphs": [
+    "Dissabte, la Cèlia passeja amb el seu cosí per la plaça. Al costat de la font, troben un mocador vermell.",
+    "Una senyora surt de la fleca i els pregunta si han vist el seu mocador. Els cosins li tornen el mocador i ella els dona les gràcies.",
+    "Després, seuen en un banc i comparteixen un tros de coca amb cireres."
+  ],
+  "phrases": [
+    "Dissabte, la Cèlia",
+    "passeja amb",
+    "el seu cosí",
+    "per la plaça.",
+    "Al costat",
+    "de la font,",
+    "troben un mocador",
+    "vermell.",
+    "Una senyora surt",
+    "de la fleca",
+    "i els pregunta",
+    "si han vist",
+    "el seu mocador.",
+    "Els cosins",
+    "li tornen",
+    "el mocador",
+    "i ella els dona",
+    "les gràcies.",
+    "Després, seuen",
+    "en un banc",
+    "i comparteixen",
+    "un tros de coca",
+    "amb cireres."
+  ],
+  "audio": null,
+  "focusWords": {
+    "s / ss / c / ç": [
+      "Dissabte",
+      "Cèlia",
+      "passeja",
+      "seu",
+      "cosí",
+      "plaça",
+      "costat",
+      "senyora",
+      "surt",
+      "si",
+      "cosins",
+      "gràcies",
+      "Després",
+      "seuen",
+      "tros",
+      "cireres"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-26",
+    "method": "independent-editorial-review",
+    "sourceSha256": "236cca67bad89f7b3697b11c055abda22ee03931a274d44037ff66ce02bf0056"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

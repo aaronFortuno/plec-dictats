@@ -223,7 +223,7 @@
   }
   setupHelp('required-help-trigger','required-help-toggle','required-help');
   setupHelp('focus-help-toggle','focus-help-toggle','focus-help',{hoverTip:false});
-  $('recover-form').addEventListener('submit',event=>{event.preventDefault();try{const resolved=S.resolve(R.editions,$('recover-code').value);stopSearch();setCode(resolved.code);$('recover-code').value='';$('search-status').textContent='';track('code-recovered',{result:'ok'});say('Dictat recuperat amb els mateixos mots, ordre i filtres.');}catch(error){track('code-recovered',{result:'invalid'});say(error.message);}});
+  $('recover-form').addEventListener('submit',event=>{event.preventDefault();const text=window.PlecTexts.find($('recover-code').value.trim(),L.id);if(text){stopSearch();window.PlecTextMode.activate(new URLSearchParams({text:text.id}));$('recover-code').value='';return;}try{const resolved=S.resolve(R.editions,$('recover-code').value);stopSearch();setCode(resolved.code);$('recover-code').value='';$('search-status').textContent='';track('code-recovered',{result:'ok'});say('Dictat recuperat amb els mateixos mots, ordre i filtres.');}catch(error){track('code-recovered',{result:'invalid'});say(error.message);}});
   async function copy(value,success,target){try{await navigator.clipboard.writeText(value);if(target)track('share-copied',{target});say(success);}catch{say(t('No s’ha pogut copiar automàticament. El codi és {code}.',{code:current?.code||''}));}}
   $('copy-code').addEventListener('click',()=>current&&copy(current.code,'Codi copiat.','code'));
   const shareOptions=()=>({language:L.id,catalogue:current.catalogue,seed:current.code,variety:state.variety});
@@ -259,6 +259,7 @@
     }
   });
   const releases = [
+    ['1.48', '2026-11-26', [t('Codis de Frases independents del focus: CA0001, CA0002… Quatre textos nous per validar amb b/v, esses, g/j i formes verbals amb dièresi; encara sense àudio.')]],
     ['1.47', '2026-11-26', [t('Tria de textos amb llista i lectura completa, mots del focus ressaltats i confirmació abans de canviar el full.')]],
     ['1.46', '2026-11-26', [t('Catàleg de dictats de Frases amb cerca, filtres de focus i targetes de títol, nivell i llargada. El sidebar mostra el resum del text seleccionat.')]],
     ['1.45.3', '2026-11-26', [t('Contorn de focus dels desplegables complet als dos sidebars, també en pantalles estretes.')]],

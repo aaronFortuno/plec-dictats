@@ -1,0 +1,78 @@
+{
+  "id": "ca-text-006-v1",
+  "code": "CA0006",
+  "language": "ca",
+  "title": "Una sortida amb previsió",
+  "focuses": [
+    "verbs",
+    "dieresi"
+  ],
+  "focusLabels": [
+    "Formes verbals",
+    "Dièresi"
+  ],
+  "stage": "Cicle superior",
+  "status": "draft",
+  "paragraphs": [
+    "Ahir, la classe preparava una sortida al bosc. La mestra volia que els alumnes duguessin una llibreta i es repartissin en grups.",
+    "Si plogués, canviarien el recorregut i visitarien el museu del poble. En llegir el mapa, la Júlia intuïa que caminarien força.",
+    "La mestra els va demanar que reduïssin el pes de les motxilles. Tothom hi va estar d’acord."
+  ],
+  "phrases": [
+    "Ahir, la classe",
+    "preparava una sortida",
+    "al bosc.",
+    "La mestra volia",
+    "que els alumnes",
+    "duguessin una llibreta",
+    "i es repartissin",
+    "en grups.",
+    "Si plogués,",
+    "canviarien el recorregut",
+    "i visitarien",
+    "el museu",
+    "del poble.",
+    "En llegir",
+    "el mapa,",
+    "la Júlia intuïa",
+    "que caminarien força.",
+    "La mestra",
+    "els va demanar",
+    "que reduïssin",
+    "el pes",
+    "de les motxilles.",
+    "Tothom hi va estar",
+    "d’acord."
+  ],
+  "audio": null,
+  "focusWords": {
+    "Formes verbals": [
+      "preparava",
+      "volia",
+      "duguessin",
+      "repartissin",
+      "plogués",
+      "canviarien",
+      "visitarien",
+      "intuïa",
+      "caminarien",
+      "reduïssin"
+    ],
+    "Dièresi": [
+      "intuïa",
+      "reduïssin"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-26",
+    "method": "independent-editorial-review",
+    "sourceSha256": "2434e9abe6fba189c9d2d9b4517628e793a9e74a1ad490730c9aad101c7a8b8f"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

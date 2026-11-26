@@ -26,7 +26,9 @@ emit('text-review-notes.js',bundle('PlecTextAudioReview',json('audio/texts/revie
 emit('rhythm-profiles.js',bundle('PlecRhythmProfiles',json('content/rhythm-profiles-v1.json')));
 emit('rhythm-labels.js',bundle('PlecRhythmLabels',json('content/rhythm-labels.json')));
 emit('text-catalogue.js',bundle('PlecTextCatalogue',json('content/texts/index.json').map(id=>json('content/texts/'+id+'.json'))));
-  emit('prosody-draft.js',bundle('PlecProsodyDraft',Object.fromEntries(json('content/texts/index.json').map(id=>[id,json('content/prosody/'+id+'.json')]))));
+const textIds=json('content/texts/index.json'),prosodyIds=json('content/prosody/index.json');
+if(!Array.isArray(prosodyIds)||new Set(prosodyIds).size!==prosodyIds.length||prosodyIds.some(id=>!textIds.includes(id)))throw Error('Invalid prosody registry.');
+emit('prosody-draft.js',bundle('PlecProsodyDraft',Object.fromEntries(prosodyIds.map(id=>[id,json('content/prosody/'+id+'.json')]))));
 const manifest = json('locales/manifest.json');
 if (!Array.isArray(manifest.languages) || !manifest.languages.length || !manifest.languages.some(item=>item.id===manifest.defaultLanguage)) throw new Error('Invalid language manifest');
 if (new Set(manifest.languages.map(item=>item.id)).size!==manifest.languages.length || new Set(manifest.languages.map(item=>item.path)).size!==manifest.languages.length) throw new Error('Duplicate language manifest entry');

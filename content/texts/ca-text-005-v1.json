@@ -1,0 +1,68 @@
+{
+  "id": "ca-text-005-v1",
+  "code": "CA0005",
+  "language": "ca",
+  "title": "Una gerra per a l’avi",
+  "focuses": [
+    "gej"
+  ],
+  "focusLabels": [
+    "g / j"
+  ],
+  "stage": "Cicle superior",
+  "status": "draft",
+  "paragraphs": [
+    "La Jana i el seu germà preparen un regal per a l’avi. Pinten una gerra amb un jardí ple de flors.",
+    "Al costat de les flors, dibuixen un gira-sol i un ocell taronja. Després, deixen la gerra vora la finestra i recullen els pinzells.",
+    "Quan la pintura és seca, emboliquen el regal. Al vespre, l’avi l’obre al menjador i somriu."
+  ],
+  "phrases": [
+    "La Jana",
+    "i el seu germà",
+    "preparen un regal",
+    "per a l’avi.",
+    "Pinten una gerra",
+    "amb un jardí",
+    "ple de flors.",
+    "Al costat",
+    "de les flors,",
+    "dibuixen un gira-sol",
+    "i un ocell taronja.",
+    "Després, deixen",
+    "la gerra",
+    "vora la finestra",
+    "i recullen",
+    "els pinzells.",
+    "Quan la pintura",
+    "és seca,",
+    "emboliquen el regal.",
+    "Al vespre,",
+    "l’avi l’obre",
+    "al menjador",
+    "i somriu."
+  ],
+  "audio": null,
+  "focusWords": {
+    "g / j": [
+      "Jana",
+      "germà",
+      "gerra",
+      "jardí",
+      "gira-sol",
+      "taronja",
+      "menjador"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-26",
+    "method": "independent-editorial-review",
+    "sourceSha256": "dc73d205f858bd024be6e252657bcd7faef333f974f6fd8771a903e35d89cdba"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

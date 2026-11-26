@@ -4,7 +4,7 @@
  const $=id=>document.getElementById(id),T=window.PlecTexts,params=new URL(location.href).searchParams;
  const code=params.get('text'),entry=T.find(code,window.PlecLanguage.id);
  if(!params.has('text')){
-  // The same student entrance also accepts the printed text code LL01.
+  // The same student entrance also accepts the printed text code CA0001.
   $('load-form').addEventListener('submit',event=>{
    const found=T.find($('student-code').value.trim(),window.PlecLanguage.id);if(!found)return;
    event.preventDefault();event.stopImmediatePropagation();location.href=T.url(found,{},true,new URL('../../',location.href).href);
@@ -31,8 +31,8 @@
   syncControls();
   if(!entry){$('tx-setup-error').hidden=false;$('tx-setup-error').textContent='Aquest dictat de text no està disponible en aquesta llengua.';$('tx-start').disabled=true;return;}
   $('tx-summary').textContent=`${entry.code} · ${T.wordCount(T.text(entry))} paraules · ${groups.length} fragments`;
-  $('tx-start').disabled=!entry.audio;
-  if(!entry.audio){$('tx-setup-error').hidden=false;$('tx-setup-error').textContent='L’àudio d’aquest prototip encara està en preparació.';}
+  $('tx-start').disabled=!entry.audio||entry.status==='draft';
+  if(!entry.audio||entry.status==='draft'){$('tx-setup-error').hidden=false;$('tx-setup-error').textContent=entry.status==='draft'?'Text pendent de validació docent. Encara no se n’ha encarregat l’àudio.':'L’àudio d’aquest prototip encara està en preparació.';document.querySelector('#tx-ready .tx-pilot').textContent='Àudio no disponible.';}
   links();
  }
  function draw(){

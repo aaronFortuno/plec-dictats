@@ -48,7 +48,7 @@
   const url=T.url(entry,settings,true);
   const qrRight=writing.x+writing.w-10;
   shapes.push(...QR.shapes(url,qrRight-25,writing.y+9,25));
-  text('CA / '+entry.code,qrRight,writing.y+39,8,true,ink,{align:'right'});
+  text(entry.code,qrRight,writing.y+39,8,true,ink,{align:'right'});
   // Keep the address below the QR, away from the name/date fields. The QR
   // retains the full URL even if a future address needs visual truncation.
   const visible=url.replace('https://',''),limit=Math.min(52,writing.w-75),rows=[''];

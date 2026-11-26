@@ -216,5 +216,8 @@
   "Cap text per mostrar": "Ningún texto para mostrar",
   "Mots ressaltats: {count}": "Palabras resaltadas: {count}",
   "Al full": "En la hoja",
-  "Tria de textos amb llista i lectura completa, mots del focus ressaltats i confirmació abans de canviar el full.": "Selección de textos con lista y lectura completa, palabras del foco resaltadas y confirmación antes de cambiar la hoja."
+  "Tria de textos amb llista i lectura completa, mots del focus ressaltats i confirmació abans de canviar el full.": "Selección de textos con lista y lectura completa, palabras del foco resaltadas y confirmación antes de cambiar la hoja.",
+  "Text per validar": "Texto por validar",
+  "Text per validar · Àudio no encarregat.": "Texto por validar · Audio sin encargar.",
+  "Codis de Frases independents del focus: CA0001, CA0002… Quatre textos nous per validar amb b/v, esses, g/j i formes verbals amb dièresi; encara sense àudio.": "Códigos de Frases independientes del foco: CA0001, CA0002… Cuatro textos nuevos por validar con b/v, eses, g/j y formas verbales con diéresis; todavía sin audio."
 }

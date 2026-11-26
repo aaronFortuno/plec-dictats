@@ -1,0 +1,76 @@
+{
+  "id": "ca-text-003-v1",
+  "code": "CA0003",
+  "language": "ca",
+  "title": "Una parada a la plaça",
+  "focuses": [
+    "beve"
+  ],
+  "focusLabels": [
+    "b / v"
+  ],
+  "stage": "Cicle superior",
+  "status": "draft",
+  "paragraphs": [
+    "Divendres, la Berta va al poble amb bicicleta. A la plaça, veu una parada de llibres vells i joguines.",
+    "El venedor busca una bossa per al llibre que ella tria. La Berta obre la motxilla i hi guarda la compra.",
+    "Abans de tornar a casa, també compra un petit vaixell de fusta per al seu germà."
+  ],
+  "phrases": [
+    "Divendres, la Berta",
+    "va al poble",
+    "amb bicicleta.",
+    "A la plaça,",
+    "veu una parada",
+    "de llibres vells",
+    "i joguines.",
+    "El venedor busca",
+    "una bossa",
+    "per al llibre",
+    "que ella tria.",
+    "La Berta obre",
+    "la motxilla",
+    "i hi guarda",
+    "la compra.",
+    "Abans de tornar",
+    "a casa,",
+    "també compra",
+    "un petit vaixell",
+    "de fusta",
+    "per al seu germà."
+  ],
+  "audio": null,
+  "focusWords": {
+    "b / v": [
+      "Divendres",
+      "Berta",
+      "va",
+      "poble",
+      "amb",
+      "bicicleta",
+      "veu",
+      "llibres",
+      "vells",
+      "venedor",
+      "busca",
+      "bossa",
+      "llibre",
+      "obre",
+      "Abans",
+      "també",
+      "vaixell"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-26",
+    "method": "independent-editorial-review",
+    "sourceSha256": "66d7317173659ea26e322cb4e49b0d3b34e365a82c31726a2287914e016931cb"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

@@ -19,7 +19,7 @@
   if(!entry){content.append(node('h3','',t('Cap text per mostrar')));content.firstChild.id='text-picker-detail-title';return;}
   content.append(node('p','text-picker-detail-meta',entry.code+' · '+T.wordCount(T.text(entry))+' '+t('mots')+' · '+t(entry.stage)));
   const title=node('h3','',entry.title);title.id='text-picker-detail-title';title.tabIndex=-1;title.setAttribute('aria-live','polite');content.append(title);
-  const tags=node('div','text-picker-tags');for(const label of entry.focusLabels)tags.append(node('span','',label));content.append(tags);
+  const tags=node('div','text-picker-tags');for(const label of entry.focusLabels)tags.append(node('span','',label));content.append(tags);if(entry.status==='draft')content.append(node('p','text-picker-review-note',t('Text per validar · Àudio no encarregat.')));
   const words=targets(entry),prose=node('div','text-picker-prose');for(const paragraph of entry.paragraphs)prose.append(highlight(paragraph,words));
   const marked=prose.querySelectorAll('mark').length;if(marked)content.append(node('p','text-picker-highlight-note',t('Mots ressaltats: {count}',{count:marked})));
   content.append(prose);$('text-picker-reading').scrollTop=0;
@@ -36,7 +36,7 @@
    const card=node('button','text-picker-card');card.type='button';card.dataset.textId=entry.id;card.setAttribute('aria-pressed',String(entry.id===browsed));card.setAttribute('aria-controls','text-picker-reading');
    const meta=node('span','text-picker-card-meta');meta.append(node('span','text-picker-code',entry.code),node('span','',T.wordCount(T.text(entry))+' '+t('mots')));card.append(meta,node('span','text-picker-card-title',entry.title),node('span','text-picker-stage',t(entry.stage)));
    const words=targets(entry).slice(0,3);card.append(node('span','text-picker-sample',entry.focusLabels.join(' · ')+(words.length?' · '+words.join(', '):'')));
-   if(entry.id===applied)card.append(node('span','text-picker-selected',t('Al full')));
+   if(entry.status==='draft')card.append(node('span','text-picker-draft',t('Text per validar')));if(entry.id===applied)card.append(node('span','text-picker-selected',t('Al full')));
    card.addEventListener('click',()=>preview(entry));return card;
   }));
   $('text-picker-empty').hidden=results.length>0;

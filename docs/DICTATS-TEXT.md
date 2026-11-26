@@ -212,3 +212,20 @@ El camp editorial `focusWords` de cada text enumera, per etiqueta precisa, els m
 Llista i lectura tenen scroll independent; capçalera, filtres i confirmació queden fixos. En mòbil i en pantalles baixes, la navegació és llista → lectura, amb retorn a la llista i confirmació visible. Les proves comproven la invariància del full i URL durant l’exploració/cancel·lació, l’aplicació explícita amb conservació dels ajustos, els ressaltats exactes, els filtres combinats i els dos scrolls.
 
 Validació 1.47: 61 comprovacions locals passades, inclosa la invariància del full i URL abans de confirmar, la cancel·lació sense canvis, la confirmació amb preservació dels ajustos, els 8/7 mots ressaltats, els paràgrafs exactes, els filtres combinats, els scrolls independents, mòbil i paisatge, i els fluxos de PDF, escaleta i alumnat. Sense síntesi ni comprovació remota.
+
+## Codificació i noves propostes · 1.48
+
+Decisió docent del 26/11/2026: codis de text independents del focus, amb prefix de llengua i número correlatiu. `CA0001`, `CA0002`…; en castellà s’utilitzarà `ES0001`… El número té quatre xifres com a mínim i pot créixer (`CA10000`), sense representar ni dificultat, ni llargada, ni norma. Els focus són etiquetes separades i un text en pot tenir diversos. El codi es manté quan es corregeixen les etiquetes; un text diferent rep un número nou. Els noms dels pilots LL01/LL02 volien dir ela geminada i passen a mostrar-se com CA0001/CA0002. Els identificadors tècnics dels dos pilots, els arxius d’àudio i les autoritzacions congelades es conserven per identitat de producció; no es mantenen els antics codis impresos com a àlies. Els codis de ritme (ROSA, etc.) i les llavors de mots continuen sent sistemes independents.
+
+| Codi | Text | Focus | Mots | Estat |
+| --- | --- | --- | ---: | --- |
+| CA0003 | Una parada a la plaça | b / v | 56 | Per validar |
+| CA0004 | El mocador perdut | s / ss / c / ç | 60 | Per validar |
+| CA0005 | Una gerra per a l’avi | g / j | 60 | Per validar |
+| CA0006 | Una sortida amb previsió | Formes verbals i dièresi | 60 | Per validar |
+
+Totes quatre tenen tres paràgrafs, fragments base i mots del focus anotats. Revisió independent superada el 26/11/2026 de les versions exactes registrades a `editorialReview.sourceSha256`, sobre codi/títol/nivell/focus/paràgrafs/frases/mots anotats. La validació docent es manté pendent per a cadascun dels textos. El catàleg els mostra amb «Text per validar»; no es pot iniciar el seu dictat oral. Es poden llegir amb ressaltats i preparar el PDF per revisar-lo.
+
+Les escaletes tenen un registre independent (`content/prosody/index.json`): disposar d’un text per revisar no implica tenir una escaleta validada o àudio. La planificació `audio/texts/batches/ca0003-ca0006-planning-v1.json` recull els quatre textos i les seves empremtes, proposta de veu Aoede/català central i quatre ritmes. No conté cap petició ni aprovació de síntesi, i no és un lot executable. Després de validar cada text, preparar-ne l’escaleta, les locucions de puntuació amb la mateixa veu i el lot exacte amb estimació inferior a 6 min 30 s; caldrà l’aprovació explícita de text/veu/lot abans d’enviar res. No agrupar quatre textos complets amb quatre ritmes en una sola petició sense comprovar la durada.
+
+Validació 1.48: 62 comprovacions locals passades. Sis codis coherents, recuperació al preparador i a l’entrada d’alumnat, identitat d’àudio dels dos pilots, quatre PDFs d’una pàgina en ambdós formats de plec, empremtes de revisió, mots anotats i ressaltats, combinació de formes verbals/dièresi sense duplicats i bloqueig del dictat oral pendent. La planificació no és executable ni té autorització de síntesi. Cap petició de síntesi ni comprovació remota.

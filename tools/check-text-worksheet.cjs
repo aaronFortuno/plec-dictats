@@ -4,7 +4,7 @@ const lib=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLEC_NODE_
 const T=require('../text-dictations.js'),W=require('../text-worksheet.js'),entry=T.catalogue[0];
 (async()=>{
  assert.equal(T.text(entry),entry.phrases.join(' '));assert.equal(T.wordCount(T.text(entry)),63);
- assert.equal(T.find('LL01'),entry);assert.equal(T.find('ca-ll-001-v1','es'),undefined);
+ assert.equal(T.find('CA0001'),entry);assert.equal(T.find('ca-ll-001-v1','es'),undefined);
  assert.deepEqual(T.options({pace:999,rate:3,fold:'bad',side:'invalid',fontSize:99,lineSpacing:-1}),{pace:6,rate:1,fold:'vertical',side:'end',fontSize:14,lineSpacing:10});
  assert.equal(entry.paragraphs.length,3);assert.equal(T.options().side,'end');assert.equal(T.options({rate:.85}).rate,.9);assert.equal(T.options({rate:.75}).rate,.8);for(const rate of [.8,.9,1])assert.equal(T.options({rate}).rate,rate);
  for(const pace of [2,4,6,10,0]){

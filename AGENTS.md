@@ -16,7 +16,7 @@
 
 - El docent ha validat «Llavors al jardí» (57 mots) i autoritzat una única petició amb Aoede, quatre ritmes i puntuació amb la mateixa veu. Autorització congelada: `audio/texts/batches/ll02-four-rhythms-v1.json`.
 - Resposta conservada: 211,83 s en total, quatre versions publicades com a pilot pendent d’audició. No repetir la petició ni regenerar correccions sense un nou encàrrec explícit. Els bloqueigs previs de lock/interval no han enviat cap petició.
-- Els textos són a `content/texts/` i les escaletes a `content/prosody/`. Conserva els identificadors LL01 i LL02 i les seves empremtes de producció.
+- Els textos són a `content/texts/` i les escaletes a `content/prosody/`. Conserva els identificadors tècnics ca-ll-001-v1 / ca-ll-002-v1 i les empremtes de producció. El docent ha aprovat el 26/11 la nova codificació visible CA0001 / CA0002, independent del focus i sense necessitat de compatibilitat amb els codis impresos LL01 / LL02.
 
 **Estat 25/10/2026:** l’usuari ha reautoritzat encàrrecs acotats a K3 amb esforç baix, després de les proves costoses amb K3.1. T008 i T009 estan completats; no hi ha cap encàrrec actiu. Conserva pressupostos, límits de passos i temps, eines acotades i revisió de Codex abans d’integrar. El registre vigent és `../protocol-codex-kimi/ESTAT-WORKER.json`. No canviïs configuració global.
 

@@ -1,5 +1,5 @@
 /* Editorial rehearsal only. No audio client, credentials or approval mutations. */
-(function(root,factory){const node=typeof module==='object'&&module.exports,api=factory(node?Object.fromEntries(require('./content/texts/index.json').map(id=>[id,require('./content/prosody/'+id+'.json')])):root.PlecProsodyDraft);if(node)module.exports=api;else root.PlecProsody=api;})(typeof globalThis==='undefined'?this:globalThis,function(source){
+(function(root,factory){const node=typeof module==='object'&&module.exports,api=factory(node?Object.fromEntries(require('./content/prosody/index.json').map(id=>[id,require('./content/prosody/'+id+'.json')])):root.PlecProsodyDraft);if(node)module.exports=api;else root.PlecProsody=api;})(typeof globalThis==='undefined'?this:globalThis,function(source){
  'use strict';
  const count=value=>value.trim().split(/\s+/u).filter(Boolean).length;
  function build(entry,draft=source?.[entry.id]){
