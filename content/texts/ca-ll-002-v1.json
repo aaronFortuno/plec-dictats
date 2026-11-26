@@ -44,5 +44,16 @@
     "han fet",
     "una feina excel·lent."
   ],
-  "audio": null
+  "audio": null,
+  "focusWords": {
+    "l·l": [
+      "col·lecció",
+      "il·lusió",
+      "parcel·la",
+      "col·labora",
+      "col·loca",
+      "il·lustració",
+      "excel·lent"
+    ]
+  }
 }

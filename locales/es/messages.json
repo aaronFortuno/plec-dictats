@@ -212,5 +212,9 @@
   "dictat disponible": "dictado disponible",
   "dictats disponibles": "dictados disponibles",
   "Seleccionat": "Seleccionado",
-  "Catàleg de dictats de Frases amb cerca, filtres de focus i targetes de títol, nivell i llargada. El sidebar mostra el resum del text seleccionat.": "Catálogo de dictados de Frases con búsqueda, filtros de focos y tarjetas de título, nivel y longitud. La barra lateral muestra el resumen del texto seleccionado."
+  "Catàleg de dictats de Frases amb cerca, filtres de focus i targetes de títol, nivell i llargada. El sidebar mostra el resum del text seleccionat.": "Catálogo de dictados de Frases con búsqueda, filtros de focos y tarjetas de título, nivel y longitud. La barra lateral muestra el resumen del texto seleccionado.",
+  "Cap text per mostrar": "Ningún texto para mostrar",
+  "Mots ressaltats: {count}": "Palabras resaltadas: {count}",
+  "Al full": "En la hoja",
+  "Tria de textos amb llista i lectura completa, mots del focus ressaltats i confirmació abans de canviar el full.": "Selección de textos con lista y lectura completa, palabras del foco resaltadas y confirmación antes de cambiar la hoja."
 }

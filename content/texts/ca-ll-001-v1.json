@@ -38,5 +38,17 @@
     "visitaran l’exposició",
     "amb molta il·lusió."
   ],
-  "audio": null
+  "audio": null,
+  "focusWords": {
+    "l·l": [
+      "col·legi",
+      "il·lustració",
+      "col·lecció",
+      "col·labora",
+      "col·loca",
+      "il·lumina",
+      "excel·lent",
+      "il·lusió"
+    ]
+  }
 }

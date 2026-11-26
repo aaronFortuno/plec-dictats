@@ -5,6 +5,9 @@ const lib=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLEC_NODE_
  assert.deepEqual(T.catalogue.map(e=>e.code),['LL01','LL02']);assert.equal(T.wordCount(T.text(T.find('LL02'))),57);assert.equal(T.find('LL02','es'),undefined);
  const b=B.compile('ll02-four-rhythms-v1'),approval=require('../audio/texts/batches/ll02-four-rhythms-v1.json'),receipt=require('../audio/texts/batches/ll02-four-rhythms-v1-receipt.json');B.assertEstimate(b);assert.equal(b.requestHash,approval.requestHash);assert.equal(b.planHash,approval.planHash);assert.equal(receipt.newSynthesisRequests,1);assert.equal(receipt.actualSeconds,211.83);assert.equal(b.estimate.conservativeSeconds,359);
  for(const entry of T.catalogue){
+  assert.deepEqual(Object.keys(entry.focusWords),entry.focusLabels);const tokens=T.text(entry).match(/[\p{L}\p{M}]+(?:[·-][\p{L}\p{M}]+)*/gu).map(w=>w.toLowerCase());
+  for(const [focus,words]of Object.entries(entry.focusWords)){assert(words.length>0);assert.equal(new Set(words).size,words.length);assert(words.every(w=>tokens.includes(w)),focus+' highlights must be actual complete words in the text.');if(focus==='l·l')assert.deepEqual(words,[...new Set(tokens.filter(w=>w.includes('l·l')))]);}
+
   const plan=P.build(entry);assert(P.has(entry));assert.equal(entry.phrases.join(' '),T.text(entry));assert.equal(sha(T.text(entry)),entry.audio.sourceTextSha256);
   for(const [i,v]of plan.variants.entries()){
    const groups=T.fragments(entry,[2,4,6,10][i]),audio=entry.audio.variants[v.id];assert.equal(groups.length,v.fragments.length);assert.equal(groups.map(g=>g.text).join(' '),T.text(entry));assert.equal(groups.flatMap(g=>g.cues).length,10);assert.equal(sha(fs.readFileSync(audio.path)),audio.sha256);

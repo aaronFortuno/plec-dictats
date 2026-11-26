@@ -5,5 +5,9 @@
     <div class="text-picker-focus"><span id="text-picker-focus-label">Focus de pràctica</span><div id="text-picker-focuses" role="group" aria-labelledby="text-picker-focus-label"></div></div>
     <p id="text-picker-count" role="status" aria-live="polite"></p>
   </div>
-  <div class="text-picker-scroll" tabindex="0" role="region" aria-label="Dictats disponibles"><div id="text-picker-results"></div><div id="text-picker-empty" hidden><p>Cap dictat amb aquests filtres.</p><button type="button" class="small-link" id="text-picker-reset">Esborra els filtres</button></div></div>
+  <div class="text-picker-body">
+    <div class="text-picker-scroll" tabindex="0" role="region" aria-label="Dictats disponibles"><div id="text-picker-results"></div><div id="text-picker-empty" hidden><p>Cap dictat amb aquests filtres.</p><button type="button" class="small-link" id="text-picker-reset">Esborra els filtres</button></div></div>
+    <section class="text-picker-detail" aria-labelledby="text-picker-detail-title"><button type="button" class="small-link" id="text-picker-back"><span data-icon="arrow-right"></span> Llista de textos</button><div id="text-picker-reading" tabindex="0" role="region" aria-label="Text complet del dictat"><div id="text-picker-detail-content"></div></div></section>
+  </div>
+  <div class="text-picker-actions"><button type="button" class="button primary" id="text-picker-confirm">Fes servir aquest dictat</button></div>
 </dialog>

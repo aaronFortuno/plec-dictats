@@ -202,3 +202,13 @@ Triar una targeta actualitza el resum del sidebar, el full, l’enllaç i l’es
 `text-picker.js` gestiona només el catàleg emergent; `text-mode.js` conserva la selecció i el full. Capçaleres/filtres fixos, scroll intern als resultats, focus de teclat i variants de mòbil/tema fosc. Les proves de filtratge amb diversos focus i banc ampli utilitzen dades efímeres al navegador; no publiquen textos ficticis.
 
 Validació 1.46: 61 comprovacions locals passades. Cerca i selecció reals de LL01/LL02, filtres combinats sense duplicats, cap resultat/restabliment, resum/URL/PDF/escaleta, conservació dels ajustos, reobertura neta, creixement del banc i controls fixos, mòbil/tema fosc i regressions de la resta de Plec. Sense síntesi ni comprovació remota.
+
+## Llegir abans de confirmar · 1.47
+
+«Explora els textos» se situa al capdamunt del configurador de Frases. El diàleg presenta una llista compacta a l’esquerra i el text complet a la dreta. La llista inclou tres mots de mostra del focus; «Al full» identifica el dictat vigent i el contorn actiu identifica el text que s’està llegint. Cercar, filtrar o clicar textos només canvia una selecció provisional. «Fes servir aquest dictat» és l’única acció que aplica el text al preparador. Tancar o cancel·lar descarta aquesta selecció; reobrir recupera el dictat real del full, amb filtres nets.
+
+El camp editorial `focusWords` de cada text enumera, per etiqueta precisa, els mots que es ressalten: 8 a LL01 i 7 a LL02. La lectura conserva íntegres els paràgrafs i la puntuació. Es marquen mots complets, conservant majúscules i accents, segons els focus filtrats. No es dedueixen els mots a partir del grup genèric `signes`. Les proves comproven que els mots existeixen al text i que es cobreixen els casos de l·l; els continguts, les escaletes, les autoritzacions i els àudios congelats no canvien.
+
+Llista i lectura tenen scroll independent; capçalera, filtres i confirmació queden fixos. En mòbil i en pantalles baixes, la navegació és llista → lectura, amb retorn a la llista i confirmació visible. Les proves comproven la invariància del full i URL durant l’exploració/cancel·lació, l’aplicació explícita amb conservació dels ajustos, els ressaltats exactes, els filtres combinats i els dos scrolls.
+
+Validació 1.47: 61 comprovacions locals passades, inclosa la invariància del full i URL abans de confirmar, la cancel·lació sense canvis, la confirmació amb preservació dels ajustos, els 8/7 mots ressaltats, els paràgrafs exactes, els filtres combinats, els scrolls independents, mòbil i paisatge, i els fluxos de PDF, escaleta i alumnat. Sense síntesi ni comprovació remota.

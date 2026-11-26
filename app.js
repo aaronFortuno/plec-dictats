@@ -259,6 +259,7 @@
     }
   });
   const releases = [
+    ['1.47', '2026-11-26', [t('Tria de textos amb llista i lectura completa, mots del focus ressaltats i confirmació abans de canviar el full.')]],
     ['1.46', '2026-11-26', [t('Catàleg de dictats de Frases amb cerca, filtres de focus i targetes de títol, nivell i llargada. El sidebar mostra el resum del text seleccionat.')]],
     ['1.45.3', '2026-11-26', [t('Contorn de focus dels desplegables complet als dos sidebars, també en pantalles estretes.')]],
     ['1.45.2', '2026-11-26', [t('Codis de ritme aprovats: taula informativa amb imatges, sense edició ni exportació de propostes.')]],
