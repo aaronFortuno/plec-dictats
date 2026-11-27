@@ -29,4 +29,6 @@
 
 ## Textos CA003–CA006 · 27/11/2026
 
-El docent ha validat explícitament els quatre textos, ha demanat codis amb tres xifres i les escaletes per validar abans de sintetitzar. Les escaletes i la proposta de lots segueixen pendents de validació docent. Preparar estimacions no autoritza enviar peticions. Cap nova síntesi en aquesta fase.
+El docent ha validat els quatre textos i les escaletes i ha autoritzat explícitament quatre lots, un per CA003–CA006, amb Aoede, català central i els quatre ritmes en cada petició, i integrar els àudios. Autoritzacions exactes a `audio/texts/batches/ca003-four-rhythms-v1.json` fins a `ca006-four-rhythms-v1.json`. Màxim una petició nova per lot, compartint la quota amb Sentit. Conservar les interaccions abans de recuperar-les; no repetir cap enviament ambigu ni regenerar correccions sense nou encàrrec. Publicació pendent d’audició, mai com a pronunciació validada.
+
+Lots completats amb quatre POST en total. CA006 recuperat amb el mateix ID després d’un tall de connexió, sense reenviar. Setze MP3 integrats com a pilots pendents d’audició; rebuts i propostes de frontera temporal a `audio/texts/batches/`. CA005 r23 F12–F13 té una unió sense pausa i una frontera estimada que requereix escolta; vegeu `docs/DICTATS-TEXT.md`. No regenerar cap d’aquests lots sense nou encàrrec.

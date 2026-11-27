@@ -6,6 +6,7 @@ const batchId='ll01-four-rhythms-v1',T=require('../text-dictations.js'),P=requir
 const sha=value=>createHash('sha256').update(value).digest('hex');
 async function read(file,fallback){try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(e){if(e.code==='ENOENT')return fallback;throw e;}}
 function compile(selectedBatch=batchId){
+ if(/^ca00[3-6]-four-rhythms-v1$/.test(selectedBatch))return require('./prosody-new-batch.cjs').compile(selectedBatch);
  if(!['ll01-four-rhythms-v1','ll02-four-rhythms-v1'].includes(selectedBatch))throw Error('Lot desconegut.');
  const entry=selectedBatch===batchId?T.catalogue[0]:require('../content/texts/ca-ll-002-v1.json');
  const planSource=require('../content/prosody/'+entry.id+'.json'),plan=P.build(entry,planSource),content=[],items=[];

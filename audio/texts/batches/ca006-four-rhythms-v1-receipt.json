@@ -1,0 +1,574 @@
+{
+  "id": "ca006-four-rhythms-v1",
+  "requestHash": "8882e508b213b65307c1c158f82461dcc67510e7a2790dcee635ca4a1f4f5fd7",
+  "planHash": "309af5d49aecdd21e3581c4c4edd12800e6d1f74d5ee1915c14afdd7e6526ce8",
+  "voice": "Aoede",
+  "newSynthesisRequests": 1,
+  "actualSeconds": 202.6,
+  "estimate": {
+    "renditions": 4,
+    "spokenWords": 328,
+    "cueCount": 36,
+    "plannedPauseSeconds": 92.8,
+    "nominalSeconds": 245,
+    "conservativeSeconds": 360,
+    "maximumSeconds": 390,
+    "withinDurationBudget": true,
+    "remainingSeconds": 30,
+    "nominalWpm": 130,
+    "conservativeWpm": 95,
+    "safetyFactor": 1.2,
+    "estimatedInputTokens": 6645
+  },
+  "coverage": 0.9695121951219512,
+  "expectedSpokenWords": 328,
+  "recognizedSpokenWords": 336,
+  "unmatchedWords": [
+    {
+      "token": 1,
+      "word": "Ahir,"
+    },
+    {
+      "token": 55,
+      "word": "caminarien"
+    },
+    {
+      "token": 83,
+      "word": "Ahir,"
+    },
+    {
+      "token": 121,
+      "word": "el"
+    },
+    {
+      "token": 137,
+      "word": "caminarien"
+    },
+    {
+      "token": 165,
+      "word": "Ahir,"
+    },
+    {
+      "token": 219,
+      "word": "caminarien"
+    },
+    {
+      "token": 247,
+      "word": "Ahir,"
+    },
+    {
+      "token": 284,
+      "word": "visitarien"
+    },
+    {
+      "token": 301,
+      "word": "caminarien"
+    }
+  ],
+  "asrNote": "Local timing assistance with explicit merged ASR spellings (com a, apart, de mar, i lusió, com panys). Unmatched words require listening; this is not a pronunciation certificate.",
+  "rawSha256": "f0cadcf497bc1da33f71361779450e6bc246b9de48f32318179295c72524994f",
+  "usage": {
+    "total_tokens": 5682,
+    "total_input_tokens": 617,
+    "input_tokens_by_modality": [
+      {
+        "modality": "text",
+        "tokens": 617
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_output_tokens": 5065,
+    "output_tokens_by_modality": [
+      {
+        "modality": "audio",
+        "tokens": 5065
+      }
+    ],
+    "total_tool_use_tokens": 0,
+    "total_thought_tokens": 0,
+    "initial_input_tokens": 617
+  },
+  "recovery": {
+    "seconds": 202.6,
+    "allPcmSamplesPreserved": true,
+    "voiceRetimed": false,
+    "metadataBytesRemoved": 316376
+  },
+  "cuts": [
+    {
+      "variant": "r23",
+      "fragment": 1,
+      "afterToken": 4,
+      "left": 2.61,
+      "right": 2.64,
+      "time": 2.625,
+      "rms": 0.0007903772886764365,
+      "requestedPauseMissing": true,
+      "quietWindowMs": 10,
+      "requiresListening": true
+    },
+    {
+      "variant": "r23",
+      "fragment": 2,
+      "afterToken": 7,
+      "left": 4.02,
+      "right": 4.5,
+      "time": 4.26,
+      "rms": 0.00014786729758287375
+    },
+    {
+      "variant": "r23",
+      "fragment": 3,
+      "afterToken": 12,
+      "left": 6.63,
+      "right": 7.47,
+      "time": 7.05,
+      "rms": 0.00019427760445212425
+    },
+    {
+      "variant": "r23",
+      "fragment": 4,
+      "afterToken": 15,
+      "left": 8.82,
+      "right": 9.42,
+      "time": 9.120041666666667,
+      "rms": 0.00012093653266151869
+    },
+    {
+      "variant": "r23",
+      "fragment": 5,
+      "afterToken": 18,
+      "left": 10.44,
+      "right": 11.28,
+      "time": 10.86,
+      "rms": 0.00015497877644458428
+    },
+    {
+      "variant": "r23",
+      "fragment": 6,
+      "afterToken": 21,
+      "left": 12.81,
+      "right": 13.53,
+      "time": 13.17,
+      "rms": 0.00007529559198898515
+    },
+    {
+      "variant": "r23",
+      "fragment": 7,
+      "afterToken": 24,
+      "left": 14.7,
+      "right": 15.6,
+      "time": 15.15,
+      "rms": 0.00005873477706440057
+    },
+    {
+      "variant": "r23",
+      "fragment": 8,
+      "afterToken": 30,
+      "left": 17.85,
+      "right": 18.96,
+      "time": 18.405041666666666,
+      "rms": 0.00012469645738893677
+    },
+    {
+      "variant": "r23",
+      "fragment": 9,
+      "afterToken": 33,
+      "left": 21.24,
+      "right": 21.69,
+      "time": 21.465,
+      "rms": 0.0000712167643250295
+    },
+    {
+      "variant": "r23",
+      "fragment": 10,
+      "afterToken": 36,
+      "left": 23.67,
+      "right": 24.72,
+      "time": 24.195,
+      "rms": 0.00033764129509642284
+    },
+    {
+      "variant": "r23",
+      "fragment": 11,
+      "afterToken": 38,
+      "left": 26.22,
+      "right": 27.18,
+      "time": 26.7,
+      "rms": 0.0003495423014639743
+    },
+    {
+      "variant": "r23",
+      "fragment": 12,
+      "afterToken": 40,
+      "left": 27.87,
+      "right": 28.83,
+      "time": 28.35,
+      "rms": 0.00027538838284168175
+    },
+    {
+      "variant": "r23",
+      "fragment": 13,
+      "afterToken": 45,
+      "left": 31.17,
+      "right": 32.13,
+      "time": 31.65,
+      "rms": 0.0007802922616978825
+    },
+    {
+      "variant": "r23",
+      "fragment": 14,
+      "afterToken": 47,
+      "left": 32.88,
+      "right": 33.66,
+      "time": 33.27,
+      "rms": 0.0002756419049969525
+    },
+    {
+      "variant": "r23",
+      "fragment": 15,
+      "afterToken": 50,
+      "left": 35.31,
+      "right": 36.03,
+      "time": 35.67,
+      "rms": 0.0002260670835880898
+    },
+    {
+      "variant": "r23",
+      "fragment": 16,
+      "afterToken": 53,
+      "left": 38.37,
+      "right": 38.85,
+      "time": 38.61,
+      "rms": 0.00048688649610720476
+    },
+    {
+      "variant": "r23",
+      "fragment": 17,
+      "afterToken": 60,
+      "left": 41.55,
+      "right": 44.43,
+      "time": 42.99,
+      "rms": 0.0016295590184779562
+    },
+    {
+      "variant": "r23",
+      "fragment": 18,
+      "afterToken": 62,
+      "left": 45.24,
+      "right": 48.39,
+      "time": 46.815,
+      "rms": 0.0004768341064355468
+    },
+    {
+      "variant": "r23",
+      "fragment": 19,
+      "afterToken": 65,
+      "left": 49.38,
+      "right": 51.81,
+      "time": 50.595,
+      "rms": 0.00016726189670805548
+    },
+    {
+      "variant": "r23",
+      "fragment": 20,
+      "afterToken": 67,
+      "left": 52.83,
+      "right": 55.14,
+      "time": 53.985,
+      "rms": 0.0002308443492188609
+    },
+    {
+      "variant": "r23",
+      "fragment": 21,
+      "afterToken": 69,
+      "left": 55.89,
+      "right": 57.48,
+      "time": 56.685,
+      "rms": 0.00017094497955168038
+    },
+    {
+      "variant": "r23",
+      "fragment": 22,
+      "afterToken": 75,
+      "left": 60.42,
+      "right": 61.95,
+      "time": 61.185,
+      "rms": 0.000511161842100034
+    },
+    {
+      "variant": "r23",
+      "fragment": 23,
+      "afterToken": 76,
+      "left": 62.55,
+      "right": 63.18,
+      "time": 62.865,
+      "rms": 0.0009572067959346751
+    },
+    {
+      "variant": "r23",
+      "fragment": 24,
+      "afterToken": 82,
+      "left": 66,
+      "right": 66.84,
+      "time": 66.42,
+      "rms": 0.00024263393877996733
+    },
+    {
+      "variant": "r45",
+      "fragment": 1,
+      "afterToken": 86,
+      "left": 70.86,
+      "right": 71.67,
+      "time": 71.265,
+      "rms": 0.00010229270343909021
+    },
+    {
+      "variant": "r45",
+      "fragment": 2,
+      "afterToken": 94,
+      "left": 75.57,
+      "right": 76.08,
+      "time": 75.825,
+      "rms": 0.00016300262866479818
+    },
+    {
+      "variant": "r45",
+      "fragment": 3,
+      "afterToken": 97,
+      "left": 77.25,
+      "right": 78.57,
+      "time": 77.91,
+      "rms": 0.0001885042087920269
+    },
+    {
+      "variant": "r45",
+      "fragment": 4,
+      "afterToken": 103,
+      "left": 80.82,
+      "right": 81.99,
+      "time": 81.405,
+      "rms": 0.0003814392077635742
+    },
+    {
+      "variant": "r45",
+      "fragment": 5,
+      "afterToken": 112,
+      "left": 84.78,
+      "right": 85.47,
+      "time": 85.125,
+      "rms": 0.0003976688489498166
+    },
+    {
+      "variant": "r45",
+      "fragment": 6,
+      "afterToken": 118,
+      "left": 89.28,
+      "right": 90.15,
+      "time": 89.715,
+      "rms": 0.00040105998293635833
+    },
+    {
+      "variant": "r45",
+      "fragment": 7,
+      "afterToken": 127,
+      "left": 93.57,
+      "right": 93.99,
+      "time": 93.78,
+      "rms": 0.0004213148492647543
+    },
+    {
+      "variant": "r45",
+      "fragment": 8,
+      "afterToken": 132,
+      "left": 97.23,
+      "right": 98.28,
+      "time": 97.755,
+      "rms": 0.0001729310727485832
+    },
+    {
+      "variant": "r45",
+      "fragment": 9,
+      "afterToken": 142,
+      "left": 103.35,
+      "right": 104.49,
+      "time": 103.92,
+      "rms": 0.0002141265385269614
+    },
+    {
+      "variant": "r45",
+      "fragment": 10,
+      "afterToken": 147,
+      "left": 105.9,
+      "right": 107.13,
+      "time": 106.515,
+      "rms": 0.0003793351533198351
+    },
+    {
+      "variant": "r45",
+      "fragment": 11,
+      "afterToken": 151,
+      "left": 108.45,
+      "right": 109.83,
+      "time": 109.14,
+      "rms": 0.00037183678842083785
+    },
+    {
+      "variant": "r45",
+      "fragment": 12,
+      "afterToken": 157,
+      "left": 112.89,
+      "right": 113.91,
+      "time": 113.4,
+      "rms": 0.00019314577365151238
+    },
+    {
+      "variant": "r45",
+      "fragment": 13,
+      "afterToken": 164,
+      "left": 116.34,
+      "right": 117.78,
+      "time": 117.06,
+      "rms": 0.0003104922998405089
+    },
+    {
+      "variant": "r68",
+      "fragment": 1,
+      "afterToken": 176,
+      "left": 123.66,
+      "right": 124.83,
+      "time": 124.245,
+      "rms": 0.00031997708557242874
+    },
+    {
+      "variant": "r68",
+      "fragment": 2,
+      "afterToken": 182,
+      "left": 126.6,
+      "right": 127.77,
+      "time": 127.185,
+      "rms": 0.0003634747968914722
+    },
+    {
+      "variant": "r68",
+      "fragment": 3,
+      "afterToken": 194,
+      "left": 131.64,
+      "right": 132.21,
+      "time": 131.925,
+      "rms": 0.00042750713911169806
+    },
+    {
+      "variant": "r68",
+      "fragment": 4,
+      "afterToken": 200,
+      "left": 136.62,
+      "right": 137.1,
+      "time": 136.86004166666666,
+      "rms": 0.0007674035758781369
+    },
+    {
+      "variant": "r68",
+      "fragment": 5,
+      "afterToken": 209,
+      "left": 140.4,
+      "right": 141.03,
+      "time": 140.71504166666668,
+      "rms": 0.0004947609902375688
+    },
+    {
+      "variant": "r68",
+      "fragment": 6,
+      "afterToken": 214,
+      "left": 143.16,
+      "right": 143.79,
+      "time": 143.475,
+      "rms": 0.00031852455671036963
+    },
+    {
+      "variant": "r68",
+      "fragment": 7,
+      "afterToken": 224,
+      "left": 147.42,
+      "right": 148.8,
+      "time": 148.11,
+      "rms": 0.0002894347345890992
+    },
+    {
+      "variant": "r68",
+      "fragment": 8,
+      "afterToken": 229,
+      "left": 150.3,
+      "right": 151.44,
+      "time": 150.87004166666668,
+      "rms": 0.00028369655046378583
+    },
+    {
+      "variant": "r68",
+      "fragment": 9,
+      "afterToken": 239,
+      "left": 155.19,
+      "right": 156.12,
+      "time": 155.655,
+      "rms": 0.00017295912002202914
+    },
+    {
+      "variant": "r68",
+      "fragment": 10,
+      "afterToken": 246,
+      "left": 159.03,
+      "right": 160.53,
+      "time": 159.78004166666668,
+      "rms": 0.0025055338972019892
+    },
+    {
+      "variant": "r912",
+      "fragment": 1,
+      "afterToken": 261,
+      "left": 169.35,
+      "right": 169.41,
+      "time": 169.38,
+      "rms": 0.0006261962380194124,
+      "requestedPauseMissing": true,
+      "quietWindowMs": 10,
+      "requiresListening": true
+    },
+    {
+      "variant": "r912",
+      "fragment": 2,
+      "afterToken": 276,
+      "left": 174.27,
+      "right": 175.59,
+      "time": 174.93004166666665,
+      "rms": 0.00043994337569066547
+    },
+    {
+      "variant": "r912",
+      "fragment": 3,
+      "afterToken": 291,
+      "left": 183.54,
+      "right": 184.74,
+      "time": 184.14,
+      "rms": 0.0001445429685498649
+    },
+    {
+      "variant": "r912",
+      "fragment": 4,
+      "afterToken": 306,
+      "left": 192.36,
+      "right": 193.32,
+      "time": 192.84004166666668,
+      "rms": 0.0002581397493872989
+    },
+    {
+      "variant": "r912",
+      "fragment": 5,
+      "afterToken": 321,
+      "left": 198.21,
+      "right": 199.29,
+      "time": 198.75,
+      "rms": 0.00029511066103875326
+    }
+  ],
+  "pronunciationValidated": false
+}

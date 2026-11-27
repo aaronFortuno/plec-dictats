@@ -259,6 +259,7 @@
     }
   });
   const releases = [
+    ['1.50', '2026-11-27', [t("CA003–CA006 amb Aoede i quatre ritmes, pendents d’audició. Focus i tria directa de textos al sidebar, amb lectura completa opcional.")]],
     ['1.49', '2026-11-27', [t('Codis CA001–CA006. Textos nous validats; quatre escaletes de prosòdia per revisar, amb estimacions de durada i proposta de quatre lots. Cap síntesi enviada.')]],
     ['1.48', '2026-11-26', [t('Codis de Frases independents del focus: CA0001, CA0002… Quatre textos nous per validar amb b/v, esses, g/j i formes verbals amb dièresi; encara sense àudio.')]],
     ['1.47', '2026-11-26', [t('Tria de textos amb llista i lectura completa, mots del focus ressaltats i confirmació abans de canviar el full.')]],

@@ -11,13 +11,13 @@ const lib=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLEC_NODE_
   for(const [focus,words]of Object.entries(entry.focusWords)){assert(words.length>0);assert.equal(new Set(words.map(w=>w.toLowerCase())).size,words.length);assert(words.every(w=>tokens.includes(w.toLowerCase())),focus+' highlights must be actual complete words in the text.');if(focus==='l·l')assert.deepEqual(words,[...new Set(tokens.filter(w=>w.includes('l·l')))]);}
 
   if(entry.status==='approved-text'){
-   assert.equal(entry.audio,null);assert.equal(entry.editorialReview.status,'passed');assert.equal(entry.teacherReview.status,'approved');assert.equal(entry.synthesis.status,'not-requested');assert(P.has(entry));assert.equal(P.build(entry).status,'pending-teacher-validation');assert.equal(sha(T.text(entry)),entry.teacherReview.sourceTextSha256);
+   assert(entry.audio);assert.equal(entry.editorialReview.status,'passed');assert.equal(entry.teacherReview.status,'approved');assert.equal(entry.prosodyReview.status,'approved');assert.equal(entry.synthesis.status,'approved');assert(P.has(entry));assert.equal(P.build(entry).status,'approved-for-pilot');assert.equal(sha(T.text(entry)),entry.teacherReview.sourceTextSha256);
    const fields=['code','title','stage','focuses','focusLabels','paragraphs','phrases','focusWords'];assert.equal(sha(JSON.stringify(Object.fromEntries(fields.map(key=>[key,key==='code'?entry.editorialReview.codeAtReview:entry[key]])))),entry.editorialReview.sourceSha256);assert.equal(entry.phrases.join(' '),T.text(entry));
-   for(const fold of ['vertical','horizontal']){const result=await require('../text-worksheet.js').prepare(entry,{fold},lib);assert.equal((await lib.PDFDocument.load(result.bytes)).getPageCount(),1);}continue;
+   for(const fold of ['vertical','horizontal']){const result=await require('../text-worksheet.js').prepare(entry,{fold},lib);assert.equal((await lib.PDFDocument.load(result.bytes)).getPageCount(),1);}
   }
   const plan=P.build(entry);assert(P.has(entry));assert.equal(entry.phrases.join(' '),T.text(entry));assert.equal(sha(T.text(entry)),entry.audio.sourceTextSha256);
   for(const [i,v]of plan.variants.entries()){
-   const groups=T.fragments(entry,[2,4,6,10][i]),audio=entry.audio.variants[v.id];assert.equal(groups.length,v.fragments.length);assert.equal(groups.map(g=>g.text).join(' '),T.text(entry));assert.equal(groups.flatMap(g=>g.cues).length,10);assert.equal(sha(fs.readFileSync(audio.path)),audio.sha256);
+   const groups=T.fragments(entry,[2,4,6,10][i]),audio=entry.audio.variants[v.id];assert.equal(groups.length,v.fragments.length);assert.equal(groups.map(g=>g.text).join(' '),T.text(entry));assert.equal(groups.flatMap(g=>g.cues).length,plan.cues.length);assert.equal(sha(fs.readFileSync(audio.path)),audio.sha256);
    for(let n=0;n<groups.length;n++){assert.equal(groups[n].startWord,v.fragments[n].start);assert.equal(groups[n].endWord,v.fragments[n].end);if(n)assert.equal(groups[n].start,groups[n-1].end);}
   }
  }

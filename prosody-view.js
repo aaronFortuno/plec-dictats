@@ -28,7 +28,7 @@
  function render(){
   let storage;try{storage=localStorage;}catch{/* Session-only annotations remain available. */}
   review=entry.audio?.variants?window.PlecProsodyReview.create(entry,plan,storage):null;
-  $('prosody-dialog').querySelector('.prosody-draft').textContent=plan.status==='approved-for-pilot'?'Escaleta validada · Aoede · àudio pilot pendent d’audició':'Text validat · Escaleta per validar · Àudio no encarregat';
+  $('prosody-dialog').querySelector('.prosody-draft').textContent=plan.status==='approved-for-pilot'?(entry.audio?'Escaleta validada · Aoede · àudio pilot pendent d’audició':'Escaleta validada · Àudio en preparació'):'Text validat · Escaleta per validar · Àudio no encarregat';
   $('prosody-text-title').textContent=entry.code+' · '+entry.title;
   $('prosody-summary').textContent=`${plan.wordCount} mots · ${plan.paragraphCount} paràgrafs · 4 variants · ${plan.cues.length} locucions per variant`;
   const estimate=window.PlecProsodyPlanning?.requests?.find(r=>r.versions.every(v=>v.entryId===entry.id))?.estimate,clock=value=>Math.floor(value/60)+' min '+String(value%60).padStart(2,'0')+' s';

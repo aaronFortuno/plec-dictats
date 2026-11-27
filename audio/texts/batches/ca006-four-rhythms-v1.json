@@ -1,0 +1,30 @@
+{
+  "id": "ca006-four-rhythms-v1",
+  "status": "approved-for-pilot",
+  "approvedBy": "docent",
+  "approvedAt": "2026-11-27",
+  "voice": "Aoede",
+  "variety": "central",
+  "maximumNewRequests": 1,
+  "publishPilot": true,
+  "confirmation": "He revisat les escaletes i em semblen bé. Pots enviar els quatre lots de CA003 a CA006 a Gemini amb Aoede, català central i els quatre ritmes, i integrar els àudios quan estiguin fets.",
+  "entryId": "ca-text-006-v1",
+  "requestHash": "8882e508b213b65307c1c158f82461dcc67510e7a2790dcee635ca4a1f4f5fd7",
+  "planHash": "309af5d49aecdd21e3581c4c4edd12800e6d1f74d5ee1915c14afdd7e6526ce8",
+  "sourceTextSha256": "5b15441250f05867868df48c598aee26f6df2f05f779a70027b098eed96455c1",
+  "estimate": {
+    "renditions": 4,
+    "spokenWords": 328,
+    "cueCount": 36,
+    "plannedPauseSeconds": 92.8,
+    "nominalSeconds": 245,
+    "conservativeSeconds": 360,
+    "maximumSeconds": 390,
+    "withinDurationBudget": true,
+    "remainingSeconds": 30,
+    "nominalWpm": 130,
+    "conservativeWpm": 95,
+    "safetyFactor": 1.2,
+    "estimatedInputTokens": 6645
+  }
+}

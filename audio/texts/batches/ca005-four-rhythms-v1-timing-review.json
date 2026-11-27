@@ -1,0 +1,48 @@
+{
+  "requestHash": "1ebfc2ee6884eca70158bb8d6b9ca7a63d16adc01e07677f175eb89d3ad07b43",
+  "rawSha256": "51cbc8c8c7ed177d7bbf69b3fce7016d6ce8540521a45a8182bb31f31e2d2ecb",
+  "boundaries": [
+    {
+      "variant": "r23",
+      "fragment": 12,
+      "afterToken": 47,
+      "time": 33.12,
+      "status": "pending-listening",
+      "note": "La síntesi connecta deixen amb la gerra sense pausa. Frontera estimada pel reconeixement local, no validada a l’oïda. Es conserva la presa sencera; revisar F12–F13 en el reproductor."
+    }
+  ],
+  "tokens": [
+    {
+      "token": 77,
+      "expected": "l’obre",
+      "heardWord": "l'obra",
+      "start": 59.19,
+      "end": 59.76,
+      "status": "pending-listening"
+    },
+    {
+      "token": 78,
+      "expected": "al",
+      "heardWord": "el",
+      "start": 60.24,
+      "end": 60.39,
+      "status": "pending-listening"
+    },
+    {
+      "token": 160,
+      "expected": "l’obre",
+      "heardWord": "l'obra",
+      "start": 116.13,
+      "end": 116.67,
+      "status": "pending-listening"
+    },
+    {
+      "token": 161,
+      "expected": "al",
+      "heardWord": "el",
+      "start": 118.29,
+      "end": 118.44,
+      "status": "pending-listening"
+    }
+  ]
+}

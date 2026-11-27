@@ -1,7 +1,7 @@
 {
   "version": 1,
   "textId": "ca-text-003-v1",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "Divendres, la Berta va al poble amb bicicleta. A la plaça, veu una parada de llibres vells i joguines. El venedor busca una bossa per al llibre que ella tria. La Berta obre la motxilla i hi guarda la compra. Abans de tornar a casa, també compra un petit vaixell de fusta per al seu germà.",
   "paragraphEnds": [
     19,
@@ -124,6 +124,7 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-27",
-    "sourceSha256": "24d1e8c68de27351311a934b15e3e85a70c537efecb238d71aa7f838431e44a4"
+    "sourceSha256": "24d1e8c68de27351311a934b15e3e85a70c537efecb238d71aa7f838431e44a4",
+    "statusAtReview": "pending-teacher-validation"
   }
 }

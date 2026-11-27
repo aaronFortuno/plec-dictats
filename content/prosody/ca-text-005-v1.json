@@ -1,7 +1,7 @@
 {
   "version": 1,
   "textId": "ca-text-005-v1",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "La Jana i el seu germà preparen un regal per a l’avi. Pinten una gerra amb un jardí ple de flors. Al costat de les flors, dibuixen un gira-sol i un ocell taronja. Després, deixen la gerra vora la finestra i recullen els pinzells. Quan la pintura és seca, emboliquen el regal. Al vespre, l’avi l’obre al menjador i somriu.",
   "paragraphEnds": [
     21,
@@ -129,6 +129,7 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-27",
-    "sourceSha256": "36046eb4b2a8b611392ee96b1274e0cbfe05bc5bc5673093163f78ea0aa321ce"
+    "sourceSha256": "36046eb4b2a8b611392ee96b1274e0cbfe05bc5bc5673093163f78ea0aa321ce",
+    "statusAtReview": "pending-teacher-validation"
   }
 }

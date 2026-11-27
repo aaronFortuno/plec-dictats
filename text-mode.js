@@ -4,11 +4,28 @@
  const $=id=>document.getElementById(id),T=window.PlecTexts,button=document.querySelector('[data-mode="text"]');
  let entry=T.catalogue.find(e=>e.language===window.PlecLanguage.id);
  let active=false,settings=T.options(),prepared=null,generation=0;
+ const focuses=new Set(),entries=T.catalogue.filter(e=>e.language===window.PlecLanguage.id),t=window.PlecLanguageTools.text;
+ function node(tag,className,text){const e=document.createElement(tag);e.className=className||'';if(text)e.textContent=text;return e;}
+ function browse(candidate){window.PlecTextPicker.open(entry,next=>{entry=next;render();},{previewId:candidate.id,focuses:candidate.focusLabels.some(f=>focuses.has(f))?[...focuses]:[]});}
+ function navigation(){
+  const labels=[...new Set(entries.flatMap(e=>e.focusLabels))];
+  $('text-sidebar-focuses').replaceChildren(...labels.map(label=>{const b=node('button','',label);b.type='button';b.setAttribute('aria-pressed',String(focuses.has(label)));b.addEventListener('click',()=>{focuses.has(label)?focuses.delete(label):focuses.add(label);navigation();});return b;}));
+  $('text-focus-all').setAttribute('aria-pressed',String(!focuses.size));
+  const matches=entries.filter(e=>!focuses.size||e.focusLabels.some(f=>focuses.has(f)));
+  $('text-sidebar-count').textContent=matches.length+' '+t(matches.length===1?'dictat disponible':'dictats disponibles');
+  $('text-sidebar-results').replaceChildren(...matches.map(candidate=>{
+   const row=node('div','text-sidebar-row'),read=node('button','text-sidebar-read'),meta=node('span','text-sidebar-meta',candidate.code+' · '+T.wordCount(T.text(candidate))+' '+t('mots'));
+   row.dataset.textId=candidate.id;row.classList.toggle('is-current',candidate.id===entry?.id);read.type='button';read.append(meta,node('span','text-sidebar-title',candidate.title));read.setAttribute('aria-label',t('Llegeix el text complet')+': '+candidate.title);read.setAttribute('aria-haspopup','dialog');read.addEventListener('click',()=>browse(candidate));row.append(read);
+   const use=node('button','small-link',t(candidate.id===entry?.id?'Al full':'Fes servir'));use.type='button';use.disabled=candidate.id===entry?.id;use.setAttribute('aria-label',t('Fes servir aquest dictat')+': '+candidate.title);use.addEventListener('click',()=>{entry=candidate;render();});row.append(use);return row;
+  }));
+ }
+ $('text-focus-all').addEventListener('click',()=>{focuses.clear();navigation();});
  const layoutControls={fold:'text-fold',side:'text-side',pace:'text-pace',rate:'text-rate',fontSize:'text-font-size',lineSpacing:'text-line-spacing'};
  $('text-picker-open').addEventListener('click',()=>{if(active)window.PlecTextPicker.open(entry,next=>{entry=next;render();});});
  if(!entry){button.disabled=true;button.title=window.PlecLanguageTools.text('Pilot disponible en català');}
  function notify(message){$('text-status').textContent=message;}
  async function render(){
+  navigation();
   $('text-title').textContent=entry.title;$('text-code').textContent=entry.code;$('text-picker-open').dataset.textId=entry.id;
   $('text-selected-meta').textContent=entry.code+' · '+T.wordCount(T.text(entry))+' '+window.PlecLanguageTools.text('mots')+' · '+window.PlecLanguageTools.text(entry.stage);
   $('text-selected-focuses').replaceChildren(...entry.focusLabels.map(label=>{const tag=document.createElement('span');tag.textContent=label;return tag;}));
@@ -23,7 +40,7 @@
   $('text-layout-error').hidden=true;
   $('text-open-label').textContent=entry.status==='draft'?'Pendent de validar':entry.audio?'Comença el dictat':'Àudio pendent';
   document.querySelector('.dictation-nav').href=T.url(entry,settings,true,location.origin+'/');
-  $('text-audio-note').textContent=entry.status==='draft'?'Text per validar. Encara no se n’ha encarregat l’àudio.':entry.status==='approved-text'?'Text validat. Escaleta per validar; àudio no encarregat.':entry.audio?'Aoede · català central · prova pendent d’audició':'Àudio de prova en preparació.';
+  $('text-audio-note').textContent=entry.status==='draft'?'Text per validar. Encara no se n’ha encarregat l’àudio.':entry.audio?'Aoede · català central · prova pendent d’audició':entry.prosodyReview?.status==='approved'?'Text i escaleta validats · Àudio en preparació.':'Text validat. Escaleta per validar; àudio no encarregat.';
   const url=T.url(entry,settings);history.replaceState(null,'',new URL(new URL(url).pathname+new URL(url).search,location.origin));
   try{
    const next=await window.PlecTextWorksheet.prepare(entry,settings);

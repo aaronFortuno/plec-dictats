@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "ca003-ca006-prosody-proposal-v1",
-  "status": "pending-prosody-validation",
+  "status": "planning-only",
   "voiceProposal": "Aoede",
   "varietyProposal": "Català central",
   "synthesisAuthorized": false,
@@ -265,9 +265,9 @@
       "title": "Una parada a la plaça",
       "words": 56,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "27fa4f817efa8d49e38538dc501ff53aef3c7e31d8a04a587eddd28c3e8f05c3",
-      "planSha256": "87eebdde5ac118416edaa1d34d5ed80f48087ff89bfacce86db8767d3babb734"
+      "planSha256": "2a7fad8a213698668412bb55386ecc86207d1b610224f9f4ddd092b8d29b4819"
     },
     {
       "code": "CA004",
@@ -275,9 +275,9 @@
       "title": "El mocador perdut",
       "words": 60,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "64807a6400285215a23c114a2f6d296d6a52a9d4c9ed4ca2ac67c7376f7cc89a",
-      "planSha256": "5622443558bfbd14753b15aebafd9ef5d969899b44f873e23ea5f97d0709dc26"
+      "planSha256": "e61102bf50e17cee7fa9ac4c4f81c4561008c0d9d49151db943b2afdf03c8f9c"
     },
     {
       "code": "CA005",
@@ -285,9 +285,9 @@
       "title": "Una gerra per a l’avi",
       "words": 60,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "74ac2f0cf0d6e63eef076c6c13febd588fc5951f23aada13fdbafc5ec1a7d50b",
-      "planSha256": "166c5091c3ba3e9f6f193c09819261bdec0ef456aab805c0b002e6d7538663f6"
+      "planSha256": "55313c6cdd61667248dfc61de9b363490e56bb6af82bec51b9ec1b8bd085da13"
     },
     {
       "code": "CA006",
@@ -295,9 +295,9 @@
       "title": "Una sortida amb previsió",
       "words": 60,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "5b15441250f05867868df48c598aee26f6df2f05f779a70027b098eed96455c1",
-      "planSha256": "b894b83340c5c80aa5991bd83bce73464df989a4b9c4689fc61b6d0c09f69c33"
+      "planSha256": "309af5d49aecdd21e3581c4c4edd12800e6d1f74d5ee1915c14afdd7e6526ce8"
     }
   ]
 }

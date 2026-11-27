@@ -3,6 +3,22 @@
 body[data-activity="text"] .text-config,body[data-activity="text"] .text-management{display:grid;gap:18px}
 body[data-activity="text"] .quick-settings>:not(.mode-setting),body[data-activity="text"] .config-scroll>.focus-settings,body[data-activity="text"] .config-scroll>.required-settings,body[data-activity="text"] #pseudo-note,body[data-activity="text"] .management-scroll>:not(.text-management){display:none!important}
 .text-config{margin-top:20px}
+.text-sidebar-heading{display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600}
+.text-sidebar-focuses{display:flex;flex-wrap:wrap;gap:6px;margin-top:-10px}
+.text-sidebar-focuses button{border:1px solid var(--line);border-radius:6px;background:var(--white);color:var(--ink);padding:7px 9px;min-height:34px;font:inherit;font-size:12px;transition:background var(--motion-duration) var(--motion-ease),border-color var(--motion-duration) var(--motion-ease)}
+.text-sidebar-focuses button:hover,.text-sidebar-focuses button[aria-pressed="true"]{background:var(--soft);border-color:var(--green);color:var(--green)}
+.text-sidebar-results{display:grid;gap:3px;margin-top:-7px}
+.text-sidebar-row{display:flex;align-items:center;gap:9px;border-radius:7px;padding:5px 7px;border-left:2px solid transparent;transition:background var(--motion-duration) var(--motion-ease),border-color var(--motion-duration) var(--motion-ease)}
+.text-sidebar-row.is-current{background:var(--soft);border-left-color:var(--green)}
+.text-sidebar-read{display:grid;gap:2px;flex:1;min-width:0;text-align:left;background:none;border:0;padding:4px 0;color:var(--ink);font:inherit}
+.text-sidebar-read:hover .text-sidebar-title{text-decoration:underline;text-underline-offset:3px}
+.text-sidebar-meta{font-size:11px;color:var(--muted)}
+.text-sidebar-title{font-size:13px;line-height:1.4}
+.text-sidebar-row>.small-link{flex-shrink:0;min-height:36px;font-size:11px}
+.text-sidebar-row>.small-link:disabled{color:var(--muted);opacity:1;cursor:default;text-decoration:none}
+.text-config>#text-picker-open{justify-self:start;margin-top:-10px}
+.text-config .text-selected-summary{gap:5px;border-top:1px solid var(--line);padding-top:14px}
+.text-config .text-selected-summary h2{font-size:18px}
 .text-layout-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:end}
 .text-config .text-layout-error{color:var(--accent)}
 .text-config label,.text-management label{display:grid;gap:7px;font-size:13px;font-weight:600}

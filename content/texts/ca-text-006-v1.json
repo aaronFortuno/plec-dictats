@@ -77,9 +77,15 @@
     "sourceTextSha256": "5b15441250f05867868df48c598aee26f6df2f05f779a70027b098eed96455c1"
   },
   "synthesis": {
-    "status": "not-requested"
+    "status": "approved",
+    "voice": "Aoede",
+    "variety": "central",
+    "maximumNewRequests": 1
   },
   "prosodyReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-27",
+    "confirmation": "He revisat les escaletes i em semblen bé. Pots enviar els quatre lots de CA003 a CA006 a Gemini amb Aoede, català central i els quatre ritmes, i integrar els àudios quan estiguin fets.",
+    "planHash": "309af5d49aecdd21e3581c4c4edd12800e6d1f74d5ee1915c14afdd7e6526ce8"
   }
 }

@@ -1,0 +1,552 @@
+{
+  "id": "ca003-four-rhythms-v1",
+  "requestHash": "bb4006a21fba87233ba6596a8710f46447f3a16f481defa43648ada2859c1267",
+  "planHash": "2a7fad8a213698668412bb55386ecc86207d1b610224f9f4ddd092b8d29b4819",
+  "voice": "Aoede",
+  "newSynthesisRequests": 1,
+  "actualSeconds": 165.59,
+  "estimate": {
+    "renditions": 4,
+    "spokenWords": 300,
+    "cueCount": 32,
+    "plannedPauseSeconds": 84.4,
+    "nominalSeconds": 223,
+    "conservativeSeconds": 329,
+    "maximumSeconds": 390,
+    "withinDurationBudget": true,
+    "remainingSeconds": 61,
+    "nominalWpm": 130,
+    "conservativeWpm": 95,
+    "safetyFactor": 1.2,
+    "estimatedInputTokens": 5972
+  },
+  "coverage": 0.9366666666666666,
+  "expectedSpokenWords": 300,
+  "recognizedSpokenWords": 292,
+  "unmatchedWords": [
+    {
+      "token": 8,
+      "word": "amb"
+    },
+    {
+      "token": 35,
+      "word": "al"
+    },
+    {
+      "token": 45,
+      "word": "obre"
+    },
+    {
+      "token": 49,
+      "word": "hi"
+    },
+    {
+      "token": 81,
+      "word": "al"
+    },
+    {
+      "token": 110,
+      "word": "al"
+    },
+    {
+      "token": 120,
+      "word": "obre"
+    },
+    {
+      "token": 124,
+      "word": "hi"
+    },
+    {
+      "token": 156,
+      "word": "al"
+    },
+    {
+      "token": 167,
+      "word": "veu"
+    },
+    {
+      "token": 195,
+      "word": "obre"
+    },
+    {
+      "token": 199,
+      "word": "hi"
+    },
+    {
+      "token": 230,
+      "word": "va"
+    },
+    {
+      "token": 231,
+      "word": "al"
+    },
+    {
+      "token": 241,
+      "word": "Coma."
+    },
+    {
+      "token": 242,
+      "word": "veu"
+    },
+    {
+      "token": 270,
+      "word": "obre"
+    },
+    {
+      "token": 274,
+      "word": "hi"
+    },
+    {
+      "token": 287,
+      "word": "Coma."
+    }
+  ],
+  "asrNote": "Local timing assistance with explicit merged ASR spellings (com a, apart, de mar, i lusió, com panys). Unmatched words require listening; this is not a pronunciation certificate.",
+  "rawSha256": "68a6261bbb106792bf08de428c2dc8a2f7efa479ce47922fe697d3dabd53e4d6",
+  "usage": {
+    "total_tokens": 4645,
+    "total_input_tokens": 505,
+    "input_tokens_by_modality": [
+      {
+        "modality": "text",
+        "tokens": 505
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_output_tokens": 4140,
+    "output_tokens_by_modality": [
+      {
+        "modality": "audio",
+        "tokens": 4140
+      }
+    ],
+    "total_tool_use_tokens": 0,
+    "total_thought_tokens": 0,
+    "initial_input_tokens": 505
+  },
+  "recovery": {
+    "seconds": 165.59,
+    "allPcmSamplesPreserved": true,
+    "voiceRetimed": false,
+    "metadataBytesRemoved": 131144
+  },
+  "cuts": [
+    {
+      "variant": "r23",
+      "fragment": 1,
+      "afterToken": 4,
+      "left": 3.27,
+      "right": 3.72,
+      "time": 3.495,
+      "rms": 0.00022480189324174387
+    },
+    {
+      "variant": "r23",
+      "fragment": 2,
+      "afterToken": 7,
+      "left": 4.86,
+      "right": 5.37,
+      "time": 5.115,
+      "rms": 0.0003678866301529139
+    },
+    {
+      "variant": "r23",
+      "fragment": 3,
+      "afterToken": 12,
+      "left": 7.41,
+      "right": 8.07,
+      "time": 7.74,
+      "rms": 0.000495550562881795
+    },
+    {
+      "variant": "r23",
+      "fragment": 4,
+      "afterToken": 16,
+      "left": 10.32,
+      "right": 10.8,
+      "time": 10.560041666666667,
+      "rms": 0.00041014648607530556
+    },
+    {
+      "variant": "r23",
+      "fragment": 5,
+      "afterToken": 19,
+      "left": 11.85,
+      "right": 12.63,
+      "time": 12.24,
+      "rms": 0.00080965934750055
+    },
+    {
+      "variant": "r23",
+      "fragment": 6,
+      "afterToken": 22,
+      "left": 13.89,
+      "right": 14.61,
+      "time": 14.250041666666666,
+      "rms": 0.00043505614694234806
+    },
+    {
+      "variant": "r23",
+      "fragment": 7,
+      "afterToken": 28,
+      "left": 16.74,
+      "right": 17.4,
+      "time": 17.07,
+      "rms": 0.0002853502349683381
+    },
+    {
+      "variant": "r23",
+      "fragment": 8,
+      "afterToken": 31,
+      "left": 18.57,
+      "right": 19.41,
+      "time": 18.99,
+      "rms": 0.00031642218243551647
+    },
+    {
+      "variant": "r23",
+      "fragment": 9,
+      "afterToken": 33,
+      "left": 20.16,
+      "right": 20.58,
+      "time": 20.37,
+      "rms": 0.0007831205881852784
+    },
+    {
+      "variant": "r23",
+      "fragment": 10,
+      "afterToken": 36,
+      "left": 21.51,
+      "right": 23.07,
+      "time": 22.290041666666667,
+      "rms": 0.0002184015518791539
+    },
+    {
+      "variant": "r23",
+      "fragment": 11,
+      "afterToken": 42,
+      "left": 26.04,
+      "right": 26.7,
+      "time": 26.37,
+      "rms": 0.00022221061800214317
+    },
+    {
+      "variant": "r23",
+      "fragment": 12,
+      "afterToken": 45,
+      "left": 27.99,
+      "right": 28.77,
+      "time": 28.38,
+      "rms": 0.0001839406780286373,
+      "asrBoundaryUncertain": true
+    },
+    {
+      "variant": "r23",
+      "fragment": 13,
+      "afterToken": 47,
+      "left": 29.79,
+      "right": 30.96,
+      "time": 30.375,
+      "rms": 0.00024510431825814434
+    },
+    {
+      "variant": "r23",
+      "fragment": 14,
+      "afterToken": 50,
+      "left": 31.92,
+      "right": 33.06,
+      "time": 32.49,
+      "rms": 0.00042230381482696676
+    },
+    {
+      "variant": "r23",
+      "fragment": 15,
+      "afterToken": 56,
+      "left": 35.61,
+      "right": 36.33,
+      "time": 35.97,
+      "rms": 0.00014404544720430197
+    },
+    {
+      "variant": "r23",
+      "fragment": 16,
+      "afterToken": 59,
+      "left": 37.35,
+      "right": 37.62,
+      "time": 37.485,
+      "rms": 0.00028900202878999725
+    },
+    {
+      "variant": "r23",
+      "fragment": 17,
+      "afterToken": 62,
+      "left": 39.6,
+      "right": 42.63,
+      "time": 41.115,
+      "rms": 0.00045356306667953053
+    },
+    {
+      "variant": "r23",
+      "fragment": 18,
+      "afterToken": 64,
+      "left": 43.71,
+      "right": 46.62,
+      "time": 45.165,
+      "rms": 0.0008167859845383315
+    },
+    {
+      "variant": "r23",
+      "fragment": 19,
+      "afterToken": 67,
+      "left": 48.12,
+      "right": 49.8,
+      "time": 48.96,
+      "rms": 0.00033137110926858497
+    },
+    {
+      "variant": "r23",
+      "fragment": 20,
+      "afterToken": 69,
+      "left": 50.73,
+      "right": 51.69,
+      "time": 51.21,
+      "rms": 0.000353870147340103
+    },
+    {
+      "variant": "r23",
+      "fragment": 21,
+      "afterToken": 75,
+      "left": 54.42,
+      "right": 54.9,
+      "time": 54.66,
+      "rms": 0.0002820675653939226
+    },
+    {
+      "variant": "r45",
+      "fragment": 1,
+      "afterToken": 80,
+      "left": 58.92,
+      "right": 60.69,
+      "time": 59.805,
+      "rms": 0.00034858903155858843
+    },
+    {
+      "variant": "r45",
+      "fragment": 2,
+      "afterToken": 87,
+      "left": 63.81,
+      "right": 65.28,
+      "time": 64.545,
+      "rms": 0.0003309463325527933
+    },
+    {
+      "variant": "r45",
+      "fragment": 3,
+      "afterToken": 94,
+      "left": 70.68,
+      "right": 70.89,
+      "time": 70.785,
+      "rms": 0.00037723479346587997
+    },
+    {
+      "variant": "r45",
+      "fragment": 4,
+      "afterToken": 103,
+      "left": 74.61,
+      "right": 75.36,
+      "time": 74.985,
+      "rms": 0.0003716776044449439
+    },
+    {
+      "variant": "r45",
+      "fragment": 5,
+      "afterToken": 108,
+      "left": 76.98,
+      "right": 77.55,
+      "time": 77.265,
+      "rms": 0.00041898043395628725
+    },
+    {
+      "variant": "r45",
+      "fragment": 6,
+      "afterToken": 117,
+      "left": 80.34,
+      "right": 80.97,
+      "time": 80.655,
+      "rms": 0.0002963441213783598
+    },
+    {
+      "variant": "r45",
+      "fragment": 7,
+      "afterToken": 122,
+      "left": 82.74,
+      "right": 83.43,
+      "time": 83.085,
+      "rms": 0.00042392255460666314
+    },
+    {
+      "variant": "r45",
+      "fragment": 8,
+      "afterToken": 131,
+      "left": 86.22,
+      "right": 86.97,
+      "time": 86.595,
+      "rms": 0.0001955319205227862
+    },
+    {
+      "variant": "r45",
+      "fragment": 9,
+      "afterToken": 137,
+      "left": 89.37,
+      "right": 90.51,
+      "time": 89.94,
+      "rms": 0.00039638847058718815
+    },
+    {
+      "variant": "r45",
+      "fragment": 10,
+      "afterToken": 142,
+      "left": 92.28,
+      "right": 93.27,
+      "time": 92.775,
+      "rms": 0.00046368687454660835
+    },
+    {
+      "variant": "r45",
+      "fragment": 11,
+      "afterToken": 150,
+      "left": 96.69,
+      "right": 97.47,
+      "time": 97.08,
+      "rms": 0.00019339173299876754
+    },
+    {
+      "variant": "r68",
+      "fragment": 1,
+      "afterToken": 162,
+      "left": 103.53,
+      "right": 103.95,
+      "time": 103.74,
+      "rms": 0.00009793202879127771
+    },
+    {
+      "variant": "r68",
+      "fragment": 2,
+      "afterToken": 169,
+      "left": 107.55,
+      "right": 108.15,
+      "time": 107.85,
+      "rms": 0.00037098004456278014
+    },
+    {
+      "variant": "r68",
+      "fragment": 3,
+      "afterToken": 178,
+      "left": 111.15,
+      "right": 111.75,
+      "time": 111.45,
+      "rms": 0.00028530263409473253
+    },
+    {
+      "variant": "r68",
+      "fragment": 4,
+      "afterToken": 183,
+      "left": 113.37,
+      "right": 113.94,
+      "time": 113.655,
+      "rms": 0.00028542502030216095
+    },
+    {
+      "variant": "r68",
+      "fragment": 5,
+      "afterToken": 192,
+      "left": 116.7,
+      "right": 117.06,
+      "time": 116.88,
+      "rms": 0.0004649133763674071
+    },
+    {
+      "variant": "r68",
+      "fragment": 6,
+      "afterToken": 197,
+      "left": 118.56,
+      "right": 119.19,
+      "time": 118.875,
+      "rms": 0.00027771415288087916
+    },
+    {
+      "variant": "r68",
+      "fragment": 7,
+      "afterToken": 206,
+      "left": 121.71,
+      "right": 122.49,
+      "time": 122.1,
+      "rms": 0.0003398950207427086
+    },
+    {
+      "variant": "r68",
+      "fragment": 8,
+      "afterToken": 214,
+      "left": 126,
+      "right": 126.6,
+      "time": 126.3,
+      "rms": 0.0004339330622853478
+    },
+    {
+      "variant": "r68",
+      "fragment": 9,
+      "afterToken": 225,
+      "left": 129.99,
+      "right": 130.68,
+      "time": 130.33504166666665,
+      "rms": 0.0003316754416831699
+    },
+    {
+      "variant": "r912",
+      "fragment": 1,
+      "afterToken": 237,
+      "left": 138.09,
+      "right": 139.2,
+      "time": 138.64504166666666,
+      "rms": 0.00039355155274662767
+    },
+    {
+      "variant": "r912",
+      "fragment": 2,
+      "afterToken": 253,
+      "left": 146.43,
+      "right": 146.82,
+      "time": 146.62504166666668,
+      "rms": 0.00020362528606247953
+    },
+    {
+      "variant": "r912",
+      "fragment": 3,
+      "afterToken": 267,
+      "left": 151.56,
+      "right": 152.22,
+      "time": 151.89004166666666,
+      "rms": 0.0003949737868131856
+    },
+    {
+      "variant": "r912",
+      "fragment": 4,
+      "afterToken": 281,
+      "left": 156.6,
+      "right": 157.59,
+      "time": 157.095,
+      "rms": 0.0005403044343509621
+    },
+    {
+      "variant": "r912",
+      "fragment": 5,
+      "afterToken": 287,
+      "left": 160.086328,
+      "right": 160.89,
+      "time": 160.48633333333333,
+      "rms": 0.0002815305163041918,
+      "asrBoundaryUncertain": true
+    }
+  ],
+  "pronunciationValidated": false
+}

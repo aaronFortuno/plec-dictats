@@ -176,7 +176,7 @@ El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `buil
 
 ## Versions
 
-La interfície actual és **1.49**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.50**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 
@@ -228,4 +228,4 @@ El tercer botó del selector es diu **Frases** (el valor intern `text` i els cod
 
 A **Frases**, el codi de ritme opcional recupera els mots per fragment, la velocitat i la pausa sense comptes ni preferències del navegador. Al final es mostra un codi copiable amb els últims ajustos triats. Exemple: **ROSA** = 6–8 mots, 100 %, pausa habitual. Hi ha 36 combinacions estables; els codis no són els codis dels dictats ni una puntuació de l’alumne.
 
-Els codis de Frases són `CA001`, `CA002`… (llengua + número de tres xifres, independent del focus). Els textos `CA003`–`CA006` estan validats pel docent; les seves escaletes i lots estan per validar, sense àudio encarregat. Consulta el procés a [docs/DICTATS-TEXT.md](docs/DICTATS-TEXT.md).
+Els codis de Frases són `CA001`, `CA002`… (llengua + número de tres xifres, independent del focus). Els textos i les escaletes `CA003`–`CA006` estan validats pel docent. Quatre peticions amb Aoede han produït les setze variants, integrades com a pilots pendents d’audició. Els focus de Frases filtren directament la llista del sidebar; «Fes servir» aplica el dictat i el títol permet llegir-lo complet abans de decidir. Consulta el procés a [docs/DICTATS-TEXT.md](docs/DICTATS-TEXT.md).

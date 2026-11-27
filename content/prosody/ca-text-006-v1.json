@@ -1,7 +1,7 @@
 {
   "version": 1,
   "textId": "ca-text-006-v1",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "Ahir, la classe preparava una sortida al bosc. La mestra volia que els alumnes duguessin una llibreta i es repartissin en grups. Si plogués, canviarien el recorregut i visitarien el museu del poble. En llegir el mapa, la Júlia intuïa que caminarien força. La mestra els va demanar que reduïssin el pes de les motxilles. Tothom hi va estar d’acord.",
   "paragraphEnds": [
     22,
@@ -132,6 +132,7 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-27",
-    "sourceSha256": "a7d1dba67ad101dba8e68a2820fbcc983abb3b1af9c92dd32b3233c138b0613c"
+    "sourceSha256": "a7d1dba67ad101dba8e68a2820fbcc983abb3b1af9c92dd32b3233c138b0613c",
+    "statusAtReview": "pending-teacher-validation"
   }
 }

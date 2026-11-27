@@ -254,3 +254,32 @@ Les setze lectures juntes sumarien 1.276 mots locutats i 140 avisos de puntuaci�
 És una proposta per validar: no conté cos de petició, no s’ha comprovat encara el pressupost d’entrada d’un payload final i `synthesisAuthorized` continua fals. Validar els textos no equival a aprovar les escaletes ni a autoritzar l’enviament. Després de la validació d’escaletes cal congelar els lots exactes, comprovar-ne també l’entrada i obtenir la confirmació d’enviament. Cap petició nova en aquesta iteració.
 
 Validació 1.49: 63 comprovacions locals passades. Cobertura exacta de les setze lectures, justificació de les excepcions, separació de paràgrafs, empremtes de revisió independent, càlcul contrastat amb els pilots, proposta de quatre lots dins del topall i un lot únic rebutjat per durada. Dotze pàgines PDF renderitzades i revisades, sense desbordaments; comparatives web, pressupost visible, PDF, mòbil/paisatge, pilots amb àudio i escaletes sense àudio verificats. Cap petició de síntesi ni comprovació remota.
+
+## Quatre lots rebuts i navegació directa · 1.50
+
+El 27/11/2026 el docent valida les quatre escaletes i autoritza explícitament una petició per CA003–CA006 amb Aoede, català central i els quatre ritmes, i la integració dels resultats. Les autoritzacions exactes, empremtes i estimacions són als fitxers `audio/texts/batches/ca003-four-rhythms-v1.json` fins a `ca006-four-rhythms-v1.json`. `prosodyReview` conserva l’aprovació i l’empremta de cada escaleta; `independentReview.statusAtReview` permet verificar la revisió editorial anterior al canvi d’estat.
+
+S’han fet **exactament quatre enviaments**, seqüencials i sota el comptador compartit amb Sentit. CA006 ha patit una interrupció en consultar l’estat: s’ha recuperat la mateixa interacció amb l’ID persistent, mitjançant GET, sense repetir el POST. Les respostes originals i els justificants locals es conserven a `output/audio/<lot>/<empremta>/`. Ni l’alineació ni la preparació dels MP3 envien peticions de síntesi.
+
+| Dictat | Durada total rebuda | Fragments r23 / r45 / r68 / r912 |
+| --- | ---: | ---: |
+| CA003 | 165,59 s | 21 / 11 / 9 / 6 |
+| CA004 | 201,08 s | 21 / 13 / 9 / 6 |
+| CA005 | 214,30 s | 23 / 14 / 8 / 6 |
+| CA006 | 202,60 s | 24 / 13 / 10 / 6 |
+
+Els setze MP3 són a `assets/audio/texts/ca/ca003-four-v1/` fins a `ca006-four-v1/`. `audio/texts/index.json` en registra la identitat, les empremtes i els intervals dels fragments. Cada rebut `*-receipt.json` detalla la durada, les correspondències del reconeixement local, els mots no reconeguts i els talls. La cobertura temporal del reconeixement **no valida la pronunciació**: tots els àudios continuen `pending-listening`, amb `pronunciationValidated:false`. La puntuació forma part de la mateixa presa amb Aoede.
+
+### Talls i punts que cal escoltar
+
+Es conserva tot el PCM rebut i no s’accelera ni s’alenteix la veu en preparar els MP3. Els límits es busquen en finestres de baixa energia entre marques locals de mots. CA004 r23 F4 connecta «Al costat» amb «de la font» sense la pausa sol·licitada: el rebut registra una frontera breu de baixa energia pendent d’audició. CA005 r23 F12–F13 connecta «deixen» i «la gerra» sense silenci separador; la frontera de reproducció és una estimació temporal amb pas per zero, **no un tall acústic validat**. La presa contínua no es modifica. També cal escoltar «l’obre al menjador» en r23 F21–F22 i r45 F13–F14: Vosk ho transcriu «l’obra el menjador». No es dona per fet que sigui un error de la veu ni del reconeixedor.
+
+Aquestes propostes temporals de CA005 estan congelades a `ca005-four-rhythms-v1-timing-review.json`, vinculades a les empremtes de la presa i de la petició. No alteren el text ni impliquen aprovació auditiva. El reproductor i la comparativa permeten escoltar cada versió i comunicar incidències. Qualsevol regeneració necessita una nova autorització explícita.
+
+### Tria des del sidebar
+
+Els focus de Frases es mostren directament al sidebar esquerre, seguits dels dictats coincidents amb codi, títol i nombre de mots. Sense focus seleccionats es mostren tots; amb diversos focus es fa la unió (qualsevol dels seleccionats). Filtrar no canvia el full. «Fes servir» aplica un text directament; clicar-ne el títol obre opcionalment la lectura completa amb els mots del focus ressaltats. Tancar-la descarta la proposta; «Fes servir aquest dictat» la confirma. La configuració del plec es conserva i els filtres de paraules/llavors són independents.
+
+El document conjunt de planificació continua sent de lectura (`planning-only`, sense payload executable). Les autoritzacions i el nombre d’enviaments reals es consulten als quatre lots i rebuts, no al comptador zero d’una eina que només calcula durades.
+
+Validació 1.50: 63 comprovacions locals passades (62 en la passada completa i la prova del nou sidebar repetida satisfactòriament després de corregir el nom del focus al selector del test). Verificades les empremtes dels 24 MP3 de Frases, les cobertures i transicions de ritme, la càrrega dels setze àudios nous al navegador, les URL d’alumnat, l’aplicació explícita de la tria, la conservació del full en filtrar/llegir/cancel·lar, els PDFs i els panells en mòbil i tema fosc. Captures locals i PDF revisats visualment. Sense comprovació del desplegament remot; l’audició docent de les noves preses queda pendent.
