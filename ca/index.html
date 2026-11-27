@@ -17,17 +17,17 @@
   <link rel="stylesheet" href="../text-mode.css?v=1.46.0">
   <link rel="stylesheet" href="../text-picker.css?v=1.48.0">
   <link rel="stylesheet" href="../rhythm-table.css?v=1.45.2">
-  <link rel="stylesheet" href="../prosody.css?v=1.43.0">
+  <link rel="stylesheet" href="../prosody.css?v=1.49.0">
   <link rel="stylesheet" href="../analytics.css?v=1.32.1">
   <link rel="stylesheet" href="../theme.css?v=1.32.1">
   <link rel="stylesheet" href="../workspace-layout.css?v=1.32.0">
   <script defer src="../site-links.js?v=1.32.0"></script>
   <script defer src="../analytics.js?v=1.32.0"></script>
   <script defer src="../audio-varieties.js?v=1.33.0"></script>
-  <script defer src="../locales/manifest.js?v=1.48.0"></script>
-  <script defer src="../locales/ca/config.js?v=1.48.0"></script>
-  <script defer src="../language.js?v=1.48.0"></script>
-  <script defer src="../catalogs/ca/catalog.js?v=1.48.0"></script>
+  <script defer src="../locales/manifest.js?v=1.49.0"></script>
+  <script defer src="../locales/ca/config.js?v=1.49.0"></script>
+  <script defer src="../language.js?v=1.49.0"></script>
+  <script defer src="../catalogs/ca/catalog.js?v=1.49.0"></script>
   <script defer src="../catalogs/ca/editions/index.js?v=1.32.0"></script>
   <script defer src="../seeds.js?v=1.32.0"></script>
   <script defer src="../seeds-v2.js?v=1.36.0"></script>
@@ -49,22 +49,23 @@
   <script defer src="../pronunciations.js?v=1.36.0"></script>
   <script defer src="../composer-search.js?v=1.32.0"></script>
   <script defer src="../text-audio.js?v=1.42.0"></script>
-  <script defer src="../text-catalogue.js?v=1.48.0"></script>
+  <script defer src="../text-catalogue.js?v=1.49.0"></script>
 <script defer src="../text-dictations.js?v=1.42.0"></script>
   <script defer src="../text-worksheet.js?v=1.48.0"></script>
-  <script defer src="../prosody-draft.js?v=1.42.0"></script>
+  <script defer src="../prosody-draft.js?v=1.49.0"></script>
   <script defer src="../prosody.js?v=1.48.0"></script>
-  <script defer src="../prosody-pdf.js?v=1.39.0"></script>
+  <script defer src="../prosody-pdf.js?v=1.49.0"></script>
   <script defer src="../text-review-notes.js?v=1.44.0"></script>
   <script defer src="../prosody-review.js?v=1.39.2"></script>
-  <script defer src="../prosody-view.js?v=1.43.0"></script>
+  <script defer src="../prosody-planning.js?v=1.49.0"></script>
+  <script defer src="../prosody-view.js?v=1.49.0"></script>
   <script defer src="../rhythm-profiles.js?v=1.45.0"></script>
   <script defer src="../rhythm-labels.js?v=1.45.2"></script>
   <script defer src="../rhythm-code.js?v=1.45.0"></script>
   <script defer src="../rhythm-table.js?v=1.45.2"></script>
-  <script defer src="../text-picker.js?v=1.48.0"></script>
-  <script defer src="../text-mode.js?v=1.48.0"></script>
-  <script defer src="../app.js?v=1.48.0"></script>
+  <script defer src="../text-picker.js?v=1.49.0"></script>
+  <script defer src="../text-mode.js?v=1.49.0"></script>
+  <script defer src="../app.js?v=1.49.0"></script>
   <script defer src="../workspace-panels.js?v=1.32.0"></script>
 </head>
 <body>
@@ -106,12 +107,12 @@
         </div>
       </aside>
       <section class="preview-column" aria-label="Vista prèvia del dictat">
-        <div class="paper-stage"><div class="paper-topline"><span id="preview-layout">VISTA PRÈVIA</span><div class="paper-topline-actions"><span id="selection-summary"></span><button type="button" class="small-link" id="prosody-open" hidden title="Compara l’escaleta i escolta les quatre versions"><span data-icon="speech"></span> Escaleta i àudios</button></div></div><div class="paper-viewport" id="paper-viewport" role="group" tabindex="0" aria-label="Full de mostra: Ctrl i roda per ampliar o reduir, arrossega amb un dit per moure, pessiga amb dos dits per fer zoom i fes doble clic per ajustar" aria-describedby="zoom-help"><div class="paper" id="sheet-preview" aria-label="Vista prèvia del full imprimible"></div><div id="zoom-scroll-hint" class="zoom-scroll-hint" role="status" aria-live="polite" hidden>Prem <kbd>Ctrl</kbd> i mou la roda per ampliar o reduir el full.</div><div class="zoom-tools" role="group" aria-label="Zoom de la vista prèvia"><button class="icon-button" id="zoom-out" aria-label="Redueix el zoom" title="Redueix el zoom"><span data-icon="zoom-out"></span></button><output id="zoom-value" aria-label="Zoom respecte al full ajustat">100 %</output><button class="icon-button" id="zoom-in" aria-label="Amplia el zoom" title="Amplia el zoom"><span data-icon="zoom-in"></span></button><span class="zoom-divider" aria-hidden="true"></span><button class="icon-button" id="zoom-fit" aria-label="Ajusta el full" title="Ajusta el full · doble clic"><span data-icon="scan"></span></button></div></div></div><p class="sr-only" id="zoom-help">Ctrl i roda del ratolí per ampliar o reduir; arrossega amb un dit o el ratolí per moure el full. Pessiga amb dos dits per fer zoom. Doble clic o tecla 0 per ajustar. També pots fer servir +, − i les fletxes del teclat.</p>
+        <div class="paper-stage"><div class="paper-topline"><span id="preview-layout">VISTA PRÈVIA</span><div class="paper-topline-actions"><span id="selection-summary"></span><button type="button" class="small-link" id="prosody-open" hidden title="Compara els quatre ritmes i la puntuació"><span data-icon="speech"></span> Escaleta de prosòdia</button></div></div><div class="paper-viewport" id="paper-viewport" role="group" tabindex="0" aria-label="Full de mostra: Ctrl i roda per ampliar o reduir, arrossega amb un dit per moure, pessiga amb dos dits per fer zoom i fes doble clic per ajustar" aria-describedby="zoom-help"><div class="paper" id="sheet-preview" aria-label="Vista prèvia del full imprimible"></div><div id="zoom-scroll-hint" class="zoom-scroll-hint" role="status" aria-live="polite" hidden>Prem <kbd>Ctrl</kbd> i mou la roda per ampliar o reduir el full.</div><div class="zoom-tools" role="group" aria-label="Zoom de la vista prèvia"><button class="icon-button" id="zoom-out" aria-label="Redueix el zoom" title="Redueix el zoom"><span data-icon="zoom-out"></span></button><output id="zoom-value" aria-label="Zoom respecte al full ajustat">100 %</output><button class="icon-button" id="zoom-in" aria-label="Amplia el zoom" title="Amplia el zoom"><span data-icon="zoom-in"></span></button><span class="zoom-divider" aria-hidden="true"></span><button class="icon-button" id="zoom-fit" aria-label="Ajusta el full" title="Ajusta el full · doble clic"><span data-icon="scan"></span></button></div></div></div><p class="sr-only" id="zoom-help">Ctrl i roda del ratolí per ampliar o reduir; arrossega amb un dit o el ratolí per moure el full. Pessiga amb dos dits per fer zoom. Doble clic o tecla 0 per ajustar. També pots fer servir +, − i les fletxes del teclat.</p>
       </section>
       <aside class="management card" aria-label="Gestió del full i del dictat oral">
   <div class="management-scroll">
     <div class="text-management">
-      <section aria-labelledby="text-sheet-heading"><h2 id="text-sheet-heading">El teu full</h2><div class="text-id-row"><output id="text-code">CA0001</output><button type="button" class="icon-button" id="text-share" aria-label="Copia l’enllaç del full al preparador" title="Copia l’enllaç del full al preparador"><span data-icon="share-2"></span></button></div><button type="button" class="button primary" id="text-download" disabled><span data-icon="download"></span> Descarrega el PDF</button></section>
+      <section aria-labelledby="text-sheet-heading"><h2 id="text-sheet-heading">El teu full</h2><div class="text-id-row"><output id="text-code">CA001</output><button type="button" class="icon-button" id="text-share" aria-label="Copia l’enllaç del full al preparador" title="Copia l’enllaç del full al preparador"><span data-icon="share-2"></span></button></div><button type="button" class="button primary" id="text-download" disabled><span data-icon="download"></span> Descarrega el PDF</button></section>
       <section aria-labelledby="text-oral-heading"><h2 id="text-oral-heading">Dictat oral</h2>
         <label for="text-pace">Mots aproximats per fragment<select id="text-pace"><option value="2">2–3 mots</option><option value="4">4–5 mots</option><option value="6">6–8 mots</option><option value="10">9–12 mots</option></select></label>
         <label for="text-rate">Velocitat<select id="text-rate"><option value="1">Habitual</option><option value="0.9">Més a poc · 90 %</option><option value="0.8">Molt a poc · 80 %</option></select></label>
@@ -147,7 +148,7 @@
 
 
   </main>
-  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurs obert per escoltar, escriure i aprendre.</p><p class="umbrella-project">Un projecte d’<a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacitat</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el projecte · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.48: obre l’historial de canvis">v1.48</button></span></footer>
+  <footer class="site-footer wrap"><span class="footer-brand">plec.</span><p class="footer-tagline">Un recurs obert per escoltar, escriure i aprendre.</p><p class="umbrella-project">Un projecte d’<a href="https://ortogra.fi/" class="umbrella-brand"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="22" cy="28" r="14" stroke="currentColor" stroke-width="5.5"/><path d="m27 9 7-6" stroke="var(--accent)" stroke-width="4.5"/></svg><span>ortogra<span class="umbrella-dot">.</span>fi</span></a></p><span><button class="footer-link" data-analytics-settings>Privacitat</button><span aria-hidden="true"> · </span><button class="footer-link" id="about-open"><span data-icon="heart-handshake"></span> Sobre el projecte · V4V</button><span aria-hidden="true"> · </span><button class="footer-link version-link" id="changelog-open" aria-label="Versió 1.49: obre l’historial de canvis">v1.49</button></span></footer>
   <div id="status" class="toast" role="status" aria-live="polite"></div>
   <dialog id="catalog-dialog" aria-labelledby="catalog-title">
     <div class="dialog-head"><h2 id="catalog-title">El catàleg</h2><button class="icon-button" data-close aria-label="Tanca el catàleg"><span data-icon="x"></span></button></div>
@@ -218,7 +219,7 @@
 
   <dialog id="prosody-dialog" aria-labelledby="prosody-title">
   <div class="dialog-head"><div><h2 id="prosody-title">Escaleta de prosòdia</h2><p id="prosody-text-title"></p></div><button type="button" class="icon-button" data-close aria-label="Tanca l’escaleta"><span data-icon="x"></span></button></div>
-  <div class="prosody-toolbar"><p id="prosody-summary"></p><button type="button" class="button secondary" id="prosody-pdf"><span data-icon="download"></span> PDF de l’escaleta</button></div>
+  <div class="prosody-toolbar"><div><p id="prosody-summary"></p><p id="prosody-budget" hidden></p></div><button type="button" class="button secondary" id="prosody-pdf"><span data-icon="download"></span> PDF de l’escaleta</button></div>
   <nav id="prosody-tabs" class="prosody-tabs" aria-label="Ritme de l’escaleta"></nav>
   <section id="prosody-listening" class="prosody-listening" aria-label="Escolta seguida de les quatre versions" data-variant="r23" hidden>
     <div id="prosody-audio-grid" class="prosody-audio-grid"></div>

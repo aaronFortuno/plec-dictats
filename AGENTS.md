@@ -16,7 +16,7 @@
 
 - El docent ha validat «Llavors al jardí» (57 mots) i autoritzat una única petició amb Aoede, quatre ritmes i puntuació amb la mateixa veu. Autorització congelada: `audio/texts/batches/ll02-four-rhythms-v1.json`.
 - Resposta conservada: 211,83 s en total, quatre versions publicades com a pilot pendent d’audició. No repetir la petició ni regenerar correccions sense un nou encàrrec explícit. Els bloqueigs previs de lock/interval no han enviat cap petició.
-- Els textos són a `content/texts/` i les escaletes a `content/prosody/`. Conserva els identificadors tècnics ca-ll-001-v1 / ca-ll-002-v1 i les empremtes de producció. El docent ha aprovat el 26/11 la nova codificació visible CA0001 / CA0002, independent del focus i sense necessitat de compatibilitat amb els codis impresos LL01 / LL02.
+- Els textos són a `content/texts/` i les escaletes a `content/prosody/`. Conserva els identificadors tècnics ca-ll-001-v1 / ca-ll-002-v1 i les empremtes de producció. El docent ha aprovat el 26/11 la nova codificació visible CA0001 / CA0002 (escurçada a CA001 / CA002 el 27/11), independent del focus i sense necessitat de compatibilitat amb els codis impresos LL01 / LL02.
 
 **Estat 25/10/2026:** l’usuari ha reautoritzat encàrrecs acotats a K3 amb esforç baix, després de les proves costoses amb K3.1. T008 i T009 estan completats; no hi ha cap encàrrec actiu. Conserva pressupostos, límits de passos i temps, eines acotades i revisió de Codex abans d’integrar. El registre vigent és `../protocol-codex-kimi/ESTAT-WORKER.json`. No canviïs configuració global.
 
@@ -26,3 +26,7 @@
 - Cada implementació necessita un encàrrec acotat, base Git coneguda, perfil d’eines apropiat i termini extern. El llançador T000 és exclusivament de lectura. No reprenguis aquella sessió per implementar.
 - Kimi no fa commits, push, merge, desplegaments ni canvis globals. Codex revisa també els fitxers nous, conserva els canvis preexistents de l’usuari i integra només el lliurament revisat dins de l’autorització vigent.
 - En els projectes remots, si s’han comprovat els canvis en local, **no facis la comprovació remota**: la farà l’usuari manualment i comunicarà qualsevol incidència.
+
+## Textos CA003–CA006 · 27/11/2026
+
+El docent ha validat explícitament els quatre textos, ha demanat codis amb tres xifres i les escaletes per validar abans de sintetitzar. Les escaletes i la proposta de lots segueixen pendents de validació docent. Preparar estimacions no autoritza enviar peticions. Cap nova síntesi en aquesta fase.

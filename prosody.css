@@ -84,3 +84,7 @@
  .prosody-review-export{padding-top:6px}
 }
 @media print{#prosody-dialog{display:none!important}}
+
+.prosody-readonly{cursor:default}.prosody-readonly:hover{background:transparent}
+
+#prosody-budget{font-size:11px;line-height:1.5;color:var(--muted);margin:5px 0 0;max-width:80ch}

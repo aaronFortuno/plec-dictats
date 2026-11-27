@@ -7,20 +7,21 @@
   const printable=root.PlecPdf?.printable||(typeof module!=='undefined'?require('./pdf.js').printable:String);
   const ink='#233a33',muted='#65736a',accent='#9a412c',rule='#d0d8d1',width=297,height=210,margin=12,gap=5,columnWidth=(width-2*margin-gap*3)/4;
   const color=hex=>rgb(...[1,3,5].map(offset=>parseInt(hex.slice(offset,offset+2),16)/255)),pages=[];
-  doc.setTitle('Plec · '+entry.code+' · Escaleta de prosòdia');doc.setAuthor('Plec');doc.setSubject('Escaleta validada. Aoede. Àudio pilot pendent d’audició.');
+  doc.setTitle('Plec · '+entry.code+' · Escaleta de prosòdia');doc.setAuthor('Plec');doc.setSubject(plan.status==='approved-for-pilot'?'Escaleta validada. Aoede. Àudio pilot pendent d’audició.':'Text validat. Escaleta per validar. Aoede. Sense àudio.');
   function wrap(value,size,maxWidth,weight=false){
    const font=weight?bold:regular,rows=[''];
    for(const word of printable(value).split(/\s+/u)){const last=rows.length-1,next=rows[last]?rows[last]+' '+word:word;if(font.widthOfTextAtSize(next,size)/pt>maxWidth&&rows[last])rows.push(word);else rows[last]=next;}
    return rows;
   }
   for(let paragraph=1;paragraph<=plan.paragraphCount;paragraph++){
+   const fragmentGap=Math.max(...plan.variants.map(v=>v.fragments.filter(f=>f.paragraph===paragraph).length))>=9?1:2;
    const page=doc.addPage([width*pt,height*pt]),shapes=[];
    function text(value,x,y,size=10,weight=false,fill=ink){value=printable(value);page.drawText(value,{x:x*pt,y:(height-y)*pt,size,font:weight?bold:regular,color:color(fill)});shapes.push({type:'text',value,x,y,size,weight,color:fill});}
    function line(x,y,x2,y2){page.drawLine({start:{x:x*pt,y:(height-y)*pt},end:{x:x2*pt,y:(height-y2)*pt},thickness:.5,color:color(rule)});}
    function paragraphText(value,x,y,size,maxWidth,lineHeight,weight=false,fill=ink){const rows=wrap(value,size,maxWidth,weight);rows.forEach((row,i)=>text(row,x,y+i*lineHeight,size,weight,fill));return y+rows.length*lineHeight;}
    text('Escaleta de prosòdia · '+entry.code,margin,15,18,true);
    text(entry.title,margin,23,12);
-   text(`Escaleta validada · Aoede · paràgraf ${paragraph} de ${plan.paragraphCount}`,margin,30,9,false,accent);
+   text(`${plan.status==='approved-for-pilot'?'Escaleta validada':'Escaleta per validar'} · Aoede · paràgraf ${paragraph} de ${plan.paragraphCount}`,margin,30,9,false,accent);
    text('Etiquetes entre claudàtors: puntuació locutada, fora del recompte de mots. Els rangs són orientatius.',margin,36,9,false,muted);
    text('Talls: 1 s; canvi de paràgraf/final: 1,6 s. Locucions: 0,25 s abans i 0,35 s després. L’escriptura espera el botó Següent.',margin,42,8.3,false,muted);
    line(margin,46,width-margin,46);
@@ -43,7 +44,7 @@
      y=row+3.6;
      text((/[.!?]$/u.test(fragment.text)?'Tancament':'Continuació')+' · tall '+(fragment.pauseMs/1000).toLocaleString('ca')+' s',x,y,7.5,false,muted);y+=3.2;
      if(fragment.exception)y=paragraphText('Ajust: '+fragment.reason,x,y,7.5,columnWidth,3.2,false,accent)+1;
-     y+=2;
+     y+=fragmentGap;
     }
     if(y>198)throw Error(`Un bloc de l’escaleta no cap al PDF (${paragraph}, ${variant.id}, ${y}).`);
     if(column<3)line(x+columnWidth+gap/2,49,x+columnWidth+gap/2,196);

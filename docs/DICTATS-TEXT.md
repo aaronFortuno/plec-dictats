@@ -226,6 +226,31 @@ Decisió docent del 26/11/2026: codis de text independents del focus, amb prefix
 
 Totes quatre tenen tres paràgrafs, fragments base i mots del focus anotats. Revisió independent superada el 26/11/2026 de les versions exactes registrades a `editorialReview.sourceSha256`, sobre codi/títol/nivell/focus/paràgrafs/frases/mots anotats. La validació docent es manté pendent per a cadascun dels textos. El catàleg els mostra amb «Text per validar»; no es pot iniciar el seu dictat oral. Es poden llegir amb ressaltats i preparar el PDF per revisar-lo.
 
-Les escaletes tenen un registre independent (`content/prosody/index.json`): disposar d’un text per revisar no implica tenir una escaleta validada o àudio. La planificació `audio/texts/batches/ca0003-ca0006-planning-v1.json` recull els quatre textos i les seves empremtes, proposta de veu Aoede/català central i quatre ritmes. No conté cap petició ni aprovació de síntesi, i no és un lot executable. Després de validar cada text, preparar-ne l’escaleta, les locucions de puntuació amb la mateixa veu i el lot exacte amb estimació inferior a 6 min 30 s; caldrà l’aprovació explícita de text/veu/lot abans d’enviar res. No agrupar quatre textos complets amb quatre ritmes en una sola petició sense comprovar la durada.
+Les escaletes tenen un registre independent (`content/prosody/index.json`): disposar d’un text per revisar no implica tenir una escaleta validada o àudio. La planificació inicial (actualitzada a la versió 1.49) recull els quatre textos i les seves empremtes, proposta de veu Aoede/català central i quatre ritmes. No conté cap petició ni aprovació de síntesi, i no és un lot executable. Després de validar cada text, preparar-ne l’escaleta, les locucions de puntuació amb la mateixa veu i el lot exacte amb estimació inferior a 6 min 30 s; caldrà l’aprovació explícita de text/veu/lot abans d’enviar res. No agrupar quatre textos complets amb quatre ritmes en una sola petició sense comprovar la durada.
 
 Validació 1.48: 62 comprovacions locals passades. Sis codis coherents, recuperació al preparador i a l’entrada d’alumnat, identitat d’àudio dels dos pilots, quatre PDFs d’una pàgina en ambdós formats de plec, empremtes de revisió, mots anotats i ressaltats, combinació de formes verbals/dièresi sense duplicats i bloqueig del dictat oral pendent. La planificació no és executable ni té autorització de síntesi. Cap petició de síntesi ni comprovació remota.
+
+## Escaletes per validar i codis curts · 1.49
+
+El 27/11/2026 el docent confirma els quatre textos CA003–CA006 i demana codis de tres xifres. Els sis codis visibles passen a CA001…CA006; el prefix identifica la llengua i el número és independent dels focus. No es creen àlies dels codis beta de quatre xifres. Els identificadors tècnics i les preses publicades continuen intactes. `teacherReview` registra la validació i l’empremta del text, mentre `prosodyReview` continua pendent. La revisió editorial anterior conserva `codeAtReview` per comprovar la seva empremta original.
+
+Cada text nou té quatre variants d’escaleta (2–3, 4–5, 6–8 i 9–12 mots), amb talls numerats, cobertura completa dels paràgrafs, locucions de puntuació i excepcions de llargada justificades. Revisió independent superada el 27/11 després de corregir el tall «passeja amb» de CA004 r23: ara «Dissabte, la Cèlia passeja» / «amb el seu cosí». La veu proposada és Aoede, català central, i la mateixa veu anunciarà la puntuació. Els textos no han canviat.
+
+Accés: Frases → Explora els textos → Fes servir aquest dictat → Escaleta de prosòdia, al visor del full. Sense àudio, la comparativa és de lectura: no mostra reproductors ni controls per notificar errors d’una gravació inexistent. El PDF compara els quatre ritmes en tres A4 horitzontals, un per paràgraf; conserva la mida del text i redueix el marge entre fragments als paràgrafs més densos.
+
+### Estimació i proposta de lots
+
+`tools/prosody-estimate.cjs` és una eina local de planificació, sense client de xarxa ni claus. `--write` actualitza `audio/texts/batches/ca003-ca006-prosody-proposal-v1.json`; `prosody-planning.js` és el paquet generat per mostrar la durada al web. Es manté el càlcul dels pilots: 130 mots locutats/min per a la previsió nominal; 95 mots/min, pauses i factor 1,2 per a la previsió prudent. Compta les locucions de puntuació, pauses de gravació i separacions entre lectures; el temps d’escriptura de l’alumne no forma part de la síntesi.
+
+| Lot proposat | Lectures | Previsió nominal | Previsió prudent | Reserva fins a 6:30 |
+| --- | ---: | ---: | ---: | ---: |
+| CA003 | 4 ritmes | 3:43 | 5:29 | 1:01 |
+| CA004 | 4 ritmes | 3:53 | 5:44 | 0:46 |
+| CA005 | 4 ritmes | 4:07 | 6:04 | 0:26 |
+| CA006 | 4 ritmes | 4:05 | 6:00 | 0:30 |
+
+Les setze lectures juntes sumarien 1.276 mots locutats i 140 avisos de puntuació: uns 15:49 nominals i 23:19 prudents. No caben en una petició amb el topall preventiu local de 6:30. La proposta conserva els quatre ritmes d’un mateix dictat junts i cobreix tots els textos en quatre lots, sense tallar-los ni repetir-los. Sota aquest càlcul prudent calen com a mínim quatre peticions. Les reserves no permeten afegir un altre text de llargada semblant amb tots quatre ritmes.
+
+És una proposta per validar: no conté cos de petició, no s’ha comprovat encara el pressupost d’entrada d’un payload final i `synthesisAuthorized` continua fals. Validar els textos no equival a aprovar les escaletes ni a autoritzar l’enviament. Després de la validació d’escaletes cal congelar els lots exactes, comprovar-ne també l’entrada i obtenir la confirmació d’enviament. Cap petició nova en aquesta iteració.
+
+Validació 1.49: 63 comprovacions locals passades. Cobertura exacta de les setze lectures, justificació de les excepcions, separació de paràgrafs, empremtes de revisió independent, càlcul contrastat amb els pilots, proposta de quatre lots dins del topall i un lot únic rebutjat per durada. Dotze pàgines PDF renderitzades i revisades, sense desbordaments; comparatives web, pressupost visible, PDF, mòbil/paisatge, pilots amb àudio i escaletes sense àudio verificats. Cap petició de síntesi ni comprovació remota.

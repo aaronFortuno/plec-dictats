@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "textId": "ca-text-006-v1",
+  "status": "pending-teacher-validation",
+  "sourceText": "Ahir, la classe preparava una sortida al bosc. La mestra volia que els alumnes duguessin una llibreta i es repartissin en grups. Si plogués, canviarien el recorregut i visitarien el museu del poble. En llegir el mapa, la Júlia intuïa que caminarien força. La mestra els va demanar que reduïssin el pes de les motxilles. Tothom hi va estar d’acord.",
+  "paragraphEnds": [
+    22,
+    43,
+    60
+  ],
+  "voice": "Aoede",
+  "direction": "Una sola veu en català central, clara i natural. Manté les consonants completes i el ritme estable entre versions, sense lletrejar. Respecta el hiat i la tonicitat d’intuïa i reduïssin; no fusionis les vocals en un diftong. En un tall sense final de frase, conserva l’entonació de continuació.",
+  "punctuationDirection": "La mateixa veu narra i anuncia la puntuació, amb el mateix ritme base. Digues Coma, Punt i seguit, Punt i a part i Punt final en català. Les locucions no són mots del dictat.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 mots",
+      "min": 2,
+      "max": 3,
+      "direction": "Grups molt breus, amb entonació de continuació. Conserva els mots sencers.",
+      "ends": [
+        3,
+        6,
+        8,
+        11,
+        14,
+        17,
+        20,
+        22,
+        24,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        40,
+        43,
+        45,
+        48,
+        50,
+        52,
+        55,
+        56,
+        60
+      ],
+      "exceptions": {
+        "56": "Subjecte d’un sol mot; evita enganxar-hi un pronom sense el verb.",
+        "60": "Manté units pronom, auxiliar i expressió «estar d’acord»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 mots",
+      "min": 4,
+      "max": 5,
+      "direction": "Tirades breus amb unitats de sentit. Evita deixar articles i preposicions penjats.",
+      "ends": [
+        3,
+        8,
+        11,
+        17,
+        22,
+        27,
+        33,
+        37,
+        43,
+        48,
+        52,
+        55,
+        60
+      ],
+      "exceptions": {
+        "3": "Complement temporal i subjecte abans de l’acció.",
+        "11": "Conserva el subjecte i el verb que introdueix la subordinada.",
+        "17": "Manté completa la subordinada amb «duguessin una llibreta».",
+        "33": "Manté completa la visita al museu amb el seu complement.",
+        "43": "Conserva el subjecte i la predicció «que caminarien força».",
+        "55": "Tanca el complement de les motxilles abans del punt."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 mots",
+      "min": 6,
+      "max": 8,
+      "direction": "Tirades mitjanes i fluides. La puntuació pot quedar dins d’un fragment.",
+      "ends": [
+        8,
+        14,
+        22,
+        27,
+        33,
+        37,
+        43,
+        48,
+        55,
+        60
+      ],
+      "exceptions": {
+        "27": "Manté la condició i la primera acció prevista.",
+        "37": "Conserva el complement inicial amb «en llegir el mapa».",
+        "48": "Manté el subjecte i el verb que introdueixen la petició.",
+        "60": "Frase final completa de cinc mots."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 mots",
+      "min": 9,
+      "max": 12,
+      "direction": "Tirades llargues, amb pauses a la puntuació i continuïtat dins la frase.",
+      "ends": [
+        11,
+        22,
+        33,
+        43,
+        55,
+        60
+      ],
+      "exceptions": {
+        "60": "Frase final completa de cinc mots; no travessa cap paràgraf."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-27",
+    "sourceSha256": "a7d1dba67ad101dba8e68a2820fbcc983abb3b1af9c92dd32b3233c138b0613c"
+  }
+}

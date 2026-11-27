@@ -1,6 +1,6 @@
 {
   "id": "ca-text-004-v1",
-  "code": "CA0004",
+  "code": "CA004",
   "language": "ca",
   "title": "El mocador perdut",
   "focuses": [
@@ -10,7 +10,7 @@
     "s / ss / c / ç"
   ],
   "stage": "Cicle superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "Dissabte, la Cèlia passeja amb el seu cosí per la plaça. Al costat de la font, troben un mocador vermell.",
     "Una senyora surt de la fleca i els pregunta si han vist el seu mocador. Els cosins li tornen el mocador i ella els dona les gràcies.",
@@ -66,12 +66,19 @@
     "status": "passed",
     "date": "2026-11-26",
     "method": "independent-editorial-review",
-    "sourceSha256": "236cca67bad89f7b3697b11c055abda22ee03931a274d44037ff66ce02bf0056"
+    "sourceSha256": "236cca67bad89f7b3697b11c055abda22ee03931a274d44037ff66ce02bf0056",
+    "codeAtReview": "CA0004"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-27",
+    "confirmation": "El docent confirma que tots quatre dictats són bons.",
+    "sourceTextSha256": "64807a6400285215a23c114a2f6d296d6a52a9d4c9ed4ca2ac67c7376f7cc89a"
   },
   "synthesis": {
     "status": "not-requested"
+  },
+  "prosodyReview": {
+    "status": "pending"
   }
 }

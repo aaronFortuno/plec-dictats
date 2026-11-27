@@ -25,5 +25,14 @@ const lib=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLEC_NODE_
  const regular=await doc.embedFont(lib.StandardFonts.Helvetica),bold=await doc.embedFont(lib.StandardFonts.HelveticaBold);
  for(const s of shapes){const width=(s.weight?bold:regular).widthOfTextAtSize(s.value,s.size)*25.4/72;assert(s.x>=11.9&&s.x+width<=285.1);assert(s.y>=10&&s.y<=204.1);}
  fs.mkdirSync('output/pdf',{recursive:true});fs.writeFileSync('output/pdf/escaleta-prosodia-ll01.pdf',result.bytes);
+ for(const entry of T.catalogue.filter(e=>e.status==='approved-text')){
+  const plan=P.build(entry),source=require('../content/prosody/'+entry.id+'.json'),{createHash}=require('node:crypto'),reviewed={...source};delete reviewed.independentReview;
+  assert.equal(source.independentReview.status,'passed');assert.equal(createHash('sha256').update(JSON.stringify(reviewed)).digest('hex'),source.independentReview.sourceSha256);
+  assert.equal(plan.status,'pending-teacher-validation');assert.equal(plan.variants.length,4);assert.equal(plan.paragraphCount,3);
+  for(const v of plan.variants){assert.equal(v.fragments.map(f=>f.text).join(' '),T.text(entry));assert.deepEqual(v.fragments.flatMap(f=>f.words.map(w=>w.index)),Array.from({length:plan.wordCount},(_,i)=>i+1));assert(v.fragments.every(f=>!f.exception||f.reason.length>10));assert.deepEqual(v.fragments.flatMap(f=>f.cues),plan.cues);}
+  const output=await require('../prosody-pdf.js').build(entry,plan,lib),pdf=await lib.PDFDocument.load(output.bytes);assert.equal(pdf.getPageCount(),3);assert(pdf.getSubject().includes('per validar'));
+  for(const s of output.pages.flat()){const w=(s.weight?bold:regular).widthOfTextAtSize(s.value,s.size)*25.4/72;assert(s.x>=11.9&&s.x+w<=285.1);assert(s.y>=10&&s.y<=204.1);}
+  fs.writeFileSync('output/pdf/escaleta-prosodia-'+entry.code.toLowerCase()+'.pdf',output.bytes);
+ }
  console.log('Prosody draft: identical canonical text in all four variants, 63 counted/87 locuted words, ten cues, stable word ranges, editorial exceptions, paragraph safety, stale draft rejection and three bounded landscape comparison pages passed. No synthesis.');
 })().catch(e=>{console.error(e);process.exitCode=1;});

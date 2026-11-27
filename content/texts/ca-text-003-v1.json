@@ -1,6 +1,6 @@
 {
   "id": "ca-text-003-v1",
-  "code": "CA0003",
+  "code": "CA003",
   "language": "ca",
   "title": "Una parada a la plaça",
   "focuses": [
@@ -10,7 +10,7 @@
     "b / v"
   ],
   "stage": "Cicle superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "Divendres, la Berta va al poble amb bicicleta. A la plaça, veu una parada de llibres vells i joguines.",
     "El venedor busca una bossa per al llibre que ella tria. La Berta obre la motxilla i hi guarda la compra.",
@@ -65,12 +65,19 @@
     "status": "passed",
     "date": "2026-11-26",
     "method": "independent-editorial-review",
-    "sourceSha256": "66d7317173659ea26e322cb4e49b0d3b34e365a82c31726a2287914e016931cb"
+    "sourceSha256": "66d7317173659ea26e322cb4e49b0d3b34e365a82c31726a2287914e016931cb",
+    "codeAtReview": "CA0003"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-27",
+    "confirmation": "El docent confirma que tots quatre dictats són bons.",
+    "sourceTextSha256": "27fa4f817efa8d49e38538dc501ff53aef3c7e31d8a04a587eddd28c3e8f05c3"
   },
   "synthesis": {
     "status": "not-requested"
+  },
+  "prosodyReview": {
+    "status": "pending"
   }
 }

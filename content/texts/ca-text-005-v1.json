@@ -1,6 +1,6 @@
 {
   "id": "ca-text-005-v1",
-  "code": "CA0005",
+  "code": "CA005",
   "language": "ca",
   "title": "Una gerra per a l’avi",
   "focuses": [
@@ -10,7 +10,7 @@
     "g / j"
   ],
   "stage": "Cicle superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "La Jana i el seu germà preparen un regal per a l’avi. Pinten una gerra amb un jardí ple de flors.",
     "Al costat de les flors, dibuixen un gira-sol i un ocell taronja. Després, deixen la gerra vora la finestra i recullen els pinzells.",
@@ -57,12 +57,19 @@
     "status": "passed",
     "date": "2026-11-26",
     "method": "independent-editorial-review",
-    "sourceSha256": "dc73d205f858bd024be6e252657bcd7faef333f974f6fd8771a903e35d89cdba"
+    "sourceSha256": "dc73d205f858bd024be6e252657bcd7faef333f974f6fd8771a903e35d89cdba",
+    "codeAtReview": "CA0005"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-27",
+    "confirmation": "El docent confirma que tots quatre dictats són bons.",
+    "sourceTextSha256": "74ac2f0cf0d6e63eef076c6c13febd588fc5951f23aada13fdbafc5ec1a7d50b"
   },
   "synthesis": {
     "status": "not-requested"
+  },
+  "prosodyReview": {
+    "status": "pending"
   }
 }

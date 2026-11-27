@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "id": "ca003-ca006-prosody-proposal-v1",
+  "status": "pending-prosody-validation",
+  "voiceProposal": "Aoede",
+  "varietyProposal": "Català central",
+  "synthesisAuthorized": false,
+  "newRequestsSent": 0,
+  "inputBudgetValidated": false,
+  "requestBody": null,
+  "policy": {
+    "maximumSeconds": 390,
+    "nominalWpm": 130,
+    "conservativeWpm": 95,
+    "safetyFactor": 1.2,
+    "betweenRenditionsSeconds": 3,
+    "paddingSeconds": 2
+  },
+  "minimumRequestsByDuration": 4,
+  "singleRequest": {
+    "renditions": 16,
+    "spokenWords": 1276,
+    "cueCount": 140,
+    "plannedPauseSeconds": 359.8,
+    "nominalSeconds": 949,
+    "conservativeSeconds": 1399,
+    "maximumSeconds": 390,
+    "withinDurationBudget": false,
+    "remainingSeconds": -1009
+  },
+  "requests": [
+    {
+      "id": "proposal-1",
+      "versions": [
+        {
+          "entryId": "ca-text-003-v1",
+          "code": "CA003",
+          "variant": "r23",
+          "label": "2–3 mots",
+          "fragments": 21,
+          "spokenWords": 75,
+          "cueCount": 8,
+          "pauseSeconds": 27.6
+        },
+        {
+          "entryId": "ca-text-003-v1",
+          "code": "CA003",
+          "variant": "r45",
+          "label": "4–5 mots",
+          "fragments": 11,
+          "spokenWords": 75,
+          "cueCount": 8,
+          "pauseSeconds": 17.599999999999998
+        },
+        {
+          "entryId": "ca-text-003-v1",
+          "code": "CA003",
+          "variant": "r68",
+          "label": "6–8 mots",
+          "fragments": 9,
+          "spokenWords": 75,
+          "cueCount": 8,
+          "pauseSeconds": 15.599999999999998
+        },
+        {
+          "entryId": "ca-text-003-v1",
+          "code": "CA003",
+          "variant": "r912",
+          "label": "9–12 mots",
+          "fragments": 6,
+          "spokenWords": 75,
+          "cueCount": 8,
+          "pauseSeconds": 12.600000000000001
+        }
+      ],
+      "estimate": {
+        "renditions": 4,
+        "spokenWords": 300,
+        "cueCount": 32,
+        "plannedPauseSeconds": 84.4,
+        "nominalSeconds": 223,
+        "conservativeSeconds": 329,
+        "maximumSeconds": 390,
+        "withinDurationBudget": true,
+        "remainingSeconds": 61
+      },
+      "requestBody": null
+    },
+    {
+      "id": "proposal-2",
+      "versions": [
+        {
+          "entryId": "ca-text-004-v1",
+          "code": "CA004",
+          "variant": "r23",
+          "label": "2–3 mots",
+          "fragments": 21,
+          "spokenWords": 79,
+          "cueCount": 8,
+          "pauseSeconds": 27.6
+        },
+        {
+          "entryId": "ca-text-004-v1",
+          "code": "CA004",
+          "variant": "r45",
+          "label": "4–5 mots",
+          "fragments": 13,
+          "spokenWords": 79,
+          "cueCount": 8,
+          "pauseSeconds": 19.599999999999998
+        },
+        {
+          "entryId": "ca-text-004-v1",
+          "code": "CA004",
+          "variant": "r68",
+          "label": "6–8 mots",
+          "fragments": 9,
+          "spokenWords": 79,
+          "cueCount": 8,
+          "pauseSeconds": 15.599999999999998
+        },
+        {
+          "entryId": "ca-text-004-v1",
+          "code": "CA004",
+          "variant": "r912",
+          "label": "9–12 mots",
+          "fragments": 6,
+          "spokenWords": 79,
+          "cueCount": 8,
+          "pauseSeconds": 12.599999999999998
+        }
+      ],
+      "estimate": {
+        "renditions": 4,
+        "spokenWords": 316,
+        "cueCount": 32,
+        "plannedPauseSeconds": 86.4,
+        "nominalSeconds": 233,
+        "conservativeSeconds": 344,
+        "maximumSeconds": 390,
+        "withinDurationBudget": true,
+        "remainingSeconds": 46
+      },
+      "requestBody": null
+    },
+    {
+      "id": "proposal-3",
+      "versions": [
+        {
+          "entryId": "ca-text-005-v1",
+          "code": "CA005",
+          "variant": "r23",
+          "label": "2–3 mots",
+          "fragments": 23,
+          "spokenWords": 83,
+          "cueCount": 10,
+          "pauseSeconds": 30.8
+        },
+        {
+          "entryId": "ca-text-005-v1",
+          "code": "CA005",
+          "variant": "r45",
+          "label": "4–5 mots",
+          "fragments": 14,
+          "spokenWords": 83,
+          "cueCount": 10,
+          "pauseSeconds": 21.799999999999997
+        },
+        {
+          "entryId": "ca-text-005-v1",
+          "code": "CA005",
+          "variant": "r68",
+          "label": "6–8 mots",
+          "fragments": 8,
+          "spokenWords": 83,
+          "cueCount": 10,
+          "pauseSeconds": 15.799999999999999
+        },
+        {
+          "entryId": "ca-text-005-v1",
+          "code": "CA005",
+          "variant": "r912",
+          "label": "9–12 mots",
+          "fragments": 6,
+          "spokenWords": 83,
+          "cueCount": 10,
+          "pauseSeconds": 13.8
+        }
+      ],
+      "estimate": {
+        "renditions": 4,
+        "spokenWords": 332,
+        "cueCount": 40,
+        "plannedPauseSeconds": 93.2,
+        "nominalSeconds": 247,
+        "conservativeSeconds": 364,
+        "maximumSeconds": 390,
+        "withinDurationBudget": true,
+        "remainingSeconds": 26
+      },
+      "requestBody": null
+    },
+    {
+      "id": "proposal-4",
+      "versions": [
+        {
+          "entryId": "ca-text-006-v1",
+          "code": "CA006",
+          "variant": "r23",
+          "label": "2–3 mots",
+          "fragments": 24,
+          "spokenWords": 82,
+          "cueCount": 9,
+          "pauseSeconds": 31.200000000000003
+        },
+        {
+          "entryId": "ca-text-006-v1",
+          "code": "CA006",
+          "variant": "r45",
+          "label": "4–5 mots",
+          "fragments": 13,
+          "spokenWords": 82,
+          "cueCount": 9,
+          "pauseSeconds": 20.2
+        },
+        {
+          "entryId": "ca-text-006-v1",
+          "code": "CA006",
+          "variant": "r68",
+          "label": "6–8 mots",
+          "fragments": 10,
+          "spokenWords": 82,
+          "cueCount": 9,
+          "pauseSeconds": 17.2
+        },
+        {
+          "entryId": "ca-text-006-v1",
+          "code": "CA006",
+          "variant": "r912",
+          "label": "9–12 mots",
+          "fragments": 6,
+          "spokenWords": 82,
+          "cueCount": 9,
+          "pauseSeconds": 13.200000000000001
+        }
+      ],
+      "estimate": {
+        "renditions": 4,
+        "spokenWords": 328,
+        "cueCount": 36,
+        "plannedPauseSeconds": 92.8,
+        "nominalSeconds": 245,
+        "conservativeSeconds": 360,
+        "maximumSeconds": 390,
+        "withinDurationBudget": true,
+        "remainingSeconds": 30
+      },
+      "requestBody": null
+    }
+  ],
+  "entries": [
+    {
+      "code": "CA003",
+      "textId": "ca-text-003-v1",
+      "title": "Una parada a la plaça",
+      "words": 56,
+      "teacherValidation": "approved",
+      "prosodyValidation": "pending",
+      "sourceTextSha256": "27fa4f817efa8d49e38538dc501ff53aef3c7e31d8a04a587eddd28c3e8f05c3",
+      "planSha256": "87eebdde5ac118416edaa1d34d5ed80f48087ff89bfacce86db8767d3babb734"
+    },
+    {
+      "code": "CA004",
+      "textId": "ca-text-004-v1",
+      "title": "El mocador perdut",
+      "words": 60,
+      "teacherValidation": "approved",
+      "prosodyValidation": "pending",
+      "sourceTextSha256": "64807a6400285215a23c114a2f6d296d6a52a9d4c9ed4ca2ac67c7376f7cc89a",
+      "planSha256": "5622443558bfbd14753b15aebafd9ef5d969899b44f873e23ea5f97d0709dc26"
+    },
+    {
+      "code": "CA005",
+      "textId": "ca-text-005-v1",
+      "title": "Una gerra per a l’avi",
+      "words": 60,
+      "teacherValidation": "approved",
+      "prosodyValidation": "pending",
+      "sourceTextSha256": "74ac2f0cf0d6e63eef076c6c13febd588fc5951f23aada13fdbafc5ec1a7d50b",
+      "planSha256": "166c5091c3ba3e9f6f193c09819261bdec0ef456aab805c0b002e6d7538663f6"
+    },
+    {
+      "code": "CA006",
+      "textId": "ca-text-006-v1",
+      "title": "Una sortida amb previsió",
+      "words": 60,
+      "teacherValidation": "approved",
+      "prosodyValidation": "pending",
+      "sourceTextSha256": "5b15441250f05867868df48c598aee26f6df2f05f779a70027b098eed96455c1",
+      "planSha256": "b894b83340c5c80aa5991bd83bce73464df989a4b9c4689fc61b6d0c09f69c33"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "id": "ca-text-006-v1",
-  "code": "CA0006",
+  "code": "CA006",
   "language": "ca",
   "title": "Una sortida amb previsió",
   "focuses": [
@@ -12,7 +12,7 @@
     "Dièresi"
   ],
   "stage": "Cicle superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "Ahir, la classe preparava una sortida al bosc. La mestra volia que els alumnes duguessin una llibreta i es repartissin en grups.",
     "Si plogués, canviarien el recorregut i visitarien el museu del poble. En llegir el mapa, la Júlia intuïa que caminarien força.",
@@ -67,12 +67,19 @@
     "status": "passed",
     "date": "2026-11-26",
     "method": "independent-editorial-review",
-    "sourceSha256": "2434e9abe6fba189c9d2d9b4517628e793a9e74a1ad490730c9aad101c7a8b8f"
+    "sourceSha256": "2434e9abe6fba189c9d2d9b4517628e793a9e74a1ad490730c9aad101c7a8b8f",
+    "codeAtReview": "CA0006"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-27",
+    "confirmation": "El docent confirma que tots quatre dictats són bons.",
+    "sourceTextSha256": "5b15441250f05867868df48c598aee26f6df2f05f779a70027b098eed96455c1"
   },
   "synthesis": {
     "status": "not-requested"
+  },
+  "prosodyReview": {
+    "status": "pending"
   }
 }

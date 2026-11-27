@@ -21,6 +21,7 @@ function emit(name, text) {
   outputs.set(name, text);
 }
 const bundle = (global, data) => '/* Generat amb tools/build-catalogs.cjs. Edita el JSON font. */\n(function(root){root.' + global + '=' + JSON.stringify(data) + ';if(typeof module!=="undefined")module.exports=root.' + global + ';})(typeof window==="undefined"?globalThis:window);\n';
+emit('prosody-planning.js',bundle('PlecProsodyPlanning',json('audio/texts/batches/ca003-ca006-prosody-proposal-v1.json')));
 emit('text-audio.js',bundle('PlecTextAudio',json('audio/texts/index.json')));
 emit('text-review-notes.js',bundle('PlecTextAudioReview',json('audio/texts/review-notes.json')));
 emit('rhythm-profiles.js',bundle('PlecRhythmProfiles',json('content/rhythm-profiles-v1.json')));

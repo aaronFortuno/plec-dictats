@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "textId": "ca-text-003-v1",
+  "status": "pending-teacher-validation",
+  "sourceText": "Divendres, la Berta va al poble amb bicicleta. A la plaça, veu una parada de llibres vells i joguines. El venedor busca una bossa per al llibre que ella tria. La Berta obre la motxilla i hi guarda la compra. Abans de tornar a casa, també compra un petit vaixell de fusta per al seu germà.",
+  "paragraphEnds": [
+    19,
+    40,
+    56
+  ],
+  "voice": "Aoede",
+  "direction": "Una sola veu en català central, clara i natural. Manté les consonants completes i el ritme estable entre versions, sense lletrejar. Llegeix b i v amb la pronunciació central natural, sense lletrejar ni crear contrastos artificials. En un tall sense final de frase, conserva l’entonació de continuació.",
+  "punctuationDirection": "La mateixa veu narra i anuncia la puntuació, amb el mateix ritme base. Digues Coma, Punt i seguit, Punt i a part i Punt final en català. Les locucions no són mots del dictat.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 mots",
+      "min": 2,
+      "max": 3,
+      "direction": "Grups molt breus, amb entonació de continuació. Conserva els mots sencers.",
+      "ends": [
+        3,
+        6,
+        8,
+        11,
+        14,
+        17,
+        19,
+        22,
+        24,
+        27,
+        30,
+        33,
+        35,
+        38,
+        40,
+        43,
+        45,
+        47,
+        50,
+        52,
+        56
+      ],
+      "exceptions": {
+        "56": "Manté junt el complement «per al seu germà»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 mots",
+      "min": 4,
+      "max": 5,
+      "direction": "Tirades breus amb unitats de sentit. Evita deixar articles i preposicions penjats.",
+      "ends": [
+        4,
+        8,
+        14,
+        19,
+        24,
+        30,
+        35,
+        40,
+        45,
+        50,
+        56
+      ],
+      "exceptions": {
+        "14": "Manté el complement inicial i el nucli «veu una parada».",
+        "30": "Conserva el complement del llibre amb la relativa «que ella tria».",
+        "56": "Conserva els complements del vaixell en una mateixa tirada."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 mots",
+      "min": 6,
+      "max": 8,
+      "direction": "Tirades mitjanes i fluides. La puntuació pot quedar dins d’un fragment.",
+      "ends": [
+        8,
+        14,
+        19,
+        24,
+        30,
+        35,
+        40,
+        47,
+        56
+      ],
+      "exceptions": {
+        "19": "Tanca la descripció de la parada abans del canvi de paràgraf.",
+        "24": "Conserva el subjecte i l’acció «busca una bossa».",
+        "35": "Manté l’acció completa d’obrir la motxilla.",
+        "40": "Tanca l’acció de guardar la compra sense afegir un altre paràgraf.",
+        "56": "Manté el grup nominal del regal amb els seus complements."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 mots",
+      "min": 9,
+      "max": 12,
+      "direction": "Tirades llargues, amb pauses a la puntuació i continuïtat dins la frase.",
+      "ends": [
+        8,
+        19,
+        30,
+        40,
+        45,
+        56
+      ],
+      "exceptions": {
+        "8": "Primera frase completa de vuit mots.",
+        "45": "Pausa natural després del complement temporal; el predicat va a continuació."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-27",
+    "sourceSha256": "24d1e8c68de27351311a934b15e3e85a70c537efecb238d71aa7f838431e44a4"
+  }
+}

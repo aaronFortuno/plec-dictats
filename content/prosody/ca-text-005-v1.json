@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "textId": "ca-text-005-v1",
+  "status": "pending-teacher-validation",
+  "sourceText": "La Jana i el seu germà preparen un regal per a l’avi. Pinten una gerra amb un jardí ple de flors. Al costat de les flors, dibuixen un gira-sol i un ocell taronja. Després, deixen la gerra vora la finestra i recullen els pinzells. Quan la pintura és seca, emboliquen el regal. Al vespre, l’avi l’obre al menjador i somriu.",
+  "paragraphEnds": [
+    21,
+    44,
+    60
+  ],
+  "voice": "Aoede",
+  "direction": "Una sola veu en català central, clara i natural. Manté les consonants completes i el ritme estable entre versions, sense lletrejar. Respecta el so de ge i jota a gerra, jardí i gira-sol, i la tonicitat de cada mot. En un tall sense final de frase, conserva l’entonació de continuació.",
+  "punctuationDirection": "La mateixa veu narra i anuncia la puntuació, amb el mateix ritme base. Digues Coma, Punt i seguit, Punt i a part i Punt final en català. Les locucions no són mots del dictat.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 mots",
+      "min": 2,
+      "max": 3,
+      "direction": "Grups molt breus, amb entonació de continuació. Conserva els mots sencers.",
+      "ends": [
+        2,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21,
+        23,
+        26,
+        29,
+        33,
+        35,
+        37,
+        40,
+        42,
+        44,
+        47,
+        49,
+        52,
+        54,
+        56,
+        58,
+        60
+      ],
+      "exceptions": {
+        "6": "Manté junt el segon membre del subjecte coordinat.",
+        "33": "Conserva el grup nominal «un ocell taronja» amb la conjunció."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 mots",
+      "min": 4,
+      "max": 5,
+      "direction": "Tirades breus amb unitats de sentit. Evita deixar articles i preposicions penjats.",
+      "ends": [
+        6,
+        12,
+        18,
+        21,
+        26,
+        29,
+        33,
+        37,
+        40,
+        44,
+        49,
+        52,
+        56,
+        60
+      ],
+      "exceptions": {
+        "6": "Manté complet el subjecte coordinat de la primera frase.",
+        "12": "Conserva el regal amb el destinatari i el verb.",
+        "18": "Manté el verb, l’objecte i el nucli del dibuix.",
+        "21": "Tanca el complement «ple de flors» abans del canvi de paràgraf.",
+        "29": "Conserva l’acció «dibuixen un gira-sol».",
+        "40": "Manté junt el complement de lloc.",
+        "52": "Tanca l’acció d’embolicar el regal abans de passar al vespre."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 mots",
+      "min": 6,
+      "max": 8,
+      "direction": "Tirades mitjanes i fluides. La puntuació pot quedar dins d’un fragment.",
+      "ends": [
+        6,
+        12,
+        21,
+        29,
+        37,
+        44,
+        52,
+        60
+      ],
+      "exceptions": {
+        "21": "Frase completa de nou mots, abans del canvi de paràgraf."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 mots",
+      "min": 9,
+      "max": 12,
+      "direction": "Tirades llargues, amb pauses a la puntuació i continuïtat dins la frase.",
+      "ends": [
+        12,
+        21,
+        33,
+        44,
+        52,
+        60
+      ],
+      "exceptions": {
+        "52": "Frase completa de vuit mots; no necessita allargar-se amb la següent.",
+        "60": "Frase final completa de vuit mots."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-27",
+    "sourceSha256": "36046eb4b2a8b611392ee96b1274e0cbfe05bc5bc5673093163f78ea0aa321ce"
+  }
+}
