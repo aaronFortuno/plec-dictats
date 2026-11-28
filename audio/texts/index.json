@@ -10495,5 +10495,743 @@
         ]
       }
     }
+  },
+  "es-text-003-v1": {
+    "voice": "Aoede",
+    "model": "gemini-3.8-flash-tts",
+    "language": "es",
+    "variety": "es-es",
+    "status": "pending-listening",
+    "pronunciationValidated": false,
+    "sourceTextSha256": "d829cfc00bf8379184e81c4308962d9e672d67e41da74e8ddd491e74efb65ae4",
+    "planHash": "fced3a65fcdc83d27d28825ef7537187b77b14f388a7e049dc44515c1b1ff0f8",
+    "requestHash": "d59b762783f1cbfb746cba06421fda5c298dbe0fe7a145e6ce7ed3d32f6732c9",
+    "rawSha256": "5ae8a8f01757b7529a76630c4f240d1604976c12290d0c23366dfdb7efdcbe3e",
+    "seconds": 185.36,
+    "coverage": 0.9494047619047619,
+    "timing": "editorial-word-ranges+local-vosk+quiet-window",
+    "variants": {
+      "r23": {
+        "label": "2–3 palabras",
+        "path": "assets/audio/texts/es/es003-four-v1/r23.mp3",
+        "seconds": 55.86,
+        "sha256": "7a69489e9353840209235c3d2f9d54b582885f2c691531cb1d11ddfa35e810e0",
+        "bytes": 447596,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Hoy, Hugo",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 2,
+            "start": 0,
+            "end": 3.72,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "ayuda a su hermana",
+            "paragraph": 1,
+            "startWord": 3,
+            "endWord": 6,
+            "start": 3.72,
+            "end": 5.925,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "en el huerto.",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 9,
+            "start": 5.925,
+            "end": 8.97,
+            "cues": [
+              {
+                "afterWord": 9,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Han encontrado hierbas",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 12,
+            "start": 8.97,
+            "end": 11.235,
+            "cues": []
+          },
+          {
+            "number": 5,
+            "text": "entre las hortalizas",
+            "paragraph": 1,
+            "startWord": 13,
+            "endWord": 15,
+            "start": 11.235,
+            "end": 13.32,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "y quieren quitarlas",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 18,
+            "start": 13.32,
+            "end": 15.225,
+            "cues": []
+          },
+          {
+            "number": 7,
+            "text": "antes de regar.",
+            "paragraph": 1,
+            "startWord": 19,
+            "endWord": 21,
+            "start": 15.225,
+            "end": 18.39004,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "La tierra",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 23,
+            "start": 18.39004,
+            "end": 19.89,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "sigue húmeda",
+            "paragraph": 2,
+            "startWord": 24,
+            "endWord": 25,
+            "start": 19.89,
+            "end": 21.345,
+            "cues": []
+          },
+          {
+            "number": 10,
+            "text": "porque ha llovido",
+            "paragraph": 2,
+            "startWord": 26,
+            "endWord": 28,
+            "start": 21.345,
+            "end": 22.92,
+            "cues": []
+          },
+          {
+            "number": 11,
+            "text": "durante la noche.",
+            "paragraph": 2,
+            "startWord": 29,
+            "endWord": 31,
+            "start": 22.92,
+            "end": 25.965,
+            "cues": [
+              {
+                "afterWord": 31,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "text": "Los hermanos",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 33,
+            "start": 25.965,
+            "end": 27.39,
+            "cues": []
+          },
+          {
+            "number": 13,
+            "text": "trabajan con cuidado",
+            "paragraph": 2,
+            "startWord": 34,
+            "endWord": 36,
+            "start": 27.39,
+            "end": 29.31,
+            "cues": []
+          },
+          {
+            "number": 14,
+            "text": "para no arrancar",
+            "paragraph": 2,
+            "startWord": 37,
+            "endWord": 39,
+            "start": 29.31,
+            "end": 31.005,
+            "cues": []
+          },
+          {
+            "number": 15,
+            "text": "las plantas pequeñas.",
+            "paragraph": 2,
+            "startWord": 40,
+            "endWord": 42,
+            "start": 31.005,
+            "end": 34.305,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 16,
+            "text": "Al terminar,",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 44,
+            "start": 34.305,
+            "end": 36.765,
+            "cues": [
+              {
+                "afterWord": 44,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 17,
+            "text": "hacen un hoyo",
+            "paragraph": 3,
+            "startWord": 45,
+            "endWord": 47,
+            "start": 36.765,
+            "end": 38.76,
+            "cues": []
+          },
+          {
+            "number": 18,
+            "text": "junto a la valla",
+            "paragraph": 3,
+            "startWord": 48,
+            "endWord": 51,
+            "start": 38.76,
+            "end": 40.98,
+            "cues": []
+          },
+          {
+            "number": 19,
+            "text": "y plantan una lechuga.",
+            "paragraph": 3,
+            "startWord": 52,
+            "endWord": 55,
+            "start": 40.98,
+            "end": 44.685,
+            "cues": [
+              {
+                "afterWord": 55,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 20,
+            "text": "Después, guardan",
+            "paragraph": 3,
+            "startWord": 56,
+            "endWord": 57,
+            "start": 44.685,
+            "end": 48.885,
+            "cues": [
+              {
+                "afterWord": 56,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 21,
+            "text": "las herramientas",
+            "paragraph": 3,
+            "startWord": 58,
+            "endWord": 59,
+            "start": 48.885,
+            "end": 50.625,
+            "cues": []
+          },
+          {
+            "number": 22,
+            "text": "en una caja",
+            "paragraph": 3,
+            "startWord": 60,
+            "endWord": 62,
+            "start": 50.625,
+            "end": 52.515,
+            "cues": []
+          },
+          {
+            "number": 23,
+            "text": "de madera.",
+            "paragraph": 3,
+            "startWord": 63,
+            "endWord": 64,
+            "start": 52.515,
+            "end": 55.86,
+            "cues": [
+              {
+                "afterWord": 64,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      },
+      "r45": {
+        "label": "4–5 palabras",
+        "path": "assets/audio/texts/es/es003-four-v1/r45.mp3",
+        "seconds": 48.375,
+        "sha256": "c18f54fb1d1800e93e0ebcfc317241bd29ce7c56d86ad7cb7749e1ff9b72f0e1",
+        "bytes": 387692,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Hoy, Hugo ayuda a su hermana",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 6,
+            "start": 0,
+            "end": 6.435,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "en el huerto.",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 9,
+            "start": 6.435,
+            "end": 9.33,
+            "cues": [
+              {
+                "afterWord": 9,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Han encontrado hierbas entre las hortalizas",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 15,
+            "start": 9.33,
+            "end": 13.305,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "y quieren quitarlas antes de regar.",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 21,
+            "start": 13.305,
+            "end": 17.565,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "La tierra sigue húmeda",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 25,
+            "start": 17.565,
+            "end": 19.515,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "porque ha llovido durante la noche.",
+            "paragraph": 2,
+            "startWord": 26,
+            "endWord": 31,
+            "start": 19.515,
+            "end": 23.385,
+            "cues": [
+              {
+                "afterWord": 31,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "Los hermanos trabajan con cuidado",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 36,
+            "start": 23.385,
+            "end": 26.13,
+            "cues": []
+          },
+          {
+            "number": 8,
+            "text": "para no arrancar las plantas pequeñas.",
+            "paragraph": 2,
+            "startWord": 37,
+            "endWord": 42,
+            "start": 26.13,
+            "end": 30.495,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "text": "Al terminar, hacen un hoyo",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 47,
+            "start": 30.495,
+            "end": 34.26,
+            "cues": [
+              {
+                "afterWord": 44,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "text": "junto a la valla",
+            "paragraph": 3,
+            "startWord": 48,
+            "endWord": 51,
+            "start": 34.26,
+            "end": 35.775,
+            "cues": []
+          },
+          {
+            "number": 11,
+            "text": "y plantan una lechuga.",
+            "paragraph": 3,
+            "startWord": 52,
+            "endWord": 55,
+            "start": 35.775,
+            "end": 39.315,
+            "cues": [
+              {
+                "afterWord": 55,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "text": "Después, guardan las herramientas",
+            "paragraph": 3,
+            "startWord": 56,
+            "endWord": 59,
+            "start": 39.315,
+            "end": 44.04,
+            "cues": [
+              {
+                "afterWord": 56,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 13,
+            "text": "en una caja de madera.",
+            "paragraph": 3,
+            "startWord": 60,
+            "endWord": 64,
+            "start": 44.04,
+            "end": 48.375,
+            "cues": [
+              {
+                "afterWord": 64,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      },
+      "r68": {
+        "label": "6–8 palabras",
+        "path": "assets/audio/texts/es/es003-four-v1/r68.mp3",
+        "seconds": 43.65,
+        "sha256": "ecede33e592e105dc6812a6078e3f72474a6e696e6840d335e0ec33170b99054",
+        "bytes": 349868,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Hoy, Hugo ayuda a su hermana en el huerto.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 9,
+            "start": 0,
+            "end": 6.15,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 9,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Han encontrado hierbas entre las hortalizas",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 15,
+            "start": 6.15,
+            "end": 9.24,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "y quieren quitarlas antes de regar.",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 21,
+            "start": 9.24,
+            "end": 13.095,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "La tierra sigue húmeda porque ha llovido durante la noche.",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 31,
+            "start": 13.095,
+            "end": 18.255,
+            "cues": [
+              {
+                "afterWord": 31,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Los hermanos trabajan con cuidado",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 36,
+            "start": 18.255,
+            "end": 20.325,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "para no arrancar las plantas pequeñas.",
+            "paragraph": 2,
+            "startWord": 37,
+            "endWord": 42,
+            "start": 20.325,
+            "end": 24.55504,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "Al terminar, hacen un hoyo",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 47,
+            "start": 24.55504,
+            "end": 29.02504,
+            "cues": [
+              {
+                "afterWord": 44,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "junto a la valla y plantan una lechuga.",
+            "paragraph": 3,
+            "startWord": 48,
+            "endWord": 55,
+            "start": 29.02504,
+            "end": 35.67,
+            "cues": [
+              {
+                "afterWord": 55,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "text": "Después, guardan las herramientas en una caja de madera.",
+            "paragraph": 3,
+            "startWord": 56,
+            "endWord": 64,
+            "start": 35.67,
+            "end": 43.65,
+            "cues": [
+              {
+                "afterWord": 56,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 64,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      },
+      "r912": {
+        "label": "9–12 palabras",
+        "path": "assets/audio/texts/es/es003-four-v1/r912.mp3",
+        "seconds": 37.475,
+        "sha256": "dec1c17b64bdb2504143596b27b7337ba46a4235bc74a1cdbffc018a3608ce9c",
+        "bytes": 300524,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Hoy, Hugo ayuda a su hermana en el huerto.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 9,
+            "start": 0,
+            "end": 5.79004,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 9,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Han encontrado hierbas entre las hortalizas y quieren quitarlas antes de regar.",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 21,
+            "start": 5.79004,
+            "end": 11.86167,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "La tierra sigue húmeda porque ha llovido durante la noche.",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 31,
+            "start": 11.86167,
+            "end": 16.80004,
+            "cues": [
+              {
+                "afterWord": 31,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Los hermanos trabajan con cuidado para no arrancar las plantas pequeñas.",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 42,
+            "start": 16.80004,
+            "end": 23.32504,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Al terminar, hacen un hoyo junto a la valla y plantan una lechuga.",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 55,
+            "start": 23.32504,
+            "end": 31.11,
+            "cues": [
+              {
+                "afterWord": 44,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 55,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Después, guardan las herramientas en una caja de madera.",
+            "paragraph": 3,
+            "startWord": 56,
+            "endWord": 64,
+            "start": 31.11,
+            "end": 37.475,
+            "cues": [
+              {
+                "afterWord": 56,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 64,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }
