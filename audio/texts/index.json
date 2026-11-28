@@ -11233,5 +11233,775 @@
         ]
       }
     }
+  },
+  "es-text-004-v1": {
+    "voice": "Aoede",
+    "model": "gemini-3.8-flash-tts",
+    "language": "es",
+    "variety": "es-es",
+    "status": "pending-listening",
+    "pronunciationValidated": false,
+    "sourceTextSha256": "83d38075c3d3ced49fa67924e9a98fe933594b17bbbedfc2ef7ffedcfeaebc65",
+    "planHash": "d48f7ef2a55812da44650f08aef45ba465183dc96ebd7808603152fb67dfb037",
+    "requestHash": "9cbf0bff1bbfcc1d14f95464e2d4054fc3be6c4a01b9494f04141d209e4597af",
+    "rawSha256": "aa74e61fa55ac8ebe9f8d3b526c97fcbb8b69fc94f01662378da25f114a7ae87",
+    "seconds": 189.88,
+    "coverage": 0.9880952380952381,
+    "timing": "editorial-word-ranges+local-vosk+quiet-window",
+    "variants": {
+      "r23": {
+        "label": "2–3 palabras",
+        "path": "assets/audio/texts/es/es004-four-v1/r23.mp3",
+        "seconds": 59.46,
+        "sha256": "676869771e944e3d83ce1bb1186d90f753420970120c1216b883cc1dc31c8d95",
+        "bytes": 476396,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Jorge aprende",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 2,
+            "start": 0,
+            "end": 1.59,
+            "cues": []
+          },
+          {
+            "number": 2,
+            "text": "a tejer",
+            "paragraph": 1,
+            "startWord": 3,
+            "endWord": 4,
+            "start": 1.59,
+            "end": 2.685,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "con su abuela.",
+            "paragraph": 1,
+            "startWord": 5,
+            "endWord": 7,
+            "start": 2.685,
+            "end": 5.385,
+            "cues": [
+              {
+                "afterWord": 7,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Elige una madeja",
+            "paragraph": 1,
+            "startWord": 8,
+            "endWord": 10,
+            "start": 5.385,
+            "end": 7.71,
+            "cues": []
+          },
+          {
+            "number": 5,
+            "text": "de lana roja",
+            "paragraph": 1,
+            "startWord": 11,
+            "endWord": 13,
+            "start": 7.71,
+            "end": 10.30504,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "y otra",
+            "paragraph": 1,
+            "startWord": 14,
+            "endWord": 15,
+            "start": 10.30504,
+            "end": 12.36,
+            "cues": []
+          },
+          {
+            "number": 7,
+            "text": "de color naranja",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 18,
+            "start": 12.36,
+            "end": 14.73,
+            "cues": []
+          },
+          {
+            "number": 8,
+            "text": "para preparar",
+            "paragraph": 1,
+            "startWord": 19,
+            "endWord": 20,
+            "start": 14.73,
+            "end": 16.815,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "una bufanda.",
+            "paragraph": 1,
+            "startWord": 21,
+            "endWord": 22,
+            "start": 16.815,
+            "end": 20.01,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "text": "Cada tarde,",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 24,
+            "start": 20.01,
+            "end": 22.575,
+            "cues": [
+              {
+                "afterWord": 24,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "text": "recoge las agujas",
+            "paragraph": 2,
+            "startWord": 25,
+            "endWord": 27,
+            "start": 22.575,
+            "end": 24.9,
+            "cues": []
+          },
+          {
+            "number": 12,
+            "text": "y trabaja un rato",
+            "paragraph": 2,
+            "startWord": 28,
+            "endWord": 31,
+            "start": 24.9,
+            "end": 27.465,
+            "cues": []
+          },
+          {
+            "number": 13,
+            "text": "junto a la ventana.",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 35,
+            "start": 27.465,
+            "end": 31.305,
+            "cues": [
+              {
+                "afterWord": 35,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 14,
+            "text": "Su abuela",
+            "paragraph": 2,
+            "startWord": 36,
+            "endWord": 37,
+            "start": 31.305,
+            "end": 32.955,
+            "cues": []
+          },
+          {
+            "number": 15,
+            "text": "le ayuda",
+            "paragraph": 2,
+            "startWord": 38,
+            "endWord": 39,
+            "start": 32.955,
+            "end": 34.65,
+            "cues": []
+          },
+          {
+            "number": 16,
+            "text": "cuando se enreda",
+            "paragraph": 2,
+            "startWord": 40,
+            "endWord": 42,
+            "start": 34.65,
+            "end": 36.6,
+            "cues": []
+          },
+          {
+            "number": 17,
+            "text": "el hilo.",
+            "paragraph": 2,
+            "startWord": 43,
+            "endWord": 44,
+            "start": 36.6,
+            "end": 39.45,
+            "cues": [
+              {
+                "afterWord": 44,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 18,
+            "text": "Cuando termina,",
+            "paragraph": 3,
+            "startWord": 45,
+            "endWord": 46,
+            "start": 39.45,
+            "end": 42.18,
+            "cues": [
+              {
+                "afterWord": 46,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 19,
+            "text": "Jorge envuelve",
+            "paragraph": 3,
+            "startWord": 47,
+            "endWord": 48,
+            "start": 42.18,
+            "end": 44.325,
+            "cues": []
+          },
+          {
+            "number": 20,
+            "text": "el regalo",
+            "paragraph": 3,
+            "startWord": 49,
+            "endWord": 50,
+            "start": 44.325,
+            "end": 46.11,
+            "cues": []
+          },
+          {
+            "number": 21,
+            "text": "y dibuja",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 52,
+            "start": 46.11,
+            "end": 47.805,
+            "cues": []
+          },
+          {
+            "number": 22,
+            "text": "una tarjeta.",
+            "paragraph": 3,
+            "startWord": 53,
+            "endWord": 54,
+            "start": 47.805,
+            "end": 50.85,
+            "cues": [
+              {
+                "afterWord": 54,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 23,
+            "text": "Quiere entregárselo",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 56,
+            "start": 50.85,
+            "end": 52.74,
+            "cues": []
+          },
+          {
+            "number": 24,
+            "text": "a su hermano",
+            "paragraph": 3,
+            "startWord": 57,
+            "endWord": 59,
+            "start": 52.74,
+            "end": 53.985,
+            "cues": []
+          },
+          {
+            "number": 25,
+            "text": "antes de que llegue",
+            "paragraph": 3,
+            "startWord": 60,
+            "endWord": 63,
+            "start": 53.985,
+            "end": 55.545,
+            "cues": []
+          },
+          {
+            "number": 26,
+            "text": "el invierno.",
+            "paragraph": 3,
+            "startWord": 64,
+            "endWord": 65,
+            "start": 55.545,
+            "end": 59.46,
+            "cues": [
+              {
+                "afterWord": 65,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      },
+      "r45": {
+        "label": "4–5 palabras",
+        "path": "assets/audio/texts/es/es004-four-v1/r45.mp3",
+        "seconds": 48.75,
+        "sha256": "31a343e21536945196849ca96a5a4915575642949c9d901cf8e163b9494f3843",
+        "bytes": 390764,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Jorge aprende a tejer",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 4,
+            "start": 0,
+            "end": 3.12,
+            "cues": []
+          },
+          {
+            "number": 2,
+            "text": "con su abuela.",
+            "paragraph": 1,
+            "startWord": 5,
+            "endWord": 7,
+            "start": 3.12,
+            "end": 6.975,
+            "cues": [
+              {
+                "afterWord": 7,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Elige una madeja de lana roja",
+            "paragraph": 1,
+            "startWord": 8,
+            "endWord": 13,
+            "start": 6.975,
+            "end": 9.84,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "y otra de color naranja",
+            "paragraph": 1,
+            "startWord": 14,
+            "endWord": 18,
+            "start": 9.84,
+            "end": 12.165,
+            "cues": []
+          },
+          {
+            "number": 5,
+            "text": "para preparar una bufanda.",
+            "paragraph": 1,
+            "startWord": 19,
+            "endWord": 22,
+            "start": 12.165,
+            "end": 15.66,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Cada tarde, recoge las agujas",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 27,
+            "start": 15.66,
+            "end": 20.04,
+            "cues": [
+              {
+                "afterWord": 24,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "y trabaja un rato",
+            "paragraph": 2,
+            "startWord": 28,
+            "endWord": 31,
+            "start": 20.04,
+            "end": 21.705,
+            "cues": []
+          },
+          {
+            "number": 8,
+            "text": "junto a la ventana.",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 35,
+            "start": 21.705,
+            "end": 24.915,
+            "cues": [
+              {
+                "afterWord": 35,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "text": "Su abuela le ayuda",
+            "paragraph": 2,
+            "startWord": 36,
+            "endWord": 39,
+            "start": 24.915,
+            "end": 26.925,
+            "cues": []
+          },
+          {
+            "number": 10,
+            "text": "cuando se enreda el hilo.",
+            "paragraph": 2,
+            "startWord": 40,
+            "endWord": 44,
+            "start": 26.925,
+            "end": 31.005,
+            "cues": [
+              {
+                "afterWord": 44,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "text": "Cuando termina, Jorge envuelve",
+            "paragraph": 3,
+            "startWord": 45,
+            "endWord": 48,
+            "start": 31.005,
+            "end": 35.595,
+            "cues": [
+              {
+                "afterWord": 46,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "text": "el regalo y dibuja una tarjeta.",
+            "paragraph": 3,
+            "startWord": 49,
+            "endWord": 54,
+            "start": 35.595,
+            "end": 40.695,
+            "cues": [
+              {
+                "afterWord": 54,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 13,
+            "text": "Quiere entregárselo a su hermano",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 59,
+            "start": 40.695,
+            "end": 43.905,
+            "cues": []
+          },
+          {
+            "number": 14,
+            "text": "antes de que llegue el invierno.",
+            "paragraph": 3,
+            "startWord": 60,
+            "endWord": 65,
+            "start": 43.905,
+            "end": 48.75,
+            "cues": [
+              {
+                "afterWord": 65,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      },
+      "r68": {
+        "label": "6–8 palabras",
+        "path": "assets/audio/texts/es/es004-four-v1/r68.mp3",
+        "seconds": 41.23504,
+        "sha256": "0c2708240f4077bfb9293b69f33b4fc6febc799879d268af5010491633561281",
+        "bytes": 330668,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Jorge aprende a tejer con su abuela.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 7,
+            "start": 0,
+            "end": 4.155,
+            "cues": [
+              {
+                "afterWord": 7,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Elige una madeja de lana roja y otra",
+            "paragraph": 1,
+            "startWord": 8,
+            "endWord": 15,
+            "start": 4.155,
+            "end": 7.515,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "de color naranja para preparar una bufanda.",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 22,
+            "start": 7.515,
+            "end": 13.44,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Cada tarde, recoge las agujas",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 27,
+            "start": 13.44,
+            "end": 18.21,
+            "cues": [
+              {
+                "afterWord": 24,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "y trabaja un rato junto a la ventana.",
+            "paragraph": 2,
+            "startWord": 28,
+            "endWord": 35,
+            "start": 18.21,
+            "end": 22.18504,
+            "cues": [
+              {
+                "afterWord": 35,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Su abuela le ayuda cuando se enreda el hilo.",
+            "paragraph": 2,
+            "startWord": 36,
+            "endWord": 44,
+            "start": 22.18504,
+            "end": 26.47504,
+            "cues": [
+              {
+                "afterWord": 44,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "Cuando termina, Jorge envuelve el regalo y dibuja una tarjeta.",
+            "paragraph": 3,
+            "startWord": 45,
+            "endWord": 54,
+            "start": 26.47504,
+            "end": 35.04004,
+            "cues": [
+              {
+                "afterWord": 46,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 54,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "Quiere entregárselo a su hermano",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 59,
+            "start": 35.04004,
+            "end": 37.59004,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "antes de que llegue el invierno.",
+            "paragraph": 3,
+            "startWord": 60,
+            "endWord": 65,
+            "start": 37.59004,
+            "end": 41.23504,
+            "cues": [
+              {
+                "afterWord": 65,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      },
+      "r912": {
+        "label": "9–12 palabras",
+        "path": "assets/audio/texts/es/es004-four-v1/r912.mp3",
+        "seconds": 40.43496,
+        "sha256": "ddc8007bbac45bcd16dcab9e7c85b54d2074f7998ce9686c03c67f0f6d72a46a",
+        "bytes": 324140,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Jorge aprende a tejer con su abuela.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 7,
+            "start": 0,
+            "end": 4.76996,
+            "cues": [
+              {
+                "afterWord": 7,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Elige una madeja de lana roja y otra",
+            "paragraph": 1,
+            "startWord": 8,
+            "endWord": 15,
+            "start": 4.76996,
+            "end": 9.18,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "de color naranja para preparar una bufanda.",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 22,
+            "start": 9.18,
+            "end": 15.3,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Cada tarde, recoge las agujas y trabaja un rato junto a la ventana.",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 35,
+            "start": 15.3,
+            "end": 23.715,
+            "cues": [
+              {
+                "afterWord": 24,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 35,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Su abuela le ayuda cuando se enreda el hilo.",
+            "paragraph": 2,
+            "startWord": 36,
+            "endWord": 44,
+            "start": 23.715,
+            "end": 28.36496,
+            "cues": [
+              {
+                "afterWord": 44,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Cuando termina, Jorge envuelve el regalo y dibuja una tarjeta.",
+            "paragraph": 3,
+            "startWord": 45,
+            "endWord": 54,
+            "start": 28.36496,
+            "end": 35.27996,
+            "cues": [
+              {
+                "afterWord": 46,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 54,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "Quiere entregárselo a su hermano antes de que llegue el invierno.",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 65,
+            "start": 35.27996,
+            "end": 40.43496,
+            "cues": [
+              {
+                "afterWord": 65,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }

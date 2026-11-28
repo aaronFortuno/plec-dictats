@@ -1,0 +1,577 @@
+{
+  "id": "es004-four-rhythms-v1",
+  "requestHash": "9cbf0bff1bbfcc1d14f95464e2d4054fc3be6c4a01b9494f04141d209e4597af",
+  "planHash": "d48f7ef2a55812da44650f08aef45ba465183dc96ebd7808603152fb67dfb037",
+  "voice": "Aoede",
+  "newSynthesisRequests": 1,
+  "actualSeconds": 189.88,
+  "estimate": {
+    "renditions": 4,
+    "spokenWords": 336,
+    "cueCount": 32,
+    "plannedPauseSeconds": 93.4,
+    "nominalSeconds": 249,
+    "conservativeSeconds": 367,
+    "maximumSeconds": 390,
+    "withinDurationBudget": true,
+    "remainingSeconds": 23,
+    "nominalWpm": 130,
+    "conservativeWpm": 95,
+    "safetyFactor": 1.2,
+    "estimatedInputTokens": 6685
+  },
+  "coverage": 0.9880952380952381,
+  "expectedSpokenWords": 336,
+  "recognizedSpokenWords": 336,
+  "unmatchedWords": [
+    {
+      "token": 120,
+      "word": "trabaja"
+    },
+    {
+      "token": 186,
+      "word": "otra"
+    },
+    {
+      "token": 302,
+      "word": "cuando"
+    },
+    {
+      "token": 303,
+      "word": "se"
+    }
+  ],
+  "asrNote": "Local timing assistance with explicit merged ASR spellings (com a, apart, de mar, i lusió, com panys). Unmatched words require listening; this is not a pronunciation certificate.",
+  "rawSha256": "aa74e61fa55ac8ebe9f8d3b526c97fcbb8b69fc94f01662378da25f114a7ae87",
+  "usage": {
+    "total_tokens": 5242,
+    "total_input_tokens": 495,
+    "input_tokens_by_modality": [
+      {
+        "modality": "text",
+        "tokens": 495
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_output_tokens": 4747,
+    "output_tokens_by_modality": [
+      {
+        "modality": "audio",
+        "tokens": 4747
+      }
+    ],
+    "total_tool_use_tokens": 0,
+    "total_thought_tokens": 0,
+    "initial_input_tokens": 495
+  },
+  "recovery": {
+    "seconds": 189.88,
+    "allPcmSamplesPreserved": true,
+    "voiceRetimed": false,
+    "metadataBytesRemoved": 339530
+  },
+  "cuts": [
+    {
+      "variant": "r23",
+      "fragment": 1,
+      "afterToken": 2,
+      "left": 1.41,
+      "right": 1.77,
+      "time": 1.59,
+      "rms": 0.00026181906348168534
+    },
+    {
+      "variant": "r23",
+      "fragment": 2,
+      "afterToken": 4,
+      "left": 2.52,
+      "right": 2.85,
+      "time": 2.685,
+      "rms": 0.0004547251415675604
+    },
+    {
+      "variant": "r23",
+      "fragment": 3,
+      "afterToken": 10,
+      "left": 5.16,
+      "right": 5.61,
+      "time": 5.385,
+      "rms": 0.0003335683203585444
+    },
+    {
+      "variant": "r23",
+      "fragment": 4,
+      "afterToken": 13,
+      "left": 6.87,
+      "right": 8.55,
+      "time": 7.71,
+      "rms": 0.00022355992019068823
+    },
+    {
+      "variant": "r23",
+      "fragment": 5,
+      "afterToken": 16,
+      "left": 9.42,
+      "right": 11.19,
+      "time": 10.305041666666666,
+      "rms": 0.00023437685435939056
+    },
+    {
+      "variant": "r23",
+      "fragment": 6,
+      "afterToken": 18,
+      "left": 11.7,
+      "right": 13.02,
+      "time": 12.36,
+      "rms": 0.00020664723637514118
+    },
+    {
+      "variant": "r23",
+      "fragment": 7,
+      "afterToken": 21,
+      "left": 14.04,
+      "right": 15.42,
+      "time": 14.73,
+      "rms": 0.00015600199687158085
+    },
+    {
+      "variant": "r23",
+      "fragment": 8,
+      "afterToken": 23,
+      "left": 16.2,
+      "right": 17.43,
+      "time": 16.815,
+      "rms": 0.00025143070668228487
+    },
+    {
+      "variant": "r23",
+      "fragment": 9,
+      "afterToken": 28,
+      "left": 19.68,
+      "right": 20.34,
+      "time": 20.01,
+      "rms": 0.00030129186422788817
+    },
+    {
+      "variant": "r23",
+      "fragment": 10,
+      "afterToken": 31,
+      "left": 22.29,
+      "right": 22.86,
+      "time": 22.575,
+      "rms": 0.00017850718147849356
+    },
+    {
+      "variant": "r23",
+      "fragment": 11,
+      "afterToken": 34,
+      "left": 24.3,
+      "right": 25.5,
+      "time": 24.9,
+      "rms": 0.0006243452601411116
+    },
+    {
+      "variant": "r23",
+      "fragment": 12,
+      "afterToken": 38,
+      "left": 26.85,
+      "right": 28.08,
+      "time": 27.465,
+      "rms": 0.0002556473384833904
+    },
+    {
+      "variant": "r23",
+      "fragment": 13,
+      "afterToken": 45,
+      "left": 30.93,
+      "right": 31.68,
+      "time": 31.305,
+      "rms": 0.0004354372913055665
+    },
+    {
+      "variant": "r23",
+      "fragment": 14,
+      "afterToken": 47,
+      "left": 32.4,
+      "right": 33.51,
+      "time": 32.955,
+      "rms": 0.00011979202256633577
+    },
+    {
+      "variant": "r23",
+      "fragment": 15,
+      "afterToken": 49,
+      "left": 34.14,
+      "right": 35.16,
+      "time": 34.65,
+      "rms": 0.00004208863441753832
+    },
+    {
+      "variant": "r23",
+      "fragment": 16,
+      "afterToken": 52,
+      "left": 36.15,
+      "right": 37.05,
+      "time": 36.6,
+      "rms": 0.00023070982942787326
+    },
+    {
+      "variant": "r23",
+      "fragment": 17,
+      "afterToken": 57,
+      "left": 39.27,
+      "right": 39.63,
+      "time": 39.45,
+      "rms": 0.00033068240359505625
+    },
+    {
+      "variant": "r23",
+      "fragment": 18,
+      "afterToken": 60,
+      "left": 41.76,
+      "right": 42.6,
+      "time": 42.18,
+      "rms": 0.0002672430722871235
+    },
+    {
+      "variant": "r23",
+      "fragment": 19,
+      "afterToken": 62,
+      "left": 43.86,
+      "right": 44.79,
+      "time": 44.325,
+      "rms": 0.0003005761979251793
+    },
+    {
+      "variant": "r23",
+      "fragment": 20,
+      "afterToken": 64,
+      "left": 45.6,
+      "right": 46.62,
+      "time": 46.11,
+      "rms": 0.0003870692944170818
+    },
+    {
+      "variant": "r23",
+      "fragment": 21,
+      "afterToken": 66,
+      "left": 47.37,
+      "right": 48.24,
+      "time": 47.805,
+      "rms": 0.00025899518998753594
+    },
+    {
+      "variant": "r23",
+      "fragment": 22,
+      "afterToken": 71,
+      "left": 50.52,
+      "right": 51.18,
+      "time": 50.85,
+      "rms": 0.00031488856776759605
+    },
+    {
+      "variant": "r23",
+      "fragment": 23,
+      "afterToken": 73,
+      "left": 52.41,
+      "right": 53.07,
+      "time": 52.74,
+      "rms": 0.00022929683784948132
+    },
+    {
+      "variant": "r23",
+      "fragment": 24,
+      "afterToken": 76,
+      "left": 53.79,
+      "right": 54.18,
+      "time": 53.985,
+      "rms": 0.0002136094225217303
+    },
+    {
+      "variant": "r23",
+      "fragment": 25,
+      "afterToken": 80,
+      "left": 55.02,
+      "right": 56.07,
+      "time": 55.545,
+      "rms": 0.0003205980156535607
+    },
+    {
+      "variant": "r23",
+      "fragment": 26,
+      "afterToken": 84,
+      "left": 58.29,
+      "right": 60.63,
+      "time": 59.46,
+      "rms": 0.00018809204210493724
+    },
+    {
+      "variant": "r45",
+      "fragment": 1,
+      "afterToken": 88,
+      "left": 61.77,
+      "right": 63.39,
+      "time": 62.58,
+      "rms": 0.0004115325867272979
+    },
+    {
+      "variant": "r45",
+      "fragment": 2,
+      "afterToken": 94,
+      "left": 66.21,
+      "right": 66.66,
+      "time": 66.435,
+      "rms": 0.0002903784041543876
+    },
+    {
+      "variant": "r45",
+      "fragment": 3,
+      "afterToken": 100,
+      "left": 68.82,
+      "right": 69.78,
+      "time": 69.3,
+      "rms": 0.00032310883670836265
+    },
+    {
+      "variant": "r45",
+      "fragment": 4,
+      "afterToken": 105,
+      "left": 71.28,
+      "right": 71.97,
+      "time": 71.625,
+      "rms": 0.00014982260945397
+    },
+    {
+      "variant": "r45",
+      "fragment": 5,
+      "afterToken": 112,
+      "left": 74.91,
+      "right": 75.33,
+      "time": 75.12,
+      "rms": 0.00023692924721306142
+    },
+    {
+      "variant": "r45",
+      "fragment": 6,
+      "afterToken": 118,
+      "left": 79.14,
+      "right": 79.86,
+      "time": 79.5,
+      "rms": 0.00030824705257273815
+    },
+    {
+      "variant": "r45",
+      "fragment": 7,
+      "afterToken": 122,
+      "left": 80.85,
+      "right": 81.48,
+      "time": 81.165,
+      "rms": 0.00021296353943435955
+    },
+    {
+      "variant": "r45",
+      "fragment": 8,
+      "afterToken": 129,
+      "left": 84.03,
+      "right": 84.72,
+      "time": 84.375,
+      "rms": 0.00014548623908638414
+    },
+    {
+      "variant": "r45",
+      "fragment": 9,
+      "afterToken": 133,
+      "left": 86.22,
+      "right": 86.55,
+      "time": 86.385,
+      "rms": 0.0001014260022813355
+    },
+    {
+      "variant": "r45",
+      "fragment": 10,
+      "afterToken": 141,
+      "left": 90.18,
+      "right": 90.75,
+      "time": 90.465,
+      "rms": 0.00008350615412910234
+    },
+    {
+      "variant": "r45",
+      "fragment": 11,
+      "afterToken": 146,
+      "left": 94.77,
+      "right": 95.34,
+      "time": 95.055,
+      "rms": 0.00007700272976796697
+    },
+    {
+      "variant": "r45",
+      "fragment": 12,
+      "afterToken": 155,
+      "left": 99.96,
+      "right": 100.35,
+      "time": 100.155,
+      "rms": 0.00026072741882179326
+    },
+    {
+      "variant": "r45",
+      "fragment": 13,
+      "afterToken": 160,
+      "left": 102.45,
+      "right": 104.28,
+      "time": 103.365,
+      "rms": 0.00023568943774612754
+    },
+    {
+      "variant": "r45",
+      "fragment": 14,
+      "afterToken": 168,
+      "left": 107.94,
+      "right": 108.48,
+      "time": 108.21,
+      "rms": 0.0003662215337279937
+    },
+    {
+      "variant": "r68",
+      "fragment": 1,
+      "afterToken": 178,
+      "left": 112.17,
+      "right": 112.56,
+      "time": 112.365,
+      "rms": 0.00017468370303552476
+    },
+    {
+      "variant": "r68",
+      "fragment": 2,
+      "afterToken": 186,
+      "left": 115.53,
+      "right": 115.92,
+      "time": 115.725,
+      "rms": 0.00011891417531667541,
+      "asrBoundaryUncertain": true
+    },
+    {
+      "variant": "r68",
+      "fragment": 3,
+      "afterToken": 196,
+      "left": 121.32,
+      "right": 121.98,
+      "time": 121.65,
+      "rms": 0.0002433406119974025
+    },
+    {
+      "variant": "r68",
+      "fragment": 4,
+      "afterToken": 202,
+      "left": 126.12,
+      "right": 126.72,
+      "time": 126.42,
+      "rms": 0.000804549708497603
+    },
+    {
+      "variant": "r68",
+      "fragment": 5,
+      "afterToken": 213,
+      "left": 130.08,
+      "right": 130.71,
+      "time": 130.39504166666666,
+      "rms": 0.0003654047250844454
+    },
+    {
+      "variant": "r68",
+      "fragment": 6,
+      "afterToken": 225,
+      "left": 134.46,
+      "right": 134.91,
+      "time": 134.68504166666668,
+      "rms": 0.0018277721652093049
+    },
+    {
+      "variant": "r68",
+      "fragment": 7,
+      "afterToken": 239,
+      "left": 142.86,
+      "right": 143.64,
+      "time": 143.25004166666668,
+      "rms": 0.00038865506632639626
+    },
+    {
+      "variant": "r68",
+      "fragment": 8,
+      "afterToken": 244,
+      "left": 145.47,
+      "right": 146.13,
+      "time": 145.80004166666666,
+      "rms": 0.000166517835092257
+    },
+    {
+      "variant": "r68",
+      "fragment": 9,
+      "afterToken": 252,
+      "left": 149.22,
+      "right": 149.67,
+      "time": 149.44504166666667,
+      "rms": 0.00024559857236812775
+    },
+    {
+      "variant": "r912",
+      "fragment": 1,
+      "afterToken": 262,
+      "left": 153.69,
+      "right": 154.74,
+      "time": 154.215,
+      "rms": 0.00013934179353434828
+    },
+    {
+      "variant": "r912",
+      "fragment": 2,
+      "afterToken": 270,
+      "left": 158.25,
+      "right": 159,
+      "time": 158.62504166666668,
+      "rms": 0.00006334388756858618
+    },
+    {
+      "variant": "r912",
+      "fragment": 3,
+      "afterToken": 280,
+      "left": 164.34,
+      "right": 165.15,
+      "time": 164.74504166666668,
+      "rms": 0.0001591175422195634
+    },
+    {
+      "variant": "r912",
+      "fragment": 4,
+      "afterToken": 297,
+      "left": 172.74,
+      "right": 173.58,
+      "time": 173.16004166666667,
+      "rms": 0.0002382969864094278
+    },
+    {
+      "variant": "r912",
+      "fragment": 5,
+      "afterToken": 309,
+      "left": 177.48,
+      "right": 178.14,
+      "time": 177.81,
+      "rms": 0.00017000601136107026
+    },
+    {
+      "variant": "r912",
+      "fragment": 6,
+      "afterToken": 323,
+      "left": 184.5,
+      "right": 184.95,
+      "time": 184.725,
+      "rms": 0.00040539781737672375
+    }
+  ],
+  "pronunciationValidated": false,
+  "recognizer": {
+    "language": "es",
+    "model": "vosk-model-small-es-0.42",
+    "modelSha256": "7e62ed4ff73735b092c363257eb122a4cb0fd37768337d0fdfb3c1d0c9dbbaee"
+  }
+}
