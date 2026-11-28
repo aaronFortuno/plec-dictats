@@ -8949,5 +8949,764 @@
         ]
       }
     }
+  },
+  "es-text-001-v1": {
+    "voice": "Aoede",
+    "model": "gemini-3.8-flash-tts",
+    "language": "es",
+    "variety": "es-es",
+    "status": "pending-listening",
+    "pronunciationValidated": false,
+    "sourceTextSha256": "f2419ca3368e14343344a647679e88efdff5c1cb1f40b34679e434b9fcfab2b9",
+    "planHash": "4be5778b2e1c3080f7f138b4b3417309d3e92cf958fcdf25fb1e29915144ffb9",
+    "requestHash": "a00398a8666f58ce62fa0362ec0a37dc9dac314c1032c93126ed35d3fe342ceb",
+    "rawSha256": "2cac038151ad9f0313cfdeca518e0cfbd24cd0f92c4877a1fe77cc49961a0084",
+    "seconds": 193.42,
+    "coverage": 0.9583333333333334,
+    "timing": "editorial-word-ranges+local-vosk+quiet-window",
+    "variants": {
+      "r23": {
+        "label": "2–3 palabras",
+        "path": "assets/audio/texts/es/es001-four-v1/r23.mp3",
+        "seconds": 59.295,
+        "sha256": "e678bb6f47f5fcafccb4440f18e339d4cd8b01791fe3b938a41ff3c8816a5c68",
+        "bytes": 475052,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "El sábado,",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 2,
+            "start": 0,
+            "end": 2.61,
+            "cues": [
+              {
+                "afterWord": 2,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Inés sube",
+            "paragraph": 1,
+            "startWord": 3,
+            "endWord": 4,
+            "start": 2.61,
+            "end": 4.515,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "al autobús",
+            "paragraph": 1,
+            "startWord": 5,
+            "endWord": 6,
+            "start": 4.515,
+            "end": 6.045,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "con su padre.",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 9,
+            "start": 6.045,
+            "end": 9.285,
+            "cues": [
+              {
+                "afterWord": 9,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Van de excursión",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 12,
+            "start": 9.285,
+            "end": 11.91004,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "a un pueblo",
+            "paragraph": 1,
+            "startWord": 13,
+            "endWord": 15,
+            "start": 11.91004,
+            "end": 13.815,
+            "cues": []
+          },
+          {
+            "number": 7,
+            "text": "que está",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 17,
+            "start": 13.815,
+            "end": 15.45,
+            "cues": []
+          },
+          {
+            "number": 8,
+            "text": "detrás de la montaña.",
+            "paragraph": 1,
+            "startWord": 18,
+            "endWord": 21,
+            "start": 15.45,
+            "end": 19.41004,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "text": "Después de cruzar",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 24,
+            "start": 19.41004,
+            "end": 21.52504,
+            "cues": []
+          },
+          {
+            "number": 10,
+            "text": "un túnel,",
+            "paragraph": 2,
+            "startWord": 25,
+            "endWord": 26,
+            "start": 21.52504,
+            "end": 24.03,
+            "cues": [
+              {
+                "afterWord": 26,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "text": "llegan a una plaza.",
+            "paragraph": 2,
+            "startWord": 27,
+            "endWord": 30,
+            "start": 24.03,
+            "end": 27.555,
+            "cues": [
+              {
+                "afterWord": 30,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "text": "Allí compran",
+            "paragraph": 2,
+            "startWord": 31,
+            "endWord": 32,
+            "start": 27.555,
+            "end": 29.22,
+            "cues": []
+          },
+          {
+            "number": 13,
+            "text": "un melocotón",
+            "paragraph": 2,
+            "startWord": 33,
+            "endWord": 34,
+            "start": 29.22,
+            "end": 30.87,
+            "cues": []
+          },
+          {
+            "number": 14,
+            "text": "y se sientan",
+            "paragraph": 2,
+            "startWord": 35,
+            "endWord": 37,
+            "start": 30.87,
+            "end": 32.28,
+            "cues": []
+          },
+          {
+            "number": 15,
+            "text": "bajo un árbol",
+            "paragraph": 2,
+            "startWord": 38,
+            "endWord": 40,
+            "start": 32.28,
+            "end": 33.825,
+            "cues": []
+          },
+          {
+            "number": 16,
+            "text": "para descansar.",
+            "paragraph": 2,
+            "startWord": 41,
+            "endWord": 42,
+            "start": 33.825,
+            "end": 36.225,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 17,
+            "text": "Un pájaro",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 44,
+            "start": 36.225,
+            "end": 38.295,
+            "cues": []
+          },
+          {
+            "number": 18,
+            "text": "se acerca",
+            "paragraph": 3,
+            "startWord": 45,
+            "endWord": 46,
+            "start": 38.295,
+            "end": 40.89,
+            "cues": []
+          },
+          {
+            "number": 19,
+            "text": "a la fuente",
+            "paragraph": 3,
+            "startWord": 47,
+            "endWord": 49,
+            "start": 40.89,
+            "end": 43.29,
+            "cues": []
+          },
+          {
+            "number": 20,
+            "text": "y salpica el agua",
+            "paragraph": 3,
+            "startWord": 50,
+            "endWord": 53,
+            "start": 43.29,
+            "end": 46.23,
+            "cues": []
+          },
+          {
+            "number": 21,
+            "text": "con las alas.",
+            "paragraph": 3,
+            "startWord": 54,
+            "endWord": 56,
+            "start": 46.23,
+            "end": 50.625,
+            "cues": [
+              {
+                "afterWord": 56,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 22,
+            "text": "Inés lo dibuja",
+            "paragraph": 3,
+            "startWord": 57,
+            "endWord": 59,
+            "start": 50.625,
+            "end": 53.535,
+            "cues": []
+          },
+          {
+            "number": 23,
+            "text": "en su cuaderno",
+            "paragraph": 3,
+            "startWord": 60,
+            "endWord": 62,
+            "start": 53.535,
+            "end": 55.98,
+            "cues": []
+          },
+          {
+            "number": 24,
+            "text": "antes de volver.",
+            "paragraph": 3,
+            "startWord": 63,
+            "endWord": 65,
+            "start": 55.98,
+            "end": 59.295,
+            "cues": [
+              {
+                "afterWord": 65,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      },
+      "r45": {
+        "label": "4–5 palabras",
+        "path": "assets/audio/texts/es/es001-four-v1/r45.mp3",
+        "seconds": 59.34,
+        "sha256": "48addfe633b0ba721ab15868894a57878ad9ad078acf91dfaa4bd60b9c13e92d",
+        "bytes": 475436,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "El sábado, Inés sube",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 4,
+            "start": 0,
+            "end": 4.335,
+            "cues": [
+              {
+                "afterWord": 2,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "al autobús con su padre.",
+            "paragraph": 1,
+            "startWord": 5,
+            "endWord": 9,
+            "start": 4.335,
+            "end": 7.785,
+            "cues": [
+              {
+                "afterWord": 9,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Van de excursión",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 12,
+            "start": 7.785,
+            "end": 10.59,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "a un pueblo que está",
+            "paragraph": 1,
+            "startWord": 13,
+            "endWord": 17,
+            "start": 10.59,
+            "end": 13.665,
+            "cues": []
+          },
+          {
+            "number": 5,
+            "text": "detrás de la montaña.",
+            "paragraph": 1,
+            "startWord": 18,
+            "endWord": 21,
+            "start": 13.665,
+            "end": 19.92,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Después de cruzar un túnel,",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 26,
+            "start": 19.92,
+            "end": 23.985,
+            "cues": [
+              {
+                "afterWord": 26,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "llegan a una plaza.",
+            "paragraph": 2,
+            "startWord": 27,
+            "endWord": 30,
+            "start": 23.985,
+            "end": 28.53,
+            "cues": [
+              {
+                "afterWord": 30,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "Allí compran un melocotón",
+            "paragraph": 2,
+            "startWord": 31,
+            "endWord": 34,
+            "start": 28.53,
+            "end": 30.735,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "y se sientan",
+            "paragraph": 2,
+            "startWord": 35,
+            "endWord": 37,
+            "start": 30.735,
+            "end": 33.105,
+            "cues": []
+          },
+          {
+            "number": 10,
+            "text": "bajo un árbol para descansar.",
+            "paragraph": 2,
+            "startWord": 38,
+            "endWord": 42,
+            "start": 33.105,
+            "end": 39.24,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "text": "Un pájaro se acerca",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 46,
+            "start": 39.24,
+            "end": 42.345,
+            "cues": []
+          },
+          {
+            "number": 12,
+            "text": "a la fuente",
+            "paragraph": 3,
+            "startWord": 47,
+            "endWord": 49,
+            "start": 42.345,
+            "end": 44.805,
+            "cues": []
+          },
+          {
+            "number": 13,
+            "text": "y salpica el agua",
+            "paragraph": 3,
+            "startWord": 50,
+            "endWord": 53,
+            "start": 44.805,
+            "end": 47.58,
+            "cues": []
+          },
+          {
+            "number": 14,
+            "text": "con las alas.",
+            "paragraph": 3,
+            "startWord": 54,
+            "endWord": 56,
+            "start": 47.58,
+            "end": 52.155,
+            "cues": [
+              {
+                "afterWord": 56,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 15,
+            "text": "Inés lo dibuja",
+            "paragraph": 3,
+            "startWord": 57,
+            "endWord": 59,
+            "start": 52.155,
+            "end": 54.675,
+            "cues": []
+          },
+          {
+            "number": 16,
+            "text": "en su cuaderno antes de volver.",
+            "paragraph": 3,
+            "startWord": 60,
+            "endWord": 65,
+            "start": 54.675,
+            "end": 59.34,
+            "cues": [
+              {
+                "afterWord": 65,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      },
+      "r68": {
+        "label": "6–8 palabras",
+        "path": "assets/audio/texts/es/es001-four-v1/r68.mp3",
+        "seconds": 38.07004,
+        "sha256": "f8352cf0ad3974456881743ce44165a94ab692bd8177155ad8e993c7bf6b8cde",
+        "bytes": 305324,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "El sábado, Inés sube al autobús con su padre.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 9,
+            "start": 0,
+            "end": 6.27,
+            "cues": [
+              {
+                "afterWord": 2,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 9,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Van de excursión a un pueblo",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 15,
+            "start": 6.27,
+            "end": 8.385,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "que está detrás de la montaña.",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 21,
+            "start": 8.385,
+            "end": 12.61504,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Después de cruzar un túnel, llegan a una plaza.",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 30,
+            "start": 12.61504,
+            "end": 19.02004,
+            "cues": [
+              {
+                "afterWord": 26,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 30,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Allí compran un melocotón y se sientan",
+            "paragraph": 2,
+            "startWord": 31,
+            "endWord": 37,
+            "start": 19.02004,
+            "end": 22.35,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "bajo un árbol para descansar.",
+            "paragraph": 2,
+            "startWord": 38,
+            "endWord": 42,
+            "start": 22.35,
+            "end": 25.93504,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "Un pájaro se acerca a la fuente",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 49,
+            "start": 25.93504,
+            "end": 28.62004,
+            "cues": []
+          },
+          {
+            "number": 8,
+            "text": "y salpica el agua con las alas.",
+            "paragraph": 3,
+            "startWord": 50,
+            "endWord": 56,
+            "start": 28.62004,
+            "end": 33.31504,
+            "cues": [
+              {
+                "afterWord": 56,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "text": "Inés lo dibuja en su cuaderno antes de volver.",
+            "paragraph": 3,
+            "startWord": 57,
+            "endWord": 65,
+            "start": 33.31504,
+            "end": 38.07004,
+            "cues": [
+              {
+                "afterWord": 65,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      },
+      "r912": {
+        "label": "9–12 palabras",
+        "path": "assets/audio/texts/es/es001-four-v1/r912.mp3",
+        "seconds": 36.71496,
+        "sha256": "298282f543bd21586b163e73895335c4c0f44c1292dc88db963aa9a320d27790",
+        "bytes": 294380,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "El sábado, Inés sube al autobús con su padre.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 9,
+            "start": 0,
+            "end": 7.81496,
+            "cues": [
+              {
+                "afterWord": 2,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 9,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Van de excursión a un pueblo que está detrás de la montaña.",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 21,
+            "start": 7.81496,
+            "end": 13.485,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Después de cruzar un túnel, llegan a una plaza.",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 30,
+            "start": 13.485,
+            "end": 19.87496,
+            "cues": [
+              {
+                "afterWord": 26,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 30,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Allí compran un melocotón y se sientan bajo un árbol para descansar.",
+            "paragraph": 2,
+            "startWord": 31,
+            "endWord": 42,
+            "start": 19.87496,
+            "end": 26.45996,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Un pájaro se acerca a la fuente y salpica el agua con las alas.",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 56,
+            "start": 26.45996,
+            "end": 32.07,
+            "cues": [
+              {
+                "afterWord": 56,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Inés lo dibuja en su cuaderno antes de volver.",
+            "paragraph": 3,
+            "startWord": 57,
+            "endWord": 65,
+            "start": 32.07,
+            "end": 36.71496,
+            "cues": [
+              {
+                "afterWord": 65,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }
