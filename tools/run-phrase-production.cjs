@@ -12,6 +12,10 @@ async function main(){
  await fs.mkdir(directory,{recursive:true});const lockFile=path.join(directory,'runner.lock'),lock=await fs.open(lockFile,'wx');await lock.writeFile(JSON.stringify({pid:process.pid,startedAt:new Date().toISOString()}));
  let current=null;async function status(phase,extra={}){await fs.writeFile(path.join(directory,'status.json'),JSON.stringify({phase,current,updatedAt:new Date().toISOString(),quotaDay:quotaDay(),...extra},null,2)+'\n');}
  try{for(const item of queue.batches){current=item.batchId;const folder=path.join(root,'output/audio',item.batchId,item.requestHash.slice(0,12)),attempt=await read(path.join(folder,'attempt.json'),null);
+   const registry=await read(path.join(root,'audio/texts/index.json'),{}),receipt=await read(path.join(root,'audio/texts/batches',item.batchId+'-receipt.json'),null),known=require('./phrase-production-policy.cjs').recorded(item,registry[item.entryId],receipt);
+   // A clone can lack ignored raw responses while retaining published receipts.
+   // Their absence must never turn a completed batch into another POST.
+   if(known&&!attempt){await status('recorded-in-published-source');continue;}
    if(attempt?.status==='received'){if(attempt.requestHash!==item.requestHash||attempt.planHash!==item.planHash)throw Error('La presa rebuda no correspon al lot aprovat.');if(process.argv.includes('--publish')){await status('integrating-and-publishing');await command(['tools/publish-phrase-batch.cjs','--batch='+item.batchId,'--publish']);}continue;}
    if(attempt){await status('needs-review',{reason:'Existeix un intent previ; recuperar només amb ID conegut, mai reenviar.'});throw Error('Intent previ a revisar: '+current);}
    for(;;){
