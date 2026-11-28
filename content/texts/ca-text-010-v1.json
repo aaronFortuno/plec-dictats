@@ -1,0 +1,73 @@
+{
+  "id": "ca-text-010-v1",
+  "code": "CA010",
+  "language": "ca",
+  "title": "Una guineu de paper",
+  "focuses": [
+    "qugu"
+  ],
+  "focusLabels": [
+    "c / qu / g / gu / qü / gü"
+  ],
+  "stage": "Cicle superior",
+  "status": "draft",
+  "paragraphs": [
+    "En Guillem vol construir una guineu de paper per decorar la classe. Busca un quadrat de cartolina i unes tisores.",
+    "La mestra li ensenya com ha de plegar les quatre cantonades. Ell segueix les indicacions i comprova que els costats quedin iguals.",
+    "Quan acaba, enganxa la guineu en un cartell. A sota, hi escriu una pregunta perquè els companys endevinin quin animal és."
+  ],
+  "phrases": [
+    "En Guillem vol construir una guineu de paper per decorar la classe.",
+    "Busca un quadrat de cartolina i unes tisores.",
+    "La mestra li ensenya com ha de plegar les quatre cantonades.",
+    "Ell segueix les indicacions i comprova que els costats quedin iguals.",
+    "Quan acaba, enganxa la guineu en un cartell.",
+    "A sota, hi escriu una pregunta perquè els companys endevinin quin animal és."
+  ],
+  "audio": null,
+  "focusWords": {
+    "c / qu / g / gu / qü / gü": [
+      "Guillem",
+      "construir",
+      "guineu",
+      "decorar",
+      "classe",
+      "Busca",
+      "quadrat",
+      "cartolina",
+      "com",
+      "quatre",
+      "cantonades",
+      "segueix",
+      "comprova",
+      "que",
+      "costats",
+      "quedin",
+      "iguals",
+      "Quan",
+      "acaba",
+      "cartell",
+      "escriu",
+      "pregunta",
+      "perquè",
+      "companys",
+      "quin"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "6fe417f6da0d9819e8652204c95420ac8ffdc6ac273e9ec7042e78a0287655f4",
+    "codeAtReview": "CA010"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

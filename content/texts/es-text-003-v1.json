@@ -1,0 +1,61 @@
+{
+  "id": "es-text-003-v1",
+  "code": "ES003",
+  "language": "es",
+  "title": "El huerto de Hugo",
+  "focuses": [
+    "h"
+  ],
+  "focusLabels": [
+    "h"
+  ],
+  "stage": "Ciclo superior",
+  "status": "draft",
+  "paragraphs": [
+    "Hoy, Hugo ayuda a su hermana en el huerto. Han encontrado hierbas entre las hortalizas y quieren quitarlas antes de regar.",
+    "La tierra sigue húmeda porque ha llovido durante la noche. Los hermanos trabajan con cuidado para no arrancar las plantas pequeñas.",
+    "Al terminar, hacen un hoyo junto a la valla y plantan una lechuga. Después, guardan las herramientas en una caja de madera."
+  ],
+  "phrases": [
+    "Hoy, Hugo ayuda a su hermana en el huerto.",
+    "Han encontrado hierbas entre las hortalizas y quieren quitarlas antes de regar.",
+    "La tierra sigue húmeda porque ha llovido durante la noche.",
+    "Los hermanos trabajan con cuidado para no arrancar las plantas pequeñas.",
+    "Al terminar, hacen un hoyo junto a la valla y plantan una lechuga.",
+    "Después, guardan las herramientas en una caja de madera."
+  ],
+  "audio": null,
+  "focusWords": {
+    "h": [
+      "Hoy",
+      "Hugo",
+      "hermana",
+      "huerto",
+      "Han",
+      "hierbas",
+      "hortalizas",
+      "húmeda",
+      "ha",
+      "hermanos",
+      "hacen",
+      "hoyo",
+      "herramientas"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "f0cf7404f6f92e9ead79c7f7bb0f705f238305b01bfc87cc8d4bf5826695ef20",
+    "codeAtReview": "ES003"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

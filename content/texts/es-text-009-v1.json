@@ -1,0 +1,60 @@
+{
+  "id": "es-text-009-v1",
+  "code": "ES009",
+  "language": "es",
+  "title": "La llave del cobertizo",
+  "focuses": [
+    "lly"
+  ],
+  "focusLabels": [
+    "ll / y"
+  ],
+  "stage": "Ciclo superior",
+  "status": "draft",
+  "paragraphs": [
+    "Empieza a llover cuando Yolanda y Guillermo llegan al jardín. Quieren guardar las sillas en el cobertizo, pero la puerta está cerrada.",
+    "Yolanda busca la llave en el bolsillo de su chaqueta. Al encontrarla, abre la puerta y ayuda a entrar a su compañero.",
+    "Dentro hay una toalla junto a un cepillo amarillo. Se secan el pelo y esperan a que deje de llover."
+  ],
+  "phrases": [
+    "Empieza a llover cuando Yolanda y Guillermo llegan al jardín.",
+    "Quieren guardar las sillas en el cobertizo, pero la puerta está cerrada.",
+    "Yolanda busca la llave en el bolsillo de su chaqueta.",
+    "Al encontrarla, abre la puerta y ayuda a entrar a su compañero.",
+    "Dentro hay una toalla junto a un cepillo amarillo.",
+    "Se secan el pelo y esperan a que deje de llover."
+  ],
+  "audio": null,
+  "focusWords": {
+    "ll / y": [
+      "llover",
+      "Yolanda",
+      "Guillermo",
+      "llegan",
+      "sillas",
+      "llave",
+      "bolsillo",
+      "ayuda",
+      "hay",
+      "toalla",
+      "cepillo",
+      "amarillo"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "12d31575f05584a8438dde86d4592d981dcc1bd8629296176a424c3c177581a4",
+    "codeAtReview": "ES009"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

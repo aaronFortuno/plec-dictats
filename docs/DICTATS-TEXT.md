@@ -283,3 +283,36 @@ Els focus de Frases es mostren directament al sidebar esquerre, seguits dels dic
 El document conjunt de planificació continua sent de lectura (`planning-only`, sense payload executable). Les autoritzacions i el nombre d’enviaments reals es consulten als quatre lots i rebuts, no al comptador zero d’una eina que només calcula durades.
 
 Validació 1.50: 63 comprovacions locals passades (62 en la passada completa i la prova del nou sidebar repetida satisfactòriament després de corregir el nom del focus al selector del test). Verificades les empremtes dels 24 MP3 de Frases, les cobertures i transicions de ritme, la càrrega dels setze àudios nous al navegador, les URL d’alumnat, l’aplicació explícita de la tria, la conservació del full en filtrar/llegir/cancel·lar, els PDFs i els panells en mòbil i tema fosc. Captures locals i PDF revisats visualment. Sense comprovació del desplegament remot; l’audició docent de les noves preses queda pendent.
+
+## Propostes bilingües per completar els focus · 1.51
+
+El 28/11/2026 el docent encarrega nous textos en català i castellà per cobrir els focus encara absents i validar-los abans de preparar la síntesi. CA007–CA012 completen els sis focus catalans pendents. ES001–ES012 són les primeres Frases en castellà, una per cada focus. El catàleg passa a dotze textos de cada llengua; només els sis catalans previs tenen àudio. La cobertura és de focus generals: cada text no pretén reunir totes les subgrafies o excepcions possibles.
+
+| Codi | Títol | Focus | Mots |
+| --- | --- | --- | ---: |
+| CA007 | La ràdio de l’escola | Accentuació | 59 |
+| CA008 | Un hort al pati | Amb h / sense h | 60 |
+| CA009 | El carretó del jardí | r / rr | 62 |
+| CA010 | Una guineu de paper | c / qu / g / gu / qü / gü | 63 |
+| CA011 | La motxilla de diumenge | a / e · o / u àtones | 63 |
+| CA012 | Una capsa de records | ll / ny / x / ix / tx / ig | 66 |
+| ES001 | Una excursión en autobús | Con tilde | 65 |
+| ES002 | Una visita al museo | Sin tilde | 64 |
+| ES003 | El huerto de Hugo | h | 64 |
+| ES004 | Un regalo tejido | g / j | 65 |
+| ES005 | Una biblioteca viajera | b / v | 65 |
+| ES006 | Una carrera en el patio | r / rr | 66 |
+| ES007 | Un almuerzo en el parque | c / z / qu | 62 |
+| ES008 | Una guía de animales | g / gu / gü | 65 |
+| ES009 | La llave del cobertizo | ll / y | 64 |
+| ES010 | Una casa de cartón | ñ / ch | 66 |
+| ES011 | Un experimento en clase | x | 64 |
+| ES012 | Un plan para el viernes | Formas verbales | 65 |
+
+Els divuit textos tenen tres paràgrafs, registre de cicle superior i una llista editorial de mots ressaltats. Revisió independent de naturalitat, coherència narrativa i grafies superada abans de presentar-los com a provisionals. Les empremtes es calculen sobre els mateixos camps editorials que les peces anteriors. `teacherReview` continua pendent; `prosodyReview` indica `not-prepared` i `synthesis` `not-requested`. No hi ha plans nous a l’índex de prosòdia, cossos de petició ni autoritzacions de síntesi.
+
+Accés: triar la llengua → Frases → filtrar per focus → clicar el títol per llegir el text complet amb ressaltats. Llegir i cancel·lar conserva el full; «Fes servir» en permet veure el preview i imprimir el model per revisar-lo. Els textos pendents no habiliten ni el dictat oral ni una escaleta inexistent. Recull complet en text pla: `content/review/frases-ca-es-2026-11-28.txt`.
+
+La plantilla compartida admet ara català i castellà, amb els camps i les instruccions impreses corresponents, URL/QR de cada llengua i focus llargs ajustats a l’amplada del model. S’han preparat i comprovat els 36 PDFs dels divuit textos en les dues orientacions de plec. Els codis, àudios i aprovacions anteriors es conserven. Les escaletes i la preparació dels lots es faran després de la validació docent dels textos.
+
+Validació 1.51: 64 comprovacions locals passades, incloses les proves de navegació de Frases repetides sobre el catàleg ampliat. Verificades la cobertura dels focus, les empremtes editorials, els mots ressaltats i les seves grafies, la separació de llengües, els models impresos, els bloqueigs d’aprovació/àudio i la navegació amb mòbil i tema fosc. La llista del sidebar té scroll intern limitat per conservar espai per als filtres i la configuració. Cap síntesi ni comprovació remota del desplegament.

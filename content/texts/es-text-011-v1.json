@@ -1,0 +1,57 @@
+{
+  "id": "es-text-011-v1",
+  "code": "ES011",
+  "language": "es",
+  "title": "Un experimento en clase",
+  "focuses": [
+    "x"
+  ],
+  "focusLabels": [
+    "x"
+  ],
+  "stage": "Ciclo superior",
+  "status": "draft",
+  "paragraphs": [
+    "La profesora explica un experimento con agua y aceite. Álex coloca los dos líquidos en un recipiente transparente y los mezcla con una cuchara.",
+    "Después, esperan un rato y examinan lo que ocurre. El aceite queda sobre el agua, aunque antes parecía que se habían mezclado.",
+    "Cada equipo escribe un texto para explicar la experiencia. El próximo viernes prepararán una exposición con sus dibujos."
+  ],
+  "phrases": [
+    "La profesora explica un experimento con agua y aceite.",
+    "Álex coloca los dos líquidos en un recipiente transparente y los mezcla con una cuchara.",
+    "Después, esperan un rato y examinan lo que ocurre.",
+    "El aceite queda sobre el agua, aunque antes parecía que se habían mezclado.",
+    "Cada equipo escribe un texto para explicar la experiencia.",
+    "El próximo viernes prepararán una exposición con sus dibujos."
+  ],
+  "audio": null,
+  "focusWords": {
+    "x": [
+      "explica",
+      "experimento",
+      "Álex",
+      "examinan",
+      "texto",
+      "explicar",
+      "experiencia",
+      "próximo",
+      "exposición"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "96e5160e8a5a1fbfb98fea31937f9487a77a7915a3219dce87ca9c8fc568a743",
+    "codeAtReview": "ES011"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "ca-text-008-v1",
+  "code": "CA008",
+  "language": "ca",
+  "title": "Un hort al pati",
+  "focuses": [
+    "hac"
+  ],
+  "focusLabels": [
+    "Amb h / sense h"
+  ],
+  "stage": "Cicle superior",
+  "status": "draft",
+  "paragraphs": [
+    "Ahir, l’Helena i el seu germà van visitar l’hort de l’escola. Hi havia herbes altes al costat dels arbres.",
+    "Avui, han tret les herbes i han remogut la terra humida. Després, la mestra els ha ajudat a plantar enciams.",
+    "Abans de marxar, han omplert una regadora amb aigua. Ara l’hort té una filera nova i un petit cartell de fusta."
+  ],
+  "phrases": [
+    "Ahir, l’Helena i el seu germà van visitar l’hort de l’escola.",
+    "Hi havia herbes altes al costat dels arbres.",
+    "Avui, han tret les herbes i han remogut la terra humida.",
+    "Després, la mestra els ha ajudat a plantar enciams.",
+    "Abans de marxar, han omplert una regadora amb aigua.",
+    "Ara l’hort té una filera nova i un petit cartell de fusta."
+  ],
+  "audio": null,
+  "focusWords": {
+    "Amb h / sense h": [
+      "Ahir",
+      "Helena",
+      "hort",
+      "Hi",
+      "havia",
+      "herbes",
+      "Avui",
+      "han",
+      "humida",
+      "ha",
+      "arbres",
+      "aigua"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "6c5bc1ebf1a673431f5e957955fc4010045bf0b987f7926ccc80baa69bbcedeb",
+    "codeAtReview": "CA008"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

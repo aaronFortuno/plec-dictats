@@ -205,7 +205,7 @@
   "Ritme habitual": "Ritmo habitual",
   "Una mica més a poc": "Un poco más despacio",
   "Prova local · Àudios pendents de revisió.": "Prueba local · Audios pendientes de revisión.",
-  "Comença a pantalla completa": "Empezar a pantalla completa",
+  "Comença a pantalla completa": "Comenzar a pantalla completa",
   "Continua en mode concentració": "Continuar en modo concentración",
   "Dictat en marxa": "Dictado en curso",
   "Paraula": "Palabra",
@@ -320,12 +320,12 @@
   "Frases · Prototip": "Frases · Prototipo",
   "Versió 1.44: obre l’historial de canvis": "Versión 1.44. Abrir el historial de cambios",
   "Codi de ritme (opcional)": "Código de ritmo (opcional)",
-  "Aplica": "Aplica",
+  "Aplica": "Aplicar",
   "El teu codi de ritme": "Tu código de ritmo",
   "Codi de ritme": "Código de ritmo",
   "Copia el codi de ritme": "Copia el código de ritmo",
   "Guarda’l per al pròxim dictat. Correspon als ajustos que has triat.": "Guárdalo para el próximo dictado. Corresponde a los ajustes que has elegido.",
-  "Escolta i escriu al full. Cada fragment es repeteix fins a tres vegades. Pots aturar-ho i ajustar el ritme. Prem «Següent» quan estiguis a punt; al final, desplega el full per revisar-lo.": "Escucha y escribe en la hoja. Cada fragmento se repite hasta tres veces. Puedes detenerlo y ajustar el ritmo. Pulsa «Siguiente» cuando estés a punto; al final, despliega la hoja para revisarlo.",
+  "Escolta i escriu al full. Cada fragment es repeteix fins a tres vegades. Pots aturar-ho i ajustar el ritme. Prem «Següent» quan estiguis a punt; al final, desplega el full per revisar-lo.": "Escucha y escribe en la hoja. Cada fragmento se repite hasta tres veces. Puedes detenerlo y ajustar el ritmo. Pulsa «Siguiente» cuando estés listo; al terminar, despliega la hoja para revisarla.",
   "Codis de ritme": "Códigos de ritmo",
   "Tanca la taula de codis": "Cierra la tabla de códigos",
   "Una paraula i una imatge per recordar els teus ajustos.": "Una palabra y una imagen para recordar tus ajustes.",
@@ -364,5 +364,6 @@
   "Versió 1.49: obre l’historial de canvis": "Versión 1.49: abre el historial de cambios",
   "Compara els quatre ritmes i la puntuació": "Compara los cuatro ritmos y la puntuación",
   "Llegeix el text complet": "Lee el texto completo",
-  "Versió 1.50: obre l’historial de canvis": "Versión 1.50: abre el historial de cambios"
+  "Versió 1.50: obre l’historial de canvis": "Versión 1.50: abre el historial de cambios",
+  "Versió 1.51: obre l’historial de canvis": "Versión 1.51: abre el historial de cambios"
 }

@@ -23,7 +23,7 @@
  const layoutControls={fold:'text-fold',side:'text-side',pace:'text-pace',rate:'text-rate',fontSize:'text-font-size',lineSpacing:'text-line-spacing'};
  $('text-picker-open').addEventListener('click',()=>{if(active)window.PlecTextPicker.open(entry,next=>{entry=next;render();});});
  if(!entry){button.disabled=true;button.title=window.PlecLanguageTools.text('Pilot disponible en català');}
- function notify(message){$('text-status').textContent=message;}
+ function notify(message){$('text-status').textContent=t(message);}
  async function render(){
   navigation();
   $('text-title').textContent=entry.title;$('text-code').textContent=entry.code;$('text-picker-open').dataset.textId=entry.id;
@@ -32,21 +32,21 @@
   $('prosody-open').hidden=!window.PlecProsody.has(entry);
   const ticket=++generation;prepared=null;$('text-download').disabled=true;$('text-open-student').disabled=!entry.audio||entry.status==='draft';
   document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode==='text')));
-  $('text-fragment-summary').textContent=entry.audio?T.fragments(entry,settings.pace).length+' fragments · '+T.wordCount(T.text(entry))+' paraules':T.wordCount(T.text(entry))+' mots · '+entry.paragraphs.length+' paràgrafs';
+  $('text-fragment-summary').textContent=entry.audio?t('{fragments} fragments · {words} paraules',{fragments:T.fragments(entry,settings.pace).length,words:T.wordCount(T.text(entry))}):t('{words} mots · {paragraphs} paràgrafs',{words:T.wordCount(T.text(entry)),paragraphs:entry.paragraphs.length});
   $('selection-summary').textContent='Frases · '+entry.focusLabels.join(' · ');
-  $('preview-layout').textContent='Plec '+settings.fold+' · model a '+(settings.fold==='vertical'?(settings.side==='start'?'l’esquerra':'la dreta'):(settings.side==='start'?'dalt':'baix'));
-  $('text-layout-hint').textContent=settings.fold==='vertical'?'Pauta per paràgrafs, amb una línia extra a cada bloc i el model alineat al costat.':'Pauta contínua per escriure tot el text. Model compacte a l’altra part del full.';
-  for(const option of $('text-side').options)option.textContent=settings.fold==='vertical'?(option.value==='start'?'A l’esquerra':'A la dreta'):(option.value==='start'?'A dalt':'A baix');
+  $('preview-layout').textContent=t('Plec')+' '+t(settings.fold==='vertical'?'Vertical':'Horitzontal')+' · '+t(settings.fold==='vertical'?(settings.side==='start'?'Model a l’esquerra':'Model a la dreta'):(settings.side==='start'?'Model a dalt':'Model a baix'));
+  $('text-layout-hint').textContent=t(settings.fold==='vertical'?'Pauta per paràgrafs, amb una línia extra a cada bloc i el model alineat al costat.':'Pauta contínua per escriure tot el text. Model compacte a l’altra part del full.');
+  for(const option of $('text-side').options)option.textContent=t(settings.fold==='vertical'?(option.value==='start'?'A l’esquerra':'A la dreta'):(option.value==='start'?'A dalt':'A baix'));
   $('text-layout-error').hidden=true;
-  $('text-open-label').textContent=entry.status==='draft'?'Pendent de validar':entry.audio?'Comença el dictat':'Àudio pendent';
+  $('text-open-label').textContent=t(entry.status==='draft'?'Pendent de validar':entry.audio?'Comença el dictat':'Àudio pendent');
   document.querySelector('.dictation-nav').href=T.url(entry,settings,true,location.origin+'/');
-  $('text-audio-note').textContent=entry.status==='draft'?'Text per validar. Encara no se n’ha encarregat l’àudio.':entry.audio?'Aoede · català central · prova pendent d’audició':entry.prosodyReview?.status==='approved'?'Text i escaleta validats · Àudio en preparació.':'Text validat. Escaleta per validar; àudio no encarregat.';
+  $('text-audio-note').textContent=t(entry.status==='draft'?'Text per validar. Encara no se n’ha encarregat l’àudio.':entry.audio?'Aoede · català central · prova pendent d’audició':entry.prosodyReview?.status==='approved'?'Text i escaleta validats · Àudio en preparació.':'Text validat. Escaleta per validar; àudio no encarregat.');
   const url=T.url(entry,settings);history.replaceState(null,'',new URL(new URL(url).pathname+new URL(url).search,location.origin));
   try{
    const next=await window.PlecTextWorksheet.prepare(entry,settings);
    if(!active||ticket!==generation)return;
    prepared=next;$('sheet-preview').innerHTML=window.PlecTextWorksheet.svg(next.shapes);
-   $('sheet-preview').setAttribute('aria-label','Dictat de frases: model i espai per escriure');
+   $('sheet-preview').setAttribute('aria-label',t('Dictat de frases: model i espai per escriure'));
    $('text-download').disabled=false;window.PlecPreview.fit();notify('');
   }catch(e){if(active&&ticket===generation){$('text-layout-error').textContent=e.message;$('text-layout-error').hidden=false;$('sheet-preview').replaceChildren();notify(e.message);}}
  }

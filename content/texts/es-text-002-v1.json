@@ -1,0 +1,71 @@
+{
+  "id": "es-text-002-v1",
+  "code": "ES002",
+  "language": "es",
+  "title": "Una visita al museo",
+  "focuses": [
+    "sin-tilde"
+  ],
+  "focusLabels": [
+    "Sin tilde"
+  ],
+  "stage": "Ciclo superior",
+  "status": "draft",
+  "paragraphs": [
+    "El viernes, la clase visita un museo del barrio. Un joven les muestra la imagen de un barco y explica su origen.",
+    "Luego, el grupo entra en una sala con mapas antiguos. Cada equipo busca un lugar conocido y prepara un resumen de la visita.",
+    "Al salir, la maestra recoge los trabajos. El lunes los leerán en clase y compartirán lo que han descubierto."
+  ],
+  "phrases": [
+    "El viernes, la clase visita un museo del barrio.",
+    "Un joven les muestra la imagen de un barco y explica su origen.",
+    "Luego, el grupo entra en una sala con mapas antiguos.",
+    "Cada equipo busca un lugar conocido y prepara un resumen de la visita.",
+    "Al salir, la maestra recoge los trabajos.",
+    "El lunes los leerán en clase y compartirán lo que han descubierto."
+  ],
+  "audio": null,
+  "focusWords": {
+    "Sin tilde": [
+      "viernes",
+      "clase",
+      "visita",
+      "museo",
+      "barrio",
+      "joven",
+      "imagen",
+      "barco",
+      "explica",
+      "origen",
+      "grupo",
+      "sala",
+      "mapas",
+      "antiguos",
+      "equipo",
+      "lugar",
+      "conocido",
+      "prepara",
+      "resumen",
+      "maestra",
+      "recoge",
+      "trabajos",
+      "lunes"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "a5ceac46bd7c49a83d406eff880127803a7f74231a6cad11b216af29f4107403",
+    "codeAtReview": "ES002"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

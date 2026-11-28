@@ -1,0 +1,74 @@
+{
+  "id": "es-text-006-v1",
+  "code": "ES006",
+  "language": "es",
+  "title": "Una carrera en el patio",
+  "focuses": [
+    "rr"
+  ],
+  "focusLabels": [
+    "r / rr"
+  ],
+  "stage": "Ciclo superior",
+  "status": "draft",
+  "paragraphs": [
+    "Raúl y Sara preparan una carrera en el patio. Dibujan unas rayas en el suelo y colocan una cuerda para marcar la salida.",
+    "El recorrido pasa por detrás de un árbol y termina cerca de la puerta. Primero lo prueban andando para comprobar que pueden pasar.",
+    "Después, llaman a sus compañeros y reparten los turnos. Sara corre en el primer grupo y Raúl espera su momento."
+  ],
+  "phrases": [
+    "Raúl y Sara preparan una carrera en el patio.",
+    "Dibujan unas rayas en el suelo y colocan una cuerda para marcar la salida.",
+    "El recorrido pasa por detrás de un árbol y termina cerca de la puerta.",
+    "Primero lo prueban andando para comprobar que pueden pasar.",
+    "Después, llaman a sus compañeros y reparten los turnos.",
+    "Sara corre en el primer grupo y Raúl espera su momento."
+  ],
+  "audio": null,
+  "focusWords": {
+    "r / rr": [
+      "Raúl",
+      "Sara",
+      "preparan",
+      "carrera",
+      "rayas",
+      "cuerda",
+      "para",
+      "marcar",
+      "recorrido",
+      "por",
+      "detrás",
+      "árbol",
+      "termina",
+      "cerca",
+      "puerta",
+      "Primero",
+      "prueban",
+      "comprobar",
+      "pasar",
+      "compañeros",
+      "reparten",
+      "turnos",
+      "corre",
+      "primer",
+      "grupo",
+      "espera"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "d31aa1e14be742295351381372e3d2d53e1ae85fa9485e70a6328dc4bdf7ba52",
+    "codeAtReview": "ES006"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

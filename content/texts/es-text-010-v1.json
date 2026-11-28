@@ -1,0 +1,57 @@
+{
+  "id": "es-text-010-v1",
+  "code": "ES010",
+  "language": "es",
+  "title": "Una casa de cartón",
+  "focuses": [
+    "enye-ch"
+  ],
+  "focusLabels": [
+    "ñ / ch"
+  ],
+  "stage": "Ciclo superior",
+  "status": "draft",
+  "paragraphs": [
+    "La niña y su compañero diseñan una casa de cartón. Recortan cuatro paredes y dejan una ventana pequeña en cada lado.",
+    "Después, preparan un techo ancho y una chimenea con un tubo de papel. Pegan las piezas y esperan a que se sequen.",
+    "Al día siguiente, añaden un camino de piedras y colocan la casa junto a otras construcciones. Han creado un pequeño pueblo en clase."
+  ],
+  "phrases": [
+    "La niña y su compañero diseñan una casa de cartón.",
+    "Recortan cuatro paredes y dejan una ventana pequeña en cada lado.",
+    "Después, preparan un techo ancho y una chimenea con un tubo de papel.",
+    "Pegan las piezas y esperan a que se sequen.",
+    "Al día siguiente, añaden un camino de piedras y colocan la casa junto a otras construcciones.",
+    "Han creado un pequeño pueblo en clase."
+  ],
+  "audio": null,
+  "focusWords": {
+    "ñ / ch": [
+      "niña",
+      "compañero",
+      "diseñan",
+      "pequeña",
+      "techo",
+      "ancho",
+      "chimenea",
+      "añaden",
+      "pequeño"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "cc8943a43a93587e9b9b56ea0884946466b0b2db5420351b9d1b0f8f7d4dd055",
+    "codeAtReview": "ES010"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

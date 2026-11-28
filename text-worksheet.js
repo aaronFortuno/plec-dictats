@@ -7,7 +7,9 @@
  const Pdf=root.PlecPdf||(typeof module!=='undefined'?require('./pdf.js'):null);
  const mm=25.4/72,ink='#233a33',muted='#65736a';
  async function prepare(entry,input={},library=root.PDFLib){
-  if(!entry||entry.language!=='ca')throw Error('Aquest prototip només està disponible en català.');
+  if(!entry||!['ca','es'].includes(entry.language))throw Error('Aquest dictat no està disponible en aquesta llengua.');
+  const labels=entry.language==='es'?{'Model de correcció':'Modelo de corrección','Focus de pràctica: ':'Focos de práctica: ','Plega el model cap enrere. En acabar, desplega i revisa.':'Pliega el modelo hacia atrás. Al terminar, despliega y revisa.','Escric i reviso':'Escribo y reviso','Nom: __________________':'Nombre: __________________','Data: __________________':'Fecha: __________________'}:{};
+  const tr=value=>labels[value]||value;
   const settings=T.options(input),doc=await library.PDFDocument.create(),font=await doc.embedFont(library.StandardFonts.Helvetica),bold=await doc.embedFont(library.StandardFonts.HelveticaBold);
   const shapes=[],vertical=settings.fold==='vertical',modelFirst=settings.side==='start';
   // The smaller model folds behind the larger writing panel.
@@ -29,9 +31,9 @@
   for(const area of [model,writing])shapes.push(...Brand.shapes(area.x+10,area.y+10,30));
   const bodyTop=80,modelBodyTop=vertical?bodyTop:60,fontSize=settings.fontSize,rowHeight=settings.lineSpacing;
   const modelRowHeight=vertical?rowHeight:Math.max(6,rowHeight*.65),paragraphGap=vertical?rowHeight:modelRowHeight;
-  text('Model de correcció',model.x+10,model.y+30,12,true);
+  text(tr('Model de correcció'),model.x+10,model.y+30,12,true);
   paragraph(entry.title,model.x+10,model.y+38,model.w-20,12,5);
-  text('Focus de pràctica: '+entry.focusLabels.join(' · '),model.x+10,model.y+46,10,false,muted);
+  paragraph(tr('Focus de pràctica: ')+entry.focusLabels.join(' · '),model.x+10,model.y+46,model.w-20,10,4.3);
   let y=modelBodyTop;
   const paragraphRows=entry.paragraphs.map((value,index)=>{
    const rows=lines(value,model.w-20,fontSize),start=y;
@@ -44,7 +46,7 @@
   const last=paragraphRows.at(-1),lastModelBaseline=last.start+(last.rows-1)*modelRowHeight;
   const lastWritingBaseline=vertical?last.start+(last.writingRows-1)*rowHeight:0;
   if(lastModelBaseline>model.h-(vertical?20:12)||lastWritingBaseline>writing.h-10)throw Error('Amb aquesta mida i aquest interlineat, el dictat no cap al full. Redueix la mida del model o l’interlineat.');
-  paragraph('Plega el model cap enrere. En acabar, desplega i revisa.',model.x+10,model.y+model.h-(vertical?12:5),model.w-20,8,3.4);
+  paragraph(tr('Plega el model cap enrere. En acabar, desplega i revisa.'),model.x+10,model.y+model.h-(vertical?12:5),model.w-20,8,3.4);
   const url=T.url(entry,settings,true);
   const qrRight=writing.x+writing.w-10;
   shapes.push(...QR.shapes(url,qrRight-25,writing.y+9,25));
@@ -60,9 +62,9 @@
    rows[last]+='...';break;
   }
   rows.forEach((row,i)=>text(row,qrRight,writing.y+45+i*3,6.8,false,muted,{align:'right',role:'text-dictation-url'}));
-  text('Escric i reviso',writing.x+10,writing.y+30,12,true);
-  text('Nom: __________________',writing.x+10,writing.y+40,10);
-  text('Data: __________________',writing.x+10,writing.y+48,10);
+  text(tr('Escric i reviso'),writing.x+10,writing.y+30,12,true);
+  text(tr('Nom: __________________'),writing.x+10,writing.y+40,10);
+  text(tr('Data: __________________'),writing.x+10,writing.y+48,10);
   if(!vertical)for(let row=bodyTop;row<=writing.h-10;row+=rowHeight)line(writing.x+10,writing.y+row,writing.x+writing.w-10,writing.y+row,'#ccd4ce',false,{role:'text-writing-rule'});
   const bytes=await Pdf.build({title:entry.title,seedCode:entry.code},library,{worksheet:()=>shapes});
   return {bytes,shapes,settings,url,layout:{model,writing,crease,bodyTop,modelBodyTop,fontSize,rowHeight,modelRowHeight,paragraphGap,paragraphRows}};

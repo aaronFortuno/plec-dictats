@@ -1,0 +1,76 @@
+{
+  "id": "ca-text-011-v1",
+  "code": "CA011",
+  "language": "ca",
+  "title": "La motxilla de diumenge",
+  "focuses": [
+    "vocals"
+  ],
+  "focusLabels": [
+    "a / e · o / u àtones"
+  ],
+  "stage": "Cicle superior",
+  "status": "draft",
+  "paragraphs": [
+    "Diumenge, la Martina prepara la motxilla per anar a caminar amb el seu oncle. Hi posa una ampolla i dues pomes.",
+    "Abans de sortir, busca les galetes a la cuina. Les guarda en una capseta perquè no es trenquin durant el camí.",
+    "Quan arriben al bosc, s’aturen sota un arbre. Comparteixen el berenar i recullen totes les engrunes abans de tornar a casa."
+  ],
+  "phrases": [
+    "Diumenge, la Martina prepara la motxilla per anar a caminar amb el seu oncle.",
+    "Hi posa una ampolla i dues pomes.",
+    "Abans de sortir, busca les galetes a la cuina.",
+    "Les guarda en una capseta perquè no es trenquin durant el camí.",
+    "Quan arriben al bosc, s’aturen sota un arbre.",
+    "Comparteixen el berenar i recullen totes les engrunes abans de tornar a casa."
+  ],
+  "audio": null,
+  "focusWords": {
+    "a / e · o / u àtones": [
+      "Diumenge",
+      "prepara",
+      "motxilla",
+      "anar",
+      "caminar",
+      "oncle",
+      "ampolla",
+      "pomes",
+      "Abans",
+      "sortir",
+      "busca",
+      "galetes",
+      "cuina",
+      "guarda",
+      "capseta",
+      "trenquin",
+      "durant",
+      "arriben",
+      "aturen",
+      "sota",
+      "arbre",
+      "Comparteixen",
+      "berenar",
+      "recullen",
+      "totes",
+      "engrunes",
+      "tornar",
+      "casa"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "900caf2ccc3963ce55297365299d8d1504e475a7ccae6ee2c6f887d1838abbed",
+    "codeAtReview": "CA011"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

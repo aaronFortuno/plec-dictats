@@ -1,0 +1,59 @@
+{
+  "id": "ca-text-012-v1",
+  "code": "CA012",
+  "language": "ca",
+  "title": "Una capsa de records",
+  "focuses": [
+    "digrafs"
+  ],
+  "focusLabels": [
+    "ll / ny / x / ix / tx / ig"
+  ],
+  "stage": "Cicle superior",
+  "status": "draft",
+  "paragraphs": [
+    "La Txell obre una capsa de records i els escampa damunt la taula. Hi troba una petxina i un collaret de l’estiu.",
+    "També hi guarda castanyes d’un passeig a la muntanya i un dibuix fet pel seu germà. Al dibuix, hi apareix un peix blau.",
+    "La Txell tria alguns records per portar-los a classe. Vol explicar als companys d’on venen i per què els ha conservat."
+  ],
+  "phrases": [
+    "La Txell obre una capsa de records i els escampa damunt la taula.",
+    "Hi troba una petxina i un collaret de l’estiu.",
+    "També hi guarda castanyes d’un passeig a la muntanya i un dibuix fet pel seu germà.",
+    "Al dibuix, hi apareix un peix blau.",
+    "La Txell tria alguns records per portar-los a classe.",
+    "Vol explicar als companys d’on venen i per què els ha conservat."
+  ],
+  "audio": null,
+  "focusWords": {
+    "ll / ny / x / ix / tx / ig": [
+      "Txell",
+      "petxina",
+      "collaret",
+      "castanyes",
+      "muntanya",
+      "dibuix",
+      "apareix",
+      "peix",
+      "explicar",
+      "companys",
+      "passeig"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "9c9b1242046f2d9e077da5e8e6a05ce388d2b750659272401264c3196c329508",
+    "codeAtReview": "CA012"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

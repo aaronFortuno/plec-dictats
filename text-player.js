@@ -1,7 +1,7 @@
 /* Text segments are timed ranges of one preserved take. No live speech synthesis. */
 (function(){
  'use strict';
- const $=id=>document.getElementById(id),T=window.PlecTexts,params=new URL(location.href).searchParams;
+ const $=id=>document.getElementById(id),T=window.PlecTexts,params=new URL(location.href).searchParams,t=window.PlecLanguageTools.text;
  const code=params.get('text'),entry=T.find(code,window.PlecLanguage.id);
  if(!params.has('text')){
   // The same student entrance also accepts the printed text code CA001.
@@ -13,10 +13,10 @@
  }
  window.PlecTextPlayer={active:true};document.body.dataset.activity='text-player';
  const root=$('focus-root');$('exit-focus').hidden=false;
- $('exit-focus').setAttribute('aria-label','Tanca el dictat i torna al preparador');$('exit-focus').title='Tanca el dictat i torna al preparador';
+ $('exit-focus').setAttribute('aria-label',t('Tanca el dictat i torna al preparador'));$('exit-focus').title=t('Tanca el dictat i torna al preparador');
  let settings=T.options(Object.fromEntries(params)),groups=entry?T.fragments(entry,settings.pace):[],index=0,plays=0,completedThrough=0,scene='ready',audio=null,loading=null,loadedPath=null,epoch=0,frame,playing=false,automatic=true,waitFactor=1;
  const controls={pace:{label:'Mots',less:'Menys mots per fragment',more:'Més mots per fragment',values:[2,4,6,10],format:value=>({2:'2–3',4:'4–5',6:'6–8',10:'9–12'})[value]},rate:{label:'Velocitat',less:'Llegeix més a poc',more:'Llegeix més ràpid',values:[.8,.9,1],format:value=>Math.round(value*100)+' %'},wait:{label:'Pausa',less:'Menys temps per escriure',more:'Més temps per escriure',values:[.8,1,1.25],format:value=>({'0.8':'4–10 s','1':'4–12 s','1.25':'4–15 s'})[value]}};
- for(const [mount,prefix]of [['tx-ready-controls','tx-'],['tx-adjust','tx-adjust-']])$(mount).innerHTML=Object.entries(controls).map(([key,c])=>`<div class="tx-step"><span id="${prefix+key}-label">${c.label}</span><div role="group" aria-labelledby="${prefix+key}-label"><button type="button" data-adjust="${key}" data-step="-1" aria-label="${c.less}" title="${c.less}">−</button><output id="${prefix+key}" aria-live="polite"></output><button type="button" data-adjust="${key}" data-step="1" aria-label="${c.more}" title="${c.more}">+</button></div></div>`).join('');
+ for(const [mount,prefix]of [['tx-ready-controls','tx-'],['tx-adjust','tx-adjust-']])$(mount).innerHTML=Object.entries(controls).map(([key,c])=>`<div class="tx-step"><span id="${prefix+key}-label">${t(c.label)}</span><div role="group" aria-labelledby="${prefix+key}-label"><button type="button" data-adjust="${key}" data-step="-1" aria-label="${t(c.less)}" title="${t(c.less)}">−</button><output id="${prefix+key}" aria-live="polite"></output><button type="button" data-adjust="${key}" data-step="1" aria-label="${t(c.more)}" title="${t(c.more)}">+</button></div></div>`).join('');
  function syncControls(){for(const mount of ['tx-ready-controls','tx-adjust'])for(const [key,c]of Object.entries(controls)){const row=$(mount).querySelector(`[data-adjust="${key}"]`).closest('.tx-step'),value=key==='wait'?waitFactor:settings[key],at=c.values.indexOf(value);row.querySelector('output').textContent=c.format(value);for(const button of row.querySelectorAll('button'))button.disabled=!entry||(Number(button.dataset.step)<0?at===0:at===c.values.length-1);}}
  const repeat=window.PlecTextRepeat.create({onTick:seconds=>{$('tx-countdown').hidden=false;$('tx-countdown').textContent='Tornaràs a sentir el fragment d’aquí a '+seconds+' s';},onEnd:()=>{cancelRepeat();if(automatic&&scene==='player'&&!document.hidden&&plays<3)play();}});
  function cancelRepeat(){repeat.cancel();$('tx-countdown').hidden=true;}
@@ -30,9 +30,9 @@
  function setup(){
   syncControls();
   if(!entry){$('tx-setup-error').hidden=false;$('tx-setup-error').textContent='Aquest dictat de text no està disponible en aquesta llengua.';$('tx-start').disabled=true;return;}
-  $('tx-summary').textContent=`${entry.code} · ${T.wordCount(T.text(entry))} paraules · ${groups.length} fragments`;
+  $('tx-summary').textContent=entry.code+' · '+t('{words} paraules · {fragments} fragments',{words:T.wordCount(T.text(entry)),fragments:groups.length});
   $('tx-start').disabled=!entry.audio||entry.status==='draft';
-  if(!entry.audio||entry.status==='draft'){$('tx-setup-error').hidden=false;$('tx-setup-error').textContent=entry.status==='draft'?'Text pendent de validació docent. Encara no se n’ha encarregat l’àudio.':entry.status==='approved-text'?'Text validat. L’escaleta de prosòdia està pendent de validació; encara no hi ha àudio.':'L’àudio d’aquest prototip encara està en preparació.';document.querySelector('#tx-ready .tx-pilot').textContent='Àudio no disponible.';}
+  if(!entry.audio||entry.status==='draft'){$('tx-setup-error').hidden=false;$('tx-setup-error').textContent=t(entry.status==='draft'?'Text pendent de validació docent. Encara no se n’ha encarregat l’àudio.':entry.status==='approved-text'?'Text validat. L’escaleta de prosòdia està pendent de validació; encara no hi ha àudio.':'L’àudio d’aquest prototip encara està en preparació.');document.querySelector('#tx-ready .tx-pilot').textContent=t('Àudio no disponible.');}
   links();
  }
  function draw(){

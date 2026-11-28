@@ -1,0 +1,60 @@
+{
+  "id": "es-text-001-v1",
+  "code": "ES001",
+  "language": "es",
+  "title": "Una excursión en autobús",
+  "focuses": [
+    "tilde"
+  ],
+  "focusLabels": [
+    "Con tilde"
+  ],
+  "stage": "Ciclo superior",
+  "status": "draft",
+  "paragraphs": [
+    "El sábado, Inés sube al autobús con su padre. Van de excursión a un pueblo que está detrás de la montaña.",
+    "Después de cruzar un túnel, llegan a una plaza. Allí compran un melocotón y se sientan bajo un árbol para descansar.",
+    "Un pájaro se acerca a la fuente y salpica el agua con las alas. Inés lo dibuja en su cuaderno antes de volver."
+  ],
+  "phrases": [
+    "El sábado, Inés sube al autobús con su padre.",
+    "Van de excursión a un pueblo que está detrás de la montaña.",
+    "Después de cruzar un túnel, llegan a una plaza.",
+    "Allí compran un melocotón y se sientan bajo un árbol para descansar.",
+    "Un pájaro se acerca a la fuente y salpica el agua con las alas.",
+    "Inés lo dibuja en su cuaderno antes de volver."
+  ],
+  "audio": null,
+  "focusWords": {
+    "Con tilde": [
+      "sábado",
+      "Inés",
+      "autobús",
+      "excursión",
+      "está",
+      "detrás",
+      "Después",
+      "túnel",
+      "Allí",
+      "melocotón",
+      "árbol",
+      "pájaro"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "12ad21dcae58ae55996346ecb3148a3828aa44a74dc55eee79d065dffc0c2e98",
+    "codeAtReview": "ES001"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

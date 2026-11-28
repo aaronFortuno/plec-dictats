@@ -1,0 +1,66 @@
+{
+  "id": "es-text-007-v1",
+  "code": "ES007",
+  "language": "es",
+  "title": "Un almuerzo en el parque",
+  "focuses": [
+    "cquz"
+  ],
+  "focusLabels": [
+    "c / z / qu"
+  ],
+  "stage": "Ciclo superior",
+  "status": "draft",
+  "paragraphs": [
+    "Quique prepara un almuerzo para compartir en el parque. Coloca pan y queso en una caja, junto a unas zanahorias y unas cerezas.",
+    "Cuando llega, busca a sus amigos cerca de la fuente. Entre todos extienden una manta en una zona de sombra.",
+    "Cada uno prueba algo distinto y recoge sus restos. Antes de marcharse, comprueban que la zona ha quedado limpia."
+  ],
+  "phrases": [
+    "Quique prepara un almuerzo para compartir en el parque.",
+    "Coloca pan y queso en una caja, junto a unas zanahorias y unas cerezas.",
+    "Cuando llega, busca a sus amigos cerca de la fuente.",
+    "Entre todos extienden una manta en una zona de sombra.",
+    "Cada uno prueba algo distinto y recoge sus restos.",
+    "Antes de marcharse, comprueban que la zona ha quedado limpia."
+  ],
+  "audio": null,
+  "focusWords": {
+    "c / z / qu": [
+      "Quique",
+      "almuerzo",
+      "compartir",
+      "parque",
+      "Coloca",
+      "queso",
+      "caja",
+      "zanahorias",
+      "cerezas",
+      "Cuando",
+      "busca",
+      "cerca",
+      "zona",
+      "Cada",
+      "recoge",
+      "comprueban",
+      "que",
+      "quedado"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "7196356a8aa5ccc24d5420db28b99d90c45eba6de49c7f9b7208a0f0ed9670a8",
+    "codeAtReview": "ES007"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

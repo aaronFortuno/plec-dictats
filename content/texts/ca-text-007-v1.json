@@ -1,0 +1,59 @@
+{
+  "id": "ca-text-007-v1",
+  "code": "CA007",
+  "language": "ca",
+  "title": "La ràdio de l’escola",
+  "focuses": [
+    "accent"
+  ],
+  "focusLabels": [
+    "Accentuació"
+  ],
+  "stage": "Cicle superior",
+  "status": "draft",
+  "paragraphs": [
+    "Dimecres, la Júlia prepara una cançó per a la ràdio de l’escola. Al matí, comprova el micròfon amb el seu company.",
+    "Després, tots dos presenten un programa de música. També expliquen per què han triat aquella cançó i qui la va escriure.",
+    "A l’última classe del dia, escolten la gravació. La mestra els felicita perquè han parlat amb claredat."
+  ],
+  "phrases": [
+    "Dimecres, la Júlia prepara una cançó per a la ràdio de l’escola.",
+    "Al matí, comprova el micròfon amb el seu company.",
+    "Després, tots dos presenten un programa de música.",
+    "També expliquen per què han triat aquella cançó i qui la va escriure.",
+    "A l’última classe del dia, escolten la gravació.",
+    "La mestra els felicita perquè han parlat amb claredat."
+  ],
+  "audio": null,
+  "focusWords": {
+    "Accentuació": [
+      "Júlia",
+      "cançó",
+      "ràdio",
+      "matí",
+      "micròfon",
+      "Després",
+      "música",
+      "També",
+      "última",
+      "gravació",
+      "perquè"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "aaf10c284a168be82ff14dc9d6d9093f20afd8decf60624521e664a28bd34c1d",
+    "codeAtReview": "CA007"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

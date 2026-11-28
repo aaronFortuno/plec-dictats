@@ -9,6 +9,7 @@ const GROUPS={
   browser:['check-basic-ui.cjs','check-interactions.cjs','check-layout-actions.cjs','check-accessibility-fixes.cjs','check-catalog-resilience.cjs','check-pseudo-ui.cjs','check-composer-lifecycle-ui.cjs','check-workspace-layout.cjs','check-spanish-ui.cjs','check-list-editor.cjs','check-text-mode-ui.cjs','check-prosody-ui.cjs','check-rhythm-table-ui.cjs','check-text-picker-ui.cjs','check-text-plans-ui.cjs'],
   compatibility:['check-catalog-audio.cjs','check-pronunciations.cjs','check-pronunciation-review.cjs']
 };
+GROUPS.browser.push('check-phrase-drafts-ui.cjs');
 
 // Preloaded by this runner only in test children. It does not affect npm install,
 // the application or normal authoring commands. Mock fetch dependencies still work.

@@ -1,0 +1,68 @@
+{
+  "id": "es-text-005-v1",
+  "code": "ES005",
+  "language": "es",
+  "title": "Una biblioteca viajera",
+  "focuses": [
+    "bv"
+  ],
+  "focusLabels": [
+    "b / v"
+  ],
+  "stage": "Ciclo superior",
+  "status": "draft",
+  "paragraphs": [
+    "En el barrio han preparado una biblioteca viajera. Cada viernes, dos vecinas llevan libros a la plaza en una vieja bicicleta.",
+    "Bruno busca una aventura de barcos y su amiga elige un libro de animales. Ambos se sientan en un banco para leer.",
+    "Antes de volver a casa, anotan los libros que se llevan. La semana siguiente deberán devolverlos para que otros vecinos puedan disfrutarlos."
+  ],
+  "phrases": [
+    "En el barrio han preparado una biblioteca viajera.",
+    "Cada viernes, dos vecinas llevan libros a la plaza en una vieja bicicleta.",
+    "Bruno busca una aventura de barcos y su amiga elige un libro de animales.",
+    "Ambos se sientan en un banco para leer.",
+    "Antes de volver a casa, anotan los libros que se llevan.",
+    "La semana siguiente deberán devolverlos para que otros vecinos puedan disfrutarlos."
+  ],
+  "audio": null,
+  "focusWords": {
+    "b / v": [
+      "barrio",
+      "biblioteca",
+      "viajera",
+      "viernes",
+      "vecinas",
+      "llevan",
+      "libros",
+      "vieja",
+      "bicicleta",
+      "Bruno",
+      "busca",
+      "aventura",
+      "barcos",
+      "libro",
+      "Ambos",
+      "banco",
+      "volver",
+      "deberán",
+      "devolverlos",
+      "vecinos"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "0cb6f7497a9e37f007086b169780e939bce3e5ba193147e6e5589cf8a71733e9",
+    "codeAtReview": "ES005"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

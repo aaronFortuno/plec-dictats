@@ -1,0 +1,60 @@
+{
+  "id": "es-text-004-v1",
+  "code": "ES004",
+  "language": "es",
+  "title": "Un regalo tejido",
+  "focuses": [
+    "gj"
+  ],
+  "focusLabels": [
+    "g / j"
+  ],
+  "stage": "Ciclo superior",
+  "status": "draft",
+  "paragraphs": [
+    "Jorge aprende a tejer con su abuela. Elige una madeja de lana roja y otra de color naranja para preparar una bufanda.",
+    "Cada tarde, recoge las agujas y trabaja un rato junto a la ventana. Su abuela le ayuda cuando se enreda el hilo.",
+    "Cuando termina, Jorge envuelve el regalo y dibuja una tarjeta. Quiere entregárselo a su hermano antes de que llegue el invierno."
+  ],
+  "phrases": [
+    "Jorge aprende a tejer con su abuela.",
+    "Elige una madeja de lana roja y otra de color naranja para preparar una bufanda.",
+    "Cada tarde, recoge las agujas y trabaja un rato junto a la ventana.",
+    "Su abuela le ayuda cuando se enreda el hilo.",
+    "Cuando termina, Jorge envuelve el regalo y dibuja una tarjeta.",
+    "Quiere entregárselo a su hermano antes de que llegue el invierno."
+  ],
+  "audio": null,
+  "focusWords": {
+    "g / j": [
+      "Jorge",
+      "tejer",
+      "Elige",
+      "madeja",
+      "roja",
+      "naranja",
+      "recoge",
+      "agujas",
+      "trabaja",
+      "junto",
+      "dibuja",
+      "tarjeta"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "0ec2a94f5a67cdb6d4dd34b1a8ff7178bb66d5887e6173014f73b365849b9996",
+    "codeAtReview": "ES004"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "ca-text-009-v1",
+  "code": "CA009",
+  "language": "ca",
+  "title": "El carretó del jardí",
+  "focuses": [
+    "erra"
+  ],
+  "focusLabels": [
+    "r / rr"
+  ],
+  "stage": "Cicle superior",
+  "status": "draft",
+  "paragraphs": [
+    "La Rita ajuda l’avi a portar terra al jardí. Quan empeny el carretó pel carrer, una roda comença a fer soroll.",
+    "S’aturen vora una paret i revisen la roda. L’avi hi troba una pedra petita i la retira amb cura.",
+    "Ara el carretó torna a rodar bé. La Rita reparteix la terra entre els rosers i rega les arrels amb una gerra."
+  ],
+  "phrases": [
+    "La Rita ajuda l’avi a portar terra al jardí.",
+    "Quan empeny el carretó pel carrer, una roda comença a fer soroll.",
+    "S’aturen vora una paret i revisen la roda.",
+    "L’avi hi troba una pedra petita i la retira amb cura.",
+    "Ara el carretó torna a rodar bé.",
+    "La Rita reparteix la terra entre els rosers i rega les arrels amb una gerra."
+  ],
+  "audio": null,
+  "focusWords": {
+    "r / rr": [
+      "Rita",
+      "portar",
+      "terra",
+      "jardí",
+      "carretó",
+      "carrer",
+      "roda",
+      "fer",
+      "soroll",
+      "aturen",
+      "vora",
+      "paret",
+      "revisen",
+      "retira",
+      "cura",
+      "Ara",
+      "torna",
+      "rodar",
+      "reparteix",
+      "entre",
+      "rosers",
+      "rega",
+      "arrels",
+      "gerra"
+    ]
+  },
+  "editorialReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "method": "independent-editorial-review",
+    "sourceSha256": "a1a0d3e0af7533cec7ca1997727d5178159ad1fb08c8abac6ff2b7558d6712fe",
+    "codeAtReview": "CA009"
+  },
+  "teacherReview": {
+    "status": "pending"
+  },
+  "prosodyReview": {
+    "status": "not-prepared"
+  },
+  "synthesis": {
+    "status": "not-requested"
+  }
+}
