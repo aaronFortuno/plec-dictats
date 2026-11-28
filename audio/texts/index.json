@@ -9708,5 +9708,792 @@
         ]
       }
     }
+  },
+  "es-text-002-v1": {
+    "voice": "Aoede",
+    "model": "gemini-3.8-flash-tts",
+    "language": "es",
+    "variety": "es-es",
+    "status": "pending-listening",
+    "pronunciationValidated": false,
+    "sourceTextSha256": "e46d63befd3713da64bdab4b251fc74528f76b963d8fa4a1b580eeb1465716af",
+    "planHash": "110919f18b3582ab9be335eecfe8b8ef8ec86bbe56ddf864f8fa0cf3234eff62",
+    "requestHash": "a50270663055d4fa74548e9f68a94c128df9297b0f1e610bafc2f0530e73310e",
+    "rawSha256": "e763ca7e2a34ce62e4fbde5d02ea6538535999e07ae12cd8eb24056c81f960af",
+    "seconds": 198.71,
+    "coverage": 0.9940476190476191,
+    "timing": "editorial-word-ranges+local-vosk+quiet-window",
+    "variants": {
+      "r23": {
+        "label": "2–3 palabras",
+        "path": "assets/audio/texts/es/es002-four-v1/r23.mp3",
+        "seconds": 62.22,
+        "sha256": "703dad45ba14ca7723b45ce3e4495f2270758a4b245f5a0f7ba12768d0f78409",
+        "bytes": 498476,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "El viernes,",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 2,
+            "start": 0,
+            "end": 2.52,
+            "cues": [
+              {
+                "afterWord": 2,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "la clase",
+            "paragraph": 1,
+            "startWord": 3,
+            "endWord": 4,
+            "start": 2.52,
+            "end": 4.215,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "visita un museo",
+            "paragraph": 1,
+            "startWord": 5,
+            "endWord": 7,
+            "start": 4.215,
+            "end": 6.15,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "del barrio.",
+            "paragraph": 1,
+            "startWord": 8,
+            "endWord": 9,
+            "start": 6.15,
+            "end": 9.12,
+            "cues": [
+              {
+                "afterWord": 9,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Un joven",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 11,
+            "start": 9.12,
+            "end": 10.725,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "les muestra",
+            "paragraph": 1,
+            "startWord": 12,
+            "endWord": 13,
+            "start": 10.725,
+            "end": 12.33,
+            "cues": []
+          },
+          {
+            "number": 7,
+            "text": "la imagen",
+            "paragraph": 1,
+            "startWord": 14,
+            "endWord": 15,
+            "start": 12.33,
+            "end": 13.86,
+            "cues": []
+          },
+          {
+            "number": 8,
+            "text": "de un barco",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 18,
+            "start": 13.86,
+            "end": 15.465,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "y explica su origen.",
+            "paragraph": 1,
+            "startWord": 19,
+            "endWord": 22,
+            "start": 15.465,
+            "end": 19.59,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "text": "Luego, el grupo",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 25,
+            "start": 19.59,
+            "end": 24.195,
+            "cues": [
+              {
+                "afterWord": 23,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "text": "entra en una sala",
+            "paragraph": 2,
+            "startWord": 26,
+            "endWord": 29,
+            "start": 24.195,
+            "end": 27.03,
+            "cues": []
+          },
+          {
+            "number": 12,
+            "text": "con mapas antiguos.",
+            "paragraph": 2,
+            "startWord": 30,
+            "endWord": 32,
+            "start": 27.03,
+            "end": 31.965,
+            "cues": [
+              {
+                "afterWord": 32,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 13,
+            "text": "Cada equipo",
+            "paragraph": 2,
+            "startWord": 33,
+            "endWord": 34,
+            "start": 31.965,
+            "end": 34.065,
+            "cues": []
+          },
+          {
+            "number": 14,
+            "text": "busca un lugar conocido",
+            "paragraph": 2,
+            "startWord": 35,
+            "endWord": 38,
+            "start": 34.065,
+            "end": 36.78,
+            "cues": []
+          },
+          {
+            "number": 15,
+            "text": "y prepara",
+            "paragraph": 2,
+            "startWord": 39,
+            "endWord": 40,
+            "start": 36.78,
+            "end": 38.745,
+            "cues": []
+          },
+          {
+            "number": 16,
+            "text": "un resumen",
+            "paragraph": 2,
+            "startWord": 41,
+            "endWord": 42,
+            "start": 38.745,
+            "end": 40.47,
+            "cues": []
+          },
+          {
+            "number": 17,
+            "text": "de la visita.",
+            "paragraph": 2,
+            "startWord": 43,
+            "endWord": 45,
+            "start": 40.47,
+            "end": 44.115,
+            "cues": [
+              {
+                "afterWord": 45,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 18,
+            "text": "Al salir,",
+            "paragraph": 3,
+            "startWord": 46,
+            "endWord": 47,
+            "start": 44.115,
+            "end": 46.665,
+            "cues": [
+              {
+                "afterWord": 47,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 19,
+            "text": "la maestra",
+            "paragraph": 3,
+            "startWord": 48,
+            "endWord": 49,
+            "start": 46.665,
+            "end": 48.255,
+            "cues": []
+          },
+          {
+            "number": 20,
+            "text": "recoge los trabajos.",
+            "paragraph": 3,
+            "startWord": 50,
+            "endWord": 52,
+            "start": 48.255,
+            "end": 51.99,
+            "cues": [
+              {
+                "afterWord": 52,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 21,
+            "text": "El lunes",
+            "paragraph": 3,
+            "startWord": 53,
+            "endWord": 54,
+            "start": 51.99,
+            "end": 53.505,
+            "cues": []
+          },
+          {
+            "number": 22,
+            "text": "los leerán",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 56,
+            "start": 53.505,
+            "end": 54.945,
+            "cues": []
+          },
+          {
+            "number": 23,
+            "text": "en clase",
+            "paragraph": 3,
+            "startWord": 57,
+            "endWord": 58,
+            "start": 54.945,
+            "end": 56.52,
+            "cues": []
+          },
+          {
+            "number": 24,
+            "text": "y compartirán",
+            "paragraph": 3,
+            "startWord": 59,
+            "endWord": 60,
+            "start": 56.52,
+            "end": 58.56,
+            "cues": []
+          },
+          {
+            "number": 25,
+            "text": "lo que han descubierto.",
+            "paragraph": 3,
+            "startWord": 61,
+            "endWord": 64,
+            "start": 58.56,
+            "end": 62.22,
+            "cues": [
+              {
+                "afterWord": 64,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      },
+      "r45": {
+        "label": "4–5 palabras",
+        "path": "assets/audio/texts/es/es002-four-v1/r45.mp3",
+        "seconds": 54.825,
+        "sha256": "1c90bd870cbacd415e501881fad51e048e6e34fb7eaed3fb1a629751010253c4",
+        "bytes": 439340,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "El viernes, la clase",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 4,
+            "start": 0,
+            "end": 3.825,
+            "cues": [
+              {
+                "afterWord": 2,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "visita un museo del barrio.",
+            "paragraph": 1,
+            "startWord": 5,
+            "endWord": 9,
+            "start": 3.825,
+            "end": 8.01,
+            "cues": [
+              {
+                "afterWord": 9,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Un joven les muestra",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 13,
+            "start": 8.01,
+            "end": 10.365,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "la imagen de un barco",
+            "paragraph": 1,
+            "startWord": 14,
+            "endWord": 18,
+            "start": 10.365,
+            "end": 12.555,
+            "cues": []
+          },
+          {
+            "number": 5,
+            "text": "y explica su origen.",
+            "paragraph": 1,
+            "startWord": 19,
+            "endWord": 22,
+            "start": 12.555,
+            "end": 16.32,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Luego, el grupo",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 25,
+            "start": 16.32,
+            "end": 19.695,
+            "cues": [
+              {
+                "afterWord": 23,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "entra en una sala",
+            "paragraph": 2,
+            "startWord": 26,
+            "endWord": 29,
+            "start": 19.695,
+            "end": 21.54,
+            "cues": []
+          },
+          {
+            "number": 8,
+            "text": "con mapas antiguos.",
+            "paragraph": 2,
+            "startWord": 30,
+            "endWord": 32,
+            "start": 21.54,
+            "end": 25.26,
+            "cues": [
+              {
+                "afterWord": 32,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "text": "Cada equipo busca un lugar conocido",
+            "paragraph": 2,
+            "startWord": 33,
+            "endWord": 38,
+            "start": 25.26,
+            "end": 28.065,
+            "cues": []
+          },
+          {
+            "number": 10,
+            "text": "y prepara un resumen",
+            "paragraph": 2,
+            "startWord": 39,
+            "endWord": 42,
+            "start": 28.065,
+            "end": 30,
+            "cues": []
+          },
+          {
+            "number": 11,
+            "text": "de la visita.",
+            "paragraph": 2,
+            "startWord": 43,
+            "endWord": 45,
+            "start": 30,
+            "end": 32.205,
+            "cues": [
+              {
+                "afterWord": 45,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "text": "Al salir, la maestra",
+            "paragraph": 3,
+            "startWord": 46,
+            "endWord": 49,
+            "start": 32.205,
+            "end": 36.39,
+            "cues": [
+              {
+                "afterWord": 47,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 13,
+            "text": "recoge los trabajos.",
+            "paragraph": 3,
+            "startWord": 50,
+            "endWord": 52,
+            "start": 36.39,
+            "end": 41.22,
+            "cues": [
+              {
+                "afterWord": 52,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 14,
+            "text": "El lunes los leerán",
+            "paragraph": 3,
+            "startWord": 53,
+            "endWord": 56,
+            "start": 41.22,
+            "end": 45.78,
+            "cues": []
+          },
+          {
+            "number": 15,
+            "text": "en clase y compartirán",
+            "paragraph": 3,
+            "startWord": 57,
+            "endWord": 60,
+            "start": 45.78,
+            "end": 50.715,
+            "cues": []
+          },
+          {
+            "number": 16,
+            "text": "lo que han descubierto.",
+            "paragraph": 3,
+            "startWord": 61,
+            "endWord": 64,
+            "start": 50.715,
+            "end": 54.825,
+            "cues": [
+              {
+                "afterWord": 64,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      },
+      "r68": {
+        "label": "6–8 palabras",
+        "path": "assets/audio/texts/es/es002-four-v1/r68.mp3",
+        "seconds": 43.87504,
+        "sha256": "d56778ce766aab0b7e83e29c93a1b3a1aab4c9a0be4933deb79760aafa3931c2",
+        "bytes": 351788,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "El viernes, la clase visita un museo del barrio.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 9,
+            "start": 0,
+            "end": 7.98,
+            "cues": [
+              {
+                "afterWord": 2,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 9,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Un joven les muestra la imagen",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 15,
+            "start": 7.98,
+            "end": 10.56,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "de un barco y explica su origen.",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 22,
+            "start": 10.56,
+            "end": 14.92504,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Luego, el grupo entra en una sala con mapas antiguos.",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 32,
+            "start": 14.92504,
+            "end": 22.86004,
+            "cues": [
+              {
+                "afterWord": 23,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 32,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Cada equipo busca un lugar conocido",
+            "paragraph": 2,
+            "startWord": 33,
+            "endWord": 38,
+            "start": 22.86004,
+            "end": 25.635,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "y prepara un resumen de la visita.",
+            "paragraph": 2,
+            "startWord": 39,
+            "endWord": 45,
+            "start": 25.635,
+            "end": 29.77504,
+            "cues": [
+              {
+                "afterWord": 45,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "Al salir, la maestra recoge los trabajos.",
+            "paragraph": 3,
+            "startWord": 46,
+            "endWord": 52,
+            "start": 29.77504,
+            "end": 37.02,
+            "cues": [
+              {
+                "afterWord": 47,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 52,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "El lunes los leerán en clase",
+            "paragraph": 3,
+            "startWord": 53,
+            "endWord": 58,
+            "start": 37.02,
+            "end": 40.03504,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "y compartirán lo que han descubierto.",
+            "paragraph": 3,
+            "startWord": 59,
+            "endWord": 64,
+            "start": 40.03504,
+            "end": 43.87504,
+            "cues": [
+              {
+                "afterWord": 64,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      },
+      "r912": {
+        "label": "9–12 palabras",
+        "path": "assets/audio/texts/es/es002-four-v1/r912.mp3",
+        "seconds": 37.78996,
+        "sha256": "c349cfb75fabe27023b3b53488f88a2ffe8352ab32861a547994dde2ebd5303b",
+        "bytes": 303020,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "El viernes, la clase visita un museo del barrio.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 9,
+            "start": 0,
+            "end": 6.675,
+            "cues": [
+              {
+                "afterWord": 2,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 9,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Un joven les muestra la imagen de un barco y explica su origen.",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 22,
+            "start": 6.675,
+            "end": 12.735,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Luego, el grupo entra en una sala con mapas antiguos.",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 32,
+            "start": 12.735,
+            "end": 19.99496,
+            "cues": [
+              {
+                "afterWord": 23,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 32,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Cada equipo busca un lugar conocido y prepara un resumen de la visita.",
+            "paragraph": 2,
+            "startWord": 33,
+            "endWord": 45,
+            "start": 19.99496,
+            "end": 25.94996,
+            "cues": [
+              {
+                "afterWord": 45,
+                "text": "Punto y aparte"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Al salir, la maestra recoge los trabajos.",
+            "paragraph": 3,
+            "startWord": 46,
+            "endWord": 52,
+            "start": 25.94996,
+            "end": 32.59496,
+            "cues": [
+              {
+                "afterWord": 47,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 52,
+                "text": "Punto y seguido"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "El lunes los leerán en clase y compartirán lo que han descubierto.",
+            "paragraph": 3,
+            "startWord": 53,
+            "endWord": 64,
+            "start": 32.59496,
+            "end": 37.78996,
+            "cues": [
+              {
+                "afterWord": 64,
+                "text": "Punto final"
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }
