@@ -259,6 +259,7 @@
     }
   });
   const releases = [
+    ['1.52', '2026-11-28', [t("Textos CA007–CA012 i ES001–ES012 validats. Setanta-dues escaletes per revisar i proposta de divuit lots amb durada estimada, sense síntesi.")]],
     ['1.51', '2026-11-28', [t("Divuit propostes de Frases per validar: sis en català i dotze en castellà, amb tots els focus disponibles i mots ressaltats. Sense síntesi.")]],
     ['1.50', '2026-11-27', [t("CA003–CA006 amb Aoede i quatre ritmes, pendents d’audició. Focus i tria directa de textos al sidebar, amb lectura completa opcional.")]],
     ['1.49', '2026-11-27', [t('Codis CA001–CA006. Textos nous validats; quatre escaletes de prosòdia per revisar, amb estimacions de durada i proposta de quatre lots. Cap síntesi enviada.')]],

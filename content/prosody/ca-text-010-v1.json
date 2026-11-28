@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "textId": "ca-text-010-v1",
+  "language": "ca",
+  "status": "pending-teacher-validation",
+  "sourceText": "En Guillem vol construir una guineu de paper per decorar la classe. Busca un quadrat de cartolina i unes tisores. La mestra li ensenya com ha de plegar les quatre cantonades. Ell segueix les indicacions i comprova que els costats quedin iguals. Quan acaba, enganxa la guineu en un cartell. A sota, hi escriu una pregunta perquè els companys endevinin quin animal és.",
+  "paragraphEnds": [
+    20,
+    42,
+    63
+  ],
+  "voice": "Aoede",
+  "voiceStatus": "proposed",
+  "direction": "Una sola veu en català central, clara i natural. Mantén el mateix ritme base entre versions, els accents lèxics i les reduccions vocàliques pròpies de la varietat. Articula les consonants amb naturalitat i conserva l’entonació de continuació als talls.",
+  "punctuationDirection": "La mateixa veu narra i anuncia la puntuació al mateix ritme base. Digues Coma, Punt i seguit, Punt i a part i Punt final en català. Les locucions no són mots del dictat.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 mots",
+      "min": 2,
+      "max": 3,
+      "direction": "Grups molt breus, amb entonació de continuació. Conserva els mots sencers.",
+      "ends": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        15,
+        17,
+        20,
+        22,
+        24,
+        28,
+        31,
+        33,
+        35,
+        37,
+        40,
+        42,
+        44,
+        47,
+        50,
+        52,
+        54,
+        56,
+        59,
+        63
+      ],
+      "exceptions": {
+        "28": "Conserva la unitat «com ha de plegar».",
+        "63": "Tanca el paràgraf amb la unitat «endevinin quin animal és.»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 mots",
+      "min": 4,
+      "max": 5,
+      "direction": "Tirades breus amb unitats de sentit. Conserva articles i preposicions amb el seu complement.",
+      "ends": [
+        4,
+        8,
+        12,
+        15,
+        20,
+        24,
+        28,
+        31,
+        37,
+        42,
+        47,
+        50,
+        54,
+        59,
+        63
+      ],
+      "exceptions": {
+        "15": "Conserva la unitat «Busca un quadrat».",
+        "31": "Tanca la frase amb la unitat «les quatre cantonades.».",
+        "37": "Conserva la unitat «Ell segueix les indicacions i comprova».",
+        "50": "Tanca la frase amb la unitat «en un cartell.»."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 mots",
+      "min": 6,
+      "max": 8,
+      "direction": "Tirades mitjanes i fluides. La puntuació pot quedar dins d’un fragment.",
+      "ends": [
+        6,
+        12,
+        20,
+        24,
+        31,
+        37,
+        42,
+        50,
+        56,
+        63
+      ],
+      "exceptions": {
+        "24": "Conserva la unitat «La mestra li ensenya».",
+        "42": "Tanca el paràgraf amb la unitat «que els costats quedin iguals.»."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 mots",
+      "min": 9,
+      "max": 12,
+      "direction": "Tirades llargues, amb pauses a la puntuació i continuïtat dins la frase.",
+      "ends": [
+        12,
+        20,
+        31,
+        42,
+        50,
+        63
+      ],
+      "exceptions": {
+        "20": "Tanca el paràgraf amb la unitat «Busca un quadrat de cartolina i unes tisores.».",
+        "50": "Tanca la frase amb la unitat «Quan acaba, enganxa la guineu en un cartell.».",
+        "63": "Tanca el paràgraf amb la unitat «A sota, hi escriu una pregunta perquè els companys endevinin quin animal és.»."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "sourceSha256": "81600f505bc090f59777fc37f2b4e9c3ed60dd29fbd26dd1acd59ab36acd389d"
+  }
+}

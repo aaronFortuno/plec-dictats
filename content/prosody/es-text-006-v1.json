@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "textId": "es-text-006-v1",
+  "language": "es",
+  "status": "pending-teacher-validation",
+  "sourceText": "Raúl y Sara preparan una carrera en el patio. Dibujan unas rayas en el suelo y colocan una cuerda para marcar la salida. El recorrido pasa por detrás de un árbol y termina cerca de la puerta. Primero lo prueban andando para comprobar que pueden pasar. Después, llaman a sus compañeros y reparten los turnos. Sara corre en el primer grupo y Raúl espera su momento.",
+  "paragraphEnds": [
+    23,
+    46,
+    66
+  ],
+  "voice": "Aoede",
+  "voiceStatus": "proposed",
+  "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
+  "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 palabras",
+      "min": 2,
+      "max": 3,
+      "direction": "Grupos muy breves, con entonación de continuidad. Conserva las palabras enteras.",
+      "ends": [
+        3,
+        6,
+        9,
+        12,
+        15,
+        17,
+        19,
+        23,
+        26,
+        31,
+        33,
+        37,
+        40,
+        43,
+        46,
+        48,
+        51,
+        55,
+        57,
+        61,
+        64,
+        66
+      ],
+      "exceptions": {
+        "23": "Cierra el párrafo con la unidad «para marcar la salida.».",
+        "31": "Conserva la unidad «por detrás de un árbol».",
+        "37": "Cierra la frase con la unidad «cerca de la puerta.».",
+        "55": "Cierra la frase con la unidad «y reparten los turnos.».",
+        "61": "Conserva la unidad «en el primer grupo»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 palabras",
+      "min": 4,
+      "max": 5,
+      "direction": "Grupos breves con unidades de sentido. Conserva los artículos y las preposiciones con su complemento.",
+      "ends": [
+        3,
+        9,
+        15,
+        19,
+        23,
+        26,
+        31,
+        37,
+        40,
+        46,
+        51,
+        55,
+        61,
+        66
+      ],
+      "exceptions": {
+        "3": "Conserva la unidad «Raúl y Sara».",
+        "9": "Cierra la frase con la unidad «preparan una carrera en el patio.».",
+        "15": "Conserva la unidad «Dibujan unas rayas en el suelo».",
+        "26": "Conserva la unidad «El recorrido pasa».",
+        "37": "Cierra la frase con la unidad «y termina cerca de la puerta.».",
+        "40": "Conserva la unidad «Primero lo prueban».",
+        "46": "Cierra el párrafo con la unidad «andando para comprobar que pueden pasar.».",
+        "61": "Conserva la unidad «Sara corre en el primer grupo»."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 palabras",
+      "min": 6,
+      "max": 8,
+      "direction": "Grupos medianos y fluidos, con puntuación dentro del fragmento cuando corresponda.",
+      "ends": [
+        9,
+        15,
+        23,
+        31,
+        37,
+        46,
+        55,
+        61,
+        66
+      ],
+      "exceptions": {
+        "9": "Cierra la frase con la unidad «Raúl y Sara preparan una carrera en el patio.».",
+        "46": "Cierra el párrafo con la unidad «Primero lo prueban andando para comprobar que pueden pasar.».",
+        "55": "Cierra la frase con la unidad «Después, llaman a sus compañeros y reparten los turnos.».",
+        "66": "Cierra el párrafo con la unidad «y Raúl espera su momento.»."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 palabras",
+      "min": 9,
+      "max": 12,
+      "direction": "Grupos largos, con pausas en la puntuación y continuidad dentro de cada frase.",
+      "ends": [
+        9,
+        23,
+        37,
+        46,
+        55,
+        66
+      ],
+      "exceptions": {
+        "23": "Cierra el párrafo con la unidad «Dibujan unas rayas en el suelo y colocan una cuerda para marcar la salida.».",
+        "37": "Cierra la frase con la unidad «El recorrido pasa por detrás de un árbol y termina cerca de la puerta.»."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "sourceSha256": "2afb7a31b7a83bf014766b98ca8dc15c1a286e28f2ce6f6071e3a6ce8c3ea344"
+  }
+}

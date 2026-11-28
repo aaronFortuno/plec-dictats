@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "textId": "es-text-008-v1",
+  "language": "es",
+  "status": "pending-teacher-validation",
+  "sourceText": "Guillermo prepara una guía de animales con fotos de una revista. Elige un águila, una gaviota y una cigüeña para la primera hoja. Después, busca un pingüino que nada en el agua y lo pega en otra página. Escribe el nombre de cada animal bajo su foto. Su amiga sigue la lista y comprueba los nombres. Juntos guardan la guía en la biblioteca del aula.",
+  "paragraphEnds": [
+    23,
+    47,
+    65
+  ],
+  "voice": "Aoede",
+  "voiceStatus": "proposed",
+  "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
+  "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 palabras",
+      "min": 2,
+      "max": 3,
+      "direction": "Grupos muy breves, con entonación de continuidad. Conserva las palabras enteras.",
+      "ends": [
+        2,
+        4,
+        6,
+        8,
+        11,
+        14,
+        16,
+        19,
+        23,
+        25,
+        27,
+        29,
+        32,
+        35,
+        38,
+        41,
+        44,
+        47,
+        49,
+        52,
+        56,
+        58,
+        60,
+        63,
+        65
+      ],
+      "exceptions": {
+        "23": "Cierra el párrafo con la unidad «para la primera hoja.».",
+        "56": "Cierra la frase con la unidad «y comprueba los nombres.»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 palabras",
+      "min": 4,
+      "max": 5,
+      "direction": "Grupos breves con unidades de sentido. Conserva los artículos y las preposiciones con su complemento.",
+      "ends": [
+        6,
+        11,
+        14,
+        19,
+        23,
+        27,
+        32,
+        38,
+        41,
+        47,
+        52,
+        56,
+        60,
+        65
+      ],
+      "exceptions": {
+        "6": "Conserva la unidad «Guillermo prepara una guía de animales».",
+        "14": "Conserva la unidad «Elige un águila,».",
+        "38": "Cierra la frase con la unidad «y lo pega en otra página.».",
+        "41": "Conserva la unidad «Escribe el nombre».",
+        "47": "Cierra el párrafo con la unidad «de cada animal bajo su foto.»."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 palabras",
+      "min": 6,
+      "max": 8,
+      "direction": "Grupos medianos y fluidos, con puntuación dentro del fragmento cuando corresponda.",
+      "ends": [
+        6,
+        11,
+        16,
+        23,
+        29,
+        38,
+        47,
+        56,
+        65
+      ],
+      "exceptions": {
+        "11": "Cierra la frase con la unidad «con fotos de una revista.».",
+        "16": "Conserva la unidad «Elige un águila, una gaviota».",
+        "38": "Cierra la frase con la unidad «en el agua y lo pega en otra página.».",
+        "47": "Cierra el párrafo con la unidad «Escribe el nombre de cada animal bajo su foto.».",
+        "56": "Cierra la frase con la unidad «Su amiga sigue la lista y comprueba los nombres.».",
+        "65": "Cierra el párrafo con la unidad «Juntos guardan la guía en la biblioteca del aula.»."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 palabras",
+      "min": 9,
+      "max": 12,
+      "direction": "Grupos largos, con pausas en la puntuación y continuidad dentro de cada frase.",
+      "ends": [
+        11,
+        23,
+        38,
+        47,
+        56,
+        65
+      ],
+      "exceptions": {
+        "38": "Cierra la frase con la unidad «Después, busca un pingüino que nada en el agua y lo pega en otra página.»."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "sourceSha256": "fa35a8c7a41b54beb7e1b4db89986b2c5da80870181782a2a017fd156420abf9"
+  }
+}

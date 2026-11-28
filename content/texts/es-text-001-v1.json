@@ -10,7 +10,7 @@
     "Con tilde"
   ],
   "stage": "Ciclo superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "El sábado, Inés sube al autobús con su padre. Van de excursión a un pueblo que está detrás de la montaña.",
     "Después de cruzar un túnel, llegan a una plaza. Allí compran un melocotón y se sientan bajo un árbol para descansar.",
@@ -49,10 +49,13 @@
     "codeAtReview": "ES001"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "f2419ca3368e14343344a647679e88efdff5c1cb1f40b34679e434b9fcfab2b9"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

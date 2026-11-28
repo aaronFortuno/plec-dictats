@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "textId": "es-text-009-v1",
+  "language": "es",
+  "status": "pending-teacher-validation",
+  "sourceText": "Empieza a llover cuando Yolanda y Guillermo llegan al jardín. Quieren guardar las sillas en el cobertizo, pero la puerta está cerrada. Yolanda busca la llave en el bolsillo de su chaqueta. Al encontrarla, abre la puerta y ayuda a entrar a su compañero. Dentro hay una toalla junto a un cepillo amarillo. Se secan el pelo y esperan a que deje de llover.",
+  "paragraphEnds": [
+    22,
+    44,
+    64
+  ],
+  "voice": "Aoede",
+  "voiceStatus": "proposed",
+  "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
+  "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 palabras",
+      "min": 2,
+      "max": 3,
+      "direction": "Grupos muy breves, con entonación de continuidad. Conserva las palabras enteras.",
+      "ends": [
+        3,
+        5,
+        7,
+        10,
+        12,
+        14,
+        17,
+        20,
+        22,
+        24,
+        26,
+        29,
+        32,
+        34,
+        37,
+        41,
+        44,
+        46,
+        48,
+        53,
+        57,
+        59,
+        64
+      ],
+      "exceptions": {
+        "41": "Conserva la unidad «y ayuda a entrar».",
+        "53": "Cierra la frase con la unidad «junto a un cepillo amarillo.».",
+        "57": "Conserva la unidad «Se secan el pelo».",
+        "64": "Cierra el párrafo con la unidad «a que deje de llover.»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 palabras",
+      "min": 4,
+      "max": 5,
+      "direction": "Grupos breves con unidades de sentido. Conserva los artículos y las preposiciones con su complemento.",
+      "ends": [
+        5,
+        10,
+        14,
+        17,
+        22,
+        26,
+        32,
+        37,
+        41,
+        44,
+        48,
+        53,
+        59,
+        64
+      ],
+      "exceptions": {
+        "17": "Conserva la unidad «en el cobertizo,».",
+        "32": "Cierra la frase con la unidad «en el bolsillo de su chaqueta.».",
+        "44": "Cierra el párrafo con la unidad «a su compañero.».",
+        "59": "Conserva la unidad «Se secan el pelo y esperan»."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 palabras",
+      "min": 6,
+      "max": 8,
+      "direction": "Grupos medianos y fluidos, con puntuación dentro del fragmento cuando corresponda.",
+      "ends": [
+        5,
+        10,
+        17,
+        22,
+        32,
+        37,
+        44,
+        53,
+        59,
+        64
+      ],
+      "exceptions": {
+        "5": "Conserva la unidad «Empieza a llover cuando Yolanda».",
+        "10": "Cierra la frase con la unidad «y Guillermo llegan al jardín.».",
+        "22": "Cierra el párrafo con la unidad «pero la puerta está cerrada.».",
+        "32": "Cierra la frase con la unidad «Yolanda busca la llave en el bolsillo de su chaqueta.».",
+        "37": "Conserva la unidad «Al encontrarla, abre la puerta».",
+        "53": "Cierra la frase con la unidad «Dentro hay una toalla junto a un cepillo amarillo.».",
+        "64": "Cierra el párrafo con la unidad «a que deje de llover.»."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 palabras",
+      "min": 9,
+      "max": 12,
+      "direction": "Grupos largos, con pausas en la puntuación y continuidad dentro de cada frase.",
+      "ends": [
+        10,
+        22,
+        32,
+        44,
+        53,
+        64
+      ],
+      "exceptions": {}
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "sourceSha256": "6ddaf57be61f8f9dd2963a15da20ec4ff35d04ca2c2683c7c119d151207cbe58"
+  }
+}

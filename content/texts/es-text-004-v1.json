@@ -10,7 +10,7 @@
     "g / j"
   ],
   "stage": "Ciclo superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "Jorge aprende a tejer con su abuela. Elige una madeja de lana roja y otra de color naranja para preparar una bufanda.",
     "Cada tarde, recoge las agujas y trabaja un rato junto a la ventana. Su abuela le ayuda cuando se enreda el hilo.",
@@ -49,10 +49,13 @@
     "codeAtReview": "ES004"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "83d38075c3d3ced49fa67924e9a98fe933594b17bbbedfc2ef7ffedcfeaebc65"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

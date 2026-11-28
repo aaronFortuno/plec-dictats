@@ -10,7 +10,7 @@
     "r / rr"
   ],
   "stage": "Cicle superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "La Rita ajuda l’avi a portar terra al jardí. Quan empeny el carretó pel carrer, una roda comença a fer soroll.",
     "S’aturen vora una paret i revisen la roda. L’avi hi troba una pedra petita i la retira amb cura.",
@@ -61,10 +61,13 @@
     "codeAtReview": "CA009"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "430c2969b2effdb51c134744880e9258d751677f07538fd49ab53f32149b5c8a"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

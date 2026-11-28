@@ -10,7 +10,7 @@
     "ll / ny / x / ix / tx / ig"
   ],
   "stage": "Cicle superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "La Txell obre una capsa de records i els escampa damunt la taula. Hi troba una petxina i un collaret de l’estiu.",
     "També hi guarda castanyes d’un passeig a la muntanya i un dibuix fet pel seu germà. Al dibuix, hi apareix un peix blau.",
@@ -48,10 +48,13 @@
     "codeAtReview": "CA012"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "ac3a952880c8cca1ef5f4e4c1ac5281af032c6b65960a3315734c50dbc284805"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

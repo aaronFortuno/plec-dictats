@@ -10,7 +10,7 @@
     "Amb h / sense h"
   ],
   "stage": "Cicle superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "Ahir, l’Helena i el seu germà van visitar l’hort de l’escola. Hi havia herbes altes al costat dels arbres.",
     "Avui, han tret les herbes i han remogut la terra humida. Després, la mestra els ha ajudat a plantar enciams.",
@@ -49,10 +49,13 @@
     "codeAtReview": "CA008"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "79d06bd4d8ef1c4ade2bd3ca9fb5a8af779f569e8a253c7d1669e39490cf1311"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

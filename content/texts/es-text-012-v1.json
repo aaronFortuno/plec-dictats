@@ -10,7 +10,7 @@
     "Formas verbales"
   ],
   "stage": "Ciclo superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "Ayer, la clase decidió preparar una obra de teatro. Algunos alumnos escribieron el principio y otros buscaron telas para hacer los disfraces.",
     "Hoy ensayan en el aula y prueban cómo se escuchan las voces. La maestra les ha pedido que hablen despacio y miren al público.",
@@ -55,10 +55,13 @@
     "codeAtReview": "ES012"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "d85e1efdda445a037371dae25e74a99b423a351574923c4afdbb333950b374e9"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

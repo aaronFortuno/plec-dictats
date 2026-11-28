@@ -10,7 +10,7 @@
     "c / qu / g / gu / qü / gü"
   ],
   "stage": "Cicle superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "En Guillem vol construir una guineu de paper per decorar la classe. Busca un quadrat de cartolina i unes tisores.",
     "La mestra li ensenya com ha de plegar les quatre cantonades. Ell segueix les indicacions i comprova que els costats quedin iguals.",
@@ -62,10 +62,13 @@
     "codeAtReview": "CA010"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "457a350b1bf7323400873c3c60706dcd05d84933998ffeb9c4e33cf29ab3b0ea"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

@@ -29,9 +29,10 @@ const lib=require(process.env.PLEC_NODE_MODULES?path.join(process.env.PLEC_NODE_
   const plan=P.build(entry),source=require('../content/prosody/'+entry.id+'.json'),{createHash}=require('node:crypto'),reviewed={...source};delete reviewed.independentReview;
   reviewed.status=source.independentReview.statusAtReview||reviewed.status;
   assert.equal(source.independentReview.status,'passed');assert.equal(createHash('sha256').update(JSON.stringify(reviewed)).digest('hex'),source.independentReview.sourceSha256);
-  assert.equal(plan.status,'approved-for-pilot');assert.equal(plan.variants.length,4);assert.equal(plan.paragraphCount,3);
+  assert.equal(plan.status,entry.audio?'approved-for-pilot':'pending-teacher-validation');assert.equal(plan.variants.length,4);assert.equal(plan.paragraphCount,3);
   for(const v of plan.variants){assert.equal(v.fragments.map(f=>f.text).join(' '),T.text(entry));assert.deepEqual(v.fragments.flatMap(f=>f.words.map(w=>w.index)),Array.from({length:plan.wordCount},(_,i)=>i+1));assert(v.fragments.every(f=>!f.exception||f.reason.length>10));assert.deepEqual(v.fragments.flatMap(f=>f.cues),plan.cues);}
-  const output=await require('../prosody-pdf.js').build(entry,plan,lib),pdf=await lib.PDFDocument.load(output.bytes);assert.equal(pdf.getPageCount(),3);assert(pdf.getSubject().includes('pendent'));
+  if(!entry.audio){assert(plan.variants.every(v=>v.fragments.every(f=>f.words.slice(0,-1).every(w=>!/[.!?]$/u.test(w.text)))));assert.equal(plan.cues.at(-1).text,entry.language==='es'?'Punto final':'Punt final');assert.equal(plan.voiceStatus,'proposed');}
+  const output=await require('../prosody-pdf.js').build(entry,plan,lib),pdf=await lib.PDFDocument.load(output.bytes);assert.equal(pdf.getPageCount(),3);assert(pdf.getSubject().includes(entry.language==='es'?'por validar':entry.audio?'pendent':'per validar'));
   for(const s of output.pages.flat()){const w=(s.weight?bold:regular).widthOfTextAtSize(s.value,s.size)*25.4/72;assert(s.x>=11.9&&s.x+w<=285.1);assert(s.y>=10&&s.y<=204.1);}
   fs.writeFileSync('output/pdf/escaleta-prosodia-'+entry.code.toLowerCase()+'.pdf',output.bytes);
  }

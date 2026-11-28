@@ -10,7 +10,7 @@
     "g / gu / gü"
   ],
   "stage": "Ciclo superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "Guillermo prepara una guía de animales con fotos de una revista. Elige un águila, una gaviota y una cigüeña para la primera hoja.",
     "Después, busca un pingüino que nada en el agua y lo pega en otra página. Escribe el nombre de cada animal bajo su foto.",
@@ -47,10 +47,13 @@
     "codeAtReview": "ES008"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "d753ddea5347115a9b03bb472bdb6025e6fc981bbf15a45b259bd5028fef5dfc"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

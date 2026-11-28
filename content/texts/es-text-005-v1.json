@@ -10,7 +10,7 @@
     "b / v"
   ],
   "stage": "Ciclo superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "En el barrio han preparado una biblioteca viajera. Cada viernes, dos vecinas llevan libros a la plaza en una vieja bicicleta.",
     "Bruno busca una aventura de barcos y su amiga elige un libro de animales. Ambos se sientan en un banco para leer.",
@@ -57,10 +57,13 @@
     "codeAtReview": "ES005"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "ea194a2e00381ac77cf92f91d99bad0e56b25643b0e515fdbe76d54e010c6a83"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

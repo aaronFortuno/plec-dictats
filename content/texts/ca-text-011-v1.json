@@ -10,7 +10,7 @@
     "a / e · o / u àtones"
   ],
   "stage": "Cicle superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "Diumenge, la Martina prepara la motxilla per anar a caminar amb el seu oncle. Hi posa una ampolla i dues pomes.",
     "Abans de sortir, busca les galetes a la cuina. Les guarda en una capseta perquè no es trenquin durant el camí.",
@@ -65,10 +65,13 @@
     "codeAtReview": "CA011"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "56573d2e0a027b05455fcafb1e5aa88cdba1fde161c1e05e471fae54d27446d1"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

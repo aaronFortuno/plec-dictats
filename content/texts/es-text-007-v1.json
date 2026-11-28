@@ -10,7 +10,7 @@
     "c / z / qu"
   ],
   "stage": "Ciclo superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "Quique prepara un almuerzo para compartir en el parque. Coloca pan y queso en una caja, junto a unas zanahorias y unas cerezas.",
     "Cuando llega, busca a sus amigos cerca de la fuente. Entre todos extienden una manta en una zona de sombra.",
@@ -55,10 +55,13 @@
     "codeAtReview": "ES007"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "fb3a3a4bfa3322ecc55869b6003ca381ca0f246887f189a7b2dcceaa246e7b41"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

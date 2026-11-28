@@ -10,7 +10,7 @@
     "h"
   ],
   "stage": "Ciclo superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "Hoy, Hugo ayuda a su hermana en el huerto. Han encontrado hierbas entre las hortalizas y quieren quitarlas antes de regar.",
     "La tierra sigue húmeda porque ha llovido durante la noche. Los hermanos trabajan con cuidado para no arrancar las plantas pequeñas.",
@@ -50,10 +50,13 @@
     "codeAtReview": "ES003"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "d829cfc00bf8379184e81c4308962d9e672d67e41da74e8ddd491e74efb65ae4"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

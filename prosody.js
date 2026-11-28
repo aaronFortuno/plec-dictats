@@ -7,10 +7,10 @@
   const text=entry.paragraphs.join(' '),words=[],paragraphEnds=[];
   entry.paragraphs.forEach((paragraph,p)=>{paragraph.split(/\s+/u).forEach(value=>words.push({index:words.length+1,text:value,paragraph:p+1}));paragraphEnds.push(words.length);});
   if(text!==draft.sourceText||JSON.stringify(paragraphEnds)!==JSON.stringify(draft.paragraphEnds))throw Error('El text ha canviat: cal revisar l’escaleta.');
-  const cueNames={',':'Coma',':':'Dos punts',';':'Punt i coma','?':'Signe d’interrogació','!':'Signe d’exclamació'};
+  const es=entry.language==='es',cueNames=es?{',':'Coma',':':'Dos puntos',';':'Punto y coma','?':'Signo de interrogación','!':'Signo de exclamación'}:{',':'Coma',':':'Dos punts',';':'Punt i coma','?':'Signe d’interrogació','!':'Signe d’exclamació'};
   const cues=words.flatMap(word=>{
    const mark=/[.,:;?!]$/u.exec(word.text)?.[0];if(!mark)return [];
-   const label=mark==='.'?(word.index===words.length?'Punt final':paragraphEnds.includes(word.index)?'Punt i a part':'Punt i seguit'):cueNames[mark];
+   const label=mark==='.'?(es?(word.index===words.length?'Punto final':paragraphEnds.includes(word.index)?'Punto y aparte':'Punto y seguido'):(word.index===words.length?'Punt final':paragraphEnds.includes(word.index)?'Punt i a part':'Punt i seguit')):cueNames[mark];
    return [{afterWord:word.index,text:label,paragraph:word.paragraph,spokenWords:count(label)}];
   });
   const variants=draft.variants.map(variant=>{
@@ -21,7 +21,7 @@
     const start=previous+1,items=words.slice(previous,end),fragmentCues=cues.filter(c=>c.afterWord>=start&&c.afterWord<=end),wordCount=end-previous;
     const exception=wordCount<variant.min||wordCount>variant.max,reason=variant.exceptions?.[end]||'';
     if(exception&&!reason)throw Error('Cal justificar el fragment fora del rang.');
-    const last=items.at(-1).text,inflection=/[.!?]$/u.test(last)?'Tancament de frase':/:$/u.test(last)?'Suspensió abans de l’explicació':'Continuació cap al fragment següent';
+    const last=items.at(-1).text,inflection=/[.!?]$/u.test(last)?(es?'Cierre de frase':'Tancament de frase'):/:$/u.test(last)?(es?'Suspensión antes de la explicación':'Suspensió abans de l’explicació'):(es?'Continuación hacia el fragmento siguiente':'Continuació cap al fragment següent');
     previous=end;
     return {number:index+1,start,end,paragraph:items[0].paragraph,wordCount,text:items.map(w=>w.text).join(' '),words:items,cues:fragmentCues,exception,reason,inflection,pauseMs:paragraphEnds.includes(end)?draft.pauses.paragraphMs:draft.pauses.fragmentMs,spokenWords:wordCount+fragmentCues.reduce((n,c)=>n+c.spokenWords,0)};
    });

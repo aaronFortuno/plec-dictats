@@ -316,3 +316,42 @@ Accés: triar la llengua → Frases → filtrar per focus → clicar el títol p
 La plantilla compartida admet ara català i castellà, amb els camps i les instruccions impreses corresponents, URL/QR de cada llengua i focus llargs ajustats a l’amplada del model. S’han preparat i comprovat els 36 PDFs dels divuit textos en les dues orientacions de plec. Els codis, àudios i aprovacions anteriors es conserven. Les escaletes i la preparació dels lots es faran després de la validació docent dels textos.
 
 Validació 1.51: 64 comprovacions locals passades, incloses les proves de navegació de Frases repetides sobre el catàleg ampliat. Verificades la cobertura dels focus, les empremtes editorials, els mots ressaltats i les seves grafies, la separació de llengües, els models impresos, els bloqueigs d’aprovació/àudio i la navegació amb mòbil i tema fosc. La llista del sidebar té scroll intern limitat per conservar espai per als filtres i la configuració. Cap síntesi ni comprovació remota del desplegament.
+
+## Textos validats, 72 escaletes i proposta de 18 lots · 1.52
+
+El 28/11/2026 el docent valida CA007–CA012 i ES001–ES012 i encarrega les escaletes i propostes de lots abans d’autoritzar síntesi. `teacherReview` registra l’aprovació i l’empremta exacta dels paràgrafs, que no han canviat. `prosodyReview` continua pendent i `synthesis` no encarregada. Les divuit escaletes tenen quatre ritmes aproximats (2–3, 4–5, 6–8 i 9–12 mots), amb cobertura exacta, puntuació locutada en la llengua del text i excepcions de llargada visibles.
+
+Revisió editorial independent de totes les variants superada. Els talls conserven locucions com «al costat dels arbres», «detrás de la montaña», «por detrás de un árbol», «cerca de la puerta» i «deje de llover». Els ritmes grans agrupen dins de cada frase; les excepcions permeten conservar unitats de sentit més llargues o tancar una frase més curta. Alguns grups de r23 tenen quatre o cinc mots i alguns de r912 catorze o quinze: són ajustos editorials explícits, no límits ocults. Les empremtes de revisió identifiquen les versions finals exactes.
+
+La proposta conserva els quatre ritmes del mateix text dins d’una única petició: sis lots de català central i dotze d’español de España. Aoede és la veu proposada per a totes dues llengües, amb el mateix ritme base entre versions i les locucions de puntuació integrades a la mateixa presa. En castellà es locutaran «Coma», «Punto y seguido», «Punto y aparte» i «Punto final»; no s’hi reutilitzen locucions catalanes.
+
+| Text / lot proposat | Nominal | Prudent | Reserva fins a 6:30 |
+| --- | ---: | ---: | ---: |
+| CA007 | 4:03 | 5:59 | 31 s |
+| CA008 | 4:05 | 6:02 | 28 s |
+| CA009 | 4:00 | 5:55 | 35 s |
+| CA010 | 4:10 | 6:08 | 22 s |
+| CA011 | 4:09 | 6:08 | 22 s |
+| CA012 | 4:12 | 6:13 | 17 s |
+| ES001 | 4:08 | 6:06 | 24 s |
+| ES002 | 4:11 | 6:10 | 20 s |
+| ES003 | 4:06 | 6:04 | 26 s |
+| ES004 | 4:09 | 6:07 | 23 s |
+| ES005 | 4:08 | 6:06 | 24 s |
+| ES006 | 4:02 | 5:58 | 32 s |
+| ES007 | 4:03 | 5:58 | 32 s |
+| ES008 | 4:07 | 6:05 | 25 s |
+| ES009 | 4:04 | 6:01 | 29 s |
+| ES010 | 4:10 | 6:09 | 21 s |
+| ES011 | 4:02 | 5:58 | 32 s |
+| ES012 | 4:12 | 6:12 | 18 s |
+
+Estimacions amb 130 mots locutats/min nominals, 95 mots/min prudents, pauses i factor 1,2. Tots els lots queden per sota de 390 s en l’estimació prudent. Són estimacions de durada, no una garantia del proveïdor. El límit inferior teòric per temps pot ser menor si es redistribueixen lectures entre peticions; la proposta prioritza mantenir les quatre variants de cada text juntes. El pressupost d’entrada del payload encara no està comprovat: es verificarà en congelar els encàrrecs després de la validació docent.
+
+L’índex `audio/texts/planning-index.json` agrega les dues propostes noves i la planificació històrica de CA003–CA006. `tools/prosody-estimate.cjs --proposal=ca007-ca012 --write` i `--proposal=es001-es012 --write` recalculen les propostes locals. El comandament per defecte conserva l’abast CA003–CA006; afegir textos validats al catàleg no n’amplia implícitament l’encàrrec. El generador del web rebutja registres de planificació amb autorització o cos executable. Les propostes mantenen `synthesisAuthorized:false`, `newRequestsSent:0`, `inputBudgetValidated:false` i `requestBody:null`.
+
+Accés: Frases → triar text → Escaleta de prosòdia (a la cantonada del preview). Els plans sense àudio són només de lectura, sense reproductors ni controls per marcar errors d’una gravació absent. «Proposta de lots» mostra una taula del conjunt de la llengua; «PDF de l’escaleta» exporta tres A4 horitzontals per text. La comparativa i les locucions es mostren en català o castellà segons la llengua. Reculls: `content/review/escaletes-ca-es-2026-11-28.txt` i `lots-prosodia-ca-es-2026-11-28.txt`.
+
+Cap petició de síntesi en aquesta iteració. Cal validar les escaletes, la veu proposada i els lots abans de preparar l’enviament exacte.
+
+Validació 1.52: 64 comprovacions locals passades, sense errors. Revisades les 72 variants pendents, les 54 pàgines PDF, les empremtes editorials i d’aprovació de text, les locucions en cada llengua, els 18 lots amb quatre lectures i els topalls temporals. Verificades al navegador les comparatives de lectura sense àudio, les taules de lots, la descàrrega de PDF i la navegació de les dues llengües. Els sis pilots i els seus àudios conserven les empremtes anteriors. Cap síntesi ni comprovació remota del desplegament.

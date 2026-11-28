@@ -268,11 +268,11 @@
   "Versió 1.37.3: obre l’historial de canvis": "Versión 1.37.3. Abrir el historial de cambios",
   "Escaleta": "Escaleta",
   "Escaleta de prosòdia": "Escaleta de prosodia",
-  "Tanca l’escaleta": "Cerrar la escaleta",
+  "Tanca l’escaleta": "Cierra la escaleta",
   "Revisa els quatre ritmes abans de la síntesi": "Revisa los cuatro ritmos antes de la síntesis",
   "PDF de l’escaleta": "PDF de la escaleta",
   "Proposta pendent de validar · veu pendent de confirmar · escaleta no enviada a síntesi": "Propuesta pendiente de validar · voz pendiente de confirmar · escaleta no enviada a síntesis",
-  "Les etiquetes de puntuació són locucions: no compten com a mots del dictat. Els rangs són orientatius; els ajustos de sentit estan indicats.": "Las etiquetas de puntuación son locuciones: no cuentan como palabras del dictado. Los rangos son orientativos; se indican los ajustes de sentido.",
+  "Les etiquetes de puntuació són locucions: no compten com a mots del dictat. Els rangs són orientatius; els ajustos de sentit estan indicats.": "Las etiquetas de puntuación son locuciones: no cuentan como palabras del dictado. Los rangos son orientativos; los ajustes de sentido están indicados.",
   "Ritme de l’escaleta": "Ritmo de la escaleta",
   "Comparació dels quatre ritmes": "Comparación de los cuatro ritmos",
   "Direcció de veu i pauses": "Dirección de voz y pausas",
@@ -365,5 +365,7 @@
   "Compara els quatre ritmes i la puntuació": "Compara los cuatro ritmos y la puntuación",
   "Llegeix el text complet": "Lee el texto completo",
   "Versió 1.50: obre l’historial de canvis": "Versión 1.50: abre el historial de cambios",
-  "Versió 1.51: obre l’historial de canvis": "Versión 1.51: abre el historial de cambios"
+  "Versió 1.51: obre l’historial de canvis": "Versión 1.51: abre el historial de cambios",
+  "Proposta de lots": "Propuesta de lotes",
+  "Versió 1.52: obre l’historial de canvis": "Versión 1.52: abre el historial de cambios"
 }

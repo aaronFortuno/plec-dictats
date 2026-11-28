@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "textId": "ca-text-007-v1",
+  "language": "ca",
+  "status": "pending-teacher-validation",
+  "sourceText": "Dimecres, la Júlia prepara una cançó per a la ràdio de l’escola. Al matí, comprova el micròfon amb el seu company. Després, tots dos presenten un programa de música. També expliquen per què han triat aquella cançó i qui la va escriure. A l’última classe del dia, escolten la gravació. La mestra els felicita perquè han parlat amb claredat.",
+  "paragraphEnds": [
+    21,
+    42,
+    59
+  ],
+  "voice": "Aoede",
+  "voiceStatus": "proposed",
+  "direction": "Una sola veu en català central, clara i natural. Mantén el mateix ritme base entre versions, els accents lèxics i les reduccions vocàliques pròpies de la varietat. Articula les consonants amb naturalitat i conserva l’entonació de continuació als talls.",
+  "punctuationDirection": "La mateixa veu narra i anuncia la puntuació al mateix ritme base. Digues Coma, Punt i seguit, Punt i a part i Punt final en català. Les locucions no són mots del dictat.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 mots",
+      "min": 2,
+      "max": 3,
+      "direction": "Grups molt breus, amb entonació de continuació. Conserva els mots sencers.",
+      "ends": [
+        3,
+        6,
+        10,
+        12,
+        14,
+        17,
+        21,
+        24,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        42,
+        45,
+        47,
+        50,
+        52,
+        54,
+        57,
+        59
+      ],
+      "exceptions": {
+        "10": "Conserva la unitat «per a la ràdio».",
+        "21": "Tanca el paràgraf amb la unitat «amb el seu company.».",
+        "42": "Tanca el paràgraf amb la unitat «i qui la va escriure.»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 mots",
+      "min": 4,
+      "max": 5,
+      "direction": "Tirades breus amb unitats de sentit. Conserva articles i preposicions amb el seu complement.",
+      "ends": [
+        6,
+        12,
+        17,
+        21,
+        24,
+        29,
+        33,
+        37,
+        42,
+        47,
+        50,
+        54,
+        59
+      ],
+      "exceptions": {
+        "6": "Conserva la unitat «Dimecres, la Júlia prepara una cançó».",
+        "12": "Tanca la frase amb la unitat «per a la ràdio de l’escola.».",
+        "24": "Conserva la unitat «Després, tots dos».",
+        "50": "Tanca la frase amb la unitat «escolten la gravació.»."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 mots",
+      "min": 6,
+      "max": 8,
+      "direction": "Tirades mitjanes i fluides. La puntuació pot quedar dins d’un fragment.",
+      "ends": [
+        6,
+        12,
+        21,
+        29,
+        37,
+        42,
+        50,
+        59
+      ],
+      "exceptions": {
+        "21": "Tanca el paràgraf amb la unitat «Al matí, comprova el micròfon amb el seu company.».",
+        "42": "Tanca el paràgraf amb la unitat «i qui la va escriure.».",
+        "59": "Tanca el paràgraf amb la unitat «La mestra els felicita perquè han parlat amb claredat.»."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 mots",
+      "min": 9,
+      "max": 12,
+      "direction": "Tirades llargues, amb pauses a la puntuació i continuïtat dins la frase.",
+      "ends": [
+        12,
+        21,
+        29,
+        42,
+        50,
+        59
+      ],
+      "exceptions": {
+        "29": "Tanca la frase amb la unitat «Després, tots dos presenten un programa de música.».",
+        "42": "Tanca el paràgraf amb la unitat «També expliquen per què han triat aquella cançó i qui la va escriure.».",
+        "50": "Tanca la frase amb la unitat «A l’última classe del dia, escolten la gravació.»."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "sourceSha256": "ca1fe77f1803a4389fea2e28944e99a076a6c3d362a8a615ff794dd7d691b081"
+  }
+}

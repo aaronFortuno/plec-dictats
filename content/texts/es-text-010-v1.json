@@ -10,7 +10,7 @@
     "ñ / ch"
   ],
   "stage": "Ciclo superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "La niña y su compañero diseñan una casa de cartón. Recortan cuatro paredes y dejan una ventana pequeña en cada lado.",
     "Después, preparan un techo ancho y una chimenea con un tubo de papel. Pegan las piezas y esperan a que se sequen.",
@@ -46,10 +46,13 @@
     "codeAtReview": "ES010"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "c52cb0c22b25198ae1495fe2bb0234beca9c0b3535068316b97d18213d1f0d7b"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

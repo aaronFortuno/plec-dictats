@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "textId": "ca-text-009-v1",
+  "language": "ca",
+  "status": "pending-teacher-validation",
+  "sourceText": "La Rita ajuda l’avi a portar terra al jardí. Quan empeny el carretó pel carrer, una roda comença a fer soroll. S’aturen vora una paret i revisen la roda. L’avi hi troba una pedra petita i la retira amb cura. Ara el carretó torna a rodar bé. La Rita reparteix la terra entre els rosers i rega les arrels amb una gerra.",
+  "paragraphEnds": [
+    21,
+    40,
+    62
+  ],
+  "voice": "Aoede",
+  "voiceStatus": "proposed",
+  "direction": "Una sola veu en català central, clara i natural. Mantén el mateix ritme base entre versions, els accents lèxics i les reduccions vocàliques pròpies de la varietat. Articula les consonants amb naturalitat i conserva l’entonació de continuació als talls.",
+  "punctuationDirection": "La mateixa veu narra i anuncia la puntuació al mateix ritme base. Digues Coma, Punt i seguit, Punt i a part i Punt final en català. Les locucions no són mots del dictat.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 mots",
+      "min": 2,
+      "max": 3,
+      "direction": "Grups molt breus, amb entonació de continuació. Conserva els mots sencers.",
+      "ends": [
+        2,
+        4,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        21,
+        25,
+        27,
+        29,
+        32,
+        35,
+        38,
+        40,
+        43,
+        47,
+        49,
+        52,
+        55,
+        59,
+        62
+      ],
+      "exceptions": {
+        "21": "Tanca el paràgraf amb la unitat «comença a fer soroll.».",
+        "25": "Conserva la unitat «S’aturen vora una paret».",
+        "47": "Tanca la frase amb la unitat «torna a rodar bé.».",
+        "59": "Conserva la unitat «i rega les arrels»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 mots",
+      "min": 4,
+      "max": 5,
+      "direction": "Tirades breus amb unitats de sentit. Conserva articles i preposicions amb el seu complement.",
+      "ends": [
+        4,
+        9,
+        15,
+        21,
+        25,
+        29,
+        35,
+        40,
+        43,
+        47,
+        52,
+        55,
+        59,
+        62
+      ],
+      "exceptions": {
+        "15": "Conserva la unitat «Quan empeny el carretó pel carrer,».",
+        "21": "Tanca el paràgraf amb la unitat «una roda comença a fer soroll.».",
+        "35": "Conserva la unitat «L’avi hi troba una pedra petita».",
+        "43": "Conserva la unitat «Ara el carretó».",
+        "55": "Conserva la unitat «entre els rosers».",
+        "62": "Tanca el paràgraf amb la unitat «amb una gerra.»."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 mots",
+      "min": 6,
+      "max": 8,
+      "direction": "Tirades mitjanes i fluides. La puntuació pot quedar dins d’un fragment.",
+      "ends": [
+        9,
+        15,
+        21,
+        29,
+        35,
+        40,
+        47,
+        55,
+        62
+      ],
+      "exceptions": {
+        "9": "Tanca la frase amb la unitat «La Rita ajuda l’avi a portar terra al jardí.».",
+        "40": "Tanca el paràgraf amb la unitat «i la retira amb cura.»."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 mots",
+      "min": 9,
+      "max": 12,
+      "direction": "Tirades llargues, amb pauses a la puntuació i continuïtat dins la frase.",
+      "ends": [
+        9,
+        21,
+        29,
+        40,
+        47,
+        55,
+        62
+      ],
+      "exceptions": {
+        "29": "Tanca la frase amb la unitat «S’aturen vora una paret i revisen la roda.».",
+        "47": "Tanca la frase amb la unitat «Ara el carretó torna a rodar bé.».",
+        "55": "Conserva la unitat «La Rita reparteix la terra entre els rosers».",
+        "62": "Tanca el paràgraf amb la unitat «i rega les arrels amb una gerra.»."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "sourceSha256": "b4d2b181c72b9c611584687c9c9a751cb75048577ee498cc1305eaab5edf4b18"
+  }
+}

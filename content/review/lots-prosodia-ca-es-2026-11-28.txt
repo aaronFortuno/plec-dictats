@@ -1,0 +1,28 @@
+Plec · Proposta de lots · 28/11/2026
+18 textos validats · 72 lectures · 18 lots proposats
+Veu proposada: Aoede. Català central / español de España.
+Cap síntesi autoritzada ni enviada. Pressupost d’entrada encara pendent de congelar.
+Topall preventiu: 6:30 per petició. Estimació nominal 130 mots/min; prudent 95 mots/min, pauses i factor 1,2.
+
+Català central · 6 lots
+CA007 · 4 ritmes · nominal 4:03 · prudent 5:59 · reserva 31 s
+CA008 · 4 ritmes · nominal 4:05 · prudent 6:02 · reserva 28 s
+CA009 · 4 ritmes · nominal 4:00 · prudent 5:55 · reserva 35 s
+CA010 · 4 ritmes · nominal 4:10 · prudent 6:08 · reserva 22 s
+CA011 · 4 ritmes · nominal 4:09 · prudent 6:08 · reserva 22 s
+CA012 · 4 ritmes · nominal 4:12 · prudent 6:13 · reserva 17 s
+
+Español de España · 12 lots
+ES001 · 4 ritmes · nominal 4:08 · prudent 6:06 · reserva 24 s
+ES002 · 4 ritmes · nominal 4:11 · prudent 6:10 · reserva 20 s
+ES003 · 4 ritmes · nominal 4:06 · prudent 6:04 · reserva 26 s
+ES004 · 4 ritmes · nominal 4:09 · prudent 6:07 · reserva 23 s
+ES005 · 4 ritmes · nominal 4:08 · prudent 6:06 · reserva 24 s
+ES006 · 4 ritmes · nominal 4:02 · prudent 5:58 · reserva 32 s
+ES007 · 4 ritmes · nominal 4:03 · prudent 5:58 · reserva 32 s
+ES008 · 4 ritmes · nominal 4:07 · prudent 6:05 · reserva 25 s
+ES009 · 4 ritmes · nominal 4:04 · prudent 6:01 · reserva 29 s
+ES010 · 4 ritmes · nominal 4:10 · prudent 6:09 · reserva 21 s
+ES011 · 4 ritmes · nominal 4:02 · prudent 5:58 · reserva 32 s
+ES012 · 4 ritmes · nominal 4:12 · prudent 6:12 · reserva 18 s
+

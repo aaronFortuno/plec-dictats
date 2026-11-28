@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "textId": "es-text-001-v1",
+  "language": "es",
+  "status": "pending-teacher-validation",
+  "sourceText": "El sábado, Inés sube al autobús con su padre. Van de excursión a un pueblo que está detrás de la montaña. Después de cruzar un túnel, llegan a una plaza. Allí compran un melocotón y se sientan bajo un árbol para descansar. Un pájaro se acerca a la fuente y salpica el agua con las alas. Inés lo dibuja en su cuaderno antes de volver.",
+  "paragraphEnds": [
+    21,
+    42,
+    65
+  ],
+  "voice": "Aoede",
+  "voiceStatus": "proposed",
+  "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
+  "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 palabras",
+      "min": 2,
+      "max": 3,
+      "direction": "Grupos muy breves, con entonación de continuidad. Conserva las palabras enteras.",
+      "ends": [
+        2,
+        4,
+        6,
+        9,
+        12,
+        15,
+        17,
+        21,
+        24,
+        26,
+        30,
+        32,
+        34,
+        37,
+        40,
+        42,
+        44,
+        46,
+        49,
+        53,
+        56,
+        59,
+        62,
+        65
+      ],
+      "exceptions": {
+        "21": "Cierra el párrafo con la unidad «detrás de la montaña.».",
+        "30": "Cierra la frase con la unidad «llegan a una plaza.».",
+        "53": "Conserva la unidad «y salpica el agua»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 palabras",
+      "min": 4,
+      "max": 5,
+      "direction": "Grupos breves con unidades de sentido. Conserva los artículos y las preposiciones con su complemento.",
+      "ends": [
+        4,
+        9,
+        12,
+        17,
+        21,
+        26,
+        30,
+        34,
+        37,
+        42,
+        46,
+        49,
+        53,
+        56,
+        59,
+        65
+      ],
+      "exceptions": {
+        "12": "Conserva la unidad «Van de excursión».",
+        "37": "Conserva la unidad «y se sientan».",
+        "49": "Conserva la unidad «a la fuente».",
+        "56": "Cierra la frase con la unidad «con las alas.».",
+        "59": "Conserva la unidad «Inés lo dibuja».",
+        "65": "Cierra el párrafo con la unidad «en su cuaderno antes de volver.»."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 palabras",
+      "min": 6,
+      "max": 8,
+      "direction": "Grupos medianos y fluidos, con puntuación dentro del fragmento cuando corresponda.",
+      "ends": [
+        9,
+        15,
+        21,
+        30,
+        37,
+        42,
+        49,
+        56,
+        65
+      ],
+      "exceptions": {
+        "9": "Cierra la frase con la unidad «El sábado, Inés sube al autobús con su padre.».",
+        "30": "Cierra la frase con la unidad «Después de cruzar un túnel, llegan a una plaza.».",
+        "42": "Cierra el párrafo con la unidad «bajo un árbol para descansar.».",
+        "65": "Cierra el párrafo con la unidad «Inés lo dibuja en su cuaderno antes de volver.»."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 palabras",
+      "min": 9,
+      "max": 12,
+      "direction": "Grupos largos, con pausas en la puntuación y continuidad dentro de cada frase.",
+      "ends": [
+        9,
+        21,
+        30,
+        42,
+        56,
+        65
+      ],
+      "exceptions": {
+        "56": "Cierra la frase con la unidad «Un pájaro se acerca a la fuente y salpica el agua con las alas.»."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "sourceSha256": "7c78ac52b00f8246fd7c07b9cc5c407acebcd488a63c6f4acc419acd374c41a0"
+  }
+}

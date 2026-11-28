@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "textId": "es-text-003-v1",
+  "language": "es",
+  "status": "pending-teacher-validation",
+  "sourceText": "Hoy, Hugo ayuda a su hermana en el huerto. Han encontrado hierbas entre las hortalizas y quieren quitarlas antes de regar. La tierra sigue húmeda porque ha llovido durante la noche. Los hermanos trabajan con cuidado para no arrancar las plantas pequeñas. Al terminar, hacen un hoyo junto a la valla y plantan una lechuga. Después, guardan las herramientas en una caja de madera.",
+  "paragraphEnds": [
+    21,
+    42,
+    64
+  ],
+  "voice": "Aoede",
+  "voiceStatus": "proposed",
+  "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
+  "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 palabras",
+      "min": 2,
+      "max": 3,
+      "direction": "Grupos muy breves, con entonación de continuidad. Conserva las palabras enteras.",
+      "ends": [
+        2,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21,
+        23,
+        25,
+        28,
+        31,
+        33,
+        36,
+        39,
+        42,
+        44,
+        47,
+        51,
+        55,
+        57,
+        59,
+        62,
+        64
+      ],
+      "exceptions": {
+        "6": "Conserva la unidad «ayuda a su hermana».",
+        "51": "Conserva la unidad «junto a la valla».",
+        "55": "Cierra la frase con la unidad «y plantan una lechuga.»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 palabras",
+      "min": 4,
+      "max": 5,
+      "direction": "Grupos breves con unidades de sentido. Conserva los artículos y las preposiciones con su complemento.",
+      "ends": [
+        6,
+        9,
+        15,
+        21,
+        25,
+        31,
+        36,
+        42,
+        47,
+        51,
+        55,
+        59,
+        64
+      ],
+      "exceptions": {
+        "6": "Conserva la unidad «Hoy, Hugo ayuda a su hermana».",
+        "9": "Cierra la frase con la unidad «en el huerto.».",
+        "15": "Conserva la unidad «Han encontrado hierbas entre las hortalizas».",
+        "21": "Cierra el párrafo con la unidad «y quieren quitarlas antes de regar.».",
+        "31": "Cierra la frase con la unidad «porque ha llovido durante la noche.».",
+        "42": "Cierra el párrafo con la unidad «para no arrancar las plantas pequeñas.»."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 palabras",
+      "min": 6,
+      "max": 8,
+      "direction": "Grupos medianos y fluidos, con puntuación dentro del fragmento cuando corresponda.",
+      "ends": [
+        9,
+        15,
+        21,
+        31,
+        36,
+        42,
+        47,
+        55,
+        64
+      ],
+      "exceptions": {
+        "9": "Cierra la frase con la unidad «Hoy, Hugo ayuda a su hermana en el huerto.».",
+        "31": "Cierra la frase con la unidad «La tierra sigue húmeda porque ha llovido durante la noche.».",
+        "36": "Conserva la unidad «Los hermanos trabajan con cuidado».",
+        "47": "Conserva la unidad «Al terminar, hacen un hoyo».",
+        "64": "Cierra el párrafo con la unidad «Después, guardan las herramientas en una caja de madera.»."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 palabras",
+      "min": 9,
+      "max": 12,
+      "direction": "Grupos largos, con pausas en la puntuación y continuidad dentro de cada frase.",
+      "ends": [
+        9,
+        21,
+        31,
+        42,
+        55,
+        64
+      ],
+      "exceptions": {
+        "55": "Cierra la frase con la unidad «Al terminar, hacen un hoyo junto a la valla y plantan una lechuga.»."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "sourceSha256": "2b26cd2c4f435e3908ab9e4a194af08d5cdb552ed03e2c7caed09c20b8ee8f3f"
+  }
+}

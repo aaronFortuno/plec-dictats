@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "textId": "es-text-002-v1",
+  "language": "es",
+  "status": "pending-teacher-validation",
+  "sourceText": "El viernes, la clase visita un museo del barrio. Un joven les muestra la imagen de un barco y explica su origen. Luego, el grupo entra en una sala con mapas antiguos. Cada equipo busca un lugar conocido y prepara un resumen de la visita. Al salir, la maestra recoge los trabajos. El lunes los leerán en clase y compartirán lo que han descubierto.",
+  "paragraphEnds": [
+    22,
+    45,
+    64
+  ],
+  "voice": "Aoede",
+  "voiceStatus": "proposed",
+  "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
+  "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 palabras",
+      "min": 2,
+      "max": 3,
+      "direction": "Grupos muy breves, con entonación de continuidad. Conserva las palabras enteras.",
+      "ends": [
+        2,
+        4,
+        7,
+        9,
+        11,
+        13,
+        15,
+        18,
+        22,
+        25,
+        29,
+        32,
+        34,
+        38,
+        40,
+        42,
+        45,
+        47,
+        49,
+        52,
+        54,
+        56,
+        58,
+        60,
+        64
+      ],
+      "exceptions": {
+        "22": "Cierra el párrafo con la unidad «y explica su origen.».",
+        "29": "Conserva la unidad «entra en una sala».",
+        "38": "Conserva la unidad «busca un lugar conocido».",
+        "64": "Cierra el párrafo con la unidad «lo que han descubierto.»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 palabras",
+      "min": 4,
+      "max": 5,
+      "direction": "Grupos breves con unidades de sentido. Conserva los artículos y las preposiciones con su complemento.",
+      "ends": [
+        4,
+        9,
+        13,
+        18,
+        22,
+        25,
+        29,
+        32,
+        38,
+        42,
+        45,
+        49,
+        52,
+        56,
+        60,
+        64
+      ],
+      "exceptions": {
+        "25": "Conserva la unidad «Luego, el grupo».",
+        "32": "Cierra la frase con la unidad «con mapas antiguos.».",
+        "38": "Conserva la unidad «Cada equipo busca un lugar conocido».",
+        "45": "Cierra el párrafo con la unidad «de la visita.».",
+        "52": "Cierra la frase con la unidad «recoge los trabajos.»."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 palabras",
+      "min": 6,
+      "max": 8,
+      "direction": "Grupos medianos y fluidos, con puntuación dentro del fragmento cuando corresponda.",
+      "ends": [
+        9,
+        15,
+        22,
+        32,
+        38,
+        45,
+        52,
+        58,
+        64
+      ],
+      "exceptions": {
+        "9": "Cierra la frase con la unidad «El viernes, la clase visita un museo del barrio.».",
+        "32": "Cierra la frase con la unidad «Luego, el grupo entra en una sala con mapas antiguos.»."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 palabras",
+      "min": 9,
+      "max": 12,
+      "direction": "Grupos largos, con pausas en la puntuación y continuidad dentro de cada frase.",
+      "ends": [
+        9,
+        22,
+        32,
+        45,
+        52,
+        64
+      ],
+      "exceptions": {
+        "22": "Cierra el párrafo con la unidad «Un joven les muestra la imagen de un barco y explica su origen.».",
+        "45": "Cierra el párrafo con la unidad «Cada equipo busca un lugar conocido y prepara un resumen de la visita.».",
+        "52": "Cierra la frase con la unidad «Al salir, la maestra recoge los trabajos.»."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "sourceSha256": "cff1960ea19e4bca9a92109bb5fb773b164c1bb67ba55c87437d599621e8b4a7"
+  }
+}

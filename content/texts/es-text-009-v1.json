@@ -10,7 +10,7 @@
     "ll / y"
   ],
   "stage": "Ciclo superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "Empieza a llover cuando Yolanda y Guillermo llegan al jardín. Quieren guardar las sillas en el cobertizo, pero la puerta está cerrada.",
     "Yolanda busca la llave en el bolsillo de su chaqueta. Al encontrarla, abre la puerta y ayuda a entrar a su compañero.",
@@ -49,10 +49,13 @@
     "codeAtReview": "ES009"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "f9e435fe2add8c94928d9c27cb9ec76e42a38e914cac36fc18ac69b2f8c80828"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

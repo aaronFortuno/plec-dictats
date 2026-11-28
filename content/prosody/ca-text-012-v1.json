@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "textId": "ca-text-012-v1",
+  "language": "ca",
+  "status": "pending-teacher-validation",
+  "sourceText": "La Txell obre una capsa de records i els escampa damunt la taula. Hi troba una petxina i un collaret de l’estiu. També hi guarda castanyes d’un passeig a la muntanya i un dibuix fet pel seu germà. Al dibuix, hi apareix un peix blau. La Txell tria alguns records per portar-los a classe. Vol explicar als companys d’on venen i per què els ha conservat.",
+  "paragraphEnds": [
+    22,
+    45,
+    66
+  ],
+  "voice": "Aoede",
+  "voiceStatus": "proposed",
+  "direction": "Una sola veu en català central, clara i natural. Mantén el mateix ritme base entre versions, els accents lèxics i les reduccions vocàliques pròpies de la varietat. Articula les consonants amb naturalitat i conserva l’entonació de continuació als talls.",
+  "punctuationDirection": "La mateixa veu narra i anuncia la puntuació al mateix ritme base. Digues Coma, Punt i seguit, Punt i a part i Punt final en català. Les locucions no són mots del dictat.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 mots",
+      "min": 2,
+      "max": 3,
+      "direction": "Grups molt breus, amb entonació de continuació. Conserva els mots sencers.",
+      "ends": [
+        2,
+        5,
+        7,
+        10,
+        13,
+        15,
+        17,
+        20,
+        22,
+        25,
+        28,
+        31,
+        34,
+        38,
+        40,
+        42,
+        45,
+        47,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        63,
+        66
+      ],
+      "exceptions": {
+        "38": "Tanca la frase amb la unitat «fet pel seu germà.»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 mots",
+      "min": 4,
+      "max": 5,
+      "direction": "Tirades breus amb unitats de sentit. Conserva articles i preposicions amb el seu complement.",
+      "ends": [
+        5,
+        10,
+        13,
+        17,
+        22,
+        25,
+        31,
+        34,
+        38,
+        42,
+        45,
+        50,
+        54,
+        58,
+        63,
+        66
+      ],
+      "exceptions": {
+        "13": "Tanca la frase amb la unitat «damunt la taula.».",
+        "25": "Conserva la unitat «També hi guarda».",
+        "31": "Conserva la unitat «castanyes d’un passeig a la muntanya».",
+        "34": "Conserva la unitat «i un dibuix».",
+        "45": "Tanca el paràgraf amb la unitat «un peix blau.».",
+        "66": "Tanca el paràgraf amb la unitat «els ha conservat.»."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 mots",
+      "min": 6,
+      "max": 8,
+      "direction": "Tirades mitjanes i fluides. La puntuació pot quedar dins d’un fragment.",
+      "ends": [
+        7,
+        13,
+        22,
+        31,
+        38,
+        45,
+        54,
+        60,
+        66
+      ],
+      "exceptions": {
+        "22": "Tanca el paràgraf amb la unitat «Hi troba una petxina i un collaret de l’estiu.».",
+        "31": "Conserva la unitat «També hi guarda castanyes d’un passeig a la muntanya».",
+        "54": "Tanca la frase amb la unitat «La Txell tria alguns records per portar-los a classe.»."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 mots",
+      "min": 9,
+      "max": 12,
+      "direction": "Tirades llargues, amb pauses a la puntuació i continuïtat dins la frase.",
+      "ends": [
+        13,
+        22,
+        31,
+        38,
+        45,
+        54,
+        66
+      ],
+      "exceptions": {
+        "13": "Tanca la frase amb la unitat «La Txell obre una capsa de records i els escampa damunt la taula.».",
+        "38": "Tanca la frase amb la unitat «i un dibuix fet pel seu germà.».",
+        "45": "Tanca el paràgraf amb la unitat «Al dibuix, hi apareix un peix blau.»."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "sourceSha256": "d6af058fb64c53319382cbad99dcf5654034c5427ef19877e75856e9f192e561"
+  }
+}

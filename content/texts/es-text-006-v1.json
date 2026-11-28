@@ -10,7 +10,7 @@
     "r / rr"
   ],
   "stage": "Ciclo superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "Raúl y Sara preparan una carrera en el patio. Dibujan unas rayas en el suelo y colocan una cuerda para marcar la salida.",
     "El recorrido pasa por detrás de un árbol y termina cerca de la puerta. Primero lo prueban andando para comprobar que pueden pasar.",
@@ -63,10 +63,13 @@
     "codeAtReview": "ES006"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "d96b8e14ab958047339db45d07d9620cd6da05c7b0090bbf3e768a2c7cdc7502"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

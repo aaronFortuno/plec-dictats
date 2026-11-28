@@ -10,7 +10,7 @@
     "Accentuació"
   ],
   "stage": "Cicle superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "Dimecres, la Júlia prepara una cançó per a la ràdio de l’escola. Al matí, comprova el micròfon amb el seu company.",
     "Després, tots dos presenten un programa de música. També expliquen per què han triat aquella cançó i qui la va escriure.",
@@ -48,10 +48,13 @@
     "codeAtReview": "CA007"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "62ca91b80b9d2c2bb9ba049e2f3df1ca62e727a0839a9fe8dabf5971cdf43374"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

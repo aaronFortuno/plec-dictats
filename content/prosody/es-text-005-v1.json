@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "textId": "es-text-005-v1",
+  "language": "es",
+  "status": "pending-teacher-validation",
+  "sourceText": "En el barrio han preparado una biblioteca viajera. Cada viernes, dos vecinas llevan libros a la plaza en una vieja bicicleta. Bruno busca una aventura de barcos y su amiga elige un libro de animales. Ambos se sientan en un banco para leer. Antes de volver a casa, anotan los libros que se llevan. La semana siguiente deberán devolverlos para que otros vecinos puedan disfrutarlos.",
+  "paragraphEnds": [
+    21,
+    43,
+    65
+  ],
+  "voice": "Aoede",
+  "voiceStatus": "proposed",
+  "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
+  "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 palabras",
+      "min": 2,
+      "max": 3,
+      "direction": "Grupos muy breves, con entonación de continuidad. Conserva las palabras enteras.",
+      "ends": [
+        3,
+        5,
+        8,
+        10,
+        12,
+        14,
+        17,
+        21,
+        23,
+        25,
+        27,
+        30,
+        33,
+        35,
+        38,
+        41,
+        43,
+        46,
+        48,
+        51,
+        54,
+        57,
+        59,
+        63,
+        65
+      ],
+      "exceptions": {
+        "21": "Cierra el párrafo con la unidad «en una vieja bicicleta.».",
+        "63": "Conserva la unidad «para que otros vecinos»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 palabras",
+      "min": 4,
+      "max": 5,
+      "direction": "Grupos breves con unidades de sentido. Conserva los artículos y las preposiciones con su complemento.",
+      "ends": [
+        3,
+        8,
+        12,
+        17,
+        21,
+        25,
+        30,
+        35,
+        38,
+        43,
+        48,
+        54,
+        59,
+        65
+      ],
+      "exceptions": {
+        "3": "Conserva la unidad «En el barrio».",
+        "38": "Conserva la unidad «Ambos se sientan».",
+        "54": "Cierra la frase con la unidad «anotan los libros que se llevan.».",
+        "65": "Cierra el párrafo con la unidad «para que otros vecinos puedan disfrutarlos.»."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 palabras",
+      "min": 6,
+      "max": 8,
+      "direction": "Grupos medianos y fluidos, con puntuación dentro del fragmento cuando corresponda.",
+      "ends": [
+        8,
+        14,
+        21,
+        27,
+        35,
+        43,
+        48,
+        54,
+        59,
+        65
+      ],
+      "exceptions": {
+        "48": "Conserva la unidad «Antes de volver a casa,».",
+        "59": "Conserva la unidad «La semana siguiente deberán devolverlos»."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 palabras",
+      "min": 9,
+      "max": 12,
+      "direction": "Grupos largos, con pausas en la puntuación y continuidad dentro de cada frase.",
+      "ends": [
+        8,
+        21,
+        35,
+        43,
+        54,
+        65
+      ],
+      "exceptions": {
+        "8": "Cierra la frase con la unidad «En el barrio han preparado una biblioteca viajera.».",
+        "21": "Cierra el párrafo con la unidad «Cada viernes, dos vecinas llevan libros a la plaza en una vieja bicicleta.».",
+        "35": "Cierra la frase con la unidad «Bruno busca una aventura de barcos y su amiga elige un libro de animales.».",
+        "43": "Cierra el párrafo con la unidad «Ambos se sientan en un banco para leer.»."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "sourceSha256": "0c79e26347990f81694afc17cdb4d432188822d68f2e16fee4dd69c44b597a6c"
+  }
+}

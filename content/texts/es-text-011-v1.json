@@ -10,7 +10,7 @@
     "x"
   ],
   "stage": "Ciclo superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "La profesora explica un experimento con agua y aceite. Álex coloca los dos líquidos en un recipiente transparente y los mezcla con una cuchara.",
     "Después, esperan un rato y examinan lo que ocurre. El aceite queda sobre el agua, aunque antes parecía que se habían mezclado.",
@@ -46,10 +46,13 @@
     "codeAtReview": "ES011"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "78d751f02178d7d3fddceee2ad9584c77b6d75f9dbb844f909112f8e5d65cc6a"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

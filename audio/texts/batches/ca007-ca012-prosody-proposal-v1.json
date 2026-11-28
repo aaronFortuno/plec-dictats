@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "id": "ca007-ca012-prosody-proposal-v1",
+  "status": "pending-prosody-validation",
+  "voiceProposal": "Aoede",
+  "varietyProposal": "Català central",
+  "synthesisAuthorized": false,
+  "newRequestsSent": 0,
+  "inputBudgetValidated": false,
+  "requestBody": null,
+  "policy": {
+    "maximumSeconds": 390,
+    "nominalWpm": 130,
+    "conservativeWpm": 95,
+    "safetyFactor": 1.2,
+    "betweenRenditionsSeconds": 3,
+    "paddingSeconds": 2
+  },
+  "minimumRequestsByDuration": 6,
+  "singleRequest": {
+    "renditions": 24,
+    "spokenWords": 2008,
+    "cueCount": 204,
+    "plannedPauseSeconds": 554.6,
+    "nominalSeconds": 1482,
+    "conservativeSeconds": 2188,
+    "maximumSeconds": 390,
+    "withinDurationBudget": false,
+    "remainingSeconds": -1798
+  },
+  "requests": [
+    {
+      "id": "proposal-1",
+      "versions": [
+        {
+          "entryId": "ca-text-007-v1",
+          "code": "CA007",
+          "variant": "r23",
+          "label": "2–3 mots",
+          "fragments": 22,
+          "spokenWords": 82,
+          "cueCount": 10,
+          "pauseSeconds": 29.8
+        },
+        {
+          "entryId": "ca-text-007-v1",
+          "code": "CA007",
+          "variant": "r45",
+          "label": "4–5 mots",
+          "fragments": 13,
+          "spokenWords": 82,
+          "cueCount": 10,
+          "pauseSeconds": 20.799999999999997
+        },
+        {
+          "entryId": "ca-text-007-v1",
+          "code": "CA007",
+          "variant": "r68",
+          "label": "6–8 mots",
+          "fragments": 8,
+          "spokenWords": 82,
+          "cueCount": 10,
+          "pauseSeconds": 15.799999999999999
+        },
+        {
+          "entryId": "ca-text-007-v1",
+          "code": "CA007",
+          "variant": "r912",
+          "label": "9–12 mots",
+          "fragments": 6,
+          "spokenWords": 82,
+          "cueCount": 10,
+          "pauseSeconds": 13.8
+        }
+      ],
+      "estimate": {
+        "renditions": 4,
+        "spokenWords": 328,
+        "cueCount": 40,
+        "plannedPauseSeconds": 91.2,
+        "nominalSeconds": 243,
+        "conservativeSeconds": 359,
+        "maximumSeconds": 390,
+        "withinDurationBudget": true,
+        "remainingSeconds": 31
+      },
+      "requestBody": null
+    },
+    {
+      "id": "proposal-2",
+      "versions": [
+        {
+          "entryId": "ca-text-008-v1",
+          "code": "CA008",
+          "variant": "r23",
+          "label": "2–3 mots",
+          "fragments": 22,
+          "spokenWords": 83,
+          "cueCount": 10,
+          "pauseSeconds": 29.8
+        },
+        {
+          "entryId": "ca-text-008-v1",
+          "code": "CA008",
+          "variant": "r45",
+          "label": "4–5 mots",
+          "fragments": 12,
+          "spokenWords": 83,
+          "cueCount": 10,
+          "pauseSeconds": 19.799999999999997
+        },
+        {
+          "entryId": "ca-text-008-v1",
+          "code": "CA008",
+          "variant": "r68",
+          "label": "6–8 mots",
+          "fragments": 9,
+          "spokenWords": 83,
+          "cueCount": 10,
+          "pauseSeconds": 16.799999999999997
+        },
+        {
+          "entryId": "ca-text-008-v1",
+          "code": "CA008",
+          "variant": "r912",
+          "label": "9–12 mots",
+          "fragments": 6,
+          "spokenWords": 83,
+          "cueCount": 10,
+          "pauseSeconds": 13.8
+        }
+      ],
+      "estimate": {
+        "renditions": 4,
+        "spokenWords": 332,
+        "cueCount": 40,
+        "plannedPauseSeconds": 91.2,
+        "nominalSeconds": 245,
+        "conservativeSeconds": 362,
+        "maximumSeconds": 390,
+        "withinDurationBudget": true,
+        "remainingSeconds": 28
+      },
+      "requestBody": null
+    },
+    {
+      "id": "proposal-3",
+      "versions": [
+        {
+          "entryId": "ca-text-009-v1",
+          "code": "CA009",
+          "variant": "r23",
+          "label": "2–3 mots",
+          "fragments": 23,
+          "spokenWords": 82,
+          "cueCount": 7,
+          "pauseSeconds": 29
+        },
+        {
+          "entryId": "ca-text-009-v1",
+          "code": "CA009",
+          "variant": "r45",
+          "label": "4–5 mots",
+          "fragments": 14,
+          "spokenWords": 82,
+          "cueCount": 7,
+          "pauseSeconds": 20
+        },
+        {
+          "entryId": "ca-text-009-v1",
+          "code": "CA009",
+          "variant": "r68",
+          "label": "6–8 mots",
+          "fragments": 9,
+          "spokenWords": 82,
+          "cueCount": 7,
+          "pauseSeconds": 15
+        },
+        {
+          "entryId": "ca-text-009-v1",
+          "code": "CA009",
+          "variant": "r912",
+          "label": "9–12 mots",
+          "fragments": 7,
+          "spokenWords": 82,
+          "cueCount": 7,
+          "pauseSeconds": 13
+        }
+      ],
+      "estimate": {
+        "renditions": 4,
+        "spokenWords": 328,
+        "cueCount": 28,
+        "plannedPauseSeconds": 88,
+        "nominalSeconds": 240,
+        "conservativeSeconds": 355,
+        "maximumSeconds": 390,
+        "withinDurationBudget": true,
+        "remainingSeconds": 35
+      },
+      "requestBody": null
+    },
+    {
+      "id": "proposal-4",
+      "versions": [
+        {
+          "entryId": "ca-text-010-v1",
+          "code": "CA010",
+          "variant": "r23",
+          "label": "2–3 mots",
+          "fragments": 26,
+          "spokenWords": 84,
+          "cueCount": 8,
+          "pauseSeconds": 32.6
+        },
+        {
+          "entryId": "ca-text-010-v1",
+          "code": "CA010",
+          "variant": "r45",
+          "label": "4–5 mots",
+          "fragments": 15,
+          "spokenWords": 84,
+          "cueCount": 8,
+          "pauseSeconds": 21.6
+        },
+        {
+          "entryId": "ca-text-010-v1",
+          "code": "CA010",
+          "variant": "r68",
+          "label": "6–8 mots",
+          "fragments": 10,
+          "spokenWords": 84,
+          "cueCount": 8,
+          "pauseSeconds": 16.599999999999998
+        },
+        {
+          "entryId": "ca-text-010-v1",
+          "code": "CA010",
+          "variant": "r912",
+          "label": "9–12 mots",
+          "fragments": 6,
+          "spokenWords": 84,
+          "cueCount": 8,
+          "pauseSeconds": 12.600000000000001
+        }
+      ],
+      "estimate": {
+        "renditions": 4,
+        "spokenWords": 336,
+        "cueCount": 32,
+        "plannedPauseSeconds": 94.4,
+        "nominalSeconds": 250,
+        "conservativeSeconds": 368,
+        "maximumSeconds": 390,
+        "withinDurationBudget": true,
+        "remainingSeconds": 22
+      },
+      "requestBody": null
+    },
+    {
+      "id": "proposal-5",
+      "versions": [
+        {
+          "entryId": "ca-text-011-v1",
+          "code": "CA011",
+          "variant": "r23",
+          "label": "2–3 mots",
+          "fragments": 22,
+          "spokenWords": 85,
+          "cueCount": 9,
+          "pauseSeconds": 29.200000000000003
+        },
+        {
+          "entryId": "ca-text-011-v1",
+          "code": "CA011",
+          "variant": "r45",
+          "label": "4–5 mots",
+          "fragments": 15,
+          "spokenWords": 85,
+          "cueCount": 9,
+          "pauseSeconds": 22.200000000000003
+        },
+        {
+          "entryId": "ca-text-011-v1",
+          "code": "CA011",
+          "variant": "r68",
+          "label": "6–8 mots",
+          "fragments": 9,
+          "spokenWords": 85,
+          "cueCount": 9,
+          "pauseSeconds": 16.2
+        },
+        {
+          "entryId": "ca-text-011-v1",
+          "code": "CA011",
+          "variant": "r912",
+          "label": "9–12 mots",
+          "fragments": 6,
+          "spokenWords": 85,
+          "cueCount": 9,
+          "pauseSeconds": 13.200000000000001
+        }
+      ],
+      "estimate": {
+        "renditions": 4,
+        "spokenWords": 340,
+        "cueCount": 36,
+        "plannedPauseSeconds": 91.8,
+        "nominalSeconds": 249,
+        "conservativeSeconds": 368,
+        "maximumSeconds": 390,
+        "withinDurationBudget": true,
+        "remainingSeconds": 22
+      },
+      "requestBody": null
+    },
+    {
+      "id": "proposal-6",
+      "versions": [
+        {
+          "entryId": "ca-text-012-v1",
+          "code": "CA012",
+          "variant": "r23",
+          "label": "2–3 mots",
+          "fragments": 26,
+          "spokenWords": 86,
+          "cueCount": 7,
+          "pauseSeconds": 32.00000000000001
+        },
+        {
+          "entryId": "ca-text-012-v1",
+          "code": "CA012",
+          "variant": "r45",
+          "label": "4–5 mots",
+          "fragments": 16,
+          "spokenWords": 86,
+          "cueCount": 7,
+          "pauseSeconds": 22
+        },
+        {
+          "entryId": "ca-text-012-v1",
+          "code": "CA012",
+          "variant": "r68",
+          "label": "6–8 mots",
+          "fragments": 9,
+          "spokenWords": 86,
+          "cueCount": 7,
+          "pauseSeconds": 15
+        },
+        {
+          "entryId": "ca-text-012-v1",
+          "code": "CA012",
+          "variant": "r912",
+          "label": "9–12 mots",
+          "fragments": 7,
+          "spokenWords": 86,
+          "cueCount": 7,
+          "pauseSeconds": 13
+        }
+      ],
+      "estimate": {
+        "renditions": 4,
+        "spokenWords": 344,
+        "cueCount": 28,
+        "plannedPauseSeconds": 93,
+        "nominalSeconds": 252,
+        "conservativeSeconds": 373,
+        "maximumSeconds": 390,
+        "withinDurationBudget": true,
+        "remainingSeconds": 17
+      },
+      "requestBody": null
+    }
+  ],
+  "entries": [
+    {
+      "code": "CA007",
+      "textId": "ca-text-007-v1",
+      "title": "La ràdio de l’escola",
+      "words": 59,
+      "teacherValidation": "approved",
+      "prosodyValidation": "pending",
+      "sourceTextSha256": "62ca91b80b9d2c2bb9ba049e2f3df1ca62e727a0839a9fe8dabf5971cdf43374",
+      "planSha256": "314e7948e76052e1aba6366fb03f5f01bf65cda32654ed93935931084b52f3b1"
+    },
+    {
+      "code": "CA008",
+      "textId": "ca-text-008-v1",
+      "title": "Un hort al pati",
+      "words": 60,
+      "teacherValidation": "approved",
+      "prosodyValidation": "pending",
+      "sourceTextSha256": "79d06bd4d8ef1c4ade2bd3ca9fb5a8af779f569e8a253c7d1669e39490cf1311",
+      "planSha256": "ead3b8d8cc3479fba842a47906e81c50d6d2a075ae44dbd995eb4fbc354f9e65"
+    },
+    {
+      "code": "CA009",
+      "textId": "ca-text-009-v1",
+      "title": "El carretó del jardí",
+      "words": 62,
+      "teacherValidation": "approved",
+      "prosodyValidation": "pending",
+      "sourceTextSha256": "430c2969b2effdb51c134744880e9258d751677f07538fd49ab53f32149b5c8a",
+      "planSha256": "773b14ffdd0930a1173a8cbc34bb5406ddbfded99170fde8203e00a0b14eaa51"
+    },
+    {
+      "code": "CA010",
+      "textId": "ca-text-010-v1",
+      "title": "Una guineu de paper",
+      "words": 63,
+      "teacherValidation": "approved",
+      "prosodyValidation": "pending",
+      "sourceTextSha256": "457a350b1bf7323400873c3c60706dcd05d84933998ffeb9c4e33cf29ab3b0ea",
+      "planSha256": "926fa1b6bd01c461a07f832a549589daa6cef1912e6e61a01c63e3a39e6a4a58"
+    },
+    {
+      "code": "CA011",
+      "textId": "ca-text-011-v1",
+      "title": "La motxilla de diumenge",
+      "words": 63,
+      "teacherValidation": "approved",
+      "prosodyValidation": "pending",
+      "sourceTextSha256": "56573d2e0a027b05455fcafb1e5aa88cdba1fde161c1e05e471fae54d27446d1",
+      "planSha256": "0c7d6f7a614c2ac2d54d0bb47090b71558a71d0f0b32404d5b2092de4b53e9ab"
+    },
+    {
+      "code": "CA012",
+      "textId": "ca-text-012-v1",
+      "title": "Una capsa de records",
+      "words": 66,
+      "teacherValidation": "approved",
+      "prosodyValidation": "pending",
+      "sourceTextSha256": "ac3a952880c8cca1ef5f4e4c1ac5281af032c6b65960a3315734c50dbc284805",
+      "planSha256": "b531b72aa68aec86c68545436813f62e2184c877a3388f83925a4c22ed513dd8"
+    }
+  ]
+}

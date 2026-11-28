@@ -176,7 +176,7 @@ El servidor mostra l'adreça local (per defecte, `http://127.0.0.1:4176`). `buil
 
 ## Versions
 
-La interfície actual és **1.51**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
+La interfície actual és **1.52**. Els increments funcionals dins de V1 segueixen 1.9, 1.10, 1.11…; una correcció puntual pot usar 1.16.1. S’han renumerat les etiquetes visuals 2.0–2.5 com a 1.10–1.15 al changelog i al footer. Els protocols de llavors V1/V2 i els identificadors immutables del banc són independents de la versió de la interfície.
 
 ## GitHub Pages i llicències
 
@@ -230,4 +230,4 @@ A **Frases**, el codi de ritme opcional recupera els mots per fragment, la veloc
 
 Els codis de Frases són `CA001`, `CA002`… (llengua + número de tres xifres, independent del focus). Els textos i les escaletes `CA003`–`CA006` estan validats pel docent. Quatre peticions amb Aoede han produït les setze variants, integrades com a pilots pendents d’audició. Els focus de Frases filtren directament la llista del sidebar; «Fes servir» aplica el dictat i el títol permet llegir-lo complet abans de decidir. Consulta el procés a [docs/DICTATS-TEXT.md](docs/DICTATS-TEXT.md).
 
-El catàleg de Frases inclou també les propostes **CA007–CA012 i ES001–ES012**, amb revisió editorial superada i pendents de validació docent. Completen la cobertura dels dotze focus de cada llengua; no tenen escaleta ni àudio encarregat. Es poden llegir i imprimir des de cada interfície, o revisar juntes a [recull de textos provisionals](content/review/frases-ca-es-2026-11-28.txt).
+Els textos **CA007–CA012 i ES001–ES012** estan validats pel docent. Les 72 variants de prosòdia i la proposta de 18 lots segueixen pendents de confirmació. A «Escaleta de prosòdia» es poden comparar els quatre ritmes, consultar «Proposta de lots» i imprimir la comparativa. Veu proposada: Aoede, català central i español de España; cap síntesi encarregada. Consulta el [resum de lots](content/review/lots-prosodia-ca-es-2026-11-28.txt) i les [escaletes en text pla](content/review/escaletes-ca-es-2026-11-28.txt).

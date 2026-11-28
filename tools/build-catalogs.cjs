@@ -21,7 +21,9 @@ function emit(name, text) {
   outputs.set(name, text);
 }
 const bundle = (global, data) => '/* Generat amb tools/build-catalogs.cjs. Edita el JSON font. */\n(function(root){root.' + global + '=' + JSON.stringify(data) + ';if(typeof module!=="undefined")module.exports=root.' + global + ';})(typeof window==="undefined"?globalThis:window);\n';
-emit('prosody-planning.js',bundle('PlecProsodyPlanning',json('audio/texts/batches/ca003-ca006-prosody-proposal-v1.json')));
+const planning=json('audio/texts/planning-index.json').map(id=>json('audio/texts/batches/'+id+'.json'));
+if(planning.some(p=>p.synthesisAuthorized!==false||p.newRequestsSent!==0||p.requestBody!==null||p.requests.some(r=>r.requestBody!==null)))throw Error('Planning records must not contain executable synthesis approvals.');
+emit('prosody-planning.js',bundle('PlecProsodyPlanning',{schemaVersion:1,proposals:planning,requests:planning.flatMap(p=>p.requests.map(r=>({...r,id:p.id+':'+r.id})))}));
 emit('text-audio.js',bundle('PlecTextAudio',json('audio/texts/index.json')));
 emit('text-review-notes.js',bundle('PlecTextAudioReview',json('audio/texts/review-notes.json')));
 emit('rhythm-profiles.js',bundle('PlecRhythmProfiles',json('content/rhythm-profiles-v1.json')));

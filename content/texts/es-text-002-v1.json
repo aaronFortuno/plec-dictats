@@ -10,7 +10,7 @@
     "Sin tilde"
   ],
   "stage": "Ciclo superior",
-  "status": "draft",
+  "status": "approved-text",
   "paragraphs": [
     "El viernes, la clase visita un museo del barrio. Un joven les muestra la imagen de un barco y explica su origen.",
     "Luego, el grupo entra en una sala con mapas antiguos. Cada equipo busca un lugar conocido y prepara un resumen de la visita.",
@@ -60,10 +60,13 @@
     "codeAtReview": "ES002"
   },
   "teacherReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat els textos i em semblen bé. Preparar les escaletes i la proposta de lots per validar abans d’enviar a síntesi.",
+    "sourceTextSha256": "e46d63befd3713da64bdab4b251fc74528f76b963d8fa4a1b580eeb1465716af"
   },
   "prosodyReview": {
-    "status": "not-prepared"
+    "status": "pending"
   },
   "synthesis": {
     "status": "not-requested"

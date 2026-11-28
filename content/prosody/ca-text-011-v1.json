@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "textId": "ca-text-011-v1",
+  "language": "ca",
+  "status": "pending-teacher-validation",
+  "sourceText": "Diumenge, la Martina prepara la motxilla per anar a caminar amb el seu oncle. Hi posa una ampolla i dues pomes. Abans de sortir, busca les galetes a la cuina. Les guarda en una capseta perquè no es trenquin durant el camí. Quan arriben al bosc, s’aturen sota un arbre. Comparteixen el berenar i recullen totes les engrunes abans de tornar a casa.",
+  "paragraphEnds": [
+    21,
+    42,
+    63
+  ],
+  "voice": "Aoede",
+  "voiceStatus": "proposed",
+  "direction": "Una sola veu en català central, clara i natural. Mantén el mateix ritme base entre versions, els accents lèxics i les reduccions vocàliques pròpies de la varietat. Articula les consonants amb naturalitat i conserva l’entonació de continuació als talls.",
+  "punctuationDirection": "La mateixa veu narra i anuncia la puntuació al mateix ritme base. Digues Coma, Punt i seguit, Punt i a part i Punt final en català. Les locucions no són mots del dictat.",
+  "pauses": {
+    "fragmentMs": 1000,
+    "paragraphMs": 1600,
+    "beforeCueMs": 250,
+    "afterCueMs": 350
+  },
+  "variants": [
+    {
+      "id": "r23",
+      "label": "2–3 mots",
+      "min": 2,
+      "max": 3,
+      "direction": "Grups molt breus, amb entonació de continuació. Conserva els mots sencers.",
+      "ends": [
+        3,
+        6,
+        10,
+        14,
+        16,
+        18,
+        21,
+        24,
+        27,
+        30,
+        32,
+        35,
+        39,
+        42,
+        44,
+        46,
+        50,
+        53,
+        55,
+        58,
+        61,
+        63
+      ],
+      "exceptions": {
+        "10": "Conserva la unitat «per anar a caminar».",
+        "14": "Tanca la frase amb la unitat «amb el seu oncle.».",
+        "39": "Conserva la unitat «perquè no es trenquin».",
+        "50": "Tanca la frase amb la unitat «s’aturen sota un arbre.»."
+      }
+    },
+    {
+      "id": "r45",
+      "label": "4–5 mots",
+      "min": 4,
+      "max": 5,
+      "direction": "Tirades breus amb unitats de sentit. Conserva articles i preposicions amb el seu complement.",
+      "ends": [
+        6,
+        10,
+        14,
+        18,
+        21,
+        24,
+        30,
+        35,
+        39,
+        42,
+        46,
+        50,
+        53,
+        58,
+        63
+      ],
+      "exceptions": {
+        "6": "Conserva la unitat «Diumenge, la Martina prepara la motxilla».",
+        "21": "Tanca el paràgraf amb la unitat «i dues pomes.».",
+        "24": "Conserva la unitat «Abans de sortir,».",
+        "30": "Tanca la frase amb la unitat «busca les galetes a la cuina.».",
+        "42": "Tanca el paràgraf amb la unitat «durant el camí.».",
+        "53": "Conserva la unitat «Comparteixen el berenar»."
+      }
+    },
+    {
+      "id": "r68",
+      "label": "6–8 mots",
+      "min": 6,
+      "max": 8,
+      "direction": "Tirades mitjanes i fluides. La puntuació pot quedar dins d’un fragment.",
+      "ends": [
+        6,
+        14,
+        21,
+        30,
+        35,
+        42,
+        50,
+        58,
+        63
+      ],
+      "exceptions": {
+        "30": "Tanca la frase amb la unitat «Abans de sortir, busca les galetes a la cuina.».",
+        "35": "Conserva la unitat «Les guarda en una capseta».",
+        "63": "Tanca el paràgraf amb la unitat «abans de tornar a casa.»."
+      }
+    },
+    {
+      "id": "r912",
+      "label": "9–12 mots",
+      "min": 9,
+      "max": 12,
+      "direction": "Tirades llargues, amb pauses a la puntuació i continuïtat dins la frase.",
+      "ends": [
+        14,
+        21,
+        30,
+        42,
+        50,
+        63
+      ],
+      "exceptions": {
+        "14": "Tanca la frase amb la unitat «Diumenge, la Martina prepara la motxilla per anar a caminar amb el seu oncle.».",
+        "21": "Tanca el paràgraf amb la unitat «Hi posa una ampolla i dues pomes.».",
+        "50": "Tanca la frase amb la unitat «Quan arriben al bosc, s’aturen sota un arbre.».",
+        "63": "Tanca el paràgraf amb la unitat «Comparteixen el berenar i recullen totes les engrunes abans de tornar a casa.»."
+      }
+    }
+  ],
+  "independentReview": {
+    "status": "passed",
+    "date": "2026-11-28",
+    "sourceSha256": "71a26063d39dfb994e5615916f845606aaa63b5c10e3ad9b53815df74c8fa931"
+  }
+}

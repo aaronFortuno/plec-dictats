@@ -11,6 +11,11 @@
 .prosody-toolbar .button{font-size:12px;padding:8px 12px}
 .prosody-draft{font-size:12px;font-weight:600;color:var(--accent);margin:0}
 .prosody-legend{font-size:12px;line-height:1.5;color:var(--muted);margin:0;max-width:100ch}
+.prosody-batches{margin:12px 0 20px;font-size:12px;line-height:1.6}
+.prosody-batches summary{cursor:pointer;font-weight:600;color:var(--green)}
+.prosody-batches table{border-collapse:collapse;width:100%;max-width:720px;margin:8px 0}
+.prosody-batches th,.prosody-batches td{text-align:left;padding:5px 12px 5px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.prosody-batches p{margin:8px 0;color:var(--muted)}
 .prosody-scroll{min-height:0;flex:1;overflow:auto;padding:4px 12px 8px 0;scrollbar-gutter:stable;overscroll-behavior:contain}
 .prosody-paragraph{margin-bottom:24px}
 .prosody-listening{margin:0;flex-shrink:0}
