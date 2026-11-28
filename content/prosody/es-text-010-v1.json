@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "es-text-010-v1",
   "language": "es",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "La niña y su compañero diseñan una casa de cartón. Recortan cuatro paredes y dejan una ventana pequeña en cada lado. Después, preparan un techo ancho y una chimenea con un tubo de papel. Pegan las piezas y esperan a que se sequen. Al día siguiente, añaden un camino de piedras y colocan la casa junto a otras construcciones. Han creado un pequeño pueblo en clase.",
   "paragraphEnds": [
     21,
@@ -10,7 +10,7 @@
     66
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
   "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
   "pauses": {
@@ -139,6 +139,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "c12e57b5a9b5584548e5e68b37b0ba4165b811068bf2bdf6deacd517482060a6"
+    "sourceSha256": "c12e57b5a9b5584548e5e68b37b0ba4165b811068bf2bdf6deacd517482060a6",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

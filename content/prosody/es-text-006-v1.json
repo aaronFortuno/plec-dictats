@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "es-text-006-v1",
   "language": "es",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "Raúl y Sara preparan una carrera en el patio. Dibujan unas rayas en el suelo y colocan una cuerda para marcar la salida. El recorrido pasa por detrás de un árbol y termina cerca de la puerta. Primero lo prueban andando para comprobar que pueden pasar. Después, llaman a sus compañeros y reparten los turnos. Sara corre en el primer grupo y Raúl espera su momento.",
   "paragraphEnds": [
     23,
@@ -10,7 +10,7 @@
     66
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
   "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
   "pauses": {
@@ -138,6 +138,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "2afb7a31b7a83bf014766b98ca8dc15c1a286e28f2ce6f6071e3a6ce8c3ea344"
+    "sourceSha256": "2afb7a31b7a83bf014766b98ca8dc15c1a286e28f2ce6f6071e3a6ce8c3ea344",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

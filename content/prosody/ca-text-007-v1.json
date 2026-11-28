@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "ca-text-007-v1",
   "language": "ca",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "Dimecres, la Júlia prepara una cançó per a la ràdio de l’escola. Al matí, comprova el micròfon amb el seu company. Després, tots dos presenten un programa de música. També expliquen per què han triat aquella cançó i qui la va escriure. A l’última classe del dia, escolten la gravació. La mestra els felicita perquè han parlat amb claredat.",
   "paragraphEnds": [
     21,
@@ -10,7 +10,7 @@
     59
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola veu en català central, clara i natural. Mantén el mateix ritme base entre versions, els accents lèxics i les reduccions vocàliques pròpies de la varietat. Articula les consonants amb naturalitat i conserva l’entonació de continuació als talls.",
   "punctuationDirection": "La mateixa veu narra i anuncia la puntuació al mateix ritme base. Digues Coma, Punt i seguit, Punt i a part i Punt final en català. Les locucions no són mots del dictat.",
   "pauses": {
@@ -130,6 +130,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "ca1fe77f1803a4389fea2e28944e99a076a6c3d362a8a615ff794dd7d691b081"
+    "sourceSha256": "ca1fe77f1803a4389fea2e28944e99a076a6c3d362a8a615ff794dd7d691b081",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

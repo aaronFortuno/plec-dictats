@@ -40,7 +40,7 @@
   $('text-layout-error').hidden=true;
   $('text-open-label').textContent=t(entry.status==='draft'?'Pendent de validar':entry.audio?'Comença el dictat':'Àudio pendent');
   document.querySelector('.dictation-nav').href=T.url(entry,settings,true,location.origin+'/');
-  $('text-audio-note').textContent=t(entry.status==='draft'?'Text per validar. Encara no se n’ha encarregat l’àudio.':entry.audio?'Aoede · català central · prova pendent d’audició':entry.prosodyReview?.status==='approved'?'Text i escaleta validats · Àudio en preparació.':'Text validat. Escaleta per validar; àudio no encarregat.');
+  $('text-audio-note').textContent=t(entry.status==='draft'?'Text per validar. Encara no se n’ha encarregat l’àudio.':entry.audio?(entry.language==='es'?'Aoede · castellà d’Espanya · prova pendent d’audició':'Aoede · català central · prova pendent d’audició'):entry.prosodyReview?.status==='approved'?'Text i escaleta validats · Àudio en preparació.':'Text validat. Escaleta per validar; àudio no encarregat.');
   const url=T.url(entry,settings);history.replaceState(null,'',new URL(new URL(url).pathname+new URL(url).search,location.origin));
   try{
    const next=await window.PlecTextWorksheet.prepare(entry,settings);

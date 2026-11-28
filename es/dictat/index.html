@@ -10,14 +10,14 @@
 <link rel="stylesheet" href="../../styles.css?v=1.32.0">
 <link rel="stylesheet" href="../../dictation.css?v=1.32.0">
 <link rel="stylesheet" href="../../theme.css?v=1.32.1">
-<link rel="stylesheet" href="../../text-mode.css?v=1.52.0">
+<link rel="stylesheet" href="../../text-mode.css?v=1.53.0">
 <script defer src="../../locales/manifest.js?v=1.32.0"></script>
 <script defer src="../../locales/es/config.js?v=1.31.0"></script>
 <script defer src="../../site-links.js?v=1.32.0"></script>
 <script defer src="../../analytics.js?v=1.32.0"></script>
 <script defer src="../../language.js?v=1.32.0"></script>
-<script defer src="../../locales/es/messages.js?v=1.52.0"></script>
-<script defer src="../../catalogs/es/editions/index.js?v=1.52.0"></script>
+<script defer src="../../locales/es/messages.js?v=1.53.0"></script>
+<script defer src="../../catalogs/es/editions/index.js?v=1.53.0"></script>
 <script defer src="../../seeds.js?v=1.32.0"></script>
 <script defer src="../../seeds-v2.js?v=1.35.0"></script>
 <script defer src="../../dictation-session.js?v=1.32.0"></script>
@@ -25,14 +25,14 @@
 <script defer src="../../motion.js?v=1.32.0"></script>
 <script defer src="../../audio-manifest.js?v=1.32.0"></script>
 <script defer src="../../audio-varieties.js?v=1.33.0"></script>
-<script defer src="../../text-audio.js?v=1.52.0"></script>
-<script defer src="../../text-catalogue.js?v=1.52.0"></script>
+<script defer src="../../text-audio.js?v=1.53.0"></script>
+<script defer src="../../text-catalogue.js?v=1.53.0"></script>
 <script defer src="../../text-dictations.js?v=1.42.0"></script>
 <script defer src="../../text-repeat.js?v=1.40.0"></script>
 <script defer src="../../rhythm-profiles.js?v=1.44.0"></script>
 <script defer src="../../rhythm-labels.js?v=1.45.2"></script>
 <script defer src="../../rhythm-code.js?v=1.45.0"></script>
-<script defer src="../../text-player.js?v=1.52.0"></script>
+<script defer src="../../text-player.js?v=1.53.0"></script>
 <script defer src="../../dictation.js?v=1.37.0"></script>
 </head>
 <body>
@@ -86,7 +86,7 @@
 <button type="button" id="listen-word" class="d-listen" aria-describedby="listen-count">
 <span class="d-word-position"><span data-word-kind>Palabra</span> <strong data-word-number></strong> <span data-word-total></span></span>
 <span data-icon="volume-2" aria-hidden="true"></span>
-<span id="listen-label">Escuchar</span>
+<span id="listen-label">Escucha</span>
 </button>
 <button type="button" id="next-word" class="d-listen" hidden><span class="d-word-position"><span data-word-kind>Palabra</span> <strong data-word-number></strong> <span data-word-total></span></span><span data-icon="arrow-right" aria-hidden="true"></span><span id="next-label">Siguiente palabra</span></button>
 <p id="listen-count" class="d-status" aria-live="polite"></p>
@@ -96,8 +96,8 @@
 <section id="pause-panel" class="d-scene" hidden aria-labelledby="pause-title">
 <div class="d-card">
 <h1 id="pause-title">Dictado en pausa.</h1>
-<p>Vuelve a concentrarte para continuar donde lo dejaste.</p>
-<button type="button" id="resume-dictation" class="button primary">Volver al dictado</button>
+<p>Vuelve a concentrarte para continuar donde estabas.</p>
+<button type="button" id="resume-dictation" class="button primary">Vuelve al dictado</button>
 <p id="resume-note" class="d-status" hidden></p>
 <button type="button" id="resume-windowed" hidden>Continuar en modo concentración</button>
 </div>
@@ -107,15 +107,15 @@
 <div class="d-card">
 <h1 id="finished-title">Dictado terminado.</h1>
 <p>Despliega la hoja y comprueba cómo has escrito las palabras.</p>
-<button type="button" id="restart-code" class="button primary">Volver a empezar</button>
-<a href="../../es/" class="small-link">Volver al preparador</a>
+<button type="button" id="restart-code" class="button primary">Vuelve a empezar</button>
+<a href="../../es/" class="small-link">Vuelve al preparador</a>
 </div>
 </section>
 <div id="text-player-root">
   <section id="tx-ready" class="d-scene" aria-labelledby="tx-title"><div class="d-card"><p class="d-eyebrow">Frases · Prototipo</p><h1 id="tx-title" tabindex="-1">¿Empezamos?</h1><p id="tx-summary"></p><p>Escucha y escribe en la hoja. Cada fragmento se repite hasta tres veces. Puedes detenerlo y ajustar el ritmo. Pulsa «Siguiente» cuando estés listo; al terminar, despliega la hoja para revisarla.</p><form id="tx-rhythm-form" class="tx-rhythm-form"><label for="tx-rhythm-input">Código de ritmo (opcional)</label><div><img id="tx-rhythm-preview" width="44" height="44" alt="" hidden><input id="tx-rhythm-input" type="text" placeholder="Ex.: ROSA" maxlength="12" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="tx-rhythm-status"><button type="submit" class="small-link">Aplicar</button></div><p id="tx-rhythm-status" class="tx-rhythm-status" role="status" aria-live="polite"></p></form><div id="tx-ready-controls" class="tx-adjust" aria-label="Ajustes del dictado"></div><label class="tx-auto-setting"><input id="tx-auto-ready" type="checkbox" checked> Escucha automática entre repeticiones</label><p class="tx-pilot">Aoede · catalán central. Audio de prueba pendiente de revisión docente.</p><p id="tx-setup-error" class="d-error" role="alert" hidden></p><button type="button" id="tx-start" class="button primary">Comenzar a pantalla completa</button></div></section>
-  <section id="tx-player" class="d-scene" aria-label="Dictado en curso" hidden><button type="button" id="tx-listen" class="d-listen"><span class="tx-position">Fragment <strong id="tx-number">1</strong><span id="tx-total"></span></span><span data-icon="volume-2"></span><span id="tx-listen-label">Escuchar</span></button><p id="tx-listen-count" class="d-status" aria-live="polite"></p><p id="tx-countdown" class="tx-countdown" role="timer" aria-live="off" hidden></p><button type="button" id="tx-auto" class="button secondary" aria-pressed="true">Detén la escucha automática</button><button type="button" id="tx-next" class="button secondary" hidden><span data-icon="arrow-right"></span><span id="tx-next-label">Fragmento siguiente</span></button><div id="tx-adjust" class="tx-adjust" aria-label="Ajustes del dictado"></div><p id="tx-error" class="d-error" role="alert" hidden></p></section>
-  <section id="tx-paused" class="d-scene" aria-labelledby="tx-paused-title" hidden><div class="d-card"><h1 id="tx-paused-title" tabindex="-1">Dictado en pausa.</h1><p>Vuelve a concentrarte para continuar donde lo dejaste.</p><button type="button" id="tx-resume" class="button primary">Volver al dictado</button></div></section>
-  <section id="tx-finished" class="d-scene" aria-labelledby="tx-finished-title" hidden><div class="d-card"><h1 id="tx-finished-title" tabindex="-1">Dictado terminado.</h1><p>Despliega la hoja y compara tu texto con el modelo. Revisa las tildes, las grafías y los signos de puntuación.</p><div class="tx-rhythm-finished"><p>Tu código de ritmo</p><div><img id="tx-rhythm-picture" width="72" height="72" alt=""><output id="tx-rhythm-result" aria-label="Código de ritmo"></output><button type="button" id="tx-rhythm-copy" class="icon-button" aria-label="Copia el código de ritmo" title="Copia el código de ritmo"><span data-icon="copy"></span></button></div><p id="tx-rhythm-summary"></p><p>Guárdalo para el próximo dictado. Corresponde a los ajustes que has elegido.</p><p id="tx-rhythm-copy-status" role="status" aria-live="polite"></p></div><button type="button" class="button primary" id="tx-restart">Volver a empezar</button><a id="tx-back" class="small-link" href="../../es/">Volver al preparador</a></div></section>
+  <section id="tx-player" class="d-scene" aria-label="Dictado en curso" hidden><button type="button" id="tx-listen" class="d-listen"><span class="tx-position">Fragmento <strong id="tx-number">1</strong><span id="tx-total"></span></span><span data-icon="volume-2"></span><span id="tx-listen-label">Escucha</span></button><p id="tx-listen-count" class="d-status" aria-live="polite"></p><p id="tx-countdown" class="tx-countdown" role="timer" aria-live="off" hidden></p><button type="button" id="tx-auto" class="button secondary" aria-pressed="true">Detén la escucha automática</button><button type="button" id="tx-next" class="button secondary" hidden><span data-icon="arrow-right"></span><span id="tx-next-label">Fragmento siguiente</span></button><div id="tx-adjust" class="tx-adjust" aria-label="Ajustes del dictado"></div><p id="tx-error" class="d-error" role="alert" hidden></p></section>
+  <section id="tx-paused" class="d-scene" aria-labelledby="tx-paused-title" hidden><div class="d-card"><h1 id="tx-paused-title" tabindex="-1">Dictado en pausa.</h1><p>Vuelve a concentrarte para continuar donde estabas.</p><button type="button" id="tx-resume" class="button primary">Vuelve al dictado</button></div></section>
+  <section id="tx-finished" class="d-scene" aria-labelledby="tx-finished-title" hidden><div class="d-card"><h1 id="tx-finished-title" tabindex="-1">Dictado terminado.</h1><p>Despliega la hoja y compara tu texto con el modelo. Revisa las tildes, las grafías y los signos de puntuación.</p><div class="tx-rhythm-finished"><p>Tu código de ritmo</p><div><img id="tx-rhythm-picture" width="72" height="72" alt=""><output id="tx-rhythm-result" aria-label="Código de ritmo"></output><button type="button" id="tx-rhythm-copy" class="icon-button" aria-label="Copia el código de ritmo" title="Copia el código de ritmo"><span data-icon="copy"></span></button></div><p id="tx-rhythm-summary"></p><p>Guárdalo para el próximo dictado. Corresponde a los ajustes que has elegido.</p><p id="tx-rhythm-copy-status" role="status" aria-live="polite"></p></div><button type="button" class="button primary" id="tx-restart">Vuelve a empezar</button><a id="tx-back" class="small-link" href="../../es/">Vuelve al preparador</a></div></section>
 </div>
 
 </main>

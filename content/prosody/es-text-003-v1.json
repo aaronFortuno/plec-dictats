@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "es-text-003-v1",
   "language": "es",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "Hoy, Hugo ayuda a su hermana en el huerto. Han encontrado hierbas entre las hortalizas y quieren quitarlas antes de regar. La tierra sigue húmeda porque ha llovido durante la noche. Los hermanos trabajan con cuidado para no arrancar las plantas pequeñas. Al terminar, hacen un hoyo junto a la valla y plantan una lechuga. Después, guardan las herramientas en una caja de madera.",
   "paragraphEnds": [
     21,
@@ -10,7 +10,7 @@
     64
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
   "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
   "pauses": {
@@ -134,6 +134,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "2b26cd2c4f435e3908ab9e4a194af08d5cdb552ed03e2c7caed09c20b8ee8f3f"
+    "sourceSha256": "2b26cd2c4f435e3908ab9e4a194af08d5cdb552ed03e2c7caed09c20b8ee8f3f",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

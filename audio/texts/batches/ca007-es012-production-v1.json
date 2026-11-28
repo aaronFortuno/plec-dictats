@@ -1,0 +1,138 @@
+{
+  "id": "ca007-es012-production-v1",
+  "status": "authorized",
+  "approvedAt": "2026-11-28",
+  "voice": "Aoede",
+  "minimumIntervalMs": 120000,
+  "maximumDailyRequests": 10,
+  "quotaTimezone": "America/Los_Angeles",
+  "confirmation": "He revisat les escaletes i em semblen bé. Pots començar a enviar els 18 lots a Gemini amb Aoede i els quatre ritmes, sense sobrepassar les peticions a 1 cada 2 minuts, i tenint present que el límit diari és de 10 lots. Avui una part i demà la resta. A mesura que els tinguem els puges.",
+  "batches": [
+    {
+      "batchId": "ca007-four-rhythms-v1",
+      "entryId": "ca-text-007-v1",
+      "language": "ca",
+      "requestHash": "c9c167126e50e65db753b1bb846b9df2410aecffe05587a7df23f51bac78a88f",
+      "planHash": "15007a0cfa65cf67a8217900680bd03f439a51803b456c456c305d40417399fe"
+    },
+    {
+      "batchId": "ca008-four-rhythms-v1",
+      "entryId": "ca-text-008-v1",
+      "language": "ca",
+      "requestHash": "08c098fa356ba4624e232828843173dd520d56db4e53e91fb178222be5256e2c",
+      "planHash": "ec89c1461b99de6d93279a9da7fa175a6263f46264795e3494f48fe37f1f9253"
+    },
+    {
+      "batchId": "ca009-four-rhythms-v1",
+      "entryId": "ca-text-009-v1",
+      "language": "ca",
+      "requestHash": "37de6c26ffc65c192f7787296b25f0a7a5aa2371dc641b1c2c7257d56ed5933d",
+      "planHash": "db5e56efdae2e7e2624231e23567538afcefcb40ae554c947d2918e059b721e3"
+    },
+    {
+      "batchId": "ca010-four-rhythms-v1",
+      "entryId": "ca-text-010-v1",
+      "language": "ca",
+      "requestHash": "f6952b1337dc2e307c8baa7d7ec21ed43a9adc6e2a94115175382336ff2d1a07",
+      "planHash": "bf8c76ea7d6fe30d1f345763b0e531e81b095e7568bbab8a7ef50174707d62a3"
+    },
+    {
+      "batchId": "ca011-four-rhythms-v1",
+      "entryId": "ca-text-011-v1",
+      "language": "ca",
+      "requestHash": "1360c1e38550d0db3d02829feff1de0c89cda083c73c2334e2bbe21651e191c5",
+      "planHash": "1f17a97a4ebc4dad4d8f7a68310e7fb78be32d61f40083f3dc8e8a38ebb8c3b7"
+    },
+    {
+      "batchId": "ca012-four-rhythms-v1",
+      "entryId": "ca-text-012-v1",
+      "language": "ca",
+      "requestHash": "359864c3f37d6bdc426a1e7706acf1268bdc0a9ee598b96e7383f8528c11a94d",
+      "planHash": "c15cc41d44020fa81613858520803cf0f20c4d7662e9fe95697dcb5c8768e762"
+    },
+    {
+      "batchId": "es001-four-rhythms-v1",
+      "entryId": "es-text-001-v1",
+      "language": "es",
+      "requestHash": "a00398a8666f58ce62fa0362ec0a37dc9dac314c1032c93126ed35d3fe342ceb",
+      "planHash": "4be5778b2e1c3080f7f138b4b3417309d3e92cf958fcdf25fb1e29915144ffb9"
+    },
+    {
+      "batchId": "es002-four-rhythms-v1",
+      "entryId": "es-text-002-v1",
+      "language": "es",
+      "requestHash": "a50270663055d4fa74548e9f68a94c128df9297b0f1e610bafc2f0530e73310e",
+      "planHash": "110919f18b3582ab9be335eecfe8b8ef8ec86bbe56ddf864f8fa0cf3234eff62"
+    },
+    {
+      "batchId": "es003-four-rhythms-v1",
+      "entryId": "es-text-003-v1",
+      "language": "es",
+      "requestHash": "d59b762783f1cbfb746cba06421fda5c298dbe0fe7a145e6ce7ed3d32f6732c9",
+      "planHash": "fced3a65fcdc83d27d28825ef7537187b77b14f388a7e049dc44515c1b1ff0f8"
+    },
+    {
+      "batchId": "es004-four-rhythms-v1",
+      "entryId": "es-text-004-v1",
+      "language": "es",
+      "requestHash": "9cbf0bff1bbfcc1d14f95464e2d4054fc3be6c4a01b9494f04141d209e4597af",
+      "planHash": "d48f7ef2a55812da44650f08aef45ba465183dc96ebd7808603152fb67dfb037"
+    },
+    {
+      "batchId": "es005-four-rhythms-v1",
+      "entryId": "es-text-005-v1",
+      "language": "es",
+      "requestHash": "4d284e927c926115faabe975ce58247519a2212f3cdb47e84879961c4208a5e9",
+      "planHash": "330aa6f066fee04bcbaee0510d68b387aa3f5b48c2638fddd1f743af9b49efb7"
+    },
+    {
+      "batchId": "es006-four-rhythms-v1",
+      "entryId": "es-text-006-v1",
+      "language": "es",
+      "requestHash": "5ab9b446a1d2459bdc97733a9c5b68f380aa2ec2e00aa4ffee81390d5b6d8c27",
+      "planHash": "d13b1700746120933553f9f7201dfc67a6788979599b7f081c71467fb90d5a2d"
+    },
+    {
+      "batchId": "es007-four-rhythms-v1",
+      "entryId": "es-text-007-v1",
+      "language": "es",
+      "requestHash": "c556f74561b473d8a73a94a8c53bf9a4f629d067f700edb49b9ef37b7cdd7781",
+      "planHash": "a24cdeeda5c42f56e689bb93e6c7af715454edcea87d90a8f5bf2044fbc4761b"
+    },
+    {
+      "batchId": "es008-four-rhythms-v1",
+      "entryId": "es-text-008-v1",
+      "language": "es",
+      "requestHash": "cee93677b88a3a84a8d9a94afd27f4a18d0b7124fb73466125efc8ad7d56b3bf",
+      "planHash": "7d81132e2f7e5927fd863e7a7cef264e16f0a8aa026313a711e0a1e202176e5b"
+    },
+    {
+      "batchId": "es009-four-rhythms-v1",
+      "entryId": "es-text-009-v1",
+      "language": "es",
+      "requestHash": "a5f26d6c940a29796d3805ff7903e55ba2c626ac68a841a4629fb679ecec8eb2",
+      "planHash": "5a9388bd1a1e928224dec46c3f2809de15966c7a3d4bceb42ba871b7af63eb65"
+    },
+    {
+      "batchId": "es010-four-rhythms-v1",
+      "entryId": "es-text-010-v1",
+      "language": "es",
+      "requestHash": "ac2b38b111dad810357cc37c6ba45611fa83f6c2d6496de6e05135fae5373b75",
+      "planHash": "c17e6f3ef1e44d1b9530e012c92b7d1bbec1614daa957ce760fc4dcacb00c3ff"
+    },
+    {
+      "batchId": "es011-four-rhythms-v1",
+      "entryId": "es-text-011-v1",
+      "language": "es",
+      "requestHash": "094e2cd28c1390aa3d80a00796af41f49365ec28674a7c496fe5e51994a75d44",
+      "planHash": "f7d7db2e432224de0e7f2ea86805907432de2ccb0dfa3a510c66bed754801c49"
+    },
+    {
+      "batchId": "es012-four-rhythms-v1",
+      "entryId": "es-text-012-v1",
+      "language": "es",
+      "requestHash": "c4cc9a1c3d07cbb717ef039e757f84b949adb34324df8a4a151ec67b4c9c4b8f",
+      "planHash": "5f02b20c612eb16d0d110dc87fbfb7ccc34c0f4f5e83312a416b140fa2684ad4"
+    }
+  ]
+}

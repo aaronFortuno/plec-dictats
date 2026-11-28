@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "ca-text-009-v1",
   "language": "ca",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "La Rita ajuda l’avi a portar terra al jardí. Quan empeny el carretó pel carrer, una roda comença a fer soroll. S’aturen vora una paret i revisen la roda. L’avi hi troba una pedra petita i la retira amb cura. Ara el carretó torna a rodar bé. La Rita reparteix la terra entre els rosers i rega les arrels amb una gerra.",
   "paragraphEnds": [
     21,
@@ -10,7 +10,7 @@
     62
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola veu en català central, clara i natural. Mantén el mateix ritme base entre versions, els accents lèxics i les reduccions vocàliques pròpies de la varietat. Articula les consonants amb naturalitat i conserva l’entonació de continuació als talls.",
   "punctuationDirection": "La mateixa veu narra i anuncia la puntuació al mateix ritme base. Digues Coma, Punt i seguit, Punt i a part i Punt final en català. Les locucions no són mots del dictat.",
   "pauses": {
@@ -137,6 +137,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "b4d2b181c72b9c611584687c9c9a751cb75048577ee498cc1305eaab5edf4b18"
+    "sourceSha256": "b4d2b181c72b9c611584687c9c9a751cb75048577ee498cc1305eaab5edf4b18",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

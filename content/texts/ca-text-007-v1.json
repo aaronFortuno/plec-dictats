@@ -54,9 +54,15 @@
     "sourceTextSha256": "62ca91b80b9d2c2bb9ba049e2f3df1ca62e727a0839a9fe8dabf5971cdf43374"
   },
   "prosodyReview": {
-    "status": "pending"
+    "status": "approved",
+    "date": "2026-11-28",
+    "confirmation": "He revisat les escaletes i em semblen bé. Pots començar a enviar els 18 lots a Gemini amb Aoede i els quatre ritmes, sense sobrepassar les peticions a 1 cada 2 minuts, i tenint present que el límit diari és de 10 lots. Avui una part i demà la resta. A mesura que els tinguem els puges.",
+    "planHash": "15007a0cfa65cf67a8217900680bd03f439a51803b456c456c305d40417399fe"
   },
   "synthesis": {
-    "status": "not-requested"
+    "status": "approved",
+    "voice": "Aoede",
+    "variety": "central",
+    "maximumNewRequests": 1
   }
 }

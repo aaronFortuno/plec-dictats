@@ -27,7 +27,8 @@ if(require.main===module){
  const selected=process.argv.find(a=>a.startsWith('--proposal='))?.slice(11)||'ca003-ca006',scopes={'ca003-ca006':{codes:[3,4,5,6].map(n=>'CA00'+n)},'ca007-ca012':{codes:[7,8,9,10,11,12].map(n=>'CA'+String(n).padStart(3,'0')),status:'pending-prosody-validation'},'es001-es012':{codes:Array.from({length:12},(_,n)=>'ES'+String(n+1).padStart(3,'0')),variety:'Español de España',status:'pending-prosody-validation'}};
  const scope=scopes[selected];if(!scope)throw Error('Proposta desconeguda.');const entries=scope.codes.map(code=>T.find(code,code.startsWith('ES')?'es':'ca'));
  if(entries.some(entry=>entry?.teacherReview?.status!=='approved'))throw Error('Calen els textos validats pel docent.');
- const result=proposal(entries,{...scope,id:selected+'-prosody-proposal-v1'}),target=path.resolve(__dirname,'../audio/texts/batches/'+result.id+'.json');
+ const options={...scope,id:selected+'-prosody-proposal-v1'};if(selected!=='ca003-ca006'&&entries.every(e=>e.prosodyReview.status==='approved'))options.status='approved-planning';
+ const result=proposal(entries,options),target=path.resolve(__dirname,'../audio/texts/batches/'+result.id+'.json');
  if(process.argv.includes('--write'))fs.writeFileSync(target,JSON.stringify(result,null,2)+'\n');
  console.log(JSON.stringify({singleRequest:result.singleRequest,requests:result.requests.map(r=>({codes:[...new Set(r.versions.map(v=>v.code))],...r.estimate})),newRequestsSent:0},null,2));
 }

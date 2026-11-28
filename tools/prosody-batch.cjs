@@ -6,6 +6,7 @@ const batchId='ll01-four-rhythms-v1',T=require('../text-dictations.js'),P=requir
 const sha=value=>createHash('sha256').update(value).digest('hex');
 async function read(file,fallback){try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(e){if(e.code==='ENOENT')return fallback;throw e;}}
 function compile(selectedBatch=batchId){
+ if(require('./prosody-approved-batch.cjs').supports(selectedBatch))return require('./prosody-approved-batch.cjs').compile(selectedBatch);
  if(/^ca00[3-6]-four-rhythms-v1$/.test(selectedBatch))return require('./prosody-new-batch.cjs').compile(selectedBatch);
  if(!['ll01-four-rhythms-v1','ll02-four-rhythms-v1'].includes(selectedBatch))throw Error('Lot desconegut.');
  const entry=selectedBatch===batchId?T.catalogue[0]:require('../content/texts/ca-ll-002-v1.json');
@@ -59,7 +60,7 @@ async function main(){
   require('../../sentit/tools/audio-quota.cjs').assertQuota(await read(path.join(shared,'last-api-error.json'),null));
   const log=await read(path.join(shared,'request-log.json'),[]),day=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles'}),today=day.format(new Date());
   if(!resume&&log.filter(i=>day.format(new Date(i.at))===today).length>=10)throw Error('Quota local diària completa. Cap petició enviada.');
-  if(!resume&&log.length&&Date.now()-Date.parse(log.at(-1).at)<65000)throw Error('Una altra petició és recent. Espera 65 segons abans de l’únic enviament.');
+  if(!resume&&log.length&&Date.now()-Date.parse(log.at(-1).at)<120000)throw Error('Una altra petició és recent. Calen dos minuts entre enviaments. Cap petició enviada.');
   const key=(process.env.GEMINI_API_KEY||parseEnv(await fs.readFile(path.resolve(root,'../.private/comprensio-oral/gemini.env'),'utf8')).GEMINI_API_KEY)?.trim();if(!key)throw Error('Falta configuració privada.');
   await fs.writeFile(path.join(folder,'request.json'),JSON.stringify(built.body,null,2));await fs.writeFile(path.join(folder,'items.json'),JSON.stringify(built.items,null,2));await fs.writeFile(path.join(folder,'estimate.json'),JSON.stringify(built.estimate,null,2));
   if(!resume){const record={at:new Date().toISOString(),code:batchId,purpose:'plec-approved-four-rhythms',hash:built.requestHash,model:built.body.model,estimate:built.estimate};await fs.writeFile(attemptFile,JSON.stringify({...record,status:'reserved'},null,2));await fs.writeFile(path.join(shared,'request-log.json'),JSON.stringify([...log,record],null,2)+'\n');}

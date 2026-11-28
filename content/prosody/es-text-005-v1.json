@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "es-text-005-v1",
   "language": "es",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "En el barrio han preparado una biblioteca viajera. Cada viernes, dos vecinas llevan libros a la plaza en una vieja bicicleta. Bruno busca una aventura de barcos y su amiga elige un libro de animales. Ambos se sientan en un banco para leer. Antes de volver a casa, anotan los libros que se llevan. La semana siguiente deberán devolverlos para que otros vecinos puedan disfrutarlos.",
   "paragraphEnds": [
     21,
@@ -10,7 +10,7 @@
     65
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
   "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
   "pauses": {
@@ -135,6 +135,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "0c79e26347990f81694afc17cdb4d432188822d68f2e16fee4dd69c44b597a6c"
+    "sourceSha256": "0c79e26347990f81694afc17cdb4d432188822d68f2e16fee4dd69c44b597a6c",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "ca-text-012-v1",
   "language": "ca",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "La Txell obre una capsa de records i els escampa damunt la taula. Hi troba una petxina i un collaret de l’estiu. També hi guarda castanyes d’un passeig a la muntanya i un dibuix fet pel seu germà. Al dibuix, hi apareix un peix blau. La Txell tria alguns records per portar-los a classe. Vol explicar als companys d’on venen i per què els ha conservat.",
   "paragraphEnds": [
     22,
@@ -10,7 +10,7 @@
     66
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola veu en català central, clara i natural. Mantén el mateix ritme base entre versions, els accents lèxics i les reduccions vocàliques pròpies de la varietat. Articula les consonants amb naturalitat i conserva l’entonació de continuació als talls.",
   "punctuationDirection": "La mateixa veu narra i anuncia la puntuació al mateix ritme base. Digues Coma, Punt i seguit, Punt i a part i Punt final en català. Les locucions no són mots del dictat.",
   "pauses": {
@@ -139,6 +139,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "d6af058fb64c53319382cbad99dcf5654034c5427ef19877e75856e9f192e561"
+    "sourceSha256": "d6af058fb64c53319382cbad99dcf5654034c5427ef19877e75856e9f192e561",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

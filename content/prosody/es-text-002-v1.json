@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "es-text-002-v1",
   "language": "es",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "El viernes, la clase visita un museo del barrio. Un joven les muestra la imagen de un barco y explica su origen. Luego, el grupo entra en una sala con mapas antiguos. Cada equipo busca un lugar conocido y prepara un resumen de la visita. Al salir, la maestra recoge los trabajos. El lunes los leerán en clase y compartirán lo que han descubierto.",
   "paragraphEnds": [
     22,
@@ -10,7 +10,7 @@
     64
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
   "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
   "pauses": {
@@ -138,6 +138,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "cff1960ea19e4bca9a92109bb5fb773b164c1bb67ba55c87437d599621e8b4a7"
+    "sourceSha256": "cff1960ea19e4bca9a92109bb5fb773b164c1bb67ba55c87437d599621e8b4a7",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

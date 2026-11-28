@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "es-text-004-v1",
   "language": "es",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "Jorge aprende a tejer con su abuela. Elige una madeja de lana roja y otra de color naranja para preparar una bufanda. Cada tarde, recoge las agujas y trabaja un rato junto a la ventana. Su abuela le ayuda cuando se enreda el hilo. Cuando termina, Jorge envuelve el regalo y dibuja una tarjeta. Quiere entregárselo a su hermano antes de que llegue el invierno.",
   "paragraphEnds": [
     22,
@@ -10,7 +10,7 @@
     65
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
   "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
   "pauses": {
@@ -139,6 +139,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "98a8f6c27142a3056781f69d35f397f4918f142db67c72b9137a8b98ceb3635b"
+    "sourceSha256": "98a8f6c27142a3056781f69d35f397f4918f142db67c72b9137a8b98ceb3635b",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

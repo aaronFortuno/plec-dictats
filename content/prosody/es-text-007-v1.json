@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "es-text-007-v1",
   "language": "es",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "Quique prepara un almuerzo para compartir en el parque. Coloca pan y queso en una caja, junto a unas zanahorias y unas cerezas. Cuando llega, busca a sus amigos cerca de la fuente. Entre todos extienden una manta en una zona de sombra. Cada uno prueba algo distinto y recoge sus restos. Antes de marcharse, comprueban que la zona ha quedado limpia.",
   "paragraphEnds": [
     23,
@@ -10,7 +10,7 @@
     62
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
   "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
   "pauses": {
@@ -136,6 +136,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "6ecdb621af3e75f6e16b3dd3cae5efaee1459f5758e9d7310afcfa679bf2db95"
+    "sourceSha256": "6ecdb621af3e75f6e16b3dd3cae5efaee1459f5758e9d7310afcfa679bf2db95",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

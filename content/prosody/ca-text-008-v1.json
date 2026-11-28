@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "ca-text-008-v1",
   "language": "ca",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "Ahir, l’Helena i el seu germà van visitar l’hort de l’escola. Hi havia herbes altes al costat dels arbres. Avui, han tret les herbes i han remogut la terra humida. Després, la mestra els ha ajudat a plantar enciams. Abans de marxar, han omplert una regadora amb aigua. Ara l’hort té una filera nova i un petit cartell de fusta.",
   "paragraphEnds": [
     19,
@@ -10,7 +10,7 @@
     60
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola veu en català central, clara i natural. Mantén el mateix ritme base entre versions, els accents lèxics i les reduccions vocàliques pròpies de la varietat. Articula les consonants amb naturalitat i conserva l’entonació de continuació als talls.",
   "punctuationDirection": "La mateixa veu narra i anuncia la puntuació al mateix ritme base. Digues Coma, Punt i seguit, Punt i a part i Punt final en català. Les locucions no són mots del dictat.",
   "pauses": {
@@ -132,6 +132,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "e327d412109355a388e91470bbb44509220f7a2384df91b429ebe5617f1b92f4"
+    "sourceSha256": "e327d412109355a388e91470bbb44509220f7a2384df91b429ebe5617f1b92f4",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

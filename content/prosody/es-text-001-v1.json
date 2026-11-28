@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "es-text-001-v1",
   "language": "es",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "El sábado, Inés sube al autobús con su padre. Van de excursión a un pueblo que está detrás de la montaña. Después de cruzar un túnel, llegan a una plaza. Allí compran un melocotón y se sientan bajo un árbol para descansar. Un pájaro se acerca a la fuente y salpica el agua con las alas. Inés lo dibuja en su cuaderno antes de volver.",
   "paragraphEnds": [
     21,
@@ -10,7 +10,7 @@
     65
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
   "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
   "pauses": {
@@ -137,6 +137,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "7c78ac52b00f8246fd7c07b9cc5c407acebcd488a63c6f4acc419acd374c41a0"
+    "sourceSha256": "7c78ac52b00f8246fd7c07b9cc5c407acebcd488a63c6f4acc419acd374c41a0",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

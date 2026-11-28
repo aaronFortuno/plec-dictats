@@ -355,3 +355,29 @@ Accés: Frases → triar text → Escaleta de prosòdia (a la cantonada del prev
 Cap petició de síntesi en aquesta iteració. Cal validar les escaletes, la veu proposada i els lots abans de preparar l’enviament exacte.
 
 Validació 1.52: 64 comprovacions locals passades, sense errors. Revisades les 72 variants pendents, les 54 pàgines PDF, les empremtes editorials i d’aprovació de text, les locucions en cada llengua, els 18 lots amb quatre lectures i els topalls temporals. Verificades al navegador les comparatives de lectura sense àudio, les taules de lots, la descàrrega de PDF i la navegació de les dues llengües. Els sis pilots i els seus àudios conserven les empremtes anteriors. Cap síntesi ni comprovació remota del desplegament.
+
+## Producció autoritzada de divuit lots · 1.53
+
+El 28/11/2026 el docent valida les escaletes i autoritza explícitament Aoede, els quatre ritmes i els divuit lots CA007–CA012 / ES001–ES012. Les metadades passen a `prosodyReview:approved` i `synthesis:approved`. Les empremtes dels textos i talls editorials no canvien; la revisió independent conserva l’estat del pla en què es va fer. El compilador `tools/prosody-approved-batch.cjs` comprova les aprovacions i congela el cos de cada petició. Entrada estimada entre 6.016 i 7.037 tokens i durada prudent entre 355 i 373 segons, per sota dels topalls preventius de 7.900 tokens i 390 segons.
+
+Les autoritzacions executables són els divuit `audio/texts/batches/*-four-rhythms-v1.json` i la cua `ca007-es012-production-v1.json`. Els documents `*-prosody-proposal-v1.json` continuen sent resums de planificació sense cos executable: `approved-planning` indica que el docent ja ha validat el pla, no que s’hagi rebut tot l’àudio. La taula del web diferencia els àudios disponibles dels que s’estan preparant.
+
+### Quota i recuperació
+
+Una única petició nova per lot, amb almenys 120 segons entre POST i un màxim compartit de deu peticions per dia de quota (`America/Los_Angeles`). El registre i el lock de peticions es comparteixen amb Sentit. El 29/11/2026 el canvi de dia de quota és a les 08:00 UTC, 09:00 a la península. Cap petició extra de prova ni regeneració queda inclosa en aquest encàrrec.
+
+`node tools/run-phrase-production.cjs --run-authorized-queue --today` processa només la quota disponible del dia. Sense `--today`, espera el restabliment abans de continuar. L’estat és a `output/audio/phrase-production-v1/status.json`; el lock propi evita dos executors de la mateixa cua. La resposta i l’ID es conserven abans de la recuperació. Un intent previ no rebut, errors HTTP o format desconegut aturen l’enviament per revisar-los; mai es torna a enviar una petició amb resultat ambigu. Els CA008, CA012 i ES001 s’han recuperat de les respostes desades, sense repetir-los: contenidors amb marc PCM inicial de 10, 30 i 100 ms, respectivament. La recuperació conserva totes les mostres i elimina només les metadades del contenidor.
+
+### Integració local i publicació
+
+`tools/local-prosody-align.cjs` obté marques de temps locals amb Vosk: model català `vosk-model-small-ca-0.4` i castellà `vosk-model-small-es-0.42`. El model castellà petit és Apache 2.0, obtingut de la [llista oficial de models Vosk](https://alphacephei.com/vosk/models); no es publica amb el web. Les empremtes de model, presa, petició i pla es registren en el rebut. Les marques ASR són una ajuda temporal, no una validació de la pronunciació.
+
+`tools/prepare-prosody-pilot.cjs --batch=ID` exigeix cobertura local suficient, identitat exacta de presa/pla i fronteres segures. Genera quatre MP3 mono de 24 kHz i 64 kbit/s a `assets/audio/texts/ca/` o `assets/audio/texts/es/`. La durada total i els intervals de mots es conserven, sense accelerar la veu. Els rebuts i `audio/texts/index.json` s’integren al web amb `tools/build-catalogs.cjs`. Els àudios són sempre `pending-listening` i `pronunciationValidated:false`. El docent els pot revisar a Escaleta, marcar talls i copiar les observacions; cap correcció automàtica implica una nova síntesi.
+
+La publicació és progressiva, després de comprovar empremtes, cobertura, descodificació dels MP3, navegació i reproducció locals. No es comprova el desplegament remot: ho fa el docent.
+
+Per continuar sense intervenció entre dies: `node tools/run-phrase-production.cjs --run-authorized-queue --publish`. Aquest comandament manté un procés local, espera el dia següent en intervals curts i, per cada lot rebut, alinea, comprova i publica. No és un servei remot: necessita l’ordinador encès, connexió i el procés viu. Si s’atura l’equip, es pot reprendre la mateixa cua: les preses ja rebudes no es tornen a sintetitzar. Un error ambigu requereix revisió abans de reprendre.
+
+`tools/publish-phrase-batch.cjs --batch=ID --publish` integra només una presa aprovada. Comprova la branca `main`, rebutja canvis de treball aliens o un índex Git preexistent, limita els fitxers que prepara al lot i als manifests/HTML generats, i canvia la clau de memòria cau segons l’empremta del registre. Comprova empremtes, PDF i les metadades reals dels quatre MP3 al navegador abans del commit i push. Les publicacions completes es reconeixen sense tornar a executar proves ni fer peticions de síntesi. Una fallada de publicació atura la cua i conserva els àudios.
+
+Primera integració: CA007–CA012, 24 MP3, amb les 65 comprovacions de la suite anterior superades i una comprovació nova de 24 càrregues MP3 reals i accés al reproductor. La suite passa a 66 comprovacions. Les quatre variants de cada text continuen pendents d’audició docent.

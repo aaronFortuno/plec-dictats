@@ -17,9 +17,11 @@ function recoverStreamedWave(bytes) {
   if (chunks.map(chunk => chunk.tag).join(',') !== 'fmt ,data,C2PA') throw Error('Unknown prefix layout: no automatic recovery');
   const [fmt, first] = chunks.map(chunk => chunk.data), rest = bytes.subarray(end);
   if (fmt.length !== 16 || fmt.readUInt16LE(0) !== 1 || fmt.readUInt16LE(2) !== 1 || fmt.readUInt16LE(14) !== 16 || fmt.readUInt16LE(12) !== 2 || fmt.readUInt32LE(4) !== 24000 || fmt.readUInt32LE(8) !== 48000 || first.length % 2 || rest.length % 2) throw Error('Unsupported PCM format');
-  // Observed initial frames: 20 ms in Plec LL01; 70 ms in LL02; 40/80 ms in Sentit.
-  // Accept only those observed layouts; all other format checks stay strict.
-  if (![960,1920,3360,3840].includes(first.length)) throw Error('Unexpected first streaming frame');
+  // The provider varies its first PCM frame (observed 10–120 ms). Its length
+  // does not change the container layout. Accept bounded 10 ms units rather
+  // than treating every new duration as a different file format. All PCM,
+  // channel/rate/bit-depth and C2PA layout checks remain mandatory.
+  if (first.length<480||first.length>9600||first.length%480) throw Error('Unexpected first streaming frame');
   const pieces=[first],tags=[];let cursor=end,scan=end;
   while((scan=bytes.indexOf('ID3',scan))!==-1){
     const at=scan;scan+=3;

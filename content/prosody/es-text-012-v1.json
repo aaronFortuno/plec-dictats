@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "es-text-012-v1",
   "language": "es",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "Ayer, la clase decidió preparar una obra de teatro. Algunos alumnos escribieron el principio y otros buscaron telas para hacer los disfraces. Hoy ensayan en el aula y prueban cómo se escuchan las voces. La maestra les ha pedido que hablen despacio y miren al público. Si mañana terminaran a tiempo, podrían invitar a otra clase. Cuando lleguen los invitados, todos estarán preparados para empezar.",
   "paragraphEnds": [
     22,
@@ -10,7 +10,7 @@
     65
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
   "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
   "pauses": {
@@ -136,6 +136,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "d065cd931c15672adbacee340317422ac7c23bd3d6f6d63546e213c89a67b2a7"
+    "sourceSha256": "d065cd931c15672adbacee340317422ac7c23bd3d6f6d63546e213c89a67b2a7",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

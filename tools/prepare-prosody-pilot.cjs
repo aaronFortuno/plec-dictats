@@ -3,13 +3,13 @@
 const fs=require('node:fs/promises'),path=require('node:path'),{createHash}=require('node:crypto');
 const root=path.resolve(__dirname,'..'),B=require('./prosody-batch.cjs'),T=require('../text-dictations.js'),P=require('../prosody.js');
 const sha=v=>createHash('sha256').update(v).digest('hex');
-function timingWords(words){
+function timingWords(words,language='ca'){
  // Local ASR spelling alternatives, never edits to the transcript or recording.
- const result=[],merged={'com a':'coma','de mar':'demà','i lusió':'il·lusió','com panys':'companys'};
+ const result=[],merged=language==='es'?{'a parte':'aparte'}:{'com a':'coma','de mar':'demà','i lusió':'il·lusió','com panys':'companys'};
  for(let i=0;i<words.length;i++){
   const word=words[i],pair=word.word+' '+words[i+1]?.word;
   if(merged[pair]){result.push({...word,word:merged[pair],end:words[++i].end});continue;}
-  if(word.word==='apart')result.push({...word,word:'a'},{...word,word:'part'});else result.push(word);
+  if(language==='ca'&&word.word==='apart')result.push({...word,word:'a'},{...word,word:'part'});else result.push(word);
  }
  return result;
 }
@@ -19,12 +19,13 @@ async function main(){
  const folder=path.join(root,'output/audio',b.batchId,b.requestHash.slice(0,12));
  const raw=await fs.readFile(path.join(folder,'raw.wav')),recognition=JSON.parse(await fs.readFile(path.join(folder,'alignment.json'))),attempt=JSON.parse(await fs.readFile(path.join(folder,'attempt.json')));
  if(sha(raw)!==recognition.sha256||sha(raw)!==attempt.rawSha256||attempt.requestHash!==b.requestHash)throw Error('La presa o l’alineació no correspon al lot.');
+ if(recognition.language&&recognition.language!==b.entry.language)throw Error('La llengua del reconeixedor no correspon al text.');
  const overridePath=path.join(root,'audio/texts/batches',b.batchId+'-timing-review.json');
  const overrides=await fs.readFile(overridePath,'utf8').then(JSON.parse).catch(e=>{if(e.code==='ENOENT')return null;throw e;});
  if(overrides&&(overrides.rawSha256!==sha(raw)||overrides.requestHash!==b.requestHash))throw Error('La proposta de frontera correspon a una altra presa.');
  const expected=[],ends=[];
  for(const item of b.items){expected.push(...item.text.split(/\s+/u));const next=b.items[item.requestIndex+1];if(!next||next.variant!==item.variant||next.fragment!==item.fragment)ends.push({variant:item.variant,fragment:item.fragment,afterToken:expected.length});}
- const heard=timingWords(recognition.words),map=require('./prepare-text-pilot.cjs').align(expected,heard);
+ const heard=timingWords(recognition.words,b.entry.language),map=require('./prepare-text-pilot.cjs').align(expected,heard);
  for(const token of overrides?.tokens||[]){
   const index=token.token-1,found=heard.findIndex(w=>w.word===token.heardWord&&w.start===token.start&&w.end===token.end);
   if(map[index]!==null||found<0||token.expected!==expected[index]||token.status!=='pending-listening')throw Error('Proposta temporal de token incompatible.');
@@ -67,7 +68,7 @@ async function main(){
  }
  bounds.push(duration);
  const entry=b.entry,plan=b.plan,variants={},binary=await require('../../sentit/tools/audio-files.cjs').ffmpegBinary(),{ffmpeg}=require('../../sentit/tools/audio-files.cjs');
- const publicFolder='assets/audio/texts/ca/'+entry.code.toLowerCase()+'-four-v1',destination=path.join(root,publicFolder);await fs.mkdir(destination,{recursive:true});
+ const publicFolder='assets/audio/texts/'+entry.language+'/'+entry.code.toLowerCase()+'-four-v1',destination=path.join(root,publicFolder);await fs.mkdir(destination,{recursive:true});
  let offset=0;
  for(const variant of plan.variants){
   const begin=bounds[offset],finish=bounds[offset+variant.fragments.length],seconds=finish-begin,output=path.join(destination,variant.id+'.mp3');
@@ -76,12 +77,13 @@ async function main(){
   const bytes=await fs.readFile(output),fragments=variant.fragments.map((f,i)=>({number:f.number,text:f.text,paragraph:f.paragraph,startWord:f.start,endWord:f.end,start:Number((bounds[offset+i]-begin).toFixed(5)),end:Number((bounds[offset+i+1]-begin).toFixed(5)),cues:f.cues.map(c=>({afterWord:c.afterWord,text:c.text}))}));
   variants[variant.id]={label:variant.label,path:publicFolder+'/'+variant.id+'.mp3',seconds:Number(seconds.toFixed(5)),sha256:sha(bytes),bytes:bytes.length,fragments};offset+=fragments.length;
  }
- const record={voice:'Aoede',model:b.body.model,language:'ca',variety:'central',status:'pending-listening',pronunciationValidated:false,sourceTextSha256:sha(T.text(entry)),planHash:b.planHash,requestHash:b.requestHash,rawSha256:sha(raw),seconds:duration,coverage,timing:'editorial-word-ranges+local-vosk+quiet-window',variants};
+ const record={voice:'Aoede',model:b.body.model,language:entry.language,variety:entry.language==='es'?'es-es':'central',status:'pending-listening',pronunciationValidated:false,sourceTextSha256:sha(T.text(entry)),planHash:b.planHash,requestHash:b.requestHash,rawSha256:sha(raw),seconds:duration,coverage,timing:'editorial-word-ranges+local-vosk+quiet-window',variants};
  const registry=JSON.parse(await fs.readFile(path.join(root,'audio/texts/index.json')));registry[entry.id]=record;
  await fs.writeFile(path.join(root,'audio/texts/index.json'),JSON.stringify(registry,null,2)+'\n');
  const recovery=attempt.recovery?JSON.parse(await fs.readFile(path.join(folder,'recovery.json'))):null;
  const receipt={id:b.batchId,requestHash:b.requestHash,planHash:b.planHash,voice:'Aoede',newSynthesisRequests:1,actualSeconds:duration,estimate:b.estimate,coverage,expectedSpokenWords:expected.length,recognizedSpokenWords:recognition.words.length,unmatchedWords:expected.flatMap((word,i)=>map[i]===null?[{token:i+1,word}]:[]),asrNote:'Local timing assistance with explicit merged ASR spellings (com a, apart, de mar, i lusió, com panys). Unmatched words require listening; this is not a pronunciation certificate.',rawSha256:sha(raw),usage:attempt.usage,recovery:recovery?{seconds:recovery.seconds,allPcmSamplesPreserved:recovery.allPcmSamplesPreserved,voiceRetimed:recovery.voiceRetimed,metadataBytesRemoved:recovery.metadataBytes+recovery.interleavedMetadata.removedBytes}:{format:'provider-pcm-wav',seconds:duration,allPcmSamplesPreserved:true,voiceRetimed:false,metadataBytesRemoved:0},cuts,pronunciationValidated:false};
  if(overrides)receipt.timingProposals=overrides;
+ if(recognition.language)receipt.recognizer={language:recognition.language,model:recognition.model,modelSha256:recognition.modelSha256};
  await fs.writeFile(path.join(root,'audio/texts/batches',b.batchId+'-receipt.json'),JSON.stringify(receipt,null,2)+'\n');
  console.log(JSON.stringify({seconds:duration,coverage,variants:Object.values(variants).map(v=>({label:v.label,seconds:v.seconds,fragments:v.fragments.length})),newSynthesisRequests:0}));
 }

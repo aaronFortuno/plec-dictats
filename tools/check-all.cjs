@@ -10,6 +10,8 @@ const GROUPS={
   compatibility:['check-catalog-audio.cjs','check-pronunciations.cjs','check-pronunciation-review.cjs']
 };
 GROUPS.browser.push('check-phrase-drafts-ui.cjs');
+GROUPS.browser.push('check-phrase-production-ui.cjs');
+GROUPS.data.push('check-phrase-production.cjs');
 
 // Preloaded by this runner only in test children. It does not affect npm install,
 // the application or normal authoring commands. Mock fetch dependencies still work.

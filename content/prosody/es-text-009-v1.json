@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "es-text-009-v1",
   "language": "es",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "Empieza a llover cuando Yolanda y Guillermo llegan al jardín. Quieren guardar las sillas en el cobertizo, pero la puerta está cerrada. Yolanda busca la llave en el bolsillo de su chaqueta. Al encontrarla, abre la puerta y ayuda a entrar a su compañero. Dentro hay una toalla junto a un cepillo amarillo. Se secan el pelo y esperan a que deje de llover.",
   "paragraphEnds": [
     22,
@@ -10,7 +10,7 @@
     64
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola voz en español de España, clara y natural, con distinción de s y c/z. Mantén la misma velocidad base entre versiones, sin deletrear ni acelerar los grupos largos. Respeta el acento léxico y articula las consonantes con naturalidad.",
   "punctuationDirection": "La misma voz narra y anuncia la puntuación al mismo ritmo base. Di Coma, Punto y seguido, Punto y aparte y Punto final en español. Las locuciones no forman parte del recuento de palabras del dictado.",
   "pauses": {
@@ -135,6 +135,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "6ddaf57be61f8f9dd2963a15da20ec4ff35d04ca2c2683c7c119d151207cbe58"
+    "sourceSha256": "6ddaf57be61f8f9dd2963a15da20ec4ff35d04ca2c2683c7c119d151207cbe58",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

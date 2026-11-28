@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "ca007-ca012-prosody-proposal-v1",
-  "status": "pending-prosody-validation",
+  "status": "approved-planning",
   "voiceProposal": "Aoede",
   "varietyProposal": "Català central",
   "synthesisAuthorized": false,
@@ -379,9 +379,9 @@
       "title": "La ràdio de l’escola",
       "words": 59,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "62ca91b80b9d2c2bb9ba049e2f3df1ca62e727a0839a9fe8dabf5971cdf43374",
-      "planSha256": "314e7948e76052e1aba6366fb03f5f01bf65cda32654ed93935931084b52f3b1"
+      "planSha256": "15007a0cfa65cf67a8217900680bd03f439a51803b456c456c305d40417399fe"
     },
     {
       "code": "CA008",
@@ -389,9 +389,9 @@
       "title": "Un hort al pati",
       "words": 60,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "79d06bd4d8ef1c4ade2bd3ca9fb5a8af779f569e8a253c7d1669e39490cf1311",
-      "planSha256": "ead3b8d8cc3479fba842a47906e81c50d6d2a075ae44dbd995eb4fbc354f9e65"
+      "planSha256": "ec89c1461b99de6d93279a9da7fa175a6263f46264795e3494f48fe37f1f9253"
     },
     {
       "code": "CA009",
@@ -399,9 +399,9 @@
       "title": "El carretó del jardí",
       "words": 62,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "430c2969b2effdb51c134744880e9258d751677f07538fd49ab53f32149b5c8a",
-      "planSha256": "773b14ffdd0930a1173a8cbc34bb5406ddbfded99170fde8203e00a0b14eaa51"
+      "planSha256": "db5e56efdae2e7e2624231e23567538afcefcb40ae554c947d2918e059b721e3"
     },
     {
       "code": "CA010",
@@ -409,9 +409,9 @@
       "title": "Una guineu de paper",
       "words": 63,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "457a350b1bf7323400873c3c60706dcd05d84933998ffeb9c4e33cf29ab3b0ea",
-      "planSha256": "926fa1b6bd01c461a07f832a549589daa6cef1912e6e61a01c63e3a39e6a4a58"
+      "planSha256": "bf8c76ea7d6fe30d1f345763b0e531e81b095e7568bbab8a7ef50174707d62a3"
     },
     {
       "code": "CA011",
@@ -419,9 +419,9 @@
       "title": "La motxilla de diumenge",
       "words": 63,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "56573d2e0a027b05455fcafb1e5aa88cdba1fde161c1e05e471fae54d27446d1",
-      "planSha256": "0c7d6f7a614c2ac2d54d0bb47090b71558a71d0f0b32404d5b2092de4b53e9ab"
+      "planSha256": "1f17a97a4ebc4dad4d8f7a68310e7fb78be32d61f40083f3dc8e8a38ebb8c3b7"
     },
     {
       "code": "CA012",
@@ -429,9 +429,9 @@
       "title": "Una capsa de records",
       "words": 66,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "ac3a952880c8cca1ef5f4e4c1ac5281af032c6b65960a3315734c50dbc284805",
-      "planSha256": "b531b72aa68aec86c68545436813f62e2184c877a3388f83925a4c22ed513dd8"
+      "planSha256": "c15cc41d44020fa81613858520803cf0f20c4d7662e9fe95697dcb5c8768e762"
     }
   ]
 }

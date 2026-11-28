@@ -2,7 +2,7 @@
   "version": 1,
   "textId": "ca-text-011-v1",
   "language": "ca",
-  "status": "pending-teacher-validation",
+  "status": "approved-for-pilot",
   "sourceText": "Diumenge, la Martina prepara la motxilla per anar a caminar amb el seu oncle. Hi posa una ampolla i dues pomes. Abans de sortir, busca les galetes a la cuina. Les guarda en una capseta perquè no es trenquin durant el camí. Quan arriben al bosc, s’aturen sota un arbre. Comparteixen el berenar i recullen totes les engrunes abans de tornar a casa.",
   "paragraphEnds": [
     21,
@@ -10,7 +10,7 @@
     63
   ],
   "voice": "Aoede",
-  "voiceStatus": "proposed",
+  "voiceStatus": "confirmed",
   "direction": "Una sola veu en català central, clara i natural. Mantén el mateix ritme base entre versions, els accents lèxics i les reduccions vocàliques pròpies de la varietat. Articula les consonants amb naturalitat i conserva l’entonació de continuació als talls.",
   "punctuationDirection": "La mateixa veu narra i anuncia la puntuació al mateix ritme base. Digues Coma, Punt i seguit, Punt i a part i Punt final en català. Les locucions no són mots del dictat.",
   "pauses": {
@@ -137,6 +137,8 @@
   "independentReview": {
     "status": "passed",
     "date": "2026-11-28",
-    "sourceSha256": "71a26063d39dfb994e5615916f845606aaa63b5c10e3ad9b53815df74c8fa931"
+    "sourceSha256": "71a26063d39dfb994e5615916f845606aaa63b5c10e3ad9b53815df74c8fa931",
+    "statusAtReview": "pending-teacher-validation",
+    "voiceStatusAtReview": "proposed"
   }
 }

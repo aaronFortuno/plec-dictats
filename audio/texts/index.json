@@ -4455,5 +4455,4499 @@
         ]
       }
     }
+  },
+  "ca-text-007-v1": {
+    "voice": "Aoede",
+    "model": "gemini-3.8-flash-tts",
+    "language": "ca",
+    "variety": "central",
+    "status": "pending-listening",
+    "pronunciationValidated": false,
+    "sourceTextSha256": "62ca91b80b9d2c2bb9ba049e2f3df1ca62e727a0839a9fe8dabf5971cdf43374",
+    "planHash": "15007a0cfa65cf67a8217900680bd03f439a51803b456c456c305d40417399fe",
+    "requestHash": "c9c167126e50e65db753b1bb846b9df2410aecffe05587a7df23f51bac78a88f",
+    "rawSha256": "9170c9705f95baa2016a86cd745d3950dbd4da50d8824dfd3e9756dee8d2d987",
+    "seconds": 179.84,
+    "coverage": 0.9573170731707317,
+    "timing": "editorial-word-ranges+local-vosk+quiet-window",
+    "variants": {
+      "r23": {
+        "label": "2–3 mots",
+        "path": "assets/audio/texts/ca/ca007-four-v1/r23.mp3",
+        "seconds": 56.445,
+        "sha256": "735818fbdff12dc9bc961364317b518807908902de447d4285cf17c7f83899e2",
+        "bytes": 452204,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Dimecres, la Júlia",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 3,
+            "start": 0,
+            "end": 4.215,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "prepara una cançó",
+            "paragraph": 1,
+            "startWord": 4,
+            "endWord": 6,
+            "start": 4.215,
+            "end": 6.195,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "per a la ràdio",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 10,
+            "start": 6.195,
+            "end": 7.665,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "de l’escola.",
+            "paragraph": 1,
+            "startWord": 11,
+            "endWord": 12,
+            "start": 7.665,
+            "end": 10.605,
+            "cues": [
+              {
+                "afterWord": 12,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Al matí,",
+            "paragraph": 1,
+            "startWord": 13,
+            "endWord": 14,
+            "start": 10.605,
+            "end": 13.32,
+            "cues": [
+              {
+                "afterWord": 14,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "comprova el micròfon",
+            "paragraph": 1,
+            "startWord": 15,
+            "endWord": 17,
+            "start": 13.32,
+            "end": 15.225,
+            "cues": []
+          },
+          {
+            "number": 7,
+            "text": "amb el seu company.",
+            "paragraph": 1,
+            "startWord": 18,
+            "endWord": 21,
+            "start": 15.225,
+            "end": 18.39,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "Després, tots dos",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 24,
+            "start": 18.39,
+            "end": 22.605,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "text": "presenten un programa",
+            "paragraph": 2,
+            "startWord": 25,
+            "endWord": 27,
+            "start": 22.605,
+            "end": 25.215,
+            "cues": []
+          },
+          {
+            "number": 10,
+            "text": "de música.",
+            "paragraph": 2,
+            "startWord": 28,
+            "endWord": 29,
+            "start": 25.215,
+            "end": 28.29,
+            "cues": [
+              {
+                "afterWord": 29,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "text": "També expliquen",
+            "paragraph": 2,
+            "startWord": 30,
+            "endWord": 31,
+            "start": 28.29,
+            "end": 31.17,
+            "cues": []
+          },
+          {
+            "number": 12,
+            "text": "per què",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 33,
+            "start": 31.17,
+            "end": 32.7,
+            "cues": []
+          },
+          {
+            "number": 13,
+            "text": "han triat",
+            "paragraph": 2,
+            "startWord": 34,
+            "endWord": 35,
+            "start": 32.7,
+            "end": 34.275,
+            "cues": []
+          },
+          {
+            "number": 14,
+            "text": "aquella cançó",
+            "paragraph": 2,
+            "startWord": 36,
+            "endWord": 37,
+            "start": 34.275,
+            "end": 35.73,
+            "cues": []
+          },
+          {
+            "number": 15,
+            "text": "i qui la va escriure.",
+            "paragraph": 2,
+            "startWord": 38,
+            "endWord": 42,
+            "start": 35.73,
+            "end": 39.3,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 16,
+            "text": "A l’última classe",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 45,
+            "start": 39.3,
+            "end": 41.205,
+            "cues": []
+          },
+          {
+            "number": 17,
+            "text": "del dia,",
+            "paragraph": 3,
+            "startWord": 46,
+            "endWord": 47,
+            "start": 41.205,
+            "end": 44.205,
+            "cues": [
+              {
+                "afterWord": 47,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 18,
+            "text": "escolten la gravació.",
+            "paragraph": 3,
+            "startWord": 48,
+            "endWord": 50,
+            "start": 44.205,
+            "end": 48.09,
+            "cues": [
+              {
+                "afterWord": 50,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 19,
+            "text": "La mestra",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 52,
+            "start": 48.09,
+            "end": 49.8,
+            "cues": []
+          },
+          {
+            "number": 20,
+            "text": "els felicita",
+            "paragraph": 3,
+            "startWord": 53,
+            "endWord": 54,
+            "start": 49.8,
+            "end": 51.42,
+            "cues": []
+          },
+          {
+            "number": 21,
+            "text": "perquè han parlat",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 57,
+            "start": 51.42,
+            "end": 53.22,
+            "cues": []
+          },
+          {
+            "number": 22,
+            "text": "amb claredat.",
+            "paragraph": 3,
+            "startWord": 58,
+            "endWord": 59,
+            "start": 53.22,
+            "end": 56.445,
+            "cues": [
+              {
+                "afterWord": 59,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r45": {
+        "label": "4–5 mots",
+        "path": "assets/audio/texts/ca/ca007-four-v1/r45.mp3",
+        "seconds": 44.82,
+        "sha256": "c5ce4a1c04a2be0cc1cdbec0cf7be20a9cbec5a339d66c3de3a42dcd547fcb1f",
+        "bytes": 359276,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Dimecres, la Júlia prepara una cançó",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 6,
+            "start": 0,
+            "end": 5.685,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "per a la ràdio de l’escola.",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 12,
+            "start": 5.685,
+            "end": 9.225,
+            "cues": [
+              {
+                "afterWord": 12,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Al matí, comprova el micròfon",
+            "paragraph": 1,
+            "startWord": 13,
+            "endWord": 17,
+            "start": 9.225,
+            "end": 14.46,
+            "cues": [
+              {
+                "afterWord": 14,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "amb el seu company.",
+            "paragraph": 1,
+            "startWord": 18,
+            "endWord": 21,
+            "start": 14.46,
+            "end": 18.135,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Després, tots dos",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 24,
+            "start": 18.135,
+            "end": 22.335,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "presenten un programa de música.",
+            "paragraph": 2,
+            "startWord": 25,
+            "endWord": 29,
+            "start": 22.335,
+            "end": 26.175,
+            "cues": [
+              {
+                "afterWord": 29,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "També expliquen per què",
+            "paragraph": 2,
+            "startWord": 30,
+            "endWord": 33,
+            "start": 26.175,
+            "end": 28.32,
+            "cues": []
+          },
+          {
+            "number": 8,
+            "text": "han triat aquella cançó",
+            "paragraph": 2,
+            "startWord": 34,
+            "endWord": 37,
+            "start": 28.32,
+            "end": 30.435,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "i qui la va escriure.",
+            "paragraph": 2,
+            "startWord": 38,
+            "endWord": 42,
+            "start": 30.435,
+            "end": 33.12,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "text": "A l’última classe del dia,",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 47,
+            "start": 33.12,
+            "end": 35.79,
+            "cues": [
+              {
+                "afterWord": 47,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "text": "escolten la gravació.",
+            "paragraph": 3,
+            "startWord": 48,
+            "endWord": 50,
+            "start": 35.79,
+            "end": 38.73,
+            "cues": [
+              {
+                "afterWord": 50,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "text": "La mestra els felicita",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 54,
+            "start": 38.73,
+            "end": 41.025,
+            "cues": []
+          },
+          {
+            "number": 13,
+            "text": "perquè han parlat amb claredat.",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 59,
+            "start": 41.025,
+            "end": 44.82,
+            "cues": [
+              {
+                "afterWord": 59,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r68": {
+        "label": "6–8 mots",
+        "path": "assets/audio/texts/ca/ca007-four-v1/r68.mp3",
+        "seconds": 37.425,
+        "sha256": "0c4ba31665e34f39ec910a74fc5d9c744ce1264c131539019af2e16ca5de00ab",
+        "bytes": 300140,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Dimecres, la Júlia prepara una cançó",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 6,
+            "start": 0,
+            "end": 4.47,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "per a la ràdio de l’escola.",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 12,
+            "start": 4.47,
+            "end": 7.605,
+            "cues": [
+              {
+                "afterWord": 12,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Al matí, comprova el micròfon amb el seu company.",
+            "paragraph": 1,
+            "startWord": 13,
+            "endWord": 21,
+            "start": 7.605,
+            "end": 13.425,
+            "cues": [
+              {
+                "afterWord": 14,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 21,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Després, tots dos presenten un programa de música.",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 29,
+            "start": 13.425,
+            "end": 19.835,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 29,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "També expliquen per què han triat aquella cançó",
+            "paragraph": 2,
+            "startWord": 30,
+            "endWord": 37,
+            "start": 19.835,
+            "end": 23.01,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "i qui la va escriure.",
+            "paragraph": 2,
+            "startWord": 38,
+            "endWord": 42,
+            "start": 23.01,
+            "end": 26.115,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "A l’última classe del dia, escolten la gravació.",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 50,
+            "start": 26.115,
+            "end": 32.64004,
+            "cues": [
+              {
+                "afterWord": 47,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 50,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "La mestra els felicita perquè han parlat amb claredat.",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 59,
+            "start": 32.64004,
+            "end": 37.425,
+            "cues": [
+              {
+                "afterWord": 59,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r912": {
+        "label": "9–12 mots",
+        "path": "assets/audio/texts/ca/ca007-four-v1/r912.mp3",
+        "seconds": 41.15,
+        "sha256": "21e00766265136751cd44ac63d826e67291ec47818141005a637e713629e8f15",
+        "bytes": 329900,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Dimecres, la Júlia prepara una cançó per a la ràdio de l’escola.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 12,
+            "start": 0,
+            "end": 8.61,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 12,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Al matí, comprova el micròfon amb el seu company.",
+            "paragraph": 1,
+            "startWord": 13,
+            "endWord": 21,
+            "start": 8.61,
+            "end": 15.315,
+            "cues": [
+              {
+                "afterWord": 14,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 21,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Després, tots dos presenten un programa de música.",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 29,
+            "start": 15.315,
+            "end": 22.74004,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 29,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "També expliquen per què han triat aquella cançó i qui la va escriure.",
+            "paragraph": 2,
+            "startWord": 30,
+            "endWord": 42,
+            "start": 22.74004,
+            "end": 29.25004,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "A l’última classe del dia, escolten la gravació.",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 50,
+            "start": 29.25004,
+            "end": 36.045,
+            "cues": [
+              {
+                "afterWord": 47,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 50,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "La mestra els felicita perquè han parlat amb claredat.",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 59,
+            "start": 36.045,
+            "end": 41.15,
+            "cues": [
+              {
+                "afterWord": 59,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "ca-text-008-v1": {
+    "voice": "Aoede",
+    "model": "gemini-3.8-flash-tts",
+    "language": "ca",
+    "variety": "central",
+    "status": "pending-listening",
+    "pronunciationValidated": false,
+    "sourceTextSha256": "79d06bd4d8ef1c4ade2bd3ca9fb5a8af779f569e8a253c7d1669e39490cf1311",
+    "planHash": "ec89c1461b99de6d93279a9da7fa175a6263f46264795e3494f48fe37f1f9253",
+    "requestHash": "08c098fa356ba4624e232828843173dd520d56db4e53e91fb178222be5256e2c",
+    "rawSha256": "468a97153e3dfa5f98b00d212f6a66bd862c8492a55e2b1643ab71e054aaf5e0",
+    "seconds": 212.57,
+    "coverage": 0.9427710843373494,
+    "timing": "editorial-word-ranges+local-vosk+quiet-window",
+    "variants": {
+      "r23": {
+        "label": "2–3 mots",
+        "path": "assets/audio/texts/ca/ca008-four-v1/r23.mp3",
+        "seconds": 63.315,
+        "sha256": "98c31b23e8e85d20e7a7a45df2e0f543001e45ca61257f1ad47637cc457dd7d0",
+        "bytes": 507308,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Ahir, l’Helena",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 2,
+            "start": 0,
+            "end": 3.3,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "i el seu germà",
+            "paragraph": 1,
+            "startWord": 3,
+            "endWord": 6,
+            "start": 3.3,
+            "end": 4.695,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "van visitar l’hort",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 9,
+            "start": 4.695,
+            "end": 7.125,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "de l’escola.",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 11,
+            "start": 7.125,
+            "end": 10.72504,
+            "cues": [
+              {
+                "afterWord": 11,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Hi havia",
+            "paragraph": 1,
+            "startWord": 12,
+            "endWord": 13,
+            "start": 10.72504,
+            "end": 12.525,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "herbes altes",
+            "paragraph": 1,
+            "startWord": 14,
+            "endWord": 15,
+            "start": 12.525,
+            "end": 15.405,
+            "cues": []
+          },
+          {
+            "number": 7,
+            "text": "al costat dels arbres.",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 19,
+            "start": 15.405,
+            "end": 20.64004,
+            "cues": [
+              {
+                "afterWord": 19,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "Avui, han tret",
+            "paragraph": 2,
+            "startWord": 20,
+            "endWord": 22,
+            "start": 20.64004,
+            "end": 24.64,
+            "cues": [
+              {
+                "afterWord": 20,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "text": "les herbes",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 24,
+            "start": 24.64,
+            "end": 26.01,
+            "cues": []
+          },
+          {
+            "number": 10,
+            "text": "i han remogut",
+            "paragraph": 2,
+            "startWord": 25,
+            "endWord": 27,
+            "start": 26.01,
+            "end": 28.035,
+            "cues": []
+          },
+          {
+            "number": 11,
+            "text": "la terra humida.",
+            "paragraph": 2,
+            "startWord": 28,
+            "endWord": 30,
+            "start": 28.035,
+            "end": 32.46,
+            "cues": [
+              {
+                "afterWord": 30,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "text": "Després, la mestra",
+            "paragraph": 2,
+            "startWord": 31,
+            "endWord": 33,
+            "start": 32.46,
+            "end": 37.68,
+            "cues": [
+              {
+                "afterWord": 31,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 13,
+            "text": "els ha ajudat",
+            "paragraph": 2,
+            "startWord": 34,
+            "endWord": 36,
+            "start": 37.68,
+            "end": 39.57,
+            "cues": []
+          },
+          {
+            "number": 14,
+            "text": "a plantar enciams.",
+            "paragraph": 2,
+            "startWord": 37,
+            "endWord": 39,
+            "start": 39.57,
+            "end": 43.185,
+            "cues": [
+              {
+                "afterWord": 39,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 15,
+            "text": "Abans de marxar,",
+            "paragraph": 3,
+            "startWord": 40,
+            "endWord": 42,
+            "start": 43.185,
+            "end": 46.1305,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 16,
+            "text": "han omplert",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 44,
+            "start": 46.1305,
+            "end": 47.85,
+            "cues": []
+          },
+          {
+            "number": 17,
+            "text": "una regadora",
+            "paragraph": 3,
+            "startWord": 45,
+            "endWord": 46,
+            "start": 47.85,
+            "end": 49.65,
+            "cues": []
+          },
+          {
+            "number": 18,
+            "text": "amb aigua.",
+            "paragraph": 3,
+            "startWord": 47,
+            "endWord": 48,
+            "start": 49.65,
+            "end": 52.65,
+            "cues": [
+              {
+                "afterWord": 48,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 19,
+            "text": "Ara l’hort",
+            "paragraph": 3,
+            "startWord": 49,
+            "endWord": 50,
+            "start": 52.65,
+            "end": 54.12,
+            "cues": []
+          },
+          {
+            "number": 20,
+            "text": "té una filera nova",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 54,
+            "start": 54.12,
+            "end": 56.22,
+            "cues": []
+          },
+          {
+            "number": 21,
+            "text": "i un petit cartell",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 58,
+            "start": 56.22,
+            "end": 58.68,
+            "cues": []
+          },
+          {
+            "number": 22,
+            "text": "de fusta.",
+            "paragraph": 3,
+            "startWord": 59,
+            "endWord": 60,
+            "start": 58.68,
+            "end": 63.315,
+            "cues": [
+              {
+                "afterWord": 60,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r45": {
+        "label": "4–5 mots",
+        "path": "assets/audio/texts/ca/ca008-four-v1/r45.mp3",
+        "seconds": 61.845,
+        "sha256": "ce678e26db2115a47fcb9314b80fcf627f3a6cd7a78a5c5bdbd6244ccdaa9419",
+        "bytes": 495404,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Ahir, l’Helena i el seu germà",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 6,
+            "start": 0,
+            "end": 7.065,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "van visitar l’hort de l’escola.",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 11,
+            "start": 7.065,
+            "end": 12.3,
+            "cues": [
+              {
+                "afterWord": 11,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Hi havia herbes altes",
+            "paragraph": 1,
+            "startWord": 12,
+            "endWord": 15,
+            "start": 12.3,
+            "end": 14.79,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "al costat dels arbres.",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 19,
+            "start": 14.79,
+            "end": 18.915,
+            "cues": [
+              {
+                "afterWord": 19,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Avui, han tret les herbes",
+            "paragraph": 2,
+            "startWord": 20,
+            "endWord": 24,
+            "start": 18.915,
+            "end": 24.345,
+            "cues": [
+              {
+                "afterWord": 20,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "i han remogut la terra humida.",
+            "paragraph": 2,
+            "startWord": 25,
+            "endWord": 30,
+            "start": 24.345,
+            "end": 28.02,
+            "cues": [
+              {
+                "afterWord": 30,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "Després, la mestra",
+            "paragraph": 2,
+            "startWord": 31,
+            "endWord": 33,
+            "start": 28.02,
+            "end": 34.11,
+            "cues": [
+              {
+                "afterWord": 31,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "els ha ajudat a plantar enciams.",
+            "paragraph": 2,
+            "startWord": 34,
+            "endWord": 39,
+            "start": 34.11,
+            "end": 41.67,
+            "cues": [
+              {
+                "afterWord": 39,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "text": "Abans de marxar, han omplert",
+            "paragraph": 3,
+            "startWord": 40,
+            "endWord": 44,
+            "start": 41.67,
+            "end": 49.425,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "text": "una regadora amb aigua.",
+            "paragraph": 3,
+            "startWord": 45,
+            "endWord": 48,
+            "start": 49.425,
+            "end": 54.87,
+            "cues": [
+              {
+                "afterWord": 48,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "text": "Ara l’hort té una filera nova",
+            "paragraph": 3,
+            "startWord": 49,
+            "endWord": 54,
+            "start": 54.87,
+            "end": 57.735,
+            "cues": []
+          },
+          {
+            "number": 12,
+            "text": "i un petit cartell de fusta.",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 60,
+            "start": 57.735,
+            "end": 61.845,
+            "cues": [
+              {
+                "afterWord": 60,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r68": {
+        "label": "6–8 mots",
+        "path": "assets/audio/texts/ca/ca008-four-v1/r68.mp3",
+        "seconds": 48.70504,
+        "sha256": "0ec6e1e74d3ae6cbd21ceaa9cca6ee72918b5575871a66d172f2283068912498",
+        "bytes": 390380,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Ahir, l’Helena i el seu germà",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 6,
+            "start": 0,
+            "end": 4.53004,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "van visitar l’hort de l’escola.",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 11,
+            "start": 4.53004,
+            "end": 10.215,
+            "cues": [
+              {
+                "afterWord": 11,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Hi havia herbes altes al costat dels arbres.",
+            "paragraph": 1,
+            "startWord": 12,
+            "endWord": 19,
+            "start": 10.215,
+            "end": 17.67004,
+            "cues": [
+              {
+                "afterWord": 19,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Avui, han tret les herbes",
+            "paragraph": 2,
+            "startWord": 20,
+            "endWord": 24,
+            "start": 17.67004,
+            "end": 22.56004,
+            "cues": [
+              {
+                "afterWord": 20,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "i han remogut la terra humida.",
+            "paragraph": 2,
+            "startWord": 25,
+            "endWord": 30,
+            "start": 22.56004,
+            "end": 27.3,
+            "cues": [
+              {
+                "afterWord": 30,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Després, la mestra els ha ajudat a plantar enciams.",
+            "paragraph": 2,
+            "startWord": 31,
+            "endWord": 39,
+            "start": 27.3,
+            "end": 35.13004,
+            "cues": [
+              {
+                "afterWord": 31,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 39,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "Abans de marxar, han omplert una regadora amb aigua.",
+            "paragraph": 3,
+            "startWord": 40,
+            "endWord": 48,
+            "start": 35.13004,
+            "end": 42.075,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 48,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "Ara l’hort té una filera nova",
+            "paragraph": 3,
+            "startWord": 49,
+            "endWord": 54,
+            "start": 42.075,
+            "end": 44.76004,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "i un petit cartell de fusta.",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 60,
+            "start": 44.76004,
+            "end": 48.70504,
+            "cues": [
+              {
+                "afterWord": 60,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r912": {
+        "label": "9–12 mots",
+        "path": "assets/audio/texts/ca/ca008-four-v1/r912.mp3",
+        "seconds": 38.70496,
+        "sha256": "59a86919f9f7cde3300d7b5f482c8e183e1842fbac46e071a1ac8be53a21d936",
+        "bytes": 310316,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Ahir, l’Helena i el seu germà van visitar l’hort de l’escola.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 11,
+            "start": 0,
+            "end": 8.41496,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 11,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Hi havia herbes altes al costat dels arbres.",
+            "paragraph": 1,
+            "startWord": 12,
+            "endWord": 19,
+            "start": 8.41496,
+            "end": 12.945,
+            "cues": [
+              {
+                "afterWord": 19,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Avui, han tret les herbes i han remogut la terra humida.",
+            "paragraph": 2,
+            "startWord": 20,
+            "endWord": 30,
+            "start": 12.945,
+            "end": 20.22,
+            "cues": [
+              {
+                "afterWord": 20,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 30,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Després, la mestra els ha ajudat a plantar enciams.",
+            "paragraph": 2,
+            "startWord": 31,
+            "endWord": 39,
+            "start": 20.22,
+            "end": 27.23996,
+            "cues": [
+              {
+                "afterWord": 31,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 39,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Abans de marxar, han omplert una regadora amb aigua.",
+            "paragraph": 3,
+            "startWord": 40,
+            "endWord": 48,
+            "start": 27.23996,
+            "end": 33.46496,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 48,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Ara l’hort té una filera nova i un petit cartell de fusta.",
+            "paragraph": 3,
+            "startWord": 49,
+            "endWord": 60,
+            "start": 33.46496,
+            "end": 38.70496,
+            "cues": [
+              {
+                "afterWord": 60,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "ca-text-009-v1": {
+    "voice": "Aoede",
+    "model": "gemini-3.8-flash-tts",
+    "language": "ca",
+    "variety": "central",
+    "status": "pending-listening",
+    "pronunciationValidated": false,
+    "sourceTextSha256": "430c2969b2effdb51c134744880e9258d751677f07538fd49ab53f32149b5c8a",
+    "planHash": "db5e56efdae2e7e2624231e23567538afcefcb40ae554c947d2918e059b721e3",
+    "requestHash": "37de6c26ffc65c192f7787296b25f0a7a5aa2371dc641b1c2c7257d56ed5933d",
+    "rawSha256": "cad10a4bacfab560290ec9f8b17d5761d826c546439634184cfb1f6d43e64d32",
+    "seconds": 164.8,
+    "coverage": 0.9146341463414634,
+    "timing": "editorial-word-ranges+local-vosk+quiet-window",
+    "variants": {
+      "r23": {
+        "label": "2–3 mots",
+        "path": "assets/audio/texts/ca/ca009-four-v1/r23.mp3",
+        "seconds": 58.78379,
+        "sha256": "752a72519898d121da751dde24966d1a5f5d1f82cfdb5e127f13d6b2a5427d8c",
+        "bytes": 471020,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "La Rita",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 2,
+            "start": 0,
+            "end": 1.245,
+            "cues": []
+          },
+          {
+            "number": 2,
+            "text": "ajuda l’avi",
+            "paragraph": 1,
+            "startWord": 3,
+            "endWord": 4,
+            "start": 1.245,
+            "end": 3.135,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "a portar terra",
+            "paragraph": 1,
+            "startWord": 5,
+            "endWord": 7,
+            "start": 3.135,
+            "end": 4.935,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "al jardí.",
+            "paragraph": 1,
+            "startWord": 8,
+            "endWord": 9,
+            "start": 4.935,
+            "end": 8.19,
+            "cues": [
+              {
+                "afterWord": 9,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Quan empeny",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 11,
+            "start": 8.19,
+            "end": 10.2,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "el carretó",
+            "paragraph": 1,
+            "startWord": 12,
+            "endWord": 13,
+            "start": 10.2,
+            "end": 12.24,
+            "cues": []
+          },
+          {
+            "number": 7,
+            "text": "pel carrer,",
+            "paragraph": 1,
+            "startWord": 14,
+            "endWord": 15,
+            "start": 12.24,
+            "end": 14.91,
+            "cues": [
+              {
+                "afterWord": 15,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "una roda",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 17,
+            "start": 14.91,
+            "end": 16.53,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "comença a fer soroll.",
+            "paragraph": 1,
+            "startWord": 18,
+            "endWord": 21,
+            "start": 16.53,
+            "end": 20.355,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "text": "S’aturen vora una paret",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 25,
+            "start": 20.355,
+            "end": 23.895,
+            "cues": []
+          },
+          {
+            "number": 11,
+            "text": "i revisen",
+            "paragraph": 2,
+            "startWord": 26,
+            "endWord": 27,
+            "start": 23.895,
+            "end": 25.65,
+            "cues": []
+          },
+          {
+            "number": 12,
+            "text": "la roda.",
+            "paragraph": 2,
+            "startWord": 28,
+            "endWord": 29,
+            "start": 25.65,
+            "end": 29.265,
+            "cues": [
+              {
+                "afterWord": 29,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 13,
+            "text": "L’avi hi troba",
+            "paragraph": 2,
+            "startWord": 30,
+            "endWord": 32,
+            "start": 29.265,
+            "end": 32.85,
+            "cues": []
+          },
+          {
+            "number": 14,
+            "text": "una pedra petita",
+            "paragraph": 2,
+            "startWord": 33,
+            "endWord": 35,
+            "start": 32.85,
+            "end": 35.295,
+            "cues": []
+          },
+          {
+            "number": 15,
+            "text": "i la retira",
+            "paragraph": 2,
+            "startWord": 36,
+            "endWord": 38,
+            "start": 35.295,
+            "end": 37.47,
+            "cues": []
+          },
+          {
+            "number": 16,
+            "text": "amb cura.",
+            "paragraph": 2,
+            "startWord": 39,
+            "endWord": 40,
+            "start": 37.47,
+            "end": 40.515,
+            "cues": [
+              {
+                "afterWord": 40,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 17,
+            "text": "Ara el carretó",
+            "paragraph": 3,
+            "startWord": 41,
+            "endWord": 43,
+            "start": 40.515,
+            "end": 43.2,
+            "cues": []
+          },
+          {
+            "number": 18,
+            "text": "torna a rodar bé.",
+            "paragraph": 3,
+            "startWord": 44,
+            "endWord": 47,
+            "start": 43.2,
+            "end": 46.695,
+            "cues": [
+              {
+                "afterWord": 47,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 19,
+            "text": "La Rita",
+            "paragraph": 3,
+            "startWord": 48,
+            "endWord": 49,
+            "start": 46.695,
+            "end": 48.54,
+            "cues": []
+          },
+          {
+            "number": 20,
+            "text": "reparteix la terra",
+            "paragraph": 3,
+            "startWord": 50,
+            "endWord": 52,
+            "start": 48.54,
+            "end": 51,
+            "cues": []
+          },
+          {
+            "number": 21,
+            "text": "entre els rosers",
+            "paragraph": 3,
+            "startWord": 53,
+            "endWord": 55,
+            "start": 51,
+            "end": 53.19,
+            "cues": []
+          },
+          {
+            "number": 22,
+            "text": "i rega les arrels",
+            "paragraph": 3,
+            "startWord": 56,
+            "endWord": 59,
+            "start": 53.19,
+            "end": 55.47,
+            "cues": []
+          },
+          {
+            "number": 23,
+            "text": "amb una gerra.",
+            "paragraph": 3,
+            "startWord": 60,
+            "endWord": 62,
+            "start": 55.47,
+            "end": 58.78379,
+            "cues": [
+              {
+                "afterWord": 62,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r45": {
+        "label": "4–5 mots",
+        "path": "assets/audio/texts/ca/ca009-four-v1/r45.mp3",
+        "seconds": 41.47621,
+        "sha256": "0e6481acd786f21cf27f55a347add083997be2e26abac9dd975cdafe241f3f72",
+        "bytes": 332588,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "La Rita ajuda l’avi",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 4,
+            "start": 0,
+            "end": 2.58121,
+            "cues": []
+          },
+          {
+            "number": 2,
+            "text": "a portar terra al jardí.",
+            "paragraph": 1,
+            "startWord": 5,
+            "endWord": 9,
+            "start": 2.58121,
+            "end": 6.93121,
+            "cues": [
+              {
+                "afterWord": 9,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Quan empeny el carretó pel carrer,",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 15,
+            "start": 6.93121,
+            "end": 10.87621,
+            "cues": [
+              {
+                "afterWord": 15,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "una roda comença a fer soroll.",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 21,
+            "start": 10.87621,
+            "end": 14.61121,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "S’aturen vora una paret",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 25,
+            "start": 14.61121,
+            "end": 16.98121,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "i revisen la roda.",
+            "paragraph": 2,
+            "startWord": 26,
+            "endWord": 29,
+            "start": 16.98121,
+            "end": 20.43121,
+            "cues": [
+              {
+                "afterWord": 29,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "L’avi hi troba una pedra petita",
+            "paragraph": 2,
+            "startWord": 30,
+            "endWord": 35,
+            "start": 20.43121,
+            "end": 23.01121,
+            "cues": []
+          },
+          {
+            "number": 8,
+            "text": "i la retira amb cura.",
+            "paragraph": 2,
+            "startWord": 36,
+            "endWord": 40,
+            "start": 23.01121,
+            "end": 26.53621,
+            "cues": [
+              {
+                "afterWord": 40,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "text": "Ara el carretó",
+            "paragraph": 3,
+            "startWord": 41,
+            "endWord": 43,
+            "start": 26.53621,
+            "end": 28.03621,
+            "cues": []
+          },
+          {
+            "number": 10,
+            "text": "torna a rodar bé.",
+            "paragraph": 3,
+            "startWord": 44,
+            "endWord": 47,
+            "start": 28.03621,
+            "end": 31.26121,
+            "cues": [
+              {
+                "afterWord": 47,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "text": "La Rita reparteix la terra",
+            "paragraph": 3,
+            "startWord": 48,
+            "endWord": 52,
+            "start": 31.26121,
+            "end": 34.21621,
+            "cues": []
+          },
+          {
+            "number": 12,
+            "text": "entre els rosers",
+            "paragraph": 3,
+            "startWord": 53,
+            "endWord": 55,
+            "start": 34.21621,
+            "end": 36.13621,
+            "cues": []
+          },
+          {
+            "number": 13,
+            "text": "i rega les arrels",
+            "paragraph": 3,
+            "startWord": 56,
+            "endWord": 59,
+            "start": 36.13621,
+            "end": 38.29621,
+            "cues": []
+          },
+          {
+            "number": 14,
+            "text": "amb una gerra.",
+            "paragraph": 3,
+            "startWord": 60,
+            "endWord": 62,
+            "start": 38.29621,
+            "end": 41.47621,
+            "cues": [
+              {
+                "afterWord": 62,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r68": {
+        "label": "6–8 mots",
+        "path": "assets/audio/texts/ca/ca009-four-v1/r68.mp3",
+        "seconds": 32.98504,
+        "sha256": "8de4a1c26729635e9d3079d67e76f88727e1376dfbb9671bc260ad4f498f647e",
+        "bytes": 264620,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "La Rita ajuda l’avi a portar terra al jardí.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 9,
+            "start": 0,
+            "end": 4.575,
+            "cues": [
+              {
+                "afterWord": 9,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Quan empeny el carretó pel carrer,",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 15,
+            "start": 4.575,
+            "end": 8.025,
+            "cues": [
+              {
+                "afterWord": 15,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "una roda comença a fer soroll.",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 21,
+            "start": 8.025,
+            "end": 11.37,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "S’aturen vora una paret i revisen la roda.",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 29,
+            "start": 11.37,
+            "end": 16.02,
+            "cues": [
+              {
+                "afterWord": 29,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "L’avi hi troba una pedra petita",
+            "paragraph": 2,
+            "startWord": 30,
+            "endWord": 35,
+            "start": 16.02,
+            "end": 18.84,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "i la retira amb cura.",
+            "paragraph": 2,
+            "startWord": 36,
+            "endWord": 40,
+            "start": 18.84,
+            "end": 22.155,
+            "cues": [
+              {
+                "afterWord": 40,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "Ara el carretó torna a rodar bé.",
+            "paragraph": 3,
+            "startWord": 41,
+            "endWord": 47,
+            "start": 22.155,
+            "end": 26.01,
+            "cues": [
+              {
+                "afterWord": 47,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "La Rita reparteix la terra entre els rosers",
+            "paragraph": 3,
+            "startWord": 48,
+            "endWord": 55,
+            "start": 26.01,
+            "end": 29.19004,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "i rega les arrels amb una gerra.",
+            "paragraph": 3,
+            "startWord": 56,
+            "endWord": 62,
+            "start": 29.19004,
+            "end": 32.98504,
+            "cues": [
+              {
+                "afterWord": 62,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r912": {
+        "label": "9–12 mots",
+        "path": "assets/audio/texts/ca/ca009-four-v1/r912.mp3",
+        "seconds": 31.55496,
+        "sha256": "ccb04279043aefe72099f294ef732d07e70454452819e3e88a7faeab6bfa3a26",
+        "bytes": 253100,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "La Rita ajuda l’avi a portar terra al jardí.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 9,
+            "start": 0,
+            "end": 4.695,
+            "cues": [
+              {
+                "afterWord": 9,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Quan empeny el carretó pel carrer, una roda comença a fer soroll.",
+            "paragraph": 1,
+            "startWord": 10,
+            "endWord": 21,
+            "start": 4.695,
+            "end": 11.385,
+            "cues": [
+              {
+                "afterWord": 15,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 21,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "S’aturen vora una paret i revisen la roda.",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 29,
+            "start": 11.385,
+            "end": 16.12496,
+            "cues": [
+              {
+                "afterWord": 29,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "L’avi hi troba una pedra petita i la retira amb cura.",
+            "paragraph": 2,
+            "startWord": 30,
+            "endWord": 40,
+            "start": 16.12496,
+            "end": 21.51,
+            "cues": [
+              {
+                "afterWord": 40,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Ara el carretó torna a rodar bé.",
+            "paragraph": 3,
+            "startWord": 41,
+            "endWord": 47,
+            "start": 21.51,
+            "end": 25.215,
+            "cues": [
+              {
+                "afterWord": 47,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "La Rita reparteix la terra entre els rosers",
+            "paragraph": 3,
+            "startWord": 48,
+            "endWord": 55,
+            "start": 25.215,
+            "end": 28.03496,
+            "cues": []
+          },
+          {
+            "number": 7,
+            "text": "i rega les arrels amb una gerra.",
+            "paragraph": 3,
+            "startWord": 56,
+            "endWord": 62,
+            "start": 28.03496,
+            "end": 31.55496,
+            "cues": [
+              {
+                "afterWord": 62,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "ca-text-010-v1": {
+    "voice": "Aoede",
+    "model": "gemini-3.8-flash-tts",
+    "language": "ca",
+    "variety": "central",
+    "status": "pending-listening",
+    "pronunciationValidated": false,
+    "sourceTextSha256": "457a350b1bf7323400873c3c60706dcd05d84933998ffeb9c4e33cf29ab3b0ea",
+    "planHash": "bf8c76ea7d6fe30d1f345763b0e531e81b095e7568bbab8a7ef50174707d62a3",
+    "requestHash": "f6952b1337dc2e307c8baa7d7ec21ed43a9adc6e2a94115175382336ff2d1a07",
+    "rawSha256": "f23e53c73dd8277494a667cb5b0353954e86b705d6d14c76254f1be3a7542848",
+    "seconds": 197.29,
+    "coverage": 0.9642857142857143,
+    "timing": "editorial-word-ranges+local-vosk+quiet-window",
+    "variants": {
+      "r23": {
+        "label": "2–3 mots",
+        "path": "assets/audio/texts/ca/ca010-four-v1/r23.mp3",
+        "seconds": 56.07,
+        "sha256": "faf7cd6e4523884648ba8038bba602f1ef43d1ac853e0180a80340fa0bf440d8",
+        "bytes": 449324,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "En Guillem",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 2,
+            "start": 0,
+            "end": 0.945,
+            "cues": []
+          },
+          {
+            "number": 2,
+            "text": "vol construir",
+            "paragraph": 1,
+            "startWord": 3,
+            "endWord": 4,
+            "start": 0.945,
+            "end": 2.64,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "una guineu",
+            "paragraph": 1,
+            "startWord": 5,
+            "endWord": 6,
+            "start": 2.64,
+            "end": 4.02,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "de paper",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 8,
+            "start": 4.02,
+            "end": 5.145,
+            "cues": []
+          },
+          {
+            "number": 5,
+            "text": "per decorar",
+            "paragraph": 1,
+            "startWord": 9,
+            "endWord": 10,
+            "start": 5.145,
+            "end": 6.435,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "la classe.",
+            "paragraph": 1,
+            "startWord": 11,
+            "endWord": 12,
+            "start": 6.435,
+            "end": 9.54004,
+            "cues": [
+              {
+                "afterWord": 12,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "Busca un quadrat",
+            "paragraph": 1,
+            "startWord": 13,
+            "endWord": 15,
+            "start": 9.54004,
+            "end": 11.565,
+            "cues": []
+          },
+          {
+            "number": 8,
+            "text": "de cartolina",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 17,
+            "start": 11.565,
+            "end": 13.23004,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "i unes tisores.",
+            "paragraph": 1,
+            "startWord": 18,
+            "endWord": 20,
+            "start": 13.23004,
+            "end": 16.455,
+            "cues": [
+              {
+                "afterWord": 20,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "text": "La mestra",
+            "paragraph": 2,
+            "startWord": 21,
+            "endWord": 22,
+            "start": 16.455,
+            "end": 18.135,
+            "cues": []
+          },
+          {
+            "number": 11,
+            "text": "li ensenya",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 24,
+            "start": 18.135,
+            "end": 19.725,
+            "cues": []
+          },
+          {
+            "number": 12,
+            "text": "com ha de plegar",
+            "paragraph": 2,
+            "startWord": 25,
+            "endWord": 28,
+            "start": 19.725,
+            "end": 21.51004,
+            "cues": []
+          },
+          {
+            "number": 13,
+            "text": "les quatre cantonades.",
+            "paragraph": 2,
+            "startWord": 29,
+            "endWord": 31,
+            "start": 21.51004,
+            "end": 25.095,
+            "cues": [
+              {
+                "afterWord": 31,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 14,
+            "text": "Ell segueix",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 33,
+            "start": 25.095,
+            "end": 27.105,
+            "cues": []
+          },
+          {
+            "number": 15,
+            "text": "les indicacions",
+            "paragraph": 2,
+            "startWord": 34,
+            "endWord": 35,
+            "start": 27.105,
+            "end": 29.115,
+            "cues": []
+          },
+          {
+            "number": 16,
+            "text": "i comprova",
+            "paragraph": 2,
+            "startWord": 36,
+            "endWord": 37,
+            "start": 29.115,
+            "end": 30.78,
+            "cues": []
+          },
+          {
+            "number": 17,
+            "text": "que els costats",
+            "paragraph": 2,
+            "startWord": 38,
+            "endWord": 40,
+            "start": 30.78,
+            "end": 32.79,
+            "cues": []
+          },
+          {
+            "number": 18,
+            "text": "quedin iguals.",
+            "paragraph": 2,
+            "startWord": 41,
+            "endWord": 42,
+            "start": 32.79,
+            "end": 35.64,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 19,
+            "text": "Quan acaba,",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 44,
+            "start": 35.64,
+            "end": 38.085,
+            "cues": [
+              {
+                "afterWord": 44,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 20,
+            "text": "enganxa la guineu",
+            "paragraph": 3,
+            "startWord": 45,
+            "endWord": 47,
+            "start": 38.085,
+            "end": 39.945,
+            "cues": []
+          },
+          {
+            "number": 21,
+            "text": "en un cartell.",
+            "paragraph": 3,
+            "startWord": 48,
+            "endWord": 50,
+            "start": 39.945,
+            "end": 42.915,
+            "cues": [
+              {
+                "afterWord": 50,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 22,
+            "text": "A sota,",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 52,
+            "start": 42.915,
+            "end": 45.44454,
+            "cues": [
+              {
+                "afterWord": 52,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 23,
+            "text": "hi escriu",
+            "paragraph": 3,
+            "startWord": 53,
+            "endWord": 54,
+            "start": 45.44454,
+            "end": 46.395,
+            "cues": []
+          },
+          {
+            "number": 24,
+            "text": "una pregunta",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 56,
+            "start": 46.395,
+            "end": 47.685,
+            "cues": []
+          },
+          {
+            "number": 25,
+            "text": "perquè els companys",
+            "paragraph": 3,
+            "startWord": 57,
+            "endWord": 59,
+            "start": 47.685,
+            "end": 49.785,
+            "cues": []
+          },
+          {
+            "number": 26,
+            "text": "endevinin quin animal és.",
+            "paragraph": 3,
+            "startWord": 60,
+            "endWord": 63,
+            "start": 49.785,
+            "end": 56.07,
+            "cues": [
+              {
+                "afterWord": 63,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r45": {
+        "label": "4–5 mots",
+        "path": "assets/audio/texts/ca/ca010-four-v1/r45.mp3",
+        "seconds": 62.61,
+        "sha256": "408bb13fa32ff0c47206c07a656c579b5d106e0a3bab47bd1fa953be9c04430a",
+        "bytes": 501548,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "En Guillem vol construir",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 4,
+            "start": 0,
+            "end": 3.915,
+            "cues": []
+          },
+          {
+            "number": 2,
+            "text": "una guineu de paper",
+            "paragraph": 1,
+            "startWord": 5,
+            "endWord": 8,
+            "start": 3.915,
+            "end": 6.99,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "per decorar la classe.",
+            "paragraph": 1,
+            "startWord": 9,
+            "endWord": 12,
+            "start": 6.99,
+            "end": 10.995,
+            "cues": [
+              {
+                "afterWord": 12,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Busca un quadrat",
+            "paragraph": 1,
+            "startWord": 13,
+            "endWord": 15,
+            "start": 10.995,
+            "end": 13.44,
+            "cues": []
+          },
+          {
+            "number": 5,
+            "text": "de cartolina i unes tisores.",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 20,
+            "start": 13.44,
+            "end": 19.875,
+            "cues": [
+              {
+                "afterWord": 20,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "La mestra li ensenya",
+            "paragraph": 2,
+            "startWord": 21,
+            "endWord": 24,
+            "start": 19.875,
+            "end": 22.725,
+            "cues": []
+          },
+          {
+            "number": 7,
+            "text": "com ha de plegar",
+            "paragraph": 2,
+            "startWord": 25,
+            "endWord": 28,
+            "start": 22.725,
+            "end": 24.945,
+            "cues": []
+          },
+          {
+            "number": 8,
+            "text": "les quatre cantonades.",
+            "paragraph": 2,
+            "startWord": 29,
+            "endWord": 31,
+            "start": 24.945,
+            "end": 29.355,
+            "cues": [
+              {
+                "afterWord": 31,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "text": "Ell segueix les indicacions i comprova",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 37,
+            "start": 29.355,
+            "end": 33.795,
+            "cues": []
+          },
+          {
+            "number": 10,
+            "text": "que els costats quedin iguals.",
+            "paragraph": 2,
+            "startWord": 38,
+            "endWord": 42,
+            "start": 33.795,
+            "end": 37.875,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "text": "Quan acaba, enganxa la guineu",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 47,
+            "start": 37.875,
+            "end": 43.185,
+            "cues": [
+              {
+                "afterWord": 44,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "text": "en un cartell.",
+            "paragraph": 3,
+            "startWord": 48,
+            "endWord": 50,
+            "start": 43.185,
+            "end": 46.545,
+            "cues": [
+              {
+                "afterWord": 50,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 13,
+            "text": "A sota, hi escriu",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 54,
+            "start": 46.545,
+            "end": 50.355,
+            "cues": [
+              {
+                "afterWord": 52,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 14,
+            "text": "una pregunta perquè els companys",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 59,
+            "start": 50.355,
+            "end": 55.74,
+            "cues": []
+          },
+          {
+            "number": 15,
+            "text": "endevinin quin animal és.",
+            "paragraph": 3,
+            "startWord": 60,
+            "endWord": 63,
+            "start": 55.74,
+            "end": 62.61,
+            "cues": [
+              {
+                "afterWord": 63,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r68": {
+        "label": "6–8 mots",
+        "path": "assets/audio/texts/ca/ca010-four-v1/r68.mp3",
+        "seconds": 42.69,
+        "sha256": "f4934e18cc901a4845571da2602febfcc3846dce6297b1b49b5d5b4809eb07f5",
+        "bytes": 342188,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "En Guillem vol construir una guineu",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 6,
+            "start": 0,
+            "end": 3.63,
+            "cues": []
+          },
+          {
+            "number": 2,
+            "text": "de paper per decorar la classe.",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 12,
+            "start": 3.63,
+            "end": 8.01,
+            "cues": [
+              {
+                "afterWord": 12,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Busca un quadrat de cartolina i unes tisores.",
+            "paragraph": 1,
+            "startWord": 13,
+            "endWord": 20,
+            "start": 8.01,
+            "end": 12.975,
+            "cues": [
+              {
+                "afterWord": 20,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "La mestra li ensenya",
+            "paragraph": 2,
+            "startWord": 21,
+            "endWord": 24,
+            "start": 12.975,
+            "end": 15.22504,
+            "cues": []
+          },
+          {
+            "number": 5,
+            "text": "com ha de plegar les quatre cantonades.",
+            "paragraph": 2,
+            "startWord": 25,
+            "endWord": 31,
+            "start": 15.22504,
+            "end": 19.77,
+            "cues": [
+              {
+                "afterWord": 31,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Ell segueix les indicacions i comprova",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 37,
+            "start": 19.77,
+            "end": 22.89004,
+            "cues": []
+          },
+          {
+            "number": 7,
+            "text": "que els costats quedin iguals.",
+            "paragraph": 2,
+            "startWord": 38,
+            "endWord": 42,
+            "start": 22.89004,
+            "end": 26.98504,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "Quan acaba, enganxa la guineu en un cartell.",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 50,
+            "start": 26.98504,
+            "end": 33.69004,
+            "cues": [
+              {
+                "afterWord": 44,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 50,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "text": "A sota, hi escriu una pregunta",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 56,
+            "start": 33.69004,
+            "end": 38.41504,
+            "cues": [
+              {
+                "afterWord": 52,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "text": "perquè els companys endevinin quin animal és.",
+            "paragraph": 3,
+            "startWord": 57,
+            "endWord": 63,
+            "start": 38.41504,
+            "end": 42.69,
+            "cues": [
+              {
+                "afterWord": 63,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r912": {
+        "label": "9–12 mots",
+        "path": "assets/audio/texts/ca/ca010-four-v1/r912.mp3",
+        "seconds": 35.92,
+        "sha256": "18b885e1d79620e3d85e1d9c93a7d4c119546f726991eeac9697964179b526f3",
+        "bytes": 288044,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "En Guillem vol construir una guineu de paper per decorar la classe.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 12,
+            "start": 0,
+            "end": 5.325,
+            "cues": [
+              {
+                "afterWord": 12,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Busca un quadrat de cartolina i unes tisores.",
+            "paragraph": 1,
+            "startWord": 13,
+            "endWord": 20,
+            "start": 5.325,
+            "end": 9.9,
+            "cues": [
+              {
+                "afterWord": 20,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "La mestra li ensenya com ha de plegar les quatre cantonades.",
+            "paragraph": 2,
+            "startWord": 21,
+            "endWord": 31,
+            "start": 9.9,
+            "end": 14.805,
+            "cues": [
+              {
+                "afterWord": 31,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Ell segueix les indicacions i comprova que els costats quedin iguals.",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 42,
+            "start": 14.805,
+            "end": 21.195,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Quan acaba, enganxa la guineu en un cartell.",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 50,
+            "start": 21.195,
+            "end": 27.64504,
+            "cues": [
+              {
+                "afterWord": 44,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 50,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "A sota, hi escriu una pregunta perquè els companys endevinin quin animal és.",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 63,
+            "start": 27.64504,
+            "end": 35.92,
+            "cues": [
+              {
+                "afterWord": 52,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 63,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "ca-text-011-v1": {
+    "voice": "Aoede",
+    "model": "gemini-3.8-flash-tts",
+    "language": "ca",
+    "variety": "central",
+    "status": "pending-listening",
+    "pronunciationValidated": false,
+    "sourceTextSha256": "56573d2e0a027b05455fcafb1e5aa88cdba1fde161c1e05e471fae54d27446d1",
+    "planHash": "1f17a97a4ebc4dad4d8f7a68310e7fb78be32d61f40083f3dc8e8a38ebb8c3b7",
+    "requestHash": "1360c1e38550d0db3d02829feff1de0c89cda083c73c2334e2bbe21651e191c5",
+    "rawSha256": "5c13c42824c9b416e58b90a357765b71159445c7c240b48c137808b28bfe41fc",
+    "seconds": 200.88,
+    "coverage": 0.961764705882353,
+    "timing": "editorial-word-ranges+local-vosk+quiet-window",
+    "variants": {
+      "r23": {
+        "label": "2–3 mots",
+        "path": "assets/audio/texts/ca/ca011-four-v1/r23.mp3",
+        "seconds": 59.505,
+        "sha256": "ba1c14ba74a54cbf302a6e0a81f5581005616d3e582800b399bae3a7ecebda3f",
+        "bytes": 476780,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Diumenge, la Martina",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 3,
+            "start": 0,
+            "end": 4.245,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "prepara la motxilla",
+            "paragraph": 1,
+            "startWord": 4,
+            "endWord": 6,
+            "start": 4.245,
+            "end": 6.27,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "per anar a caminar",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 10,
+            "start": 6.27,
+            "end": 8.22,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "amb el seu oncle.",
+            "paragraph": 1,
+            "startWord": 11,
+            "endWord": 14,
+            "start": 8.22,
+            "end": 12.69,
+            "cues": [
+              {
+                "afterWord": 14,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Hi posa",
+            "paragraph": 1,
+            "startWord": 15,
+            "endWord": 16,
+            "start": 12.69,
+            "end": 14.865,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "una ampolla",
+            "paragraph": 1,
+            "startWord": 17,
+            "endWord": 18,
+            "start": 14.865,
+            "end": 17.46,
+            "cues": []
+          },
+          {
+            "number": 7,
+            "text": "i dues pomes.",
+            "paragraph": 1,
+            "startWord": 19,
+            "endWord": 21,
+            "start": 17.46,
+            "end": 22.26,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "Abans de sortir,",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 24,
+            "start": 22.26,
+            "end": 25.71,
+            "cues": [
+              {
+                "afterWord": 24,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "text": "busca les galetes",
+            "paragraph": 2,
+            "startWord": 25,
+            "endWord": 27,
+            "start": 25.71,
+            "end": 27.72,
+            "cues": []
+          },
+          {
+            "number": 10,
+            "text": "a la cuina.",
+            "paragraph": 2,
+            "startWord": 28,
+            "endWord": 30,
+            "start": 27.72,
+            "end": 31.425,
+            "cues": [
+              {
+                "afterWord": 30,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "text": "Les guarda",
+            "paragraph": 2,
+            "startWord": 31,
+            "endWord": 32,
+            "start": 31.425,
+            "end": 33.69,
+            "cues": []
+          },
+          {
+            "number": 12,
+            "text": "en una capseta",
+            "paragraph": 2,
+            "startWord": 33,
+            "endWord": 35,
+            "start": 33.69,
+            "end": 35.76,
+            "cues": []
+          },
+          {
+            "number": 13,
+            "text": "perquè no es trenquin",
+            "paragraph": 2,
+            "startWord": 36,
+            "endWord": 39,
+            "start": 35.76,
+            "end": 37.935,
+            "cues": []
+          },
+          {
+            "number": 14,
+            "text": "durant el camí.",
+            "paragraph": 2,
+            "startWord": 40,
+            "endWord": 42,
+            "start": 37.935,
+            "end": 41.055,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 15,
+            "text": "Quan arriben",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 44,
+            "start": 41.055,
+            "end": 42.495,
+            "cues": []
+          },
+          {
+            "number": 16,
+            "text": "al bosc,",
+            "paragraph": 3,
+            "startWord": 45,
+            "endWord": 46,
+            "start": 42.495,
+            "end": 44.985,
+            "cues": [
+              {
+                "afterWord": 46,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 17,
+            "text": "s’aturen sota un arbre.",
+            "paragraph": 3,
+            "startWord": 47,
+            "endWord": 50,
+            "start": 44.985,
+            "end": 48.93,
+            "cues": [
+              {
+                "afterWord": 50,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 18,
+            "text": "Comparteixen el berenar",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 53,
+            "start": 48.93,
+            "end": 51.195,
+            "cues": []
+          },
+          {
+            "number": 19,
+            "text": "i recullen",
+            "paragraph": 3,
+            "startWord": 54,
+            "endWord": 55,
+            "start": 51.195,
+            "end": 52.83,
+            "cues": []
+          },
+          {
+            "number": 20,
+            "text": "totes les engrunes",
+            "paragraph": 3,
+            "startWord": 56,
+            "endWord": 58,
+            "start": 52.83,
+            "end": 54.765,
+            "cues": []
+          },
+          {
+            "number": 21,
+            "text": "abans de tornar",
+            "paragraph": 3,
+            "startWord": 59,
+            "endWord": 61,
+            "start": 54.765,
+            "end": 57.015,
+            "cues": []
+          },
+          {
+            "number": 22,
+            "text": "a casa.",
+            "paragraph": 3,
+            "startWord": 62,
+            "endWord": 63,
+            "start": 57.015,
+            "end": 59.505,
+            "cues": [
+              {
+                "afterWord": 63,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r45": {
+        "label": "4–5 mots",
+        "path": "assets/audio/texts/ca/ca011-four-v1/r45.mp3",
+        "seconds": 50.385,
+        "sha256": "8c2c83c416c2c6d15fe6b4ef147f0448cfd5aa3151af607b2ea48f5bd7f72414",
+        "bytes": 403820,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Diumenge, la Martina prepara la motxilla",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 6,
+            "start": 0,
+            "end": 5.31,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "per anar a caminar",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 10,
+            "start": 5.31,
+            "end": 7.29,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "amb el seu oncle.",
+            "paragraph": 1,
+            "startWord": 11,
+            "endWord": 14,
+            "start": 7.29,
+            "end": 10.755,
+            "cues": [
+              {
+                "afterWord": 14,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Hi posa una ampolla",
+            "paragraph": 1,
+            "startWord": 15,
+            "endWord": 18,
+            "start": 10.755,
+            "end": 13.29,
+            "cues": []
+          },
+          {
+            "number": 5,
+            "text": "i dues pomes.",
+            "paragraph": 1,
+            "startWord": 19,
+            "endWord": 21,
+            "start": 13.29,
+            "end": 17.265,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Abans de sortir,",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 24,
+            "start": 17.265,
+            "end": 20.295,
+            "cues": [
+              {
+                "afterWord": 24,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "busca les galetes a la cuina.",
+            "paragraph": 2,
+            "startWord": 25,
+            "endWord": 30,
+            "start": 20.295,
+            "end": 24.27,
+            "cues": [
+              {
+                "afterWord": 30,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "Les guarda en una capseta",
+            "paragraph": 2,
+            "startWord": 31,
+            "endWord": 35,
+            "start": 24.27,
+            "end": 26.31,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "perquè no es trenquin",
+            "paragraph": 2,
+            "startWord": 36,
+            "endWord": 39,
+            "start": 26.31,
+            "end": 28.35,
+            "cues": []
+          },
+          {
+            "number": 10,
+            "text": "durant el camí.",
+            "paragraph": 2,
+            "startWord": 40,
+            "endWord": 42,
+            "start": 28.35,
+            "end": 32.325,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "text": "Quan arriben al bosc,",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 46,
+            "start": 32.325,
+            "end": 36.27,
+            "cues": [
+              {
+                "afterWord": 46,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "text": "s’aturen sota un arbre.",
+            "paragraph": 3,
+            "startWord": 47,
+            "endWord": 50,
+            "start": 36.27,
+            "end": 40.62,
+            "cues": [
+              {
+                "afterWord": 50,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 13,
+            "text": "Comparteixen el berenar",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 53,
+            "start": 40.62,
+            "end": 43.005,
+            "cues": []
+          },
+          {
+            "number": 14,
+            "text": "i recullen totes les engrunes",
+            "paragraph": 3,
+            "startWord": 54,
+            "endWord": 58,
+            "start": 43.005,
+            "end": 46.08,
+            "cues": []
+          },
+          {
+            "number": 15,
+            "text": "abans de tornar a casa.",
+            "paragraph": 3,
+            "startWord": 59,
+            "endWord": 63,
+            "start": 46.08,
+            "end": 50.385,
+            "cues": [
+              {
+                "afterWord": 63,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r68": {
+        "label": "6–8 mots",
+        "path": "assets/audio/texts/ca/ca011-four-v1/r68.mp3",
+        "seconds": 45.28504,
+        "sha256": "ccd550f58cfc68bd40024a60e008dbff2ff90070c14c387c699dbdb7428400a4",
+        "bytes": 362924,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Diumenge, la Martina prepara la motxilla",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 6,
+            "start": 0,
+            "end": 5.58,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "per anar a caminar amb el seu oncle.",
+            "paragraph": 1,
+            "startWord": 7,
+            "endWord": 14,
+            "start": 5.58,
+            "end": 9.465,
+            "cues": [
+              {
+                "afterWord": 14,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Hi posa una ampolla i dues pomes.",
+            "paragraph": 1,
+            "startWord": 15,
+            "endWord": 21,
+            "start": 9.465,
+            "end": 14.67,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Abans de sortir, busca les galetes a la cuina.",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 30,
+            "start": 14.67,
+            "end": 21.73504,
+            "cues": [
+              {
+                "afterWord": 24,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 30,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Les guarda en una capseta",
+            "paragraph": 2,
+            "startWord": 31,
+            "endWord": 35,
+            "start": 21.73504,
+            "end": 24.31504,
+            "cues": []
+          },
+          {
+            "number": 6,
+            "text": "perquè no es trenquin durant el camí.",
+            "paragraph": 2,
+            "startWord": 36,
+            "endWord": 42,
+            "start": 24.31504,
+            "end": 28.215,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "Quan arriben al bosc, s’aturen sota un arbre.",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 50,
+            "start": 28.215,
+            "end": 35.355,
+            "cues": [
+              {
+                "afterWord": 46,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 50,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "Comparteixen el berenar i recullen totes les engrunes",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 58,
+            "start": 35.355,
+            "end": 41.64004,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "abans de tornar a casa.",
+            "paragraph": 3,
+            "startWord": 59,
+            "endWord": 63,
+            "start": 41.64004,
+            "end": 45.28504,
+            "cues": [
+              {
+                "afterWord": 63,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r912": {
+        "label": "9–12 mots",
+        "path": "assets/audio/texts/ca/ca011-four-v1/r912.mp3",
+        "seconds": 45.70496,
+        "sha256": "0dcc2fdb078eafdf185b44b5f5ee18cf030c38763cc094a01d04247664664087",
+        "bytes": 366380,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "Diumenge, la Martina prepara la motxilla per anar a caminar amb el seu oncle.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 14,
+            "start": 0,
+            "end": 10.8,
+            "cues": [
+              {
+                "afterWord": 1,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 14,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Hi posa una ampolla i dues pomes.",
+            "paragraph": 1,
+            "startWord": 15,
+            "endWord": 21,
+            "start": 10.8,
+            "end": 16.54496,
+            "cues": [
+              {
+                "afterWord": 21,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Abans de sortir, busca les galetes a la cuina.",
+            "paragraph": 2,
+            "startWord": 22,
+            "endWord": 30,
+            "start": 16.54496,
+            "end": 24.37496,
+            "cues": [
+              {
+                "afterWord": 24,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 30,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Les guarda en una capseta perquè no es trenquin durant el camí.",
+            "paragraph": 2,
+            "startWord": 31,
+            "endWord": 42,
+            "start": 24.37496,
+            "end": 30.73496,
+            "cues": [
+              {
+                "afterWord": 42,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Quan arriben al bosc, s’aturen sota un arbre.",
+            "paragraph": 3,
+            "startWord": 43,
+            "endWord": 50,
+            "start": 30.73496,
+            "end": 38.24996,
+            "cues": [
+              {
+                "afterWord": 46,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 50,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Comparteixen el berenar i recullen totes les engrunes abans de tornar a casa.",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 63,
+            "start": 38.24996,
+            "end": 45.70496,
+            "cues": [
+              {
+                "afterWord": 63,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "ca-text-012-v1": {
+    "voice": "Aoede",
+    "model": "gemini-3.8-flash-tts",
+    "language": "ca",
+    "variety": "central",
+    "status": "pending-listening",
+    "pronunciationValidated": false,
+    "sourceTextSha256": "ac3a952880c8cca1ef5f4e4c1ac5281af032c6b65960a3315734c50dbc284805",
+    "planHash": "c15cc41d44020fa81613858520803cf0f20c4d7662e9fe95697dcb5c8768e762",
+    "requestHash": "359864c3f37d6bdc426a1e7706acf1268bdc0a9ee598b96e7383f8528c11a94d",
+    "rawSha256": "3f438e6ac91758a8379a32eb4cf3b94351b71777dfbf91cafbc8aaa497656dc1",
+    "seconds": 190.11,
+    "coverage": 0.8982558139534884,
+    "timing": "editorial-word-ranges+local-vosk+quiet-window",
+    "variants": {
+      "r23": {
+        "label": "2–3 mots",
+        "path": "assets/audio/texts/ca/ca012-four-v1/r23.mp3",
+        "seconds": 63.525,
+        "sha256": "ec86051f370bf3424c7cd9aa19a69099d0666dd20fe31be3c1f1dad5b87ce322",
+        "bytes": 508844,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "La Txell",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 2,
+            "start": 0,
+            "end": 1.095,
+            "cues": []
+          },
+          {
+            "number": 2,
+            "text": "obre una capsa",
+            "paragraph": 1,
+            "startWord": 3,
+            "endWord": 5,
+            "start": 1.095,
+            "end": 3,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "de records",
+            "paragraph": 1,
+            "startWord": 6,
+            "endWord": 7,
+            "start": 3,
+            "end": 4.68,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "i els escampa",
+            "paragraph": 1,
+            "startWord": 8,
+            "endWord": 10,
+            "start": 4.68,
+            "end": 6.21,
+            "cues": []
+          },
+          {
+            "number": 5,
+            "text": "damunt la taula.",
+            "paragraph": 1,
+            "startWord": 11,
+            "endWord": 13,
+            "start": 6.21,
+            "end": 10.53,
+            "cues": [
+              {
+                "afterWord": 13,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Hi troba",
+            "paragraph": 1,
+            "startWord": 14,
+            "endWord": 15,
+            "start": 10.53,
+            "end": 12.46504,
+            "cues": []
+          },
+          {
+            "number": 7,
+            "text": "una petxina",
+            "paragraph": 1,
+            "startWord": 16,
+            "endWord": 17,
+            "start": 12.46504,
+            "end": 14.64,
+            "cues": []
+          },
+          {
+            "number": 8,
+            "text": "i un collaret",
+            "paragraph": 1,
+            "startWord": 18,
+            "endWord": 20,
+            "start": 14.64,
+            "end": 16.65,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "de l’estiu.",
+            "paragraph": 1,
+            "startWord": 21,
+            "endWord": 22,
+            "start": 16.65,
+            "end": 19.995,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "text": "També hi guarda",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 25,
+            "start": 19.995,
+            "end": 23.43,
+            "cues": []
+          },
+          {
+            "number": 11,
+            "text": "castanyes d’un passeig",
+            "paragraph": 2,
+            "startWord": 26,
+            "endWord": 28,
+            "start": 23.43,
+            "end": 26.88,
+            "cues": []
+          },
+          {
+            "number": 12,
+            "text": "a la muntanya",
+            "paragraph": 2,
+            "startWord": 29,
+            "endWord": 31,
+            "start": 26.88,
+            "end": 28.65,
+            "cues": []
+          },
+          {
+            "number": 13,
+            "text": "i un dibuix",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 34,
+            "start": 28.65,
+            "end": 31.02,
+            "cues": []
+          },
+          {
+            "number": 14,
+            "text": "fet pel seu germà.",
+            "paragraph": 2,
+            "startWord": 35,
+            "endWord": 38,
+            "start": 31.02,
+            "end": 34.935,
+            "cues": [
+              {
+                "afterWord": 38,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 15,
+            "text": "Al dibuix,",
+            "paragraph": 2,
+            "startWord": 39,
+            "endWord": 40,
+            "start": 34.935,
+            "end": 37.485,
+            "cues": [
+              {
+                "afterWord": 40,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 16,
+            "text": "hi apareix",
+            "paragraph": 2,
+            "startWord": 41,
+            "endWord": 42,
+            "start": 37.485,
+            "end": 39.105,
+            "cues": []
+          },
+          {
+            "number": 17,
+            "text": "un peix blau.",
+            "paragraph": 2,
+            "startWord": 43,
+            "endWord": 45,
+            "start": 39.105,
+            "end": 42.585,
+            "cues": [
+              {
+                "afterWord": 45,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 18,
+            "text": "La Txell",
+            "paragraph": 3,
+            "startWord": 46,
+            "endWord": 47,
+            "start": 42.585,
+            "end": 44.13,
+            "cues": []
+          },
+          {
+            "number": 19,
+            "text": "tria alguns records",
+            "paragraph": 3,
+            "startWord": 48,
+            "endWord": 50,
+            "start": 44.13,
+            "end": 46.83,
+            "cues": []
+          },
+          {
+            "number": 20,
+            "text": "per portar-los",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 52,
+            "start": 46.83,
+            "end": 49.095,
+            "cues": []
+          },
+          {
+            "number": 21,
+            "text": "a classe.",
+            "paragraph": 3,
+            "startWord": 53,
+            "endWord": 54,
+            "start": 49.095,
+            "end": 52.305,
+            "cues": [
+              {
+                "afterWord": 54,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 22,
+            "text": "Vol explicar",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 56,
+            "start": 52.305,
+            "end": 54.555,
+            "cues": []
+          },
+          {
+            "number": 23,
+            "text": "als companys",
+            "paragraph": 3,
+            "startWord": 57,
+            "endWord": 58,
+            "start": 54.555,
+            "end": 56.79,
+            "cues": []
+          },
+          {
+            "number": 24,
+            "text": "d’on venen",
+            "paragraph": 3,
+            "startWord": 59,
+            "endWord": 60,
+            "start": 56.79,
+            "end": 58.71,
+            "cues": []
+          },
+          {
+            "number": 25,
+            "text": "i per què",
+            "paragraph": 3,
+            "startWord": 61,
+            "endWord": 63,
+            "start": 58.71,
+            "end": 60.21,
+            "cues": []
+          },
+          {
+            "number": 26,
+            "text": "els ha conservat.",
+            "paragraph": 3,
+            "startWord": 64,
+            "endWord": 66,
+            "start": 60.21,
+            "end": 63.525,
+            "cues": [
+              {
+                "afterWord": 66,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r45": {
+        "label": "4–5 mots",
+        "path": "assets/audio/texts/ca/ca012-four-v1/r45.mp3",
+        "seconds": 54.825,
+        "sha256": "932ef9b656de78fd5b502da05bd18d8a66d5c4338ea9814c7f87bef6cdcb8985",
+        "bytes": 439340,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "La Txell obre una capsa",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 5,
+            "start": 0,
+            "end": 3.03,
+            "cues": []
+          },
+          {
+            "number": 2,
+            "text": "de records i els escampa",
+            "paragraph": 1,
+            "startWord": 6,
+            "endWord": 10,
+            "start": 3.03,
+            "end": 7.05,
+            "cues": []
+          },
+          {
+            "number": 3,
+            "text": "damunt la taula.",
+            "paragraph": 1,
+            "startWord": 11,
+            "endWord": 13,
+            "start": 7.05,
+            "end": 10.345,
+            "cues": [
+              {
+                "afterWord": 13,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "Hi troba una petxina",
+            "paragraph": 1,
+            "startWord": 14,
+            "endWord": 17,
+            "start": 10.345,
+            "end": 12.81,
+            "cues": []
+          },
+          {
+            "number": 5,
+            "text": "i un collaret de l’estiu.",
+            "paragraph": 1,
+            "startWord": 18,
+            "endWord": 22,
+            "start": 12.81,
+            "end": 17.19,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "També hi guarda",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 25,
+            "start": 17.19,
+            "end": 19.245,
+            "cues": []
+          },
+          {
+            "number": 7,
+            "text": "castanyes d’un passeig a la muntanya",
+            "paragraph": 2,
+            "startWord": 26,
+            "endWord": 31,
+            "start": 19.245,
+            "end": 21.93,
+            "cues": []
+          },
+          {
+            "number": 8,
+            "text": "i un dibuix",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 34,
+            "start": 21.93,
+            "end": 23.505,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "fet pel seu germà.",
+            "paragraph": 2,
+            "startWord": 35,
+            "endWord": 38,
+            "start": 23.505,
+            "end": 26.79,
+            "cues": [
+              {
+                "afterWord": 38,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "text": "Al dibuix, hi apareix",
+            "paragraph": 2,
+            "startWord": 39,
+            "endWord": 42,
+            "start": 26.79,
+            "end": 31.695,
+            "cues": [
+              {
+                "afterWord": 40,
+                "text": "Coma"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "text": "un peix blau.",
+            "paragraph": 2,
+            "startWord": 43,
+            "endWord": 45,
+            "start": 31.695,
+            "end": 35.73,
+            "cues": [
+              {
+                "afterWord": 45,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "text": "La Txell tria alguns records",
+            "paragraph": 3,
+            "startWord": 46,
+            "endWord": 50,
+            "start": 35.73,
+            "end": 40.89,
+            "cues": []
+          },
+          {
+            "number": 13,
+            "text": "per portar-los a classe.",
+            "paragraph": 3,
+            "startWord": 51,
+            "endWord": 54,
+            "start": 40.89,
+            "end": 44.46,
+            "cues": [
+              {
+                "afterWord": 54,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 14,
+            "text": "Vol explicar als companys",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 58,
+            "start": 44.46,
+            "end": 48.045,
+            "cues": []
+          },
+          {
+            "number": 15,
+            "text": "d’on venen i per què",
+            "paragraph": 3,
+            "startWord": 59,
+            "endWord": 63,
+            "start": 48.045,
+            "end": 51.36,
+            "cues": []
+          },
+          {
+            "number": 16,
+            "text": "els ha conservat.",
+            "paragraph": 3,
+            "startWord": 64,
+            "endWord": 66,
+            "start": 51.36,
+            "end": 54.825,
+            "cues": [
+              {
+                "afterWord": 66,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r68": {
+        "label": "6–8 mots",
+        "path": "assets/audio/texts/ca/ca012-four-v1/r68.mp3",
+        "seconds": 36.27004,
+        "sha256": "0147fb61ffe401ff30a9bb7304ef8999ff81a782b1067568ef7956371083f339",
+        "bytes": 290924,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "La Txell obre una capsa de records",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 7,
+            "start": 0,
+            "end": 3.165,
+            "cues": []
+          },
+          {
+            "number": 2,
+            "text": "i els escampa damunt la taula.",
+            "paragraph": 1,
+            "startWord": 8,
+            "endWord": 13,
+            "start": 3.165,
+            "end": 6.645,
+            "cues": [
+              {
+                "afterWord": 13,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "Hi troba una petxina i un collaret de l’estiu.",
+            "paragraph": 1,
+            "startWord": 14,
+            "endWord": 22,
+            "start": 6.645,
+            "end": 10.965,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "text": "També hi guarda castanyes d’un passeig a la muntanya",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 31,
+            "start": 10.965,
+            "end": 14.685,
+            "cues": []
+          },
+          {
+            "number": 5,
+            "text": "i un dibuix fet pel seu germà.",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 38,
+            "start": 14.685,
+            "end": 19.23,
+            "cues": [
+              {
+                "afterWord": 38,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "Al dibuix, hi apareix un peix blau.",
+            "paragraph": 2,
+            "startWord": 39,
+            "endWord": 45,
+            "start": 19.23,
+            "end": 25.27504,
+            "cues": [
+              {
+                "afterWord": 40,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 45,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "La Txell tria alguns records per portar-los a classe.",
+            "paragraph": 3,
+            "startWord": 46,
+            "endWord": 54,
+            "start": 25.27504,
+            "end": 29.91004,
+            "cues": [
+              {
+                "afterWord": 54,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "text": "Vol explicar als companys d’on venen",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 60,
+            "start": 29.91004,
+            "end": 32.805,
+            "cues": []
+          },
+          {
+            "number": 9,
+            "text": "i per què els ha conservat.",
+            "paragraph": 3,
+            "startWord": 61,
+            "endWord": 66,
+            "start": 32.805,
+            "end": 36.27004,
+            "cues": [
+              {
+                "afterWord": 66,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      },
+      "r912": {
+        "label": "9–12 mots",
+        "path": "assets/audio/texts/ca/ca012-four-v1/r912.mp3",
+        "seconds": 35.48996,
+        "sha256": "62b1a442b8342332cb16e988e9769208ac986da8a0f9c134fd37ea7091da4655",
+        "bytes": 284588,
+        "fragments": [
+          {
+            "number": 1,
+            "text": "La Txell obre una capsa de records i els escampa damunt la taula.",
+            "paragraph": 1,
+            "startWord": 1,
+            "endWord": 13,
+            "start": 0,
+            "end": 5.18996,
+            "cues": [
+              {
+                "afterWord": 13,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "text": "Hi troba una petxina i un collaret de l’estiu.",
+            "paragraph": 1,
+            "startWord": 14,
+            "endWord": 22,
+            "start": 5.18996,
+            "end": 10.65,
+            "cues": [
+              {
+                "afterWord": 22,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "text": "També hi guarda castanyes d’un passeig a la muntanya",
+            "paragraph": 2,
+            "startWord": 23,
+            "endWord": 31,
+            "start": 10.65,
+            "end": 14.42996,
+            "cues": []
+          },
+          {
+            "number": 4,
+            "text": "i un dibuix fet pel seu germà.",
+            "paragraph": 2,
+            "startWord": 32,
+            "endWord": 38,
+            "start": 14.42996,
+            "end": 18.675,
+            "cues": [
+              {
+                "afterWord": 38,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "text": "Al dibuix, hi apareix un peix blau.",
+            "paragraph": 2,
+            "startWord": 39,
+            "endWord": 45,
+            "start": 18.675,
+            "end": 24.74996,
+            "cues": [
+              {
+                "afterWord": 40,
+                "text": "Coma"
+              },
+              {
+                "afterWord": 45,
+                "text": "Punt i a part"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "text": "La Txell tria alguns records per portar-los a classe.",
+            "paragraph": 3,
+            "startWord": 46,
+            "endWord": 54,
+            "start": 24.74996,
+            "end": 29.82,
+            "cues": [
+              {
+                "afterWord": 54,
+                "text": "Punt i seguit"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "text": "Vol explicar als companys d’on venen i per què els ha conservat.",
+            "paragraph": 3,
+            "startWord": 55,
+            "endWord": 66,
+            "start": 29.82,
+            "end": 35.48996,
+            "cues": [
+              {
+                "afterWord": 66,
+                "text": "Punt final"
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }

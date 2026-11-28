@@ -18,31 +18,32 @@
  const controls={pace:{label:'Mots',less:'Menys mots per fragment',more:'Més mots per fragment',values:[2,4,6,10],format:value=>({2:'2–3',4:'4–5',6:'6–8',10:'9–12'})[value]},rate:{label:'Velocitat',less:'Llegeix més a poc',more:'Llegeix més ràpid',values:[.8,.9,1],format:value=>Math.round(value*100)+' %'},wait:{label:'Pausa',less:'Menys temps per escriure',more:'Més temps per escriure',values:[.8,1,1.25],format:value=>({'0.8':'4–10 s','1':'4–12 s','1.25':'4–15 s'})[value]}};
  for(const [mount,prefix]of [['tx-ready-controls','tx-'],['tx-adjust','tx-adjust-']])$(mount).innerHTML=Object.entries(controls).map(([key,c])=>`<div class="tx-step"><span id="${prefix+key}-label">${t(c.label)}</span><div role="group" aria-labelledby="${prefix+key}-label"><button type="button" data-adjust="${key}" data-step="-1" aria-label="${t(c.less)}" title="${t(c.less)}">−</button><output id="${prefix+key}" aria-live="polite"></output><button type="button" data-adjust="${key}" data-step="1" aria-label="${t(c.more)}" title="${t(c.more)}">+</button></div></div>`).join('');
  function syncControls(){for(const mount of ['tx-ready-controls','tx-adjust'])for(const [key,c]of Object.entries(controls)){const row=$(mount).querySelector(`[data-adjust="${key}"]`).closest('.tx-step'),value=key==='wait'?waitFactor:settings[key],at=c.values.indexOf(value);row.querySelector('output').textContent=c.format(value);for(const button of row.querySelectorAll('button'))button.disabled=!entry||(Number(button.dataset.step)<0?at===0:at===c.values.length-1);}}
- const repeat=window.PlecTextRepeat.create({onTick:seconds=>{$('tx-countdown').hidden=false;$('tx-countdown').textContent='Tornaràs a sentir el fragment d’aquí a '+seconds+' s';},onEnd:()=>{cancelRepeat();if(automatic&&scene==='player'&&!document.hidden&&plays<3)play();}});
+ const repeat=window.PlecTextRepeat.create({onTick:seconds=>{$('tx-countdown').hidden=false;$('tx-countdown').textContent=t('Tornaràs a sentir el fragment d’aquí a {seconds} s',{seconds});},onEnd:()=>{cancelRepeat();if(automatic&&scene==='player'&&!document.hidden&&plays<3)play();}});
  function cancelRepeat(){repeat.cancel();$('tx-countdown').hidden=true;}
  function stop(){epoch++;cancelAnimationFrame(frame);cancelRepeat();audio?.pause();playing=false;}
  function wait(){if(automatic&&scene==='player'&&plays<3&&!document.hidden)repeat.start(groups[index].words,waitFactor);}
  function show(name){scene=name;for(const key of ['ready','player','paused','finished'])$('tx-'+key).hidden=key!==name;}
  function links(){if(!entry)return;const base=new URL('../../',location.href).href;for(const id of ['composer-link','tx-back'])$(id).href=T.url(entry,settings,false,base);}
  function codePicture(id,code){const p=window.PlecRhythmCode.picture(code),image=$(id);image.hidden=!p;if(p){image.src=new URL('../../'+p.image,location.href).href;image.alt=p.picture;}}
- function rhythmResult(){const code=window.PlecRhythmCode.encode(settings,waitFactor);$('tx-rhythm-result').textContent=code;codePicture('tx-rhythm-picture',code);codePicture('tx-rhythm-preview',code);$('tx-rhythm-input').value=code;$('tx-rhythm-status').textContent='';$('tx-rhythm-input').setAttribute('aria-invalid','false');$('tx-rhythm-summary').textContent=controls.pace.format(settings.pace)+' mots · '+controls.rate.format(settings.rate)+' · pausa '+controls.wait.format(waitFactor);$('tx-rhythm-copy-status').textContent='';}
+ function rhythmResult(){const code=window.PlecRhythmCode.encode(settings,waitFactor);$('tx-rhythm-result').textContent=code;codePicture('tx-rhythm-picture',code);codePicture('tx-rhythm-preview',code);$('tx-rhythm-input').value=code;$('tx-rhythm-status').textContent='';$('tx-rhythm-input').setAttribute('aria-invalid','false');$('tx-rhythm-summary').textContent=t('{pace} mots · {rate} · pausa {wait}',{pace:controls.pace.format(settings.pace),rate:controls.rate.format(settings.rate),wait:controls.wait.format(waitFactor)});$('tx-rhythm-copy-status').textContent='';}
  function saveUrl(){const url=new URL(location.href);url.searchParams.set('pace',settings.pace);url.searchParams.set('rate',settings.rate);history.replaceState(null,'',url);}
  function setup(){
   syncControls();
-  if(!entry){$('tx-setup-error').hidden=false;$('tx-setup-error').textContent='Aquest dictat de text no està disponible en aquesta llengua.';$('tx-start').disabled=true;return;}
+  if(!entry){$('tx-setup-error').hidden=false;$('tx-setup-error').textContent=t("Aquest dictat de text no està disponible en aquesta llengua.");$('tx-start').disabled=true;return;}
   $('tx-summary').textContent=entry.code+' · '+t('{words} paraules · {fragments} fragments',{words:T.wordCount(T.text(entry)),fragments:groups.length});
   $('tx-start').disabled=!entry.audio||entry.status==='draft';
-  if(!entry.audio||entry.status==='draft'){$('tx-setup-error').hidden=false;$('tx-setup-error').textContent=t(entry.status==='draft'?'Text pendent de validació docent. Encara no se n’ha encarregat l’àudio.':entry.status==='approved-text'?'Text validat. L’escaleta de prosòdia està pendent de validació; encara no hi ha àudio.':'L’àudio d’aquest prototip encara està en preparació.');document.querySelector('#tx-ready .tx-pilot').textContent=t('Àudio no disponible.');}
+  if(!entry.audio||entry.status==='draft'){$('tx-setup-error').hidden=false;$('tx-setup-error').textContent=t(entry.status==='draft'?'Text pendent de validació docent. Encara no se n’ha encarregat l’àudio.':entry.prosodyReview?.status==='approved'?'L’àudio d’aquest dictat s’està preparant.':entry.status==='approved-text'?'Text validat. L’escaleta de prosòdia està pendent de validació; encara no hi ha àudio.':'L’àudio d’aquest prototip encara està en preparació.');document.querySelector('#tx-ready .tx-pilot').textContent=t('Àudio no disponible.');}
+  if(entry.audio){$('tx-setup-error').hidden=true;document.querySelector('#tx-ready .tx-pilot').textContent=t(entry.language==='es'?'Aoede · castellà d’Espanya · prova pendent d’audició':'Aoede · català central · prova pendent d’audició');}
   links();
  }
  function draw(){
   $('tx-number').textContent=index+1;$('tx-total').textContent='de '+groups.length;
-  $('tx-listen-count').textContent=`${plays} de 3 escoltes`;
+  $('tx-listen-count').textContent=t('{plays} de 3 escoltes',{plays});
   $('tx-listen').disabled=playing||plays>=3;
-  $('tx-listen-label').textContent=playing?'Escoltant…':plays>=3?'Tres escoltes completades':plays?'Torna a escoltar':'Escolta';
+  $('tx-listen-label').textContent=playing?t("Escoltant…"):plays>=3?t("Tres escoltes completades"):plays?t("Torna a escoltar"):t("Escolta");
   $('tx-next').hidden=plays===0;$('tx-next').disabled=playing;
-  $('tx-next-label').textContent=index===groups.length-1?'Acaba el dictat':'Fragment següent';
-  $('tx-auto').setAttribute('aria-pressed',String(automatic));$('tx-auto').textContent=automatic?'Atura l’escolta automàtica':'Activa l’escolta automàtica';$('tx-auto-ready').checked=automatic;
+  $('tx-next-label').textContent=index===groups.length-1?t("Acaba el dictat"):t("Fragment següent");
+  $('tx-auto').setAttribute('aria-pressed',String(automatic));$('tx-auto').textContent=automatic?t("Atura l’escolta automàtica"):t("Activa l’escolta automàtica");$('tx-auto-ready').checked=automatic;
  }
  async function loadAudio(){
   const group=groups[index],path=group.path||entry.audio.path;
@@ -61,7 +62,7 @@
  async function play(){
   if(playing||plays>=3||scene!=='player')return;
   cancelRepeat();const ticket=++epoch;playing=true;$('tx-error').hidden=true;draw();
-  function failed(){if(ticket!==epoch)return;stop();automatic=false;$('tx-error').hidden=false;$('tx-error').textContent='No s’ha pogut reproduir el fragment. Comprova la connexió i torna-ho a provar.';draw();}
+  function failed(){if(ticket!==epoch)return;stop();automatic=false;$('tx-error').hidden=false;$('tx-error').textContent=t("No s’ha pogut reproduir el fragment. Comprova la connexió i torna-ho a provar.");draw();}
   try{
    const player=await loadAudio();if(ticket!==epoch||scene!=='player')return;
    player.onerror=failed;
@@ -100,11 +101,11 @@
  $('tx-rhythm-form').addEventListener('submit',event=>{
   event.preventDefault();if(!entry||scene!=='ready')return;const profile=window.PlecRhythmCode.decode($('tx-rhythm-input').value);
   $('tx-rhythm-input').setAttribute('aria-invalid',String(!profile));
-  if(!profile){$('tx-rhythm-status').textContent='No reconec aquest codi. Revisa’l o continua sense codi.';return;}
+  if(!profile){$('tx-rhythm-status').textContent=t("No reconec aquest codi. Revisa’l o continua sense codi.");return;}
   settings=T.options({...settings,pace:profile.pace,rate:profile.rate});waitFactor=profile.waitFactor;groups=T.fragments(entry,settings.pace);index=0;plays=0;completedThrough=0;
-  $('tx-rhythm-input').value=profile.code;codePicture('tx-rhythm-preview',profile.code);$('tx-rhythm-status').textContent='Codi '+profile.code+' aplicat.';setup();saveUrl();
+  $('tx-rhythm-input').value=profile.code;codePicture('tx-rhythm-preview',profile.code);$('tx-rhythm-status').textContent=t('Codi {code} aplicat.',{code:profile.code});setup();saveUrl();
  });
- $('tx-rhythm-copy').addEventListener('click',async()=>{const code=$('tx-rhythm-result').textContent;try{await navigator.clipboard.writeText(code);$('tx-rhythm-copy-status').textContent='Codi copiat.';}catch{const selection=getSelection(),range=document.createRange();range.selectNodeContents($('tx-rhythm-result'));selection.removeAllRanges();selection.addRange(range);$('tx-rhythm-copy-status').textContent='Copia el codi seleccionat o apunta’l per al pròxim dictat.';}});
+ $('tx-rhythm-copy').addEventListener('click',async()=>{const code=$('tx-rhythm-result').textContent;try{await navigator.clipboard.writeText(code);$('tx-rhythm-copy-status').textContent=t("Codi copiat.");}catch{const selection=getSelection(),range=document.createRange();range.selectNodeContents($('tx-rhythm-result'));selection.removeAllRanges();selection.addRange(range);$('tx-rhythm-copy-status').textContent=t("Copia el codi seleccionat o apunta’l per al pròxim dictat.");}});
  $('text-player-root').addEventListener('click',event=>{const button=event.target.closest('[data-adjust]');if(button)change(button.dataset.adjust,Number(button.dataset.step));});
  window.addEventListener('pagehide',stop);setup();show('ready');
 })();

@@ -1,5 +1,11 @@
 # Historial
 
+## 1.53 · 28 de novembre de 2026
+
+- Escaletes CA007–CA012 i ES001–ES012 aprovades: producció progressiva de divuit lots amb Aoede i quatre ritmes, dos minuts entre enviaments i un màxim compartit de deu peticions per dia de quota.
+- Àudios disponibles al preparador, la comparativa d’escaletes i el reproductor de Frases en cada llengua. La revisió auditiva continua oberta; els textos pendents de producció ho indiquen sense oferir reproduccions buides.
+- Recuperació íntegra de contenidors WAV rebuts i marques de temps locals amb reconeixement català o castellà, sense repetir peticions ni modificar les veus.
+
 ## 1.38 · 25 de novembre de 2026
 
 - Accés discret «Escaleta» al preview del dictat normal. Comparativa de quatre ritmes (2–3, 4–5, 6–8 i 9–12 mots), amb intervals estables de mots, locucions de puntuació separades, pauses proposades, inflexions i justificació dels ajustos de sentit.

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "es001-es012-prosody-proposal-v1",
-  "status": "pending-prosody-validation",
+  "status": "approved-planning",
   "voiceProposal": "Aoede",
   "varietyProposal": "Español de España",
   "synthesisAuthorized": false,
@@ -721,9 +721,9 @@
       "title": "Una excursión en autobús",
       "words": 65,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "f2419ca3368e14343344a647679e88efdff5c1cb1f40b34679e434b9fcfab2b9",
-      "planSha256": "1749c9c0cb93e0dcda796a3b0f71c7c0e59430d017a9f665975f60fbf07358c5"
+      "planSha256": "4be5778b2e1c3080f7f138b4b3417309d3e92cf958fcdf25fb1e29915144ffb9"
     },
     {
       "code": "ES002",
@@ -731,9 +731,9 @@
       "title": "Una visita al museo",
       "words": 64,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "e46d63befd3713da64bdab4b251fc74528f76b963d8fa4a1b580eeb1465716af",
-      "planSha256": "0d779a026ad9f1d2f0d6d585b5e2026c2a7911786577d447d57e8da35131dd82"
+      "planSha256": "110919f18b3582ab9be335eecfe8b8ef8ec86bbe56ddf864f8fa0cf3234eff62"
     },
     {
       "code": "ES003",
@@ -741,9 +741,9 @@
       "title": "El huerto de Hugo",
       "words": 64,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "d829cfc00bf8379184e81c4308962d9e672d67e41da74e8ddd491e74efb65ae4",
-      "planSha256": "b4909274335579dbca8d4e27d43dca5da5d6f06ba3ead4e23784ce3ba37dec23"
+      "planSha256": "fced3a65fcdc83d27d28825ef7537187b77b14f388a7e049dc44515c1b1ff0f8"
     },
     {
       "code": "ES004",
@@ -751,9 +751,9 @@
       "title": "Un regalo tejido",
       "words": 65,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "83d38075c3d3ced49fa67924e9a98fe933594b17bbbedfc2ef7ffedcfeaebc65",
-      "planSha256": "19ddd0920ae1fe50c5424e75e457a491b78ff62c8fe577301cd4829dbb78b6d9"
+      "planSha256": "d48f7ef2a55812da44650f08aef45ba465183dc96ebd7808603152fb67dfb037"
     },
     {
       "code": "ES005",
@@ -761,9 +761,9 @@
       "title": "Una biblioteca viajera",
       "words": 65,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "ea194a2e00381ac77cf92f91d99bad0e56b25643b0e515fdbe76d54e010c6a83",
-      "planSha256": "9b0e20a4b0db638135ac4b29716ad3294620433f68345a5db30cc1bc7dec1a17"
+      "planSha256": "330aa6f066fee04bcbaee0510d68b387aa3f5b48c2638fddd1f743af9b49efb7"
     },
     {
       "code": "ES006",
@@ -771,9 +771,9 @@
       "title": "Una carrera en el patio",
       "words": 66,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "d96b8e14ab958047339db45d07d9620cd6da05c7b0090bbf3e768a2c7cdc7502",
-      "planSha256": "30c4bce4fb8f1d760e65a48d0991a802ea2399392995d567d3aedb62c41d4401"
+      "planSha256": "d13b1700746120933553f9f7201dfc67a6788979599b7f081c71467fb90d5a2d"
     },
     {
       "code": "ES007",
@@ -781,9 +781,9 @@
       "title": "Un almuerzo en el parque",
       "words": 62,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "fb3a3a4bfa3322ecc55869b6003ca381ca0f246887f189a7b2dcceaa246e7b41",
-      "planSha256": "55547c82b6c869b88d95b071b8347ef1d3f8351587b3129dffc8bfa683ecc280"
+      "planSha256": "a24cdeeda5c42f56e689bb93e6c7af715454edcea87d90a8f5bf2044fbc4761b"
     },
     {
       "code": "ES008",
@@ -791,9 +791,9 @@
       "title": "Una guía de animales",
       "words": 65,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "d753ddea5347115a9b03bb472bdb6025e6fc981bbf15a45b259bd5028fef5dfc",
-      "planSha256": "017987073f63ecc965d60769b64148986f4b049ee736fa13faec3ece3d86bb42"
+      "planSha256": "7d81132e2f7e5927fd863e7a7cef264e16f0a8aa026313a711e0a1e202176e5b"
     },
     {
       "code": "ES009",
@@ -801,9 +801,9 @@
       "title": "La llave del cobertizo",
       "words": 64,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "f9e435fe2add8c94928d9c27cb9ec76e42a38e914cac36fc18ac69b2f8c80828",
-      "planSha256": "b262926515c535fb6ee44f7c2ad8a990b970abf48ec027ce52432e3fd93ad8bf"
+      "planSha256": "5a9388bd1a1e928224dec46c3f2809de15966c7a3d4bceb42ba871b7af63eb65"
     },
     {
       "code": "ES010",
@@ -811,9 +811,9 @@
       "title": "Una casa de cartón",
       "words": 66,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "c52cb0c22b25198ae1495fe2bb0234beca9c0b3535068316b97d18213d1f0d7b",
-      "planSha256": "cd86f8012697a01d38eacb492905aef848ae5d7f756727ef55fc9eb885985102"
+      "planSha256": "c17e6f3ef1e44d1b9530e012c92b7d1bbec1614daa957ce760fc4dcacb00c3ff"
     },
     {
       "code": "ES011",
@@ -821,9 +821,9 @@
       "title": "Un experimento en clase",
       "words": 64,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "78d751f02178d7d3fddceee2ad9584c77b6d75f9dbb844f909112f8e5d65cc6a",
-      "planSha256": "ac9f75aa7c6e5aaec84c1a34a325680174d46cd545f1bc26040bdccb07101806"
+      "planSha256": "f7d7db2e432224de0e7f2ea86805907432de2ccb0dfa3a510c66bed754801c49"
     },
     {
       "code": "ES012",
@@ -831,9 +831,9 @@
       "title": "Un plan para el viernes",
       "words": 65,
       "teacherValidation": "approved",
-      "prosodyValidation": "pending",
+      "prosodyValidation": "approved",
       "sourceTextSha256": "d85e1efdda445a037371dae25e74a99b423a351574923c4afdbb333950b374e9",
-      "planSha256": "ed81f6a51c774b3df869046b4d07aa665beb159d6579240706a48471d6721379"
+      "planSha256": "5f02b20c612eb16d0d110dc87fbfb7ccc34c0f4f5e83312a416b140fa2684ad4"
     }
   ]
 }
