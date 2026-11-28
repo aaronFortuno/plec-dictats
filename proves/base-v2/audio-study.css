@@ -68,8 +68,16 @@
 .audio-study-actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 .audio-study-play > audio { display: block; width: 100%; }
 .audio-study :is([hidden], [data-mode-panel][hidden]) { display: none !important; }
+.audio-study-listening { grid-template-columns: minmax(0, 1fr); max-width: 760px; }
 @media (max-width: 760px) {
   .audio-study { grid-template-columns: minmax(0, 1fr); }
   .audio-study-panel { grid-row: 1; }
   .audio-study-grid { gap: 8px; }
+}
+
+@media print {
+  body:has(.audio-study) { display: block; background: white; color: black; }
+  body:has(.audio-study) :is(.of-header, .of-footer, .audio-study-panel, .audio-study-tabs, button, nav, #word-panel .audio-study-grid) { display: none; }
+  .audio-study { display: block; padding: 0; }
+  .audio-study-main { padding: 0; border: 0; }
 }

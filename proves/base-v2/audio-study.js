@@ -1,6 +1,6 @@
-import { createThemePreference } from './interface-preferences.js';
+import { createThemePreference } from './interface-preferences.js?v=0.14.0';
 
-export function mountAudioStudy() {
+export function mountStudyTheme() {
   const { project } = document.body.dataset;
   const theme = createThemePreference(`ortografi:preview:${project}:theme`, { initialKey: project === 'sentit' ? 'sentit-theme' : 'plec-appearance-v1' });
   const themeButton = document.getElementById('audio-theme');
@@ -13,7 +13,10 @@ export function mountAudioStudy() {
     showTheme();
   });
   showTheme();
+}
 
+export function mountAudioStudy() {
+  mountStudyTheme();
   const panel = document.querySelector('.audio-study-panel');
   if (matchMedia('(max-width: 760px)').matches) panel.open = false;
   const form = document.getElementById('audio-settings');

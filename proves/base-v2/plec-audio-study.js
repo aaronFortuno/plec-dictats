@@ -1,192 +1,97 @@
-import { mountAudioRate } from './audio-rate.js?v=0.13.0';
-import { mountAudioStudy } from './audio-study.js?v=0.13.0';
+import { mountAudioRate } from './audio-rate.js?v=0.14.0';
+import { mountAudioStudy } from './audio-study.js?v=0.14.0';
+import { drawStudyWords, phraseSamples, phraseStudyParts, plecStudyLink, plecStudySettings, studyWritingPause, varieties,
+  wordCounts, wordGroups, wordRates, phraseRates } from './plec-study-data.js?v=0.14.0';
+import { mountStudyPlayback, plecStudySteps, sampleAudio } from './study-playback.js?v=0.14.0';
 
 const study = mountAudioStudy();
 const { form, play, progress } = study;
-const { PlecSeeds: seeds, PlecSeedRegistry: registry, PlecTexts: texts, PlecAudioVarieties: varieties,
-  PlecAudioManifest: audioManifest, PlecTextRepeat: repeat, PlecRhythmCode: rhythm } = window;
 const byId = id => document.getElementById(id);
 const fields = form.elements;
-const result = byId('word-list');
 const focus = byId('focus');
 const count = byId('word-count');
 const phrase = byId('phrase');
-const audio = new Audio();
-audio.preload = 'auto';
-audio.preservesPitch = true;
-
-let mode = 'words';
-let words;
-let playback;
-const edition = registry.editions.find(item => item.slot === registry.current);
-const categories = edition.catalog.categories.filter(item => item.mode === 'words' && seeds.WORD_FOCUSES.includes(item.id));
-const samples = texts.catalogue.filter(entry => entry.language === 'ca' && texts.fragments(entry, 6)[0]?.path);
+const list = byId('word-list');
+const query = new URLSearchParams(location.search);
+const initial = plecStudySettings(query);
+let mode = initial.mode;
+let seed = query.has('seed') ? initial.seed : crypto.getRandomValues(new Uint32Array(1))[0];
 const rates = form.querySelector('[data-audio-rate]');
 const wordRateRoot = document.createElement('div');
 const phraseRateRoot = document.createElement('div');
 rates.append(wordRateRoot, phraseRateRoot);
-const { select: wordRate } = mountAudioRate(wordRateRoot, { rates: [.85, 1], name: 'wordRate' });
-const { select: phraseRate } = mountAudioRate(phraseRateRoot, { rates: [.8, .9, 1], name: 'phraseRate' });
+const { select: wordRate } = mountAudioRate(wordRateRoot, { rates: wordRates, name: 'wordRate' });
+const { select: phraseRate } = mountAudioRate(phraseRateRoot, { rates: phraseRates, name: 'phraseRate' });
 
-focus.replaceChildren(...categories.map(item => new Option(item.label, item.id)));
-count.replaceChildren(...seeds.COUNTS.map(value => new Option(value, value)));
-count.value = '12';
-phrase.replaceChildren(...samples.map(entry => new Option(`${entry.code} · ${entry.title}`, entry.id)));
-fields.variety.replaceChildren(...varieties.forLanguage('ca').map(item => new Option(item.label, item.id)));
-const bankSize = edition.catalog.entries.filter(entry => entry.mode === 'words').length;
-byId('bank-size').textContent = `${new Intl.NumberFormat('ca').format(bankSize)} paraules disponibles al banc.`;
+focus.replaceChildren(...Object.entries(wordGroups).map(([key, group]) => new Option(group.label, key)));
+count.replaceChildren(...wordCounts.map(value => new Option(value, value)));
+phrase.replaceChildren(...phraseSamples.map(entry => new Option(entry.title, entry.id)));
+fields.variety.replaceChildren(...Object.entries(varieties).map(([key, name]) => new Option(name, key)));
+focus.value = initial.focus;
+count.value = initial.count;
+phrase.value = initial.entry.id;
+fields.variety.value = initial.variety;
+fields.pace.value = initial.pace;
+fields.wait.value = initial.wait;
+(initial.mode === 'words' ? wordRate : phraseRate).value = initial.rate.toFixed(2);
+const bankSize = Object.values(wordGroups).reduce((total, group) => total + group.words.length, 0);
+byId('bank-size').textContent = `${bankSize} paraules al banc de prova.`;
 
-function draw() {
-  const recipe = { mode: 'words', stage: 'all', tags: [focus.value], count: Number(count.value) };
-  try {
-    const previous = words?.nonce;
-    const nonce = crypto.getRandomValues(new Uint32Array(1))[0] % seeds.VARIANTS;
-    const code = seeds.encode({ epoch: edition.slot, recipe, nonce: nonce === previous ? (nonce + 1) % seeds.VARIANTS : nonce });
-    words = seeds.resolve(registry.editions, code);
-    result.replaceChildren(...words.entries.map(word => {
-      const item = document.createElement('li');
-      item.textContent = word.text;
-      return item;
-    }));
-    byId('word-code').textContent = `Codi del dictat · ${words.code}`;
-    byId('word-sheet').hidden = false;
-  } catch (error) {
-    words = null;
-    result.replaceChildren();
-    byId('word-code').textContent = error.message;
-    byId('word-sheet').hidden = true;
-  }
-  update();
-}
+const isWords = () => mode === 'words';
+const playbackLabel = () => isWords() ? 'Escolta la primera paraula' : 'Prova el primer fragment';
 
-function textConfig() {
-  const entry = samples.find(item => item.id === phrase.value);
-  return { entry, pace: Number(fields.pace.value), rate: Number(phraseRate.value), wait: Number(fields.wait.value) };
+function config() {
+  return {
+    mode, seed, focus: focus.value, count: Number(count.value), variety: fields.variety.value,
+    entry: phraseSamples.find(sample => sample.id === phrase.value), pace: Number(fields.pace.value), wait: Number(fields.wait.value),
+    rate: Number((isWords() ? wordRate : phraseRate).value),
+  };
 }
 
 function update() {
-  const isWords = mode === 'words';
+  const settings = config();
   for (const panel of document.querySelectorAll('[data-mode-panel]')) panel.hidden = panel.dataset.modePanel !== mode;
   for (const tab of document.querySelectorAll('[data-mode]')) tab.setAttribute('aria-pressed', String(tab.dataset.mode === mode));
-  wordRateRoot.hidden = !isWords;
-  phraseRateRoot.hidden = isWords;
-  play.disabled = isWords ? !words : !phrase.value;
-  play.textContent = isWords ? 'Escolta la primera paraula' : 'Prova el primer fragment';
-  if (isWords && words) {
-    const settings = { seed: seeds.normalize(words.code), catalogue: words.catalogue, variety: fields.variety.value };
-    const query = new URLSearchParams(settings);
-    study.listening(new URL('ca/dictat/?' + query, document.baseURI));
-    byId('word-sheet').href = new URL('ca/?' + query, document.baseURI);
-  } else if (!isWords && phrase.value) {
-    const { entry, pace, rate, wait } = textConfig();
-    const settings = { pace, rate };
-    const parts = texts.fragments(entry, pace);
-    byId('phrase-info').textContent = [entry.stage, entry.focusLabels.join(', '), `${parts.length} fragments`].filter(Boolean).join(' · ');
-    byId('phrase-text').replaceChildren(...entry.paragraphs.map(text => {
-      const paragraph = document.createElement('p');
-      paragraph.textContent = text;
-      return paragraph;
+  wordRateRoot.hidden = !isWords();
+  phraseRateRoot.hidden = isWords();
+  play.textContent = playbackLabel();
+  if (isWords()) {
+    list.replaceChildren(...drawStudyWords(settings).map(word => {
+      const item = document.createElement('li');
+      item.textContent = word;
+      return item;
     }));
-    byId('rhythm-code').value = rhythm.encode(settings, wait);
-    byId('phrase-sheet').href = texts.url(entry, settings, false, document.baseURI);
-    study.listening(texts.url(entry, settings, true, document.baseURI));
+    byId('word-code').textContent = `Codi de prova · ${seed.toString(36).toUpperCase()}`;
   } else {
-    study.listening(null);
+    const parts = phraseStudyParts(settings);
+    byId('phrase-info').textContent = [settings.entry.stage, settings.entry.focus, `${parts.length} fragments`].join(' · ');
+    byId('phrase-text').textContent = settings.entry.text;
+    byId('rhythm-code').value = `${settings.pace} mots · ×${phraseRate.selectedOptions[0].textContent.slice(1)} · ${studyWritingPause(parts[0].length, settings.wait)} s`;
   }
+  study.listening(plecStudyLink('escolta', settings));
+  history.replaceState(null, '', plecStudyLink('audio', settings));
 }
 
-function stop(message = '') {
-  const current = playback;
-  playback = null;
-  current?.wait?.cancel();
-  audio.pause();
-  if (current) {
-    audio.removeAttribute('src');
-    audio.load();
-  }
-  play.textContent = mode === 'words' ? 'Escolta la primera paraula' : 'Prova el primer fragment';
-  progress.textContent = message;
-}
+const preview = mountStudyPlayback(play, progress, () => {
+  const settings = config();
+  if (isWords()) return [{ src: sampleAudio[settings.variety === 'valencia' ? 'high' : 'low'], label: 'Paraula 1', rate: settings.rate }];
+  const seconds = studyWritingPause(phraseStudyParts(settings)[0].length, settings.wait);
+  return plecStudySteps({ ...settings, seconds }, 2);
+}, { idle: playbackLabel });
 
-async function sound(current, part, rate) {
-  current.end = part.end;
-  audio.src = part.path;
-  audio.defaultPlaybackRate = rate;
-  audio.playbackRate = rate;
-  if (Number.isFinite(part.start)) audio.currentTime = part.start;
-  try {
-    await audio.play();
-  } catch {
-    if (playback === current) stop('No s’ha pogut reproduir l’àudio. Torna-ho a provar.');
-  }
-}
-
-async function wordClip(current) {
-  const response = await fetch('audio/manifest.json');
-  if (!response.ok) throw new Error('Manifest d’àudio');
-  const manifest = await response.json();
-  if (playback !== current) return;
-  const entries = words.entries.slice(0, 1);
-  const { pack } = varieties.select(manifest, 'ca', { variety: fields.variety.value, entries });
-  const { urls } = audioManifest.coverage(manifest, entries, 'ca', document.baseURI, pack.id);
-  if (!urls[0]) throw new Error('Mostra no disponible');
-  progress.textContent = 'Paraula 1';
-  await sound(current, { path: urls[0] }, Number(wordRate.value));
-}
-
-function phraseClip(current) {
-  const { entry, pace, rate, wait } = textConfig();
-  const part = texts.fragments(entry, pace)[0];
-  current.wait = repeat.create({
-    onTick: seconds => { progress.textContent = `Pausa per escriure · ${seconds} s`; },
-    onEnd: () => {
-      if (playback !== current) return;
-      progress.textContent = 'Fragment 1 · escolta 2 de 2';
-      void sound(current, part, rate);
-    },
-  });
-  current.onFinished = () => current.wait.start(part.words, wait);
-  progress.textContent = 'Fragment 1 · escolta 1 de 2';
-  void sound(current, part, rate);
-}
-
-function finished() {
-  if (!playback) return;
-  if (playback.onFinished) {
-    const next = playback.onFinished;
-    playback.onFinished = null;
-    playback.end = undefined;
-    audio.pause();
-    next();
-  } else {
-    stop('Preescolta acabada.');
-  }
-}
-
-audio.addEventListener('ended', finished);
-audio.addEventListener('timeupdate', () => {
-  if (playback && Number.isFinite(playback.end) && audio.currentTime >= playback.end) finished();
-});
-play.addEventListener('click', async () => {
-  if (playback) { stop(); return; }
-  const current = {};
-  playback = current;
-  play.textContent = 'Atura la prova';
-  try {
-    if (mode === 'words') await wordClip(current);
-    else phraseClip(current);
-  } catch {
-    if (playback === current) stop('No s’ha pogut carregar l’àudio. Torna-ho a provar.');
-  }
-});
 for (const tab of document.querySelectorAll('[data-mode]')) tab.addEventListener('click', () => {
-  stop();
   mode = tab.dataset.mode;
+  preview.stop();
   update();
 });
-for (const control of [focus, count]) control.addEventListener('change', () => { stop(); draw(); });
-byId('generate').addEventListener('click', () => { stop(); draw(); });
-phrase.addEventListener('change', () => { stop(); update(); });
-form.addEventListener('change', () => { stop(); update(); });
-window.addEventListener('pagehide', () => stop());
-draw();
+for (const control of [focus, count, phrase]) control.addEventListener('change', () => { preview.stop(); update(); });
+byId('generate').addEventListener('click', () => {
+  preview.stop();
+  const next = crypto.getRandomValues(new Uint32Array(1))[0];
+  seed = next === seed ? (seed + 1) >>> 0 : next;
+  update();
+});
+byId('print-word-study').addEventListener('click', () => window.print());
+byId('print-phrase-study').addEventListener('click', () => window.print());
+form.addEventListener('change', () => { preview.stop(); update(); });
+update();
