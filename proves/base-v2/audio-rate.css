@@ -1,0 +1,18 @@
+.of-audio-rate {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  min-inline-size: 0;
+}
+
+.of-audio-rate select {
+  min-block-size: 34px;
+  padding-inline: 8px;
+  border: 1px solid var(--of-border);
+  border-radius: 7px;
+  color: var(--of-text);
+  background: var(--of-surface);
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+}

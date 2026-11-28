@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <base href="../../">
+  <title>Plec · Prova dels controls d’àudio</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="proves/base-v2/preview.css?v=0.13.0">
+  <link rel="stylesheet" href="proves/base-v2/shell.css?v=0.13.0">
+  <link rel="stylesheet" href="proves/base-v2/audio-rate.css?v=0.13.0">
+  <link rel="stylesheet" href="proves/base-v2/audio-study.css?v=0.13.0">
+  <script defer src="catalogs/ca/editions/index.js"></script>
+  <script defer src="seeds.js"></script>
+  <script defer src="seeds-v2.js"></script>
+  <script defer src="audio-manifest.js"></script>
+  <script defer src="audio-varieties.js"></script>
+  <script defer src="text-catalogue.js"></script>
+  <script defer src="text-audio.js"></script>
+  <script defer src="text-dictations.js"></script>
+  <script defer src="text-repeat.js"></script>
+  <script defer src="rhythm-profiles.js"></script>
+  <script defer src="rhythm-labels.js"></script>
+  <script defer src="rhythm-code.js"></script>
+  <script type="module" src="proves/base-v2/plec-audio-study.js?v=0.13.0"></script>
+</head>
+<body data-project="plec">
+  <a class="skip" href="proves/base-v2/audio.html#contingut">Ves al contingut</a>
+  <header class="of-header"><div class="of-bar preview-bar">
+    <a class="brand" href="ca/"><img src="assets/favicon.svg" width="34" height="34" alt=""><span>Plec<span class="accent">.</span></span></a>
+    <div class="of-tools"><button id="audio-theme" type="button" aria-label="Mode fosc" aria-pressed="false">Mode fosc</button></div>
+  </div></header>
+  <main class="audio-study" id="contingut" tabindex="-1">
+    <div class="audio-study-main">
+      <header><p class="audio-study-kicker">Dictats per desplegar</p><h1>Prepara un dictat</h1></header>
+      <div class="audio-study-tabs" role="group" aria-label="Tipus de dictat">
+        <button type="button" class="audio-study-button" data-mode="words" aria-controls="word-panel" aria-pressed="true">Paraules</button>
+        <button type="button" class="audio-study-button" data-mode="phrases" aria-controls="phrase-panel" aria-pressed="false">Frases</button>
+      </div>
+      <section id="word-panel" data-mode-panel="words">
+        <h2>Genera un dictat de paraules</h2><p id="bank-size"></p>
+        <div class="audio-study-grid">
+          <label>Focus ortogràfic<select id="focus"></select></label>
+          <label>Nombre de paraules<select id="word-count"></select></label>
+        </div>
+        <p><button type="button" class="audio-study-button" id="generate">Genera un altre dictat</button></p>
+        <p id="word-code" class="audio-study-note" role="status"></p>
+        <ol id="word-list" class="audio-study-words"></ol>
+        <p><a id="word-sheet">Obre aquest dictat al preparador</a></p>
+      </section>
+      <section id="phrase-panel" data-mode-panel="phrases" hidden>
+        <h2>Tria un dictat de frases</h2>
+        <label class="audio-study-field">Text del dictat<select id="phrase"></select></label>
+        <p class="audio-study-note" id="phrase-info"></p>
+        <div id="phrase-text"></div>
+        <p><a id="phrase-sheet">Obre aquest dictat al preparador</a></p>
+      </section>
+    </div>
+    <details class="audio-study-panel" open>
+      <summary>Àudio</summary>
+      <form id="audio-settings"><section data-audio-section="share"><div class="audio-study-actions"><a id="listening-link">Obre la vista d’escolta</a><button type="button" class="audio-study-button" id="copy-listening">Copia l’enllaç</button></div>
+      <p class="audio-study-note" id="copy-status" role="status"></p></section>
+      <section data-audio-section="sequence"><div data-mode-panel="phrases" class="audio-study-grid" hidden>
+        <label>Mots per fragment<select name="pace"><option value="2">2–3</option><option value="4">4–5</option><option value="6" selected>6–8</option><option value="10">9–12</option></select></label>
+        <label>Pausa per escriure<select name="wait"><option value="0.8">Breu</option><option value="1" selected>Habitual</option><option value="1.25">Llarga</option></select></label>
+      </div><p data-mode-panel="words" class="audio-study-note">Escolta les paraules una per una. A la vista d’escolta pots triar de nou la velocitat.</p></section>
+      <section data-audio-section="rate"><div data-audio-rate></div></section>
+      <section data-audio-section="options"><label class="audio-study-field" data-mode-panel="words">Pronunciació<select name="variety"></select></label>
+        <div data-mode-panel="phrases" hidden><p class="audio-study-note">Codi de ritme per aplicar a l’inici del dictat</p><output id="rhythm-code"></output></div></section>
+      <section data-audio-section="preview"><h3>Preescolta</h3><button type="button" class="audio-study-button" id="play-example">Escolta la primera paraula</button>
+        <p id="play-status" class="audio-study-note" role="status"></p></section></form>
+    </details>
+  </main>
+  <footer class="of-footer"><div class="of-bar audio-study-actions"><p class="footer-context">Prova dels controls d’àudio · v0.13.0</p><a class="of-signature" href="https://ortogra.fi/">ortogra.fi</a></div></footer>
+</body>
+</html>
